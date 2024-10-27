@@ -53,7 +53,7 @@ $primekit_blog_list_count = $primekit_settings['primekit_elementor_fancy_blog_bl
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                             } else {
-                                echo '<img src="' . primekit_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addon">';
+                                echo '<img src="' . primekit_assets . '/img/blog/image-placeholder.jpg" alt="primekit multi addon">';
                             }
                             ?>
                         </a>
@@ -129,7 +129,7 @@ $primekit_blog_list_count = $primekit_settings['primekit_elementor_fancy_blog_bl
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                                 } else {
-                                    echo '<img src="' . esc_attr(primekit_Assets) . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addons">';
+                                    echo '<img src="' . esc_attr(primekit_assets) . '/img/blog/image-placeholder.jpg" alt="primekit multi addons">';
                                 }
                                 ?>
                             </a>

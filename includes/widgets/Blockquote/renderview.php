@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Blockquote Widget
+ * Render View for PrimeKit Blockquote Widget
  */
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -8,7 +8,6 @@
 $primekit_block_quote_text = $this->get_settings('primekit_elementor_block_quote_text');
 
 ?>
-
 
         <div class="primekit-elementor-block-quote-area">
 

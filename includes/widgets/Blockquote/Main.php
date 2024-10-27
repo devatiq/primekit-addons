@@ -1,9 +1,9 @@
 <?php 
-namespace ABCBiz\Includes\Widgets\ABCBlockquote;
+namespace PrimeKit\Includes\Widgets\Blockquote;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use ABCBiz\Includes\Widgets\BaseWidget;
+use PrimeKit\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
@@ -14,15 +14,14 @@ class Main extends BaseWidget {
 
 	    // define protected variables...
 		protected $name = 'primekit-block-quote';
-		protected $title = 'ABC Blockquote';
-		protected $icon = 'eicon-blockquote primekit-addons-icon';
+		protected $title = 'Blockquote';
+		protected $icon = 'eicon-blockquote';
 		protected $categories = [
 			'primekit-category'
 		];		
 		protected $keywords = [
-			'abc', 'quote', 'blockquote',
+			'prime', 'quote', 'blockquote',
 		];
-
 
 	/**
 	 * Register list widget controls.
@@ -75,11 +74,22 @@ class Main extends BaseWidget {
 				'placeholder' => esc_html__( 'Type blockquote text here', 'primekit-addons' ),
 			]
 		);
-		
+
+		//PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__( 'Created by PrimeKit', 'primekit-addons' ),
+				'content' => esc_html__( 'This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons' ),
+			]
+		);
 
 		$this->end_controls_section();
 
-        //Abc Blockquote style
+        //Blockquote style
 		
         $this->start_controls_section(
             'primekit_elementor_block_quote_style',

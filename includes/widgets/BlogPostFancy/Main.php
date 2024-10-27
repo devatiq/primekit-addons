@@ -1,10 +1,10 @@
 <?php
-namespace ABCBiz\Includes\Widgets\ABCBlog;
+namespace PrimeKit\Includes\Widgets\BlogPostFancy;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-use ABCBiz\Includes\Widgets\BaseWidget;
+use PrimeKit\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
@@ -13,10 +13,13 @@ class Main extends BaseWidget
 {
     // define protected variables...
     protected $name = 'primekit-elementor-blogpost';
-    protected $title = 'ABC Blog Posts Fancy';
-    protected $icon = 'eicon-posts-group primekit-addons-icon';
+    protected $title = 'Blog Posts Fancy';
+    protected $icon = 'eicon-posts-groupn';
     protected $categories = [
         'primekit-category'
+    ];
+    protected $keywords = [
+        'prime', 'blog', 'post', 'fancy'
     ];
 
     /**
@@ -99,6 +102,19 @@ class Main extends BaseWidget
             ]
 
         );
+
+        //PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__( 'Created by PrimeKit', 'primekit-addons' ),
+				'content' => esc_html__( 'This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons' ),
+			]
+		);
+
 
         $this->end_controls_section(); //end blog setting control
 
@@ -228,7 +244,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_elementor_blog_read_more_typography',
-                'label' => esc_html__('Button Typography', 'primekit-addons'),
+                'label' => esc_html__('Read More Typography', 'primekit-addons'),
                 'selector' => '{{WRAPPER}} .primekit-ele-single-blog-button a',
             ]
         );
@@ -236,7 +252,7 @@ class Main extends BaseWidget
         $this->add_control(
             'primekit_elementor_blog_read_more_color',
             [
-                'label' => esc_html__('Button Color', 'primekit-addons'),
+                'label' => esc_html__('Read More Color', 'primekit-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .primekit-ele-single-blog-button a' => 'color: {{VALUE}};',
