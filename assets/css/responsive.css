@@ -1,0 +1,28 @@
+/*---------------------------
+    Responsive css for mobile
+-----------------------------*/
+@media only screen and (max-width: 480px) {
+
+    /*------------------------
+    * Blog Fancy widget
+    --------------------------*/
+  .primekit-ele-single-blog-content-area {
+    width: 100%;
+    position: unset;
+  }
+
+  .primekit-ele-single-blog-area:not(.primekit-ele-single-first) {
+    flex-direction: column;
+  }
+
+  .primekit-ele-single-blog-thumbnail {
+    max-width: 100%;
+  }
+
+  .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail img,
+  .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail {
+    height: auto;
+  }
+
+
+}

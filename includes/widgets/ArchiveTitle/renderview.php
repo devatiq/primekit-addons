@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Archive Title Widget
+ * Render View for PrimeKit Archive Title Widget
  */
 
 if (!defined('ABSPATH')) {

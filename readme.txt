@@ -1,5 +1,5 @@
-=== PrimeKit Addons and Template ===
-Plugin Name: PrimeKit Addons and Template
+=== PrimeKit Addons and Templates ===
+Plugin Name: PrimeKit Addons and Templates
 Version: 1.0.0
 Author: asupreoxltd
 Author URI: https://abcplugin.com/

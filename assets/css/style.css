@@ -227,3 +227,16 @@
   font-weight: 500;
   line-height: 1.3em;
 }
+
+/*----------------------------------------------
+ * ABC Post/page Title 
+ * ---------------------------------------------*/
+ .primekit-post-title-tag {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.primekit-page-title-tag {
+  margin-top: 0;
+  margin-bottom: 0;
+}

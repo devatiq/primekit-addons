@@ -1,36 +1,30 @@
 <?php 
-namespace ABCBiz\Includes\Widgets\ABCPageTitle;
+namespace PrimeKit\Includes\Widgets\PageTitle;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use ABCBiz\Includes\Widgets\BaseWidget;
+use PrimeKit\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
 
 /**
  * Elementor List Widget.
- * @since 1.0.0
  */
 class Main extends BaseWidget {
 
 	    // define protected variables...
 		protected $name = 'primekit-page-title';
-		protected $title = 'ABC Page Title';
-		protected $icon = 'eicon-archive-title primekit-addons-icon';
+		protected $title = 'Page Title';
+		protected $icon = 'eicon-archive-title';
 		protected $categories = [
 			'primekit-category'
 		];		
 		protected $keywords = [
-			'abc', 'page', 'title', 'page title',
+			'prime', 'page', 'title', 'page title',
 		];
 	/**
 	 * Register list widget controls.
-	 *
-	 * Add input fields to allow the user to customize the widget settings.
-	 *
-	 * @since 1.0.0
-	 * @access protected
 	 */
 	protected function register_controls() {
 		//Template
@@ -89,10 +83,21 @@ class Main extends BaseWidget {
 			]
 		);
 		
+		//PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__( 'Created by PrimeKit', 'primekit-addons' ),
+				'content' => esc_html__( 'This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons' ),
+			]
+		);
 
 		$this->end_controls_section();
 
-        //Abc post title style
+        //Page title style
 		
         $this->start_controls_section(
             'primekit_elementor_page_title_style',
@@ -107,7 +112,7 @@ class Main extends BaseWidget {
 			[
 				'label' => esc_html__( 'Color', 'primekit-addons' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#ffffff',
+				'default' => '#cccccc',
 				'selectors' => [
 					'{{WRAPPER}} .primekit-page-title-tag' => 'color: {{VALUE}}',
 				],
@@ -130,12 +135,9 @@ class Main extends BaseWidget {
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
         include 'renderview.php';
     }
 }

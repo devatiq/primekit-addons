@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: PrimeKit Addons and Template
+Plugin Name: PrimeKit Addons and Templates
 Plugin URI: https://primekitaddons.com/
 Description: The Elementor Custom Widgets plugin is built to enhance your website’s look and performance.
 Version: 1.0.0

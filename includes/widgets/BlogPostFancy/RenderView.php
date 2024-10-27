@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Blog.
+ * Render View file for Blog Fancy.
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -51,10 +51,10 @@ $primekit_blog_list_count = $primekit_settings['primekit_elementor_fancy_blog_bl
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                             <?php
                             if (has_post_thumbnail()) {
-                                the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
-                            } else {
-                                echo '<img src="' . primekit_assets . '/img/blog/image-placeholder.jpg" alt="primekit multi addon">';
-                            }
+                              the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
+                              } else {
+                             echo '<img src="' . esc_url(primekit_assets . '/img/blog/image-placeholder.jpg') . '" alt="' . esc_attr__('primekit multi addon', 'primekit-addons') . '">';
+                             }
                             ?>
                         </a>
                     </div><!--/ Thumbnail -->

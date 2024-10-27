@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Page Ttitle Widget
+ * Render View for PrimeKit Page Ttitle Widget
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 

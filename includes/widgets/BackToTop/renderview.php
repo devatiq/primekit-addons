@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Back to Top Widget
+ * Render View for PrimeKit Back to Top Widget
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 $primekit_settings = $this->get_settings_for_display();

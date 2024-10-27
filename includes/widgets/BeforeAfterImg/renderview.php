@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Before After Image
+ * Render View for PrimeKit Before After Image
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 $primekit_settings = $this->get_settings_for_display();

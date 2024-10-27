@@ -91,8 +91,8 @@ class PrimeKitAddonsPack
 
 	public function setConstants()
 	{
-		define('primekit_Version', $this->version);
-		define('primekit_Name', esc_html__('PrimeKit Addons for Elementor', 'primekit-addons'));
+		define('primekit_version', $this->version);
+		define('primekit_name', esc_html__('PrimeKit Addons and Templates for Elementor', 'primekit-addons'));
 
 	}
 
@@ -123,21 +123,24 @@ class PrimeKitAddonsPack
 		return true;
 	}
 
+
 	/**
 	 * Warning when the site doesn't have Elementor installed or activated.
 	 */
 	public function admin_notice_missing_main_plugin()
 	{
-		if (isset($_GET['activate'])) {
+		// Verify the nonce if 'activate' is present in the URL
+		if (isset($_GET['activate']) && check_admin_referer('activate-plugin_' . plugin_basename(__FILE__))) {
 			unset($_GET['activate']);
 		}
 
-		$message = sprintf(
-			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'primekit-addons'),
-			'<strong>' . esc_html(primekit_Name) . '</strong>',
-			'<strong>' . esc_html__('Elementor', 'primekit-addons') . '</strong>'
-		);
-
+$message = sprintf(
+	// translators: 1 Plugin name, 2 Elementor plugin name, 3 Required Elementor version
+    esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'primekit-addons'),
+    esc_html(primekit_name),
+    esc_html__('Elementor', 'primekit-addons'),
+    esc_html(self::MINIMUM_ELEMENTOR_VERSION)
+);
 		printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
 	}
 
@@ -146,12 +149,15 @@ class PrimeKitAddonsPack
 	 */
 	public function admin_notice_minimum_elementor_version()
 	{
-		if (isset($_GET['activate']))
+		// Verify the nonce if 'activate' is present in the URL
+		if (isset($_GET['activate']) && check_admin_referer('activate-plugin_' . plugin_basename(__FILE__))) {
 			unset($_GET['activate']);
+		}
 
 		$message = sprintf(
+			// translators: 1 Plugin name, 2 Elementor plugin name, 3 Required Elementor version
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'primekit-addons'),
-			primekit_Name,
+			esc_html(primekit_name),
 			esc_html__('Elementor', 'primekit-addons'),
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
@@ -164,13 +170,15 @@ class PrimeKitAddonsPack
 	public function admin_notice_minimum_php_version()
 	{
 
-		if (isset($_GET['activate']))
+		// Verify the nonce if 'activate' is present in the URL
+		if (isset($_GET['activate']) && check_admin_referer('activate-plugin_' . plugin_basename(__FILE__))) {
 			unset($_GET['activate']);
+		}
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'primekit-addons'),
-			'<strong>' . primekit_Name . '</strong>',
+			'<strong>' . primekit_name . '</strong>',
 			'<strong>' . esc_html__('PHP', 'primekit-addons') . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
@@ -200,7 +208,7 @@ class PrimeKitAddonsPack
 			update_option('primekit_installed', time());
 		}
 
-		update_option('primekit_Version', primekit_Version);
+		update_option('primekit_version', primekit_version);
 	}
 
 	/**

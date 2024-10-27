@@ -1,9 +1,9 @@
 <?php 
-namespace ABCBiz\Includes\Widgets\ABCPostTitle;
+namespace PrimeKit\Includes\Widgets\PostTitle;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use ABCBiz\Includes\Widgets\BaseWidget;
+use PrimeKit\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
@@ -15,22 +15,17 @@ class Main extends BaseWidget {
 
 	    // define protected variables...
 		protected $name = 'primekit-post-title';
-		protected $title = 'ABC Post Title';
-		protected $icon = 'eicon-post-title primekit-addons-icon';
+		protected $title = 'Post Title';
+		protected $icon = 'eicon-post-title';
 		protected $categories = [
 			'primekit-category'
 		];		
 		protected $keywords = [
-			'abc', 'post', 'title', 'post title',
+			'prime', 'post', 'title', 'post title',
 		];
 
 	/**
 	 * Register list widget controls.
-	 *
-	 * Add input fields to allow the user to customize the widget settings.
-	 *
-	 * @since 1.0.0
-	 * @access protected
 	 */
 	protected function register_controls() {
 		//Template
@@ -88,11 +83,22 @@ class Main extends BaseWidget {
 				],
 			]
 		);
-		
+
+		//PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__( 'Created by PrimeKit', 'primekit-addons' ),
+				'content' => esc_html__( 'This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons' ),
+			]
+		);
 
 		$this->end_controls_section();
 
-        //Abc post title style
+        //post title style
 		
         $this->start_controls_section(
             'primekit_elementor_post_title_style',
@@ -107,7 +113,7 @@ class Main extends BaseWidget {
 			[
 				'label' => esc_html__( 'Color', 'primekit-addons' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#ffffff',
+				'default' => '#cccccc',
 				'selectors' => [
 					'{{WRAPPER}} .primekit-post-title-tag' => 'color: {{VALUE}}',
 				],
