@@ -12,11 +12,11 @@ use Elementor\Group_Control_Background;
 class Main extends BaseWidget
 {
     // define protected variables...
-    protected $name = 'abcbiz-elementor-blogpost';
+    protected $name = 'primekit-elementor-blogpost';
     protected $title = 'ABC Blog Posts Fancy';
-    protected $icon = 'eicon-posts-group abcbiz-addons-icon';
+    protected $icon = 'eicon-posts-group primekit-addons-icon';
     protected $categories = [
-        'abcbiz-category'
+        'primekit-category'
     ];
 
     /**
@@ -26,20 +26,20 @@ class Main extends BaseWidget
     {
 
         $this->start_controls_section(
-            'abcbiz_elementor_blog_setting',
+            'primekit_elementor_blog_setting',
             [
-                'label' => esc_html__('Blog Setting', 'abcbiz-addons'),
+                'label' => esc_html__('Blog Setting', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
 
         //category selection
         $this->add_control(
-            'abcbiz_elementor_blog_category_fancy',
+            'primekit_elementor_blog_category_fancy',
             [
-                'label' => esc_html__('Select Category', 'abcbiz-addons'),
+                'label' => esc_html__('Select Category', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::SELECT2,
-                'options' => $this->abcbiz_blog_fancy_categories(),
+                'options' => $this->primekit_blog_fancy_categories(),
                 'default' => 'all',
                 'label_block' => true,
                 'multiple' => false,
@@ -48,12 +48,12 @@ class Main extends BaseWidget
 
         //blog date on/off switch
         $this->add_control(
-            'abcbiz_elementor_blog_date_switch',
+            'primekit_elementor_blog_date_switch',
             [
-                'label' => esc_html__('Date', 'abcbiz-addons'),
+                'label' => esc_html__('Date', 'primekit-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-addons'),
-                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
+                'label_on' => esc_html__('Show', 'primekit-addons'),
+                'label_off' => esc_html__('Hide', 'primekit-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -61,12 +61,12 @@ class Main extends BaseWidget
 
         //blog comment on/off switch
         $this->add_control(
-            'abcbiz_elementor_blog_comment_switch',
+            'primekit_elementor_blog_comment_switch',
             [
-                'label' => esc_html__('Comments', 'abcbiz-addons'),
+                'label' => esc_html__('Comments', 'primekit-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-addons'),
-                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
+                'label_on' => esc_html__('Show', 'primekit-addons'),
+                'label_off' => esc_html__('Hide', 'primekit-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -74,12 +74,12 @@ class Main extends BaseWidget
 
         // blog read more button on/off switch
         $this->add_control(
-            'abcbiz_elementor_blog_read_more_switch',
+            'primekit_elementor_blog_read_more_switch',
             [
-                'label' => esc_html__('Read More', 'abcbiz-addons'),
+                'label' => esc_html__('Read More', 'primekit-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-addons'),
-                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
+                'label_on' => esc_html__('Show', 'primekit-addons'),
+                'label_off' => esc_html__('Hide', 'primekit-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -87,14 +87,14 @@ class Main extends BaseWidget
 
         //Read more text
         $this->add_control(
-            'abcbiz_elementor_blog_read_more_text',
+            'primekit_elementor_blog_read_more_text',
             [
-                'label' => esc_html__('Read More Text', 'abcbiz-addons'),
+                'label' => esc_html__('Read More Text', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'default' => esc_html__('Read More', 'abcbiz-addons'),
-                'placeholder' => esc_html__('Type read more text', 'abcbiz-addons'),
+                'default' => esc_html__('Read More', 'primekit-addons'),
+                'placeholder' => esc_html__('Type read more text', 'primekit-addons'),
                 'condition' => [
-                    'abcbiz_elementor_blog_read_more_switch' => 'yes',
+                    'primekit_elementor_blog_read_more_switch' => 'yes',
                 ],
             ]
 
@@ -104,17 +104,17 @@ class Main extends BaseWidget
 
         // blog content style section
         $this->start_controls_section(
-            'abcbiz_elementor_blog_content_style_section',
+            'primekit_elementor_blog_content_style_section',
             [
-                'label' => esc_html__('Blog Style', 'abcbiz-addons'),
+                'label' => esc_html__('Blog Style', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
         //blog gap
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_gap',
+            'primekit_elementor_fancy_blog_gap',
             [
-                'label' => esc_html__('Gap', 'abcbiz-addons'),
+                'label' => esc_html__('Gap', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -132,30 +132,30 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-blogs' => 'gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-blogs' => 'gap: {{SIZE}}{{UNIT}};',
                 ]
             ],
         );
 
         //flex direction choose
         $this->add_responsive_control(
-            'abcbiz_elementor_blog_flex_direction',
+            'primekit_elementor_blog_flex_direction',
             [
-                'label' => esc_html__('Layout Direction', 'abcbiz-addons'),
+                'label' => esc_html__('Layout Direction', 'primekit-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'row' => [
-                        'title' => esc_html__('Row', 'abcbiz-addons'),
+                        'title' => esc_html__('Row', 'primekit-addons'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'row-reverse' => [
-                        'title' => esc_html__('Row Reverse', 'abcbiz-addons'),
+                        'title' => esc_html__('Row Reverse', 'primekit-addons'),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
                 'toggle' => true,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-blogs' => 'flex-direction: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-ele-blogs' => 'flex-direction: {{VALUE}};',
                 ],
             ]
         );
@@ -165,41 +165,41 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abcbiz_elementor_blog_info_typography',
-                'label' => esc_html__('Meta Typography', 'abcbiz-addons'),
-                'selector' => '{{WRAPPER}} .abcbiz-ele-single-blog-info a',
+                'name' => 'primekit_elementor_blog_info_typography',
+                'label' => esc_html__('Meta Typography', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-ele-single-blog-info a',
             ]
         );
         // blog info color
         $this->add_control(
-            'abcbiz_elementor_blog_info_color',
+            'primekit_elementor_blog_info_color',
             [
-                'label' => esc_html__('Meta Text Color', 'abcbiz-addons'),
+                'label' => esc_html__('Meta Text Color', 'primekit-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-info a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-info a' => 'color: {{VALUE}};',
                 ],
             ]
         );
         // blog info icon color
         $this->add_control(
-            'abcbiz_elementor_blog_info_icon_color',
+            'primekit_elementor_blog_info_icon_color',
             [
-                'label' => esc_html__('Meta Icon Color', 'abcbiz-addons'),
+                'label' => esc_html__('Meta Icon Color', 'primekit-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-info i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-info i' => 'color: {{VALUE}};',
                 ],
             ]
         );
         // blog info icon size
         $this->add_responsive_control(
-            'abcbiz_elementor_blog_info_icon_size',
+            'primekit_elementor_blog_info_icon_size',
             [
-                'label' => esc_html__('Meta Icon Size', 'abcbiz-addons'),
+                'label' => esc_html__('Meta Icon Size', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-info i' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-info i' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -207,19 +207,19 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abcbiz_elementor_blog_title_typography',
-                'label' => esc_html__('Title Typography', 'abcbiz-addons'),
-                'selector' => '{{WRAPPER}} .abcbiz-ele-single-blog-title h2 a',
+                'name' => 'primekit_elementor_blog_title_typography',
+                'label' => esc_html__('Title Typography', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-ele-single-blog-title h2 a',
             ]
         );
         // blog title color
         $this->add_control(
-            'abcbiz_elementor_blog_title_color',
+            'primekit_elementor_blog_title_color',
             [
-                'label' => esc_html__('Title Color', 'abcbiz-addons'),
+                'label' => esc_html__('Title Color', 'primekit-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-title h2 a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-title h2 a' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -227,19 +227,19 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abcbiz_elementor_blog_read_more_typography',
-                'label' => esc_html__('Button Typography', 'abcbiz-addons'),
-                'selector' => '{{WRAPPER}} .abcbiz-ele-single-blog-button a',
+                'name' => 'primekit_elementor_blog_read_more_typography',
+                'label' => esc_html__('Button Typography', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-ele-single-blog-button a',
             ]
         );
         // blog read more button color
         $this->add_control(
-            'abcbiz_elementor_blog_read_more_color',
+            'primekit_elementor_blog_read_more_color',
             [
-                'label' => esc_html__('Button Color', 'abcbiz-addons'),
+                'label' => esc_html__('Button Color', 'primekit-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-button a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-button a' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -249,18 +249,18 @@ class Main extends BaseWidget
 
         // Start section for featured post
         $this->start_controls_section(
-            'abcbiz_elementor_fancy_featured_post_section',
+            'primekit_elementor_fancy_featured_post_section',
             [
-                'label' => esc_html__('Featured Post', 'abcbiz-addons'),
+                'label' => esc_html__('Featured Post', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
         // Content width control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_content_width',
+            'primekit_elementor_fancy_blog_content_width',
             [
-                'label' => esc_html__('Content Width', 'abcbiz-addons'),
+                'label' => esc_html__('Content Width', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -274,20 +274,20 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-first .primekit-ele-single-blog-content-area' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         // Content padding control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_content_padding',
+            'primekit_elementor_fancy_blog_content_padding',
             [
-                'label' => esc_html__('Content Padding', 'abcbiz-addons'),
+                'label' => esc_html__('Content Padding', 'primekit-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-first .primekit-ele-single-blog-content-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -296,32 +296,32 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abcbiz_elementor_fancy_blog_content_background',
-                'label' => esc_html__('Content Background', 'abcbiz-addons'),
+                'name' => 'primekit_elementor_fancy_blog_content_background',
+                'label' => esc_html__('Content Background', 'primekit-addons'),
                 'types' => ['classic', 'gradient'],
                 'exclude' => ['image'],
-                'selector' => '{{WRAPPER}} .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area',
+                'selector' => '{{WRAPPER}} .primekit-ele-single-first .primekit-ele-single-blog-content-area',
             ]
         );
 
         //content border radius
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_content_border_radius',
+            'primekit_elementor_fancy_blog_content_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'label' => esc_html__('Border Radius', 'primekit-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-first .primekit-ele-single-blog-content-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
         // Content margin-top control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_content_margin_top',
+            'primekit_elementor_fancy_blog_content_margin_top',
             [
-                'label' => esc_html__('Content Margin Top', 'abcbiz-addons'),
+                'label' => esc_html__('Content Margin Top', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -339,16 +339,16 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area' => 'margin-top: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-first .primekit-ele-single-blog-content-area' => 'margin-top: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         // Image Height control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_image_height',
+            'primekit_elementor_fancy_blog_image_height',
             [
-                'label' => esc_html__('Image Height', 'abcbiz-addons'),
+                'label' => esc_html__('Image Height', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'vh'],
                 'range' => [
@@ -362,16 +362,16 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-area.abcbiz-ele-single-first .abcbiz-ele-single-blog-thumbnail img' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-area.primekit-ele-single-first .primekit-ele-single-blog-thumbnail img' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         //image border radius
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_image_border_radius',
+            'primekit_elementor_fancy_blog_image_border_radius',
             [
-                'label' => esc_html__('Image Border Radius', 'abcbiz-addons'),
+                'label' => esc_html__('Image Border Radius', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -385,16 +385,16 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-area.abcbiz-ele-single-first .abcbiz-ele-single-blog-thumbnail img' => 'border-radius: {{SIZE}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .primekit-ele-single-blog-area.primekit-ele-single-first .primekit-ele-single-blog-thumbnail img' => 'border-radius: {{SIZE}}{{UNIT}} !important;',
                 ],
             ],
         );
 
         // Image Width control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_image_width',
+            'primekit_elementor_fancy_blog_image_width',
             [
-                'label' => esc_html__('Image Width', 'abcbiz-addons'),
+                'label' => esc_html__('Image Width', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -408,7 +408,7 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-area.abcbiz-ele-single-first .abcbiz-ele-single-blog-thumbnail img' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-area.primekit-ele-single-first .primekit-ele-single-blog-thumbnail img' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -419,34 +419,34 @@ class Main extends BaseWidget
 
         // Start new section for Blog List Style settings
         $this->start_controls_section(
-            'abcbiz_elementor_fancy_blog_list_style',
+            'primekit_elementor_fancy_blog_list_style',
             [
-                'label' => esc_html__('Blog List', 'abcbiz-addons'),
+                'label' => esc_html__('Blog List', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
         $this->add_control(
-            'abcbiz_elementor_fancy_blog_blog_post_count',
+            'primekit_elementor_fancy_blog_blog_post_count',
             [
-                'label' => esc_html__('Post Count', 'abcbiz-addons'),
+                'label' => esc_html__('Post Count', 'primekit-addons'),
                 'type' => Controls_Manager::NUMBER,
                 'min' => 1,
                 'max' => 3,
                 'default' => 3,
-                'description' => esc_html__('Set the number of posts to show', 'abcbiz-addons'),
+                'description' => esc_html__('Set the number of posts to show', 'primekit-addons'),
             ]
         );
 
         // Padding control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_padding',
+            'primekit_elementor_fancy_blog_list_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-addons'),
+                'label' => esc_html__('Padding', 'primekit-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-content-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -455,18 +455,18 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abcbiz_elementor_fancy_blog_list_background',
-                'label' => esc_html__('Content Background', 'abcbiz-addons'),
+                'name' => 'primekit_elementor_fancy_blog_list_background',
+                'label' => esc_html__('Content Background', 'primekit-addons'),
                 'types' => ['classic', 'gradient'],
                 'exclude' => ['image'],
-                'selector' => '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area',
+                'selector' => '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-content-area',
             ]
         );
 
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_gap',
+            'primekit_elementor_fancy_blog_list_gap',
             [
-                'label' => esc_html__('Gap Between Posts', 'abcbiz-addons'),
+                'label' => esc_html__('Gap Between Posts', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -482,7 +482,7 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts' => 'gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts' => 'gap: {{SIZE}}{{UNIT}};',
                 ],
                 'separator' => 'before',
             ]
@@ -490,22 +490,22 @@ class Main extends BaseWidget
 
         //fancy blog list content radius
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_radius',
+            'primekit_elementor_fancy_blog_list_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'label' => esc_html__('Border Radius', 'primekit-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-content-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ]
             ]
         );
 
         // Width control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_width',
+            'primekit_elementor_fancy_blog_list_width',
             [
-                'label' => esc_html__('Width', 'abcbiz-addons'),
+                'label' => esc_html__('Width', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['%', 'px', 'vw'],
                 'range' => [
@@ -523,16 +523,16 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-content-area' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         // Top control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_top',
+            'primekit_elementor_fancy_blog_list_top',
             [
-                'label' => esc_html__('Top Position', 'abcbiz-addons'),
+                'label' => esc_html__('Top Position', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%', 'vh'],
                 'range' => [
@@ -550,16 +550,16 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'top: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-content-area' => 'top: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         // Left control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_left',
+            'primekit_elementor_fancy_blog_list_left',
             [
-                'label' => esc_html__('Left Position', 'abcbiz-addons'),
+                'label' => esc_html__('Left Position', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%', 'vw'],
                 'range' => [
@@ -577,16 +577,16 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-content-area' => 'left: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         // Image width control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_image_width',
+            'primekit_elementor_fancy_blog_list_image_width',
             [
-                'label' => esc_html__('Thumbnail Width', 'abcbiz-addons'),
+                'label' => esc_html__('Thumbnail Width', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -600,16 +600,16 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail img' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         // Image height control
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_image_height',
+            'primekit_elementor_fancy_blog_list_image_height',
             [
-                'label' => esc_html__('Thumbnail Height', 'abcbiz-addons'),
+                'label' => esc_html__('Thumbnail Height', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'vh'],
                 'range' => [
@@ -623,21 +623,21 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img' => 'height: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail img' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         //thumbnail radius
         $this->add_responsive_control(
-            'abcbiz_elementor_fancy_blog_list_thumbnail_radius',
+            'primekit_elementor_fancy_blog_list_thumbnail_radius',
             [
-                'label' => esc_html__('Thumbnail Radius', 'abcbiz-addons'),
+                'label' => esc_html__('Thumbnail Radius', 'primekit-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
+                    '{{WRAPPER}} .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}} !important;',
                 ],
             ]
         );
@@ -649,7 +649,7 @@ class Main extends BaseWidget
     }
 
     //get blog category
-    private function abcbiz_blog_fancy_categories()
+    private function primekit_blog_fancy_categories()
     {
         $categories = get_categories();
         $options = ['all' => 'All Categories'];

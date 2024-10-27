@@ -5,14 +5,14 @@
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-$abcbiz_block_quote_text = $this->get_settings('abcbiz_elementor_block_quote_text');
+$primekit_block_quote_text = $this->get_settings('primekit_elementor_block_quote_text');
 
 ?>
 
 
-        <div class="abcbiz-elementor-block-quote-area">
+        <div class="primekit-elementor-block-quote-area">
 
-        <div class="abcbiz-quote-icon">
+        <div class="primekit-quote-icon">
         <svg version="1.1" id="fi_63848" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="193.004px" height="193.004px" viewBox="0 0 193.004 193.004" xml:space="preserve">
         <g><path d="M111.181,114.016c-6.679-34.395-38.188-50.026-70.345-43.935C44.523,50.783,62.59,35.004,74.33,20.336
 		c1.665-2.08,2.523-5.738,0-7.698C68.141,7.83,62.365,6.333,57.044,7.092c-0.369-1.01-1.346-1.763-2.615-1.364
@@ -38,6 +38,6 @@ $abcbiz_block_quote_text = $this->get_settings('abcbiz_elementor_block_quote_tex
 		 M178.453,141.992c0.015-0.928,0-1.863-0.033-2.804c0.61-1.036,1.172-2.099,1.65-3.199
 		C179.678,138.09,179.107,140.07,178.453,141.992z"></path></g></svg>
 </div>
-            <blockquote><?php echo esc_html($abcbiz_block_quote_text); ?></blockquote>
+            <blockquote><?php echo esc_html($primekit_block_quote_text); ?></blockquote>
         </div><!-- end block quote area -->
  

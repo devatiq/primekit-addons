@@ -45,9 +45,12 @@ add_action('plugins_loaded', 'primekit_addons_general_init');
 if (!function_exists('primekit_elementor_enqueue')) {
     function primekit_elementor_enqueue()
     {
-        wp_register_style('primekit-form-7-style', primekit_assets . "/css/contact-form-7-style.css");
         wp_enqueue_style('primekit-elementor-style', primekit_assets . "/css/style.css");
         wp_enqueue_style('primekit-elementor-responsive', primekit_assets . "/css/responsive.css");
+        wp_register_style('primekit-anim-text-style', primekit_assets . "/css/anim-text-style.css");
+
+        //script
+        wp_register_script('primekit-anim-text-main', primekit_assets . "/js/anim-text-script.js", array('jquery'), '1.0', true);
 
     }
 }

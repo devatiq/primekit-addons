@@ -6,3 +6,21 @@
   display: table;
   clear: both;
 }
+
+/* ---------------------------------------------
+ * Animated Text
+ * --------------------------------------------- */
+ .primekit-elementor-anim-text-area .primekit-anim-text-headline {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #333;
+}
+
+/*----------------------------------------------
+ * Archive Title 
+ * ---------------------------------------------*/
+ .primekit-archive-title-tag {
+  margin-top: 0;
+  margin-bottom: 0;
+}
