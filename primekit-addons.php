@@ -48,9 +48,15 @@ if (!function_exists('primekit_elementor_enqueue')) {
         wp_enqueue_style('primekit-elementor-style', primekit_assets . "/css/style.css");
         wp_enqueue_style('primekit-elementor-responsive', primekit_assets . "/css/responsive.css");
         wp_register_style('primekit-anim-text-style', primekit_assets . "/css/anim-text-style.css");
+        if (!wp_style_is('twentytwenty')) {
+            wp_register_style('twentytwenty', primekit_assets . "/css/twentytwenty.css");
+        }
 
         //script
         wp_register_script('primekit-anim-text-main', primekit_assets . "/js/anim-text-script.js", array('jquery'), '1.0', true);
+        wp_register_script('primekit-back-to-top', primekit_assets . "/js/back-to-top.js", array('jquery'), '1.0', true);
+        wp_register_script('jquery-event-move', primekit_assets . "/js/jquery.event.move.js", array('jquery'), '1.0', true);
+        wp_register_script('jquery-twentytwenty', primekit_assets . "/js/jquery.twentytwenty.js", array('jquery'), '1.0', true);
 
     }
 }

@@ -1,9 +1,9 @@
 <?php 
-namespace ABCBiz\Includes\Widgets\ABCBeforeAfter;
+namespace PrimeKit\Includes\Widgets\BeforeAfterImg;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use ABCBiz\Includes\Widgets\BaseWidget;
+use PrimeKit\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
@@ -14,13 +14,13 @@ class Main extends BaseWidget {
 
 	    // define protected variables...
 		protected $name = 'primekit-before-after-image';
-		protected $title = 'ABC Before After Image';
-		protected $icon = 'eicon-image-before-after primekit-addons-icon';
+		protected $title = 'Before After Image';
+		protected $icon = 'eicon-image-before-after';
 		protected $categories = [
 			'primekit-category'
 		];		
 		protected $keywords = [
-			'abc', 'before', 'after', 'image', 'compare'
+			'prime', 'before', 'after', 'image'
 		];
 
 		public function get_style_depends()
@@ -189,6 +189,19 @@ class Main extends BaseWidget {
                 'description' => __( 'Select handle movement type. Overlay does not work with On Hover.', 'primekit-addons' ),
             ]
         );
+
+		//PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__( 'Created by PrimeKit', 'primekit-addons' ),
+				'content' => esc_html__( 'This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons' ),
+			]
+		);
+
 
 		$this->end_controls_section();//end label section
 

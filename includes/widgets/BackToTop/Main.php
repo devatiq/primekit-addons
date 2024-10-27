@@ -1,9 +1,9 @@
 <?php 
-namespace ABCBiz\Includes\Widgets\ABCBackToTop;
+namespace PrimeKit\Includes\Widgets\BackToTop;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use ABCBiz\Includes\Widgets\BaseWidget;
+use PrimeKit\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
@@ -14,13 +14,13 @@ class Main extends BaseWidget {
 
 	    // define protected variables...
 		protected $name = 'primekit-back-top-top';
-		protected $title = 'ABC Back To Top';
-		protected $icon = 'eicon-arrow-up primekit-addons-icon';
+		protected $title = 'Back To Top';
+		protected $icon = 'eicon-arrow-up';
 		protected $categories = [
 			'primekit-category'
 		];		
 		protected $keywords = [
-			'abc', 'back', 'top', 'button'
+			'prime', 'back', 'top', 'button'
 		];
 
 		public function get_script_depends()
@@ -160,6 +160,18 @@ class Main extends BaseWidget {
 				'condition' => [
 					'primekit_elementor_back_to_top_position' => 'fixed',
 				],
+			]
+		);
+
+		//PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__( 'Created by PrimeKit', 'primekit-addons' ),
+				'content' => esc_html__( 'This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons' ),
 			]
 		);
 		

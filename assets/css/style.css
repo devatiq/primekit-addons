@@ -24,3 +24,48 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+/*----------------------------------------------
+ * Back to Top
+ * ---------------------------------------------*/
+ #primekit-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0349e7;
+  color: #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: none;
+  border-radius: 6px;
+  z-index: 789;
+  text-align: center;
+  font-size: 16px;
+  transition: background 0.4s, color 0.4s;
+}
+
+#primekit-back-to-top:hover {
+  background-color: #a03bf4;
+}
+
+#primekit-back-to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.primekit-backtop-hidden {
+  display: none;
+}
+
+.primekit-show-always {
+  display: inline-block !important;
+}
+
+/* ---------------------------------------------
+* Before After Image
+* --------------------------------------------- */
+#primekit-before-after-container .twentytwenty-handle:before,
+#primekit-before-after-container .twentytwenty-handle:after {
+  box-shadow: none;
+}
