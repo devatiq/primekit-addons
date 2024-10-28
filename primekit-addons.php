@@ -18,7 +18,7 @@
 
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
@@ -36,18 +36,23 @@ define('PRIMEKIT_NAME', esc_html__('PrimeKit Addons and Templates', 'primekit-ad
 
 
 // Include the autoloader.
-if ( file_exists( PRIMEKIT_PATH . 'vendor/autoload.php' ) ) {
+if (file_exists(PRIMEKIT_PATH . 'vendor/autoload.php')) {
 	require_once PRIMEKIT_PATH . 'vendor/autoload.php';
 }
 
 /**
  * Initializes the PrimeKit Addons plugin by registering all classes and services.
  */
-function primekit_initialize() {
 
-	if ( class_exists( 'PrimeKit\Manager' ) ) {
-		new \PrimeKit\Manager();
+if (!function_exists('primekit_initialize')) {
+	function primekit_initialize()
+	{
+
+		if (class_exists('PrimeKit\Manager')) {
+			new \PrimeKit\Manager();
+		}
 	}
-}
 
-add_action( 'plugins_loaded', 'primekit_initialize' );
+	add_action('plugins_loaded', 'primekit_initialize');
+
+}
