@@ -1,4 +1,14 @@
 <?php
+/**
+ * Configuration class for PrimeKit Elementor Addons.
+ *
+ * This class handles the initialization and configuration of the PrimeKit Elementor Addons.
+ * It ensures compatibility with the required Elementor version and manages the loading of 
+ * required assets and functionalities.
+ *
+ * @package PrimeKit\Public\Elementor
+ * @since 1.0.0
+ */
 namespace PrimeKit\Public\Elementor;
 
 if (!defined('ABSPATH'))
@@ -6,6 +16,17 @@ if (!defined('ABSPATH'))
 
 use PrimeKit\Public\Elementor\Inc\Functions;
 use PrimeKit\Public\Elementor\Assets\Assets;
+
+/**
+ * Class Configuration
+ *
+ * This class handles the initialization and configuration of the PrimeKit Elementor Addons.
+ * It ensures compatibility with the required Elementor version and manages the loading of 
+ * required assets and functionalities.
+ * 
+ * @package PrimeKit\Public\Elementor
+ * @since 1.0.0
+ */
 class Configuration{
 
 
@@ -51,16 +72,15 @@ class Configuration{
     public function __construct()
     {
 
-        // set the constants
+        // set the constants.
         $this->setConstants();
 
         if ($this->is_compatible()) {
             add_action('elementor/init', [$this, 'init']);
         } 
 
-        //classes Initialization
+        //classes Initialization.
         $this->classes_init();
-
         
     }
 
@@ -164,6 +184,13 @@ class Configuration{
         printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
     }
 
+    /**
+     * Initializes the classes used by the plugin.
+     *
+     * This function instantiates the functions and assets classes.
+     *
+     * @since 1.0.0
+     */
     public function classes_init(){
         
         $this->functions = new Functions();
@@ -180,9 +207,15 @@ class Configuration{
 
 
 
+  
     /**
-     * Register Widgets
+     * Register all the widgets.
+     *
+     * @param \Elementor\Widgets_Manager $widgets_manager Elementor widgets manager.
+     *
+     * @return void
      */
+    
     public function register_widgets($widgets_manager)
     {
         

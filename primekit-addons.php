@@ -30,7 +30,7 @@ define('PRIMEKIT_PATH', plugin_dir_path(__FILE__));
 define('PRIMEKIT_URL', plugin_dir_url(__FILE__));
 
 //Define Plugin Name.
-define('PRIMEKIT_NAME', esc_html__('PrimeKit Addons and Templates for Elementor', 'primekit-addons'));
+define('PRIMEKIT_NAME', esc_html__('PrimeKit Addons and Templates', 'primekit-addons'));
 
 
 // Include the autoloader.
