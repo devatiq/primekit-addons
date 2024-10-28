@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-28T14:49:32+00:00\n"
+"POT-Creation-Date: 2024-10-28T18:24:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
 
 #. Plugin Name of the plugin
 #: primekit-addons.php
-#: primekit-addons.php:33
+#: primekit-addons.php:35
 msgid "PrimeKit Addons and Templates"
 msgstr ""
 
