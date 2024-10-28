@@ -1,26 +1,42 @@
 <?php
-namespace PrimeKit\Includes\Widgets\BlogPostFancy;
+namespace PrimeKit\Public\Elementor\Widgets\BlogPostFancy;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-use PrimeKit\Includes\Widgets\BaseWidget;
+use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
 
-class Main extends BaseWidget
+class Main extends Widget_Base
 {
-    // define protected variables...
-    protected $name = 'primekit-elementor-blogpost';
-    protected $title = 'Blog Posts Fancy';
-    protected $icon = 'eicon-posts-groupn';
-    protected $categories = [
-        'primekit-category'
-    ];
-    protected $keywords = [
-        'prime', 'blog', 'post', 'fancy'
-    ];
+
+    public function get_name()
+    {
+        return 'primekit-elementor-blogpost';
+    }
+
+    public function get_title()
+    {
+        return esc_html__('Blog Posts Fancy', 'primekit-addons');
+    }
+
+    public function get_icon()
+    {
+        return 'eicon-posts-group';
+    }
+
+    public function get_categories()
+    {
+        return ['primekit-category'];
+    }
+
+    public function get_keywords()
+    {
+        return ['prime', 'blog', 'post', 'fancy'];
+    }
+
 
     /**
      * Register the widget controls.
@@ -104,16 +120,16 @@ class Main extends BaseWidget
         );
 
         //PrimeKit Notice
-		$this->add_control(
-			'primekit_elementor_addons_notice',
-			[
-				'type' => \Elementor\Controls_Manager::NOTICE,
-				'notice_type' => 'warning',
-				'dismissible' => false,
-				'heading' => esc_html__( 'Created by PrimeKit', 'primekit-addons' ),
-				'content' => esc_html__( 'This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons' ),
-			]
-		);
+        $this->add_control(
+            'primekit_elementor_addons_notice',
+            [
+                'type' => \Elementor\Controls_Manager::NOTICE,
+                'notice_type' => 'warning',
+                'dismissible' => false,
+                'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
+                'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
+            ]
+        );
 
 
         $this->end_controls_section(); //end blog setting control
