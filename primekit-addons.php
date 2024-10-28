@@ -1,19 +1,21 @@
 <?php
-/*
-Plugin Name: PrimeKit Addons and Templates
-Plugin URI: https://primekitaddons.com/
-Description: The Elementor Custom Widgets plugin is built to enhance your website’s look and performance.
-Version: 1.0.0
-Author: supreoxltd
-Author URI: https://supreox.com/
-License: GPL2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: primekit-addons
-Domain Path: /languages
-Elementor tested up to: 3.24.7
-Elementor Pro tested up to: 3.24.7
-Requires Plugins: elementor
-*/
+/**
+ * Plugin Name: PrimeKit Addons and Templates
+ * Plugin URI: https://primekitaddons.com/
+ * Description: The Elementor Custom Widgets plugin is built to enhance your website’s look and performance.
+ * Version: 1.0.0
+ * Author: supreoxltd
+ * Author URI: https://supreox.com/
+ * License: GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: primekit-addons
+ * Domain Path: /languages
+ * namespace: PrimeKit
+ * Elementor tested up to: 3.24.7
+ * Elementor Pro tested up to: 3.24.7
+ * Requires Plugins: elementor
+ */
+
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
