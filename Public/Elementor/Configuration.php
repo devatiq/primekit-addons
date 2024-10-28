@@ -189,6 +189,7 @@ class Configuration{
         $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\AnimatedText\Main());
         $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\ArchiveTitle\Main());
         $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\BackToTop\Main());
+        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\BeforeAfterImg\Main());
 
     }
 
