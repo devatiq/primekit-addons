@@ -187,6 +187,7 @@ class Configuration{
     {
         
         $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\AnimatedText\Main());
+        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\ArchiveTitle\Main());
 
     }
 
