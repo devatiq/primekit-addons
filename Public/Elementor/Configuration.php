@@ -135,7 +135,7 @@ class Configuration{
         $message = sprintf(
             // translators: 1 Plugin name, 2 Elementor plugin name, 3 Required Elementor version
             esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'primekit-addons'),
-            esc_html(primekit_name),
+            esc_html(PRIMEKIT_NAME),
             esc_html__('Elementor', 'primekit-addons'),
             esc_html(self::MINIMUM_ELEMENTOR_VERSION)
         );
@@ -155,7 +155,7 @@ class Configuration{
         $message = sprintf(
             // translators: 1 Plugin name, 2 Elementor plugin name, 3 Required Elementor version
             esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'primekit-addons'),
-            esc_html(primekit_name),
+            esc_html(PRIMEKIT_NAME),
             esc_html__('Elementor', 'primekit-addons'),
             self::MINIMUM_ELEMENTOR_VERSION
         );
@@ -176,7 +176,7 @@ class Configuration{
         $message = sprintf(
             /* translators: 1: Plugin name 2: PHP 3: Required PHP version */
             esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'primekit-addons'),
-            '<strong>' . primekit_name . '</strong>',
+            '<strong>' . PRIMEKIT_NAME . '</strong>',
             '<strong>' . esc_html__('PHP', 'primekit-addons') . '</strong>',
             self::MINIMUM_PHP_VERSION
         );
