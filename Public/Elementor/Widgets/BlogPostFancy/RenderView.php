@@ -53,7 +53,7 @@ $primekit_blog_list_count = $primekit_settings['primekit_elementor_fancy_blog_bl
                             if (has_post_thumbnail()) {
                               the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                               } else {
-                             echo '<img src="' . esc_url(PRIMEKIT_NAME . '/img/blog/image-placeholder.jpg') . '" alt="' . esc_attr__('primekit multi addon', 'primekit-addons') . '">';
+                             echo '<img src="' . esc_url(PRIMEKIT_ELEMENTOR_ASSETS . '/img/blog/image-placeholder.jpg') . '" alt="' . esc_attr__('primekit addons', 'primekit-addons') . '">';
                              }
                             ?>
                         </a>
@@ -129,7 +129,7 @@ $primekit_blog_list_count = $primekit_settings['primekit_elementor_fancy_blog_bl
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                                 } else {
-                                    echo '<img src="' . esc_attr(PRIMEKIT_NAME) . '/img/blog/image-placeholder.jpg" alt="primekit multi addons">';
+                                    echo '<img src="' . esc_attr(PRIMEKIT_ELEMENTOR_ASSETS) . '/img/blog/image-placeholder.jpg" alt="primekit addons">';
                                 }
                                 ?>
                             </a>

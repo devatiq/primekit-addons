@@ -11,8 +11,8 @@
  * Text Domain: primekit-addons
  * Domain Path: /languages
  * namespace: PrimeKit
- * Elementor tested up to: 3.24.7
- * Elementor Pro tested up to: 3.24.7
+ * Elementor tested up to: 3.25.1
+ * Elementor Pro tested up to: 3.25.7
  * Requires Plugins: elementor
  */
 

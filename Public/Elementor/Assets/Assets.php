@@ -63,10 +63,10 @@ class Assets{
     public function enqueue_scripts()
     {
          //script
-         wp_register_script('primekit-anim-text-main', PRIMKIT_ELEMENTOR_ASSETS . "/js/anim-text-script.js", array('jquery'), '1.0', true);
-         wp_register_script('primekit-back-to-top', PRIMKIT_ELEMENTOR_ASSETS . "/js/back-to-top.js", array('jquery'), '1.0', true);
-         wp_register_script('jquery-event-move', PRIMKIT_ELEMENTOR_ASSETS . "/js/jquery.event.move.js", array('jquery'), '1.0', true);
-         wp_register_script('jquery-twentytwenty', PRIMKIT_ELEMENTOR_ASSETS . "/js/jquery.twentytwenty.js", array('jquery'), '1.0', true);
+         wp_register_script('primekit-anim-text-main', PRIMEKIT_ELEMENTOR_ASSETS . "/js/anim-text-script.js", array('jquery'), '1.0', true);
+         wp_register_script('primekit-back-to-top', PRIMEKIT_ELEMENTOR_ASSETS . "/js/back-to-top.js", array('jquery'), '1.0', true);
+         wp_register_script('jquery-event-move', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.event.move.js", array('jquery'), '1.0', true);
+         wp_register_script('jquery-twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.twentytwenty.js", array('jquery'), '1.0', true);
     }
 
    
@@ -81,11 +81,11 @@ class Assets{
      */
     public function enqueue_styles()
     {
-        wp_enqueue_style('primekit-elementor-style', PRIMKIT_ELEMENTOR_ASSETS . "/css/style.css");
-        wp_enqueue_style('primekit-elementor-responsive', PRIMKIT_ELEMENTOR_ASSETS . "/css/responsive.css");
-        wp_register_style('primekit-anim-text-style', PRIMKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css");
+        wp_enqueue_style('primekit-elementor-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/style.css");
+        wp_enqueue_style('primekit-elementor-responsive', PRIMEKIT_ELEMENTOR_ASSETS . "/css/responsive.css");
+        wp_register_style('primekit-anim-text-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css");
         if (!wp_style_is('twentytwenty')) {
-            wp_register_style('twentytwenty', PRIMKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css");
+            wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css");
         }
 
     }

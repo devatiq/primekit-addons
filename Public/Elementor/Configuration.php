@@ -118,7 +118,7 @@ class Configuration{
 
      public function setConstants()
      {
-         define('PRIMKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'assets');
+         define('PRIMEKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'assets');
  
      }
 
@@ -204,7 +204,6 @@ class Configuration{
     {
         add_action('elementor/widgets/register', [$this, 'register_widgets']);
     }
-
 
 
   
