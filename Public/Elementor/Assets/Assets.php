@@ -81,11 +81,11 @@ class Assets{
      */
     public function enqueue_styles()
     {
-        wp_enqueue_style('primekit-elementor-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/style.css");
-        wp_enqueue_style('primekit-elementor-responsive', PRIMEKIT_ELEMENTOR_ASSETS . "/css/responsive.css");
-        wp_register_style('primekit-anim-text-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css");
+        wp_enqueue_style('primekit-elementor-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/style.css", array(), "1.0");
+        wp_enqueue_style('primekit-elementor-responsive', PRIMEKIT_ELEMENTOR_ASSETS . "/css/responsive.css", array(), "1.0");
+        wp_register_style('primekit-anim-text-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css", array(), "1.0");
         if (!wp_style_is('twentytwenty')) {
-            wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css");
+            wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css", array(), "1.0");
         }
 
     }
