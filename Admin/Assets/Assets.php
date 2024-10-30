@@ -1,7 +1,8 @@
-<?php 
+<?php
 namespace PrimeKit\Admin\Assets;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 
 /**
@@ -25,21 +26,47 @@ class Assets
      */
     public function __construct()
     {
-        add_action('admin_enqueue_scripts', [$this, 'admin_enqueue_assets']);
-        
+        add_action('admin_enqueue_scripts', [$this, 'admin_enqueue_styles']);
+
+        add_action('admin_enqueue_scripts', [$this, 'admin_enqueue_scripts']);
+
     }
 
+
     /**
-     * Enqueues and registers CSS and JavaScript assets for the PrimeKit Admin.
-     *
-     * This method hooks into the WordPress 'admin_enqueue_scripts' action
-     * to enqueue the necessary styles and scripts for the PrimeKit Admin.
-     *
+     * Enqueues CSS styles for the PrimeKit Admin.
+     * 
+     * This function enqueues the main stylesheet for the PrimeKit Admin.
+     * 
      * @since 1.0.0
      */
-    public function admin_enqueue_assets() {
+    public function admin_enqueue_styles()
+    {
         wp_enqueue_style('primekit-admin-style', PRIMEKIT_ADMIN_ASSETS . "/css/admin-style.css", array(), PRIMEKIT_VERSION);
     }
 
- 
+
+    /**
+     * Enqueues JavaScript scripts for the PrimeKit Admin.
+     *
+     * This function enqueues the scripts for the "Available Widgets" page.
+     *
+     * @param string $hook_suffix The current admin page hook suffix.
+     *
+     * @since 1.0.0
+     */
+    public function admin_enqueue_scripts($hook_suffix)
+    {
+        // Check if we're on the "Available Widgets" submenu page
+        if (isset($_GET['page']) && $_GET['page'] === 'primekit_available_widgets') {
+            wp_enqueue_script(
+                'primekit-available-widgets',
+                PRIMEKIT_ADMIN_ASSETS . '/js/available-widgets.js',
+                array(),
+                '1.0.0',
+                true
+            );
+        }
+    }
+
 }

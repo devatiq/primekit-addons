@@ -1,241 +1,236 @@
 #toplevel_page_primekit_settings .wp-menu-image img {
-    width: 20px;
-    height: 20px; 
+  width: 20px;
+  height: 20px;
 }
 
 /* admin global */
 .primekit-available-widget-wrap h1 {
-    margin-bottom: 30px;
-    color: #2c45eb;
-    font-weight: 600;
+  margin-bottom: 30px;
+  color: #2c45eb;
+  font-weight: 600;
+}
+
+.primekit-banner-area {
+  background-image: url(../img/banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 30px 30px;
+  height: 400px;
+  gap: 20px;
+}
+.primekit-banner-area h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+.primekit-banner-area .primekit-banner-version {
+  margin: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.primekit-banner-area .primekit-resource-buttons {
+  display: flex;
+  gap: 10px;
+}
+.primekit-banner-area .primekit-resource-buttons a {
+  display: flex;
+  padding: 8px 20px;
+  gap: 10px;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid #4476ff;
+  align-content: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.primekit-banner-area .primekit-resource-buttons a:hover {
+  background-color: #134cf3;
+  color: #fff;
+  border-color: #134cf3;
+}
+
+/* widget list */
+
+.primekit-widgets-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.primekit-widget-lists {
+  flex: 0 0 calc(20% - 15px);
+  box-sizing: border-box;
+}
+
+.primekit-widget-lists h3 {
+  margin: 10px 0 7px 0;
+}
+
+.primekit-widget-image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.primekit-widget-image-overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.primekit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.primekit-overlay-text {
+  font-size: 20px;
+}
+
+.primekit-widget-image-overlay:hover .primekit-overlay {
+  opacity: 1;
+}
+.tab-content {
+  margin-top: 20px;
+}
+/* Widget Switch Button */
+.primekit-save-message {
+  display: block;
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+.primekit-switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  margin-bottom: 30px;
+}
+
+.primekit-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.primekit-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.primekit-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .primekit-slider {
+  background-image: linear-gradient(90deg, #c835f8 0%, #0049e7 100%);
+}
+
+input:focus + .primekit-slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .primekit-slider:before {
+  -webkit-transform: translateX(49px);
+  -ms-transform: translateX(49px);
+  transform: translateX(49px);
+}
+
+.primekit-slider.primekit-round {
+  border-radius: 34px;
+}
+
+.primekit-slider.primekit-round:before {
+  border-radius: 50%;
+}
+
+/* Responsive Adjustments  */
+
+@media (min-width: 2201px) {
+  .primekit-widget-lists {
+    flex: 0 0 calc(12.5% - 20px);
   }
-  
-  /* Settings Page */
-  /* .primekit-custom-header .primekit-banner-area img{
-    width: 100%;
-    border-radius: 3px;
-  } */
-  .primekit-banner-area {
-    background-image: url(../img/banner.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 5px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    padding: 30px 30px;
-    height: 400px;
-    gap: 20px;  
+  .primekit-widgets-grid {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1601px) and (max-width: 2200px) {
+  .primekit-widget-lists {
+    flex: 0 0 calc(14.28% - 25px);
+  }
+
+  .primekit-widgets-grid {
+    gap: 25px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .primekit-widget-lists {
+    flex: 0 0 calc(16.66% - 20px);
+  }
+
+  .primekit-widgets-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .primekit-widget-lists {
+    flex: 0 0 calc(25% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .primekit-widget-lists {
+    flex: 0 0 calc(50% - 15px);
   }
   .primekit-banner-area h1 {
-    color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
   }
-  .primekit-banner-area .primekit-banner-version {
-    margin: 0;
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-  .primekit-banner-area .primekit-resource-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  .primekit-banner-area .primekit-resource-buttons a {
-    display: flex;
-    padding: 8px 20px;
-    gap: 10px;
-    align-items: center;
-    background-color: #fff;
-    color: #000;
-    border-radius: 5px;
-    text-decoration: none;
-    border: 1px solid #4476ff;
-    align-content: center;
-    justify-content: center;
-    font-size: 16px;
-  }
-  
-  .primekit-banner-area .primekit-resource-buttons a:hover {
-    background-color: #134cf3;
-    color: #fff;
-    border-color: #134cf3;
-  }
-  
-  /* widget list */
-  
-  .primekit-widgets-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
+}
+
+@media (max-width: 480px) {
   .primekit-widget-lists {
-    flex: 0 0 calc(20% - 15px);
-    box-sizing: border-box;
+    flex: 0 0 100%;
   }
-  
-  .primekit-widget-lists h3 {
-    margin: 10px 0 7px 0;
+  .primekit-banner-area h1 {
+    font-size: 1.5rem;
   }
-  
-  .primekit-widget-image-overlay {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .primekit-widget-image-overlay img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .primekit-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .primekit-overlay-text {
-    font-size: 20px;
-  }
-  
-  .primekit-widget-image-overlay:hover .primekit-overlay {
-    opacity: 1;
-  }
-  
-  /* Widget Switch Button */
-  .primekit-save-message {
-    display: block;
-    margin-top: 10px;
-    color: green;
-    font-weight: bold;
-  }
-  
-  .primekit-switch {
-      position: relative;
-      display: inline-block;
-      width: 70px;
-      height: 20px;
-      margin-bottom: 30px;
-    }
-    
-  .primekit-switch input { 
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    
-  .primekit-slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-  .primekit-slider:before {
-      position: absolute;
-      content: "";
-      height: 18px;
-      width: 18px;
-      left: 1px;
-      bottom: 1px;
-      background-color: #fff;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-  input:checked + .primekit-slider {
-    background-image: linear-gradient(90deg, #C835F8 0%, #0049E7 100%);
-    }
-    
-  input:focus + .primekit-slider {
-      box-shadow: 0 0 1px #2196F3;
-    }
-    
-  input:checked + .primekit-slider:before {
-    -webkit-transform: translateX(49px);
-    -ms-transform: translateX(49px);
-    transform: translateX(49px);
-    }
-    
-  .primekit-slider.primekit-round {
-      border-radius: 34px;
-    }
-    
-  .primekit-slider.primekit-round:before {
-      border-radius: 50%;
-    }
-  
-  
-  /* Responsive Adjustments  */
-  
-  @media (min-width: 2201px) {
-    .primekit-widget-lists {
-        flex: 0 0 calc(12.5% - 20px);
-    }
-    .primekit-widgets-grid {
-      gap: 20px;
-    }
-  }
-  
-  @media (min-width: 1601px) and (max-width: 2200px)  {
-      .primekit-widget-lists {
-          flex: 0 0 calc(14.28% - 25px);
-      }
-  
-      .primekit-widgets-grid {
-        gap: 25px;
-      }
-  }
-  
-  @media (min-width: 1400px) and (max-width: 1600px) {
-      .primekit-widget-lists {
-          flex: 0 0 calc(16.66% - 20px);
-      }
-  
-      .primekit-widgets-grid {
-        gap: 20px;
-      }
-  }
-  
-  @media (max-width: 1200px) {
-      .primekit-widget-lists {
-          flex: 0 0 calc(25% - 15px);
-      }
-  }
-  
-  @media (max-width: 768px) {
-      .primekit-widget-lists {
-          flex: 0 0 calc(50% - 15px);
-      }
-      .primekit-banner-area h1 {
-        font-size: 2rem;
-      }
-  }
-  
-  @media (max-width: 480px) {
-      .primekit-widget-lists {
-          flex: 0 0 100%;
-      }
-      .primekit-banner-area h1 {
-        font-size: 1.5rem;
-      }
-  }
-    
+}

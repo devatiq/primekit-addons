@@ -28,9 +28,25 @@ class AvailableWidgets
         ?>
         <div class="wrap">
             <h1><?php _e('Available Widgets', 'primekit-addons'); ?></h1>
-            <p><?php _e('List of available widgets for PrimeKit.', 'primekit-addons'); ?></p>
-            <!-- Display the available widgets or other content here -->
-        </div>
+    
+            <h2 class="nav-tab-wrapper">
+                <a href="#regular" class="nav-tab nav-tab-active"><?php _e('Regular', 'primekit-addons'); ?></a>
+                <a href="#woocommerce" class="nav-tab"><?php _e('WooCommerce', 'primekit-addons'); ?></a>
+            </h2>
+    
+            <div id="regular" class="tab-content">
+                <h3><?php _e('Regular Widgets', 'primekit-addons'); ?></h3>
+                <p><?php _e('List of regular widgets available in PrimeKit.', 'primekit-addons'); ?></p>
+                <!-- Add content for regular widgets here -->
+            </div>
+    
+            <div id="woocommerce" class="tab-content" style="display: none;">
+                <h3><?php _e('WooCommerce Widgets', 'primekit-addons'); ?></h3>
+                <p><?php _e('List of WooCommerce widgets available in PrimeKit.', 'primekit-addons'); ?></p>
+                <!-- Add content for WooCommerce widgets here -->
+            </div>
+        </div>    
         <?php
     }
+    
 }
