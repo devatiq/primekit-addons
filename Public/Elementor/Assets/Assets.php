@@ -63,10 +63,10 @@ class Assets{
     public function enqueue_scripts()
     {
          //script
-         wp_register_script('primekit-anim-text-main', PRIMEKIT_ELEMENTOR_ASSETS . "/js/anim-text-script.js", array('jquery'), '1.0', true);
-         wp_register_script('primekit-back-to-top', PRIMEKIT_ELEMENTOR_ASSETS . "/js/back-to-top.js", array('jquery'), '1.0', true);
-         wp_register_script('jquery-event-move', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.event.move.js", array('jquery'), '1.0', true);
-         wp_register_script('jquery-twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.twentytwenty.js", array('jquery'), '1.0', true);
+         wp_register_script('primekit-anim-text-main', PRIMEKIT_ELEMENTOR_ASSETS . "/js/anim-text-script.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('primekit-back-to-top', PRIMEKIT_ELEMENTOR_ASSETS . "/js/back-to-top.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('jquery-event-move', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.event.move.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('jquery-twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.twentytwenty.js", array('jquery'), PRIMEKIT_VERSION, true);
     }
 
    
@@ -81,11 +81,11 @@ class Assets{
      */
     public function enqueue_styles()
     {
-        wp_enqueue_style('primekit-elementor-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/style.css", array(), "1.0");
-        wp_enqueue_style('primekit-elementor-responsive', PRIMEKIT_ELEMENTOR_ASSETS . "/css/responsive.css", array(), "1.0");
-        wp_register_style('primekit-anim-text-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css", array(), "1.0");
+        wp_enqueue_style('primekit-elementor-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/style.css", array(), PRIMEKIT_VERSION);
+        wp_enqueue_style('primekit-elementor-responsive', PRIMEKIT_ELEMENTOR_ASSETS . "/css/responsive.css", array(), PRIMEKIT_VERSION);
+        wp_register_style('primekit-anim-text-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css", array(), PRIMEKIT_VERSION);
         if (!wp_style_is('twentytwenty')) {
-            wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css", array(), "1.0");
+            wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css", array(), PRIMEKIT_VERSION);
         }
 
     }

@@ -16,7 +16,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 
 use PrimeKit\Admin\Inc\Dashboard\Settings\Settings;
-
+use PrimeKit\Admin\Assets\Assets;
+use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\AvailableWidgets;
 
 /**
  * Class AdminManager
@@ -30,6 +31,8 @@ use PrimeKit\Admin\Inc\Dashboard\Settings\Settings;
 class AdminManager
 {
     protected $settings;
+    protected $Assets;
+    protected $AvailableWidgets;
     /**
      * AdminManager constructor.
      *
@@ -57,9 +60,18 @@ class AdminManager
     }
 
 
+    /**
+     * Initializes the classes used by the PrimeKit Admin.
+     *
+     * This function instantiates the settings and assets classes.
+     *
+     * @since 1.0.0
+     */
     public function init()
     {
-        $this->settings = new Settings();       
+        $this->settings = new Settings();    
+        $this->Assets = new Assets();   
+        $this->AvailableWidgets = new AvailableWidgets();
     }
 
 }
