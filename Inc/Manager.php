@@ -15,8 +15,8 @@ namespace PrimeKit;
 if (!defined('ABSPATH'))
   exit; // Exit if accessed directly
 
-
-use PrimeKit\Public\Elementor\Configuration;
+use PrimeKit\Admin\AdminManager;
+use PrimeKit\Public\PublicManager;
 
 /**
  * The manager class for PrimeKit.
@@ -29,9 +29,8 @@ use PrimeKit\Public\Elementor\Configuration;
  * @since 1.0.0
  */
 class Manager{
-
-  protected $Elementor_Config;
-
+  protected $Admin_Manager;
+  protected $Public_Manager;
   /**
    * Constructor for the Manager class.
    *
@@ -41,6 +40,7 @@ class Manager{
    */
   public function __construct()  {
     $this->init();
+    $this->register_textdomain();
   }
 
   /**
@@ -50,9 +50,9 @@ class Manager{
    *
    * @since 1.0.0
    */
-  public function init()  {
-    $this->Elementor_Config = Configuration::instance();
-    $this->register_textdomain();
+  public function init()  {  
+    $this->Admin_Manager = new AdminManager();    
+    $this->Public_Manager = new PublicManager();
   }
 
 
