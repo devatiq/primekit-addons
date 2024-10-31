@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * AdminManager.php
  *
@@ -12,7 +12,8 @@
  */
 namespace PrimeKit\Admin;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 
 use PrimeKit\Admin\Inc\Dashboard\Settings\Settings;
@@ -45,8 +46,8 @@ class AdminManager
     {
         $this->setConstants();
         $this->init();
-        add_action('wp_ajax_primekit_save_widget_setting', [$this,'primekit_save_widget_setting']);
-       
+        add_action('wp_ajax_primekit_save_widget_setting', [$this, 'primekit_save_widget_setting']);
+
     }
 
     /**
@@ -58,10 +59,10 @@ class AdminManager
      */
     public function setConstants()
     {
-        define('PRIMEKIT_ADMIN_ASSETS', plugin_dir_url(__FILE__) . 'assets');    
-        
+        define('PRIMEKIT_ADMIN_ASSETS', plugin_dir_url(__FILE__) . 'assets');
+
     }
-    
+
     /**
      * Initializes the classes used by the PrimeKit Admin.
      *
@@ -71,28 +72,45 @@ class AdminManager
      */
     public function init()
     {
-        $this->settings = new Settings();    
-        $this->Assets = new Assets();   
+        $this->settings = new Settings();
+        $this->Assets = new Assets();
         $this->PrimeKitWidgets = new PrimeKitWidgets();
     }
 
 
 
-        public function primekit_save_widget_setting()
-        {
-        check_ajax_referer('primekit_nonce', 'nonce'); // Verify nonce for security
+    public function primekit_save_widget_setting()
+    {
+        // Verify nonce for security
+        check_ajax_referer('primekit_nonce', 'nonce');
 
-        // Retrieve the checkbox name and value
-        $widget_name = sanitize_text_field($_POST['widgetName']);
-        $value = sanitize_text_field($_POST['value']);
+        // Ensure the user has the proper capability
         if (!current_user_can('manage_options')) {
-            wp_die('Unauthorized');
+            wp_send_json_error(['message' => __('Unauthorized', 'primekit-addons')]);
+            wp_die();
         }
-        // Save the setting in the options table
-        update_option($widget_name, $value);
 
-        wp_send_json_success('Setting saved.');
-        wp_die();
+        // Check if the required fields are set
+        if (!isset($_POST['widgetName']) || !isset($_POST['value'])) {
+            wp_send_json_error(['message' => __('Missing data', 'primekit-addons')]);
+            wp_die();
         }
+
+        // Sanitize the widget name
+        $widget_name = sanitize_text_field($_POST['widgetName']);
+
+        // Strictly validate the value, allowing only '1' or '0'
+        $value = ($_POST['value'] === '1') ? '1' : '0';
+
+        // Save the setting in the options table
+        if (update_option($widget_name, $value)) {
+            wp_send_json_success(['message' => __('Setting saved.', 'primekit-addons')]);
+        } else {
+            wp_send_json_error(['message' => __('Failed to save setting.', 'primekit-addons')]);
+        }
+
+        wp_die();
+    }
+
 
 }

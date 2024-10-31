@@ -9,8 +9,6 @@ use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\WooCommerceTab;
 
 class PrimeKitWidgets
 {
-    // Variables.
-    protected $regular_tab;
     /**
      * PrimeKitWidgets constructor.
      *
@@ -24,8 +22,6 @@ class PrimeKitWidgets
         // Hook to add the submenu.
         add_action('admin_menu', [$this, 'add_widgets_submenu']);
         
-        // Classes initialization.
-        $this->classes_init();
     }
 
     /**
@@ -242,18 +238,5 @@ class PrimeKitWidgets
         <?php
     }
 
-    /**
-     * Initializes the classes required for the Available Widgets page.
-     *
-     * Currently, this only initializes classes which is used
-     * to display the list of available widgets.
-     *
-     * @since 1.0.0
-     */
-    public function classes_init()
-    {
-       $this->regular_tab = new RegularTab();
-    }
-    
 
 }
