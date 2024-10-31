@@ -79,6 +79,15 @@ class AdminManager
 
 
 
+    /**
+     * Saves a widget setting through an AJAX request.
+     *
+     * Verifies the nonce, checks for the proper capability, and ensures the
+     * required fields are set. Sanitizes the widget name and strictly validates
+     * the value before saving the setting in the options table.
+     *
+     * @since 1.0.0
+     */
     public function primekit_save_widget_setting()
     {
         // Verify nonce for security
