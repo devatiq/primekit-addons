@@ -66,7 +66,7 @@ class Assets
                 '1.0.0',
                 true
             );
-            wp_localize_script('primekit-available-widgets', 'primekitAjax', array(
+            wp_localize_script('primekit-available-widgets', 'PrimeKitWidgetsSwitch', array(
                 'ajaxurl' => admin_url('admin-ajax.php'),
                 'nonce'   => wp_create_nonce('primekit_nonce')
             ));

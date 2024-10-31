@@ -8,7 +8,16 @@ use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\RegularTab;
 
 class PrimeKitWidgets
 {
+    // Variables.
     protected $regular_tab;
+    /**
+     * PrimeKitWidgets constructor.
+     *
+     * Initializes the PrimeKitWidgets by setting up the classes and hooking into the WordPress
+     * 'admin_menu' action to add the "Available Widgets" submenu.
+     *
+     * @since 1.0.0
+     */
     public function __construct()
     {
         // Hook to add the submenu.
@@ -18,6 +27,11 @@ class PrimeKitWidgets
         $this->classes_init();
     }
 
+    /**
+     * Adds the "Available Widgets" submenu page to the PrimeKit settings menu.
+     *
+     * @since 1.0.0
+     */
     public function add_widgets_submenu()
     {
         add_submenu_page(
@@ -30,6 +44,17 @@ class PrimeKitWidgets
         );
     }
 
+    /**
+     * Renders the "Available Widgets" page in the PrimeKit admin dashboard.
+     *
+     * This function outputs the HTML for the "Available Widgets" page, which includes
+     * tabbed navigation for "Regular" and "WooCommerce" widgets. The content for each
+     * tab is dynamically displayed based on the selected tab. The "Regular" tab lists
+     * the regular widgets available in PrimeKit, while the "WooCommerce" tab provides
+     * a placeholder for WooCommerce widgets.
+     *
+     * @since 1.0.0
+     */
     public function render_available_widgets_page()
     {
         ?>
@@ -53,6 +78,23 @@ class PrimeKitWidgets
         </div>
         <?php
     }
+    /**
+     * Renders a wrapper for displaying a list of widgets.
+     *
+     * This function can be used to render a list of available widgets in the
+     * PrimeKit admin dashboard. It renders a heading with the given title and
+     * displays the available widgets within a wrapper element. The content of
+     * the wrapper is rendered via a callback function, which should be provided
+     * when calling this function.
+     *
+     * @param string $title Optional. The title to display above the list of
+     *                      widgets. Defaults to 'Widgets List'.
+     * @param callable $callback Optional. The callback function to use for
+     *                           rendering the list of widgets. If not provided,
+     *                           a default message is displayed.
+     *
+     * @since 1.0.0
+     */
     public function render_widgets_wrapper($title = 'Widgets List', $callback = null) {
         ?>
         <p><?php echo esc_html($title); ?></p>
@@ -74,6 +116,16 @@ class PrimeKitWidgets
         <?php
     }    
     
+    /**
+     * Renders a list of regular widgets.
+     *
+     * This function is a wrapper for {@see render_widgets_wrapper} that renders a
+     * list of regular widgets. It displays a heading with the given title and
+     * calls the `regular_widgets_display` method from the `RegularTab` class to
+     * render the list of widgets.
+     *
+     * @since 1.0.0
+     */
     public function render_regular_widgets_list() {
         $this->render_widgets_wrapper(
             esc_html__('List of regular widgets available in PrimeKit.', 'primekit-addons'),
@@ -81,6 +133,28 @@ class PrimeKitWidgets
         );
     }
     
+    /**
+     * Renders a single available widget.
+     *
+     * This function renders a single widget with an option to toggle it on or off.
+     * It displays the widget title, icon, and a toggle switch. The toggle switch
+     * is used to save the widget setting in the database.
+     *
+     * The function takes the following parameters:
+     *  - $widget_name: The option name for the widget setting.
+     *  - $title: The title of the widget.
+     *  - $icon_url: The URL of the widget icon.
+     *  - $is_free: Whether the widget is free or pro.
+     *  - $widget_url: The URL of the widget.
+     *
+     * @param string $widget_name The option name for the widget setting.
+     * @param string $title The title of the widget.
+     * @param string $icon_url The URL of the widget icon.
+     * @param bool   $is_free Whether the widget is free or pro.
+     * @param string $widget_url The URL of the widget.
+     *
+     * @since 1.0.0
+     */
     public static function primekit_available_widget($widget_name, $title, $icon_url, $is_free = true, $widget_url = '#') {
         $option = get_option($widget_name); 
     
@@ -109,6 +183,14 @@ class PrimeKitWidgets
         <?php
     }
 
+    /**
+     * Initializes the classes required for the Available Widgets page.
+     *
+     * Currently, this only initializes classes which is used
+     * to display the list of available widgets.
+     *
+     * @since 1.0.0
+     */
     public function classes_init()
     {
        $this->regular_tab = new RegularTab();

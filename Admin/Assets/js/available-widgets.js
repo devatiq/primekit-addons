@@ -30,9 +30,9 @@ jQuery(document).ready(function ($) {
 
   // Save widget settings
   $('.primekit-switch input[type="checkbox"]').change(function () {
-    var widgetName = $(this).attr("name"); // Ensure 'name' attribute is present in markup
-    var value = $(this).is(":checked") ? "1" : "0";
-    var thisCheckbox = $(this); // Reference to the current checkbox
+    let widgetName = $(this).attr("name"); // Ensure 'name' attribute is present in markup
+    let value = $(this).is(":checked") ? "1" : "0";
+    let thisCheckbox = $(this); // Reference to the current checkbox
 
     // Toggle on/off labels based on checkbox status
     PrimeKitToggleLabels(thisCheckbox);
@@ -41,19 +41,19 @@ jQuery(document).ready(function ($) {
     thisCheckbox.siblings(".primekit-save-message").remove();
 
     // Create the 'Saving...' message element
-    var saveMessage = $('<span class="primekit-save-message">Saving...</span>');
+    let saveMessage = $('<span class="primekit-save-message">Saving...</span>');
 
     // Append the 'Saving...' message next to the checkbox
     saveMessage.insertAfter(thisCheckbox);
 
     // Perform the AJAX request
     $.post(
-      primekitAjax.ajaxurl,
+      PrimeKitWidgetsSwitch.ajaxurl,
       {
         action: "primekit_save_widget_setting",
         widgetName: widgetName,
         value: value,
-        nonce: primekitAjax.nonce,
+        nonce: PrimeKitWidgetsSwitch.nonce,
       },
       function (response) {
         // Change the message to 'Saved!' and fade it out after a few seconds
