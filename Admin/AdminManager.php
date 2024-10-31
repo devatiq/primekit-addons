@@ -45,6 +45,7 @@ class AdminManager
     {
         $this->setConstants();
         $this->init();
+        add_action('wp_ajax_primekit_save_widget_setting', [$this,'primekit_save_widget_setting']);
     }
 
     /**
@@ -73,5 +74,24 @@ class AdminManager
         $this->Assets = new Assets();   
         $this->AvailableWidgets = new AvailableWidgets();
     }
+
+
+
+        public function primekit_save_widget_setting()
+        {
+        check_ajax_referer('primekit_nonce', 'nonce'); // Verify nonce for security
+
+        // Retrieve the checkbox name and value
+        $widget_name = sanitize_text_field($_POST['widgetName']);
+        $value = sanitize_text_field($_POST['value']);
+        if (!current_user_can('manage_options')) {
+            wp_die('Unauthorized');
+        }
+        // Save the setting in the options table
+        update_option($widget_name, $value);
+
+        wp_send_json_success('Setting saved.');
+        wp_die();
+        }
 
 }

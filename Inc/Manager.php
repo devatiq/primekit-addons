@@ -28,7 +28,8 @@ use PrimeKit\Public\PublicManager;
  * @package PrimeKit\Inc
  * @since 1.0.0
  */
-class Manager{
+class Manager
+{
   protected $Admin_Manager;
   protected $Public_Manager;
   /**
@@ -38,7 +39,8 @@ class Manager{
    *
    * @since 1.0.0
    */
-  public function __construct()  {
+  public function __construct()
+  {
     $this->init();
     $this->register_textdomain();
   }
@@ -50,8 +52,9 @@ class Manager{
    *
    * @since 1.0.0
    */
-  public function init()  {  
-    $this->Admin_Manager = new AdminManager();    
+  public function init()
+  {
+    $this->Admin_Manager = new AdminManager();
     $this->Public_Manager = new PublicManager();
   }
 
@@ -63,7 +66,8 @@ class Manager{
    *
    * @since 1.0.0
    */
-  protected function register_textdomain()  {
+  protected function register_textdomain()
+  {
     load_plugin_textdomain('primekit-addons', false, dirname(plugin_basename(__DIR__, 2)) . '/languages');
   }
 
