@@ -78,7 +78,7 @@
       align-items: center;
       background-color: #F3F3FF;
       border-radius: 5px;
-      padding: 15px 20px;
+      padding: 20px 30px;
       border: 1px solid #dedee7;
       position: relative;
   }
@@ -100,8 +100,7 @@
 .primekit-availability-text {
     background: linear-gradient(90deg, #0049E7 0%, #C835F8 100%);
     color: #fff;
-    display: inline-block;
-    padding: 0 10px;
+    padding: 4px 10px;
     font-size: 11px;
     border-radius: 5px 0 13px 0;
     line-height: normal;
@@ -118,6 +117,8 @@
     width: 50px;
     height: 24px;
     cursor: pointer;
+    margin-top: 6px;
+    margin-right: 6px;
 }
 
 .primekit-switch input {
@@ -125,7 +126,10 @@
     width: 0;
     height: 0;
 }
-
+.primekit-available-single-switch {
+    position: absolute;
+    right: 0;
+}
 .primekit-slider {
     position: absolute;
     cursor: pointer;
@@ -178,8 +182,8 @@ input:checked + .primekit-slider:before {
 
 /* "Off" label styling */
 .primekit-switch-off {
-    left: 10px;
-    opacity: 0;
+    right: 6px;
+    opacity: 1;
 }
 
 /* Show "on" label when checked */
