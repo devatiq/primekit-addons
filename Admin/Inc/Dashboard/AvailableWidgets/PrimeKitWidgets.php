@@ -70,7 +70,10 @@ class PrimeKitWidgets
                 'callback' => 'render_woocommerce_widgets_list'
             ];
         }
-    
+
+        // Allow external code to add additional tabs
+        $tabs = apply_filters('primekit_available_widgets_tabs_register', $tabs);
+
         return $tabs;
     }
     

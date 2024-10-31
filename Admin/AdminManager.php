@@ -46,6 +46,7 @@ class AdminManager
         $this->setConstants();
         $this->init();
         add_action('wp_ajax_primekit_save_widget_setting', [$this,'primekit_save_widget_setting']);
+       
     }
 
     /**
@@ -57,10 +58,10 @@ class AdminManager
      */
     public function setConstants()
     {
-        define('PRIMEKIT_ADMIN_ASSETS', plugin_dir_url(__FILE__) . 'assets');
+        define('PRIMEKIT_ADMIN_ASSETS', plugin_dir_url(__FILE__) . 'assets');    
+        
     }
-
-
+    
     /**
      * Initializes the classes used by the PrimeKit Admin.
      *
