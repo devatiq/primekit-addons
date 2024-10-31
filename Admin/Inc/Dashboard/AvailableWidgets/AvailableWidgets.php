@@ -64,13 +64,149 @@ class AvailableWidgets
                         <div class="primekit-availability-text"><?php echo esc_html__('Free', 'primekit-addons'); ?></div>
                         <div class="primekit-available-single-switch">
                             <?php
-                            $option = get_option('primekit_animated_text_field');
+                                $option = get_option('primekit_animated_text_field');                           
                             ?>
                             <label class="primekit-switch">
-                                <input type="checkbox" name="primekit_animated_text_field" value="1" <?php checked(1, $option, true); ?>>
+                                <input type="checkbox" name="primekit_animated_text_field" value="<?php echo esc_html__($option); ?>" <?php checked(1, $option, true); ?>>
                                 <span class="primekit-slider primekit-round"></span>
-                                <span class="primekit-switch-label primekit-switch-on">on</span>
-                                <span class="primekit-switch-label primekit-switch-off">off</span>
+
+                                <span class="primekit-switch-label primekit-switch-off"><?php echo esc_html__('off', 'primekit-addons'); ?></span>
+                                <span class="primekit-switch-label primekit-switch-on"><?php echo esc_html__('on', 'primekit-addons'); ?></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="primekit-widget-icon">
+                        <img src="<?php echo esc_url(PRIMEKIT_ADMIN_ASSETS . '/img/icons/archive-title.svg'); ?>" alt="">
+                    </div>
+                    <div class="primekit-widget-title">
+                        <h3><a href=""
+                                target="_blank"><?php echo esc_html__('Advanced Animated Text', 'primekit-addons'); ?></a></h3>
+                    </div>
+                </div>
+                <!-- Single Widget -->
+
+                <!-- Single Widget -->
+                <div class="primekit-available-single-widget">
+                    <div class="primekit-available-single-widget-header">
+                        <div class="primekit-availability-text"><?php echo esc_html__('Free', 'primekit-addons'); ?></div>
+                        <div class="primekit-available-single-switch">
+                            <?php
+                                $option = get_option('primekit_animated_text_field');                           
+                            ?>
+                            <label class="primekit-switch">
+                                <input type="checkbox" name="primekit_animated_text_field" value="<?php echo esc_html__($option); ?>" <?php checked(1, $option, true); ?>>
+                                <span class="primekit-slider primekit-round"></span>
+
+                                <span class="primekit-switch-label primekit-switch-off"><?php echo esc_html__('off', 'primekit-addons'); ?></span>
+                                <span class="primekit-switch-label primekit-switch-on"><?php echo esc_html__('on', 'primekit-addons'); ?></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="primekit-widget-icon">
+                        <img src="<?php echo esc_url(PRIMEKIT_ADMIN_ASSETS . '/img/icons/archive-title.svg'); ?>" alt="">
+                    </div>
+                    <div class="primekit-widget-title">
+                        <h3><a href=""
+                                target="_blank"><?php echo esc_html__('Advanced Animated Text', 'primekit-addons'); ?></a></h3>
+                    </div>
+                </div>
+                <!-- Single Widget -->
+
+                <!-- Single Widget -->
+                <div class="primekit-available-single-widget">
+                    <div class="primekit-available-single-widget-header">
+                        <div class="primekit-availability-text"><?php echo esc_html__('Free', 'primekit-addons'); ?></div>
+                        <div class="primekit-available-single-switch">
+                            <?php
+                                $option = get_option('primekit_animated_text_field');                           
+                            ?>
+                            <label class="primekit-switch">
+                                <input type="checkbox" name="primekit_animated_text_field" value="<?php echo esc_html__($option); ?>" <?php checked(1, $option, true); ?>>
+                                <span class="primekit-slider primekit-round"></span>
+
+                                <span class="primekit-switch-label primekit-switch-off"><?php echo esc_html__('off', 'primekit-addons'); ?></span>
+                                <span class="primekit-switch-label primekit-switch-on"><?php echo esc_html__('on', 'primekit-addons'); ?></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="primekit-widget-icon">
+                        <img src="<?php echo esc_url(PRIMEKIT_ADMIN_ASSETS . '/img/icons/archive-title.svg'); ?>" alt="">
+                    </div>
+                    <div class="primekit-widget-title">
+                        <h3><a href=""
+                                target="_blank"><?php echo esc_html__('Advanced Animated Text', 'primekit-addons'); ?></a></h3>
+                    </div>
+                </div>
+                <!-- Single Widget -->
+
+                <!-- Single Widget -->
+                <div class="primekit-available-single-widget">
+                    <div class="primekit-available-single-widget-header">
+                        <div class="primekit-availability-text"><?php echo esc_html__('Free', 'primekit-addons'); ?></div>
+                        <div class="primekit-available-single-switch">
+                            <?php
+                                $option = get_option('primekit_animated_text_field');                           
+                            ?>
+                            <label class="primekit-switch">
+                                <input type="checkbox" name="primekit_animated_text_field" value="<?php echo esc_html__($option); ?>" <?php checked(1, $option, true); ?>>
+                                <span class="primekit-slider primekit-round"></span>
+
+                                <span class="primekit-switch-label primekit-switch-off"><?php echo esc_html__('off', 'primekit-addons'); ?></span>
+                                <span class="primekit-switch-label primekit-switch-on"><?php echo esc_html__('on', 'primekit-addons'); ?></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="primekit-widget-icon">
+                        <img src="<?php echo esc_url(PRIMEKIT_ADMIN_ASSETS . '/img/icons/archive-title.svg'); ?>" alt="">
+                    </div>
+                    <div class="primekit-widget-title">
+                        <h3><a href=""
+                                target="_blank"><?php echo esc_html__('Advanced Animated Text', 'primekit-addons'); ?></a></h3>
+                    </div>
+                </div>
+                <!-- Single Widget -->
+
+                <!-- Single Widget -->
+                <div class="primekit-available-single-widget">
+                    <div class="primekit-available-single-widget-header">
+                        <div class="primekit-availability-text"><?php echo esc_html__('Free', 'primekit-addons'); ?></div>
+                        <div class="primekit-available-single-switch">
+                            <?php
+                                $option = get_option('primekit_animated_text_field');                           
+                            ?>
+                            <label class="primekit-switch">
+                                <input type="checkbox" name="primekit_animated_text_field" value="<?php echo esc_html__($option); ?>" <?php checked(1, $option, true); ?>>
+                                <span class="primekit-slider primekit-round"></span>
+
+                                <span class="primekit-switch-label primekit-switch-off"><?php echo esc_html__('off', 'primekit-addons'); ?></span>
+                                <span class="primekit-switch-label primekit-switch-on"><?php echo esc_html__('on', 'primekit-addons'); ?></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="primekit-widget-icon">
+                        <img src="<?php echo esc_url(PRIMEKIT_ADMIN_ASSETS . '/img/icons/archive-title.svg'); ?>" alt="">
+                    </div>
+                    <div class="primekit-widget-title">
+                        <h3><a href=""
+                                target="_blank"><?php echo esc_html__('Advanced Animated Text', 'primekit-addons'); ?></a></h3>
+                    </div>
+                </div>
+                <!-- Single Widget -->
+
+                <!-- Single Widget -->
+                <div class="primekit-available-single-widget">
+                    <div class="primekit-available-single-widget-header">
+                        <div class="primekit-availability-text"><?php echo esc_html__('Free', 'primekit-addons'); ?></div>
+                        <div class="primekit-available-single-switch">
+                            <?php
+                                $option = get_option('primekit_animated_text_field');                           
+                            ?>
+                            <label class="primekit-switch">
+                                <input type="checkbox" name="primekit_animated_text_field" value="<?php echo esc_html__($option); ?>" <?php checked(1, $option, true); ?>>
+                                <span class="primekit-slider primekit-round"></span>
+
+                                <span class="primekit-switch-label primekit-switch-off"><?php echo esc_html__('off', 'primekit-addons'); ?></span>
+                                <span class="primekit-switch-label primekit-switch-on"><?php echo esc_html__('on', 'primekit-addons'); ?></span>
                             </label>
                         </div>
                     </div>
