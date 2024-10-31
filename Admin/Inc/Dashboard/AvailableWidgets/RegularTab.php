@@ -59,7 +59,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_img_text_scroll_widget_field',
             esc_html__('Image & Text Scroll', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/image-and-text-scroll.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -67,7 +67,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_anim_text_widget_field',
             esc_html__('Animated Text', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -75,7 +75,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_count_down_widget_field',
             esc_html__('Count Down Timer', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/count-down-timer.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -83,7 +83,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_before_after_widget_field',
             esc_html__('Before After Image', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/before-after-image.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -91,7 +91,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_card_info_widget_field',
             esc_html__('Card Info', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/card-info.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -99,7 +99,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_back_top_widget_field',
             esc_html__('Back To Top', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/back-to-top-button.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -107,7 +107,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_cta_widget_field',
             esc_html__('Call To Action- CTA', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/call-to-action.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -115,7 +115,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_contact_info_widget_field',
             esc_html__('Contact & Social Info', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/contact-and-social-info.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -147,7 +147,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_flip_box_widget_field',
             esc_html__('Flip Box', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/flip-box.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -163,7 +163,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_blog_fancy_widget_field',
             esc_html__('Blog Fancy', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/fancy-blog-posts.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -171,7 +171,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_author_bio_widget_field',
             esc_html__('Author Bio', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/post-author-bio.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -179,7 +179,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_blog_grid_widget_field',
             esc_html__('Blog Grid', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blog-posts-grid.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -187,7 +187,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_blog_list_widget_field',
             esc_html__('Blog List', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blog-posts-list.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -195,7 +195,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_breadcrumb_widget_field',
             esc_html__('Breadcrumb', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/breadcrumb.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -203,7 +203,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_cat_list_widget_field',
             esc_html__('Category List', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/post-category-list.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -211,7 +211,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_contact_form7_widget_field',
             esc_html__('Contact Form 7', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/contact-form-7.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -219,7 +219,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_circular_skill_widget_field',
             esc_html__('Circular Skill', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-circular-skill.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -227,7 +227,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_comment_form_widget_field',
             esc_html__('Comment Form', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/comment-form.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -235,7 +235,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_counter_up_widget_field',
             esc_html__('Counter Up', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/counter-up.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -243,7 +243,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_feat_img_widget_field',
             esc_html__('Feature Image', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/featured-image.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -251,7 +251,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_icon_box_widget_field',
             esc_html__('Icon Box', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-Icon-box.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -259,7 +259,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_img_hover_widget_field',
             esc_html__('Image Hover', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/image-hover.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -267,7 +267,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_page_title_widget_field',
             esc_html__('Page Title', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/page-title.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -275,7 +275,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_abc_popup_widget_field',
             esc_html__('Popup', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/popup.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -283,7 +283,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_portfolio_widget_field',
             esc_html__('Portfolio', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/portfolio.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -291,7 +291,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_post_meta_widget_field',
             esc_html__('Post Meta', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/post-meta-info.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -299,7 +299,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_post_title_widget_field',
             esc_html__('Post Title', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/post-title.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -307,7 +307,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_pricing_table_widget_field',
             esc_html__('Pricing Table', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-pricing-table.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -315,7 +315,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_recent_post_widget_field',
             esc_html__('Recent Posts', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/recent-posts-list.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -347,7 +347,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_shape_anim_widget_field',
             esc_html__('Animated Shape', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/animated-shape.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -371,7 +371,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_tag_info_widget_field',
             esc_html__('Post Tag Info', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/post-tag-info.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -387,7 +387,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_dual_button_widget_field',
             esc_html__('Dual Button', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/dual-button.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -395,7 +395,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_business_hours_field',
             esc_html__('Business Hours', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/business-hours.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -403,7 +403,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_archive_title_field',
             esc_html__('Archive Title', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/archive-title.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -411,7 +411,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_gravity_form_field',
             esc_html__('Gravity Form', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/gravity-form.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -419,7 +419,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_image_gallery_field',
             esc_html__('Image Gallery', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/image-gallery.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -427,7 +427,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_mailchimp_switch_field',
             esc_html__('MailChimp', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/mailchimp.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -443,7 +443,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_cost_estimation_field',
             esc_html__('Cost Estimation', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/cost-estimation.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
@@ -451,7 +451,7 @@ class RegularTab {
         PrimeKitWidgets::primekit_available_widget(
             'primekit_modern_post_grid_field',
             esc_html__('Modern Post Grid', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg', 
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/modern-post-grid.svg', 
             true,
             self::demo_url('widgets/fancy-blog-posts-elementor-widget/'),
         );
