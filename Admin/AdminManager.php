@@ -17,7 +17,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 use PrimeKit\Admin\Inc\Dashboard\Settings\Settings;
 use PrimeKit\Admin\Assets\Assets;
-use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\AvailableWidgets;
+use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\PrimeKitWidgets;
 
 /**
  * Class AdminManager
@@ -32,7 +32,7 @@ class AdminManager
 {
     protected $settings;
     protected $Assets;
-    protected $AvailableWidgets;
+    protected $PrimeKitWidgets;
     /**
      * AdminManager constructor.
      *
@@ -72,7 +72,7 @@ class AdminManager
     {
         $this->settings = new Settings();    
         $this->Assets = new Assets();   
-        $this->AvailableWidgets = new AvailableWidgets();
+        $this->PrimeKitWidgets = new PrimeKitWidgets();
     }
 
 

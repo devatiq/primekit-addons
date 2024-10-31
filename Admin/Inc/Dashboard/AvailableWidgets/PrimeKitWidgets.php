@@ -4,12 +4,18 @@ namespace PrimeKit\Admin\Inc\Dashboard\AvailableWidgets;
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-class AvailableWidgets
+use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\RegularTab;
+
+class PrimeKitWidgets
 {
+    protected $regular_tab;
     public function __construct()
     {
-        // Hook to add the submenu
+        // Hook to add the submenu.
         add_action('admin_menu', [$this, 'add_widgets_submenu']);
+        
+        // Classes initialization.
+        $this->classes_init();
     }
 
     public function add_widgets_submenu()
@@ -47,51 +53,35 @@ class AvailableWidgets
         </div>
         <?php
     }
-
-    public function render_regular_widgets_list()
-    {
+    public function render_widgets_wrapper($title = 'Widgets List', $callback = null) {
         ?>
-        <p><?php echo esc_html__('List of regular widgets available in PrimeKit.', 'primekit-addons'); ?></p>
-
+        <p><?php echo esc_html($title); ?></p>
+    
         <!-- Available widgets area -->
         <div class="primekit-available-widgets-area">
             <!-- Widgets Wrapper -->
             <div class="primekit-available-widgets-wrapper">
-
-                <!-- Single Widget -->
-                <div class="primekit-available-single-widget">
-                    <div class="primekit-available-single-widget-header">
-                        <div class="primekit-availability-text"><?php echo esc_html__('Free', 'primekit-addons'); ?></div>
-                        <div class="primekit-available-single-switch">
-                            <?php
-                                $option = get_option('primekit_animated_text_field');                           
-                            ?>
-                            <label class="primekit-switch">
-                                <input type="checkbox" name="primekit_animated_text_field" value="<?php echo esc_html__($option); ?>" <?php checked(1, $option, true); ?>>
-                                <span class="primekit-slider primekit-round"></span>
-
-                                <span class="primekit-switch-label primekit-switch-off"><?php echo esc_html__('off', 'primekit-addons'); ?></span>
-                                <span class="primekit-switch-label primekit-switch-on"><?php echo esc_html__('on', 'primekit-addons'); ?></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="primekit-widget-icon">
-                        <img src="<?php echo esc_url(PRIMEKIT_ADMIN_ASSETS . '/img/icons/archive-title.svg'); ?>" alt="">
-                    </div>
-                    <div class="primekit-widget-title">
-                        <h3><a href=""
-                                target="_blank"><?php echo esc_html__('Advanced Animated Text', 'primekit-addons'); ?></a></h3>
-                    </div>
-                </div>
-                <!-- Single Widget -->
-
+                <?php
+                // Check if the callback is provided and callable
+                if (is_callable($callback)) {
+                    call_user_func($callback);
+                } else {
+                    echo '<p>' . esc_html__('No widgets to display.', 'primekit-addons') . '</p>';
+                }
+                ?>
             </div><!--/ Widgets Wrapper -->
         </div><!--/ Available widgets area -->
-
         <?php
+    }    
+    
+    public function render_regular_widgets_list() {
+        $this->render_widgets_wrapper(
+            esc_html__('List of regular widgets available in PrimeKit.', 'primekit-addons'),
+            [RegularTab::class, 'regular_widgets_display']
+        );
     }
-
-    function render_primekit_widget($widget_name, $title, $img_url, $is_free = true, $title_url = '#') {
+    
+    public static function primekit_available_widget($widget_name, $title, $icon_url, $is_free = true, $widget_url = '#') {
         $option = get_option($widget_name); 
     
         // Determine the availability text based on $is_free
@@ -110,13 +100,18 @@ class AvailableWidgets
                 </div>
             </div>
             <div class="primekit-widget-icon">
-                <img src="<?php echo esc_url($img_url); ?>" alt="">
+                <img src="<?php echo esc_url($icon_url); ?>" alt="<?php echo esc_html($title); ?>">
             </div>
             <div class="primekit-widget-title">
-                <h3><a href="<?php echo esc_url($title_url); ?>" target="_blank"><?php echo esc_html($title); ?></a></h3>
+                <h3><a href="<?php echo esc_url($widget_url); ?>" target="_blank"><?php echo esc_html($title); ?></a></h3>
             </div>
         </div>
         <?php
+    }
+
+    public function classes_init()
+    {
+       $this->regular_tab = new RegularTab();
     }
     
 
