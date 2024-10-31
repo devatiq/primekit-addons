@@ -92,6 +92,9 @@
   font-weight: 500;
   outline: none;
 }
+.primekit-widget-title h3 a:focus, .primekit-widget-title h3 a:active, .primekit-widget-title h3 a:visited {
+  outline: none;
+}
 .primekit-available-single-widget-header {
   position: absolute;
   top: 0;
