@@ -24,7 +24,7 @@ class RegularTab
     /**
      * Display a list of available widgets by calling the render method.
      */
-    public static function regular_widgets_display()
+    public static function primekit_regular_widgets_display()
     {
         // Animated Text.
         PrimeKitWidgets::primekit_available_widget(

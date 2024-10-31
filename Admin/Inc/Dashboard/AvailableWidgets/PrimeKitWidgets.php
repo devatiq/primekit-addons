@@ -5,6 +5,7 @@ if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
 use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\RegularTab;
+use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\WooCommerceTab;
 
 class PrimeKitWidgets
 {
@@ -43,7 +44,36 @@ class PrimeKitWidgets
             [$this, 'render_available_widgets_page']    // Callback function
         );
     }
-
+    
+    /**
+     * Retrieves the available tabs for the "Available Widgets" page.
+     *
+     * This function constructs an array of tabs, each with a label and a callback
+     * function. The "Regular" tab is always included, while the "WooCommerce" tab
+     * is added only if WooCommerce is active.
+     *
+     * @return array An associative array of tabs, where each key is a tab ID and 
+     *               the value is an array containing 'label' and 'callback'.
+     */
+    protected function get_tabs() {
+        $tabs = [
+            'regular' => [
+                'label' => 'Regular',
+                'callback' => 'render_regular_widgets_list'
+            ]
+        ];
+    
+        // Conditionally add the WooCommerce tab if WooCommerce is active
+        if (class_exists('WooCommerce')) {
+            $tabs['woocommerce'] = [
+                'label' => 'WooCommerce',
+                'callback' => 'render_woocommerce_widgets_list'
+            ];
+        }
+    
+        return $tabs;
+    }
+    
     /**
      * Renders the "Available Widgets" page in the PrimeKit admin dashboard.
      *
@@ -55,29 +85,38 @@ class PrimeKitWidgets
      *
      * @since 1.0.0
      */
-    public function render_available_widgets_page()
-    {
+    public function render_available_widgets_page() {
+        $tabs = $this->get_tabs(); // Retrieve the dynamically generated tabs.
+    
         ?>
         <div class="wrap">
             <h1><?php echo esc_html__('Available Widgets', 'primekit-addons'); ?></h1>
-
+    
+            <!-- Tab Navigation -->
             <h2 class="nav-tab-wrapper">
-                <a href="#regular" class="nav-tab nav-tab-active"><?php echo esc_html__('Regular', 'primekit-addons'); ?></a>
-                <a href="#woocommerce" class="nav-tab"><?php echo esc_html__('WooCommerce', 'primekit-addons'); ?></a>
+                <?php foreach ($tabs as $tab_id => $tab) : ?>
+                    <a href="#<?php echo esc_attr($tab_id); ?>" class="nav-tab"><?php echo esc_html__($tab['label'], 'primekit-addons'); ?></a>
+                <?php endforeach; ?>
             </h2>
-
-            <div id="regular" class="tab-content">
-                <h3><?php echo esc_html__('Regular Widgets', 'primekit-addons'); ?></h3>
-                <?php $this->render_regular_widgets_list(); ?>
-            </div>
-
-            <div id="woocommerce" class="tab-content" style="display: none;">
-                <h3><?php echo esc_html__('WooCommerce Widgets', 'primekit-addons'); ?></h3>
-                <p><?php echo esc_html__('List of WooCommerce widgets available in PrimeKit.', 'primekit-addons'); ?></p>
-            </div>
+    
+            <!-- Tab Content -->
+            <?php foreach ($tabs as $tab_id => $tab) : ?>
+                <div id="<?php echo esc_attr($tab_id); ?>" class="tab-content" style="<?php echo $tab_id === 'regular' ? '' : 'display: none;'; ?>">
+                    <h3><?php echo esc_html__($tab['label'] . ' Widgets', 'primekit-addons'); ?></h3>
+                    <?php 
+                    // Execute the callback if it’s callable
+                    if (is_callable([$this, $tab['callback']])) {
+                        call_user_func([$this, $tab['callback']]);
+                    } else {
+                        echo '<p>' . esc_html__('Content not available or not found callback function.', 'primekit-addons') . '</p>';
+                    }
+                    ?>
+                </div>
+            <?php endforeach; ?>
         </div>
         <?php
     }
+    
     /**
      * Renders a wrapper for displaying a list of widgets.
      *
@@ -121,7 +160,7 @@ class PrimeKitWidgets
      *
      * This function is a wrapper for {@see render_widgets_wrapper} that renders a
      * list of regular widgets. It displays a heading with the given title and
-     * calls the `regular_widgets_display` method from the `RegularTab` class to
+     * calls the `primekit_regular_widgets_display` method from the `RegularTab` class to
      * render the list of widgets.
      *
      * @since 1.0.0
@@ -129,7 +168,24 @@ class PrimeKitWidgets
     public function render_regular_widgets_list() {
         $this->render_widgets_wrapper(
             esc_html__('List of regular widgets available in PrimeKit.', 'primekit-addons'),
-            [RegularTab::class, 'regular_widgets_display']
+            [RegularTab::class, 'primekit_regular_widgets_display']
+        );
+    }
+
+    /**
+     * Renders a list of WooCommerce widgets.
+     *
+     * This function is a wrapper for {@see render_widgets_wrapper} that renders a
+     * list of WooCommerce widgets. It displays a heading with the given title and
+     * calls the `primekit_woocommerce_widgets_display` method from the `WooCommerceTab`
+     * class to render the list of widgets.
+     *
+     * @since 1.0.0
+     */
+    public function render_woocommerce_widgets_list() {
+        $this->render_widgets_wrapper(
+            esc_html__('List of WooCommerce widgets available in PrimeKit.', 'primekit-addons'),
+            [WooCommerceTab::class, 'primekit_woocommerce_widgets_display']
         );
     }
     
