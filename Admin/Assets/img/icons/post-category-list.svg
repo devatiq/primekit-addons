@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-9);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-8);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-6.24" y1="-9.53" x2="25.61" y2="28.31" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0049e7"/>
+      <stop offset=".11" stop-color="#0648e7"/>
+      <stop offset=".26" stop-color="#1647e9"/>
+      <stop offset=".42" stop-color="#3144eb"/>
+      <stop offset=".6" stop-color="#5740ee"/>
+      <stop offset=".79" stop-color="#883bf3"/>
+      <stop offset=".98" stop-color="#c236f7"/>
+      <stop offset="1" stop-color="#c835f8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1=".81" y1="-15.47" x2="32.67" y2="22.37" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="7.86" y1="-21.4" x2="39.72" y2="16.44" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-12.18" y1="-4.53" x2="19.68" y2="33.31" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="-5.12" y1="-10.47" x2="26.73" y2="27.37" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="1.93" y1="-16.41" x2="33.78" y2="21.43" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="-18.11" y1=".46" x2="13.74" y2="38.3" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="-11.06" y1="-5.47" x2="20.79" y2="32.37" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-9" x1="-4.01" y1="-11.41" x2="27.85" y2="26.43" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M8.36.13H3.54C2.21.13,1.13,1.21,1.13,2.54v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41V2.54c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-4" d="M20.41.13h-4.82c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41V2.54c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-6" d="M32.46.13h-4.82c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41V2.54c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-9" d="M8.36,12.18H3.54c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41v-4.82c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-3" d="M20.41,12.18h-4.82c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41v-4.82c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-2" d="M32.46,12.18h-4.82c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41v-4.82c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-5" d="M8.36,24.23H3.54c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41v-4.82c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-8" d="M20.41,24.23h-4.82c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41v-4.82c0-1.33-1.08-2.41-2.41-2.41Z"/>
+    <path class="cls-7" d="M32.46,24.23h-4.82c-1.33,0-2.41,1.08-2.41,2.41v4.82c0,1.33,1.08,2.41,2.41,2.41h4.82c1.33,0,2.41-1.08,2.41-2.41v-4.82c0-1.33-1.08-2.41-2.41-2.41Z"/>
+  </g>
+</svg>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient-9);
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient-8);
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="5.78" y1="-12.48" x2="44.91" y2="23.91" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0049e7"/>
+      <stop offset=".11" stop-color="#0648e7"/>
+      <stop offset=".26" stop-color="#1647e9"/>
+      <stop offset=".42" stop-color="#3144eb"/>
+      <stop offset=".47" stop-color="#5740ee"/>
+      <stop offset=".69" stop-color="#883bf3"/>
+      <stop offset=".98" stop-color="#c236f7"/>
+      <stop offset="1" stop-color="#c835f8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="4.84" y1="-11.47" x2="43.97" y2="24.92" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-.34" y1="-5.89" x2="38.79" y2="30.49" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-1.28" y1="-4.88" x2="37.85" y2="31.5" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="-6.47" y1=".7" x2="32.66" y2="37.08" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="-7.4" y1="1.7" x2="31.73" y2="38.09" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="-3.23" y1="-2.79" x2="35.9" y2="33.6" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="-9.35" y1="3.8" x2="29.78" y2="40.18" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-9" x1="-15.48" y1="10.39" x2="23.65" y2="46.77" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="cls-1" d="M13.61,2.09h17.54c.48,0,.88.39.88.88h0c0,.48-.39.88-.88.88H13.61c-.48,0-.88-.39-.88-.88h0c0-.48.39-.88.88-.88Z"/>
+  <path class="cls-4" d="M13.61,5.6h21.05c.48,0,.88.39.88.88h0c0,.48-.39.88-.88.88H13.61c-.48,0-.88-.39-.88-.88h0c0-.48.39-.88.88-.88Z"/>
+  <path class="cls-6" d="M13.61,14.37h17.54c.48,0,.88.39.88.88h0c0,.48-.39.88-.88.88H13.61c-.48,0-.88-.39-.88-.88h0c0-.48.39-.88.88-.88Z"/>
+  <path class="cls-9" d="M13.61,17.88h21.05c.48,0,.88.39.88.88h0c0,.48-.39.88-.88.88H13.61c-.48,0-.88-.39-.88-.88h0c0-.48.39-.88.88-.88Z"/>
+  <path class="cls-3" d="M13.61,26.65h17.54c.48,0,.88.39.88.88h0c0,.48-.39.88-.88.88H13.61c-.48,0-.88-.39-.88-.88h0c0-.48.39-.88.88-.88Z"/>
+  <path class="cls-2" d="M13.61,30.16h21.05c.48,0,.88.39.88.88h0c0,.48-.39.88-.88.88H13.61c-.48,0-.88-.39-.88-.88h0c0-.48.39-.88.88-.88Z"/>
+  <path class="cls-5" d="M7.47,4.72h0c0,1.45-1.18,2.63-2.63,2.63h0c-1.45,0-2.63-1.18-2.63-2.63h0c0-1.45,1.18-2.63,2.63-2.63h0c1.45,0,2.63,1.18,2.63,2.63ZM6.6.33h-3.51C1.63.33.46,1.51.46,2.97v3.51c0,1.45,1.18,2.63,2.63,2.63h3.51c1.45,0,2.63-1.18,2.63-2.63v-3.51c0-1.45-1.18-2.63-2.63-2.63Z"/>
+  <path class="cls-8" d="M7.47,17h0c0,1.45-1.18,2.63-2.63,2.63h0c-1.45,0-2.63-1.18-2.63-2.63h0c0-1.45,1.18-2.63,2.63-2.63h0c1.45,0,2.63,1.18,2.63,2.63ZM6.6,12.61h-3.51c-1.45,0-2.63,1.18-2.63,2.63v3.51c0,1.45,1.18,2.63,2.63,2.63h3.51c1.45,0,2.63-1.18,2.63-2.63v-3.51c0-1.45-1.18-2.63-2.63-2.63Z"/>
+  <path class="cls-7" d="M7.47,29.28h0c0,1.45-1.18,2.63-2.63,2.63h0c-1.45,0-2.63-1.18-2.63-2.63h0c0-1.45,1.18-2.63,2.63-2.63h0c1.45,0,2.63,1.18,2.63,2.63ZM6.6,24.89h-3.51c-1.45,0-2.63,1.18-2.63,2.63v3.51c0,1.45,1.18,2.63,2.63,2.63h3.51c1.45,0,2.63-1.18,2.63-2.63v-3.51c0-1.45-1.18-2.63-2.63-2.63Z"/>
+</svg>

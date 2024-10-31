@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-1.69" y1="6.75" x2="33.8" y2="25.23" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0049e7"/>
+      <stop offset=".11" stop-color="#0648e7"/>
+      <stop offset=".26" stop-color="#1647e9"/>
+      <stop offset=".42" stop-color="#3144eb"/>
+      <stop offset=".6" stop-color="#5740ee"/>
+      <stop offset=".79" stop-color="#883bf3"/>
+      <stop offset=".98" stop-color="#c236f7"/>
+      <stop offset="1" stop-color="#c835f8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-4.5" y1="12.13" x2="31" y2="30.61" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-1.31" y1="6" x2="34.19" y2="24.48" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="g2035">
+    <g id="path2037">
+      <path class="cls-1" d="M32.73,31.49H3.27c-.83,0-1.65-.34-2.24-.93-.6-.6-.93-1.39-.93-2.24V5.67c0-.85.33-1.64.93-2.24.59-.59,1.4-.93,2.24-.93h29.46c.83,0,1.65.34,2.24.93.6.6.93,1.39.93,2.24v22.66c0,.85-.33,1.64-.93,2.24-.59.59-1.4.93-2.24.93ZM3.27,4.3c-.36,0-.71.15-.97.4-.26.26-.4.6-.4.97v22.66c0,.37.14.71.4.97.25.25.61.4.97.4h29.46c.36,0,.71-.15.97-.4.26-.26.4-.6.4-.97V5.67c0-.37-.14-.71-.4-.97-.25-.25-.61-.4-.97-.4H3.27Z"/>
+    </g>
+  </g>
+  <g id="g2039">
+    <g id="path2041">
+      <path class="cls-2" d="M3.27,31.39c-.2,0-.41-.08-.56-.23-.31-.31-.31-.81,0-1.12l11.33-11.33c.31-.31.81-.31,1.12,0l3.97,3.97,8.5-8.5c.15-.15.35-.23.56-.23s.41.08.56.23l6.8,6.8c.31.31.31.81,0,1.12-.31.31-.81.31-1.12,0l-6.24-6.24-8.5,8.5c-.15.15-.35.23-.56.23s-.41-.08-.56-.23l-3.97-3.97L3.83,31.16c-.15.15-.36.23-.56.23Z"/>
+    </g>
+  </g>
+  <g id="g2043">
+    <g id="path2045">
+      <path class="cls-3" d="M8.94,15.53c-2.31,0-4.19-1.88-4.19-4.19s1.88-4.19,4.19-4.19,4.19,1.88,4.19,4.19-1.88,4.19-4.19,4.19ZM8.94,8.73c-1.44,0-2.61,1.17-2.61,2.61s1.17,2.61,2.61,2.61,2.61-1.17,2.61-2.61-1.17-2.61-2.61-2.61Z"/>
+    </g>
+  </g>
+</svg>

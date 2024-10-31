@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-6.59" y1="6.13" x2="27.92" y2="28.93" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0049e7"/>
+      <stop offset=".11" stop-color="#0648e7"/>
+      <stop offset=".26" stop-color="#1647e9"/>
+      <stop offset=".46" stop-color="#3144eb"/>
+      <stop offset=".66" stop-color="#5740ee"/>
+      <stop offset=".79" stop-color="#883bf3"/>
+      <stop offset=".98" stop-color="#c236f7"/>
+      <stop offset="1" stop-color="#c835f8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-.35" y1="-3.32" x2="34.16" y2="19.47" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="-5.09" y1="3.86" x2="29.42" y2="26.65" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-7.93" y1="8.15" x2="26.59" y2="30.94" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="-4.02" y1="2.23" x2="30.5" y2="25.02" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="g2902">
+    <g id="path2904">
+      <path class="cls-1" d="M31.13,33.74H15.05c-1.92,0-3.49-1.57-3.49-3.49v-9.04c0-1.92,1.57-3.49,3.49-3.49h16.07c1.92,0,3.49,1.57,3.49,3.49v9.04c0,1.92-1.57,3.49-3.49,3.49ZM15.05,19.34c-1.03,0-1.87.84-1.87,1.87v9.04c0,1.03.84,1.87,1.87,1.87h16.07c1.03,0,1.87-.84,1.87-1.87v-9.04c0-1.03-.84-1.87-1.87-1.87H15.05Z"/>
+    </g>
+  </g>
+  <g id="g2906">
+    <g id="path2908">
+      <rect class="cls-3" x="12.97" y="8.41" width="11.33" height="1.62"/>
+    </g>
+  </g>
+  <g id="g2910">
+    <g id="path2912">
+      <rect class="cls-4" x="12.44" y="21.74" width="21.55" height="1.62"/>
+    </g>
+  </g>
+  <g id="g2914">
+    <g id="path2916">
+      <rect class="cls-5" x="16.45" y="26.03" width="7.85" height="1.62"/>
+    </g>
+  </g>
+  <path class="cls-2" d="M4.89,1.85h26.22c1.35,0,2.45,1.1,2.45,2.45v10.48c.58-.07,1.16.11,1.59.5V4.3c0-2.23-1.81-4.04-4.04-4.04H4.89C2.66.26.85,2.07.85,4.3v24.94c0,2.23,1.81,4.04,4.04,4.04h3.56c-.04-.59.09-1.18.52-1.59h-4.08c-1.35,0-2.45-1.1-2.45-2.45V4.3c0-1.35,1.1-2.45,2.45-2.45Z"/>
+</svg>
