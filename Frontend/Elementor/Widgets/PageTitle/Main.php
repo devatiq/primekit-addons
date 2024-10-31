@@ -1,5 +1,5 @@
 <?php
-namespace PrimeKit\Public\Elementor\Widgets\PostTitle;
+namespace PrimeKit\Frontend\Elementor\Widgets\PageTitle;
 
 if (!defined('ABSPATH'))
 	exit; // Exit if accessed directly
@@ -16,17 +16,17 @@ class Main extends Widget_Base
 
 	public function get_name()
 	{
-		return 'primekit-post-title';
+		return 'primekit-page-title';
 	}
 
 	public function get_title()
 	{
-		return esc_html__('Post Title', 'primekit-addons');
+		return esc_html__('Page Title', 'primekit-addons');
 	}
 
 	public function get_icon()
 	{
-		return 'eicon-post-title';
+		return 'eicon-archive-title';
 	}
 
 	public function get_categories()
@@ -36,9 +36,8 @@ class Main extends Widget_Base
 
 	public function get_keywords()
 	{
-		return ['prime', 'post', 'title', 'post title'];
+		return ['prime', 'page', 'title', 'page title'];
 	}
-
 
 	/**
 	 * Register list widget controls.
@@ -47,7 +46,7 @@ class Main extends Widget_Base
 	{
 		//Template
 		$this->start_controls_section(
-			'primekit-elementor-post_title',
+			'primekit-elementor-page-title',
 			[
 				'label' => esc_html__('Alignment', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_CONTENT,
@@ -57,7 +56,7 @@ class Main extends Widget_Base
 
 		//Heading tag
 		$this->add_control(
-			'primekit_elementor_post_title_tag',
+			'primekit_elementor_page_title_tag',
 			[
 				'label' => esc_html__('Heading Tag', 'primekit-addons'),
 				'type' => Controls_Manager::SELECT,
@@ -76,7 +75,7 @@ class Main extends Widget_Base
 
 		//Alignment
 		$this->add_responsive_control(
-			'primekit_elementor_post_title_align',
+			'primekit_elementor_page_title_align',
 			[
 				'label' => esc_html__('Alignment', 'primekit-addons'),
 				'type' => Controls_Manager::CHOOSE,
@@ -96,7 +95,7 @@ class Main extends Widget_Base
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .primekit-elementor-post-title-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .primekit-elementor-page-title-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -115,10 +114,10 @@ class Main extends Widget_Base
 
 		$this->end_controls_section();
 
-		//post title style
+		//Page title style
 
 		$this->start_controls_section(
-			'primekit_elementor_post_title_style',
+			'primekit_elementor_page_title_style',
 			[
 				'label' => esc_html__('Style', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_STYLE,
@@ -126,13 +125,13 @@ class Main extends Widget_Base
 		);
 
 		$this->add_control(
-			'primekit_elementor_post_title_color',
+			'primekit_elementor_page_title_color',
 			[
 				'label' => esc_html__('Color', 'primekit-addons'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#cccccc',
 				'selectors' => [
-					'{{WRAPPER}} .primekit-post-title-tag' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .primekit-page-title-tag' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -140,9 +139,9 @@ class Main extends Widget_Base
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'primekit_elementor_post_title_typography',
+				'name' => 'primekit_elementor_page_title_typography',
 				'label' => esc_html__('Typography', 'primekit-addons'),
-				'selector' => '{{WRAPPER}} .primekit-post-title-tag',
+				'selector' => '{{WRAPPER}} .primekit-page-title-tag',
 			]
 		);
 

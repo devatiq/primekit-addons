@@ -1,5 +1,5 @@
 <?php
-namespace PrimeKit\Public\Elementor\Widgets\BeforeAfterImg;
+namespace PrimeKit\Frontend\Elementor\Widgets\BeforeAfterImg;
 
 if (!defined('ABSPATH'))
 	exit; // Exit if accessed directly

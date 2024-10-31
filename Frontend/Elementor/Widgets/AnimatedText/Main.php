@@ -1,5 +1,5 @@
 <?php
-namespace PrimeKit\Public\Elementor\Widgets\AnimatedText;
+namespace PrimeKit\Frontend\Elementor\Widgets\AnimatedText;
 
 if (!defined('ABSPATH'))
 	exit; // Exit if accessed directly

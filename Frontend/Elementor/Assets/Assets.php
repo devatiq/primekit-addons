@@ -5,10 +5,10 @@
  * This file contains the Assets class, which handles the initialization and configuration of the PrimeKit Elementor Assets.
  * It ensures the proper loading of required assets such as CSS and JavaScript files for the PrimeKit Elementor plugin.
  *
- * @package PrimeKit\Public\Elementor\Assets
+ * @package PrimeKit\Frontend\Elementor\Assets
  * @since 1.0.0
  */
-namespace PrimeKit\Public\Elementor\Assets;
+namespace PrimeKit\Frontend\Elementor\Assets;
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
  * Handles the initialization and configuration of the PrimeKit Elementor Assets.
  * This class ensures the proper loading of required assets such as CSS and JavaScript files.
  *
- * @package PrimeKit\Public\Elementor\Assets
+ * @package PrimeKit\Frontend\Elementor\Assets
  * @since 1.0.0
  */
 class Assets{   

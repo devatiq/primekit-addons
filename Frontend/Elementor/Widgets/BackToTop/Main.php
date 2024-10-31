@@ -1,5 +1,5 @@
 <?php 
-namespace PrimeKit\Public\Elementor\Widgets\BackToTop;
+namespace PrimeKit\Frontend\Elementor\Widgets\BackToTop;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 

@@ -5,7 +5,7 @@
  * @package PrimeKit
  * @subpackage Public/Elementor/Inc
  */
-namespace PrimeKit\Public\Elementor\Inc;
+namespace PrimeKit\Frontend\Elementor\Inc;
 
 /**
  * don't call the file directly.
@@ -18,7 +18,7 @@ namespace PrimeKit\Public\Elementor\Inc;
 /**
  * This class is responsible for some helper functions and actions for the Elementor Addons.
  *
- * @package PrimeKit\Public\Elementor\Inc
+ * @package PrimeKit\Frontend\Elementor\Inc
  * @since 1.0.0
  */
 class Functions {

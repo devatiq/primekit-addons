@@ -10,12 +10,12 @@
  * @package PrimeKit\Public
  * @since 1.0.0
  */
-namespace PrimeKit\Public;
+namespace PrimeKit\Frontend;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 
-use PrimeKit\Public\Elementor\Configuration;
+use PrimeKit\Frontend\Elementor\Configuration;
 
 /**
  * Class PublicManager
@@ -27,7 +27,7 @@ use PrimeKit\Public\Elementor\Configuration;
  * @package PrimeKit\Public
  * @since 1.0.0
  */
- class PublicManager {
+ class Frontend {
 
     protected $Elementor_Config;
     /**

@@ -5,9 +5,9 @@
     "autoload": {
         "psr-4": {
             "PrimeKit\\": "Inc/",
-            "PrimeKit\\Public\\": "Public/",            
+            "PrimeKit\\Frontend\\": "Frontend/",            
             "PrimeKit\\Admin\\": "Admin/",
-            "PrimeKit\\Elementor\\": "Public/Elementor/"
+            "PrimeKit\\Elementor\\": "Frontend/Elementor/"
         }
     },
     "config": {

@@ -6,16 +6,16 @@
  * It ensures compatibility with the required Elementor version and manages the loading of 
  * required assets and functionalities.
  *
- * @package PrimeKit\Public\Elementor
+ * @package PrimeKit\Frontend\Elementor
  * @since 1.0.0
  */
-namespace PrimeKit\Public\Elementor;
+namespace PrimeKit\Frontend\Elementor;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-use PrimeKit\Public\Elementor\Inc\Functions;
-use PrimeKit\Public\Elementor\Assets\Assets;
+use PrimeKit\Frontend\Elementor\Inc\Functions;
+use PrimeKit\Frontend\Elementor\Assets\Assets;
 
 /**
  * Class Configuration
@@ -24,7 +24,7 @@ use PrimeKit\Public\Elementor\Assets\Assets;
  * It ensures compatibility with the required Elementor version and manages the loading of 
  * required assets and functionalities.
  * 
- * @package PrimeKit\Public\Elementor
+ * @package PrimeKit\Frontend\Elementor
  * @since 1.0.0
  */
 class Configuration{
@@ -218,14 +218,14 @@ class Configuration{
     public function register_widgets($widgets_manager)
     {
         
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\AnimatedText\Main());
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\ArchiveTitle\Main());
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\BackToTop\Main());
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\BeforeAfterImg\Main());
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\Blockquote\Main());
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\BlogPostFancy\Main());
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\PageTitle\Main());
-        $widgets_manager->register(new \PrimeKit\Public\Elementor\Widgets\PostTitle\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\AnimatedText\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\ArchiveTitle\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BackToTop\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BeforeAfterImg\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\Blockquote\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogPostFancy\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PageTitle\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PostTitle\Main());
 
     }
 

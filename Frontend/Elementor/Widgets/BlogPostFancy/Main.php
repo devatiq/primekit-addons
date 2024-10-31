@@ -1,5 +1,5 @@
 <?php
-namespace PrimeKit\Public\Elementor\Widgets\BlogPostFancy;
+namespace PrimeKit\Frontend\Elementor\Widgets\BlogPostFancy;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly

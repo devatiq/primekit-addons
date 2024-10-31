@@ -1,5 +1,5 @@
 <?php
-namespace PrimeKit\Public\Elementor\Widgets\Blockquote;
+namespace PrimeKit\Frontend\Elementor\Widgets\Blockquote;
 
 if (!defined('ABSPATH'))
 	exit; // Exit if accessed directly

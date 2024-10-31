@@ -16,7 +16,7 @@ if (!defined('ABSPATH'))
   exit; // Exit if accessed directly
 
 use PrimeKit\Admin\AdminManager;
-use PrimeKit\Public\PublicManager;
+use PrimeKit\Frontend\Frontend;
 
 /**
  * The manager class for PrimeKit.
@@ -31,7 +31,7 @@ use PrimeKit\Public\PublicManager;
 class Manager
 {
   protected $Admin_Manager;
-  protected $Public_Manager;
+  protected $Frontend;
   /**
    * Constructor for the Manager class.
    *
@@ -55,7 +55,7 @@ class Manager
   public function init()
   {
     $this->Admin_Manager = new AdminManager();
-    $this->Public_Manager = new PublicManager();
+    $this->Frontend = new Frontend();
   }
 
 
