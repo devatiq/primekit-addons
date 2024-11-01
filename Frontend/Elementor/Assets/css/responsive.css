@@ -1,3 +1,24 @@
+@media only screen and (max-width: 768px) { 
+
+   /*-------------------------
+    * Blog Grid
+    ---------------------------*/
+
+  /* Three column blog area */
+  .primekit-ele-three-column-blog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Four column blog area */
+  .primekit-ele-four-column-blog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+}
+
+
 /*---------------------------
     Responsive css for mobile
 -----------------------------*/

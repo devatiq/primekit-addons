@@ -579,7 +579,7 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-ele-pagination-container a:hover, .primekit-ele-pagination-container .current' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-ele-pagination-container a:hover, {{WRAPPER}} .primekit-ele-pagination-container .current' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -592,7 +592,7 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59a818',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-ele-pagination-container a:hover, .primekit-ele-pagination-container .current' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-ele-pagination-container a:hover, {{WRAPPER}} .primekit-ele-pagination-container .current' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
