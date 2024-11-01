@@ -71,10 +71,21 @@ class Main extends Widget_Base
             ]
         );
 
+        	//PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
+				'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
+			]
+		);
 
         $this->end_controls_section();
 
-        // blog info style section
+        // Author Bio style section
         $this->start_controls_section(
             'primekit_elementor_author_bio_style_section',
             [
@@ -82,7 +93,6 @@ class Main extends Widget_Base
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
-
 
             // Background color
           $this->add_control(
@@ -105,7 +115,7 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-author-bio-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-author-bio-title' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -116,7 +126,7 @@ class Main extends Widget_Base
             [
                 'name' => 'primekit_elementor_author_bio_typography',
                 'label' => esc_html__('Title Typography', 'primekit-addons'),
-                'selector' => '{{WRAPPER}} .abc-author-bio-title',
+                'selector' => '{{WRAPPER}} .primekit-author-bio-title',
             ]
         );
 
