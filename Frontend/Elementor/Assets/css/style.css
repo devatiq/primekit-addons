@@ -495,3 +495,26 @@
   background-color: #59a818;
   border-radius: 5px;
 }
+
+
+/*----------------------------------------------
+ * Author Bio
+ * ---------------------------------------------*/
+
+ .primekit-ele-author-bio {
+  display: flex;
+  padding: 10px;
+  column-gap: 20px;
+}
+
+.primekit-ele-authorleft {
+  flex: 0 0 150px;
+}
+
+.primekit-ele-authorright {
+  flex: 1;
+}
+
+.primekit-author-bio-title {
+  margin-bottom: 7px;
+}

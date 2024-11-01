@@ -203,6 +203,18 @@ class Main extends Widget_Base
             ]
         );
 
+        	//PrimeKit Notice
+		$this->add_control(
+			'primekit_elementor_addons_notice',
+			[
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'warning',
+				'dismissible' => false,
+				'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
+				'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
+			]
+		);
+
         $this->end_controls_section(); //end blog grid setting control
 
         // blog grid style section

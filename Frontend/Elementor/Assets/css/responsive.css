@@ -26,6 +26,23 @@
       margin-right: 0;
     }
 
+/*----------------------------------------------
+ * Author Bio
+ * ---------------------------------------------*/
+
+  .primekit-ele-author-bio {
+    column-gap: 10px;
+    flex-direction: column;
+  }
+
+  .primekit-ele-authorleft {
+    width: 100%;
+  }
+
+  .primekit-ele-authorright {
+    width: 100%;
+  }
+
 }
 
 
