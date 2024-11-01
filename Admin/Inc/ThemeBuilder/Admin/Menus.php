@@ -9,25 +9,31 @@ class Menus
 
     public function __construct()
     {
-        add_action('admin_menu', array($this, 'modify_theme_builder_menu'), 11);
+      //  add_action('admin_menu', array($this, 'modify_theme_builder_menu'), 11);
+        add_action('admin_menu', array($this, 'add_themebuilder_submenu'));
     }
 
+
+    public function add_themebuilder_submenu()
+    {
+        
+        add_submenu_page(
+            'primekit_settings',                   // Parent slug
+            __('Theme Builder', 'primekit-addons'), // Page title
+            __('Theme Builder', 'primekit-addons'), // Menu title
+            'manage_options',                       // Capability
+            'edit.php?post_type=primekit_library'   // Menu slug (linking to post type)
+        );
+    }
 
     public function modify_theme_builder_menu()
     {
         global $submenu;
 
 
-        remove_menu_page('edit.php?post_type=primekit_library');
+       // remove_menu_page('edit.php?post_type=primekit_library');
 
-        add_submenu_page(
-            'primekit_settings',
-            __('Theme Builder', 'primekit-addons'),
-            __('Theme Builder', 'primekit-addons'),
-            'manage_options',
-            'edit.php?post_type=primekit_library'
-        );
-
+    
 
         if (isset($submenu['primekit_home'])) {
             foreach ($submenu['primekit_home'] as $key => $menu_item) {
