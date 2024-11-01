@@ -22,6 +22,7 @@ use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\PrimeKitWidgets;
 use PrimeKit\Admin\Inc\Hooks\FilterHooks;
 use PrimeKit\Admin\Inc\Hooks\ActionHooks;
 use PrimeKit\Admin\Inc\ThemeBuilder\ThemeBuilder;
+use PrimeKit\Admin\Inc\Metabox\MetaBox;
 
 /**
  * Class AdminManager
@@ -40,6 +41,7 @@ class AdminManager
     protected $FilterHooks;
     protected $ActionHooks;
     protected $ThemeBuilder;
+    protected $MetaBoxs;
     /**
      * AdminManager constructor.
      *
@@ -84,6 +86,7 @@ class AdminManager
         $this->FilterHooks = new FilterHooks();
         $this->ActionHooks = new ActionHooks();
         $this->ThemeBuilder = new ThemeBuilder();
+        $this->MetaBoxs = new MetaBox();
     }
 
 
