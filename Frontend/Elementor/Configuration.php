@@ -229,6 +229,7 @@ class Configuration{
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogGrid\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogList\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\AuthorBio\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BreadCrumb\Main());
 
     }
 
