@@ -683,3 +683,43 @@ span.primekit-btn-icon {
 .primekit-ele-post-cat.cat-list-view i.eicon-chevron-double-right {
   font-size: 16px;
 }
+
+/* ---------------------------------------------
+ * Circular Skill
+ * --------------------------------------------- */
+
+ .primekit-ele-skill-circle {
+  width: 100%;
+  min-height: 170px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.primekit-ele-skill-circle canvas {
+  vertical-align: top;
+}
+
+.primekit-ele-skill-circle strong {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  line-height: 40px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.primekit-ele-skill-circle strong i {
+  font-style: normal;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+
+.primekit-ele-skill-circle span {
+  display: block;
+  color: #fff;
+  margin-top: 12px;
+}

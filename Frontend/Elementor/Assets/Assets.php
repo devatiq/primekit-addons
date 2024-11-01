@@ -67,6 +67,9 @@ class Assets{
          wp_register_script('primekit-back-to-top', PRIMEKIT_ELEMENTOR_ASSETS . "/js/back-to-top.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('jquery-event-move', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.event.move.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('jquery-twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.twentytwenty.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('primekit-jquery-appear', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.appear.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('primekit-circular-progress', PRIMEKIT_ELEMENTOR_ASSETS . "/js/circular-progress.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('primekit-circular-skills', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-circular-skills.js", array('jquery'), PRIMEKIT_VERSION, true);
     }
 
    
