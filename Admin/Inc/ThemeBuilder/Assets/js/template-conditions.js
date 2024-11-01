@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
    *
    * @since 1.0.0
    */
-  function abcbizAddCustomMenuItem() {
+  function PrimeKitAddCustomMenuItem() {
     let customMenuItem = $(
       '<div class="elementor-panel-footer-sub-menu-item primekit-addons-menu-item" id="elementor-panel-footer-sub-menu-item-template-conditions">' +
         '<i class="primekit-addons-icon" aria-hidden="true"></i>' +
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
     }
   }
 
- // setTimeout(abcbizAddCustomMenuItem, 1000);
+ // setTimeout(PrimeKitAddCustomMenuItem, 1000);
 });
 
 jQuery(document).ready(function ($) {

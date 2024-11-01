@@ -35,9 +35,9 @@ class ThemeBuilder
      *
      * @since 1.0.0
      */
-    public function __construct()    
+    public function __construct()
     {
-        
+
         $this->setConstants(); // Set the constants.
 
         $this->classes_initialize(); // Initialize the class.
@@ -56,9 +56,10 @@ class ThemeBuilder
 
     }
 
-    public function setConstants() {
+    public function setConstants()
+    {
         define('PRIMEKIT_TB_PATH', plugin_dir_path(__FILE__));
-        define('PRIMEKIT_TB_ASSETS', plugin_dir_url(__FILE__) . 'assets');
+        define('PRIMEKIT_TB_ASSETS', plugin_dir_url(__FILE__) . 'assets/');
     }
 
     /**
@@ -263,7 +264,7 @@ class ThemeBuilder
         $this->condition_manager = new ConditionManager();
         $this->template_content_hooks = new TemplateContentHooks();
         $this->template_override = new TemplateOverride();
-        $this->meta_box = new MetaBox();       
+        $this->meta_box = new MetaBox();
     }
 
     /**
@@ -283,13 +284,41 @@ class ThemeBuilder
             $post_type = isset($_GET['post_type']) ? $_GET['post_type'] : '';
             if ('primekit_library' === $post_type || ('post-new.php' === $hook && empty($post_type))) {
 
-                wp_enqueue_style('primekit-theme-builder-modal', plugins_url('assets/css/modal.css', __FILE__), array(), '1.0.0', 'all');
+                // Enqueue CSS for modal
+                wp_enqueue_style(
+                    'primekit-theme-builder-modal',
+                    PRIMEKIT_TB_ASSETS . 'css/modal.css',
+                    array(),
+                    PRIMEKIT_VERSION,
+                    'all'
+                );
 
-                wp_enqueue_script('primekit-theme-builder-main', plugins_url('assets/js/admin.js', __FILE__), array('jquery'), '1.0.0', true);
+                // Enqueue main admin JS
+                wp_enqueue_script(
+                    'primekit-theme-builder-main',
+                    PRIMEKIT_TB_ASSETS . 'js/admin.js',
+                    array('jquery'),
+                    PRIMEKIT_VERSION,
+                    true
+                );
 
-                wp_enqueue_script('primekit-tb-modal-ajax', plugins_url('assets/js/new-template-ajax.js', __FILE__), array('jquery'), '1.0.0', true);
+                // Enqueue AJAX script for new template
+                wp_enqueue_script(
+                    'primekit-tb-modal-ajax',
+                    PRIMEKIT_TB_ASSETS . 'js/new-template-ajax.js',
+                    array('jquery'),
+                    PRIMEKIT_VERSION,
+                    true
+                );
 
-                wp_enqueue_script('micromodal-js', '//unpkg.com/micromodal@0.4.10/dist/micromodal.min.js', array('jquery'), '0.4.10', true);
+                // Enqueue external micromodal JS
+                wp_enqueue_script(
+                    'micromodal-js',
+                    PRIMEKIT_TB_ASSETS . 'js/micromodal.min.js',
+                    array('jquery'),
+                    '0.4.10',
+                    true
+                );
 
                 wp_localize_script('primekit-tb-modal-ajax', 'abcbizNewTemplateCreated', [
                     'ajaxurl' => admin_url('admin-ajax.php'),
@@ -299,7 +328,7 @@ class ThemeBuilder
         }
     }
 
- 
+
     /**
      * Handles the submission of the new template modal form.
      *

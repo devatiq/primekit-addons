@@ -41,7 +41,7 @@ class Settings {
                        
                         <a href="https://primekitaddons.com/contact-us/" target="_blank" class="button"><?php echo esc_html__("Support", "primekit-addons"); ?></a>     
                         
-                        <a href="<?php echo esc_url(admin_url( 'admin.php?page=primekit_widgets_menu' )); ?>" class="button"><?php echo esc_html__( 'Avilable Widgets', 'primekit-addons' ); ?><span class="dashicons dashicons-arrow-right-alt"></span></a>
+                        <a href="<?php echo esc_url(admin_url( 'admin.php?page=primekit_available_widgets' )); ?>" class="button"><?php echo esc_html__( 'Avilable Widgets', 'primekit-addons' ); ?><span class="dashicons dashicons-arrow-right-alt"></span></a>
                     </div>
                 </div>         
             </div>
