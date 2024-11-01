@@ -220,16 +220,16 @@ class Configuration{
         
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\AnimatedText\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\ArchiveTitle\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\AuthorBio\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BackToTop\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BeforeAfterImg\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\Blockquote\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogPostFancy\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PageTitle\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PostTitle\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogGrid\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogList\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\AuthorBio\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogPostFancy\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BreadCrumb\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PageTitle\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PostTitle\Main());
 
     }
 
