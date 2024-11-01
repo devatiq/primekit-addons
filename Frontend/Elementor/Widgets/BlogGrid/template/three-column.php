@@ -46,7 +46,7 @@
                                 <figure>
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 
-<?php echo '<img src="' . esc_url(primekit_Assets . '/img/blog/img-placeholder.jpg') . '" alt="' . esc_attr(get_the_title()) . '">'; ?>
+<?php echo '<img src="' . esc_url(PRIMEKIT_ELEMENTOR_ASSETS . '/img/blog/img-placeholder.jpg') . '" alt="' . esc_attr(get_the_title()) . '">'; ?>
 </a>
                                 </figure>
                             </div>
@@ -62,7 +62,7 @@
                                 <!-- Blog excerpt -->
                                 <?php
                                 $primekit_post_id = get_the_ID();
-                                $primekit_excerpt_content = get_post_meta($primekit_post_id, 'primekit_multi_excerpt_content', true);
+                                $primekit_excerpt_content = get_post_meta($primekit_post_id, 'primekit_addons_excerpt_content', true);
                                 $primekit_limited_excerpt = wp_trim_words($primekit_excerpt_content, $primekit_excerpt_length_grid);
                                 if (!empty($primekit_excerpt_content)) : ?>
                                <div class="primekit-ele-blog-grid-excerpt">

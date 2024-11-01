@@ -27,16 +27,16 @@ $primekit_blog_layout = $this->get_settings('primekit_elementor_blog_grid_layout
 
 switch ($primekit_blog_layout) {
     case 'two-column':
-        include( primekit_Path . '/includes/widgets/ABCBlogGrid/template/two-column.php' );
+        include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/two-column.php' );
         break;
     case 'three-column':
-        include( primekit_Path . '/includes/widgets/ABCBlogGrid/template/three-column.php' );
+        include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/three-column.php' );
         break;
     case 'four-column':
-        include( primekit_Path . '/includes/widgets/ABCBlogGrid/template/four-column.php' );
+        include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-column.php' );
         break;
     default:
-    include( primekit_Path . '/includes/widgets/ABCBlogGrid/template/three-column.php' );
+    include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/three-column.php' );
         break;
 }
 ?>

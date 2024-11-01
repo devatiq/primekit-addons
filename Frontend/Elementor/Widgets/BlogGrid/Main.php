@@ -3,23 +3,35 @@ namespace PrimeKit\Frontend\Elementor\Widgets\BlogGrid;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use PrimeKit\Includes\Widgets\BaseWidget;
+use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 
-class Main extends BaseWidget
-{
-    protected $name = 'primekit-blog-grid';
-    protected $title = 'Blog Posts Grid';
-    protected $icon = 'eicon-posts-grid primekit-addons-icon';
-    protected $categories = [
-        'primekit-category'
-    ];
+class Main extends Widget_Base
+{ 
+    public function get_name()
+	{
+		return 'primekit-blog-grid';
+	}
 
-    protected $keywords = [
-        'prime', 'blog', 'grid', 'post'
-    ];
+	public function get_title()
+	{
+		return esc_html__('Blog Posts Grid', 'primekit-addons');
+	}
+
+	public function get_icon()
+	{
+		return 'eicon-posts-grid primekit-addons-icon';
+	}
+	public function get_categories()
+	{
+		return ['primekit-category'];
+	}
+	public function get_keywords()
+	{
+		return ['prime', 'blog', 'grid', 'post'];
+	}
 
     /**
      * Register the widget controls.
