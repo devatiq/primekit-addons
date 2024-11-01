@@ -226,6 +226,7 @@ class Configuration{
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogPostFancy\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PageTitle\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PostTitle\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogGrid\Main());
 
     }
 
