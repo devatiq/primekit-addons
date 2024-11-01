@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Blog Grid.
+ * Render View file for PrimeKit Blog Grid.
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 

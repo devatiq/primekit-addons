@@ -61,7 +61,7 @@ $primekit_excerpt_length_list = $primekit_settings['primekit_elementor_blog_list
                             <div class="primekit-ele-blog-list-thumb">
                                 <figure>          
                                 <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>">
-                                <?php echo '<img src="' . esc_url(primekit_Assets) . '/img/blog/img-placeholder.jpg" alt="' . esc_attr(get_the_title()) . '">'; ?>
+                                <?php echo '<img src="' . esc_url(PRIMEKIT_ELEMENTOR_ASSETS) . '/img/blog/img-placeholder.jpg" alt="' . esc_attr(get_the_title()) . '">'; ?>
                                 </a>
                                 </figure>
                             </div>

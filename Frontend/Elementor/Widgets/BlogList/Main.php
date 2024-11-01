@@ -676,5 +676,4 @@ class Main extends Widget_Base
         include 'RenderView.php';
     }
 
-
 }
