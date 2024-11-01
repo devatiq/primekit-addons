@@ -9,7 +9,6 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
 /**
- * ABC Archive Title Widget.
  * @since 1.0.0
  */
 class Main extends Widget_Base {

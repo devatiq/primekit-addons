@@ -103,9 +103,9 @@ $primekit_excerpt_length_list = $primekit_settings['primekit_elementor_blog_list
                 <div class="clearfix"></div>
                 <div class="primekit-ele-blog-list-pagi-container">
                     <?php
-                    $abcbig = 999999999;
+                    $primekitbig = 999999999;
                     echo paginate_links(array(
-                        'base'    => str_replace($abcbig, '%#%', esc_url(get_pagenum_link($abcbig))),
+                        'base'    => str_replace($primekitbig, '%#%', esc_url(get_pagenum_link($primekitbig))),
                         'format'  => '?paged=%#%',
                         'current' => max(1, $paged),
                         'total'   => $query->max_num_pages,
