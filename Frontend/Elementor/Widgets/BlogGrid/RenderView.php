@@ -41,4 +41,4 @@ switch ($primekit_blog_layout) {
 }
 ?>
     </div>
-</div><!--/ Blog grid Area-->
+</div><!--/ PrimeKit Blog grid Area-->

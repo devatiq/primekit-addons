@@ -104,4 +104,4 @@
         <?php
             wp_reset_postdata();
         endif; ?>
-</div><!-- / four column blog -->
+</div><!-- / primekit four column blog -->

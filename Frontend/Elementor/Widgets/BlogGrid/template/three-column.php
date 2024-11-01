@@ -106,4 +106,4 @@
             wp_reset_postdata();
         endif; ?>
 
-</div><!-- / Three column blog area-->
+</div><!-- / PrimeKit Three column blog area-->

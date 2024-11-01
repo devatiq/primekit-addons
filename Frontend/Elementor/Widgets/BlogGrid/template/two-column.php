@@ -109,4 +109,4 @@
             wp_reset_postdata();
         endif; ?>
 
-</div><!-- / Two column blog -->
+</div><!-- / PrimeKit Two column blog -->
