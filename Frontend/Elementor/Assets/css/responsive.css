@@ -16,9 +16,9 @@
     gap: 20px;
   }
 
-    /*----------------------------------------------
-    * Blog List
-    * ---------------------------------------------*/
+/*----------------------------------------------
+* Blog List
+* ---------------------------------------------*/
 
     .primekit-ele-blog-list-thumb {
       float: none;
@@ -42,6 +42,13 @@
   .primekit-ele-authorright {
     width: 100%;
   }
+
+  /* ---------------------------------------------
+ * Card Info
+ * --------------------------------------------- */
+ .primekit-card-style-two-area .primekit-card-info-wrap {
+  flex-direction: column !important;
+}
 
 }
 

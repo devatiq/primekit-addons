@@ -229,6 +229,7 @@ class Configuration{
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogPostFancy\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BreadCrumb\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BusinessHours\Main());
+        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\CardInfo\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PageTitle\Main());
         $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PostTitle\Main());
 
