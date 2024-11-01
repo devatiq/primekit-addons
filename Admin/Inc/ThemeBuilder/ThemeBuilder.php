@@ -11,6 +11,7 @@ use PrimeKit\Admin\Inc\ThemeBuilder\Admin\ConditionManager;
 use PrimeKit\Admin\Inc\ThemeBuilder\Inc\Hooks\TemplateContentHooks;
 use PrimeKit\Admin\Inc\ThemeBuilder\Classes\TemplateOverride;
 use PrimeKit\Admin\Inc\ThemeBuilder\Admin\Menus;
+use PrimeKit\Admin\Inc\ThemeBuilder\Admin\Column;
 class ThemeBuilder
 {
     protected $post_types;
@@ -26,6 +27,7 @@ class ThemeBuilder
     protected $template_override;
 
     protected $admin_menu;
+    protected $column;
     /**
      * Theme Builder constructor.
      *
@@ -256,11 +258,12 @@ class ThemeBuilder
     {
         $this->post_types = new PostTypes();
         $this->menus = new Menus();
-        //$this->modal_markup = new ModalMarkup();
-        //$this->condition_manager = new ConditionManager();
-        //$this->template_content_hooks = new TemplateContentHooks();
-        //$this->template_override = new TemplateOverride();
-       // $this->meta_box = new MetaBox();
+        $this->column = new Column();
+        $this->modal_markup = new ModalMarkup();
+        $this->condition_manager = new ConditionManager();
+        $this->template_content_hooks = new TemplateContentHooks();
+        $this->template_override = new TemplateOverride();
+        $this->meta_box = new MetaBox();
        
     }
 

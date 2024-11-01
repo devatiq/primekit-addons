@@ -5,7 +5,7 @@ namespace PrimeKit\Admin\Inc\ThemeBuilder\Admin;
 if (!defined('ABSPATH')) exit;
 
 
-class Columns {
+class Column {
     public function __construct()
     {
         // Add custom columns to the 'primekit_library' post type
