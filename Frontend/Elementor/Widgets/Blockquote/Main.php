@@ -28,7 +28,7 @@ class Main extends Widget_Base
 
 	public function get_icon()
 	{
-		return 'eicon-blockquote';
+		return 'eicon-blockquote primekit-addons-icon';
 	}
 
 	public function get_categories()

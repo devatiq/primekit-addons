@@ -24,7 +24,7 @@ class Main extends Widget_Base {
 
 	public function get_icon()
 	{
-		return 'eicon-arrow-up';
+		return 'eicon-arrow-up primekit-addons-icon';
 	}
 	public function get_categories()
 	{

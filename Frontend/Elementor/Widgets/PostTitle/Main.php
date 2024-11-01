@@ -26,7 +26,7 @@ class Main extends Widget_Base
 
 	public function get_icon()
 	{
-		return 'eicon-post-title';
+		return 'eicon-post-title primekit-addons-icon';
 	}
 
 	public function get_categories()

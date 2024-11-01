@@ -25,7 +25,7 @@ class Main extends Widget_Base
 
 	public function get_icon()
 	{
-		return 'eicon-image-before-after';
+		return 'eicon-image-before-after primekit-addons-icon';
 	}
 	public function get_categories()
 	{
