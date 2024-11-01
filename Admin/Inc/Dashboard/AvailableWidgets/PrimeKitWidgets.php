@@ -135,22 +135,21 @@ class PrimeKitWidgets
      */
     public function render_widgets_wrapper($title = 'Widgets List', $callback = null) {
         ?>
-        <p><?php echo esc_html($title); ?></p>
-    
-        <!-- Available widgets area -->
-        <div class="primekit-available-widgets-area">
-            <!-- Widgets Wrapper -->
-            <div class="primekit-available-widgets-wrapper">
-                <?php
-                // Check if the callback is provided and callable
-                if (is_callable($callback)) {
-                    call_user_func($callback);
-                } else {
-                    echo '<p>' . esc_html__('No widgets to display.', 'primekit-addons') . '</p>';
-                }
-                ?>
-            </div><!--/ Widgets Wrapper -->
-        </div><!--/ Available widgets area -->
+        <p><?php echo esc_html($title); ?></p>    
+            <?php
+            
+            // Start the wrapper
+            do_action( 'primekit_available_widgets_wrapper_start');
+            // Check if the callback is provided and callable
+            if (is_callable($callback)) {
+                call_user_func($callback);
+            } else {
+                echo '<p>' . esc_html__('No widgets to display.', 'primekit-addons') . '</p>';
+            }
+            // End the wrapper
+            do_action( 'primekit_available_widgets_wrapper_end');
+
+            ?>     
         <?php
     }    
     
