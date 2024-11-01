@@ -41,7 +41,7 @@ class AdminManager
     protected $FilterHooks;
     protected $ActionHooks;
     protected $ThemeBuilder;
-    protected $MetaBoxs;
+    protected $MetaBox;
     /**
      * AdminManager constructor.
      *
@@ -86,7 +86,7 @@ class AdminManager
         $this->FilterHooks = new FilterHooks();
         $this->ActionHooks = new ActionHooks();
         $this->ThemeBuilder = new ThemeBuilder();
-        $this->MetaBoxs = new MetaBox();
+        $this->MetaBox = new MetaBox();
     }
 
 
