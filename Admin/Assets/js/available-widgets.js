@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 jQuery(document).ready(function ($) {
+    'use strict';
     // Initial label state based on checkbox status
     $('.primekit-switch input[type="checkbox"]').each(function () {
       PrimeKitToggleLabels($(this));
