@@ -22,6 +22,7 @@ $primekit_display_icon = $primekit_settings['primekit_elementor_post_cat_icon'] 
             if ($primekit_display_icon) {
                 $output .= '<i class="eicon-chevron-double-right"></i>';
             }
+            // translators: Category name 
             $output .= '<a href="' . esc_url(get_category_link($category->term_id)) . '" title="' . esc_attr(sprintf(__('View all posts in %s', 'primekit-addons'), $category->name)) . '">' . esc_html($category->name) . '</a>';
             $output .= '</div>';
         }

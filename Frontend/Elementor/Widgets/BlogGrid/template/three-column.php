@@ -87,14 +87,14 @@
     </div> <!-- end primekit-ele-three-column-blog -->
     <?php if ($primekit_pagination_switch === 'yes') : ?>
         <div class="primekit-ele-pagination-container">
-            <?php
+        <?php
                 $primekitbig = 999999999;
-                echo paginate_links(array(
+                echo wp_kses_post(paginate_links(array(
                     'base'    => str_replace($primekitbig, '%#%', esc_url(get_pagenum_link($primekitbig))),
                     'format'  => '?paged=%#%',
                     'current' => max(1, $paged),
                     'total'   => $query->max_num_pages,
-                ));
+                )));
             ?>
         </div>
     <?php endif; ?>
