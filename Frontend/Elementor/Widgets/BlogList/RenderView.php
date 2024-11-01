@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Blog List.
+ * Render View file for PrimeKit Blog List.
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -78,7 +78,7 @@ $primekit_excerpt_length_list = $primekit_settings['primekit_elementor_blog_list
                                 <!-- Blog excerpt -->
                                 <?php
                                 $primekit_post_id = get_the_ID();
-                                $primekit_excerpt_content = get_post_meta($primekit_post_id, 'primekit_multi_excerpt_content', true);
+                                $primekit_excerpt_content = get_post_meta($primekit_post_id, 'primekit_addons_excerpt_content', true);
                                 $primekit_limited_excerpt = wp_trim_words($primekit_excerpt_content, $primekit_excerpt_length_list);
                                 if (!empty($primekit_excerpt_content)) : ?>
                                <div class="primekit-ele-blog-list-excerpt">

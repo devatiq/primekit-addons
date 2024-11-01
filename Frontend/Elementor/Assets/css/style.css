@@ -382,3 +382,116 @@
    background-color: #59a818;
    border-radius: 5px;
  }
+
+ /*----------------------------------------------
+ * Blog List
+ * ---------------------------------------------*/
+.primekit-ele-blog-list-item {
+  clear: both;
+  margin-bottom: 30px;
+  display: inline-block;
+  width: 100%;
+}
+
+.primekit-ele-blog-list-thumb {
+  float: left;
+  width: 200px;
+  margin-right: 20px;
+}
+
+.primekit-ele-blog-list-content {
+  overflow: hidden;
+}
+
+.primekit-ele-blog-list-thumb figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.primekit-ele-blog-list-thumb figure img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.primekit-ele-blog-list-title {
+  margin: 0 0 7px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.primekit-ele-blog-list-meta {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted #ccc;
+}
+
+.primekit-ele-blog-list-meta .posted-on {
+  margin-right: 10px;
+}
+
+.primekit-ele-blog-list-excerpt {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.primekit-ele-blog-list-more {
+  margin-top: 10px;
+}
+
+.primekit-ele-blog-list-more a {
+  position: relative;
+}
+
+.primekit-ele-blog-list-more a:after {
+  width: 20px;
+  border-bottom: 1px dashed #a0ce4e;
+  bottom: -2px;
+  content: "";
+  height: 1px;
+  left: 50%;
+  margin-left: -10px;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.primekit-ele-blog-list-more a:hover:after {
+  left: 2%;
+  margin-left: 0;
+  width: 80%;
+}
+
+.primekit-ele-blog-list-pagi-container {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.primekit-ele-blog-list-pagi-container a {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+  background-color: #eee;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.primekit-ele-blog-list-pagi-container .current,
+.primekit-ele-blog-list-pagi-container a:hover {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #59a818;
+  border-radius: 5px;
+}

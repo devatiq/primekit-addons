@@ -668,7 +668,7 @@ class Main extends Widget_Base
         return $options;
     }
 
-    /**
+    /*
      * Render the widget output on the frontend.
      */
     protected function render()
