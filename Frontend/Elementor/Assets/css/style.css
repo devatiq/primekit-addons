@@ -71,7 +71,7 @@
 }
 
 /*----------------------------------------------
- * ABC Blockquote
+ * Blockquote
  * ---------------------------------------------*/
  .primekit-elementor-block-quote-area {
   width: 100%;
@@ -654,4 +654,32 @@ h3.primekit-card-title {
 
 span.primekit-btn-icon {
   position: relative;
+}
+
+/*----------------------------------------------
+ * Post Category List
+ * ---------------------------------------------*/
+ .primekit-ele-post-cat.cat-list-view {
+  list-style-type: none;
+  padding: 0;
+}
+
+.primekit-ele-post-cat.cat-list-view div.primekit-ele-category-item {
+  padding: 5px 0;
+}
+
+.primekit-ele-post-cat.cat-list-view a {
+  display: inline;
+  text-decoration: none;
+  color: inherit;
+}
+
+.primekit-ele-post-cat.cat-list-view i {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+.primekit-ele-post-cat.cat-list-view i.eicon-chevron-double-right {
+  font-size: 16px;
 }
