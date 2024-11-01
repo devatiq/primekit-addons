@@ -124,6 +124,7 @@
 
 .micromodal-slide[aria-hidden="false"] .modal__container {
   animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+  max-width: 1500px;
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__overlay {
@@ -223,6 +224,7 @@
 .primekit-tb-modal-single-field select, .primekit-tb-modal-single-field input {
     min-height: 45px;
     padding: 12px;
+    max-width: 100%;
 }
 .primekit-tb-modal-single-field select option {
     padding: 12px;
