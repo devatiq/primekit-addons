@@ -29,16 +29,16 @@ class Menus
         );
 
 
-        if (isset($submenu['abcbiz_home'])) {
-            foreach ($submenu['abcbiz_home'] as $key => $menu_item) {
+        if (isset($submenu['primekit_home'])) {
+            foreach ($submenu['primekit_home'] as $key => $menu_item) {
                 if ($menu_item[2] === 'edit.php?post_type=primekit_library') {
                     $current_file = basename($_SERVER['PHP_SELF']);
                     if ($current_file === 'post-new.php' && isset($_GET['post_type']) === 'primekit_library') {
                         // Highlight the new submenu as active when adding a new post
-                        $submenu['abcbiz_home'][$key][4] = 'current';
+                        $submenu['primekit_home'][$key][4] = 'current';
                     } elseif ($current_file === 'edit.php' && isset($_GET['post_type']) && $_GET['post_type'] === 'primekit_library') {
                         // Highlight the new submenu as active when on the edit posts screen
-                        $submenu['abcbiz_home'][$key][4] = 'current';
+                        $submenu['primekit_home'][$key][4] = 'current';
                     }
                 }
             }

@@ -1,4 +1,4 @@
-<?php do_action( 'abcbiz_footer' ); ?>
+<?php do_action( 'primekit_footer' ); ?>
 <?php wp_footer(); ?>
 </body>
 </html> 

@@ -22,7 +22,7 @@ do_action('elementor/page_templates/header-footer/before_content');
 <main class="primekit-404-page">
     <?php
     if (!\Elementor\Plugin::$instance->preview->is_preview_mode()):
-        do_action('abcbiz_404_page_content');
+        do_action('primekit_404_page_content');
     else:
         ?>
         <div class="primekit-container">

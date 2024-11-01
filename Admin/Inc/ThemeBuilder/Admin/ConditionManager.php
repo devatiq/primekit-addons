@@ -10,9 +10,9 @@ class ConditionManager
     {
         add_action('elementor/editor/before_enqueue_scripts', [$this, 'enqueue_elementor_editor_assets']);
 
-        add_action('wp_ajax_abcbiz_select2_search_posts', [$this, 'abcbiz_select2_search_posts']);
+        add_action('wp_ajax_primekit_select2_search_posts', [$this, 'primekit_select2_search_posts']);
 
-        add_action('wp_ajax_nopriv_abcbiz_select2_search_posts', array($this, 'abcbiz_select2_search_posts'));
+        add_action('wp_ajax_nopriv_primekit_select2_search_posts', array($this, 'primekit_select2_search_posts'));
 
     }
 
@@ -38,7 +38,7 @@ class ConditionManager
 
                 wp_enqueue_script('primekit-elementor-template-conditions', plugins_url('../assets/js/template-conditions.js', __FILE__), ['jquery', 'select2'], '1.0.0', true);
 
-                wp_localize_script('primekit-elementor-template-conditions', 'abcbiz_template_conditions', [
+                wp_localize_script('primekit-elementor-template-conditions', 'primekit_template_conditions', [
                     'ajaxurl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('template_conditions_nonce')
                 ]);
@@ -50,7 +50,7 @@ class ConditionManager
     }
 
 
-    public function abcbiz_select2_search_posts()
+    public function primekit_select2_search_posts()
     {
         check_ajax_referer('template_conditions_nonce', 'nonce');
     

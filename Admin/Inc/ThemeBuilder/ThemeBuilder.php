@@ -48,10 +48,10 @@ class ThemeBuilder
         add_action('wp_ajax_primekit_library_new_post', array($this, 'handle_new_template_submission'));
         add_action('single_template', array($this, 'load_canvas_template'));
 
-        add_action('get_header', array($this, 'abcbiz_override_header'));
-        add_action('get_footer', [$this, 'abcbiz_override_footer']);
-        add_action('abcbiz_footer', [$this, 'abcbiz_render_footer']);
-        add_action('abcbiz_header', [$this, 'abcbiz_render_header']);
+        add_action('get_header', array($this, 'primekit_override_header'));
+        add_action('get_footer', [$this, 'primekit_override_footer']);
+        add_action('primekit_footer', [$this, 'primekit_render_footer']);
+        add_action('primekit_header', [$this, 'primekit_render_header']);
         add_action('wp_enqueue_scripts', array($this, 'enqueue_elementor_styles_scripts'));
 
     }
@@ -69,7 +69,7 @@ class ThemeBuilder
      *
      * @since 1.0.0
      */
-    public function abcbiz_override_header()
+    public function primekit_override_header()
     {
         if (self::should_display_template('header')) {
             require_once PRIMEKIT_TB_PATH . '/inc/templates/primekit-header.php';
@@ -87,11 +87,11 @@ class ThemeBuilder
      * Render the header template.
      *
      * This method is responsible for rendering the header template which is set in the elementor page settings.
-     * It is hooked in the `abcbiz_header` action.
+     * It is hooked in the `primekit_header` action.
      *
      * @since 1.0.0
      */
-    public function abcbiz_render_header()
+    public function primekit_render_header()
     {
         ?>
         <header class="primekit-custom-header dynamic-header">
@@ -108,7 +108,7 @@ class ThemeBuilder
      * @since 1.0.0
      * @return int|false The ID of the header template, or false if not found.
      */
-    public static function abcbiz_get_header_id()
+    public static function primekit_get_header_id()
     {
         $header_id = self::get_template_id('header');
 
@@ -116,7 +116,7 @@ class ThemeBuilder
             $header_id = false;
         }
 
-        return apply_filters('abcbiz_get_header_id', $header_id);
+        return apply_filters('primekit_get_header_id', $header_id);
     }
 
 
@@ -135,10 +135,10 @@ class ThemeBuilder
             'posts_per_page' => -1,
             'post_status' => 'publish',
         ];
-        $abcbiz_hf_templates = get_posts($args);
+        $primekit_hf_templates = get_posts($args);
 
-        foreach ($abcbiz_hf_templates as $template) {
-            if (get_post_meta(absint($template->ID), 'abcbiz_themebuilder_select', true) === $type) {
+        foreach ($primekit_hf_templates as $template) {
+            if (get_post_meta(absint($template->ID), 'primekit_themebuilder_select', true) === $type) {
                 return $template->ID;
             }
         }
@@ -158,9 +158,9 @@ class ThemeBuilder
      */
     public static function get_header_content()
     {
-        $abcbiz_get_header_id = self::abcbiz_get_header_id();
+        $primekit_get_header_id = self::primekit_get_header_id();
         $frontend = new \Elementor\Frontend;
-        echo $frontend->get_builder_content_for_display($abcbiz_get_header_id);
+        echo $frontend->get_builder_content_for_display($primekit_get_header_id);
     }
 
     /**
@@ -171,7 +171,7 @@ class ThemeBuilder
      *
      * @since 1.0.0
      */
-    public function abcbiz_override_footer()
+    public function primekit_override_footer()
     {
         if (self::should_display_template('footer')) {
             require_once PRIMEKIT_TB_PATH . '/inc/templates/primekit-footer.php';
@@ -192,7 +192,7 @@ class ThemeBuilder
      *
      * @since 1.0.0
      */
-    public function abcbiz_render_footer()
+    public function primekit_render_footer()
     {
         ?>
         <footer class="primekit-custom-footer">
@@ -215,9 +215,9 @@ class ThemeBuilder
      */
     public static function get_footer_content()
     {
-        $abcbiz_get_footer_id = self::abcbiz_get_footer_id();
+        $primekit_get_footer_id = self::primekit_get_footer_id();
         $frontend = new \Elementor\Frontend;
-        echo $frontend->get_builder_content_for_display($abcbiz_get_footer_id);
+        echo $frontend->get_builder_content_for_display($primekit_get_footer_id);
     }
 
 
@@ -227,7 +227,7 @@ class ThemeBuilder
      * @since 1.0.0
      * @return int|false The ID of the footer template, or false if not found.
      */
-    public static function abcbiz_get_footer_id()
+    public static function primekit_get_footer_id()
     {
         $footer_id = self::get_template_id('footer');
 
@@ -235,7 +235,7 @@ class ThemeBuilder
             $footer_id = false;
         }
 
-        return apply_filters('abcbiz_get_footer_id', $footer_id);
+        return apply_filters('primekit_get_footer_id', $footer_id);
     }
 
 
@@ -293,7 +293,7 @@ class ThemeBuilder
 
                 wp_localize_script('primekit-tb-modal-ajax', 'abcbizNewTemplateCreated', [
                     'ajaxurl' => admin_url('admin-ajax.php'),
-                    'nonce' => wp_create_nonce('abcbiz_new_template_nonce'),
+                    'nonce' => wp_create_nonce('primekit_new_template_nonce'),
                 ]);
             }
         }
@@ -317,7 +317,7 @@ class ThemeBuilder
      */
     public function handle_new_template_submission()
     {
-        check_ajax_referer('abcbiz_new_template_nonce', 'security');
+        check_ajax_referer('primekit_new_template_nonce', 'security');
 
         $post_title = sanitize_text_field($_POST['postTitle']);
         $template_type = sanitize_text_field($_POST['templateType']);
@@ -331,7 +331,7 @@ class ThemeBuilder
 
         if ($post_id && !is_wp_error($post_id)) {
             // Update the custom field with the template type
-            update_post_meta($post_id, 'abcbiz_themebuilder_select', $template_type);
+            update_post_meta($post_id, 'primekit_themebuilder_select', $template_type);
 
             // Check if Elementor is installed and active
             if (did_action('elementor/loaded')) {
@@ -400,7 +400,7 @@ class ThemeBuilder
         }
 
         // Get the template type selected in `primekit_library`
-        $selected_template = get_post_meta($template_id, 'abcbiz_themebuilder_select', true);
+        $selected_template = get_post_meta($template_id, 'primekit_themebuilder_select', true);
 
         if ($selected_template === $template_type) {
             return true;

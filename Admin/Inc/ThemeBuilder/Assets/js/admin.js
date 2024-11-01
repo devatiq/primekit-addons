@@ -7,9 +7,9 @@ jQuery(document).ready(function($) {
         (currentScreen.includes('post-new.php') && (!searchParams.has('post_type') || searchParams.get('post_type') === 'primekit_library'))) {
         
         // Add the classes to the parent menu to show it as expanded and highlight the current menu item
-        $('#toplevel_page_abcbiz_home').addClass('wp-has-current-submenu wp-menu-open').removeClass('wp-not-current-submenu');
-        $('#toplevel_page_abcbiz_home').find('.wp-submenu li').removeClass('current'); // Remove the current class from all submenu items
-        $('#toplevel_page_abcbiz_home').find('.wp-submenu li a[href="edit.php?post_type=primekit_library"]').parent().addClass('current'); // Highlight the 'Theme Builder' menu
+        $('#toplevel_page_primekit_home').addClass('wp-has-current-submenu wp-menu-open').removeClass('wp-not-current-submenu');
+        $('#toplevel_page_primekit_home').find('.wp-submenu li').removeClass('current'); // Remove the current class from all submenu items
+        $('#toplevel_page_primekit_home').find('.wp-submenu li a[href="edit.php?post_type=primekit_library"]').parent().addClass('current'); // Highlight the 'Theme Builder' menu
     }
 
     // Set the default template for the 'primekit_library' post type

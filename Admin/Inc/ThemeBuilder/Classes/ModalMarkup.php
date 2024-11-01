@@ -11,7 +11,7 @@ class ModalMarkup
     {
         add_action('admin_footer', array($this, 'print_modal_markup'));
         add_action('elementor/editor/footer', array($this, 'template_editor_modal_markup'));
-        add_action('admin_post_abcbiz_save_template', array($this, 'save_template_meta'));
+        add_action('admin_post_primekit_save_template', array($this, 'save_template_meta'));
     }
 
 
@@ -64,9 +64,9 @@ class ModalMarkup
                                         <form id="primekit-tb-modal-template-form" method="post"
                                             action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
                                             <input type="hidden" id="primekit-tb-post-type" name="post_type" value="primekit_library">
-                                            <input type="hidden" name="action" value="abcbiz_save_template">
+                                            <input type="hidden" name="action" value="primekit_save_template">
                                             <input type="hidden" name="post_id" value="<?php echo esc_attr(get_the_ID()); ?>">
-                                            <?php wp_nonce_field('abcbiz_tb_modal_action', 'abcbiz_tb_modal_nonce'); ?>
+                                            <?php wp_nonce_field('primekit_tb_modal_action', 'primekit_tb_modal_nonce'); ?>
                                             <div class="primekit-tb-modal-single-field">
                                                 <select name="primekit-tb-modal-select" id="primekit-tb-modal-select-template-type">
                                                     <option value=""><?php esc_html_e('Select...', 'primekit-addons'); ?>
@@ -164,7 +164,7 @@ class ModalMarkup
     public function save_template_meta()
     {
         error_log('Form submitted');
-        if (!isset($_POST['abcbiz_tb_modal_nonce']) || !wp_verify_nonce($_POST['abcbiz_tb_modal_nonce'], 'abcbiz_tb_modal_action')) {
+        if (!isset($_POST['primekit_tb_modal_nonce']) || !wp_verify_nonce($_POST['primekit_tb_modal_nonce'], 'primekit_tb_modal_action')) {
             wp_die('Nonce check failed');
         }
 
@@ -177,7 +177,7 @@ class ModalMarkup
 
         $template_type = isset($_POST['primekit-tb-modal-select']) ? sanitize_text_field($_POST['primekit-tb-modal-select']) : '';
         error_log('Template Type: ' . $template_type);
-        update_post_meta($post_id, '_abcbiz_template_type', $template_type);  // Ensure this meta key is the same used in your meta box
+        update_post_meta($post_id, '_primekit_template_type', $template_type);  // Ensure this meta key is the same used in your meta box
 
         wp_redirect(admin_url('post.php?post=' . $post_id . '&action=edit'));
         exit;

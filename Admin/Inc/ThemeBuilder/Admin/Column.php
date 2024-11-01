@@ -28,7 +28,7 @@ class Column {
         $new_columns = array(
             'cb' => $columns['cb'],  // Checkbox column
             'title' => __('Title'),
-            'abcbiz_type' => __('Type', 'primekit-addons'), 
+            'primekit_type' => __('Type', 'primekit-addons'), 
         );
     
         // Merge the rest of the columns after 'Type'
@@ -37,12 +37,12 @@ class Column {
     }
     
 
-    // Populate the custom columns with data from 'abcbiz_themebuilder_select'
+    // Populate the custom columns with data from 'primekit_themebuilder_select'
     public function populate_custom_columns($column, $post_id)
     {
-        if ($column === 'abcbiz_type') {
+        if ($column === 'primekit_type') {
             
-            $type_value = get_post_meta($post_id, 'abcbiz_themebuilder_select', true);
+            $type_value = get_post_meta($post_id, 'primekit_themebuilder_select', true);
     
             
             $type_labels = array(
@@ -69,7 +69,7 @@ class Column {
     // Make the 'Type' column sortable
     public function make_columns_sortable($columns)
     {
-        $columns['abcbiz_type'] = 'abcbiz_type';
+        $columns['primekit_type'] = 'primekit_type';
         return $columns;
     }
 
@@ -80,8 +80,8 @@ class Column {
             return;
         }
 
-        if ('abcbiz_type' === $query->get('orderby')) {
-            $query->set('meta_key', 'abcbiz_themebuilder_select');
+        if ('primekit_type' === $query->get('orderby')) {
+            $query->set('meta_key', 'primekit_themebuilder_select');
             $query->set('orderby', 'meta_value');
         }
     }

@@ -22,7 +22,7 @@ do_action('elementor/page_templates/header-footer/before_content');
 <div class="primekit-search-results-page">
     <?php
     if (!\Elementor\Plugin::$instance->preview->is_preview_mode()):
-        do_action('abcbiz_search_page_content');
+        do_action('primekit_search_page_content');
     else:
         ?>
         <div class="primekit-container">

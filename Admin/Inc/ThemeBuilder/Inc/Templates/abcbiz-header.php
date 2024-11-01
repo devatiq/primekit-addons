@@ -15,4 +15,4 @@
 
 <?php wp_body_open(); ?>
 
- <?php do_action('abcbiz_header'); ?>
+ <?php do_action('primekit_header'); ?>

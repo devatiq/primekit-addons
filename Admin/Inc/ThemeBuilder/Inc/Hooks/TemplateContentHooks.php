@@ -25,11 +25,11 @@ class TemplateContentHooks {
      * @since 1.0.0
      */
     public function register_hooks() {
-        add_action('abcbiz_single_post_content', array($this, 'single_post_content_elementor'), 999);
-        add_action('abcbiz_single_page_content', array($this, 'single_page_content_elementor'), 999);
-        add_action('abcbiz_404_page_content', array($this, 'single_404_page_content_elementor'), 999);
-        add_action('abcbiz_search_page_content', array($this, 'search_page_content_elementor'), 999);
-        add_action('abcbiz_archive_page_content', array($this, 'archive_page_content_elementor'), 999);
+        add_action('primekit_single_post_content', array($this, 'single_post_content_elementor'), 999);
+        add_action('primekit_single_page_content', array($this, 'single_page_content_elementor'), 999);
+        add_action('primekit_404_page_content', array($this, 'single_404_page_content_elementor'), 999);
+        add_action('primekit_search_page_content', array($this, 'search_page_content_elementor'), 999);
+        add_action('primekit_archive_page_content', array($this, 'archive_page_content_elementor'), 999);
     }
 
     /**

@@ -23,7 +23,7 @@ do_action( 'elementor/page_templates/header-footer/before_content' );
     while ( have_posts() ) :
         the_post();
         if( !\Elementor\Plugin::$instance->preview->is_preview_mode() ){
-            do_action( 'abcbiz_single_post_content' );
+            do_action( 'primekit_single_post_content' );
         }else{            
             the_content();
         }

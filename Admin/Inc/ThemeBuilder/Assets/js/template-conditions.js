@@ -42,12 +42,12 @@ jQuery(document).ready(function ($) {
     let conditionHTML =
       '<div class="primekit-tb-modal-condition-field">' +
       // '<div class="primekit-tb-modal-condition-type">' +
-      // '<select name="abcbiz_tb_modal_condition_type[]" class="primekit-tb-modal-condition-type-select">' +
+      // '<select name="primekit_tb_modal_condition_type[]" class="primekit-tb-modal-condition-type-select">' +
       // '<option value="include">Include</option>' +
       // '<option value="exclude">Exclude</option>' +
       // "</select>" +
       // "</div>" +
-      '<select name="abcbiz_tb_modal_condition_scope[]" class="primekit-tb-modal-condition-scope-select">' +
+      '<select name="primekit_tb_modal_condition_scope[]" class="primekit-tb-modal-condition-scope-select">' +
       '<option value="entire_site">Entire Site</option>' +
       '<option value="archive">Archive</option>' +
       '<option value="singular">Singular</option>' +
@@ -172,14 +172,14 @@ jQuery(document).ready(function ($) {
       placeholder: "Type to search...",
       allowClear: true,
       ajax: {
-        url: abcbiz_template_conditions.ajaxurl,
+        url: primekit_template_conditions.ajaxurl,
         type: "POST",
         dataType: "json",
         delay: 250,
         data: function (params) {
           return {
-            action: "abcbiz_select2_search_posts", // The WP AJAX action
-            nonce: abcbiz_template_conditions.nonce, // Nonce for security
+            action: "primekit_select2_search_posts", // The WP AJAX action
+            nonce: primekit_template_conditions.nonce, // Nonce for security
             searchTerm: params.term, // Search term
             type: type, // Post type or taxonomy
           };
