@@ -12,7 +12,7 @@ class Main extends BaseWidget
 {
     protected $name = 'primekit-blog-grid';
     protected $title = 'Blog Posts Grid';
-    protected $icon = 'eicon-posts-grid  primekit-addons-icon';
+    protected $icon = 'eicon-posts-grid primekit-addons-icon';
     protected $categories = [
         'primekit-category'
     ];
