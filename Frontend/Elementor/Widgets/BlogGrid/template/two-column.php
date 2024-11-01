@@ -47,7 +47,7 @@
                                 <figure>
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 
-<?php echo '<img src="' . esc_url(primekit_Assets . '/img/blog/img-placeholder.jpg') . '" alt="' . esc_attr(get_the_title()) . '">'; ?>
+<?php echo '<img src="' . esc_url(PRIMEKIT_ELEMENTOR_ASSETS . '/img/blog/img-placeholder.jpg') . '" alt="' . esc_attr(get_the_title()) . '">'; ?>
 </a>
                                 </figure>
                             </div>
