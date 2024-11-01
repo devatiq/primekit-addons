@@ -3,14 +3,14 @@ jQuery(document).ready(function ($) {
    * Add a custom menu item to the Elementor panel footer.
    *
    * Adds a new menu item "Template Conditions" next to the "Save as Template" menu item.
-   * The menu item opens a modal with the ID "abcbiz-tb-editor-modal".
+   * The menu item opens a modal with the ID "primekit-tb-editor-modal".
    *
    * @since 1.0.0
    */
   function abcbizAddCustomMenuItem() {
     let customMenuItem = $(
-      '<div class="elementor-panel-footer-sub-menu-item abcbiz-addons-menu-item" id="elementor-panel-footer-sub-menu-item-template-conditions">' +
-        '<i class="abcbiz-addons-icon" aria-hidden="true"></i>' +
+      '<div class="elementor-panel-footer-sub-menu-item primekit-addons-menu-item" id="elementor-panel-footer-sub-menu-item-template-conditions">' +
+        '<i class="primekit-addons-icon" aria-hidden="true"></i>' +
         '<span class="elementor-title">Template Conditions</span>' +
         "</div>"
     );
@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
 
       customMenuItem.on("click", function () {
         console.log("Clicked menu item");
-        MicroModal.show("abcbiz-tb-editor-modal");
+        MicroModal.show("primekit-tb-editor-modal");
         console.log("Clicked after modal");
       });
     } else {
@@ -38,39 +38,39 @@ jQuery(document).ready(function ($) {
 });
 
 jQuery(document).ready(function ($) {
-  $(".abcbiz-tb-modal-condition-repeater-btn").click(function () {
+  $(".primekit-tb-modal-condition-repeater-btn").click(function () {
     let conditionHTML =
-      '<div class="abcbiz-tb-modal-condition-field">' +
-      // '<div class="abcbiz-tb-modal-condition-type">' +
-      // '<select name="abcbiz_tb_modal_condition_type[]" class="abcbiz-tb-modal-condition-type-select">' +
+      '<div class="primekit-tb-modal-condition-field">' +
+      // '<div class="primekit-tb-modal-condition-type">' +
+      // '<select name="abcbiz_tb_modal_condition_type[]" class="primekit-tb-modal-condition-type-select">' +
       // '<option value="include">Include</option>' +
       // '<option value="exclude">Exclude</option>' +
       // "</select>" +
       // "</div>" +
-      '<select name="abcbiz_tb_modal_condition_scope[]" class="abcbiz-tb-modal-condition-scope-select">' +
+      '<select name="abcbiz_tb_modal_condition_scope[]" class="primekit-tb-modal-condition-scope-select">' +
       '<option value="entire_site">Entire Site</option>' +
       '<option value="archive">Archive</option>' +
       '<option value="singular">Singular</option>' +
       "</select>" +
-      '<button class="abcbiz-tb-modal-delete-condition" type="button"><i class="eicon-trash" aria-hidden="true"></i></button>' +
+      '<button class="primekit-tb-modal-delete-condition" type="button"><i class="eicon-trash" aria-hidden="true"></i></button>' +
       "</div>";
 
-    $("#abcbiz-tb-modal-condition-wrapper").append(conditionHTML);
+    $("#primekit-tb-modal-condition-wrapper").append(conditionHTML);
   });
 
-  $(document).on("click", ".abcbiz-tb-modal-delete-condition", function () {
-    $(this).closest(".abcbiz-tb-modal-condition-field").remove();
+  $(document).on("click", ".primekit-tb-modal-delete-condition", function () {
+    $(this).closest(".primekit-tb-modal-condition-field").remove();
   });
 
   $(document).on(
     "change",
-    ".abcbiz-tb-modal-condition-scope-select",
+    ".primekit-tb-modal-condition-scope-select",
     function () {
       let selectedValue = $(this).val();
-      let currentField = $(this).closest(".abcbiz-tb-modal-condition-field");
+      let currentField = $(this).closest(".primekit-tb-modal-condition-field");
       currentField
         .find(
-          ".abcbiz-tb-modal-dynamic-select, .abcbiz-tb-modal-additional-select"
+          ".primekit-tb-modal-dynamic-select, .primekit-tb-modal-additional-select"
         )
         .remove();
       let additionalSelect = getAdditionalSelect(selectedValue);
@@ -80,9 +80,9 @@ jQuery(document).ready(function ($) {
     }
   );
 
-  $(document).on("change", ".abcbiz-tb-modal-dynamic-select", function () {
+  $(document).on("change", ".primekit-tb-modal-dynamic-select", function () {
     let selectedValue = $(this).val();
-    let currentField = $(this).closest(".abcbiz-tb-modal-condition-field");
+    let currentField = $(this).closest(".primekit-tb-modal-condition-field");
     let validTypes = [
       "post",
       "in_category",
@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
     ];
 
     if (validTypes.includes(selectedValue)) {
-      let searchField = currentField.find(".abcbiz-tb-modal-additional-select");
+      let searchField = currentField.find(".primekit-tb-modal-additional-select");
       if (searchField.length === 0) {
         // If the search field does not exist, add it
         appendAdditionalSelect(currentField, selectedValue);
@@ -108,7 +108,7 @@ jQuery(document).ready(function ($) {
     } else {
       // Remove the search field if the selected value is not in the validTypes array
       currentField
-        .find(".abcbiz-tb-modal-additional-select")
+        .find(".primekit-tb-modal-additional-select")
         .select2("destroy")
         .remove();
     }
@@ -116,7 +116,7 @@ jQuery(document).ready(function ($) {
   function getAdditionalSelect(value) {
     if (value === "archive") {
       return (
-        '<select class="abcbiz-tb-modal-dynamic-select" name="archive_type">' +
+        '<select class="primekit-tb-modal-dynamic-select" name="archive_type">' +
         '<option value="all">All Archives</option>' +
         '<option value="author">Author Archive</option>' +
         '<option value="date">Date Archive</option>' +
@@ -126,7 +126,7 @@ jQuery(document).ready(function ($) {
       );
     } else if (value === "singular") {
       return (
-        '<select class="abcbiz-tb-modal-dynamic-select" name="singular_type">' +
+        '<select class="primekit-tb-modal-dynamic-select" name="singular_type">' +
         '<option value="all">All Singular</option>' +
         '<option value="front_page">Front Page</option>' +
         '<optgroup label="Posts">' +
@@ -151,11 +151,11 @@ jQuery(document).ready(function ($) {
 
   function appendAdditionalSelect(currentField, type) {
     let selectHTML =
-      '<select class="abcbiz-tb-modal-additional-select" name="details">' +
+      '<select class="primekit-tb-modal-additional-select" name="details">' +
       '<option value="all" selected>All</option>' + // 'All' option added and set as selected by default
       "</select>";
     let selectElement = $(selectHTML).insertBefore(
-      currentField.find(".abcbiz-tb-modal-delete-condition")
+      currentField.find(".primekit-tb-modal-delete-condition")
     );
     initializeSelect2(selectElement, type);
   }
@@ -197,7 +197,7 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  $("#abcbiz-tb-modal-condition-form").on("submit", function (e) {
+  $("#primekit-tb-modal-condition-form").on("submit", function (e) {
     e.preventDefault();
   });
 });

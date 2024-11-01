@@ -22,8 +22,8 @@ class Menus
 
         add_submenu_page(
             'primekit_settings',
-            __('Theme Builder', 'abcbiz-addons'),
-            __('Theme Builder', 'abcbiz-addons'),
+            __('Theme Builder', 'primekit-addons'),
+            __('Theme Builder', 'primekit-addons'),
             'manage_options',
             'edit.php?post_type=primekit_library'
         );

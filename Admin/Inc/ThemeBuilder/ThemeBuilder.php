@@ -72,7 +72,7 @@ class ThemeBuilder
     public function abcbiz_override_header()
     {
         if (self::should_display_template('header')) {
-            require_once PRIMEKIT_TB_PATH . '/inc/templates/abcbiz-header.php';
+            require_once PRIMEKIT_TB_PATH . '/inc/templates/primekit-header.php';
             $templates = [];
             $templates[] = 'header.php';
             remove_all_actions('wp_head');
@@ -94,8 +94,8 @@ class ThemeBuilder
     public function abcbiz_render_header()
     {
         ?>
-        <header class="abcbiz-custom-header dynamic-header">
-            <div class="abcbiz-container">
+        <header class="primekit-custom-header dynamic-header">
+            <div class="primekit-container">
                 <?php echo self::get_header_content(); ?>
             </div>
         </header>
@@ -174,7 +174,7 @@ class ThemeBuilder
     public function abcbiz_override_footer()
     {
         if (self::should_display_template('footer')) {
-            require_once PRIMEKIT_TB_PATH . '/inc/templates/abcbiz-footer.php';
+            require_once PRIMEKIT_TB_PATH . '/inc/templates/primekit-footer.php';
             $templates = [];
             $templates[] = 'footer.php';
             remove_all_actions('wp_footer');
@@ -195,8 +195,8 @@ class ThemeBuilder
     public function abcbiz_render_footer()
     {
         ?>
-        <footer class="abcbiz-custom-footer">
-            <div class="abcbiz-container">
+        <footer class="primekit-custom-footer">
+            <div class="primekit-container">
                 <?php echo self::get_footer_content(); ?>
             </div>
         </footer>
@@ -251,7 +251,7 @@ class ThemeBuilder
             \Elementor\Plugin::instance()->frontend->enqueue_scripts();
         }
 
-        wp_enqueue_style('abcbiz-theme-builder-style', PRIMEKIT_TB_ASSETS . '/css/style.css');
+        wp_enqueue_style('primekit-theme-builder-style', PRIMEKIT_TB_ASSETS . '/css/style.css');
     }
 
     public function classes_initialize()
@@ -263,8 +263,7 @@ class ThemeBuilder
         $this->condition_manager = new ConditionManager();
         $this->template_content_hooks = new TemplateContentHooks();
         $this->template_override = new TemplateOverride();
-        $this->meta_box = new MetaBox();
-       
+        $this->meta_box = new MetaBox();       
     }
 
     /**
@@ -284,15 +283,15 @@ class ThemeBuilder
             $post_type = isset($_GET['post_type']) ? $_GET['post_type'] : '';
             if ('primekit_library' === $post_type || ('post-new.php' === $hook && empty($post_type))) {
 
-                wp_enqueue_style('abcbiz-theme-builder-modal', plugins_url('assets/css/modal.css', __FILE__), array(), '1.0.0', 'all');
+                wp_enqueue_style('primekit-theme-builder-modal', plugins_url('assets/css/modal.css', __FILE__), array(), '1.0.0', 'all');
 
-                wp_enqueue_script('abcbiz-theme-builder-main', plugins_url('assets/js/admin.js', __FILE__), array('jquery'), '1.0.0', true);
+                wp_enqueue_script('primekit-theme-builder-main', plugins_url('assets/js/admin.js', __FILE__), array('jquery'), '1.0.0', true);
 
-                wp_enqueue_script('abcbiz-tb-modal-ajax', plugins_url('assets/js/new-template-ajax.js', __FILE__), array('jquery'), '1.0.0', true);
+                wp_enqueue_script('primekit-tb-modal-ajax', plugins_url('assets/js/new-template-ajax.js', __FILE__), array('jquery'), '1.0.0', true);
 
                 wp_enqueue_script('micromodal-js', '//unpkg.com/micromodal@0.4.10/dist/micromodal.min.js', array('jquery'), '0.4.10', true);
 
-                wp_localize_script('abcbiz-tb-modal-ajax', 'abcbizNewTemplateCreated', [
+                wp_localize_script('primekit-tb-modal-ajax', 'abcbizNewTemplateCreated', [
                     'ajaxurl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('abcbiz_new_template_nonce'),
                 ]);

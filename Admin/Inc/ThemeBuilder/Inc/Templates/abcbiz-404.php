@@ -19,18 +19,18 @@ get_header();
 do_action('elementor/page_templates/header-footer/before_content');
 ?>
 
-<main class="abcbiz-404-page">
+<main class="primekit-404-page">
     <?php
     if (!\Elementor\Plugin::$instance->preview->is_preview_mode()):
         do_action('abcbiz_404_page_content');
     else:
         ?>
-        <div class="abcbiz-container">
+        <div class="primekit-container">
             <h1 class="error-code">404</h1>
-            <h1 class="error-title"><?php esc_html_e('Page Not Found', 'abcbiz-addons'); ?></h1>
-            <p><?php esc_html_e('Sorry, but the page you are looking for does not exist.', 'abcbiz-addons'); ?></p>
+            <h1 class="error-title"><?php esc_html_e('Page Not Found', 'primekit-addons'); ?></h1>
+            <p><?php esc_html_e('Sorry, but the page you are looking for does not exist.', 'primekit-addons'); ?></p>
             <a href="<?php echo esc_url(home_url('/')); ?>"
-                class="button"><?php esc_html_e('Go Back to Home', 'abcbiz-addons'); ?></a>
+                class="button"><?php esc_html_e('Go Back to Home', 'primekit-addons'); ?></a>
         </div>
     <?php endif; ?>
 </main>

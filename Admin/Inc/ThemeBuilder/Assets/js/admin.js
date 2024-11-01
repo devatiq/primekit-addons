@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
         e.preventDefault();
 
         // Initialize and show the modal using MicroModal
-        MicroModal.show('abcbiz-tb-modal');
+        MicroModal.show('primekit-tb-modal');
     });
 
 

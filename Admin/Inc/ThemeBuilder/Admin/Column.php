@@ -28,7 +28,7 @@ class Column {
         $new_columns = array(
             'cb' => $columns['cb'],  // Checkbox column
             'title' => __('Title'),
-            'abcbiz_type' => __('Type', 'abcbiz-addons'), 
+            'abcbiz_type' => __('Type', 'primekit-addons'), 
         );
     
         // Merge the rest of the columns after 'Type'
@@ -46,13 +46,13 @@ class Column {
     
             
             $type_labels = array(
-                'archive_page' => __('Archive Page', 'abcbiz-addons'),
-                'search_page' => __('Search Page', 'abcbiz-addons'),
-                '404_page' => __('404 Page', 'abcbiz-addons'),
-                'single_post' => __('Single Post', 'abcbiz-addons'),
-                'single_page' => __('Single Page', 'abcbiz-addons'),
-                'footer' => __('Footer', 'abcbiz-addons'),
-                'header' => __('Header', 'abcbiz-addons'),
+                'archive_page' => __('Archive Page', 'primekit-addons'),
+                'search_page' => __('Search Page', 'primekit-addons'),
+                '404_page' => __('404 Page', 'primekit-addons'),
+                'single_post' => __('Single Post', 'primekit-addons'),
+                'single_page' => __('Single Page', 'primekit-addons'),
+                'footer' => __('Footer', 'primekit-addons'),
+                'header' => __('Header', 'primekit-addons'),
                 
             );
     
@@ -60,7 +60,7 @@ class Column {
             if (!empty($type_value) && isset($type_labels[$type_value])) {
                 echo esc_html($type_labels[$type_value]);
             } else {
-                echo __('Unknown Type', 'abcbiz-addons');
+                echo __('Unknown Type', 'primekit-addons');
             }
         }
     }

@@ -23,33 +23,33 @@ get_header();
 do_action( 'elementor/page_templates/header-footer/before_content' );
 ?>
 
-<div class="abcbiz-archive-page">
+<div class="primekit-archive-page">
     <?php
     if (!\Elementor\Plugin::$instance->preview->is_preview_mode()):
         do_action('abcbiz_archive_page_content');
     else:
         ?>
-        <div class="abcbiz-container">
+        <div class="primekit-container">
 
             <?php if (have_posts()): ?>
-                <h1 class="abcbiz-archive-title">
+                <h1 class="primekit-archive-title">
                     <?php
                     // Display the archive title
                     the_archive_title();
                     ?>
                 </h1>
 
-                <div class="abcbiz-archive-posts-list">
+                <div class="primekit-archive-posts-list">
                     <?php
                     // Start the Loop
                     while (have_posts()):
                         the_post();
                         ?>
-                        <div class="abcbiz-archive-post-item">
-                            <h2 class="abcbiz-archive-post-title">
+                        <div class="primekit-archive-post-item">
+                            <h2 class="primekit-archive-post-title">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
-                            <div class="abcbiz-archive-post-excerpt">
+                            <div class="primekit-archive-post-excerpt">
                                 <?php the_excerpt(); ?>
                             </div>
                         </div>
@@ -58,12 +58,12 @@ do_action( 'elementor/page_templates/header-footer/before_content' );
                     ?>
 
                     <!-- Pagination -->
-                    <div class="abcbiz-archive-pagination">
+                    <div class="primekit-archive-pagination">
                         <?php
                         // Pagination links
                         the_posts_pagination(array(
-                            'prev_text' => __('Previous', 'abcbiz-addons'),
-                            'next_text' => __('Next', 'abcbiz-addons'),
+                            'prev_text' => __('Previous', 'primekit-addons'),
+                            'next_text' => __('Next', 'primekit-addons'),
                         ));
                         ?>
                     </div>
@@ -71,9 +71,9 @@ do_action( 'elementor/page_templates/header-footer/before_content' );
 
             <?php else: ?>
 
-                <h1 class="abcbiz-no-posts-title"><?php _e('No Posts Found', 'abcbiz-addons'); ?></h1>
-                <p class="abcbiz-no-posts-message">
-                    <?php _e('Sorry, but no posts are available in this archive.', 'abcbiz-addons'); ?>
+                <h1 class="primekit-no-posts-title"><?php _e('No Posts Found', 'primekit-addons'); ?></h1>
+                <p class="primekit-no-posts-message">
+                    <?php _e('Sorry, but no posts are available in this archive.', 'primekit-addons'); ?>
                 </p>
 
             <?php endif; ?>

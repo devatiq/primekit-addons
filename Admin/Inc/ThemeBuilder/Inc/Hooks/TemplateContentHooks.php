@@ -83,7 +83,7 @@ class TemplateContentHooks {
             echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
         } else {
             '<h1 class="error-code">404</h1>';
-            '<h1 class="error-title>' . esc_html__('Page Not Found', 'abcbiz-addons') . '</h1>';
+            '<h1 class="error-title>' . esc_html__('Page Not Found', 'primekit-addons') . '</h1>';
             get_search_form();
         }
     }
@@ -101,7 +101,7 @@ class TemplateContentHooks {
         if (!empty($template_id)) {
             echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
         } else {
-            '<h2 class="search-title">' . esc_html__('Search Results', 'abcbiz-addons') . '</h2>';
+            '<h2 class="search-title">' . esc_html__('Search Results', 'primekit-addons') . '</h2>';
             get_search_form();
 
             if (have_posts()) {
@@ -133,26 +133,26 @@ class TemplateContentHooks {
 
             // Check if there are posts in the archive
             if (have_posts()) {
-                echo '<div class="abcbiz-archive-post-list">';
+                echo '<div class="primekit-archive-post-list">';
                 while (have_posts()) {
                     the_post();
-                    echo '<div class="abcbiz-archive-post-item">';
+                    echo '<div class="primekit-archive-post-item">';
                     echo '<h3><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
-                    echo '<div class="abcbiz-archive-post-excerpt">' . get_the_excerpt() . '</div>';
+                    echo '<div class="primekit-archive-post-excerpt">' . get_the_excerpt() . '</div>';
                     echo '</div>';
                 }
                 echo '</div>';
 
                 // Add pagination
-                echo '<div class="abcbiz-archive-pagination">';
+                echo '<div class="primekit-archive-pagination">';
                 the_posts_pagination(array(
-                    'prev_text' => __('Previous', 'abcbiz-addons'),
-                    'next_text' => __('Next', 'abcbiz-addons'),
+                    'prev_text' => __('Previous', 'primekit-addons'),
+                    'next_text' => __('Next', 'primekit-addons'),
                 ));
                 echo '</div>';
             } else {
                 // Message if no posts are found
-                echo '<p>' . esc_html__('No posts found in this archive.', 'abcbiz-addons') . '</p>';
+                echo '<p>' . esc_html__('No posts found in this archive.', 'primekit-addons') . '</p>';
             }
         }
     }

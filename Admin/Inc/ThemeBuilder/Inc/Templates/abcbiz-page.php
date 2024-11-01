@@ -17,7 +17,7 @@ get_header();
  * @since 2.0.0
  */
 do_action( 'elementor/page_templates/header-footer/before_content' );
-    echo '<main class="abcbiz-single-page">';
+    echo '<main class="primekit-single-page">';
     while ( have_posts() ) :
         the_post();
         if( !\Elementor\Plugin::$instance->preview->is_preview_mode() ){

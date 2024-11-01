@@ -1,22 +1,22 @@
 jQuery(document).ready(function($) {
     'use strict';
     // Enable the submit button when all fields are filled out
-    $('#abcbiz-tb-modal-ftemplate-name, #abcbiz-tb-modal-select-template-type').on('change keyup', function() {
-        let templateName = $('#abcbiz-tb-modal-ftemplate-name').val().trim();
-        let templateType = $('#abcbiz-tb-modal-select-template-type').val();
+    $('#primekit-tb-modal-ftemplate-name, #primekit-tb-modal-select-template-type').on('change keyup', function() {
+        let templateName = $('#primekit-tb-modal-ftemplate-name').val().trim();
+        let templateType = $('#primekit-tb-modal-select-template-type').val();
         let isFormValid = templateName !== '' && templateType !== '';
         
-        $('#abcbiz-tb-modal-content-form-submit').prop('disabled', !isFormValid);
+        $('#primekit-tb-modal-content-form-submit').prop('disabled', !isFormValid);
     });
 
-    $('#abcbiz-tb-modal-template-form').on('submit', function(e) {
+    $('#primekit-tb-modal-template-form').on('submit', function(e) {
         e.preventDefault();
 
         let formData = {
             action: 'primekit_library_new_post',
-            postTitle: $('#abcbiz-tb-modal-ftemplate-name').val(),
-            templateType: $('#abcbiz-tb-modal-select-template-type').val(),
-            postType: $('#abcbiz-tb-post-type').val(),
+            postTitle: $('#primekit-tb-modal-ftemplate-name').val(),
+            templateType: $('#primekit-tb-modal-select-template-type').val(),
+            postType: $('#primekit-tb-post-type').val(),
             security: abcbizNewTemplateCreated.nonce,
         };
 

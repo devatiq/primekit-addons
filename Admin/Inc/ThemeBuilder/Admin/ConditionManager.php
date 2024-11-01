@@ -30,15 +30,15 @@ class ConditionManager
             if ($post_type === 'primekit_library') {
                 wp_enqueue_style('select2', plugins_url('../assets/css/select2.min.css', __FILE__), array(), '4.1.0', 'all');
 
-                wp_enqueue_style('abcbiz-tb-editor-modal', plugins_url('../assets/css/editor.css', __FILE__), array(), '1.0.0', 'all');
+                wp_enqueue_style('primekit-tb-editor-modal', plugins_url('../assets/css/editor.css', __FILE__), array(), '1.0.0', 'all');
                 wp_enqueue_script('micromodal', '//unpkg.com/micromodal@0.4.10/dist/micromodal.min.js', array('jquery'), '0.4.10', true);
 
                 wp_enqueue_script('select2', plugins_url('../assets/js/select2.min.js', __FILE__), ['elementor-editor', 'jquery'], '4.1.0', true);
 
 
-                wp_enqueue_script('abcbiz-elementor-template-conditions', plugins_url('../assets/js/template-conditions.js', __FILE__), ['jquery', 'select2'], '1.0.0', true);
+                wp_enqueue_script('primekit-elementor-template-conditions', plugins_url('../assets/js/template-conditions.js', __FILE__), ['jquery', 'select2'], '1.0.0', true);
 
-                wp_localize_script('abcbiz-elementor-template-conditions', 'abcbiz_template_conditions', [
+                wp_localize_script('primekit-elementor-template-conditions', 'abcbiz_template_conditions', [
                     'ajaxurl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('template_conditions_nonce')
                 ]);

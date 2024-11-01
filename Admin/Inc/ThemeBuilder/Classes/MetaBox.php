@@ -16,7 +16,7 @@ class MetaBox
     {
         add_meta_box(
             'abcbiz_themebuilder_select',            // ID of the meta box
-            __('Choose Template Type', 'abcbiz-addons'), // Title of the meta box
+            __('Choose Template Type', 'primekit-addons'), // Title of the meta box
             array($this, 'meta_box_callback'),       // Callback function
             'primekit_library',                       // Post type
             'advanced',                                 // Context
@@ -40,17 +40,17 @@ class MetaBox
     
         // Row for Template Type
         echo '<tr>';
-        echo '<th><label for="abcbiz_themebuilder_select">' . esc_html__('Type:', 'abcbiz-addons') . '</label></th>';
+        echo '<th><label for="abcbiz_themebuilder_select">' . esc_html__('Type:', 'primekit-addons') . '</label></th>';
         echo '<td>';
         echo '<select id="abcbiz_themebuilder_select" name="abcbiz_themebuilder_select">';
-        echo '<option value="">' . esc_html__('Select...', 'abcbiz-addons') . '</option>';
-        echo '<option value="header"' . selected($template_value, 'header', false) . '>' . esc_html__('Header (Global)', 'abcbiz-addons') . '</option>';
-        echo '<option value="footer"' . selected($template_value, 'footer', false) . '>' . esc_html__('Footer (Global)', 'abcbiz-addons') . '</option>';
-        echo '<option value="single_post"' . selected($template_value, 'single_post', false) . '>' . esc_html__('Single Post', 'abcbiz-addons') . '</option>';
-        echo '<option value="single_page"' . selected($template_value, 'single_page', false) . '>' . esc_html__('Single Page', 'abcbiz-addons') . '</option>';
-        echo '<option value="search_page"' . selected($template_value, 'search_page', false) . '>' . esc_html__('Search Page', 'abcbiz-addons') . '</option>';
-        echo '<option value="404_page"' . selected($template_value, '404_page', false) . '>' . esc_html__('404 Page', 'abcbiz-addons') . '</option>';
-        echo '<option value="archive_page"' . selected($template_value, 'archive_page', false) . '>' . esc_html__('Archive Page', 'abcbiz-addons') . '</option>';
+        echo '<option value="">' . esc_html__('Select...', 'primekit-addons') . '</option>';
+        echo '<option value="header"' . selected($template_value, 'header', false) . '>' . esc_html__('Header (Global)', 'primekit-addons') . '</option>';
+        echo '<option value="footer"' . selected($template_value, 'footer', false) . '>' . esc_html__('Footer (Global)', 'primekit-addons') . '</option>';
+        echo '<option value="single_post"' . selected($template_value, 'single_post', false) . '>' . esc_html__('Single Post', 'primekit-addons') . '</option>';
+        echo '<option value="single_page"' . selected($template_value, 'single_page', false) . '>' . esc_html__('Single Page', 'primekit-addons') . '</option>';
+        echo '<option value="search_page"' . selected($template_value, 'search_page', false) . '>' . esc_html__('Search Page', 'primekit-addons') . '</option>';
+        echo '<option value="404_page"' . selected($template_value, '404_page', false) . '>' . esc_html__('404 Page', 'primekit-addons') . '</option>';
+        echo '<option value="archive_page"' . selected($template_value, 'archive_page', false) . '>' . esc_html__('Archive Page', 'primekit-addons') . '</option>';
         echo '</select>';
         echo '</td>';
         echo '</tr>';
@@ -58,11 +58,11 @@ class MetaBox
 
         // Row for Display Condition with optgroup
         echo '<tr style="display:none">';
-        echo '<th><label for="abcbiz_display_condition_select">' . esc_html__('Display Condition:', 'abcbiz-addons') . '</label></th>';
+        echo '<th><label for="abcbiz_display_condition_select">' . esc_html__('Display Condition:', 'primekit-addons') . '</label></th>';
         echo '<td>';
         echo '<select id="abcbiz_display_condition_select" name="abcbiz_display_condition_select">';
 
-        echo '<option value="entire_site"' . selected($display_condition_value, 'entire_site', false) . '>' . esc_html__('Entire Site', 'abcbiz-addons') . '</option>';
+        echo '<option value="entire_site"' . selected($display_condition_value, 'entire_site', false) . '>' . esc_html__('Entire Site', 'primekit-addons') . '</option>';
 
 
         echo '</td>';
