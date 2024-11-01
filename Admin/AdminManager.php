@@ -21,6 +21,7 @@ use PrimeKit\Admin\Assets\Assets;
 use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\PrimeKitWidgets;
 use PrimeKit\Admin\Inc\Hooks\FilterHooks;
 use PrimeKit\Admin\Inc\Hooks\ActionHooks;
+use PrimeKit\Admin\Inc\ThemeBuilder\ThemeBuilder;
 
 /**
  * Class AdminManager
@@ -38,6 +39,7 @@ class AdminManager
     protected $PrimeKitWidgets;
     protected $FilterHooks;
     protected $ActionHooks;
+    protected $ThemeBuilder;
     /**
      * AdminManager constructor.
      *
@@ -81,6 +83,7 @@ class AdminManager
         $this->PrimeKitWidgets = new PrimeKitWidgets();
         $this->FilterHooks = new FilterHooks();
         $this->ActionHooks = new ActionHooks();
+        $this->ThemeBuilder = new ThemeBuilder();
     }
 
 
