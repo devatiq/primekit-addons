@@ -247,10 +247,10 @@ class ThemeBuilder
      */
     public function enqueue_elementor_styles_scripts()
     {
-        //if (did_action('elementor/loaded')) {
-           // \Elementor\Plugin::instance()->frontend->enqueue_styles();
-           // \Elementor\Plugin::instance()->frontend->enqueue_scripts();
-       // }
+    //     if (did_action('elementor/loaded')) {
+    //        \Elementor\Plugin::instance()->frontend->enqueue_styles();
+    //        \Elementor\Plugin::instance()->frontend->enqueue_scripts();
+    //    }
 
         wp_enqueue_style('primekit-theme-builder-style', PRIMEKIT_TB_ASSETS . '/css/style.css');
     }

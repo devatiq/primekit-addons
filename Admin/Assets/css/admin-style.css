@@ -96,6 +96,9 @@
   outline: none;
   box-shadow: none;
 }
+.primekit-widget-title h3 a:hover {
+  color: #0049e7;
+}
 .primekit-available-single-widget-header {
   position: absolute;
   top: 0;
