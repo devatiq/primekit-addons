@@ -92,8 +92,9 @@
   font-weight: 500;
   outline: none;
 }
-.primekit-widget-title h3 a:focus, .primekit-widget-title h3 a:active, .primekit-widget-title h3 a:visited {
+.primekit-widget-title h3 a:focus, .primekit-widget-title h3 a:active, .primekit-widget-title h3 a:visited, .primekit-widget-title h3 a:focus-visible, .primekit-widget-icon a:focus, .primekit-widget-icon a:active, .primekit-widget-icon a:visited, .primekit-widget-icon a:focus-visible {
   outline: none;
+  box-shadow: none;
 }
 .primekit-available-single-widget-header {
   position: absolute;

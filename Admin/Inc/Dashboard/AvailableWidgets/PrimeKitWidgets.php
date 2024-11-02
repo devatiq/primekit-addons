@@ -234,7 +234,7 @@ class PrimeKitWidgets
                 </div>
             </div>
             <div class="primekit-widget-icon">
-                <img src="<?php echo esc_url($icon_url); ?>" alt="<?php echo esc_html($title); ?>">
+                <a href="<?php echo esc_url($widget_url); ?>" target="_blank"><img src="<?php echo esc_url($icon_url); ?>" alt="<?php echo esc_html($title); ?>"></a>
             </div>
             <div class="primekit-widget-title">
                 <h3><a href="<?php echo esc_url($widget_url); ?>" target="_blank"><?php echo esc_html($title); ?></a></h3>
