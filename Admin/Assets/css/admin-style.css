@@ -145,7 +145,7 @@
   background-color: #ccc;
   transition: 0.4s;
   border-radius: 5px;
-  background: linear-gradient(90deg, #c835f8 0%, #0049e7 100%);
+  background: #8d8d8d;
 }
 
 .primekit-slider:before {
@@ -161,7 +161,7 @@
 }
 
 .primekit-switch input:checked + .primekit-slider {
-  background: linear-gradient(90deg, #0049e7 0%, #c835f8 100%);
+  background: #259eb1;
 }
 
 .primekit-switch input:checked + .primekit-slider:before {
