@@ -26,7 +26,7 @@ class ThemeBuilder
 
     protected $template_override;
 
-    protected $admin_menu;
+    protected $menus;
     protected $column;
     /**
      * Theme Builder constructor.
