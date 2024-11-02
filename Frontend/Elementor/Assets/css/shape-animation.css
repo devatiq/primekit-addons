@@ -1,0 +1,225 @@
+.PrimexAxisMove {
+    animation: PrimexAxisMove 5s linear infinite;
+}
+.PrimeyAxisMove {
+    animation: PrimeyAxisMove 9s linear infinite;
+}
+.PrimetriAngleMove {
+    animation: PrimetriAngleMove 5s linear infinite;
+}
+.PrimeSpin {
+    animation: PrimeSpin 7s alternate infinite;
+}
+.PrimeRotationMove {
+        animation: PrimeRotationMove 8s alternate infinite;
+}
+
+.PrimeTilt {
+    animation: PrimeTilt 1s alternate infinite;
+}
+
+.PrimeTimeLineAnimate {
+    animation: PrimeTilt 1s alternate infinite;
+}
+
+.PrimeSpinMove {
+    animation: PrimeSpinMove 8s alternate infinite;
+}
+
+.PrimeclockSpin {
+    animation: PrimeSpinMove 3s alternate infinite;
+}
+
+.PrimeAntiClockSpin {
+    animation: PrimeSpinMove 3s alternate infinite;
+}
+
+.PrimeRotating {
+	webkit-animation: PrimeRotating 6s linear infinite;
+    -moz-animation: PrimeRotating 6s linear infinite;
+    -ms-animation: PrimeRotating 6s linear infinite;
+    -o-animation: PrimeRotating 6s linear infinite; 
+	animation: PrimeRotating 6s linear infinite;
+}
+
+/*----------------------------------
+ * Keyframes Animation
+ * ---------------------------------*/
+
+@keyframes PrimeRotating {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes PrimeTimeLineAnimate {
+    0% {
+        opacity: 0;
+        transform: rotate(0) translate(10px, 2px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(0deg) translate(38px, 1px);
+    }
+}
+
+    
+@keyframes PrimexAxisMove {
+    0% {
+        transform: translateX(-25px)
+    }
+
+    50% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-25px)
+    }
+}
+
+
+@keyframes PrimeyAxisMove {
+    0% {
+        transform: translateY(-30px)
+    }
+
+    50% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-30px)
+    }
+}
+
+
+@keyframes PrimetriAngleMove {
+    0% {
+        transform: translate(-25px,25px)
+    }
+
+    33% {
+        transform: translate(-25px,-25px)
+    }
+
+    66% {
+        transform: translate(25px,-25px)
+    }
+
+    100% {
+        transform: translate(-25px,25px)
+    }
+}
+
+
+@keyframes PrimeRotationMove {
+    0% {
+        transform: translate(-25px,0) rotate(0deg)
+    }
+
+    50% {
+        transform: translate(25px,25px) rotate(360deg)
+    }
+
+    100% {
+        transform: translate(0,-25px) rotate(0deg)
+    }
+}
+
+
+@keyframes PrimeSpin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(360deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+
+
+@keyframes PrimeTilt {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    60% {
+        transform: rotate(0deg)
+    }
+
+    80% {
+        transform: rotate(-10deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+
+
+@keyframes PrimeclockSpin {
+    0% {
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+
+    100% {
+        transform: translate(-50%,-50%) rotate(0deg)
+    }
+}
+
+@keyframes PrimeAntiClockSpin {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+}
+
+@keyframes PrimeSpinMove {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(360deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes PrimeRipple{
+	0% { transform: scale(1); }
+	20% { transform: scale(1.1); }
+	40% { transform: scale(1.2); }
+	50% { transform: scale(1.3); }
+	70% { transform: scale(1.2); }
+	90% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}

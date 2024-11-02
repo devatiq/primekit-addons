@@ -96,7 +96,7 @@ class Assets{
             wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css", array(), PRIMEKIT_VERSION);
         }
         wp_register_style('primekit-swiper', PRIMEKIT_ELEMENTOR_ASSETS . "/css/swiper-bundle.min.css", array(), PRIMEKIT_VERSION);
-
+        wp_register_style('primekit-shape-animation', PRIMEKIT_ELEMENTOR_ASSETS . "/css/shape-animation.css", array(), PRIMEKIT_VERSION);
     }
 
     /**

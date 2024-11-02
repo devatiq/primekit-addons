@@ -1156,3 +1156,18 @@ span.primekit-btn-icon {
 .primekit-elementor-pagination * {
   display: inline-block;
 }
+
+/*-----------------------------
+ * Animated Shape
+ * ----------------------------*/
+ .primekit-shape-area .primekit-shape-image img {
+  height: auto;
+}
+
+.primekit-shape-area .primekit-ele-shape {
+  background: #1e46e8;
+}
+
+.primekit-shape-circle {
+  border-radius: 50%;
+}

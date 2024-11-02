@@ -221,6 +221,7 @@ class Configuration{
         $namespace_base = '\PrimeKit\Frontend\Elementor\Widgets\\';
 
         $widgets = [
+            'primekit_shape_anim_widget_field' => 'AnimatedShape\Main',
             'primekit_anim_text_widget_field' => 'AnimatedText\Main',
             'primekit_archive_title_field' => 'ArchiveTitle\Main',
             'primekit_author_bio_widget_field' => 'AuthorBio\Main',
