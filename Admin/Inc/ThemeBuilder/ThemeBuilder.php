@@ -320,7 +320,7 @@ class ThemeBuilder
                     true
                 );
 
-                wp_localize_script('primekit-tb-modal-ajax', 'abcbizNewTemplateCreated', [
+                wp_localize_script('primekit-tb-modal-ajax', 'primekitNewTemplateCreated', [
                     'ajaxurl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('primekit_new_template_nonce'),
                 ]);

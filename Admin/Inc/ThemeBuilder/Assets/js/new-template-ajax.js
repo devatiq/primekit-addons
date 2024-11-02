@@ -17,12 +17,12 @@ jQuery(document).ready(function($) {
             postTitle: $('#primekit-tb-modal-ftemplate-name').val(),
             templateType: $('#primekit-tb-modal-select-template-type').val(),
             postType: $('#primekit-tb-post-type').val(),
-            security: abcbizNewTemplateCreated.nonce,
+            security: primekitNewTemplateCreated.nonce,
         };
 
         $.ajax({
             type: 'POST',
-            url: abcbizNewTemplateCreated.ajaxurl,
+            url: primekitNewTemplateCreated.ajaxurl,
             data: formData,
             success: function(response) {
                 if (response.success) {
