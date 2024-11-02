@@ -73,6 +73,8 @@ class Assets{
          wp_register_script('primekit-circular-progress', PRIMEKIT_ELEMENTOR_ASSETS . "/js/circular-progress.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('primekit-circular-skills', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-circular-skills.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('primekit-wp-menu-js', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-wp-menu.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('primekit-swiper', PRIMEKIT_ELEMENTOR_ASSETS . "/js/swiper-bundle.min.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('primekit-testimonial', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-testimonial.js", array('jquery'), PRIMEKIT_VERSION, true);
     }
 
    
@@ -92,7 +94,8 @@ class Assets{
         wp_register_style('primekit-anim-text-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css", array(), PRIMEKIT_VERSION);
         if (!wp_style_is('twentytwenty')) {
             wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css", array(), PRIMEKIT_VERSION);
-        }      
+        }
+        wp_register_style('primekit-swiper', PRIMEKIT_ELEMENTOR_ASSETS . "/css/swiper-bundle.min.css", array(), PRIMEKIT_VERSION);
 
     }
 
