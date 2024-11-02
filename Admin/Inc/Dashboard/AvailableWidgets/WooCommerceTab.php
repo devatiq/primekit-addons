@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-
+use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\PrimeKitWidgets;
 /**
  * WooCommerceTab class
  * Handles the rendering of the WooCommerce widgets.
