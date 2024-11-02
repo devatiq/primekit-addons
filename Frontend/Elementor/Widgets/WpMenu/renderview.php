@@ -4,6 +4,8 @@
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+use PrimeKit\Frontend\Elementor\Inc\WalkerMenu;
+
 $primekit_settings = $this->get_settings_for_display();
 
 // Extract the selected menu slug
@@ -18,7 +20,7 @@ $primekit_selected_menu_slug = !empty($primekit_settings['primekit_elementor_wp_
             'menu' => $primekit_selected_menu_slug,
             'container' => 'nav',
             'container_class' => 'primekit-wp-menu-container',
-            'walker' => new primekit_custom_walker(),
+            'walker' => new WalkerMenu(),
         ));
     } else {
         echo '<p>' . esc_html__('Menu not selected or found.', 'primekit-addons') . '</p>';
