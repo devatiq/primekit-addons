@@ -218,22 +218,37 @@ class Configuration{
     public function register_widgets($widgets_manager)
     {
         
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\AnimatedText\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\ArchiveTitle\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\AuthorBio\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BackToTop\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BeforeAfterImg\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\Blockquote\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogGrid\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogList\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BlogPostFancy\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BreadCrumb\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\BusinessHours\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\CardInfo\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\CatInfo\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\CircularSkills\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PageTitle\Main());
-        $widgets_manager->register(new \PrimeKit\Frontend\Elementor\Widgets\PostTitle\Main());
+        $namespace_base = '\PrimeKit\Frontend\Elementor\Widgets\\';
+
+        $widgets = [
+            'primekit_anim_text_widget_field' => 'AnimatedText\Main',
+            'primekit_archive_title_field' => 'ArchiveTitle\Main',
+            'primekit_author_bio_widget_field' => 'AuthorBio\Main',
+            'primekit_back_top_widget_field' => 'BackToTop\Main',
+            'primekit_before_after_widget_field' => 'BeforeAfterImg\Main',
+            'primekit_blockquote_widget_field' => 'Blockquote\Main',
+            'primekit_blog_grid_widget_field' => 'BlogGrid\Main',
+            'primekit_blog_list_widget_field' => 'BlogList\Main',
+            'primekit_blog_fancy_widget_field' => 'BlogPostFancy\Main',
+            'primekit_breadcrumb_widget_field' => 'BreadCrumb\Main',
+            'primekit_business_hours_field' => 'BusinessHours\Main',
+            'primekit_card_info_widget_field' => 'CardInfo\Main',
+            'primekit_cat_list_widget_field' => 'CatInfo\Main',
+            'primekit_circular_skill_widget_field' => 'CircularSkills\Main',
+            'primekit_page_title_widget_field' => 'PageTitle\Main',
+            'primekit_post_title_widget_field' => 'PostTitle\Main'
+        ];
+        
+        foreach ($widgets as $option_name => $widget_class) {
+            $is_enabled = get_option($option_name, 1); // Get the option value (default to enabled)
+            
+            if ($is_enabled) {
+                $full_class_name = $namespace_base . $widget_class; // Combine base namespace with class path
+                $widgets_manager->register(new $full_class_name());
+            }
+        }
+        
+        
 
     }
 
