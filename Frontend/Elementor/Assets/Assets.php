@@ -72,6 +72,7 @@ class Assets{
          wp_register_script('primekit-jquery-appear', PRIMEKIT_ELEMENTOR_ASSETS . "/js/jquery.appear.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('primekit-circular-progress', PRIMEKIT_ELEMENTOR_ASSETS . "/js/circular-progress.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('primekit-circular-skills', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-circular-skills.js", array('jquery'), PRIMEKIT_VERSION, true);
+         wp_register_script('primekit-wp-menu-js', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-wp-menu.js", array('jquery'), PRIMEKIT_VERSION, true);
     }
 
    

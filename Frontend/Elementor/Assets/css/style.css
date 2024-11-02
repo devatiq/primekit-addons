@@ -723,3 +723,162 @@ span.primekit-btn-icon {
   color: #fff;
   margin-top: 12px;
 }
+
+/* ---------------------------------------------
+ * WP Menu
+ * --------------------------------------------- */
+ .primekit-responsive-menu,
+ .primekit-mob-menu-icon-wrap {
+   display: none;
+   outline: none;
+ }
+ 
+ .primekit-mobilemenu {
+   display: none;
+ }
+ 
+ .primekit-wp-menu-container {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   height: 60px;
+   background: transparent;
+   transition: all 0.5s ease;
+ }
+ 
+ .primekit-wp-menu-container ul {
+   display: flex;
+   padding: 0;
+   margin: 0;
+   list-style: none;
+ }
+ 
+ .primekit-wp-menu-container ul li {
+   position: relative;
+   display: flex;
+   align-items: center;
+ }
+ 
+ .primekit-wp-menu-container ul li:after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   right: -19px;
+   border-top: 1px solid #c4c4c1;
+   width: 16px;
+   transform: rotate(115deg);
+   transform-origin: 0% 0%;
+   margin-top: -8px;
+ }
+ 
+ .primekit-wp-menu-container ul li:last-child:after {
+   display: none;
+ }
+ 
+ .primekit-wp-menu-container ul ul li:after {
+   display: none;
+ }
+ 
+ .primekit-wp-menu-container ul li:last-child a {
+   padding-right: 0;
+ }
+ 
+ .primekit-wp-menu-container ul li.hover,
+ .primekit-wp-menu-container ul li:hover {
+   position: relative;
+ }
+ 
+ .primekit-wp-menu-container ul ul {
+   z-index: 99999;
+   background: #efeeef;
+   width: 220px;
+   visibility: hidden;
+   opacity: 0;
+   position: absolute;
+   top: 130%;
+   left: 0;
+   transition: all 0.5s ease;
+   border-top: 2px solid #813eee;
+   display: block;
+ }
+ 
+ .primekit-wp-menu-container ul ul li {
+   background: #efeeef;
+   width: 100%;
+   border-bottom: 1px solid #dadada;
+   padding: 5px 0;
+   display: flex;
+   justify-content: space-between;
+ }
+ 
+ .primekit-wp-menu-container ul ul li:last-child {
+   border-bottom: 0;
+ }
+ 
+ .primekit-wp-menu-container > ul > li > a {
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+   padding: 0 17px;
+   font-size: 12px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   position: relative;
+   transition: color 0.5s ease;
+ }
+ 
+ .primekit-wp-menu-container ul ul li a {
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+   padding: 5px 13px;
+   font-weight: normal;
+   letter-spacing: 1px;
+   font-size: 11px;
+   line-height: 1.5;
+   width: 100%;
+ }
+ 
+ .primekit-wp-menu-container ul ul li.hover,
+ .primekit-wp-menu-container ul ul li:hover {
+   background: #efeeef;
+   position: relative;
+ }
+ 
+ .primekit-wp-menu-container ul ul ul {
+   left: 100%;
+   top: 20%;
+   border-top: 1px solid #dadada;
+ }
+ 
+ .primekit-wp-menu-container ul li:hover > ul {
+   visibility: visible;
+   top: 100%;
+   opacity: 1;
+ }
+ 
+ .primekit-wp-menu-container ul ul li:hover > ul {
+   visibility: visible;
+   top: 0;
+   opacity: 1;
+ }
+ 
+ .primekit-wp-menu-container ul li .primekit-submenu-icon {
+   vertical-align: middle;
+   margin-left: -10px;
+   margin-right: 15px;
+   margin-top: 3px;
+ }
+ 
+ .primekit-wp-menu-container ul li .primekit-submenu-icon svg {
+   width: 20px;
+   height: 20px;
+   display: block;
+ }
+ 
+ .primekit-wp-menu-container ul ul li .primekit-submenu-icon svg {
+   width: 16px !important;
+   height: 16px !important;
+   display: block;
+ }

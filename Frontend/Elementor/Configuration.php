@@ -236,7 +236,8 @@ class Configuration{
             'primekit_cat_list_widget_field' => 'CatInfo\Main',
             'primekit_circular_skill_widget_field' => 'CircularSkills\Main',
             'primekit_page_title_widget_field' => 'PageTitle\Main',
-            'primekit_post_title_widget_field' => 'PostTitle\Main'
+            'primekit_post_title_widget_field' => 'PostTitle\Main',
+            'primekit_wp_menu_widget_field' => 'WpMenu\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
