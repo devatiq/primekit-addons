@@ -140,7 +140,8 @@ class RegularTab
             esc_html__('Circular Skill', 'primekit-addons'),
             PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-circular-skill.svg',
             true,
-            self::demo_url('widgets/advanced-circular-skill-elementor-widget/')
+            self::demo_url('widgets/advanced-circular-skill-elementor-widget/'),
+            true
         );
 
         // Comment Form.

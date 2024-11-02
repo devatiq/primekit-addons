@@ -209,16 +209,22 @@ class PrimeKitWidgets
      *
      * @since 1.0.0
      */
-    public static function primekit_available_widget($widget_name, $title, $icon_url, $is_free = true, $widget_url = '#') {
-        $option = get_option($widget_name, 1); 
-    
+    public static function primekit_available_widget($widget_name, $title, $icon_url, $is_free = true, $widget_url = '#', $default_enabled = null) {
+        
+        $widget_name = sanitize_key($widget_name);
+
+        // Ensure $default_enabled is boolean or null (if required)
+        $default_enabled = is_bool($default_enabled) || is_null($default_enabled) ? $default_enabled : null;
+        // Get the widget option or use $default_enabled
+        $option = ($default_enabled !== null) ? (bool) $default_enabled : (bool) get_option($widget_name, 1);        
+
         // Determine the availability text based on $is_free
         $availability_text = $is_free ? esc_html__('Free', 'primekit-addons') : esc_html__('Pro', 'primekit-addons');    
         ?>
         <div class="primekit-available-single-widget">
             <div class="primekit-available-single-widget-header">
-                <div class="primekit-availability-text"><?php echo esc_html($availability_text); ?></div>               
-                <div class="primekit-available-single-switch">
+                <div class="primekit-availability-text"><?php echo esc_html($availability_text); ?></div>            
+                <div class="primekit-available-single-switch">                   
                     <label class="primekit-switch">
                         <input type="checkbox" name="<?php echo esc_attr($widget_name); ?>" value="1" <?php checked(1, $option, true); ?>>
                         <span class="primekit-slider primekit-round"></span>
