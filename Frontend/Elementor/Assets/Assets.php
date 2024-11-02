@@ -49,6 +49,8 @@ class Assets{
     {
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
         add_action('wp_enqueue_scripts', [$this, 'enqueue_styles']);
+
+        add_action('elementor/editor/before_enqueue_scripts', [$this, 'primekit_elementor_editor_assets']);
     }    
 
 
@@ -89,8 +91,17 @@ class Assets{
         wp_register_style('primekit-anim-text-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/anim-text-style.css", array(), PRIMEKIT_VERSION);
         if (!wp_style_is('twentytwenty')) {
             wp_register_style('twentytwenty', PRIMEKIT_ELEMENTOR_ASSETS . "/css/twentytwenty.css", array(), PRIMEKIT_VERSION);
-        }
+        }      
 
+    }
+
+    /**
+     * Enqueues the Elementor editor stylesheet for the PrimeKit Elementor plugin.
+     *
+     * @since 1.0.0
+     */
+    public function primekit_elementor_editor_assets() {
+        wp_enqueue_style( 'primekit-elementor-editor', PRIMEKIT_ELEMENTOR_ASSETS . "/css/elementor-editor.css", array(), PRIMEKIT_VERSION, 'all' );
     }
 
 }
