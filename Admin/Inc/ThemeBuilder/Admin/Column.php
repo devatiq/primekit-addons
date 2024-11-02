@@ -27,8 +27,8 @@ class Column {
       
         $new_columns = array(
             'cb' => $columns['cb'],  // Checkbox column
-            'title' => __('Title'),
-            'primekit_type' => __('Type', 'primekit-addons'), 
+            'title' => esc_html__('Title', 'primekit-addons'),
+            'primekit_type' => esc_html__('Type', 'primekit-addons'), 
         );
     
         // Merge the rest of the columns after 'Type'
@@ -60,7 +60,7 @@ class Column {
             if (!empty($type_value) && isset($type_labels[$type_value])) {
                 echo esc_html($type_labels[$type_value]);
             } else {
-                echo __('Unknown Type', 'primekit-addons');
+                echo esc_html__('Unknown Type', 'primekit-addons');
             }
         }
     }

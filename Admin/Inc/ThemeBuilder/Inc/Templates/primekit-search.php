@@ -30,7 +30,7 @@ do_action('elementor/page_templates/header-footer/before_content');
                 <h1 class="primekit-search-title">
                     <?php
                     /* Translators: %s is the search query */
-                    printf(__('Search Results for: %s', 'primekit-addons'), '<span>' . get_search_query() . '</span>');
+                    printf(esc_html__('Search Results for: %s', 'primekit-addons'), '<span>' . get_search_query() . '</span>');
                     ?>
                 </h1>
 
@@ -66,9 +66,9 @@ do_action('elementor/page_templates/header-footer/before_content');
 
             <?php else: ?>
 
-                <h1 class="primekit-no-results-title"><?php _e('No Results Found', 'primekit-addons'); ?></h1>
+                <h1 class="primekit-no-results-title"><?php  echo esc_html__('No Results Found', 'primekit-addons'); ?></h1>
                 <p class="primekit-no-results-message">
-                    <?php _e('Sorry, but nothing matched your search terms. Please try again with different keywords.', 'primekit-addons'); ?>
+                    <?php echo esc_html__('Sorry, but nothing matched your search terms. Please try again with different keywords.', 'primekit-addons'); ?>
                 </p>
 
                 <!-- Display search form -->

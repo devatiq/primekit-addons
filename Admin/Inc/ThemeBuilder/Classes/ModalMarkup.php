@@ -40,7 +40,7 @@ class ModalMarkup
                             <div class="primekit-tb-modal-content-area">
                                 <!--Template Left Area-->
                                 <div class="primekit-tb-modal-content-left">
-                                    <h2><?php esc_html_e("Design Your Website's Theme Easily with PrimeKit"); ?></h2>
+                                    <h2><?php esc_html_e("Design Your Website's Theme Easily with PrimeKit", 'primekit-addons'); ?></h2>
                                     <p><?php esc_html_e("PrimeKit's Theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!", 'primekit-addons'); ?></p>
                                 </div><!--/ Template Left Area-->
 

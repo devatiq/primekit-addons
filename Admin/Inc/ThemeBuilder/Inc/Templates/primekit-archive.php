@@ -71,9 +71,9 @@ do_action( 'elementor/page_templates/header-footer/before_content' );
 
             <?php else: ?>
 
-                <h1 class="primekit-no-posts-title"><?php _e('No Posts Found', 'primekit-addons'); ?></h1>
+                <h1 class="primekit-no-posts-title"><?php echo esc_html__('No Posts Found', 'primekit-addons'); ?></h1>
                 <p class="primekit-no-posts-message">
-                    <?php _e('Sorry, but no posts are available in this archive.', 'primekit-addons'); ?>
+                    <?php  echo esc_html__('Sorry, but no posts are available in this archive.', 'primekit-addons'); ?>
                 </p>
 
             <?php endif; ?>

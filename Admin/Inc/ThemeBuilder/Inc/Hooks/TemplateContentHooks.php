@@ -107,7 +107,7 @@ class TemplateContentHooks {
             if (have_posts()) {
                 while (have_posts()) {
                     the_post();
-                    echo '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+                    echo '<a href="' . esc_url(get_the_permalink()) . '">' . esc_html(get_the_title()) . '</a>';
                 }
             }
         }
@@ -137,8 +137,8 @@ class TemplateContentHooks {
                 while (have_posts()) {
                     the_post();
                     echo '<div class="primekit-archive-post-item">';
-                    echo '<h3><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
-                    echo '<div class="primekit-archive-post-excerpt">' . get_the_excerpt() . '</div>';
+                    echo '<h3><a href="' . esc_url(get_the_permalink()) . '">' . esc_html(get_the_title()) . '</a></h3>';
+                    echo '<div class="primekit-archive-post-excerpt">' . wp_kses_post(get_the_excerpt()) . '</div>';
                     echo '</div>';
                 }
                 echo '</div>';
@@ -146,8 +146,8 @@ class TemplateContentHooks {
                 // Add pagination
                 echo '<div class="primekit-archive-pagination">';
                 the_posts_pagination(array(
-                    'prev_text' => __('Previous', 'primekit-addons'),
-                    'next_text' => __('Next', 'primekit-addons'),
+                    'prev_text' => esc_html__('Previous', 'primekit-addons'),
+                    'next_text' => esc_html__('Next', 'primekit-addons'),
                 ));
                 echo '</div>';
             } else {

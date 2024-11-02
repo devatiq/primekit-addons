@@ -94,14 +94,14 @@ class PrimeKitWidgets
             <!-- Tab Navigation -->
             <h2 class="nav-tab-wrapper">
                 <?php foreach ($tabs as $tab_id => $tab) : ?>
-                    <a href="#<?php echo esc_attr($tab_id); ?>" class="nav-tab"><?php echo esc_html__($tab['label'], 'primekit-addons'); ?></a>
+                    <a href="#<?php echo esc_attr($tab_id); ?>" class="nav-tab"><?php echo esc_html($tab['label']); ?></a>
                 <?php endforeach; ?>
             </h2>
     
             <!-- Tab Content -->
             <?php foreach ($tabs as $tab_id => $tab) : ?>
                 <div id="<?php echo esc_attr($tab_id); ?>" class="tab-content" style="<?php echo $tab_id === 'regular' ? '' : 'display: none;'; ?>">
-                    <h3><?php echo esc_html__($tab['label'] . ' Widgets', 'primekit-addons'); ?></h3>
+                    <h3><?php echo esc_html($tab['label']) . ' ' . esc_html__('Widgets', 'primekit-addons'); ?></h3>
                     <?php 
                     // Execute the callback if it’s callable
                     if (is_callable([$this, $tab['callback']])) {
