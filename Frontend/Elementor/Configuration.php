@@ -235,6 +235,7 @@ class Configuration{
             'primekit_card_info_widget_field' => 'CardInfo\Main',
             'primekit_cat_list_widget_field' => 'CatInfo\Main',
             'primekit_circular_skill_widget_field' => 'CircularSkills\Main',
+            'primekit_icon_box_widget_field' => 'IconBox\Main',
             'primekit_page_title_widget_field' => 'PageTitle\Main',
             'primekit_post_title_widget_field' => 'PostTitle\Main',
             'primekit_wp_menu_widget_field' => 'WpMenu\Main',

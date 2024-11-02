@@ -882,3 +882,114 @@ span.primekit-btn-icon {
    height: 16px !important;
    display: block;
  }
+
+ /* ---------------------------------------------
+ * Icon Box
+ * --------------------------------------------- */
+.primekit-elementor-icon-box-area {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 40px 30px;
+  padding-top: 30px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.primekit-elementor-icon-box-icon {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.primekit-elementor-icon-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.primekit-ele-icon-box-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.primekit-ele-icon-box-normal svg path {
+  /* stroke: red; */
+}
+
+.primekit-ele-icon-box-hover svg path {
+  /* fill: blue; */
+}
+
+.primekit-elementor-icon-box-icon img {
+}
+
+.primekit-elementor-icon-box-title {
+  margin-top: 10px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.primekit-elementor-icon-box-content p {
+  margin-top: 10px;
+  color: #717171;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.primekit-elementor-icon-box-button a {
+  margin-top: 10px;
+  background-color: #448e08;
+  padding: 15px 5px;
+  border-style: solid;
+  border-width: 0px 0 0 5px;
+  border-color: #fe4d05;
+  display: inline-block;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 100%;
+}
+
+.primekit-elementor-icon-box-button a i {
+  margin-left: 10px;
+}
+
+.primekit-elementor-icon-box-area:hover {
+  background-color: #448e08;
+  border-radius: 100px 0px;
+}
+
+.primekit-elementor-icon-box-area:hover .primekit-elementor-icon-box-title,
+.primekit-elementor-icon-box-area:hover .primekit-elementor-icon-box-content p {
+  color: white;
+}
+
+.primekit-elementor-icon-box-area:hover .primekit-elementor-icon-box-button a {
+  color: #448e08;
+  background-color: #fff;
+}
+
+.primekit-single-icon-box-three-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.primekit-single-icon-box-three-area .primekit-single-icon-box-icons {
+  position: relative;
+}
