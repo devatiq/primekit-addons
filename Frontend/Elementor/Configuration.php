@@ -118,7 +118,7 @@ class Configuration{
 
      public function setConstants()
      {
-         define('PRIMEKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'assets');
+         define('PRIMEKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'Assets');
  
      }
 

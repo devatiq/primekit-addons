@@ -59,7 +59,7 @@ class ThemeBuilder
     public function setConstants()
     {
         define('PRIMEKIT_TB_PATH', plugin_dir_path(__FILE__));
-        define('PRIMEKIT_TB_ASSETS', plugin_dir_url(__FILE__) . 'assets/');
+        define('PRIMEKIT_TB_ASSETS', plugin_dir_url(__FILE__) . 'Assets/');
     }
 
     /**
@@ -252,7 +252,7 @@ class ThemeBuilder
     //        \Elementor\Plugin::instance()->frontend->enqueue_scripts();
     //    }
 
-        wp_enqueue_style('primekit-theme-builder-style', PRIMEKIT_TB_ASSETS . '/css/style.css');
+        wp_enqueue_style('primekit-theme-builder-style', PRIMEKIT_TB_ASSETS . 'css/style.css');
     }
 
     public function classes_initialize()

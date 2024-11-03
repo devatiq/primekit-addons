@@ -67,7 +67,7 @@ class AdminManager
      */
     public function setConstants()
     {
-        define('PRIMEKIT_ADMIN_ASSETS', plugin_dir_url(__FILE__) . 'assets');
+        define('PRIMEKIT_ADMIN_ASSETS', plugin_dir_url(__FILE__) . 'Assets');
 
     }
 
