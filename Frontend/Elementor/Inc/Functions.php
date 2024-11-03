@@ -37,8 +37,6 @@ class Functions {
         add_action('elementor/elements/categories_registered', [$this, 'primekit_addons_widget_categories']);
         // Hook into WordPress after theme setup
 		add_action('after_setup_theme', array($this, 'primekit_elementor_custom_thumbnail_size'));
-
-     //   add_filter('comments_template', ['primekit_custom_comments_template'], 99);
     }
 
     
@@ -78,18 +76,6 @@ class Functions {
 		add_image_size('primekit_blog_grid_thumb', 900, 600, true);
 		add_image_size('primekit_square_img', 800, 800, true);
 	}
-
-    
-
-    public function primekit_custom_comments_template($theme_template) {
-        if (is_singular() && (comments_open() || get_comments_number())) {
-            $plugin_template = PRIMEKIT_ELEMENTOR_PATH . 'Widgets/CommentForm/Templates/comment-form.php';
-            if ( file_exists($plugin_template) ) {
-                return $plugin_template;
-            }
-        }
-        return $theme_template;
-    }
 }
 
 

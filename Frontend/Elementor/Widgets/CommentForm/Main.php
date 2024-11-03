@@ -348,6 +348,8 @@ class Main extends Widget_Base
         endif;
     }
 
+ 
+
     /**
      * Render the widget output on the frontend.
      * @since 1.0.0

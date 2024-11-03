@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-03T08:11:40+00:00\n"
+"POT-Creation-Date: 2024-11-03T08:51:21+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
@@ -161,6 +161,7 @@ msgid "Circular Skill"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:150
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:19
 msgid "Comment Form"
 msgstr ""
 
@@ -778,7 +779,7 @@ msgstr ""
 msgid "PHP"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:57
+#: Frontend/Elementor/Inc/Functions.php:59
 msgid "PrimeKit Elements"
 msgstr ""
 
@@ -962,6 +963,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:547
 #: Frontend/Elementor/Widgets/BlogList/Main.php:590
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:936
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:177
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:264
 #: Frontend/Elementor/Widgets/IconBox/Main.php:252
 #: Frontend/Elementor/Widgets/IconBox/Main.php:464
 #: Frontend/Elementor/Widgets/IconBox/Main.php:685
@@ -990,6 +993,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:582
 #: Frontend/Elementor/Widgets/BlogList/Main.php:624
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:981
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:207
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:295
 #: Frontend/Elementor/Widgets/IconBox/Main.php:291
 #: Frontend/Elementor/Widgets/IconBox/Main.php:541
 #: Frontend/Elementor/Widgets/IconBox/Main.php:714
@@ -1386,6 +1391,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:330
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:790
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:875
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:184
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:214
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:271
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:302
 #: Frontend/Elementor/Widgets/IconBox/Main.php:841
 #: Frontend/Elementor/Widgets/IconBox/Main.php:870
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:130
@@ -1409,6 +1418,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:889
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:1097
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:134
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:165
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:251
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:360
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:488
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:143
@@ -1444,6 +1455,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogList/Main.php:611
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:632
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:958
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:194
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:224
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:282
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:313
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:408
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:552
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:695
@@ -1457,6 +1472,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogList/Main.php:231
 #: Frontend/Elementor/Widgets/BlogList/Main.php:239
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:251
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:60
 #: Frontend/Elementor/Widgets/IconBox/Main.php:691
 #: Frontend/Elementor/Widgets/IconBox/Main.php:720
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:377
@@ -1469,6 +1485,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:234
 #: Frontend/Elementor/Widgets/BlogList/Main.php:219
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:243
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:74
 #: Frontend/Elementor/Widgets/IconBox/Main.php:663
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:369
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:222
@@ -1484,6 +1501,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:608
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:944
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:143
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:130
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:223
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:395
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:717
@@ -1497,6 +1515,7 @@ msgid "Text Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:151
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:144
 #: Frontend/Elementor/Widgets/IconBox/Main.php:792
 msgid "Text Typography"
 msgstr ""
@@ -2544,6 +2563,57 @@ msgstr ""
 msgid "Gradient Color Two"
 msgstr ""
 
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:51
+msgid "Form Content Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:84
+msgid "User Name Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:98
+msgid "User Name Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:107
+msgid "Meta Data Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:121
+msgid "Meta Data Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:155
+msgid "Reply Button"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:241
+msgid "Comment Button"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:334
+msgid "Comment navigation"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:337
+msgid "Older Comments"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Main.php:341
+msgid "Newer Comments"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Templates/comment-form.php:20
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Frontend/Elementor/Widgets/CommentForm/Templates/comment-form.php:52
+msgid "Comments are closed."
+msgstr ""
+
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:20
 msgid "Contact Form 7 Style"
 msgstr ""
@@ -2914,14 +2984,14 @@ msgstr ""
 msgid "Thumbnail"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style1.php:86
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style2.php:145
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style3.php:87
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style4.php:92
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style5.php:73
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style6.php:87
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style7.php:86
-#: Frontend/Elementor/Widgets/ModernPostGrid/templates/style8.php:86
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style1.php:86
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style2.php:145
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style3.php:87
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style4.php:92
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style5.php:73
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style6.php:87
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style7.php:86
+#: Frontend/Elementor/Widgets/ModernPostGrid/Templates/style8.php:86
 msgid "<p>No posts found.</p>"
 msgstr ""
 
