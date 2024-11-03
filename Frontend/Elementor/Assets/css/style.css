@@ -911,17 +911,6 @@ span.primekit-btn-icon {
   transform: translate(-50%, -50%);
 }
 
-.primekit-ele-icon-box-normal svg path {
-  /* stroke: red; */
-}
-
-.primekit-ele-icon-box-hover svg path {
-  /* fill: blue; */
-}
-
-.primekit-elementor-icon-box-icon img {
-}
-
 .primekit-elementor-icon-box-title {
   margin-top: 10px;
   color: #000;
@@ -937,8 +926,8 @@ span.primekit-btn-icon {
 .primekit-elementor-icon-box-content p {
   margin-top: 10px;
   color: #717171;
-  leading-trim: both;
-  text-edge: cap;
+  /*leading-trim: both;
+  text-edge: cap;*/
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
