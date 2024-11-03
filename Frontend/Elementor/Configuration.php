@@ -240,6 +240,7 @@ class Configuration{
             'primekit_page_title_widget_field' => 'PageTitle\Main',
             'primekit_post_title_widget_field' => 'PostTitle\Main',
             'primekit_site_logo_widget_field' => 'SiteLogo\Main',
+            'primekit_site_title_tagline_field' => 'SiteTitle\Main',
             'primekit_testi_caro_widget_field' => 'Testimonials\Main',
             'primekit_wp_menu_widget_field' => 'WpMenu\Main',
         ];
