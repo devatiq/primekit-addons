@@ -95,10 +95,8 @@
   }
 }
 
-
-@media only screen and (max-width: 768px) { 
-
-   /*-------------------------
+@media only screen and (max-width: 768px) {
+  /*-------------------------
     * Blog Grid
     ---------------------------*/
 
@@ -114,17 +112,17 @@
     gap: 20px;
   }
 
-/*----------------------------------------------
+  /*----------------------------------------------
 * Blog List
 * ---------------------------------------------*/
 
-    .primekit-ele-blog-list-thumb {
-      float: none;
-      width: 100%;
-      margin-right: 0;
-    }
+  .primekit-ele-blog-list-thumb {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
 
-/*----------------------------------------------
+  /*----------------------------------------------
  * Author Bio
  * ---------------------------------------------*/
 
@@ -144,23 +142,53 @@
   /* ---------------------------------------------
  * Card Info
  * --------------------------------------------- */
- .primekit-card-style-two-area .primekit-card-info-wrap {
-  flex-direction: column !important;
-}
+  .primekit-card-style-two-area .primekit-card-info-wrap {
+    flex-direction: column !important;
+  }
 
   /*------------------------
     * Testimonial
     --------------------------*/
-    .primekit-testi-position {
-      position: unset !important;
-    }
+  .primekit-testi-position {
+    position: unset !important;
+  }
 
+  /*----------------------------------------------
+* Modern Post Grid
+* ---------------------------------------------*/
+  .primekit-modren-posts-grid-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .primekit-modren-posts-grid-wrapper > .primekit-modren-single-post {
+    grid-column: auto;
+    grid-row: auto;
+    height: auto;
+  }
+
+  .primekit-modren-single-post {
+    margin-bottom: 20px;
+  }
+  .primekit-modren-posts-grid-wrapper
+    > .primekit-modren-single-post:nth-child(2),
+  .primekit-modren-posts-grid-wrapper
+    > .primekit-modren-single-post:nth-child(3) {
+    grid-column: auto;
+  }
+  .primekit-modren-single-post-title h3 a {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+  .primekit-modren-single-post:not(:first-child)
+    .primekit-modren-single-post-thumbnail
+    img {
+    max-height: fit-content;
+  }
 }
 
-
 @media only screen and (max-width: 480px) {
-
-    /*------------------------
+  /*------------------------
     * Blog Fancy widget
     --------------------------*/
   .primekit-ele-single-blog-content-area {
@@ -181,15 +209,45 @@
     height: auto;
   }
 
-    /*-------------------------
+  /*-------------------------
     * Testimonial
     ---------------------------*/
-    .primekit-testimonial-grids {
-      grid-template-columns: repeat(1, 1fr);
-    }
-    .primekit-testimonial-slider-nav-bar.primekit-test-nav-hide-in-mobile {
-      display: none;
-    }
+  .primekit-testimonial-grids {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .primekit-testimonial-slider-nav-bar.primekit-test-nav-hide-in-mobile {
+    display: none;
+  }
+  /*------------------------
+  * Morden Blog style
+  -------------------------*/
+  .primekit-modren-last-three-posts-wrapper
+    .primekit-modren-style2-single-post {
+    gap: 30px;
+    flex-direction: column;
+  }
 
-
+  .primekit-modren-posts-grid-style3.primekit-modren-posts-grid-wrapper {
+    grid-column-gap: 0;
+  }
+  .primekit-modren-posts-grid-style3 .primekit-modren-single-post {
+    margin-bottom: 0;
+  }
+  .primekit-modern-post-style4-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .primekit-modern-post-style4-wrapper
+    .primekit-modern-single-post-style4:first-child {
+    grid-column: inherit;
+  }
+  .primekit-modern-post-style5-wrapper .primekit-modern-single-post-style4 {
+    flex-direction: column;
+  }
+  .primekit-modren-posts-grid-wrapper {
+    column-gap: 0;
+  }
+  .primekit-modren-single-post {
+    margin-bottom: 0;
+  }
 }

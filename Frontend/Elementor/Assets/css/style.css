@@ -1387,3 +1387,426 @@ overflow: hidden;
   background-color: #045ecc;
   color: #fff;
 }
+
+
+/*----------------------------------------------
+ * Primekit Modren Post Grid
+ * ---------------------------------------------*/
+ .primekit-modren-posts-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto; 
+  grid-gap: 20px;
+  height: 100%; 
+  align-items: stretch;
+}
+
+.primekit-modren-single-post {
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style for the first post to span the full height */
+.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; 
+  height: 100%;
+}
+
+/* Style for the second and third posts */
+.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(2),
+.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: auto; 
+  height: 100%;
+}
+
+.primekit-modren-single-post-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.primekit-modren-single-post-contents {
+  padding: 15px;
+  flex-grow: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(0deg, #010218 0%, rgba(1, 24, 11, 0) 100%);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 25px;
+  min-height: 200px;
+}
+
+.primekit-modren-single-post-title h3 {
+  margin: 0 0 10px;
+  font-size: 27px;
+}
+
+.primekit-modren-single-post-title h3 a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.primekit-modren-single-post-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.primekit-modren-single-post-info li {
+  font-size: 0.9rem;
+  color: #777;
+  gap: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.primekit-modren-single-post-info li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.primekit-modren-single-post-info li span {
+  color: #fff;
+}
+.primekit-modren-single-post:first-child .primekit-modren-single-post-thumbnail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.primekit-modren-single-post:not(:first-child) .primekit-modren-single-post-thumbnail img {
+  max-height: 270px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.primekit-modren-single-post-info {
+  margin-bottom: 16px;
+}
+.primekit-modren-single-post-thumbnail {
+  height: 100%;
+}
+.primekit-modern-one-post {
+  flex-basis: 100% !important;
+}
+/*----------------------------------------------
+ * Primekit Modren Post Style 2
+ * ---------------------------------------------*/
+ .primekit-modren-posts-styl2-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.primekit-modren-last-three-posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-basis: 50%;
+  background-color: #010218;
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.primekit-modren-last-three-posts-wrapper .primekit-modren-style2-single-post {
+  display: flex;
+  gap: 15px;
+}
+.primekit-modren-last-three-posts-wrapper .primekit-modren-style2-single-post-content {
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.primekit-modren-last-three-posts-wrapper .primekit-modren-style2-post-thumbnail {
+  flex-basis: 25%;
+}
+
+.primekit-modren-style2-post-thumbnail img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 6px !important;
+}
+
+.primekit-modren-style2-post-info ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.primekit-modren-style2-post-info ul li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #fff;
+}
+
+.primekit-modren-posts-styl2-wrapper > .primekit-modren-style2-single-post .primekit-modren-style2-single-post-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(3600deg, #010218 30.91%, rgba(1, 2, 24, 0) 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 8px !important;
+}
+
+.primekit-modren-posts-styl2-wrapper > .primekit-modren-style2-single-post {
+  flex-basis: 50%;
+  position: relative;
+}
+
+.primekit-modren-style2-single-post {
+  overflow: hidden;
+}
+
+.primekit-modren-last-three-posts-wrapper * {
+  color: #fff;
+}
+
+.primekit-modren-style2-post-title h3 {
+  margin: 0;
+  line-height: 1;
+  font-size: 22px;
+  line-height: 1.3em;
+}
+
+.primekit-modren-style2-post-title a {
+  color: #fff;
+}
+.primekit-modren-style2-post-info a, .primekit-modren-style2-post-info span {
+  color: #fff;
+  font-size: 13px;
+}
+
+.primekit-modren-style2-post-info a:hover {
+  color: #fff;
+}
+
+.primekit-modren-style2-post-cat a {
+  color: #fff;
+  background-color: blue;
+  padding: 7px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+.primekit-modren-style2-post-cat a:hover {
+  color: #fff;
+}
+
+.primekit-modren-style2-post-cat {
+  margin-bottom: 10px;
+}
+
+.primekit-modren-style2-post-title {
+  margin-bottom: 10px;
+}
+
+.primekit-modren-posts-styl2-wrapper > .primekit-modren-style2-single-post .primekit-modren-style2-post-thumbnail {
+  height: 100%;
+}
+
+.primekit-modren-style2-post-title a:hover {
+  color: #fff;
+}
+
+/*----------------------------------------------
+ * Primekit Modren Post Style 3
+ * ---------------------------------------------*/
+.primekit-modren-posts-grid-style3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.primekit-modren-posts-grid-style3.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:first-child {
+  grid-column: span 2;
+}
+
+.primekit-modren-posts-grid-style3.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(2), .primekit-modren-posts-grid-style3.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(3) {
+  grid-column: inherit;
+}
+.primekit-modren-posts-grid-style3 .primekit-modren-single-post-title h3 {
+  font-size: 22px;
+  line-height: 1.2em;
+}
+
+/*----------------------------------------------
+ * Primekit Modren Post Style 4
+ * ---------------------------------------------*/
+ .primekit-modern-post-style4-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+ }
+ .primekit-modern-post-style4-wrapper .primekit-modern-single-post-style4:first-child {
+  grid-column: span 2;
+ }
+ .primekit-modern-single-post-style4 {
+  border: 1px solid #E8EAF1;
+  border-radius: 20px;
+ }
+ .primekit-modern-post-style4-wrapper .primekit-modren-sps4-thumbnail img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  aspect-ratio: 1;
+ }
+ .primekit-modern-post-style4-wrapper .primekit-modern-single-post-style4:first-child .primekit-modren-sps4-thumbnail img {
+  border-radius: 20px 20px 0 0;
+  max-height: 500px;  
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+ }
+ .primekit-modern-sps4-content {
+  padding: 20px;
+ }
+ .primekit-modern-sps4-category a {
+  color: #fff;
+  background-color: blue;
+  padding: 7px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+ }
+ .primekit-modern-sps4-category {
+  margin-bottom: 10px;
+ }
+ .primekit-modern-sps4-category a:hover {
+  color: #fff;
+ }
+ .primekit-modern-sps4-title {
+  margin-bottom: 10px;
+ }
+ .primekit-modern-sps4-title.primekit-modren-single-post-title a {
+  font-size: 26px;
+  line-height: 1.3em;
+  color: #000000;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+ }
+ .primekit-modern-sps4-title.primekit-modren-single-post-title a:hover {
+  color: #434343;
+ }
+ .primekit-modern-post-style4-wrapper .primekit-modren-single-post-info a {
+  color: #010218;
+  font-size: 13px;
+ }
+ .primekit-modern-post-style4-wrapper .primekit-modren-single-post-info span {
+ color:#155DFF;
+ }
+ .primekit-modern-post-style4-wrapper .primekit-modren-single-post-info a:hover {
+  color: #434343;
+ }
+ .primekit-modern-post-style4-wrapper .primekit-modren-single-post-info {
+  margin-bottom: 0;
+}
+
+/*----------------------------------------------
+ * Primekit Modren Post Style 5
+ * ---------------------------------------------*/
+ .primekit-modern-post-style5-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
+ .primekit-modern-post-style5-wrapper .primekit-modern-single-post-style4 {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+.primekit-modern-post-style5-wrapper .primekit-modren-sps4-thumbnail {
+  flex-basis: 30%;
+}
+.primekit-modern-post-style5-wrapper .primekit-modern-sps4-content {
+  flex-basis: 70%;
+}
+.primekit-modern-post-style5-wrapper  .primekit-modren-sps4-thumbnail img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 230px;
+  border-radius: 10px;
+  height: 100%;
+}
+.primekit-modern-post-style5-wrapper .primekit-modren-single-post-info span {
+  color: #155DFF;
+  font-size: 13px;
+}
+.primekit-modern-post-style5-wrapper .primekit-modren-single-post-info a {
+  color: #111111;
+  font-size: 13px;
+  font-weight: 400;
+}
+.primekit-modern-post-style5-wrapper .primekit-modren-single-post-info {
+  margin-bottom: 0;
+}
+
+/*----------------------------------------------
+ * Primekit Modren Post Style 6
+ * ---------------------------------------------*/
+ .primekit-modren-posts-grid-style6.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:first-child {
+  grid-row: 1 / 4;
+ }
+
+
+/*----------------------------------------------
+ * Primekit Modren Post Style 7
+ * ---------------------------------------------*/
+
+.primekit-modren-posts-grid-style7.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:first-child {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4; 
+  height: 100%;
+}
+
+.primekit-modren-posts-grid-style7.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(2),
+.primekit-modren-posts-grid-style7.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2; 
+  height: 100%;
+}
+
+/*----------------------------------------------
+ * Primekit Modren Post Style 8
+ * ---------------------------------------------*/
+
+.primekit-modren-posts-grid-style8.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:first-child {
+  grid-column: 2 / 3; 
+  grid-row: 1 / 3; 
+  height: 100%;
+}
+
+.primekit-modren-posts-grid-style8.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(2),
+.primekit-modren-posts-grid-style8.primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(3) {
+  grid-column: 1 / 2; 
+  grid-row: auto; 
+  height: 100%;
+}

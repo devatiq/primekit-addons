@@ -118,7 +118,8 @@ class Configuration{
 
      public function setConstants()
      {
-         define('PRIMEKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'Assets');
+         define('PRIMEKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'Assets');         
+         define('PRIMEKIT_ELEMENTOR_PATH', plugin_dir_path(__FILE__));
  
      }
 
@@ -245,6 +246,7 @@ class Configuration{
             'primekit_wp_menu_widget_field' => 'WpMenu\Main',
             'primekit_posts_slider_field' => 'PostsSlider\Main',
             'primekit_template_slider_field' => 'TemplateSlider\Main',
+            'primekit_modern_post_grid_field' => 'ModernPostGrid\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
