@@ -23,7 +23,6 @@ function PrimekitSliderInitialize(uniqueId) {
         return;
     }
 
-console.log('arrow', parsedSettings.arrows);
     // Initialize Swiper using the parsed settings and custom class names
     new Swiper(slider.querySelector('.primekit-template-swiper-container'), {
         loop: parsedSettings.loop || false,
