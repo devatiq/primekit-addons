@@ -48,22 +48,22 @@ if ($customized_posts_selection === 'categories' && !empty($selected_categories)
 
 
 if('style1' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style1.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style1.php';
 }elseif('style2' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style2.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style2.php';
 }elseif('style3' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style3.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style3.php';
 }elseif('style4' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style4.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style4.php';
 }elseif('style5' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style5.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style5.php';
 }elseif('style6' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style6.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style6.php';
 }elseif('style7' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style7.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style7.php';
 }elseif('style8' == $settings['primekit_modern_post_grid_style']) {
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style8.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style8.php';
 }
 else{
-    include PRIMEKIT_ELEMENTOR_PATH . '/widgets/ModernPostGrid/templates/style1.php';
+    include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style1.php';
 }
