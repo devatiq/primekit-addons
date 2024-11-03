@@ -1823,3 +1823,102 @@ overflow: hidden;
   padding: 10px 20px;
   border-radius: 4px;
 }
+
+
+/*----------------------------------------------
+ * Contact Info & Social Icons
+ * ---------------------------------------------*/
+ .primekit-contact-info-address,
+ .primekit-contact-info-mobile,
+ .primekit-contact-info-email {
+   display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+ }
+ 
+ .primekit-contact-info-area svg {
+   flex-shrink: 0;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+ }
+ 
+ .primekit-contact-info-inline .primekit-contact-info-area svg {
+   margin-right: 6px;
+ }
+ 
+ .primekit-contact-info-address span,
+ .primekit-contact-info-mobile span,
+ .primekit-contact-info-email span {
+   display: block;
+ }
+ 
+ .primekit-contact-info-mobile a,
+ .primekit-contact-info-email a {
+   text-decoration: none;
+   color: black;
+   transition: all 0.4s;
+ }
+ 
+ .primekit-contact-info-social-icons ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+ 
+ .primekit-contact-info-social-icons ul li {
+   margin-right: 10px;
+   margin-bottom: 10px;
+ }
+ 
+ .primekit-contact-info-inline .primekit-contact-info-social-icons ul li {
+   margin-bottom: 0;
+ }
+ 
+ .primekit-contact-info-social-icons ul li svg {
+   width: 20px;
+   height: 20px;
+   transition: all 0.4s;
+ }
+ 
+ .primekit-contact-info-social-icons ul li:last-child {
+   margin-right: 0;
+ }
+ 
+ .primekit-contact-info-social-icons ul li a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: #f0f0f0;
+   text-decoration: none;
+   transition: all 0.4s;
+ }
+ 
+ .primekit-contact-info-social-icons ul li a:hover {
+   background-color: #ddd;
+ }
+ 
+ .primekit-contact-info-inline {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+ 
+ .primekit-contact-info-inline .primekit-contact-info-area {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+ }
+ 
+ .primekit-contact-info-inline .primekit-contact-info-address,
+ .primekit-contact-info-inline .primekit-contact-info-mobile,
+ .primekit-contact-info-inline .primekit-contact-info-email {
+   display: flex;
+   align-items: center;
+ }

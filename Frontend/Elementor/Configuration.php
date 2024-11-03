@@ -249,6 +249,7 @@ class Configuration{
             'primekit_modern_post_grid_field' => 'ModernPostGrid\Main',
             'primekit_contact_form7_widget_field' => 'ContactForm7\Main',
             'primekit_comment_form_widget_field' => 'CommentForm\Main',
+            'primekit_contact_info_widget_field' => 'ContactInfo\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
