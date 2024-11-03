@@ -247,7 +247,7 @@ class Configuration{
             'primekit_posts_slider_field' => 'PostsSlider\Main',
             'primekit_template_slider_field' => 'TemplateSlider\Main',
             'primekit_modern_post_grid_field' => 'ModernPostGrid\Main',
-            'primekit_blog_fancy_widget_field' => 'BlogFancy\Main',
+            'primekit_contact_form7_widget_field' => 'ContactForm7\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
