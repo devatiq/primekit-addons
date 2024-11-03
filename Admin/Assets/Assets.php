@@ -70,7 +70,7 @@ class Assets
                 'ajaxurl' => admin_url('admin-ajax.php'),
                 'nonce'   => wp_create_nonce('primekit_nonce')
             ));
-        }
+        }        
 
     }
 

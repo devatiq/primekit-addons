@@ -1922,3 +1922,84 @@ overflow: hidden;
    display: flex;
    align-items: center;
  }
+
+
+/*----------------------------------------------
+ * PrimeKit Mailchimp
+ * ---------------------------------------------*/
+.primekit-mailchimp-single-form {
+  display: flex;
+  gap: 15px;
+}
+
+#primekit-mailchimp-form input {
+  padding: 15px;
+}
+
+#primekit-mailchimp-form #primekit-mailchimp-email {
+  width: 75%;
+}
+
+#primekit-mailchimp-form #primekit-mailchimp-submit {
+  width: 25%;
+  background-color: crimson;
+  color: #fff;
+}
+#primekit-mailchimp-form #primekit-mailchimp-submit:hover {
+  cursor: pointer;
+  background-color: #a03bf4;
+}
+#primekit-mailchimp-inline-submit svg {
+  width: 45px;
+  height: 45px;
+  fill: #fff;
+  background-color: #c36;
+  padding: 10px;
+  border-radius: 100%;
+}
+#primekit-mailchimp-inline-submit svg:hover {
+  cursor: pointer;
+  background-color: #a03bf4;
+}
+#primekit-mailchimp-inline-submit svg path {
+  fill: #fff;
+}
+button#primekit-mailchimp-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button#primekit-mailchimp-inline-submit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+button#primekit-mailchimp-inline-submit.primekit-mailchimp-inline-submit-text {
+  right: 6px;
+}
+button#primekit-mailchimp-inline-submit:hover {
+  background-color: transparent;
+}
+#primekit-mailchimp-form.primekit-mailchimp-single-form.primekit-mailchimp-inline-form {
+  position: relative;
+}
+#primekit-mailchimp-form.primekit-mailchimp-single-form.primekit-mailchimp-inline-form #primekit-mailchimp-email {
+  width: 100%;
+  border-radius: 50px;
+}
+button#primekit-mailchimp-inline-submit.primekit-mailchimp-inline-submit-text {
+  background-color: #c36;
+  color: #fff;
+  border-radius: 50px;
+  padding: 11px;
+  width: 110px;
+}
+button#primekit-mailchimp-inline-submit.primekit-mailchimp-inline-submit-text:hover {
+  background-color: #a03bf4;
+  color: #fff;
+  cursor: pointer;
+}
