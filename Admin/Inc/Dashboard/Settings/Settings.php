@@ -1,51 +1,36 @@
-<?php 
+<?php
 namespace PrimeKit\Admin\Inc\Dashboard\Settings;
-
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 class Settings {
 
     public function __construct() {
-        // Hook for adding the settings page to the admin menu
-        add_action('admin_menu', [$this, 'add_settings_page']);
-        
+        add_action('admin_menu', [$this, 'register_submenu_page'], 99);
     }
 
-    public function add_settings_page() {
-        add_menu_page(
-            __('PrimeKit Settings', 'primekit-addons'),
-            __('PrimeKit', 'primekit-addons'),
-            'manage_options',
-            'primekit_settings',
-            [$this, 'render_settings_page'],
-            PRIMEKIT_ADMIN_ASSETS . '/img/icon.svg',
-            21
+    public function register_submenu_page() {
+        add_submenu_page(
+            'primekit_home',        // Parent slug
+            'Settings',      // Page title
+            'Settings',      // Menu title
+            'manage_options',           // Capability required
+            'primekit_settings', // Menu slug
+            [$this, 'render_additional_settings_page'], // Callback function
+            99                          // Position - ensures it's at the end
         );
     }
 
-    public function render_settings_page() {
+    public function render_additional_settings_page() {
         ?>
         <div class="wrap">
-           
-            <div id="primekit-custom-header" class="primekit-custom-header">
-                <!-- Banner -->
-                <div class="primekit-banner-area">
-                    <h1><?php echo esc_html__("Welcome to", "primekit-addons"); ?> <?php echo esc_html(PRIMEKIT_NAME); ?></h1>  
-                    <p class="primekit-banner-version"><?php echo esc_html__("Version: ", "primekit-addons"); ?> <?php echo esc_html(PRIMEKIT_VERSION); ?></p>              
-                    <!-- Buttons -->
-                    <div class="primekit-resource-buttons">                
-                                            
-                        <a href="https://demo.primekitaddons.com/addons-widgets/" target="_blank" class="button"><?php echo esc_html__("Demos", "primekit-addons"); ?></a>
-                        
-                        <a href="https://primekitaddons.com/documentation/" class="button" target="_blank"><?php echo esc_html__("Documentation", "primekit-addons"); ?></a>
-                       
-                        <a href="https://primekitaddons.com/contact-us/" target="_blank" class="button"><?php echo esc_html__("Support", "primekit-addons"); ?></a>     
-                        
-                        <a href="<?php echo esc_url(admin_url( 'admin.php?page=primekit_available_widgets' )); ?>" class="button"><?php echo esc_html__( 'Avilable Widgets', 'primekit-addons' ); ?><span class="dashicons dashicons-arrow-right-alt"></span></a>
-                    </div>
-                </div>         
-            </div>
-    
+            <h1>Additional Settings</h1>
+            <form method="post" action="options.php">
+                <?php
+                // Output settings fields and save options
+                settings_fields('primekit_additional_settings_group');
+                do_settings_sections('primekit_additional_settings');
+                submit_button();
+                ?>
+            </form>
         </div>
         <?php
     }

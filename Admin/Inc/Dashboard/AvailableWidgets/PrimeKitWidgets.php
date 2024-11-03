@@ -25,19 +25,20 @@ class PrimeKitWidgets
     }
 
     /**
-     * Adds the "Available Widgets" submenu page to the PrimeKit settings menu.
+     * Adds the "Available Widgets" submenu page to the PrimeKit home menu.
      *
      * @since 1.0.0
      */
     public function add_widgets_submenu()
     {
         add_submenu_page(
-            'primekit_settings',             // Parent slug (the top-level menu slug)
+            'primekit_home',             // Parent slug (the top-level menu slug)
             __('Available Widgets', 'primekit-addons'), // Page title
             __('Available Widgets', 'primekit-addons'), // Menu title
             'manage_options',                // Capability
             'primekit_available_widgets',    // Submenu slug
-            [$this, 'render_available_widgets_page']    // Callback function
+            [$this, 'render_available_widgets_page'],    // Callback function
+            10
         );
     }
     

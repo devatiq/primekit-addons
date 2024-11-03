@@ -18,7 +18,7 @@ class Menus
     {
         
         add_submenu_page(
-            'primekit_settings',                   // Parent slug
+            'primekit_home',                   // Parent slug
             __('Theme Builder', 'primekit-addons'), // Page title
             __('Theme Builder', 'primekit-addons'), // Menu title
             'manage_options',                       // Capability

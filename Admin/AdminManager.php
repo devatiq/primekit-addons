@@ -16,6 +16,7 @@ if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
 
+use PrimeKit\Admin\Inc\Dashboard\Settings\PrimeKit;
 use PrimeKit\Admin\Inc\Dashboard\Settings\Settings;
 use PrimeKit\Admin\Assets\Assets;
 use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\PrimeKitWidgets;
@@ -35,6 +36,7 @@ use PrimeKit\Admin\Inc\Metabox\MetaBox;
  */
 class AdminManager
 {
+    protected $primeKit;
     protected $settings;
     protected $Assets;
     protected $PrimeKitWidgets;
@@ -80,6 +82,7 @@ class AdminManager
      */
     public function init()
     {
+        $this->primeKit = new PrimeKit();
         $this->settings = new Settings();
         $this->Assets = new Assets();
         $this->PrimeKitWidgets = new PrimeKitWidgets();
