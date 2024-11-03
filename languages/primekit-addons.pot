@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-10-29T14:44:46+00:00\n"
+"POT-Creation-Date: 2024-11-03T02:10:03+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
@@ -40,724 +40,2803 @@ msgstr ""
 msgid "https://supreox.com/"
 msgstr ""
 
-#. translators: 1 Plugin name, 2 Elementor plugin name, 3 Required Elementor version
-#. translators: 1: Plugin name 2: PHP 3: Required PHP version
-#: Public/Elementor/Configuration.php:137
-#: Public/Elementor/Configuration.php:157
-#: Public/Elementor/Configuration.php:178
-msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+#: Admin/AdminManager.php:110
+msgid "Unauthorized"
 msgstr ""
 
-#: Public/Elementor/Configuration.php:139
-#: Public/Elementor/Configuration.php:159
-msgid "Elementor"
+#: Admin/AdminManager.php:116
+msgid "Missing data"
 msgstr ""
 
-#: Public/Elementor/Configuration.php:180
-msgid "PHP"
+#: Admin/AdminManager.php:128
+msgid "Setting saved."
 msgstr ""
 
-#: Public/Elementor/Inc/Functions.php:57
-msgid "PrimeKit Elements"
+#: Admin/AdminManager.php:130
+msgid "Failed to save setting."
 msgstr ""
 
-#: Public/Elementor/Widgets/AnimatedText/Main.php:24
-#: Public/Elementor/Widgets/AnimatedText/Main.php:151
-#: Public/Elementor/Widgets/AnimatedText/Main.php:159
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:36
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:37
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:92
+msgid "Available Widgets"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:104
+msgid "Widgets"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:110
+msgid "Content not available or not found callback function."
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:147
+msgid "No widgets to display."
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:168
+msgid "List of regular widgets available in PrimeKit."
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:185
+msgid "List of WooCommerce widgets available in PrimeKit."
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:222
+msgid "Free"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:222
+msgid "Pro"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:231
+msgid "off"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:232
+msgid "on"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:32
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:24
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:151
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:159
 msgid "Animated Text"
 msgstr ""
 
-#: Public/Elementor/Widgets/AnimatedText/Main.php:59
-#: Public/Elementor/Widgets/Blockquote/Main.php:54
-msgid "Contents"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:71
-msgid "Notice:"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:72
-msgid "To view the full animation, please check in the front end"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:80
-#: Public/Elementor/Widgets/PageTitle/Main.php:61
-#: Public/Elementor/Widgets/PostTitle/Main.php:62
-msgid "Heading Tag"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:84
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:57
-#: Public/Elementor/Widgets/PageTitle/Main.php:65
-#: Public/Elementor/Widgets/PostTitle/Main.php:66
-msgid "H1"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:85
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:58
-#: Public/Elementor/Widgets/PageTitle/Main.php:66
-#: Public/Elementor/Widgets/PostTitle/Main.php:67
-msgid "H2"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:86
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:59
-#: Public/Elementor/Widgets/PageTitle/Main.php:67
-#: Public/Elementor/Widgets/PostTitle/Main.php:68
-msgid "H3"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:87
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:60
-#: Public/Elementor/Widgets/PageTitle/Main.php:68
-#: Public/Elementor/Widgets/PostTitle/Main.php:69
-msgid "H4"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:88
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:61
-#: Public/Elementor/Widgets/PageTitle/Main.php:69
-#: Public/Elementor/Widgets/PostTitle/Main.php:70
-msgid "H5"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:89
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:62
-#: Public/Elementor/Widgets/PageTitle/Main.php:70
-#: Public/Elementor/Widgets/PostTitle/Main.php:71
-msgid "H6"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:99
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:70
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:122
-#: Public/Elementor/Widgets/Blockquote/Main.php:63
-#: Public/Elementor/Widgets/PageTitle/Main.php:51
-#: Public/Elementor/Widgets/PageTitle/Main.php:80
-#: Public/Elementor/Widgets/PostTitle/Main.php:52
-#: Public/Elementor/Widgets/PostTitle/Main.php:81
-msgid "Alignment"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:104
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:75
-#: Public/Elementor/Widgets/Blockquote/Main.php:68
-#: Public/Elementor/Widgets/PageTitle/Main.php:85
-#: Public/Elementor/Widgets/PostTitle/Main.php:86
-msgid "Left"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:108
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:79
-#: Public/Elementor/Widgets/Blockquote/Main.php:72
-#: Public/Elementor/Widgets/PageTitle/Main.php:89
-#: Public/Elementor/Widgets/PostTitle/Main.php:90
-msgid "Center"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:112
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:83
-#: Public/Elementor/Widgets/Blockquote/Main.php:76
-#: Public/Elementor/Widgets/PageTitle/Main.php:93
-#: Public/Elementor/Widgets/PostTitle/Main.php:94
-msgid "Right"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:126
-msgid "Before Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:129
-msgid "PrimeKit Addons is"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:137
-msgid "After Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:149
-#: Public/Elementor/Widgets/BackToTop/Main.php:65
-msgid "Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:164
-msgid "Awesome"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:167
-msgid "Creative"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:170
-msgid "Powerful"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:173
-msgid "Flexible"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:184
-msgid "Animation Type"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:188
-msgid "Rotate 1"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:189
-msgid "Rotate 2"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:190
-msgid "Rotate 3"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:191
-msgid "Typing"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:192
-msgid "Loading Bar"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:193
-msgid "Slide"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:194
-msgid "Clip"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:195
-msgid "Zoom"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:196
-msgid "Scale"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:197
-msgid "Push"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:210
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:121
-#: Public/Elementor/Widgets/BackToTop/Main.php:185
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:215
-#: Public/Elementor/Widgets/Blockquote/Main.php:105
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:129
-#: Public/Elementor/Widgets/PageTitle/Main.php:110
-#: Public/Elementor/Widgets/PostTitle/Main.php:111
-msgid "Created by PrimeKit"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:211
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:122
-#: Public/Elementor/Widgets/BackToTop/Main.php:186
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:216
-#: Public/Elementor/Widgets/Blockquote/Main.php:106
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:130
-#: Public/Elementor/Widgets/PageTitle/Main.php:111
-#: Public/Elementor/Widgets/PostTitle/Main.php:112
-msgid "This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs."
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:221
-msgid "Before Text Style"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:230
-msgid "Before Text Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:244
-msgid "Before Text Typography"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:255
-msgid "Animated Text Style"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:264
-msgid "Animated Text Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:277
-msgid "Animated Bar Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:293
-msgid "Cursor Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:310
-msgid "Animated Text Typography"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:319
-msgid "Animated Text Gap"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:346
-msgid "After Text Style"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:355
-msgid "After Text Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/AnimatedText/Main.php:369
-msgid "After Text Typography"
-msgstr ""
-
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:24
-msgid "Archive Title"
-msgstr ""
-
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:45
-msgid "Archive Title Settings"
-msgstr ""
-
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:53
-msgid "Archive Title Tag"
-msgstr ""
-
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:96
-#: Public/Elementor/Widgets/PageTitle/Main.php:130
-#: Public/Elementor/Widgets/PostTitle/Main.php:131
-msgid "Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/ArchiveTitle/Main.php:109
-#: Public/Elementor/Widgets/BackToTop/Main.php:295
-#: Public/Elementor/Widgets/Blockquote/Main.php:162
-#: Public/Elementor/Widgets/PageTitle/Main.php:143
-#: Public/Elementor/Widgets/PostTitle/Main.php:144
-msgid "Typography"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:22
-msgid "Back To Top"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:51
-msgid "Settings"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:60
-msgid "Button Type"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:64
-msgid "Icon"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:77
-msgid "Button Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:79
-msgid "Top"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:90
-msgid "Show Always?"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:92
-msgid "Yes"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:93
-msgid "No"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:103
-msgid "Position"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:107
-msgid "Relative"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:108
-msgid "Fixed"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:120
-msgid "Position from bottom"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:151
-msgid "Position from right"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:196
-msgid "Button Style"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:205
-msgid "Background Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:218
-msgid "Hover Background Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:231
-#: Public/Elementor/Widgets/Blockquote/Main.php:125
-msgid "Icon Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:247
-msgid "Icon Hover Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:263
-#: Public/Elementor/Widgets/Blockquote/Main.php:137
-msgid "Text Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:279
-msgid "Text Hover Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:308
-msgid "Icon Size"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:335
-msgid "Button Spacing"
-msgstr ""
-
-#: Public/Elementor/Widgets/BackToTop/Main.php:365
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:343
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:527
-msgid "Border Radius"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:23
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:59
-msgid "Before After Image"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:68
-msgid "Upload Before Image"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:80
-msgid "Before Image Alt Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:82
-msgid "Before Image"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:90
-msgid "Upload After Image"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:102
-msgid "After Image Alt Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:104
-msgid "After Image"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:113
-msgid "Widget Setings"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:127
-msgid "Horizontal"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:131
-msgid "Vertical"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:142
-msgid "Before Image Visibility"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:163
-msgid "Hide Overlay?"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:165
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:74
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:87
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:100
-msgid "Show"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:166
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:75
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:88
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:101
-msgid "Hide"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:176
-msgid "Before Label Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:178
-msgid "Before"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:186
-msgid "After Label Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:188
-msgid "After"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:196
-msgid "Handle Move Type"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:200
-msgid "On Hover"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:201
-msgid "On Click"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:202
-msgid "On Swipe"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:204
-msgid "Select handle movement type. Overlay does not work with On Hover."
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:227
-#: Public/Elementor/Widgets/Blockquote/Main.php:117
-#: Public/Elementor/Widgets/PageTitle/Main.php:122
-#: Public/Elementor/Widgets/PostTitle/Main.php:123
-msgid "Style"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:236
-msgid "Handle Height"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:260
-msgid "Handle width"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:284
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:567
-msgid "Top Position"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:308
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:594
-msgid "Left Position"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:332
-msgid "Handle Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:351
-msgid "Label Style"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:361
-msgid "Label Text Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BeforeAfterImg/Main.php:374
-msgid "Label Background Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/Blockquote/Main.php:26
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:41
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:26
 msgid "Blockquote"
 msgstr ""
 
-#: Public/Elementor/Widgets/Blockquote/Main.php:90
-msgid "Quote Text"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:50
+msgid "Blog Fancy"
 msgstr ""
 
-#: Public/Elementor/Widgets/Blockquote/Main.php:93
-msgid "Something is better than nothing!"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:59
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:21
+msgid "Author Bio"
 msgstr ""
 
-#: Public/Elementor/Widgets/Blockquote/Main.php:94
-msgid "Type blockquote text here"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:68
+msgid "Blog Grid"
 msgstr ""
 
-#: Public/Elementor/Widgets/Blockquote/Main.php:149
-msgid "Border Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:22
-msgid "Blog Posts Fancy"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:50
-msgid "Blog Setting"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:59
-msgid "Select Category"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:72
-msgid "Date"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:85
-msgid "Comments"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:98
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:113
-msgid "Read More"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:111
-msgid "Read More Text"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:114
-msgid "Type read more text"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:141
-msgid "Blog Style"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:149
-msgid "Gap"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:176
-msgid "Layout Direction"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:180
-msgid "Row"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:184
-msgid "Row Reverse"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:201
-msgid "Meta Typography"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:209
-msgid "Meta Text Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:220
-msgid "Meta Icon Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:231
-msgid "Meta Icon Size"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:243
-msgid "Title Typography"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:251
-msgid "Title Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:263
-msgid "Read More Typography"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:271
-msgid "Read More Color"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:286
-msgid "Featured Post"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:295
-msgid "Content Width"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:318
-msgid "Content Padding"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:332
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:491
-msgid "Content Background"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:356
-msgid "Content Margin Top"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:383
-msgid "Image Height"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:406
-msgid "Image Border Radius"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:429
-msgid "Image Width"
-msgstr ""
-
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:456
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:77
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:456
 msgid "Blog List"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:464
-msgid "Post Count"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:86
+msgid "Breadcrumb"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:469
-msgid "Set the number of posts to show"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:95
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:22
+msgid "Back To Top"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:477
-msgid "Padding"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:104
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:23
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:59
+msgid "Before After Image"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:501
-msgid "Gap Between Posts"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:113
+msgid "Card Info"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:540
-msgid "Width"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:122
+msgid "Category List"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:621
-msgid "Thumbnail Width"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:131
+msgid "Contact Form 7"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:644
-msgid "Thumbnail Height"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:140
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:19
+msgid "Circular Skill"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/Main.php:668
-msgid "Thumbnail Radius"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:150
+msgid "Comment Form"
 msgstr ""
 
-#: Public/Elementor/Widgets/BlogPostFancy/RenderView.php:56
-msgid "primekit addons"
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:159
+msgid "Contact & Social Info"
 msgstr ""
 
-#: Public/Elementor/Widgets/PageTitle/Main.php:24
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:168
+msgid "Count Down Timer"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:177
+msgid "Counter Up"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:186
+msgid "Call To Action - CTA"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:195
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:41
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:102
+#: Frontend/Elementor/Widgets/BlogList/Main.php:87
+msgid "Featured Image"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:204
+msgid "Flip Box"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:213
+#: Frontend/Elementor/Widgets/IconBox/Main.php:25
+msgid "Icon Box"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:222
+msgid "Image Hover"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:231
+msgid "Image & Text Scroll"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:240
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:24
 msgid "Page Title"
 msgstr ""
 
-#: Public/Elementor/Widgets/PostTitle/Main.php:24
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:249
+msgid "Popup"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:258
+msgid "Portfolio"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:267
+msgid "Post Meta"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:276
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:24
 msgid "Post Title"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:285
+msgid "Pricing Table"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:294
+msgid "Recent Posts"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:303
+msgid "Related Posts"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:312
+msgid "Search Form"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:321
+msgid "Search Icon"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:330
+msgid "Section Title"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:339
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:21
+msgid "Animated Shape"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:348
+msgid "Single Image Scroll"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:357
+msgid "Site Logo"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:366
+msgid "Site Title & Tagline"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:375
+msgid "Skill Bar"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:384
+msgid "Social Share"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:393
+msgid "Sticker Text"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:402
+msgid "Post Tag Info"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:411
+msgid "Team Member"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:420
+msgid "Testimonial Carousel"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:429
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:21
+msgid "WordPress Menu"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:438
+msgid "Dual Button"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:447
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:23
+msgid "Business Hours"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:456
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:23
+msgid "Archive Title"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:465
+msgid "Gravity Form"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:474
+msgid "Image Gallery"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:483
+msgid "MailChimp"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:492
+msgid "Template Slider"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:501
+msgid "Cost Estimation"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:510
+msgid "Modern Post Grid"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:519
+msgid "Popular Posts"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:528
+msgid "Fetch Posts"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:537
+msgid "Posts Slider"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:42
+msgid "Add to cart"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:50
+msgid "Cart Icon"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:58
+msgid "Cart Page"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:66
+msgid "Checkout Page"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:74
+msgid "Product Image"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:82
+msgid "Product Meta"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:90
+msgid "Product Price"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:98
+msgid "Related Products"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:106
+msgid "Short Description"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:114
+msgid "Product Tabs"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:122
+msgid "Product Title"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:130
+msgid "Product Bread Crumb"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:138
+msgid "My Account"
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:16
+msgid "PrimeKit Settings"
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:17
+msgid "PrimeKit"
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:33
+msgid "Welcome to"
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:34
+msgid "Version: "
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:38
+msgid "Demos"
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:40
+msgid "Documentation"
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:42
+msgid "Support"
+msgstr ""
+
+#: Admin/Inc/Dashboard/Settings/Settings.php:44
+msgid "Avilable Widgets"
+msgstr ""
+
+#: Admin/Inc/Metabox/MetaBox.php:21
+msgid "PrimeKit Blog Excerpt"
+msgstr ""
+
+#: Admin/Inc/Metabox/MetaBox.php:34
+msgid "Enter Excerpt Content:"
+msgstr ""
+
+#: Admin/Inc/Metabox/MetaBox.php:60
+msgid "PrimeKit Product Description Tab"
+msgstr ""
+
+#: Admin/Inc/Metabox/MetaBox.php:71
+msgid "Note:"
+msgstr ""
+
+#: Admin/Inc/Metabox/MetaBox.php:71
+msgid "This area is specifically for PrimeKit Addons and Templates for Elementor by ABCPlugin Products description tab contents."
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:30
+#: Frontend/Elementor/Widgets/IconBox/Main.php:96
+msgid "Title"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:31
+msgid "Type"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:49
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:53
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:80
+msgid "Archive Page"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:50
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:51
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:78
+msgid "Search Page"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:51
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:52
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:79
+msgid "404 Page"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:52
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:49
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:76
+msgid "Single Post"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:53
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:50
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:77
+msgid "Single Page"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:54
+msgid "Footer"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:55
+msgid "Header"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Column.php:63
+msgid "Unknown Type"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Admin/Menus.php:22
+#: Admin/Inc/ThemeBuilder/Admin/Menus.php:23
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:52
+msgid "Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:19
+msgid "Choose Template Type"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:43
+msgid "Type:"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:46
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:72
+msgid "Select..."
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:47
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:74
+msgid "Header (Global)"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:48
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:75
+msgid "Footer (Global)"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:61
+msgid "Display Condition:"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/MetaBox.php:65
+msgid "Entire Site"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:33
+msgid "PrimeKit Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:43
+msgid "Design Your Website's Theme Easily with PrimeKit"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:44
+msgid "PrimeKit's Theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:50
+msgid "Choose a Template Type"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:52
+msgid "Choose a template that best fits your needs."
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:85
+msgid "Name your template"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:92
+msgid "Create Template"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:120
+msgid "Template Elements Condition"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:130
+msgid "Where would you like to place your template?"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:132
+msgid "Specify the conditions under which your template will be applied across your website. For instance, selecting 'Entire Site' will ensure the template is visible throughout your entire website."
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:143
+msgid "+ Add Condition"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:152
+msgid "Save and Continue"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/ModalMarkup.php:154
+msgid "Cancel"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:23
+msgctxt "Post Type General Name"
+msgid "Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:24
+msgctxt "Post Type Singular Name"
+msgid "Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:25
+msgctxt "Admin Menu text"
+msgid "Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:26
+msgctxt "Add New on Toolbar"
+msgid "Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:27
+msgid "Theme Builder Archives"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:28
+msgid "Theme Builder Attributes"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:29
+msgid "Parent Theme Builder:"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:30
+msgid "All Theme Builders"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:31
+msgid "Add New Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:32
+msgid "Add New"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:33
+msgid "New Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:34
+msgid "Edit Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:35
+msgid "Update Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:36
+msgid "View Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:37
+msgid "View Theme Builders"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:38
+msgid "Search Theme Builders"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:39
+msgid "Not found"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:40
+msgid "Not found in Trash"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:42
+msgid "Set featured image"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:43
+msgid "Remove featured image"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:44
+msgid "Use as featured image"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:45
+msgid "Insert into Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:46
+msgid "Uploaded to this Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:47
+msgid "Theme Builder list"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:48
+msgid "Theme Builder list navigation"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:49
+msgid "Filter Theme Builder list"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:53
+msgid "Custom Post Type for Theme Builder"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Hooks/TemplateContentHooks.php:86
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-404.php:30
+msgid "Page Not Found"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Hooks/TemplateContentHooks.php:104
+#: Frontend/Elementor/Widgets/BreadCrumb/renderview.php:47
+msgid "Search Results"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Hooks/TemplateContentHooks.php:149
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-archive.php:65
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-search.php:60
+msgid "Previous"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Hooks/TemplateContentHooks.php:150
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-archive.php:66
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-search.php:61
+msgid "Next"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Hooks/TemplateContentHooks.php:155
+msgid "No posts found in this archive."
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-404.php:31
+msgid "Sorry, but the page you are looking for does not exist."
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-404.php:33
+msgid "Go Back to Home"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-archive.php:74
+msgid "No Posts Found"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-archive.php:76
+msgid "Sorry, but no posts are available in this archive."
+msgstr ""
+
+#. Translators: %s is the search query
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-search.php:33
+msgid "Search Results for: %s"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-search.php:69
+msgid "No Results Found"
+msgstr ""
+
+#: Admin/Inc/ThemeBuilder/Inc/Templates/primekit-search.php:71
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr ""
+
+#. translators: 1 Plugin name, 2 Elementor plugin name, 3 Required Elementor version
+#. translators: 1: Plugin name 2: PHP 3: Required PHP version
+#: Frontend/Elementor/Configuration.php:137
+#: Frontend/Elementor/Configuration.php:157
+#: Frontend/Elementor/Configuration.php:178
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: Frontend/Elementor/Configuration.php:139
+#: Frontend/Elementor/Configuration.php:159
+msgid "Elementor"
+msgstr ""
+
+#: Frontend/Elementor/Configuration.php:180
+msgid "PHP"
+msgstr ""
+
+#: Frontend/Elementor/Inc/Functions.php:57
+msgid "PrimeKit Elements"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:51
+msgid "Shape"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:60
+msgid "Shape Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:64
+msgid "Circle"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:65
+msgid "Square"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:66
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:265
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:71
+msgid "Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:74
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:84
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:100
+msgid "Choose Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:90
+msgid "Image Alt Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:103
+msgid "Animation"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:105
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:67
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:165
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:104
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:117
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:130
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:143
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:172
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:199
+#: Frontend/Elementor/Widgets/BlogList/Main.php:89
+#: Frontend/Elementor/Widgets/BlogList/Main.php:102
+#: Frontend/Elementor/Widgets/BlogList/Main.php:115
+#: Frontend/Elementor/Widgets/BlogList/Main.php:128
+#: Frontend/Elementor/Widgets/BlogList/Main.php:157
+#: Frontend/Elementor/Widgets/BlogList/Main.php:184
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:74
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:87
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:100
+msgid "Show"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:106
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:68
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:166
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:105
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:118
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:131
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:144
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:173
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:200
+#: Frontend/Elementor/Widgets/BlogList/Main.php:90
+#: Frontend/Elementor/Widgets/BlogList/Main.php:103
+#: Frontend/Elementor/Widgets/BlogList/Main.php:116
+#: Frontend/Elementor/Widgets/BlogList/Main.php:129
+#: Frontend/Elementor/Widgets/BlogList/Main.php:158
+#: Frontend/Elementor/Widgets/BlogList/Main.php:185
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:75
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:88
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:101
+msgid "Hide"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:115
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:184
+msgid "Animation Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:119
+msgid "X-Axis Move"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:120
+msgid "Y-Axis Move"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:121
+msgid "Triangle Move"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:122
+msgid "Spin"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:123
+msgid "Rotation Move"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:124
+msgid "Tilt"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:125
+msgid "Timeline Animate"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:126
+msgid "Spin Move"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:127
+msgid "Clockwise Spin"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:128
+msgid "Anti-Clockwise Spin"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:129
+msgid "Rotating"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:143
+msgid "Shape Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:155
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:312
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:365
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:530
+#: Frontend/Elementor/Widgets/BlogList/Main.php:468
+#: Frontend/Elementor/Widgets/BlogList/Main.php:565
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:343
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:527
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:212
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:397
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:289
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:450
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1075
+#: Frontend/Elementor/Widgets/IconBox/Main.php:266
+#: Frontend/Elementor/Widgets/IconBox/Main.php:305
+#: Frontend/Elementor/Widgets/IconBox/Main.php:524
+#: Frontend/Elementor/Widgets/IconBox/Main.php:602
+#: Frontend/Elementor/Widgets/IconBox/Main.php:818
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:584
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:747
+msgid "Border Radius"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:168
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:719
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:956
+msgid "Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:198
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:547
+#: Frontend/Elementor/Widgets/BlogList/Main.php:590
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:936
+#: Frontend/Elementor/Widgets/IconBox/Main.php:252
+#: Frontend/Elementor/Widgets/IconBox/Main.php:464
+#: Frontend/Elementor/Widgets/IconBox/Main.php:685
+#: Frontend/Elementor/Widgets/IconBox/Main.php:834
+msgid "Normal"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:207
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:237
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:195
+#: Frontend/Elementor/Widgets/IconBox/Main.php:854
+#: Frontend/Elementor/Widgets/IconBox/Main.php:883
+msgid "Background"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:228
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:582
+#: Frontend/Elementor/Widgets/BlogList/Main.php:624
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:981
+#: Frontend/Elementor/Widgets/IconBox/Main.php:291
+#: Frontend/Elementor/Widgets/IconBox/Main.php:541
+#: Frontend/Elementor/Widgets/IconBox/Main.php:714
+#: Frontend/Elementor/Widgets/IconBox/Main.php:863
+msgid "Hover"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:247
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:149
+msgid "Border Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:276
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:540
+msgid "Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedShape/Main.php:303
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:521
+#: Frontend/Elementor/Widgets/BlogList/Main.php:556
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:204
+#: Frontend/Elementor/Widgets/IconBox/Main.php:812
+msgid "Border"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:59
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:54
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:48
+msgid "Contents"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:71
+msgid "Notice:"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:72
+msgid "To view the full animation, please check in the front end"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:80
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:61
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:62
+msgid "Heading Tag"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:84
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:56
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:65
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:66
+msgid "H1"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:85
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:57
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:66
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:67
+msgid "H2"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:86
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:58
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:67
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:68
+msgid "H3"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:87
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:59
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:68
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:69
+msgid "H4"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:88
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:60
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:69
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:70
+msgid "H5"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:89
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:61
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:70
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:71
+msgid "H6"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:99
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:69
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:122
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:63
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:449
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:43
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:52
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:763
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:848
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:67
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:51
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:80
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:52
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:81
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:630
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:929
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:86
+msgid "Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:104
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:74
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:68
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:453
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:57
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:120
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:339
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:553
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:768
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:853
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1032
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:72
+#: Frontend/Elementor/Widgets/IconBox/Main.php:158
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:85
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:86
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:634
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:792
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:933
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:91
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:508
+msgid "Left"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:108
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:78
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:72
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:457
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:61
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:246
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:440
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:343
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:557
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:772
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:857
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1036
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:76
+#: Frontend/Elementor/Widgets/IconBox/Main.php:162
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:89
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:90
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:638
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:796
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:937
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:95
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:512
+msgid "Center"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:112
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:82
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:76
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:461
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:65
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:124
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:347
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:561
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:776
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:861
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1040
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:80
+#: Frontend/Elementor/Widgets/IconBox/Main.php:166
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:93
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:94
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:642
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:800
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:941
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:100
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:517
+msgid "Right"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:126
+msgid "Before Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:129
+msgid "PrimeKit Addons is"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:137
+msgid "After Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:149
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:65
+msgid "Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:164
+msgid "Awesome"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:167
+msgid "Creative"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:170
+msgid "Powerful"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:173
+msgid "Flexible"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:188
+msgid "Rotate 1"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:189
+msgid "Rotate 2"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:190
+msgid "Rotate 3"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:191
+msgid "Typing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:192
+msgid "Loading Bar"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:193
+msgid "Slide"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:194
+msgid "Clip"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:195
+msgid "Zoom"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:196
+msgid "Scale"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:197
+msgid "Push"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:210
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:120
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:81
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:185
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:215
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:105
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:213
+#: Frontend/Elementor/Widgets/BlogList/Main.php:198
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:129
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:82
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:139
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:250
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:97
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:84
+#: Frontend/Elementor/Widgets/IconBox/Main.php:212
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:110
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:111
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:280
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:143
+msgid "Created by PrimeKit"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:211
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:121
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:82
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:186
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:216
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:106
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:214
+#: Frontend/Elementor/Widgets/BlogList/Main.php:199
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:130
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:83
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:140
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:251
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:98
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:85
+#: Frontend/Elementor/Widgets/IconBox/Main.php:213
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:111
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:112
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:281
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:144
+msgid "This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:221
+msgid "Before Text Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:230
+msgid "Before Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:244
+msgid "Before Text Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:255
+msgid "Animated Text Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:264
+msgid "Animated Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:277
+msgid "Animated Bar Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:293
+msgid "Cursor Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:310
+msgid "Animated Text Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:319
+msgid "Animated Text Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:346
+msgid "After Text Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:355
+msgid "After Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AnimatedText/Main.php:369
+msgid "After Text Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:44
+msgid "Archive Title Settings"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:52
+msgid "Archive Title Tag"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:95
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:397
+#: Frontend/Elementor/Widgets/BlogList/Main.php:382
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:266
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:330
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:790
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:875
+#: Frontend/Elementor/Widgets/IconBox/Main.php:841
+#: Frontend/Elementor/Widgets/IconBox/Main.php:870
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:130
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:131
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:529
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:671
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:1025
+msgid "Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:108
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:295
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:162
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:139
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:889
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1097
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:134
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:143
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:144
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:576
+msgid "Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:47
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:44
+msgid "Setting"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:55
+msgid "Author Bio Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:57
+msgid "About Author"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:65
+msgid "View All Posts Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:92
+msgid "Author Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:101
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:205
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:568
+#: Frontend/Elementor/Widgets/BlogList/Main.php:611
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:632
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:958
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:552
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:695
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:388
+msgid "Background Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:114
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:246
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:254
+#: Frontend/Elementor/Widgets/BlogList/Main.php:231
+#: Frontend/Elementor/Widgets/BlogList/Main.php:239
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:251
+#: Frontend/Elementor/Widgets/IconBox/Main.php:691
+#: Frontend/Elementor/Widgets/IconBox/Main.php:720
+msgid "Title Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:128
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:234
+#: Frontend/Elementor/Widgets/BlogList/Main.php:219
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:243
+#: Frontend/Elementor/Widgets/IconBox/Main.php:663
+msgid "Title Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:137
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:263
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:137
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:555
+#: Frontend/Elementor/Widgets/BlogList/Main.php:598
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:102
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:608
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:944
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:143
+#: Frontend/Elementor/Widgets/IconBox/Main.php:701
+#: Frontend/Elementor/Widgets/IconBox/Main.php:732
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:172
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:401
+msgid "Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:151
+#: Frontend/Elementor/Widgets/IconBox/Main.php:792
+msgid "Text Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:160
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:114
+msgid "Link Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/Main.php:173
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:126
+msgid "Link Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/AuthorBio/RenderView.php:25
+msgid "View all posts by"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:51
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:52
+msgid "Settings"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:60
+msgid "Button Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:64
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:72
+#: Frontend/Elementor/Widgets/IconBox/Main.php:88
+#: Frontend/Elementor/Widgets/IconBox/Main.php:342
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:237
+msgid "Icon"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:77
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:196
+#: Frontend/Elementor/Widgets/IconBox/Main.php:123
+msgid "Button Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:79
+msgid "Top"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:90
+msgid "Show Always?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:92
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:224
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:119
+msgid "Yes"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:93
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:225
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:120
+msgid "No"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:103
+msgid "Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:107
+msgid "Relative"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:108
+msgid "Fixed"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:120
+msgid "Position from bottom"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:151
+msgid "Position from right"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:196
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:364
+#: Frontend/Elementor/Widgets/BlogList/Main.php:349
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:924
+msgid "Button Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:218
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:415
+msgid "Hover Background Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:231
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:125
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:534
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:212
+#: Frontend/Elementor/Widgets/IconBox/Main.php:485
+msgid "Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:247
+#: Frontend/Elementor/Widgets/IconBox/Main.php:563
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:479
+msgid "Icon Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:279
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:156
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:186
+msgid "Text Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:308
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:509
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1106
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:229
+#: Frontend/Elementor/Widgets/IconBox/Main.php:350
+msgid "Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BackToTop/Main.php:335
+msgid "Button Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:68
+msgid "Upload Before Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:80
+msgid "Before Image Alt Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:82
+msgid "Before Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:90
+msgid "Upload After Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:102
+msgid "After Image Alt Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:104
+msgid "After Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:113
+msgid "Widget Setings"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:127
+msgid "Horizontal"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:131
+msgid "Vertical"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:142
+msgid "Before Image Visibility"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:163
+msgid "Hide Overlay?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:176
+msgid "Before Label Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:178
+msgid "Before"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:186
+msgid "After Label Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:188
+msgid "After"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:196
+msgid "Handle Move Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:200
+msgid "On Hover"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:201
+msgid "On Click"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:202
+msgid "On Swipe"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:204
+msgid "Select handle movement type. Overlay does not work with On Hover."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:227
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:117
+#: Frontend/Elementor/Widgets/PageTitle/Main.php:122
+#: Frontend/Elementor/Widgets/PostTitle/Main.php:123
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:292
+msgid "Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:236
+msgid "Handle Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:260
+msgid "Handle width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:284
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:567
+msgid "Top Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:308
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:594
+msgid "Left Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:332
+msgid "Handle Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:351
+msgid "Label Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:361
+msgid "Label Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:374
+msgid "Label Background Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:90
+msgid "Quote Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:93
+msgid "Something is better than nothing!"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Blockquote/Main.php:94
+msgid "Type blockquote text here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:20
+msgid "Blog Posts Grid"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:45
+#: Frontend/Elementor/Widgets/BlogList/Main.php:45
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:50
+msgid "Blog Setting"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:54
+msgid "Blog Layout"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:58
+msgid "Two Colum"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:59
+msgid "Three Colum"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:60
+msgid "Four Colum"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:69
+#: Frontend/Elementor/Widgets/BlogList/Main.php:54
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:59
+msgid "Select Category"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:82
+#: Frontend/Elementor/Widgets/BlogList/Main.php:67
+msgid "Number of Post"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:115
+#: Frontend/Elementor/Widgets/BlogList/Main.php:100
+msgid "Blog Date"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:128
+#: Frontend/Elementor/Widgets/BlogList/Main.php:113
+msgid "Blog Comments"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:141
+#: Frontend/Elementor/Widgets/BlogList/Main.php:126
+msgid "Blog Excerpt"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:154
+#: Frontend/Elementor/Widgets/BlogList/Main.php:139
+msgid "Excerpt Length"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:170
+#: Frontend/Elementor/Widgets/BlogList/Main.php:155
+msgid "More Button"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:183
+#: Frontend/Elementor/Widgets/BlogList/Main.php:168
+msgid "More Button Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:197
+#: Frontend/Elementor/Widgets/BlogList/Main.php:182
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:261
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:517
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:918
+msgid "Pagination"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:224
+#: Frontend/Elementor/Widgets/BlogList/Main.php:209
+msgid "Title Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:268
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:412
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:420
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:590
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:603
+#: Frontend/Elementor/Widgets/BlogList/Main.php:253
+#: Frontend/Elementor/Widgets/BlogList/Main.php:397
+#: Frontend/Elementor/Widgets/BlogList/Main.php:405
+#: Frontend/Elementor/Widgets/BlogList/Main.php:632
+#: Frontend/Elementor/Widgets/BlogList/Main.php:645
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:989
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:683
+msgid "Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:276
+#: Frontend/Elementor/Widgets/BlogList/Main.php:261
+msgid "Title Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:293
+#: Frontend/Elementor/Widgets/BlogList/Main.php:278
+msgid "Meta Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:303
+#: Frontend/Elementor/Widgets/BlogList/Main.php:288
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:201
+msgid "Meta Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:312
+#: Frontend/Elementor/Widgets/BlogList/Main.php:297
+msgid "Meta Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:327
+#: Frontend/Elementor/Widgets/BlogList/Main.php:312
+msgid "Excerpt Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:340
+#: Frontend/Elementor/Widgets/BlogList/Main.php:325
+msgid "Excerpt Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:349
+#: Frontend/Elementor/Widgets/BlogList/Main.php:334
+msgid "Excerpt Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:377
+#: Frontend/Elementor/Widgets/BlogList/Main.php:362
+msgid "Button Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:389
+#: Frontend/Elementor/Widgets/BlogList/Main.php:374
+msgid "Button Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:438
+#: Frontend/Elementor/Widgets/BlogList/Main.php:491
+msgid "Pagination Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:477
+#: Frontend/Elementor/Widgets/BlogList/Main.php:504
+msgid "Pagination Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:486
+#: Frontend/Elementor/Widgets/BlogList/Main.php:533
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:477
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:168
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:294
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:353
+#: Frontend/Elementor/Widgets/IconBox/Main.php:230
+#: Frontend/Elementor/Widgets/IconBox/Main.php:799
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:596
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:766
+msgid "Padding"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:508
+#: Frontend/Elementor/Widgets/BlogList/Main.php:513
+#: Frontend/Elementor/Widgets/IconBox/Main.php:760
+msgid "Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:616
+msgid "Hover Border Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:57
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:58
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:59
+#: Frontend/Elementor/Widgets/BlogList/RenderView.php:74
+msgid "Leave a comment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:57
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:58
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:59
+#: Frontend/Elementor/Widgets/BlogList/RenderView.php:74
+msgid "1 Comment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:57
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:58
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:59
+#: Frontend/Elementor/Widgets/BlogList/RenderView.php:74
+msgid "% Comments"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:103
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:104
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:107
+#: Frontend/Elementor/Widgets/BlogList/RenderView.php:119
+msgid "No Post Found"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogList/Main.php:20
+msgid "Blog Posts List"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogList/Main.php:423
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:322
+msgid "Image Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogList/Main.php:435
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:429
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:382
+msgid "Image Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogList/Main.php:657
+msgid "Border Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:22
+msgid "Blog Posts Fancy"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:72
+msgid "Date"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:85
+msgid "Comments"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:98
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:113
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:198
+#: Frontend/Elementor/Widgets/IconBox/Main.php:125
+msgid "Read More"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:111
+msgid "Read More Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:114
+msgid "Type read more text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:141
+msgid "Blog Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:149
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:608
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:814
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:979
+msgid "Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:176
+msgid "Layout Direction"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:180
+msgid "Row"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:184
+msgid "Row Reverse"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:209
+msgid "Meta Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:220
+msgid "Meta Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:231
+msgid "Meta Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:263
+msgid "Read More Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:271
+msgid "Read More Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:286
+msgid "Featured Post"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:295
+msgid "Content Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:318
+msgid "Content Padding"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:332
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:491
+msgid "Content Background"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:356
+msgid "Content Margin Top"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:383
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:413
+msgid "Image Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:406
+msgid "Image Border Radius"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:464
+msgid "Post Count"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:469
+msgid "Set the number of posts to show"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:501
+msgid "Gap Between Posts"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:621
+msgid "Thumbnail Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:644
+msgid "Thumbnail Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:668
+msgid "Thumbnail Radius"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogPostFancy/RenderView.php:56
+msgid "primekit addons"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:20
+msgid "BreadCrumb"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BreadCrumb/Main.php:94
+msgid "Crumb Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BreadCrumb/renderview.php:50
+msgid "404 Not Found"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:57
+msgid "Header Title"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:59
+msgid "Working Hours"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:60
+msgid "Your Title Here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:71
+msgid "Day"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:73
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:120
+msgid "Monday"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:81
+msgid "Time"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:83
+msgid "10:00 - 19:00"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:91
+msgid "Date Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:103
+msgid "Time Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:115
+msgid "Business Hours List"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:121
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:125
+msgid "10:00 AM - 06:00 PM"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:124
+msgid "Tuesday"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:151
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:261
+msgid "Box Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:180
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:306
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:366
+msgid "Margin"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:228
+msgid "Header Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:237
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:431
+msgid "Text Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:242
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:436
+msgid "Start"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:250
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:444
+msgid "End"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:321
+msgid "Items Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:408
+msgid "List Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:448
+msgid "Space Between"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:452
+msgid "Space Around"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BusinessHours/Main.php:456
+msgid "Space Evenly"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:19
+msgid "Card Info Box"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:44
+msgid "Card Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:53
+msgid "Select Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:57
+msgid "Style 1"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:58
+msgid "Style 2"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:67
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:68
+msgid "Select Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:115
+msgid "Image Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:142
+msgid "Choose Icon"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:156
+msgid "Card Content"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:165
+msgid "Badge Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:167
+msgid "$120"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:175
+msgid "Heading Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:177
+msgid "PrimeKit Elementor Addons"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:185
+#: Frontend/Elementor/Widgets/IconBox/Main.php:109
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:102
+msgid "Description"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:188
+msgid "Lorem ipsum dolor sit amet, consect adipiscing elit sed do dolro sit amet consect adipiscing elit sed"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:206
+#: Frontend/Elementor/Widgets/IconBox/Main.php:140
+msgid "Button Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:222
+msgid "Button Icon?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:235
+msgid "Button Icon"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:311
+msgid "Box Shadow"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:334
+msgid "Image Align"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:361
+msgid "Image Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:471
+msgid "Image Bottom Margin"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:497
+msgid "Icon Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:548
+msgid "Icon Align"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:575
+msgid "icon Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:599
+msgid "Badge Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:622
+msgid "Badge Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:645
+msgid "Badge Padding"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:675
+msgid "Badge Border Radius"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:696
+msgid "Badge Horizontal Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:724
+msgid "Badge Vertical Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:754
+msgid "Heading Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:804
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:127
+msgid "Heading Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:813
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:898
+msgid "Bottom Margin"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:839
+msgid "Description Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1003
+msgid "Hover Background"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1027
+#: Frontend/Elementor/Widgets/IconBox/Main.php:154
+msgid "Button Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1054
+msgid "Button Padding"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1134
+msgid "Icon Horizontal Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1161
+msgid "Icon Vertical Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CardInfo/Main.php:1188
+msgid "Button Bottom Margin"
+msgstr ""
+
+#. translators: Category name
+#: Frontend/Elementor/Widgets/CatInfo/inline-view.php:24
+#: Frontend/Elementor/Widgets/CatInfo/list-view.php:26
+msgid "View all posts in %s"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:19
+msgid "Post Category"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:53
+msgid "Display Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:57
+msgid "Inline View"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:58
+msgid "List View"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:108
+msgid "Category Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:117
+msgid "Display Icon?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:169
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:291
+msgid "Separator Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:185
+msgid "Separator Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:257
+msgid "Item Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CatInfo/Main.php:285
+msgid "Icon Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:49
+msgid "Circle Setting"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:58
+msgid "Heading"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:60
+msgid "Web Design"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:68
+msgid "Value"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:96
+msgid "Circle Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:105
+msgid "Circle Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:135
+msgid "Heading Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:149
+msgid "Value Position Adjustment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:176
+msgid "Value Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:184
+msgid "Value Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:197
+msgid "Empty Fill Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:206
+msgid "Gradient Color One"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CircularSkills/Main.php:215
+msgid "Gradient Color Two"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:51
+#: Frontend/Elementor/Widgets/IconBox/Main.php:624
+msgid "Content"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:61
+msgid "Choose Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:65
+msgid "Style One"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:66
+msgid "Style Two"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:67
+msgid "Style Three"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:76
+msgid "Icon Shape"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:98
+msgid "Responsive Design"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:99
+msgid "Type your title here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:112
+msgid "Duis Aute Irure Dolor Reprehenderit In Voluptate Velit Esse Cillum Dolore Fugiat Nulla Pariatur"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:113
+msgid "Type your description here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:126
+msgid "Type your button text here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:182
+msgid "Button Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:223
+msgid "Box"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:378
+msgid "Shape Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:403
+#: Frontend/Elementor/Widgets/IconBox/Main.php:775
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:557
+msgid "Icon Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:423
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:266
+msgid "Icon Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:445
+msgid "Icon Padding"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:470
+msgid "Shape Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:548
+msgid "Shape Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:631
+msgid "Heading Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:646
+msgid "Content Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:673
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:353
+msgid "Content Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/IconBox/Main.php:750
+msgid "Button"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:22
+msgid "Testimonial Grid & Carousel"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:59
+msgid "Testimonial Setting"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:72
+msgid "Grid"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:73
+msgid "Slider"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:80
+msgid "Display Client Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:82
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:210
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:248
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:263
+msgid "On"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:83
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:211
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:249
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:264
+msgid "Off"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:93
+msgid "Name"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:95
+msgid "List Name"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:104
+msgid "Enter feedback message here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:111
+msgid "Designation"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:113
+msgid "CEO of Company"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:120
+msgid "Rating"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:124
+msgid "1 Star"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:125
+msgid "2 Stars"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:126
+msgid "3 Stars"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:127
+msgid "4 Stars"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:128
+msgid "5 Stars"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:135
+msgid "Client Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:143
+msgid "Testimonial Items"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:148
+msgid "Name #1"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:151
+msgid "Name #2"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:154
+msgid "Name #3"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:164
+msgid "Desktop Column"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:179
+msgid "Tab Column"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:193
+msgid "Mobile Column"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:208
+msgid "Autoplay"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:223
+msgid "Autoplay Delay"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:246
+msgid "Arrow"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:311
+msgid "Name Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:319
+msgid "Name Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:332
+msgid "Designation Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:340
+msgid "Designation Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:361
+msgid "Content Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:373
+msgid "Star Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:400
+msgid "Star Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:412
+msgid "Quote Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:440
+msgid "Quote Icon Top Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:463
+msgid "Quote Icon Right Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:485
+msgid "Quote Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:498
+msgid "Icon Opacity"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:540
+msgid "Hover/Active Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:563
+msgid "Hover/Active BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:659
+msgid "Arrows"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:707
+msgid "Hover BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:778
+msgid "Alignment for Normal Device"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:787
+msgid "Navigation Bar Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:833
+msgid "Indent for Largest Device"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:842
+msgid "Left Arrow Top Indent"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:861
+msgid "Left Arrow Left Indent"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:879
+msgid "Right Arrow Top Indent"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:897
+msgid "Right Arrow Right Indent"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:1002
+msgid "Indent"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:1037
+msgid "Active Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/Testimonials/templates/grid.php:41
+msgid "Client Name"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:63
+msgid "Select Menu"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:73
+msgid "No menus found"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:75
+msgid "There are no menus currently available. Please create a menu in WordPress."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:114
+msgid "Menu Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:154
+msgid "Menu Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:200
+msgid "Text Active Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:216
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:640
+msgid "Menu Item Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:241
+msgid "Dropdown Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:306
+msgid "Sub Menu Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:316
+msgid "Sub Menu Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:325
+msgid "Sub Menu Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:350
+msgid "Sub Menu Item Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:375
+msgid "Top Border Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:428
+msgid "Hover Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:441
+msgid "Sub Menu Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:466
+msgid "Sub Menu Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:494
+msgid "Mobile Menu Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:503
+msgid "Icon Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:532
+msgid "Nav Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:578
+msgid "Nav Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:591
+msgid "Menu Top Border Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:604
+msgid "Mobile Menu BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:618
+msgid "Mob Menu Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:627
+msgid "Menu Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:661
+msgid "Item Separator Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:674
+msgid "Sub Toggle BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:687
+msgid "Sub Toggle Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:712
+msgid "Sub Toggle Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WpMenu/renderview.php:26
+#: Frontend/Elementor/Widgets/WpMenu/renderview.php:42
+msgid "Menu not selected or found."
 msgstr ""
