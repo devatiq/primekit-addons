@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-03T03:24:05+00:00\n"
+"POT-Creation-Date: 2024-11-03T04:15:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.0\n"
 "X-Domain: primekit-addons\n"
@@ -255,6 +255,7 @@ msgid "Single Image Scroll"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:357
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:20
 msgid "Site Logo"
 msgstr ""
 
@@ -827,6 +828,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:74
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:87
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:100
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:54
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:119
 msgid "Show"
 msgstr ""
 
@@ -848,6 +851,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:75
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:88
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:101
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:55
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:120
 msgid "Hide"
 msgstr ""
 
@@ -922,6 +927,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:524
 #: Frontend/Elementor/Widgets/IconBox/Main.php:602
 #: Frontend/Elementor/Widgets/IconBox/Main.php:818
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:203
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:584
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:747
 msgid "Border Radius"
@@ -984,6 +990,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedText/Main.php:59
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:54
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:48
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:42
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:42
 msgid "Contents"
 msgstr ""
 
@@ -1005,6 +1013,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:56
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:65
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:66
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:69
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:134
 msgid "H1"
 msgstr ""
 
@@ -1012,6 +1022,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:57
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:66
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:67
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:70
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:135
 msgid "H2"
 msgstr ""
 
@@ -1019,6 +1031,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:58
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:67
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:68
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:71
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:136
 msgid "H3"
 msgstr ""
 
@@ -1026,6 +1040,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:59
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:68
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:69
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:72
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:137
 msgid "H4"
 msgstr ""
 
@@ -1033,6 +1049,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:60
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:69
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:70
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:73
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:138
 msgid "H5"
 msgstr ""
 
@@ -1040,6 +1058,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:61
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:70
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:71
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:74
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:139
 msgid "H6"
 msgstr ""
 
@@ -1057,6 +1077,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:80
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:52
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:81
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:94
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:630
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:929
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:86
@@ -1078,6 +1099,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:158
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:85
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:86
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:99
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:92
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:157
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:634
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:792
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:933
@@ -1102,6 +1126,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:162
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:89
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:90
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:103
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:96
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:161
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:638
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:796
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:937
@@ -1125,6 +1152,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:166
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:93
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:94
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:107
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:100
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:165
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:642
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:800
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:941
@@ -1223,6 +1253,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:212
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:110
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:111
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:124
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:185
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:280
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:143
 msgid "Created by PrimeKit"
@@ -1245,6 +1277,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:213
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:111
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:112
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:125
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:186
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:281
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:144
 msgid "This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs."
@@ -1377,6 +1411,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:251
 #: Frontend/Elementor/Widgets/IconBox/Main.php:691
 #: Frontend/Elementor/Widgets/IconBox/Main.php:720
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:208
 msgid "Title Color"
 msgstr ""
 
@@ -1457,12 +1492,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:92
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:224
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:119
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:53
 msgid "Yes"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:93
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:225
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:120
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:54
 msgid "No"
 msgstr ""
 
@@ -1831,6 +1868,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:508
 #: Frontend/Elementor/Widgets/BlogList/Main.php:513
 #: Frontend/Elementor/Widgets/IconBox/Main.php:760
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:172
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:230
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:287
 msgid "Spacing"
 msgstr ""
 
@@ -2490,6 +2530,70 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/IconBox/Main.php:750
 msgid "Button"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:51
+msgid "Custom Logo"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:64
+msgid "Choose Logo"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:79
+msgid "Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:135
+msgid "Logo Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:144
+msgid "Logo Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteLogo/Main.php:194
+msgid "Logo Border"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:20
+msgid "Site Title"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:52
+msgid "Display Site Title?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:65
+msgid "Site Title Tag"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:87
+msgid "Title Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:117
+msgid "Display Tagline?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:130
+msgid "Tagline Tag"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:152
+msgid "Tagline Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:196
+msgid "Site Title Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:253
+msgid "Tagline Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SiteTitle/Main.php:265
+msgid "Tagline Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:22
