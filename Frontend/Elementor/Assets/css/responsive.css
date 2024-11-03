@@ -1,101 +1,230 @@
-@media screen and (max-width: 950px) {
-  /*-------------------------
-    * WP Menu
-    ---------------------------*/
-
-  .primekit-wp-menu-container {
-    display: none;
+/*---------------------------
+    Responsive css for large screen    
+-----------------------------*/
+@media only screen and (max-width: 1500px) {
+  /*------------------------
+    * Blog
+    --------------------------*/
+  .primekit-ele-blogs {
+    /* flex-direction: column; */
+    gap: 20px;
   }
 
-  .primekit-mob-menu-icon-wrap {
-    display: flex;
-    justify-content: flex-end;
+  .primekit-ele-single-first {
+    flex-basis: 44%;
   }
 
-  .primekit-responsive-menu svg {
-    width: 32px;
-    height: 32px;
+  .primekit-ele-single-blog-rem-posts {
+    gap: 25px;
   }
 
-  .primekit-responsive-menu {
-    display: inline-block;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-
-  .primekit-mobilemenu {
-    display: none;
-    flex-direction: column;
-    left: 0;
-    position: absolute;
-    top: 100%;
+  .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail img {
     width: 100%;
-    border-top: 2px solid #6146ec;
-    background: #fff;
-    z-index: 4572;
+    height: auto;
+    object-fit: cover;
+    min-height: 133px;
   }
 
-  .primekit-mobilemenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 5px 0;
-    display: flex;
-    flex-direction: column;
+  .primekit-ele-single-blog-content-area {
+    width: 90%;
+    padding: 10px 15px;
+    position: unset;
   }
 
-  .primekit-mobilemenu ul li {
-    border-bottom: 1px solid #ededed;
-    margin-left: 0;
-    position: relative;
-    box-sizing: border-box;
+  .primekit-ele-single-blog-thumbnail {
+    max-width: 140px;
+  }
+  .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail {
+    height: auto;
   }
 
-  .primekit-mobilemenu ul li:last-child {
-    border-bottom: 0;
-  }
-
-  .primekit-mobilemenu ul li a {
-    color: #333;
-    font-size: 16px;
-    padding: 6px 15px;
-    text-transform: uppercase;
-    width: 100%;
-    display: inline-block;
-  }
-
-  .primekit-mobilemenu ul li ul li a {
-    color: #444;
-    font-size: 14px;
-    text-transform: none;
-  }
-
-  .primekit-mobilemenu ul.sub-menu {
-    position: static;
-    opacity: 1;
-    border: none;
-    margin: 0;
-    padding: 0;
-    display: none;
-    transition: none;
-  }
-
-  .primekit-mobilemenu .sub-toggle {
-    background: #6146ec;
-    color: #ffffff;
-    cursor: pointer;
-    height: 30px;
-    line-height: 30px;
-    position: absolute;
-    right: 15px;
-    text-align: center;
-    top: 3px;
-    width: 30px;
-    display: block;
-    font-size: 18px;
+  .primekit-ele-single-blog-area:not(.primekit-ele-single-first) {
+    gap: 15px;
   }
 }
 
+/*---------------------------
+    Responsive css for medium screen
+-----------------------------*/
+@media only screen and (max-width: 1100px) {
+  /*------------------------
+    * Blog
+    --------------------------*/
+  .primekit-ele-blogs {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .primekit-ele-single-blog-thumbnail img {
+    width: 100%;
+  }
+
+  .primekit-ele-single-first .primekit-ele-single-blog-content-area {
+    width: 100%;
+    margin-top: 10px;
+    position: static;
+  }
+
+  .primekit-ele-single-blog-rem-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .primekit-ele-single-blog-area:not(.primekit-ele-single-first) {
+    flex-direction: column;
+  }
+
+  .primekit-ele-single-blog-thumbnail {
+    max-width: 100%;
+  }
+  .primekit-ele-single-blog-rem-posts .primekit-ele-single-blog-thumbnail {
+    height: auto;
+  }
+
+  .primekit-ele-single-blog-content-area {
+    width: 100%;
+    padding: 10px 15px;
+  }
+
+  .primekit-ele-blogs-area {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .primekit-ele-related-post ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*---------------------------
+    Responsive css for small desktop screen
+-----------------------------*/
+@media only screen and (max-width: 1000px) {
+  /*------------------------
+    * Modren Blog
+    --------------------------*/
+  .primekit-modren-posts-styl2-wrapper {
+    flex-direction: column;
+  }
+  .primekit-fetch-posts-grid.primekit-fetch-posts-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+
+/*---------------------------
+    Responsive css for tab
+-----------------------------*/
 @media only screen and (max-width: 768px) {
+  /*------------------------
+    * Pricing table
+    --------------------------*/
+  .primekit-ele-pricing-pack-name {
+    min-height: 50px;
+    width: 200px;
+  }
+
+  .primekit-ele-pricing-pack-preiod {
+    top: 80px;
+  }
+
+  .primekit-ele-pricing-header-strock {
+    margin-top: -102px;
+  }
+
+  .primekit-ele-pricing-table-footer a {
+    padding: 15px 29px;
+  }
+  .primekit-ele-pricing-table-type-standard .primekit-ele-pricing-pack-preiod {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* ---------------------------------------------
+ * Popup
+ * --------------------------------------------- */
+  .primekit-popup-overlay iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------------------------------------------
+ * Card Info
+ * --------------------------------------------- */
+  .primekit-card-style-two-area .primekit-card-info-wrap {
+    flex-direction: column !important;
+  }
+
+  /*------------------------
+    * Blog widget
+    --------------------------*/
+  .primekit-ele-blogs {
+    flex-direction: column;
+  }
+
+  .primekit-ele-single-first .primekit-ele-single-blog-thumbnail img {
+    width: 100%;
+  }
+
+  .primekit-ele-single-blog-content-area {
+    width: 100%;
+  }
+
+  .primekit-ele-single-blog-rem-posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /*----------------------------------------------
+    *  Blog List
+    * ---------------------------------------------*/
+
+  .primekit-ele-blog-list-thumb {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /*------------------------
+    * Testimonial
+    --------------------------*/
+  .primekit-testi-position {
+    position: unset !important;
+  }
+
+  /*------------------------
+    * Iconbox Three
+    --------------------------*/
+  .primekit-icon-box-three-pos {
+    position: unset !important;
+  }
+
+  /*----------------------------------------------
+ *  Author Bio
+ * ---------------------------------------------*/
+
+  .primekit-ele-author-bio {
+    column-gap: 10px;
+    flex-direction: column;
+  }
+
+  .primekit-ele-authorleft {
+    width: 100%;
+  }
+
+  .primekit-ele-authorright {
+    width: 100%;
+  }
+
+  /*----------------------------------------------
+    *  Related Post
+    * ---------------------------------------------*/
+  .primekit-ele-related-post ul li {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+  }
+
   /*-------------------------
     * Blog Grid
     ---------------------------*/
@@ -113,49 +242,8 @@
   }
 
   /*----------------------------------------------
-* Blog List
-* ---------------------------------------------*/
-
-  .primekit-ele-blog-list-thumb {
-    float: none;
-    width: 100%;
-    margin-right: 0;
-  }
-
-  /*----------------------------------------------
- * Author Bio
- * ---------------------------------------------*/
-
-  .primekit-ele-author-bio {
-    column-gap: 10px;
-    flex-direction: column;
-  }
-
-  .primekit-ele-authorleft {
-    width: 100%;
-  }
-
-  .primekit-ele-authorright {
-    width: 100%;
-  }
-
-  /* ---------------------------------------------
- * Card Info
- * --------------------------------------------- */
-  .primekit-card-style-two-area .primekit-card-info-wrap {
-    flex-direction: column !important;
-  }
-
-  /*------------------------
-    * Testimonial
-    --------------------------*/
-  .primekit-testi-position {
-    position: unset !important;
-  }
-
-  /*----------------------------------------------
-* Modern Post Grid
-* ---------------------------------------------*/
+    *  Modern Post Grid
+    * ---------------------------------------------*/
   .primekit-modren-posts-grid-wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -170,10 +258,8 @@
   .primekit-modren-single-post {
     margin-bottom: 20px;
   }
-  .primekit-modren-posts-grid-wrapper
-    > .primekit-modren-single-post:nth-child(2),
-  .primekit-modren-posts-grid-wrapper
-    > .primekit-modren-single-post:nth-child(3) {
+  .primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(2),
+  .primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(3) {
     grid-column: auto;
   }
   .primekit-modren-single-post-title h3 a {
@@ -187,7 +273,50 @@
   }
 }
 
+/*---------------------------
+    Responsive css for mobile
+-----------------------------*/
 @media only screen and (max-width: 480px) {
+  /* Global */
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  /*------------------------
+    * Pricing table
+    --------------------------*/
+  .primekit-ele-pricing-table-footer a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .primekit-ele-pricing-table-type-standard .primekit-ele-pricing-pack-preiod {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .primekit-ele-pricing-pack-preiod h3 {
+    font-size: 25px;
+  }
+
+  /*------------------------
+    * Contact Form 7 widget
+    --------------------------*/
+  .primekit-ele-contact-field-row {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  #primekit-ele-contact-field.primekit-ele-contact-field p {
+    margin-bottom: 0;
+  }
+
+  .primekit-ele-contact-field {
+    margin-bottom: 10px;
+  }
+
+  #primekit-ele-contact-field.primekit-ele-contact-form-submit {
+    flex-basis: 0;
+  }
+
   /*------------------------
     * Blog Fancy widget
     --------------------------*/
@@ -218,11 +347,31 @@
   .primekit-testimonial-slider-nav-bar.primekit-test-nav-hide-in-mobile {
     display: none;
   }
+
+  /*-------------------------
+    * Tabs
+    ---------------------------*/
+  .primekit-var-tabs .e-n-tabs-heading > button[aria-selected="true"]:after {
+    display: none;
+  }
+
+  .primekit-single-icon-box-three-area {
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  /*-------------------------
+    * Related Post
+    ---------------------------*/
+  .primekit-ele-related-post ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   /*------------------------
   * Morden Blog style
   -------------------------*/
-  .primekit-modren-last-three-posts-wrapper
-    .primekit-modren-style2-single-post {
+  .primekit-modren-last-three-posts-wrapper .primekit-modren-style2-single-post {
     gap: 30px;
     flex-direction: column;
   }
@@ -249,5 +398,17 @@
   }
   .primekit-modren-single-post {
     margin-bottom: 0;
+  }
+
+  /*------------------------
+  * Fetch Posts
+  -------------------------*/
+  .primekit-fetch-single-post {
+    flex-direction: column;
+  }
+  .primekit-fetch-posts-grid.primekit-fetch-posts-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
   }
 }
