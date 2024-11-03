@@ -17,8 +17,8 @@ class Settings
 
     public function __construct()
     {
-        add_action('admin_menu', [$this, 'register_submenu_page'], 99);   
-        
+        add_action('admin_menu', [$this, 'register_submenu_page'], 99);
+
         $this->classes_initalize();
     }
 
@@ -27,7 +27,7 @@ class Settings
         add_submenu_page(
             'primekit_home',
             esc_html__('PrimeKit Addons Settings', 'primekit-addons'),
-            esc_html__('Settings','primekit-addons'),
+            esc_html__('Settings', 'primekit-addons'),
             'manage_options',
             'primekit_settings',
             [$this, 'render_settings_page'],
@@ -40,6 +40,7 @@ class Settings
         // Display tab navigation
         ?>
         <div class="wrap">
+            <?php settings_errors(); ?>
             <h1><?php echo esc_html__('PrimeKit Addons Settings', 'primekit-addons'); ?></h1>
             <nav class="nav-tab-wrapper">
                 <a href="?page=primekit_settings&tab=general"
@@ -50,23 +51,25 @@ class Settings
                     class="nav-tab <?php echo $this->get_active_tab() === 'cost_estimation' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Cost Estimation', 'primekit-addons'); ?></a>
             </nav>
             <div class="tab-content">
-                <?php
-                $active_tab = $this->get_active_tab();
+                <form method="post" action="options.php">
+                    <?php
+                    $active_tab = $this->get_active_tab();
 
-                if ($active_tab == 'general') {
-                    settings_fields('primekit_general_options');
-                    do_settings_sections('primekit_general_settings');
-                } elseif ($active_tab == 'mailchimp') {
-                    settings_fields('primekit_mailchimp_options');
-                    do_settings_sections('primekit_mailchimp_settings');
-                } elseif ($active_tab == 'cost_estimation') {
-                    settings_fields('primekit_cost_estimation_options');
-                    do_settings_sections('primekit_cost_estimation_settings');
-                }
+                    if ($active_tab == 'general') {
+                        settings_fields('primekit_general_options');
+                        do_settings_sections('primekit_general_settings');
+                    } elseif ($active_tab == 'mailchimp') {
+                        settings_fields('primekit_mailchimp_options');
+                        do_settings_sections('primekit_mailchimp_settings');
+                    } elseif ($active_tab == 'cost_estimation') {
+                        settings_fields('primekit_cost_estimation_options');
+                        do_settings_sections('primekit_cost_estimation_settings');
+                    }
 
-                wp_nonce_field('primekit_save_settings', 'primekit_nonce');
-                submit_button();
-                ?>
+                    wp_nonce_field('primekit_save_settings', 'primekit_nonce');
+                    submit_button();
+                    ?>
+                </form>
             </div>
         </div>
         <?php
