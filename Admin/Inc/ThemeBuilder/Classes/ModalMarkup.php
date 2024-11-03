@@ -28,7 +28,7 @@ class ModalMarkup
                         <!--Header-->
                         <header class="modal__header primekit-modal-header">
                             <h2 class="modal__title primekit-modal-heading" id="primekit-tb-modal-title">
-                                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../assets/img/addons-icon.svg'); ?>"
+                                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../Assets/img/addons-icon.svg'); ?>"
                                     alt="">
                                 <?php esc_html_e('PrimeKit Theme Builder', 'primekit-addons'); ?>
                             </h2>
@@ -115,7 +115,7 @@ class ModalMarkup
                         <!--Header-->
                         <header class="modal__header primekit-modal-header">
                             <h2 class="modal__title primekit-modal-heading" id="primekit-tb-editor-modal-title">
-                                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../assets/img/addons-icon.svg'); ?>"
+                                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../Assets/img/addons-icon.svg'); ?>"
                                     alt="">
                                 <?php esc_html_e('Template Elements Condition', 'primekit-addons'); ?>
                             </h2>
