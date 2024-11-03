@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
             mailchimp_list_id: $('#primekit-mailchimp-list').val()
         };
 
-        //console.log(formData);
+        $('.primekit-mailchimp-response').html('<p>Processing...</p>');
 
         $.ajax({
             url: PrimekitMailchimpAjax.ajax_url,
@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
             dataType: 'json',
             data: formData,
             success: function(response) {
-                if (response.success) {
+                if (response.success) {                    
                     $('.primekit-mailchimp-response').html('<p>' + response.data.message + '</p>');
                 } else {
                     $('.primekit-mailchimp-response').html('<p>' + response.data.message + '</p>');
