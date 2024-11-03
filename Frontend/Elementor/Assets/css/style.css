@@ -1810,3 +1810,16 @@ overflow: hidden;
   grid-row: auto; 
   height: 100%;
 }
+
+/*-----------------------------
+ * Comment Form
+ * ----------------------------*/
+ .primekit-ele-comment-form .reply a {
+  padding: 7px 12px;
+  border-radius: 4px;
+}
+
+.primekit-ele-comment-form .form-submit input[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 4px;
+}
