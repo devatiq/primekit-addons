@@ -18,8 +18,8 @@ class PrimeKit {
             'manage_options',
             'primekit_home',
             [$this, 'render_settings_page'],
-            PRIMEKIT_ADMIN_ASSETS . '/img/icon.svg',
-            21
+            PRIMEKIT_ADMIN_ASSETS . '/img/icon.svg',   
+            22       
         );
     }
 
