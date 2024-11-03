@@ -73,7 +73,7 @@ class ThemeBuilder
     public function primekit_override_header()
     {
         if (self::should_display_template('header')) {
-            require_once PRIMEKIT_TB_PATH . '/inc/templates/primekit-header.php';
+            require_once PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-header.php';
             $templates = [];
             $templates[] = 'header.php';
             remove_all_actions('wp_head');
@@ -175,7 +175,7 @@ class ThemeBuilder
     public function primekit_override_footer()
     {
         if (self::should_display_template('footer')) {
-            require_once PRIMEKIT_TB_PATH . '/inc/templates/primekit-footer.php';
+            require_once PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-footer.php';
             $templates = [];
             $templates[] = 'footer.php';
             remove_all_actions('wp_footer');

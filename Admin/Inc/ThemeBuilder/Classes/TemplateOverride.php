@@ -39,9 +39,9 @@ class TemplateOverride
             if ($template_id) {
                 // Check if the custom template is built with Elementor
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . '/inc/templates/primekit-single.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-single.php'; 
                 } else {
-                    $custom_single_template = PRIMEKIT_TB_PATH . '/inc/templates/default-template.php';
+                    $custom_single_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_single_template)) {
                         return $custom_single_template;
                     }
@@ -62,9 +62,9 @@ class TemplateOverride
 
             if ($template_id) {
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . '/inc/templates/primekit-page.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-page.php'; 
                 } else {
-                    $custom_single_template = PRIMEKIT_TB_PATH . '/inc/templates/default-template.php';
+                    $custom_single_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_single_template)) {
                         return $custom_single_template;
                     }
@@ -86,9 +86,9 @@ class TemplateOverride
             if ($template_id) {
                 // Check if the custom template is built with Elementor
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . '/inc/templates/primekit-404.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-404.php'; 
                 } else {
-                    $custom_404_template = PRIMEKIT_TB_PATH . '/inc/templates/default-template.php';
+                    $custom_404_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_404_template)) {
                         return $custom_404_template;
                     }
@@ -112,10 +112,10 @@ class TemplateOverride
                 // Check if the custom template is built with Elementor
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
                     // Load a blank template to allow Elementor to render its content
-                    return PRIMEKIT_TB_PATH . '/inc/templates/primekit-search.php';
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-search.php';
                 } else {
                     // Fallback: Use a custom template if not built with Elementor
-                    $custom_search_template = PRIMEKIT_TB_PATH . '/inc/templates/default-template.php';
+                    $custom_search_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_search_template)) {
                         return $custom_search_template;
                     }
@@ -138,9 +138,9 @@ class TemplateOverride
             if ($template_id) {
                 // Check if the custom template is built with Elementor
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . '/inc/templates/primekit-archive.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-archive.php'; 
                 } else {
-                    $custom_archive_template = PRIMEKIT_TB_PATH . '/inc/templates/default-template.php';
+                    $custom_archive_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_archive_template)) {
                         return $custom_archive_template;
                     }
