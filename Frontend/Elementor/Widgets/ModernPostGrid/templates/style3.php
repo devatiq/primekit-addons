@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Modern Post Grid style 3
+ * Render View for Modern Post Grid style 3
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly

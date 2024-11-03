@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Contact form 7 Widget.
+ * Render View file for PrimeKit Contact form 7 Widget.
  */
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly

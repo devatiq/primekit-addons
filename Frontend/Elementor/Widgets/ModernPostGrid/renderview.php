@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Modern Post Grid
+ * Render View for PrimeKit Modern Post Grid
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
