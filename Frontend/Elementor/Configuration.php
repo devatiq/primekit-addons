@@ -243,6 +243,7 @@ class Configuration{
             'primekit_site_title_tagline_field' => 'SiteTitle\Main',
             'primekit_testi_caro_widget_field' => 'Testimonials\Main',
             'primekit_wp_menu_widget_field' => 'WpMenu\Main',
+            'primekit_posts_slider_field' => 'PostsSlider\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

@@ -75,6 +75,9 @@ class Assets{
          wp_register_script('primekit-wp-menu-js', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-wp-menu.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('primekit-swiper', PRIMEKIT_ELEMENTOR_ASSETS . "/js/swiper-bundle.min.js", array('jquery'), PRIMEKIT_VERSION, true);
          wp_register_script('primekit-testimonial', PRIMEKIT_ELEMENTOR_ASSETS . "/js/primekit-testimonial.js", array('jquery'), PRIMEKIT_VERSION, true);
+        wp_register_script('primekit-template-slider', PRIMEKIT_ELEMENTOR_ASSETS . "/js/template-slider.js", array('jquery'), PRIMEKIT_VERSION, true);
+        wp_register_script('primekit-posts-sliders', PRIMEKIT_ELEMENTOR_ASSETS . "/js/posts-sliders.js", array('jquery'), PRIMEKIT_VERSION, true);
+
     }
 
    
@@ -97,6 +100,8 @@ class Assets{
         }
         wp_register_style('primekit-swiper', PRIMEKIT_ELEMENTOR_ASSETS . "/css/swiper-bundle.min.css", array(), PRIMEKIT_VERSION);
         wp_register_style('primekit-shape-animation', PRIMEKIT_ELEMENTOR_ASSETS . "/css/shape-animation.css", array(), PRIMEKIT_VERSION);
+        
+
     }
 
     /**
@@ -105,7 +110,9 @@ class Assets{
      * @since 1.0.0
      */
     public function primekit_elementor_editor_assets() {
-        wp_enqueue_style( 'primekit-elementor-editor', PRIMEKIT_ELEMENTOR_ASSETS . "/css/elementor-editor.css", array(), PRIMEKIT_VERSION, 'all' );
+        wp_enqueue_style( 'primekit-elementor-editor', PRIMEKIT_ELEMENTOR_ASSETS . "/css/elementor-editor.css", array(), PRIMEKIT_VERSION, 'all' );              
+       
+              
     }
 
 }
