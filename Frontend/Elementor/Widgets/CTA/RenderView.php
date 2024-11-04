@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC CTA widget
+ * Render View file for CTA widget
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
