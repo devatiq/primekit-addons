@@ -2649,3 +2649,28 @@ background-color: #2811f3;
   border: none;
   color: #999;
 }
+
+
+/*----------------------------------------------
+ * Gravity Form
+ * ---------------------------------------------*/
+ .gravity-forms-missing-notice {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid #d39e00;
+  color: #684e00;
+  background-color: #ffe799;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+}
+
+.abcbiz-gravity-form-label-hide .gfield_label {
+  display: none !important;
+}
+.abcbiz-gravity-form-sub-label-hide .gform-field-label:not(.gfield_label) {
+  display: none !important;
+}
