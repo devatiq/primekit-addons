@@ -2756,3 +2756,63 @@ background-color: #2811f3;
     opacity: 1;
   }
   
+
+/*----------------------------------------------
+ * Image Hover
+ * ---------------------------------------------*/
+.primekit-elementor-img-hover-area {
+  position: relative;
+}
+
+.primekit-elementor-img-hover-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.primekit-elementor-img-hover-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.primekit-elementor-img-hover-item:hover img {
+  transform: scale(1.1);
+}
+
+.primekit-img-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.primekit-elementor-img-hover-item:hover .primekit-img-hover-overlay {
+  opacity: 1;
+}
+
+.primekit-img-hover-title,
+.primekit-img-hover-subtitle {
+  text-align: left;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.primekit-img-hover-title {
+  font-size: 1.5em;
+  position: relative;
+}
+
+.primekit-img-hover-subtitle {
+  font-size: 1em;
+  color: #ccc;
+  position: relative;
+}

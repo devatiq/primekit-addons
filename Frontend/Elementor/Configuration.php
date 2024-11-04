@@ -261,6 +261,7 @@ class Configuration{
             'primekit_flip_box_widget_field' => 'FlipBox\Main',
             'primekit_gravity_form_field' => 'GravityForms\Main',
             'primekit_image_gallery_field' => 'ImageGallery\Main',
+            'primekit_img_hover_widget_field' => 'ImgHover\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-04T07:12:55+00:00\n"
+"POT-Creation-Date: 2024-11-04T08:33:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
@@ -187,10 +187,12 @@ msgstr ""
 #: Admin/Inc/ThemeBuilder/Classes/PostTypes.php:41
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:102
 #: Frontend/Elementor/Widgets/BlogList/Main.php:87
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:19
 msgid "Featured Image"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:204
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:23
 msgid "Flip Box"
 msgstr ""
 
@@ -213,6 +215,7 @@ msgid "Page Title"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:249
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:220
 msgid "Popup"
 msgstr ""
 
@@ -316,10 +319,12 @@ msgid "Archive Title"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:465
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:50
 msgid "Gravity Form"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:474
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:23
 msgid "Image Gallery"
 msgstr ""
 
@@ -349,6 +354,7 @@ msgid "Popular Posts"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:528
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:23
 msgid "Fetch Posts"
 msgstr ""
 
@@ -450,6 +456,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:51
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:49
 #: Frontend/Elementor/Widgets/CountDown/Main.php:52
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:56
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:191
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:103
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:68
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:52
@@ -457,6 +465,8 @@ msgid "Settings"
 msgstr ""
 
 #: Admin/Inc/Dashboard/Settings/Settings.php:47
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:140
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:198
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:171
 msgid "General"
 msgstr ""
@@ -548,6 +558,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:117
 #: Frontend/Elementor/Widgets/Counter/Main.php:64
 #: Frontend/Elementor/Widgets/IconBox/Main.php:96
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:138
 msgid "Title"
 msgstr ""
 
@@ -913,12 +924,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:66
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:265
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:71
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:72
 msgid "Image"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:74
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:84
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:100
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:93
 msgid "Choose Image"
 msgstr ""
 
@@ -1071,11 +1084,26 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:768
 #: Frontend/Elementor/Widgets/DualButton/Main.php:434
 #: Frontend/Elementor/Widgets/DualButton/Main.php:710
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:180
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:325
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:515
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:681
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:127
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:295
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:582
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:743
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:808
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:252
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:503
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:626
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:792
 #: Frontend/Elementor/Widgets/IconBox/Main.php:266
 #: Frontend/Elementor/Widgets/IconBox/Main.php:305
 #: Frontend/Elementor/Widgets/IconBox/Main.php:524
 #: Frontend/Elementor/Widgets/IconBox/Main.php:602
 #: Frontend/Elementor/Widgets/IconBox/Main.php:818
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:195
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:267
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:430
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:517
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:635
@@ -1088,6 +1116,7 @@ msgid "Border Radius"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:168
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:326
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:338
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:500
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:258
@@ -1107,6 +1136,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:793
 #: Frontend/Elementor/Widgets/DualButton/Main.php:449
 #: Frontend/Elementor/Widgets/DualButton/Main.php:724
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:528
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:695
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:691
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:1006
 #: Frontend/Elementor/Widgets/IconBox/Main.php:252
 #: Frontend/Elementor/Widgets/IconBox/Main.php:464
 #: Frontend/Elementor/Widgets/IconBox/Main.php:685
@@ -1125,6 +1158,17 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:866
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:892
 #: Frontend/Elementor/Widgets/CTA/Main.php:912
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:149
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:361
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:547
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:577
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:713
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:744
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:788
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:218
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:712
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:744
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:1061
 #: Frontend/Elementor/Widgets/IconBox/Main.php:854
 #: Frontend/Elementor/Widgets/IconBox/Main.php:883
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:628
@@ -1149,6 +1193,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:827
 #: Frontend/Elementor/Widgets/DualButton/Main.php:484
 #: Frontend/Elementor/Widgets/DualButton/Main.php:758
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:558
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:725
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:723
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:1041
 #: Frontend/Elementor/Widgets/IconBox/Main.php:291
 #: Frontend/Elementor/Widgets/IconBox/Main.php:541
 #: Frontend/Elementor/Widgets/IconBox/Main.php:714
@@ -1168,6 +1216,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:857
 #: Frontend/Elementor/Widgets/DualButton/Main.php:532
 #: Frontend/Elementor/Widgets/DualButton/Main.php:807
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:754
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:798
 msgid "Border Color"
 msgstr ""
 
@@ -1176,6 +1226,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:350
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:771
 #: Frontend/Elementor/Widgets/CTA/Main.php:703
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:251
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:484
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:577
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:468
 msgid "Width"
 msgstr ""
@@ -1190,7 +1243,17 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:385
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:828
 #: Frontend/Elementor/Widgets/DualButton/Main.php:425
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:172
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:293
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:507
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:673
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:243
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:494
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:616
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:771
 #: Frontend/Elementor/Widgets/IconBox/Main.php:812
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:209
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:281
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:446
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:509
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:180
@@ -1203,6 +1266,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:48
 #: Frontend/Elementor/Widgets/CTA/Main.php:49
 #: Frontend/Elementor/Widgets/DualButton/Main.php:87
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:61
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:42
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:42
 msgid "Contents"
@@ -1292,6 +1356,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Counter/Main.php:102
 #: Frontend/Elementor/Widgets/CTA/Main.php:149
 #: Frontend/Elementor/Widgets/DualButton/Main.php:52
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:603
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:55
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:51
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:80
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:52
@@ -1326,6 +1392,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/DualButton/Main.php:101
 #: Frontend/Elementor/Widgets/DualButton/Main.php:169
 #: Frontend/Elementor/Widgets/DualButton/Main.php:300
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:230
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:607
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:60
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:205
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:643
 #: Frontend/Elementor/Widgets/IconBox/Main.php:158
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:85
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:86
@@ -1363,6 +1434,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:267
 #: Frontend/Elementor/Widgets/CTA/Main.php:506
 #: Frontend/Elementor/Widgets/DualButton/Main.php:68
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:611
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:64
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:647
 #: Frontend/Elementor/Widgets/IconBox/Main.php:162
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:89
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:90
@@ -1400,6 +1474,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/DualButton/Main.php:173
 #: Frontend/Elementor/Widgets/DualButton/Main.php:232
 #: Frontend/Elementor/Widgets/DualButton/Main.php:304
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:226
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:615
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:68
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:209
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:651
 #: Frontend/Elementor/Widgets/IconBox/Main.php:166
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:93
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:94
@@ -1604,8 +1683,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:271
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:302
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:551
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:358
 #: Frontend/Elementor/Widgets/IconBox/Main.php:841
 #: Frontend/Elementor/Widgets/IconBox/Main.php:870
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:338
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:130
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:424
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:458
@@ -1633,6 +1714,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:541
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:819
 #: Frontend/Elementor/Widgets/DualButton/Main.php:377
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:465
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:630
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:346
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:472
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:568
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:456
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:736
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:488
@@ -1679,6 +1765,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/DualButton/Main.php:583
 #: Frontend/Elementor/Widgets/DualButton/Main.php:746
 #: Frontend/Elementor/Widgets/DualButton/Main.php:780
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:339
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:627
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:481
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:552
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:695
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:388
@@ -1694,6 +1783,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:60
 #: Frontend/Elementor/Widgets/Counter/Main.php:154
 #: Frontend/Elementor/Widgets/Counter/Main.php:305
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:285
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:832
 #: Frontend/Elementor/Widgets/IconBox/Main.php:691
 #: Frontend/Elementor/Widgets/IconBox/Main.php:720
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:377
@@ -1708,6 +1799,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:243
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:74
 #: Frontend/Elementor/Widgets/Counter/Main.php:167
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:276
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:845
 #: Frontend/Elementor/Widgets/IconBox/Main.php:663
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:369
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:222
@@ -1738,6 +1831,16 @@ msgstr ""
 #: Frontend/Elementor/Widgets/DualButton/Main.php:560
 #: Frontend/Elementor/Widgets/DualButton/Main.php:732
 #: Frontend/Elementor/Widgets/DualButton/Main.php:766
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:534
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:565
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:701
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:731
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:775
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:786
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:698
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:730
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:1013
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:1048
 #: Frontend/Elementor/Widgets/IconBox/Main.php:701
 #: Frontend/Elementor/Widgets/IconBox/Main.php:732
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:594
@@ -1781,6 +1884,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Counter/Main.php:83
 #: Frontend/Elementor/Widgets/DualButton/Main.php:152
 #: Frontend/Elementor/Widgets/DualButton/Main.php:283
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:71
 #: Frontend/Elementor/Widgets/IconBox/Main.php:88
 #: Frontend/Elementor/Widgets/IconBox/Main.php:342
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:153
@@ -1797,6 +1901,8 @@ msgid "Button Text"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:79
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:234
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:213
 msgid "Top"
 msgstr ""
 
@@ -1809,6 +1915,13 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:119
 #: Frontend/Elementor/Widgets/CTA/Main.php:375
 #: Frontend/Elementor/Widgets/CTA/Main.php:465
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:125
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:107
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:120
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:133
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:169
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:183
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:153
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:123
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:199
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:241
@@ -1831,6 +1944,13 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:120
 #: Frontend/Elementor/Widgets/CTA/Main.php:376
 #: Frontend/Elementor/Widgets/CTA/Main.php:466
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:126
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:108
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:121
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:134
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:170
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:184
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:154
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:124
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:200
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:242
@@ -1877,6 +1997,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:218
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:457
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:863
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:415
 msgid "Hover Background Color"
 msgstr ""
@@ -1893,6 +2014,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/DualButton/Main.php:516
 #: Frontend/Elementor/Widgets/DualButton/Main.php:637
 #: Frontend/Elementor/Widgets/DualButton/Main.php:791
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:380
 #: Frontend/Elementor/Widgets/IconBox/Main.php:485
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:611
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:677
@@ -1922,6 +2044,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Counter/Main.php:210
 #: Frontend/Elementor/Widgets/DualButton/Main.php:337
 #: Frontend/Elementor/Widgets/DualButton/Main.php:614
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:352
 #: Frontend/Elementor/Widgets/IconBox/Main.php:350
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:252
 msgid "Icon Size"
@@ -1929,6 +2052,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:335
 #: Frontend/Elementor/Widgets/CountDown/Main.php:776
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:829
 msgid "Button Spacing"
 msgstr ""
 
@@ -2015,6 +2139,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:227
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:117
 #: Frontend/Elementor/Widgets/Counter/Main.php:133
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:84
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:167
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:231
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:296
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:122
@@ -2140,6 +2266,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:197
 #: Frontend/Elementor/Widgets/BlogList/Main.php:182
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:592
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:488
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:438
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:261
@@ -2209,6 +2336,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogList/Main.php:362
 #: Frontend/Elementor/Widgets/CountDown/Main.php:764
 #: Frontend/Elementor/Widgets/CTA/Main.php:782
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:777
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:995
 msgid "Button Typography"
 msgstr ""
 
@@ -2242,6 +2371,16 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:435
 #: Frontend/Elementor/Widgets/DualButton/Main.php:386
 #: Frontend/Elementor/Widgets/DualButton/Main.php:662
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:159
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:313
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:473
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:637
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:327
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:614
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:229
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:516
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:601
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:819
 #: Frontend/Elementor/Widgets/IconBox/Main.php:230
 #: Frontend/Elementor/Widgets/IconBox/Main.php:799
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:413
@@ -2306,6 +2445,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogList/Main.php:435
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:429
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:382
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:93
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:229
 msgid "Image Width"
 msgstr ""
 
@@ -2330,6 +2471,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:98
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:113
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:198
+#: Frontend/Elementor/Widgets/FetchPosts/renderview.php:97
 #: Frontend/Elementor/Widgets/IconBox/Main.php:125
 msgid "Read More"
 msgstr ""
@@ -2348,6 +2490,10 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:149
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:564
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:193
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:651
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:529
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:176
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:324
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:302
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:220
@@ -2420,10 +2566,12 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:383
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:413
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:248
 msgid "Image Height"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:406
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:478
 msgid "Image Border Radius"
 msgstr ""
 
@@ -2531,6 +2679,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:382
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:407
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:806
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:301
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:667
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:806
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:531
 msgid "Margin"
 msgstr ""
@@ -2613,6 +2764,7 @@ msgid "Image Position"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:142
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:81
 msgid "Choose Icon"
 msgstr ""
 
@@ -2639,6 +2791,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:185
 #: Frontend/Elementor/Widgets/CTA/Main.php:80
 #: Frontend/Elementor/Widgets/IconBox/Main.php:109
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:140
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:102
 msgid "Description"
 msgstr ""
@@ -2649,6 +2802,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:206
 #: Frontend/Elementor/Widgets/CountDown/Main.php:210
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:172
 #: Frontend/Elementor/Widgets/IconBox/Main.php:140
 msgid "Button Link"
 msgstr ""
@@ -2663,6 +2817,9 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:311
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:434
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:266
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:681
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:782
 msgid "Box Shadow"
 msgstr ""
 
@@ -2724,6 +2881,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:457
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:644
 #: Frontend/Elementor/Widgets/CTA/Main.php:584
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:504
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:641
 msgid "Heading Typography"
 msgstr ""
 
@@ -2748,6 +2907,7 @@ msgid "Button Alignment"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:1054
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:980
 msgid "Button Padding"
 msgstr ""
 
@@ -2839,6 +2999,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:466
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:654
 #: Frontend/Elementor/Widgets/CTA/Main.php:593
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:513
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:650
 msgid "Heading Color"
 msgstr ""
 
@@ -2930,6 +3092,7 @@ msgid "Contact Form 7 Setting"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:79
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:82
 msgid "Select Form"
 msgstr ""
 
@@ -2950,12 +3113,14 @@ msgid "Label Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:126
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:416
 msgid "Input Fields"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:135
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:274
 #: Frontend/Elementor/Widgets/CTA/Main.php:733
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:273
 msgid "Height"
 msgstr ""
 
@@ -2976,10 +3141,12 @@ msgid "Textarea"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:350
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:558
 msgid "Submit Button"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:444
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:850
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:428
 msgid "Hover Text Color"
 msgstr ""
@@ -3237,6 +3404,7 @@ msgid "Page #3"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:252
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:81
 msgid "Options"
 msgstr ""
 
@@ -3430,6 +3598,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:737
 #: Frontend/Elementor/Widgets/CTA/Main.php:695
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:456
 #: Frontend/Elementor/Widgets/IconBox/Main.php:750
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:404
 msgid "Button"
@@ -3440,10 +3609,12 @@ msgid "Get Cost Estimation"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CostEstimation/RenderView.php:118
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:94
 msgid "3"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CostEstimation/RenderView.php:127
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:92
 msgid "1"
 msgstr ""
 
@@ -3530,6 +3701,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/CountDown/Main.php:249
 #: Frontend/Elementor/Widgets/CTA/Main.php:169
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:89
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:209
 msgid "Column"
 msgstr ""
@@ -3544,6 +3716,8 @@ msgid "Label Position"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CountDown/Main.php:356
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:238
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:217
 msgid "Bottom"
 msgstr ""
 
@@ -3623,6 +3797,7 @@ msgid "Button Hover Background Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CountDown/Main.php:800
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:944
 msgid "Button Border Radius"
 msgstr ""
 
@@ -3839,10 +4014,18 @@ msgid "Heading Bottom Spacing"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CTA/Main.php:644
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:551
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:688
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:298
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:867
 msgid "Description Typography"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CTA/Main.php:653
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:560
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:697
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:307
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:854
 msgid "Description Color"
 msgstr ""
 
@@ -3851,10 +4034,12 @@ msgid "Description Bottom Spacing"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CTA/Main.php:759
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:935
 msgid "Button Border"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CTA/Main.php:814
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:1026
 msgid "Button Background"
 msgstr ""
 
@@ -3863,6 +4048,7 @@ msgid "Ribbon Style"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/DualButton/Main.php:59
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:639
 msgid "Button Position"
 msgstr ""
 
@@ -3920,9 +4106,382 @@ msgstr ""
 msgid "Right Button"
 msgstr ""
 
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:65
+msgid "Layout Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:69
+msgid "List"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:70
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:72
+msgid "Grid"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:79
+msgid "Columns"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:85
+msgid "1 Column"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:86
+msgid "2 Columns"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:87
+msgid "3 Columns"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:88
+msgid "4 Columns"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:102
+msgid "Number of Posts"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:111
+msgid "External Website URL"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:114
+msgid "https://example.com"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:115
+msgid "Enter the full URL of the external WordPress website you want to fetch posts from. Make sure the site uses the default WordPress REST API and includes a valid URL with HTTP/HTTPS protocol. Example: https://example.com. Do not include any query parameters, as the plugin will handle them automatically."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:123
+#: Frontend/Elementor/Widgets/PostsSlider/Main.php:142
+#: Frontend/Elementor/Widgets/TemplateSlider/Main.php:173
+msgid "Show Pagination"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:214
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:627
+msgid "Thumbnail"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:222
+#: Frontend/Elementor/Widgets/FeturedImg/Main.php:46
+msgid "Image Alignment"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:340
 #: Frontend/Elementor/Widgets/IconBox/Main.php:51
 #: Frontend/Elementor/Widgets/IconBox/Main.php:624
 msgid "Content"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:348
+msgid "Category Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:367
+msgid "Category Background"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:377
+msgid "Category Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:385
+msgid "Category Padding"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:397
+msgid "Post Title Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:410
+msgid "Post Title Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:418
+msgid "Post Date Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:431
+msgid "Post Excerpt Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:444
+msgid "Post Excerpt Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/Main.php:769
+msgid "Active"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/renderview.php:14
+msgid "Please enter a valid external website URL."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/renderview.php:27
+msgid "Failed to fetch posts from the external website."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FetchPosts/renderview.php:111
+msgid "No posts available from the external website."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FeturedImg/renderview.php:19
+msgid "No featured image found"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:57
+msgid "Front Contents"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:66
+msgid "Icon Type"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:70
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:141
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:151
+msgid "None"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:108
+msgid "Front Title"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:110
+msgid "Box front heading"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:118
+msgid "Front Description"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:121
+msgid "Front paragraph content goes here."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:132
+msgid "Back Contents"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:141
+msgid "Back Title"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:143
+msgid "Box back heading"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:151
+msgid "Back Description"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:154
+msgid "Back paragraph content goes here."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:162
+msgid "Back Button Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:164
+msgid "Click Here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:200
+msgid "Flipping Direction"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:228
+msgid "Box Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:251
+msgid "Box Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:274
+msgid "Box Background Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:319
+msgid "Front Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:397
+msgid "Icon Bottom Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:424
+msgid "Image Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:451
+msgid "Image Bottom Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:526
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:663
+msgid "Heading Bottom Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:606
+msgid "Back Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:710
+msgid "Description Bottom Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/FlipBox/Main.php:767
+msgid "Back Button Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:29
+msgid "Gravity Forms"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:59
+msgid "<strong>Note:</strong> Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:76
+msgid "No forms available"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:86
+msgid "Select the Gravity Form you want to use"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:95
+msgid "<strong>Gravity Forms is not installed or activated.</strong> Please install and activate Gravity Forms, then refresh the page to continue using this widget."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:105
+msgid "Display Form Title"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:118
+msgid "Display Form Description"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:131
+msgid "Enable AJAX"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:137
+msgid "Enable AJAX for the form submission."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:145
+msgid "Field Values (Optional)"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:148
+msgid "Pre-populate form fields with specific values (optional)."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:156
+msgid "Tab Index"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:159
+msgid "Set a specific tab index for the form fields (optional)."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:167
+msgid "Hide Form Label"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:173
+msgid "Hide the form label."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:181
+msgid "Hide Form Sub-Label"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:187
+msgid "Hide the form sub-label."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:208
+msgid "Styling Alert"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:209
+msgid "Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:321
+msgid "Input Fields Labels"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:374
+msgid "Sub Label Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:386
+msgid "Sub Label Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:402
+msgid "Required Sign Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:425
+msgid "Large Field Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:426
+msgid "it's only work for large fields"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:448
+msgid "Textarea Field Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:761
+msgid "Section Break"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:879
+msgid "Page Break"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:888
+msgid "Progressbar Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:900
+msgid "Active Progressbar Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:912
+msgid "Step Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:925
+msgid "Step Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:957
+msgid "Button Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:1089
+msgid "Gravity Forms is missing! Please install and activate Gravity Forms."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/renderview.php:38
+msgid "The selected form does not exist, is inactive, or has been removed."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/GravityForms/renderview.php:46
+msgid "No form selected"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/IconBox/Main.php:61
@@ -3990,6 +4549,70 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:673
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:353
 msgid "Content Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:69
+msgid "Add Images"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:93
+msgid "2"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:95
+msgid "4"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:96
+msgid "5"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:97
+msgid "6"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:114
+msgid "Choose the image size or set custom dimensions."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:125
+msgid "Popup Settings"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:133
+msgid "Show Title"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:135
+msgid "Choose which text to show in the popup."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:137
+msgid "Caption"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:139
+msgid "Alt"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:151
+msgid "Display Close Icon?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:155
+msgid "Enable or disable the close icon for the popup."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:290
+msgid "Close Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:302
+msgid "Close Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/ImageGallery/Main.php:318
+msgid "Popup Navigation"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:61
@@ -4147,10 +4770,6 @@ msgstr ""
 msgid "Choose how to customize the posts displayed on your grid. You can select to display posts by categories or specific posts."
 msgstr ""
 
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:151
-msgid "None"
-msgstr ""
-
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:152
 msgid "Display by Categories"
 msgstr ""
@@ -4241,10 +4860,6 @@ msgstr ""
 msgid "Use Random Color for Category Background color"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:627
-msgid "Thumbnail"
-msgstr ""
-
 #: Frontend/Elementor/Widgets/ModernPostGrid/templates/style1.php:86
 #: Frontend/Elementor/Widgets/ModernPostGrid/templates/style2.php:145
 #: Frontend/Elementor/Widgets/ModernPostGrid/templates/style3.php:87
@@ -4298,11 +4913,6 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:135
 msgid "Enables autoplay mode."
-msgstr ""
-
-#: Frontend/Elementor/Widgets/PostsSlider/Main.php:142
-#: Frontend/Elementor/Widgets/TemplateSlider/Main.php:173
-msgid "Show Pagination"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:148
@@ -4469,10 +5079,6 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:59
 msgid "Testimonial Setting"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/Testimonials/Main.php:72
-msgid "Grid"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:73
