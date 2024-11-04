@@ -274,6 +274,7 @@ class Configuration{
             'primekit_recent_post_widget_field' => 'RecentPost\Main',
             'primekit_related_post_widget_field' => 'RelatedPost\Main',
             'primekit_search_form_widget_field' => 'SearchForm\Main',
+            'primekit_search_icon_widget_field' => 'SearchIcon\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
