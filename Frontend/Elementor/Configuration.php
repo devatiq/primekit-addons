@@ -260,6 +260,7 @@ class Configuration{
             'primekit_feat_img_widget_field' => 'FeturedImg\Main',
             'primekit_flip_box_widget_field' => 'FlipBox\Main',
             'primekit_gravity_form_field' => 'GravityForms\Main',
+            'primekit_image_gallery_field' => 'ImageGallery\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
