@@ -2003,3 +2003,236 @@ button#primekit-mailchimp-inline-submit.primekit-mailchimp-inline-submit-text:ho
   color: #fff;
   cursor: pointer;
 }
+
+
+/*----------------------------------------------
+* PrimeKit Cost Estimation
+* ---------------------------------------------*/
+.primekit-pricing-calculator {
+  background-color: #F9F9F9;
+  border-radius: 16px 16px 16px 16px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #2C7973;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 40px 40px 40px 40px;
+}
+
+.primekit-pricing-cal-heading h2 {
+  color: #666666;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.primekit-pricing-label {
+  display: flex;
+  gap: 15px;
+}
+.primekit-pricing-label label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  font-family: 'Poppins';
+  font-style: normal;
+  cursor: pointer;
+}
+
+.primekit-pricing-label label:first-child {
+  margin-left: -5px;
+}
+
+.primekit-pricing-cal-pages-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.primekit-pricing-cal-pages-top h2 {
+  color: #666666;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.primekit-pricing-cal-pages-top {
+  color: #666666;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.primekit-pricing-cal-range-slider input {
+  width: 100%;
+  cursor: pointer;
+}
+
+.primekit-pricing-cal-range-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primekit-pricing-cal-range-bottom p {
+  margin-top: 6px;
+}
+
+.primekit-pricing-cal-total-price {
+  border-top: 1px solid #6666661A;
+  margin-top: 50px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primekit-pricing-cal-total-price p {
+  color: #666;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  width: inherit;
+  margin: 0;
+}
+
+.primekit-pricing-cal-total-price #cb-total-price {
+  white-space: pre;
+  word-break: break-all;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 120%;
+  color: #021C1E;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.primekit-pricing-cal-submit-button {
+  margin-top: 30px;
+  display: flex;
+}
+
+.primekit-pricing-cal-submit-button a {
+  color: #fff;
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 16px;
+  background-color: #c634f7;
+  border-radius: 4px 4px 4px 4px;
+  padding: 15px 10px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+.primekit-pricing-cal-submit-button a:hover {
+  background-color: #0649e7;
+  color: #fff;
+}
+
+.primekit-pricing-option input[type="radio"] {
+  display: none;
+}
+
+.primekit-pricing-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.primekit-cost-est-pack-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #4CAF50; 
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.primekit-pricing-option input[type="radio"]:checked + .primekit-cost-est-pack-radio {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+
+.primekit-pricing-option input[type="radio"]:checked + .primekit-cost-est-pack-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.primekit-pricing-label-text {
+  font-size: 16px;
+  color: #333; 
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+label.primekit-pricing-option {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.primekit-pricing-option:hover .primekit-cost-est-pack-radio {
+  border-color: #45a049; /
+}
+
+.primekit-pricing-option:hover .primekit-pricing-label-text {
+  color: #45a049;
+}
+
+/* Style for the range slider wrapper */
+.primekit-pricing-cal-range-slider {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Style for the range input slider */
+.primekit-range-slider {
+  --active-color: #0f4fff;  /* Default active color */
+  --inactive-color: #300bff;  /* Default inactive color */
+  --thumb-color: #ffee00;  /* Default thumb color */
+
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, var(--active-color) 50%, var(--inactive-color) 50%); /* Initial fill */
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.primekit-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--thumb-color);  /* Thumb color from variable */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.primekit-range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--thumb-color);  /* Thumb color from variable */
+  border-radius: 50%;
+  cursor: pointer;
+}

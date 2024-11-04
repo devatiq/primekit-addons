@@ -251,6 +251,7 @@ class Configuration{
             'primekit_comment_form_widget_field' => 'CommentForm\Main',
             'primekit_contact_info_widget_field' => 'ContactInfo\Main',
             'primekit_mailchimp_switch_field' => 'MailChimp\Main',
+            'primekit_cost_estimation_field' => 'CostEstimation\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
