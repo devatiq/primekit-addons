@@ -20,25 +20,19 @@ $click_to_move = $handle_move_type === 'on_click' ? 'true' : 'false';
 ?>
 
 <div class="primekit-elementor-before-after-image">
-    <div id="primekit-before-after-container" class="primekit-before-after-container-<?php echo esc_attr($id); ?>">
+    <div id="primekit-before-after-container-<?php echo esc_attr($id); ?>" class="primekit-before-after-container" data-primekit-config='<?php echo esc_html(wp_json_encode(array(
+         'default_offset_pct' => esc_attr($primekit_before_img_vis),
+         'before_label' => esc_html($primekit_before_label),
+         'after_label' => esc_html($primekit_after_label),
+         'orientation' => esc_html($primekit_bef_af_orientaion),
+         'no_overlay' => $no_overlay ? 'true' : 'false',
+         'move_slider_on_hover' => esc_attr($move_slider_on_hover),
+         'move_with_handle_only' => esc_attr($move_with_handle_only),
+         'click_to_move' => esc_attr($click_to_move),
+     ))); ?>'>
         <!-- The before image is first -->
         <img src="<?php echo esc_url($primekit_settings['primekit_elementor_before_img_upload']['url']); ?>" alt="<?php echo esc_attr($primekit_settings['primekit_elementor_before_img_alt']); ?>">
         <!-- The after image is last -->
         <img src="<?php echo esc_url($primekit_settings['primekit_elementor_after_img_upload']['url']); ?>" alt="<?php echo esc_attr($primekit_settings['primekit_elementor_after_img_alt']); ?>">
     </div>
 </div><!-- end before after image  -->
-
-<script>
-  jQuery(document).ready(function($) {
-    $(".primekit-before-after-container-<?php echo esc_attr($id); ?>").twentytwenty({
-      default_offset_pct: <?php echo esc_attr($primekit_before_img_vis); ?>,
-      before_label: '<?php echo esc_html($primekit_before_label); ?>',
-      after_label: '<?php echo esc_html($primekit_after_label); ?>',
-      orientation: '<?php echo esc_html($primekit_bef_af_orientaion); ?>',
-      no_overlay: <?php echo esc_attr($no_overlay) ? 'true' : 'false'; ?>,
-      move_slider_on_hover: <?php echo esc_attr($move_slider_on_hover); ?>,
-      move_with_handle_only: <?php echo esc_attr($move_with_handle_only); ?>,
-      click_to_move: <?php echo esc_attr($click_to_move); ?>,
-    });
-  });
-</script>
