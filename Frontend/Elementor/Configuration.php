@@ -268,6 +268,7 @@ class Configuration{
             'primekit_img_text_scroll_widget_field' => 'ImgScroll\Main',
             'primekit_popular_posts_field' => 'PopularPosts\Main',
             'primekit_abc_popup_widget_field' => 'Popup\Main',
+            'primekit_portfolio_widget_field' => 'Portfolio\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

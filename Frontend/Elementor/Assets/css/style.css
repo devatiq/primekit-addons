@@ -2969,7 +2969,7 @@ h3.primekit-popular-post-title a {
 }
 
 
-/* ---------------------------------------------
+/*---------------------------------------------
 * PopUp
 * --------------------------------------------- */
 .primekit-popup-trigger {
@@ -3024,4 +3024,64 @@ h3.primekit-popular-post-title a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*----------------------------------------------
+ * Portfolio
+ * ---------------------------------------------*/
+ .primekit-elementor-portfolio-area {
+  position: relative;
+}
+
+.primekit-elementor-portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.primekit-elementor-portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.primekit-elementor-portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.primekit-portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.primekit-elementor-portfolio-item:hover .primekit-portfolio-overlay {
+  opacity: 1;
+}
+
+.primekit-portfolio-title,
+.primekit-portfolio-subtitle {
+  text-align: left;
+  color: #fff;
+  margin: 5px 0;
+}
+
+.primekit-portfolio-title {
+  font-size: 1.5em;
+  position: relative;
+}
+
+.primekit-portfolio-subtitle {
+  font-size: 1em;
+  color: #ccc;
+  position: relative;
 }
