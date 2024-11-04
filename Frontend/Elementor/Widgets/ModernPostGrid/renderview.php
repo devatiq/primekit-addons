@@ -46,7 +46,6 @@ if ($customized_posts_selection === 'categories' && !empty($selected_categories)
     $args['post__in'] = $selected_posts;
 }
 
-
 if('style1' == $settings['primekit_modern_post_grid_style']) {
     include PRIMEKIT_ELEMENTOR_PATH . 'Widgets/ModernPostGrid/Templates/style1.php';
 }elseif('style2' == $settings['primekit_modern_post_grid_style']) {
