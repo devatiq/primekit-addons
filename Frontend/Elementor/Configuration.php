@@ -16,6 +16,7 @@ if (!defined('ABSPATH'))
 
 use PrimeKit\Frontend\Elementor\Inc\Functions;
 use PrimeKit\Frontend\Elementor\Assets\Assets;
+use PrimeKit\Frontend\Elementor\Inc\PostViewTracker;
 
 /**
  * Class Configuration
@@ -32,6 +33,7 @@ class Configuration{
 
     protected $functions;
     protected $assets;
+    protected $Post_View_Tracker;
 
     /**
      * plugin Version
@@ -196,6 +198,7 @@ class Configuration{
         
         $this->functions = new Functions();
         $this->assets = new Assets();
+        $this->Post_View_Tracker = new PostViewTracker();
     }
 
     /**
@@ -263,6 +266,7 @@ class Configuration{
             'primekit_image_gallery_field' => 'ImageGallery\Main',
             'primekit_img_hover_widget_field' => 'ImgHover\Main',
             'primekit_img_text_scroll_widget_field' => 'ImgScroll\Main',
+            'primekit_popular_posts_field' => 'PopularPosts\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
