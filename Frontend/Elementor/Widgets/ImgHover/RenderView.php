@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Image Hover
+ * Render View file for Image Hover
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -12,7 +12,7 @@ $primekit_imghover_subtitle = $primekit_settings['primekit_elementor_imghover_su
 $primekit_imghover_link = $primekit_settings['primekit_elementor_imghover_link'];
 ?>
 
-<!-- Abcbiz Img Hover Area Start -->
+<!-- primekit Img Hover Area Start -->
 <div class="primekit-elementor-img-hover-area">
     <div class="primekit-elementor-img-hover-wrap">
         <div class="primekit-elementor-img-hover-item">

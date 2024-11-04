@@ -2668,10 +2668,10 @@ background-color: #2811f3;
   font-weight: 400;
 }
 
-.abcbiz-gravity-form-label-hide .gfield_label {
+.primekit-gravity-form-label-hide .gfield_label {
   display: none !important;
 }
-.abcbiz-gravity-form-sub-label-hide .gform-field-label:not(.gfield_label) {
+.primekit-gravity-form-sub-label-hide .gform-field-label:not(.gfield_label) {
   display: none !important;
 }
 
@@ -2815,4 +2815,62 @@ background-color: #2811f3;
   font-size: 1em;
   color: #ccc;
   position: relative;
+}
+
+/* ---------------------------------------------
+ * Image & Text Scroll
+ * --------------------------------------------- */
+
+ @keyframes primekitltrscroll {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes primekitrtlscroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.primekit-elementor-img-scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.primekit-scroll-contents {
+  display: flex;
+}
+
+.primekit-img-scroll-item {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid #ccc;
+}
+
+.primekit-img-scroll-img img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.primekit-img-scroll-title {
+  word-wrap: break-word;
+  font-size: 20px;
+  line-height: 1.01;
 }
