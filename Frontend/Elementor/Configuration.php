@@ -273,6 +273,7 @@ class Configuration{
             'primekit_pricing_table_widget_field' => 'PricingTable\Main',
             'primekit_recent_post_widget_field' => 'RecentPost\Main',
             'primekit_related_post_widget_field' => 'RelatedPost\Main',
+            'primekit_search_form_widget_field' => 'SearchForm\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

@@ -3442,3 +3442,42 @@ h3.primekit-popular-post-title a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
+
+
+/*----------------------------------------------
+ * Search Form
+ * ---------------------------------------------*/
+ .primekit-ele-search-form {
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.primekit-ele-search-form form {
+  width: 100%;
+}
+
+.primekit-ele-search-form input[type="text"] {
+  width: 70%;
+  padding: 0 10px;
+  border: 1px solid #053d58;
+  box-sizing: border-box;
+  float: left;
+  outline: none !important;
+  background: #fff;
+  color: #3d3d3d;
+  height: 40px;
+}
+
+.primekit-ele-search-form input[type="submit"] {
+  width: 29%;
+  padding: 0 10px;
+  border: none;
+  cursor: pointer;
+  float: right;
+  font-size: 13px;
+  height: 40px;
+}
+
+.primekit-ele-search-form input[type="submit"]:hover {
+  background-color: #054f6d;
+}
