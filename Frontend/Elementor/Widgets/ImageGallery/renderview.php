@@ -9,7 +9,15 @@ $settings = $this->get_settings_for_display();
 $id = $this->get_id();
 
 ?>
-<div class="primekit-photos-gallery" id="primekit-photos-gallery-<?php echo esc_attr($id); ?>">
+<div class="primekit-photos-gallery" id="primekit-photos-gallery-<?php echo esc_attr($id); ?>"
+     data-primekit-config='<?php echo esc_html(wp_json_encode(array(
+         'close_on_content_click' => $settings['primekit_elementor_gallery_close_button'] == 'true' ? true : false,
+         'show_close_btn' => $settings['primekit_elementor_gallery_close_button'] == 'true' ? true : false,
+         'gallery_enabled' => true,
+         'preload' => [0, 1],
+         'zoom_enabled' => true,
+         'zoom_duration' => 300
+     ))); ?>'>
 	<?php if (!empty($settings['primekit_elementor_gallery'])) { ?>
 		<?php foreach ($settings['primekit_elementor_gallery'] as $image) {
 
@@ -59,50 +67,3 @@ $id = $this->get_id();
 		</span>
 	<?php } ?>
 </div>
-
-<script>
-	(function ($) {
-		$(document).ready(function () {
-
-			$('#primekit-photos-gallery-<?php echo esc_attr($id); ?>').magnificPopup({
-				delegate: '.primekit-photos-gallery-item',
-				type: 'image',
-				closeOnContentClick: false,
-				showCloseBtn: <?php echo $settings['primekit_elementor_gallery_close_button'] == 'true' ? 'true' : 'false'; ?>,
-				mainClass: 'mfp-with-zoom mfp-img-mobile primekit-photos-gallery-popup',
-				allowHTMLInTemplate: true,
-				image: {
-					verticalFit: true,
-					titleSrc: function (item) {
-						return item.el.attr('title');
-					}
-				},
-				callbacks: {
-					elementParse: function (item) {
-						item.src = item.el.attr('primekit-data-url');
-					}
-				},
-				gallery: {
-					enabled: true,
-					preload: [0, 1],
-					// Custom navigation icons
-					arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%">' +
-						'<svg height="512" viewBox="0 0 32 32" width="512" xmlns="http://www.w3.org/2000/svg">' +
-						'<g id="_16_next" data-name="16 next">' +
-						'<path d="m16 2a14 14 0 1 0 14 14 14 14 0 0 0 -14-14zm0 26a12 12 0 1 1 12-12 12 12 0 0 1 -12 12zm-2.5-18.41 6.41 6.41-6.41 6.41-1.41-1.41 5-5-5-5z"></path>' +
-						'</g></svg>' +
-						'</button>',
-					tPrev: 'Previous', // title for left button
-					tNext: 'Next', // title for right button
-				},
-				zoom: {
-					enabled: true,
-					duration: 300, // don't forget to change the duration also in CSS
-					opener: function (element) {
-						return element.find('img');
-					}
-				},
-			});
-		});
-	})(jQuery);
-</script>

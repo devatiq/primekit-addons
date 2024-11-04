@@ -45,7 +45,7 @@ class Main extends Widget_Base
 	
 	public function get_script_depends()
 	{
-		return ['primekit-magnific-popup'];
+		return ['primekit-magnific-popup', 'primekit-image-gallery'];
 	}
 	
 
