@@ -2275,3 +2275,22 @@ label.primekit-pricing-option {
 .primekit-expired-btn a {
   display: inline-block;
 }
+
+/*----------------------------------------------
+ * Counter
+ * ---------------------------------------------*/
+ .primekit-ele-countdown-wrap .primekit-ele-counter {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.primekit-ele-countdown-wrap .primekit-ele-count-title {
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.primekit-ele-countdown-wrap .counticon {
+  font-size: 25px;
+  color: #59a818;
+}
