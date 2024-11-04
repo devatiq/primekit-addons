@@ -258,6 +258,7 @@ class Configuration{
             'primekit_dual_button_widget_field' => 'DualButton\Main',
             'primekit_fetch_posts_field' => 'FetchPosts\Main',
             'primekit_feat_img_widget_field' => 'FeturedImg\Main',
+            'primekit_flip_box_widget_field' => 'FlipBox\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

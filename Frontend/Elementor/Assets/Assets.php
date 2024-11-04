@@ -112,6 +112,7 @@ class Assets{
         wp_register_style('primekit-swiper', PRIMEKIT_ELEMENTOR_ASSETS . "/css/swiper-bundle.min.css", array(), PRIMEKIT_VERSION);
         wp_register_style('primekit-shape-animation', PRIMEKIT_ELEMENTOR_ASSETS . "/css/shape-animation.css", array(), PRIMEKIT_VERSION);
         wp_register_style('primekit-form-7-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/contact-form-7-style.css", array(), PRIMEKIT_VERSION);
+        wp_register_style('primekit-flip-box', PRIMEKIT_ELEMENTOR_ASSETS . "/css/flip-box.css", array(), PRIMEKIT_VERSION);
         
 
     }
