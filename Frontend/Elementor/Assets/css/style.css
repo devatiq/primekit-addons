@@ -3374,3 +3374,31 @@ h3.primekit-popular-post-title a {
 .primekit-ele-pricing-table-type-standard .primekit-ele-pricing-table-body {
   margin-top: 40px;
 }
+
+/*----------------------------------------------
+ * Recent Posts
+ * ---------------------------------------------*/
+ .primekit-ele-recent-post-item {
+  margin-bottom: 18px;
+}
+
+.primekit-ele-recent-post-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.primekit-ele-recent-post-meta {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.primekit-ele-recent-post-meta .posted-on {
+  margin-right: 10px;
+}
+
+.primekit-ele-recent-post-more {
+  font-size: 15px;
+}
