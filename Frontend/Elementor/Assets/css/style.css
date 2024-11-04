@@ -2236,3 +2236,42 @@ label.primekit-pricing-option {
   border-radius: 50%;
   cursor: pointer;
 }
+
+
+
+/* ---------------------------------------------
+ * Count Down
+ * --------------------------------------------- */
+ #primekitcountdisplay {
+  margin: 20px;
+  text-align: center;
+}
+
+#primekitcountdisplay #primekitcounttime {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+#primekitcounttime {
+  display: flex;
+  align-items: center;
+}
+
+#primekitcountexpired {
+  display: none;
+}
+
+.primekit-count-down-single {
+  display: flex;
+  flex: 1;
+  background: #f1f1f1;
+  color: #000;
+}
+
+.primekit-expired-btn {
+  margin-top: 10px;
+}
+
+.primekit-expired-btn a {
+  display: inline-block;
+}

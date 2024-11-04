@@ -80,6 +80,7 @@ class Assets{
         wp_register_script('primekit-mailchimp-newsletter', PRIMEKIT_ELEMENTOR_ASSETS . "/js/mailchimp-newsletter.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-before-after-script', PRIMEKIT_ELEMENTOR_ASSETS . "/js/before-after.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-cost-estimation', PRIMEKIT_ELEMENTOR_ASSETS . "/js/cost-estimation.js", array('jquery'), PRIMEKIT_VERSION, true);
+        wp_register_script('primekit-count-down', PRIMEKIT_ELEMENTOR_ASSETS . "/js/count-down.js", array('jquery'), PRIMEKIT_VERSION, true);
 
         wp_localize_script('primekit-mailchimp-newsletter', 'PrimekitMailchimpAjax', [
             'ajax_url' => admin_url('admin-ajax.php'),
