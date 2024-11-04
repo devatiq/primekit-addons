@@ -3402,3 +3402,43 @@ h3.primekit-popular-post-title a {
 .primekit-ele-recent-post-more {
   font-size: 15px;
 }
+
+/*----------------------------------------------
+ * Related Post
+ * ---------------------------------------------*/
+ .primekit-ele-related-post ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.primekit-ele-related-post ul li {
+  box-sizing: border-box;
+  text-align: left;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.primekit-ele-related-post ul li:last-child {
+  padding-right: 0;
+}
+
+.primekit-ele-related-post .primekit-ele-related-post-heading {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.primekit-ele-related-post figure img {
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+.primekit-ele-related-post figure img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
