@@ -85,6 +85,7 @@ class Assets{
         wp_register_script('primekit-counter-up', PRIMEKIT_ELEMENTOR_ASSETS . "/js/counterup.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-magnific-popup', PRIMEKIT_ELEMENTOR_ASSETS . "/js/magnific-popup.min.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-image-gallery', PRIMEKIT_ELEMENTOR_ASSETS . "/js/image-gallery.js", array('jquery'), PRIMEKIT_VERSION, true);
+        wp_register_script('primekit-popup', PRIMEKIT_ELEMENTOR_ASSETS . "/js/popup.js", array('jquery'), PRIMEKIT_VERSION, true);
 
         wp_localize_script('primekit-mailchimp-newsletter', 'PrimekitMailchimpAjax', [
             'ajax_url' => admin_url('admin-ajax.php'),
