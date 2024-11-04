@@ -3097,4 +3097,280 @@ h3.primekit-popular-post-title a {
    margin: 0;
    padding: 0;
  }
- 
+
+/*----------------------------------------------
+ * Pricing Table
+ * ---------------------------------------------*/
+ .primekit-ele-pricing-table-area {
+  border-bottom: 5px solid #448e08;
+  border-radius: 4px;
+  border-top: 0;
+  background: #f6f6f6;
+}
+
+.primekit-ele-pricing-table-header-area {
+  position: relative;
+}
+
+.primekit-ele-pricing-table-header {
+  position: relative;
+}
+
+.primekit-ele-pricing-table-header svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.primekit-ele-pricing-header-strock {
+  margin-top: -124px;
+}
+
+.primekit-ele-pricing-header-strock svg {
+  fill: #fd5009;
+}
+
+.primekit-ele-pricing-pack-name {
+  background-color: #f7f7f7;
+  text-align: center;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+  width: 235px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.primekit-ele-pricing-pack-name h3 {
+  color: #448e08;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.primekit-ele-pricing-pack-preiod {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+}
+
+.primekit-ele-pricing-pack-preiod h3 {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.primekit-ele-pricing-pack-preiod h3 sub {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.primekit-ele-pricing-table-body {
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.primekit-ele-pricing-table-body ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.primekit-ele-pricing-table-body ul li {
+  color: #181818;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.primekit-ele-pricing-table-body ul i {
+  color: #448e08;
+  font-size: 18px;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+}
+
+.primekit-ele-pricing-table-body ul svg {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 4px;
+}
+
+.primekit-ele-pricing-table-footer {
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.primekit-ele-pricing-table-footer a {
+  background-color: #448e08;
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 10px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 40px;
+  border-radius: 3px;
+  margin-bottom: 50px;
+  width: 100%;
+  justify-content: center;
+}
+
+.primekit-ele-pricing-table-footer a {
+  gap: 10px;
+}
+
+.primekit-ele-pricing-table-area:hover .primekit-ele-pricing-table-footer a {
+  background-color: #fe4d05;
+}
+
+.primekit-ele-pricing-table-area:hover .primekit-ele-pricing-header-bg svg path {
+  fill: #fe4d05;
+}
+
+.primekit-ele-pricing-table-area:hover
+  .primekit-ele-pricing-header-strock
+  svg
+  path {
+  fill: #448e08;
+}
+
+.primekit-ele-pricing-table-area:hover .primekit-ele-pricing-pack-name h3 {
+  color: #fe4d05;
+}
+
+.primekit-ele-pricing-table-area:hover {
+  border-color: #fe4d05;
+}
+
+.primekit-ele-pricing-table-footer a,
+.primekit-ele-pricing-header-bg svg path,
+.primekit-ele-pricing-header-strock svg path,
+.primekit-ele-pricing-pack-name h3,
+.primekit-ele-pricing-table-area {
+  transition: all 0.3s ease;
+}
+
+.primekit-ele-pricing-recommended {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.primekit-ele-pricing-recommended:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 36px 13px;
+  border-color: transparent transparent #448e08 transparent;
+}
+
+.primekit-ele-pricing-recommended span {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px 20px;
+  background-color: #fe4d05;
+  border-radius: 0 3px 0 0;
+}
+
+.primekit-ep-recommended-left.primekit-ele-pricing-recommended {
+  position: absolute;
+  top: 35px;
+  left: -29px;
+  border-radius: 0 0 0 0;
+  transform: rotate(270deg);
+  z-index: 9;
+  right: inherit;
+}
+
+.primekit-ep-recommended-left.primekit-ele-pricing-recommended:after {
+  content: "";
+  position: absolute;
+  top: -10.51px;
+  right: 0px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 0px 0px 15px;
+  border-color: transparent transparent transparent #448e08;
+}
+
+.primekit-ep-recommended-left.primekit-ele-pricing-recommended::before {
+  display: none;
+}
+
+.primekit-ele-pricing-table-area:hover .primekit-ele-pricing-recommended span {
+  background-color: #448e08;
+}
+
+.primekit-ele-pricing-table-area:hover
+  .primekit-ep-recommended-left.primekit-ele-pricing-recommended:after {
+  border-color: transparent transparent transparent #448e08;
+}
+
+/*-----------------------------
+ * Pricing Standard
+ * ----------------------------*/
+.primekit-ele-pricing-table-type-standard .primekit-ele-pricing-table-header-area {
+  background-color: #448e08;
+  border-bottom: 10px solid #fe4d05;
+}
+
+.primekit-ele-pricing-table-type-standard .primekit-ele-pricing-pack-name {
+  position: unset;
+}
+
+.primekit-ele-pricing-table-type-standard .primekit-ele-pricing-pack-preiod {
+  position: unset;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.primekit-ele-pricing-table-type-standard .primekit-ele-pricing-table-body {
+  margin-top: 40px;
+}
