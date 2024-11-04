@@ -269,6 +269,7 @@ class Configuration{
             'primekit_popular_posts_field' => 'PopularPosts\Main',
             'primekit_abc_popup_widget_field' => 'Popup\Main',
             'primekit_portfolio_widget_field' => 'Portfolio\Main',
+            'primekit_post_meta_widget_field' => 'PostInfo\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

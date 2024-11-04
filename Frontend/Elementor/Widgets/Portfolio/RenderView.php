@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Portfolio
+ * Render View file for Portfolio
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 

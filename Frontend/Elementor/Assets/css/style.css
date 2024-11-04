@@ -3085,3 +3085,16 @@ h3.primekit-popular-post-title a {
   color: #ccc;
   position: relative;
 }
+/*----------------------------------------------
+ * Post info Title 
+ * ---------------------------------------------*/
+ .primekit-ele-posted-on,
+ .primekit-ele-posted-by {
+   padding-right: 7px;
+ }
+ 
+ .primekit-ele-post-tag ul {
+   margin: 0;
+   padding: 0;
+ }
+ 
