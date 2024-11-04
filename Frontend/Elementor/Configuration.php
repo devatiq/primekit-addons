@@ -257,6 +257,7 @@ class Configuration{
             'primekit_cta_widget_field' => 'CTA\Main',
             'primekit_dual_button_widget_field' => 'DualButton\Main',
             'primekit_fetch_posts_field' => 'FetchPosts\Main',
+            'primekit_feat_img_widget_field' => 'FeturedImg\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
