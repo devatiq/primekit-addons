@@ -254,6 +254,7 @@ class Configuration{
             'primekit_cost_estimation_field' => 'CostEstimation\Main',
             'primekit_count_down_widget_field' => 'CountDown\Main',
             'primekit_counter_up_widget_field' => 'Counter\Main',
+            'primekit_cta_widget_field' => 'CTA\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
