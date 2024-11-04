@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-04T06:46:19+00:00\n"
+"POT-Creation-Date: 2024-11-04T07:12:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
@@ -301,6 +301,7 @@ msgid "WordPress Menu"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:438
+#: Frontend/Elementor/Widgets/DualButton/Main.php:23
 msgid "Dual Button"
 msgstr ""
 
@@ -954,6 +955,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:98
 #: Frontend/Elementor/Widgets/CountDown/Main.php:111
 #: Frontend/Elementor/Widgets/CountDown/Main.php:186
+#: Frontend/Elementor/Widgets/DualButton/Main.php:140
+#: Frontend/Elementor/Widgets/DualButton/Main.php:203
+#: Frontend/Elementor/Widgets/DualButton/Main.php:271
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:54
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:119
 msgid "Show"
@@ -984,6 +988,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:99
 #: Frontend/Elementor/Widgets/CountDown/Main.php:112
 #: Frontend/Elementor/Widgets/CountDown/Main.php:187
+#: Frontend/Elementor/Widgets/DualButton/Main.php:141
+#: Frontend/Elementor/Widgets/DualButton/Main.php:204
+#: Frontend/Elementor/Widgets/DualButton/Main.php:272
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:55
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:120
 msgid "Hide"
@@ -1060,6 +1067,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:431
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:394
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:836
+#: Frontend/Elementor/Widgets/CTA/Main.php:484
+#: Frontend/Elementor/Widgets/CTA/Main.php:768
+#: Frontend/Elementor/Widgets/DualButton/Main.php:434
+#: Frontend/Elementor/Widgets/DualButton/Main.php:710
 #: Frontend/Elementor/Widgets/IconBox/Main.php:266
 #: Frontend/Elementor/Widgets/IconBox/Main.php:305
 #: Frontend/Elementor/Widgets/IconBox/Main.php:524
@@ -1093,6 +1104,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:177
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:264
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:849
+#: Frontend/Elementor/Widgets/CTA/Main.php:793
+#: Frontend/Elementor/Widgets/DualButton/Main.php:449
+#: Frontend/Elementor/Widgets/DualButton/Main.php:724
 #: Frontend/Elementor/Widgets/IconBox/Main.php:252
 #: Frontend/Elementor/Widgets/IconBox/Main.php:464
 #: Frontend/Elementor/Widgets/IconBox/Main.php:685
@@ -1110,6 +1124,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:374
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:866
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:892
+#: Frontend/Elementor/Widgets/CTA/Main.php:912
 #: Frontend/Elementor/Widgets/IconBox/Main.php:854
 #: Frontend/Elementor/Widgets/IconBox/Main.php:883
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:628
@@ -1131,6 +1146,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:295
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:874
 #: Frontend/Elementor/Widgets/Counter/Main.php:297
+#: Frontend/Elementor/Widgets/CTA/Main.php:827
+#: Frontend/Elementor/Widgets/DualButton/Main.php:484
+#: Frontend/Elementor/Widgets/DualButton/Main.php:758
 #: Frontend/Elementor/Widgets/IconBox/Main.php:291
 #: Frontend/Elementor/Widgets/IconBox/Main.php:541
 #: Frontend/Elementor/Widgets/IconBox/Main.php:714
@@ -1147,6 +1165,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:555
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:661
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:902
+#: Frontend/Elementor/Widgets/CTA/Main.php:857
+#: Frontend/Elementor/Widgets/DualButton/Main.php:532
+#: Frontend/Elementor/Widgets/DualButton/Main.php:807
 msgid "Border Color"
 msgstr ""
 
@@ -1154,6 +1175,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:540
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:350
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:771
+#: Frontend/Elementor/Widgets/CTA/Main.php:703
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:468
 msgid "Width"
 msgstr ""
@@ -1167,6 +1189,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:422
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:385
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:828
+#: Frontend/Elementor/Widgets/DualButton/Main.php:425
 #: Frontend/Elementor/Widgets/IconBox/Main.php:812
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:446
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:509
@@ -1178,6 +1201,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedText/Main.php:59
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:54
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:48
+#: Frontend/Elementor/Widgets/CTA/Main.php:49
+#: Frontend/Elementor/Widgets/DualButton/Main.php:87
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:42
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:42
 msgid "Contents"
@@ -1265,6 +1290,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:263
 #: Frontend/Elementor/Widgets/CountDown/Main.php:293
 #: Frontend/Elementor/Widgets/Counter/Main.php:102
+#: Frontend/Elementor/Widgets/CTA/Main.php:149
+#: Frontend/Elementor/Widgets/DualButton/Main.php:52
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:51
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:80
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:52
@@ -1293,6 +1320,12 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:268
 #: Frontend/Elementor/Widgets/CountDown/Main.php:298
 #: Frontend/Elementor/Widgets/Counter/Main.php:107
+#: Frontend/Elementor/Widgets/CTA/Main.php:405
+#: Frontend/Elementor/Widgets/CTA/Main.php:502
+#: Frontend/Elementor/Widgets/DualButton/Main.php:64
+#: Frontend/Elementor/Widgets/DualButton/Main.php:101
+#: Frontend/Elementor/Widgets/DualButton/Main.php:169
+#: Frontend/Elementor/Widgets/DualButton/Main.php:300
 #: Frontend/Elementor/Widgets/IconBox/Main.php:158
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:85
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:86
@@ -1325,6 +1358,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:272
 #: Frontend/Elementor/Widgets/CountDown/Main.php:302
 #: Frontend/Elementor/Widgets/Counter/Main.php:111
+#: Frontend/Elementor/Widgets/CTA/Main.php:197
+#: Frontend/Elementor/Widgets/CTA/Main.php:238
+#: Frontend/Elementor/Widgets/CTA/Main.php:267
+#: Frontend/Elementor/Widgets/CTA/Main.php:506
+#: Frontend/Elementor/Widgets/DualButton/Main.php:68
 #: Frontend/Elementor/Widgets/IconBox/Main.php:162
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:89
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:90
@@ -1356,6 +1394,12 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:276
 #: Frontend/Elementor/Widgets/CountDown/Main.php:306
 #: Frontend/Elementor/Widgets/Counter/Main.php:115
+#: Frontend/Elementor/Widgets/CTA/Main.php:409
+#: Frontend/Elementor/Widgets/CTA/Main.php:510
+#: Frontend/Elementor/Widgets/DualButton/Main.php:72
+#: Frontend/Elementor/Widgets/DualButton/Main.php:173
+#: Frontend/Elementor/Widgets/DualButton/Main.php:232
+#: Frontend/Elementor/Widgets/DualButton/Main.php:304
 #: Frontend/Elementor/Widgets/IconBox/Main.php:166
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:93
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:94
@@ -1588,6 +1632,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:360
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:541
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:819
+#: Frontend/Elementor/Widgets/DualButton/Main.php:377
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:456
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:736
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:488
@@ -1629,6 +1674,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:282
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:313
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:408
+#: Frontend/Elementor/Widgets/DualButton/Main.php:471
+#: Frontend/Elementor/Widgets/DualButton/Main.php:506
+#: Frontend/Elementor/Widgets/DualButton/Main.php:583
+#: Frontend/Elementor/Widgets/DualButton/Main.php:746
+#: Frontend/Elementor/Widgets/DualButton/Main.php:780
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:552
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:695
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:388
@@ -1680,6 +1730,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:343
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:854
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:880
+#: Frontend/Elementor/Widgets/CTA/Main.php:801
+#: Frontend/Elementor/Widgets/CTA/Main.php:834
+#: Frontend/Elementor/Widgets/CTA/Main.php:889
+#: Frontend/Elementor/Widgets/DualButton/Main.php:457
+#: Frontend/Elementor/Widgets/DualButton/Main.php:492
+#: Frontend/Elementor/Widgets/DualButton/Main.php:560
+#: Frontend/Elementor/Widgets/DualButton/Main.php:732
+#: Frontend/Elementor/Widgets/DualButton/Main.php:766
 #: Frontend/Elementor/Widgets/IconBox/Main.php:701
 #: Frontend/Elementor/Widgets/IconBox/Main.php:732
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:594
@@ -1721,6 +1779,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:64
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:72
 #: Frontend/Elementor/Widgets/Counter/Main.php:83
+#: Frontend/Elementor/Widgets/DualButton/Main.php:152
+#: Frontend/Elementor/Widgets/DualButton/Main.php:283
 #: Frontend/Elementor/Widgets/IconBox/Main.php:88
 #: Frontend/Elementor/Widgets/IconBox/Main.php:342
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:153
@@ -1730,6 +1790,8 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:77
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:196
+#: Frontend/Elementor/Widgets/DualButton/Main.php:109
+#: Frontend/Elementor/Widgets/DualButton/Main.php:240
 #: Frontend/Elementor/Widgets/IconBox/Main.php:123
 msgid "Button Text"
 msgstr ""
@@ -1745,6 +1807,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:92
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:224
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:119
+#: Frontend/Elementor/Widgets/CTA/Main.php:375
+#: Frontend/Elementor/Widgets/CTA/Main.php:465
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:123
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:199
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:241
@@ -1765,6 +1829,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:93
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:225
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:120
+#: Frontend/Elementor/Widgets/CTA/Main.php:376
+#: Frontend/Elementor/Widgets/CTA/Main.php:466
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:124
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:200
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:242
@@ -1823,6 +1889,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:434
 #: Frontend/Elementor/Widgets/Counter/Main.php:197
 #: Frontend/Elementor/Widgets/Counter/Main.php:328
+#: Frontend/Elementor/Widgets/DualButton/Main.php:360
+#: Frontend/Elementor/Widgets/DualButton/Main.php:516
+#: Frontend/Elementor/Widgets/DualButton/Main.php:637
+#: Frontend/Elementor/Widgets/DualButton/Main.php:791
 #: Frontend/Elementor/Widgets/IconBox/Main.php:485
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:611
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:677
@@ -1850,6 +1920,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:296
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:486
 #: Frontend/Elementor/Widgets/Counter/Main.php:210
+#: Frontend/Elementor/Widgets/DualButton/Main.php:337
+#: Frontend/Elementor/Widgets/DualButton/Main.php:614
 #: Frontend/Elementor/Widgets/IconBox/Main.php:350
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:252
 msgid "Icon Size"
@@ -2136,6 +2208,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:377
 #: Frontend/Elementor/Widgets/BlogList/Main.php:362
 #: Frontend/Elementor/Widgets/CountDown/Main.php:764
+#: Frontend/Elementor/Widgets/CTA/Main.php:782
 msgid "Button Typography"
 msgstr ""
 
@@ -2166,6 +2239,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:369
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:420
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:794
+#: Frontend/Elementor/Widgets/CTA/Main.php:435
+#: Frontend/Elementor/Widgets/DualButton/Main.php:386
+#: Frontend/Elementor/Widgets/DualButton/Main.php:662
 #: Frontend/Elementor/Widgets/IconBox/Main.php:230
 #: Frontend/Elementor/Widgets/IconBox/Main.php:799
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:413
@@ -2287,11 +2363,13 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:180
 #: Frontend/Elementor/Widgets/CountDown/Main.php:245
+#: Frontend/Elementor/Widgets/CTA/Main.php:161
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:201
 msgid "Row"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:184
+#: Frontend/Elementor/Widgets/CTA/Main.php:165
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:205
 msgid "Row Reverse"
 msgstr ""
@@ -2468,11 +2546,17 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:242
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:436
+#: Frontend/Elementor/Widgets/CTA/Main.php:193
+#: Frontend/Elementor/Widgets/CTA/Main.php:234
+#: Frontend/Elementor/Widgets/CTA/Main.php:263
 msgid "Start"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:250
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:444
+#: Frontend/Elementor/Widgets/CTA/Main.php:201
+#: Frontend/Elementor/Widgets/CTA/Main.php:242
+#: Frontend/Elementor/Widgets/CTA/Main.php:271
 msgid "End"
 msgstr ""
 
@@ -2485,14 +2569,17 @@ msgid "List Gap"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:448
+#: Frontend/Elementor/Widgets/CTA/Main.php:205
 msgid "Space Between"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:452
+#: Frontend/Elementor/Widgets/CTA/Main.php:209
 msgid "Space Around"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:456
+#: Frontend/Elementor/Widgets/CTA/Main.php:213
 msgid "Space Evenly"
 msgstr ""
 
@@ -2550,6 +2637,7 @@ msgid "PrimeKit Elementor Addons"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:185
+#: Frontend/Elementor/Widgets/CTA/Main.php:80
 #: Frontend/Elementor/Widgets/IconBox/Main.php:109
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:102
 msgid "Description"
@@ -2627,6 +2715,7 @@ msgid "Badge Vertical Position"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:754
+#: Frontend/Elementor/Widgets/CTA/Main.php:529
 msgid "Heading Style"
 msgstr ""
 
@@ -2634,6 +2723,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:127
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:457
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:644
+#: Frontend/Elementor/Widgets/CTA/Main.php:584
 msgid "Heading Typography"
 msgstr ""
 
@@ -2643,10 +2733,12 @@ msgid "Bottom Margin"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:839
+#: Frontend/Elementor/Widgets/CTA/Main.php:634
 msgid "Description Style"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:1003
+#: Frontend/Elementor/Widgets/CTA/Main.php:847
 msgid "Hover Background"
 msgstr ""
 
@@ -2723,6 +2815,7 @@ msgid "Circle Setting"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:58
+#: Frontend/Elementor/Widgets/CTA/Main.php:68
 msgid "Heading"
 msgstr ""
 
@@ -2745,6 +2838,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:135
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:466
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:654
+#: Frontend/Elementor/Widgets/CTA/Main.php:593
 msgid "Heading Color"
 msgstr ""
 
@@ -2861,6 +2955,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:135
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:274
+#: Frontend/Elementor/Widgets/CTA/Main.php:733
 msgid "Height"
 msgstr ""
 
@@ -2964,6 +3059,7 @@ msgid "Inline"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:98
+#: Frontend/Elementor/Widgets/CTA/Main.php:498
 msgid "Content Alignment"
 msgstr ""
 
@@ -3069,6 +3165,8 @@ msgid "Icon Background Size"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:534
+#: Frontend/Elementor/Widgets/DualButton/Main.php:398
+#: Frontend/Elementor/Widgets/DualButton/Main.php:674
 msgid "Icon Gap"
 msgstr ""
 
@@ -3191,6 +3289,8 @@ msgid "Label for the button."
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:304
+#: Frontend/Elementor/Widgets/DualButton/Main.php:121
+#: Frontend/Elementor/Widgets/DualButton/Main.php:252
 msgid "Button URL"
 msgstr ""
 
@@ -3329,6 +3429,7 @@ msgid "Slider Pointer Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:737
+#: Frontend/Elementor/Widgets/CTA/Main.php:695
 #: Frontend/Elementor/Widgets/IconBox/Main.php:750
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:404
 msgid "Button"
@@ -3428,6 +3529,7 @@ msgid "Timer Direction"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CountDown/Main.php:249
+#: Frontend/Elementor/Widgets/CTA/Main.php:169
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:209
 msgid "Column"
 msgstr ""
@@ -3574,6 +3676,250 @@ msgstr ""
 msgid "Icon Border Color"
 msgstr ""
 
+#: Frontend/Elementor/Widgets/CTA/Main.php:22
+msgid "Call To Action"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:57
+msgid "Sub Heading"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:59
+msgid "Type your sub heading here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:70
+msgid "Lets deliver the right solution for your"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:71
+msgid "Type your heading here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:82
+msgid ""
+"onsectetur adipiscing elit pellentesque habitant morbi tristique senectus. Vestibulum mattis\r\n"
+"                velit sed ullamcorper morbi. At erat  pellentesque."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:84
+#: Frontend/Elementor/Widgets/IconBox/Main.php:113
+msgid "Type your description here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:93
+msgid "Button 1 Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:95
+msgid "Get Started"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:96
+#: Frontend/Elementor/Widgets/CTA/Main.php:123
+#: Frontend/Elementor/Widgets/IconBox/Main.php:126
+msgid "Type your button text here"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:104
+msgid "Button 1 Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:106
+#: Frontend/Elementor/Widgets/CTA/Main.php:134
+#: Frontend/Elementor/Widgets/DualButton/Main.php:123
+#: Frontend/Elementor/Widgets/DualButton/Main.php:254
+msgid "https://your-link.com"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:120
+msgid "Button 2 Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:122
+msgid "Contact Us"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:132
+msgid "Button 2 Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:157
+msgid "Content Direction"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:173
+#: Frontend/Elementor/Widgets/MailChimp/Main.php:213
+msgid "Column Reverse"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:188
+msgid "Justify Content"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:230
+#: Frontend/Elementor/Widgets/CTA/Main.php:259
+msgid "Align Items"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:288
+msgid "Gap Between Content/Button"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:317
+msgid "Button Direction"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:321
+msgid "Row (Horizontal)"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:325
+msgid "Column (Vertical)"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:338
+msgid "Button Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:364
+msgid "Ribbon"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:373
+msgid "Enable Ribbon"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:386
+msgid "Ribbon Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:388
+msgid "Most popular"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:389
+msgid "Type your ribbon text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:401
+msgid "Ribbon Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:427
+msgid "CTA Box Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:448
+msgid "Box Background"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:463
+msgid "Disable Zoom Effect"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:477
+msgid "Box Border"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:539
+msgid "Sub Heading Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:547
+msgid "Sub Heading Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:559
+msgid "Sub Heading Bottom Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:606
+msgid "Heading Bottom Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:644
+msgid "Description Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:653
+msgid "Description Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:667
+msgid "Description Bottom Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:759
+msgid "Button Border"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:814
+msgid "Button Background"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CTA/Main.php:877
+msgid "Ribbon Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:59
+msgid "Button Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:111
+msgid "Free Download"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:112
+#: Frontend/Elementor/Widgets/DualButton/Main.php:243
+msgid "Enter button text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:138
+#: Frontend/Elementor/Widgets/DualButton/Main.php:269
+msgid "Display Icon"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:165
+#: Frontend/Elementor/Widgets/DualButton/Main.php:296
+#: Frontend/Elementor/Widgets/IconBox/Main.php:423
+#: Frontend/Elementor/Widgets/WpMenu/Main.php:266
+msgid "Icon Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:193
+msgid "Middle"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:201
+msgid "Display Middle Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:215
+#: Frontend/Elementor/Widgets/DualButton/Main.php:551
+msgid "Middle Text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:217
+msgid "OR"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:218
+msgid "Enter middle text"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:242
+msgid "Purchase Now"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:329
+msgid "Left Button"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/DualButton/Main.php:605
+msgid "Right Button"
+msgstr ""
+
 #: Frontend/Elementor/Widgets/IconBox/Main.php:51
 #: Frontend/Elementor/Widgets/IconBox/Main.php:624
 msgid "Content"
@@ -3611,14 +3957,6 @@ msgstr ""
 msgid "Duis Aute Irure Dolor Reprehenderit In Voluptate Velit Esse Cillum Dolore Fugiat Nulla Pariatur"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/IconBox/Main.php:113
-msgid "Type your description here"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/IconBox/Main.php:126
-msgid "Type your button text here"
-msgstr ""
-
 #: Frontend/Elementor/Widgets/IconBox/Main.php:223
 msgid "Box"
 msgstr ""
@@ -3631,11 +3969,6 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:775
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:557
 msgid "Icon Spacing"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/IconBox/Main.php:423
-#: Frontend/Elementor/Widgets/WpMenu/Main.php:266
-msgid "Icon Position"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/IconBox/Main.php:470
@@ -3720,10 +4053,6 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:196
 msgid "Form Alignment"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/MailChimp/Main.php:213
-msgid "Column Reverse"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:240

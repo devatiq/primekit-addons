@@ -2500,3 +2500,152 @@ label.primekit-pricing-option {
   justify-content: center;
   align-items: center;
 }
+
+
+/*-----------------------------------------
+* Fetch Posts
+*-----------------------------------------*/
+.primekit-fetch-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.primekit-fetch-posts-grid.primekit-fetch-posts-list {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+}
+.primekit-fetch-single-post {
+  display: flex;
+  gap: 15px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.primekit-fetch-single-post-thumb {
+  flex-basis: 30%;
+}
+.primekit-fetch-posts-grid.primekit-fetch-posts-list .primekit-fetch-single-post{
+  flex-direction: column;
+}
+.primekit-fetch-single-post-contents {
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.primekit-fetch-single-post .primekit-fetch-single-post-thumb > img {
+  border-radius: 8px;
+  /* box-shadow: 0 0 1px #666666d6; */
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  /* aspect-ratio: 1.5; */
+}
+.primekit-fetch-posts-grid.primekit-fetch-posts-list .primekit-fetch-single-post .primekit-fetch-single-post-thumb > img {
+  width: 100%;
+  height: auto;
+}
+.primekit-fetch-single-post-cat > p {
+  margin: 0;
+  background-color: #5A49F8;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.primekit-fetch-single-post-title h2 { 
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3em;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.primekit-fetch-single-post-title h2 a {
+  color: #333;
+}
+.primekit-fetch-single-post-cat {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.primekit-fetch-single-post-info {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 0;
+}
+.primekit-fetch-single-post-info span {
+  line-height: 1;
+}
+.primekit-fetch-single-post-info span svg {
+  width: 17px;
+  height: auto;
+}
+.primekit-fetch-single-post-info p {
+  margin: 0;
+  font-size: 15px;
+}
+.primekit-fetch-single-post-content p{color: #010218;font-size: 17px;line-height: 1.5em;margin:0}
+
+.primekit-fetch-single-post-btn a {
+  display: inline-block;
+  background-color: #5A49F8;
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.primekit-fetch-single-post-btn a:hover {
+color: #fff;
+background-color: #2811f3;
+}
+.primekit-fetch-single-post-btn {
+  margin-bottom: 5px;
+  margin-top: 8px;
+}
+
+.primekit-fetch-posts-pagination {
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.primekit-fetch-posts-pagination a,
+.primekit-fetch-posts-pagination .fetch-posts-current-page,
+.primekit-fetch-posts-pagination .fetch-posts-dots {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #777;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.primekit-fetch-posts-pagination .fetch-posts-current-page {
+  font-weight: bold;
+  color: #fff;
+  background-color: #5A49F8;
+  border-color: #5A49F8;
+}
+
+.primekit-fetch-posts-pagination a:hover {
+  background-color: #5A49F8;
+  color: #fff;
+  border-color: #5A49F8;
+}
+
+.primekit-fetch-posts-pagination .fetch-posts-dots {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  color: #999;
+}

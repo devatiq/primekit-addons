@@ -256,6 +256,7 @@ class Configuration{
             'primekit_counter_up_widget_field' => 'Counter\Main',
             'primekit_cta_widget_field' => 'CTA\Main',
             'primekit_dual_button_widget_field' => 'DualButton\Main',
+            'primekit_fetch_posts_field' => 'FetchPosts\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
