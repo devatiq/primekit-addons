@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
-final class PrimeKit {
+final class PrimeKitAddons {
 
     // Singleton instance.
     private static $instance = null;
@@ -113,10 +113,10 @@ final class PrimeKit {
 /**
  * Initializes the PrimeKit plugin.
  */
-if (!function_exists('primekit_initialize')) {
-    function primekit_initialize() {
-        return PrimeKit::get_instance();
+if (!function_exists('primekit_addons_initialize')) {
+    function primekit_addons_initialize() {
+        return PrimeKitAddons::get_instance();
     }
 
-    primekit_initialize();
+    primekit_addons_initialize();
 }
