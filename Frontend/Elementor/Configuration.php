@@ -276,6 +276,7 @@ class Configuration{
             'primekit_search_form_widget_field' => 'SearchForm\Main',
             'primekit_search_icon_widget_field' => 'SearchIcon\Main',
             'primekit_sec_title_widget_field' => 'SectionTitle\Main',
+            'primekit_single_img_scroll_field' => 'SingleImgScroll\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

@@ -1,6 +1,6 @@
 <?php
 /**
- * ABC Section Title Widget Render View
+ * Section Title Widget Render View
  */
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
 

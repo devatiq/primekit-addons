@@ -3534,3 +3534,34 @@ h3.primekit-popular-post-title a {
   margin-bottom: 0;
   margin-top: 0;
 }
+
+/*----------------------------------------------
+ * Single Image Scroll
+ * ---------------------------------------------*/
+
+.primekit-elementor-single-img-scroll-area {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.primekit-elementor-single-img-scroll-wrap {
+  overflow: hidden;
+}
+
+.primekit-elementor-single-img-scroll-area .primekit-img-scroller-container {
+  transition: transform 2s ease-in-out;
+  height: 400px;
+}
+
+.primekit-elementor-single-img-scroll-area .primekit-img-scroller-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.primekit-elementor-single-img-scroll-area .primekit-img-scroller-badge {
+  position: absolute;
+}
