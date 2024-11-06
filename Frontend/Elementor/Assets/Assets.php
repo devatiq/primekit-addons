@@ -14,6 +14,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
+use PrimeKit\Frontend\Elementor\Inc\Functions;
 /**
  * Handles the initialization and configuration of the PrimeKit Elementor Assets.
  * This class ensures the proper loading of required assets such as CSS and JavaScript files.
@@ -89,12 +90,21 @@ class Assets{
         wp_register_script('primekit-search-icon', PRIMEKIT_ELEMENTOR_ASSETS . "/js/search-icon.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-skill-bar', PRIMEKIT_ELEMENTOR_ASSETS . "/js/skill-bar.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-sticker-text', PRIMEKIT_ELEMENTOR_ASSETS . "/js/sticker-text.js", array('jquery'), PRIMEKIT_VERSION, true);
-        wp_register_script('primekit-add-to-cart', PRIMEKIT_ELEMENTOR_ASSETS . "/js/add-to-cart.js", array('jquery'), PRIMEKIT_VERSION, true);
-
         wp_localize_script('primekit-mailchimp-newsletter', 'PrimekitMailchimpAjax', [
             'ajax_url' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('primekit_mailchimp_nonce'),
         ]);
+
+
+        if(Functions::is_woocommerce_active()) {
+            wp_register_script('primekit-add-to-cart', PRIMEKIT_ELEMENTOR_ASSETS . "/js/add-to-cart.js", array('jquery'), PRIMEKIT_VERSION, true);
+            wp_register_script('primekit-cart-count-update', PRIMEKIT_ELEMENTOR_ASSETS . "/js/cart-update.js", array('jquery'), PRIMEKIT_VERSION, true);
+           // Localize the script with the AJAX URL and nonce
+            wp_localize_script('primekit-cart-count-update', 'primekitCartAjax', array(
+                'url'   => admin_url('admin-ajax.php'),
+                'nonce' => wp_create_nonce('primekit_cart_nonce') // Generate nonce
+            ));
+        }
 
     }
 
@@ -132,9 +142,7 @@ class Assets{
      * @since 1.0.0
      */
     public function primekit_elementor_editor_assets() {
-        wp_enqueue_style( 'primekit-elementor-editor', PRIMEKIT_ELEMENTOR_ASSETS . "/css/elementor-editor.css", array(), PRIMEKIT_VERSION, 'all' );              
-       
-              
+        wp_enqueue_style( 'primekit-elementor-editor', PRIMEKIT_ELEMENTOR_ASSETS . "/css/elementor-editor.css", array(), PRIMEKIT_VERSION, 'all' );                 
     }
 
 }

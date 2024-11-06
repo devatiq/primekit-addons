@@ -21,7 +21,8 @@ if (!defined('ABSPATH')) {
  * @package PrimeKit\Frontend\Elementor\Inc
  * @since 1.0.0
  */
-class Functions {
+class Functions
+{
 
 
     /**
@@ -42,6 +43,9 @@ class Functions {
         // Hook for AJAX submission for primekit mailchimp subscription widget
         add_action('wp_ajax_nopriv_primekit_mailchimp_subscribe', [$this, 'primekit_mailchimp_subscribe']);
         add_action('wp_ajax_primekit_mailchimp_subscribe', [$this, 'primekit_mailchimp_subscribe']);
+
+        add_action('wp_ajax_primekit_get_cart_count', [$this, 'primekit_get_cart_count']);
+        add_action('wp_ajax_nopriv_primekit_get_cart_count', [$this, 'primekit_get_cart_count']);
     }
 
 
@@ -64,7 +68,7 @@ class Functions {
             ]
         );
 
-        if($this->is_woocommerce_active()){ 
+        if ($this->is_woocommerce_active()) {
             $elements_manager->add_category(
                 'primekit-wc-category',
                 [
@@ -165,10 +169,29 @@ class Functions {
         if (!function_exists('is_plugin_active')) {
             include_once(ABSPATH . 'wp-admin/includes/plugin.php');
         }
-        
+
         // Check if WooCommerce class exists and WooCommerce plugin is active
         return class_exists('WooCommerce') && is_plugin_active('woocommerce/woocommerce.php');
     }
+
+    public function primekit_get_cart_count()
+    {
+        // Verify the nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['nonce'], 'primekit_cart_nonce')))) {
+            wp_send_json_error('Invalid nonce');
+            wp_die();
+        }
+    
+        if ($this->is_woocommerce_active()) {
+            echo WC()->cart->get_cart_contents_count();
+        } else {
+            echo 0;
+        }
+        
+        wp_die();
+    }
+    
+
 
 }
 

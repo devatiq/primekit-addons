@@ -317,6 +317,7 @@ class Configuration
     {
         $woocommerce_widgets = [
             'primekit_wc_add_to_cart_icon_field' => 'WooCommerce\ProductAddToCart\Main',
+            'primekit_wc_product_cart_icon_field' => 'WooCommerce\ProductCartIcon\Main',
         ];
 
         foreach ($woocommerce_widgets as $option_name => $widget_class) {
