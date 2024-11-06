@@ -278,6 +278,7 @@ class Configuration{
             'primekit_sec_title_widget_field' => 'SectionTitle\Main',
             'primekit_single_img_scroll_field' => 'SingleImgScroll\Main',
             'primekit_skill_bar_widget_field' => 'SkillBar\Main',
+            'primekit_social_share_widget_field' => 'SocialShare\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

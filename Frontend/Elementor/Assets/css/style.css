@@ -3626,3 +3626,27 @@ h3.primekit-popular-post-title a {
   right: 0;
   margin: 0 auto;
 }
+
+/*----------------------------------------------
+ * Social Share Icon
+ * ---------------------------------------------*/
+ .primekit-elementor-social-share-area ul {
+  margin: 0;
+  padding: 0;
+}
+
+.primekit-elementor-social-share-area ul li {
+  display: inline-block;
+  margin: 0 5px 8px 0;
+  text-align: center;
+  position: relative;
+}
+
+.primekit-elementor-social-share-area ul li svg {
+  position: relative;
+}
+
+.primekit-elementor-social-share-area ul li a {
+  border-radius: 50%;
+  display: inline-block;
+}
