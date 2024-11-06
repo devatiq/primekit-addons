@@ -3692,3 +3692,385 @@ h3.primekit-popular-post-title a {
   width: 15px;
   height: 15px;
 }
+
+
+/*----------------------------------------------
+ * Team Member
+ * ---------------------------------------------*/
+ .primekit-elementor-team-member-area {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.primekit-elementor-teammember-single-item-area {
+  transition: 0.3s ease-out;
+  position: relative;
+}
+
+.primekit-elementor-teammember-single-item-area::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 5px);
+  background: rgba(0, 0, 0, 0.574);
+  transform: scale(0);
+  transition: 0.3s ease-out;
+  border-radius: 5px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.primekit-elementor-teammember-single-item-area:hover::before {
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.primekit-ele-team-social {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  z-index: 5;
+}
+
+.primekit-ele-team-image {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.primekit-ele-team-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transform: scale(1);
+  border: 5px solid #448e08 !important;
+  border-radius: 5px !important;
+}
+
+.primekit-ele-team-footer {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: bottom 0.3s ease;
+  z-index: 3;
+}
+
+.primekit-elementor-teammember-single-item-area:hover .primekit-ele-team-footer {
+  bottom: 30px;
+}
+
+.primekit-ele-team-link svg {
+  width: 40px;
+  height: 40px;
+}
+
+h4.primekit-ele-team-name {
+  color: #181818;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+  list-style: 1;
+}
+
+h4.primekit-ele-team-name a {
+  color: #181818;
+  display: inline-block;
+}
+
+.primekit-ele-team-designation {
+  color: #448e08;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.primekit-ele-team-social {
+  text-align: center;
+}
+
+.primekit-ele-team-social svg {
+  cursor: pointer;
+}
+
+ul.primekit-team-member-social-links li svg {
+  width: 20px;
+  height: 20px;
+}
+
+.primekit-ele-team-social-overlay {
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+  margin-top: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease, height 0.3s ease, transform 0.3s ease;
+  visibility: hidden;
+  height: 0;
+  transform: scale(0);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.primekit-ele-team-social:hover .primekit-ele-team-social-overlay {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  transform: scale(1);
+}
+
+.primekit-ele-team-social-overlay::before {
+  content: "";
+  top: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 10px 5px;
+  border-color: transparent transparent rgba(255, 255, 255, 1) transparent;
+}
+
+.primekit-ele-team-social-overlay ul {
+  margin: 0;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+.primekit-ele-team-social-overlay ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.primekit-ele-team-social-overlay ul li:last-child {
+  margin-bottom: 0;
+}
+
+.primekit-ele-team-social-overlay ul li a i,
+.primekit-ele-team-social-overlay ul li a svg {
+  color: #448e08;
+  fill: #448e08;
+}
+
+/*---------------------------
+    Team Member Style Two
+-----------------------------*/
+.primekit-team-single-item-style-two {
+  overflow: hidden;
+  position: relative;
+}
+
+.primekit-team-single-item-style-two:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  background: rgba(0, 0, 0, 0.574);
+  transform: scale(0);
+  transition: 0.3s ease-out;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.primekit-team-single-item-style-two:hover::before {
+  transform: scale(1);
+  transition: 0.3s;
+}
+
+.primekit-ele-team-style-two-info {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+}
+
+#primekit-elementor-team-name.primekit-elementor-team-name {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s ease;
+}
+
+.primekit-team-single-item-style-two:hover h3.primekit-ele-team-name {
+  bottom: 35px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+h3.primekit-ele-team-name {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+h3.primekit-ele-team-name a {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+  margin-bottom: 0;
+}
+
+.primekit-ele-team-style-two-info p.primekit-ele-team-designation {
+  color: #448e08;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.primekit-ele-team-social-overlay.primekit-team-style-two-social {
+  background-color: transparent;
+  position: relative;
+}
+
+.primekit-ele-team-social-overlay.primekit-team-style-two-social::before {
+  display: none;
+}
+
+.primekit-team-single-item-style-two:hover
+  .primekit-ele-team-social-overlay.primekit-team-style-two-social {
+  opacity: 1;
+  height: auto;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.primekit-team-style-two-social.primekit-ele-team-social-overlay ul {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  gap: 13px;
+  padding: 0;
+}
+
+.primekit-team-style-two-social.primekit-ele-team-social-overlay ul li {
+  margin-bottom: 0;
+}
+
+.primekit-team-style-two-social.primekit-ele-team-social-overlay ul li a {
+  padding: 5px;
+}
+
+.primekit-team-style-two-social ul li a svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+
+.primekit-ele-team-style-two-info .primekit-ele-team-designation {
+  opacity: 0;
+  transition: 0.3s ease;
+  visibility: hidden;
+  transform: translateY(20px);
+  transform: scale(0);
+  bottom: 70px;
+  position: absolute;
+}
+
+.primekit-team-single-item-style-two:hover .primekit-ele-team-designation {
+  opacity: 1;
+  transition: 0.3s ease;
+  visibility: visible;
+  transform: translateY(0px);
+  transform: scale(1);
+}
+
+/*---------------------------
+ * Team Member Style Three
+-----------------------------*/
+
+.primekit-team-member-style-three-area {
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+  border-radius: 20px;
+  transition: box-shadow 0.4s;
+  box-sizing: border-box;
+}
+
+.primekit-team-member-style-three-area:hover {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.primekit-style-three-team-image img {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}
+
+.primekit-style-three-team-contents {
+  box-sizing: border-box;
+  padding: 25px 20px;
+}
+
+h4.primekit-style-three-team-designation {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h3.primekit-style-three-team-name {
+  margin: 0 0 15px 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.primekit-style-three-team-ontact-info {
+  margin-bottom: 15px;
+}
+
+.primekit-style-three-team-phone,
+.primekit-style-three-team-email {
+  font-size: 16px;
+}
+
+.primekit-style-three-team-phone svg,
+.primekit-style-three-team-email svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.primekit-style-three-team-icons ul {
+  margin: 0 0 5px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.primekit-style-three-team-icons ul li {
+  display: inline-block;
+  margin: 0 7px 7px 0;
+}
+
+.primekit-style-three-team-button svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;
+  position: relative;
+}

@@ -281,6 +281,7 @@ class Configuration{
             'primekit_social_share_widget_field' => 'SocialShare\Main',
             'primekit_sticker_text_field' => 'StickerText\Main',
             'primekit_tag_info_widget_field' => 'TagInfo\Main',
+            'primekit_team_member_widget_field' => 'TeamMember\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
