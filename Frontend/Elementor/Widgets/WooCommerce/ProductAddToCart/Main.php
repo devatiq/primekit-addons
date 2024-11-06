@@ -42,6 +42,11 @@ class Main extends Widget_Base {
 	{
 		return ['primekit-add-to-cart'];
 	}
+
+	public function get_style_depends()
+	{
+		return ['primekit-woocommerce-style'];
+	}
 	
 
 

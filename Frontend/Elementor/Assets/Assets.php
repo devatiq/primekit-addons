@@ -121,6 +121,7 @@ class Assets{
         wp_register_style('primekit-form-7-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/contact-form-7-style.css", array(), PRIMEKIT_VERSION);
         wp_register_style('primekit-flip-box', PRIMEKIT_ELEMENTOR_ASSETS . "/css/flip-box.css", array(), PRIMEKIT_VERSION);
         wp_register_style('primekit-magnific-popup', PRIMEKIT_ELEMENTOR_ASSETS . "/css/magnific-popup.css", array(), PRIMEKIT_VERSION);
+        wp_register_style('primekit-woocommerce-style', PRIMEKIT_ELEMENTOR_ASSETS . "/css/wc-style.css", array(), PRIMEKIT_VERSION);
         
 
     }

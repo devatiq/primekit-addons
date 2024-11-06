@@ -1,0 +1,457 @@
+/*----------------------------------------------
+ *Product Title
+ * ---------------------------------------------*/
+ .primekit-product-wc-title-tag {
+    margin-bottom: 0;
+ }
+
+/*----------------------------------------------
+ *Product Image
+ * ---------------------------------------------*/
+
+ .primekit-elementor-wc-product-img-area span.onsale {
+   min-width: 20px;
+   min-height: 20px;
+ }
+
+ .primekit-elementor-wc-product-img-area .woocommerce-product-gallery__trigger {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   z-index: 17;
+   background: rgba(0,0,0,0.4);
+   width: 35px;
+   height: 35px;
+   line-height: 50px;
+   text-align: center;
+   border-radius: 50%;
+   font-size: 0;
+}
+
+.primekit-elementor-wc-product-img-area .woocommerce-product-gallery__trigger::before {
+   content: '';
+   display: block;
+   width: 100%;
+   height: 100%;
+   background-image: url('../img/search-icon.png');
+   background-size: 16px 16px;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.primekit-elementor-wc-product-img-area.no-magnify-icon .woocommerce-product-gallery__trigger{
+   display: none;
+}
+
+.primekit-elementor-wc-product-img-area .flex-control-nav.flex-control-thumbs {
+   display: flex;
+   flex-wrap: wrap;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.primekit-elementor-wc-product-img-area .flex-control-nav.flex-control-thumbs li {
+   flex: 0 0 20%;
+   max-width: 20%;
+   box-sizing: border-box; 
+   display: flex; 
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+}
+
+.primekit-elementor-wc-product-img-area .flex-control-nav.flex-control-thumbs li img {
+   border: 1px solid #6841ef;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+/*----------------------------------------------
+ *Product Tabs
+ * ---------------------------------------------*/
+ .primekit-elementor-wc-product-tabs .woocommerce-tabs {
+   display: block;
+}
+
+.primekit-elementor-wc-product-tabs ul.tabs {
+   display: flex;
+   list-style-type: none;
+   padding-left: 0;
+   border-bottom: 1px solid #ddd;
+   margin-bottom: 20px;
+}
+
+.primekit-elementor-wc-product-tabs ul.tabs li {
+   margin-right: 10px;
+}
+
+.primekit-elementor-wc-product-tabs ul.tabs li a {
+   display: block;
+   padding: 10px 15px;
+   background-color: #f5f5f5;
+   color: #333;
+   border: 1px solid #ddd;
+   border-bottom: none;
+   text-decoration: none;
+   border-radius: 4px;
+   transition: all 0.4s;
+}
+
+.primekit-elementor-wc-product-tabs ul.tabs li a:hover {
+   background-color: #eee;
+}
+
+.primekit-elementor-wc-product-tabs ul.tabs li.active a {
+   background-color: #fff;
+   color: #000;
+   border-color: #ddd;
+   border-bottom: 1px solid #fff;
+}
+
+.primekit-elementor-wc-product-tabs .panel {
+   border: 1px solid #ddd;
+   padding: 20px;
+   background-color: #fff;
+}
+
+.primekit-elementor-wc-product-tabs .woocommerce-Tabs-panel h2 {
+   font-size: 25px;
+   line-height: 1.2;
+   font-weight: 600;
+}
+
+/*----------------------------------------------
+ *Product Price
+ * ---------------------------------------------*/
+
+.primekit-elementor-wc-product-price .price {
+   font-size: 18px;
+   color: #333;
+}
+
+.primekit-elementor-wc-product-price .price del bdi {
+   color: #999;
+   font-size: 16px;
+   text-decoration: line-through;
+}
+
+.primekit-elementor-wc-product-price .price ins bdi {
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.primekit-elementor-wc-product-price .woocommerce-Price-amount {
+   display: inline-block;
+   padding: 5px;
+}
+
+/*----------------------------------------------
+ *Product Meta
+ * ---------------------------------------------*/
+
+.primekit-product-sku, 
+.primekit-product-categories, 
+.primekit-product-tags {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 5px;
+}
+
+.primekit-product-sku .label, 
+.primekit-product-categories .label, 
+.primekit-product-tags .label {
+   font-weight: bold;
+   flex-basis: 21%;
+   text-align: left;
+}
+
+.primekit-product-sku .value, 
+.primekit-product-categories .value, 
+.primekit-product-tags .value {
+   flex-basis: 79%;
+   text-align: left;
+}
+
+.primekit-meta-divider {
+   width: 70%;
+   height: 2px;
+}
+
+/*----------------------------------------------
+ *Related Products
+ * ---------------------------------------------*/
+h2.primekit-wc-related-product-title {
+   margin: 0 0 15px 0;
+   font-size: 25px;
+   line-height: 1.2;
+}
+
+.primekit-wc-related-products-area h2.woocommerce-loop-product__title {
+   margin: 0!important;
+   line-height: 1.2;
+   padding: 5px 0 !important;
+}
+
+/*----------------------------------------------
+ * Cart Icon
+ * ---------------------------------------------*/
+ .primekit-elementor-wc-cart-icon {
+   position: relative;
+   display: inline-block;
+}
+
+.primekit-elementor-wc-cart-icon .primekit-cart-contents {
+   text-decoration: none;
+   color: #333;
+   display: flex;
+   align-items: center;
+}
+
+.primekit-elementor-wc-cart-icon .primekit-cart-contents .eicon-cart-solid {
+   font-size: 24px;
+   transition: all 0.4s;
+}
+
+.primekit-elementor-wc-cart-icon .primekit-cart-contents .primekit-cart-contents-count {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 4px;
+   border-radius: 50%;
+   line-height: 1;
+   transition: all 0.4s;
+}
+
+/*----------------------------------------------
+ * Add To Cart
+ * ---------------------------------------------*/
+ .primekit-wc-qty-button-holder {
+   display: flex;
+   gap: 10px;
+ }
+
+@keyframes primekitSpin {
+   100% {
+       transform: rotate(360deg)
+   }
+}
+.primekit-wc-qty-button-holder button.primekit_cart_loading:after {
+   font-family: WooCommerce;
+   content: "\e01c";
+   vertical-align: top;
+   font-weight: 400;
+   position: absolute;
+   top: 0.818em;
+   right: 1em;
+   animation: primekitSpin 2s linear infinite;
+}
+.primekit-wc-qty-button-holder button.primekit_cart_loading {
+   padding-right: 2.618em !important;
+   transition: all 0.5s ease;
+   -webkit-transition: all 0.5s ease;
+}
+#acbbiz-add-to-cart-message .error-message {
+   background-color: red;
+   color: #fff;
+   padding: 10px;
+   border-radius: 5px;
+   text-align: center;
+}
+#acbbiz-add-to-cart-message .success-message {
+   color: green;
+   background-color: #ccffcc;
+   padding: 10px;
+   border-radius: 5px;
+   text-align: center;
+}
+.woocommerce .primekit-wc-qty-button-holder .quantity input {
+   width: 90px;
+}
+
+.primekit-elementor-wc-add-to-cart .price del {
+   text-decoration: none;
+}
+
+.primekit-elementor-wc-add-to-cart .price del bdi {
+   opacity: .5;
+   text-decoration: line-through;
+}
+
+/*----------------------------------------------
+ *Cart Page
+ * ---------------------------------------------*/
+ .primekit-elementor-wc-cart-page .woocommerce {
+   display: grid;
+   grid-template-rows: auto auto;
+   grid-template-columns: 1fr 300px;
+   gap: 20px;
+}
+
+.primekit-elementor-wc-cart-page .woocommerce .woocommerce-notices-wrapper {
+   grid-column: 1 / -1;
+}
+
+.primekit-elementor-wc-cart-page .woocommerce .woocommerce-cart-form {
+   grid-column: 1 / 2;
+}
+
+.primekit-elementor-wc-cart-page .woocommerce .cart-collaterals {
+   grid-column: 2 / 3;
+}
+
+.primekit-elementor-wc-cart-page .woocommerce .cart-collaterals .cart_totals {
+   width: 100%;
+}
+
+.primekit-elementor-wc-cart-page .woocommerce .cart-collaterals .cart_totals h2{
+   font-size: 25px;
+
+}
+
+.primekit-elementor-wc-cart-page .woocommerce-message {
+   margin-bottom: 30px;
+}
+
+.primekit-elementor-wc-cart-page .woocommerce a.button.alt {
+   transition: all 0.4s;
+}
+
+.primekit-elementor-wc-cart-page .coupon .input-text {
+   width: 120px !important;
+}
+
+.primekit-elementor-wc-cart-page .quantity .qty {
+   width: 80px !important;
+}
+
+
+/*----------------------------------------------
+ * Woo Account page
+ * ---------------------------------------------*/
+
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation {
+   float: none !important;
+   display: flex;
+   flex-direction: column;
+   flex-basis: 30%;
+}
+.primekit-elementor-wc-account-page .woocommerce::before, .primekit-elementor-wc-account-page .woocommerce::after {
+   display: none !important;
+}
+.primekit-elementor-wc-account-page .woocommerce {
+   display: flex;
+   gap: 20px;
+}
+.primekit-ele-wc-my-account-vertical.primekit-elementor-wc-account-page .woocommerce {
+   flex-direction: column;
+}
+
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-content {
+   float: none !important;
+   flex-basis: 70%;
+}
+ .primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation ul{
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+   padding: 0;
+   gap: 5px;
+   list-style: none;
+}
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a {
+   display: block;
+   padding: 10px 15px;
+   color: #000;
+   text-decoration: none;
+   border-radius: 3px;
+   transition: all 0.4s;
+   width: 100%;
+   background-color: #F8FAFF;
+}
+
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a:hover, .primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active a {
+   background-color: #302EFF;
+   color: #fff;
+}
+
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-content {
+   background-color: #F8FAFF;
+   color: #333;
+   border: 1px solid #d5d8dc;
+   padding: 15px 20px;
+   border-radius: 5px;
+}
+
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-content .button {
+   font-size: 15px;
+   padding: 15px 20px;
+   border-radius: 5px;
+   color:#fff;
+   background-color: #302EFF;
+   margin-top: 10px;
+   text-transform: capitalize;
+}
+
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-content .button:hover {
+   background-color: #000;
+   color: #fff;
+}
+.primekit-elementor-wc-account-page .woocommerce-MyAccount-content input[type="text"],.primekit-elementor-wc-account-page .woocommerce-MyAccount-content input[type="email"],.primekit-elementor-wc-account-page .woocommerce-MyAccount-content input[type="url"], .primekit-elementor-wc-account-page .woocommerce-MyAccount-content input[type="password"],.primekit-elementor-wc-account-page .woocommerce-MyAccount-content input[type="search"],.primekit-elementor-wc-account-page .woocommerce-MyAccount-content input[type="tel"] {   
+   padding: 12px 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+}
+
+.primekit-ele-wc-my-account-vertical.primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation ul {
+   flex-direction: row;
+   width: 100%;
+   flex-basis: 100%;
+}
+.primekit-ele-wc-my-account-vertical.primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation ul li {
+   display: flex;
+}
+
+.primekit-ele-wc-my-account-vertical.primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation {
+   width: 100%;
+   flex-basis: 100%;
+}
+.primekit-ele-wc-my-account-vertical.primekit-elementor-wc-account-page .woocommerce-MyAccount-content {
+   width: 100%;
+   flex-basis: 100%;
+}
+
+/*----------------------------------------------
+ *Responsive Adjustments
+ * ---------------------------------------------*/
+@media screen and (max-width: 1400px) {
+.primekit-elementor-wc-product-img-area .flex-control-nav.flex-control-thumbs li {
+   flex: 0 0 25%;
+   max-width: 25%;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+   .primekit-elementor-wc-cart-page .woocommerce {
+       grid-template-columns: 1fr;
+   }
+   .primekit-elementor-wc-cart-page .woocommerce .cart-collaterals,
+   .primekit-elementor-wc-cart-page .woocommerce .woocommerce-cart-form {
+       grid-column: 1 / -1;
+   }
+   .primekit-elementor-wc-account-page .woocommerce {
+      flex-direction: column;
+   }
+   .primekit-ele-wc-my-account-vertical.primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation ul {
+      flex-direction: column;
+   }
+   .primekit-elementor-wc-account-page .woocommerce-MyAccount-navigation {
+      width: 100% !important;
+      flex-basis: 100% !important;
+   }
+   .primekit-elementor-wc-account-page .woocommerce-MyAccount-content {
+      width: 100% !important;
+      flex-basis: 100% !important;
+   }
+}
+
