@@ -261,6 +261,15 @@ class RegularTab
             self::demo_url('widgets/portfolio-elementor-widget/')
         );
 
+         // Post Content
+         PrimeKitWidgets::primekit_available_widget(
+            'primekit_post_content_widget_field',
+            esc_html__('Post Content', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/page-title.svg',
+            true,
+            self::demo_url('widgets/portfolio-elementor-widget/')
+        );
+
         // Post Meta.
         PrimeKitWidgets::primekit_available_widget(
             'primekit_post_meta_widget_field',

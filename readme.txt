@@ -22,10 +22,6 @@ Welcome to **[PrimeKit Addons](https://primekitaddons.com/)**, your go-to treasu
 
 [Demo](https://demo.primekitaddons.com/addons-widger/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
 
-== 20+ Free Templates ==
-
-[View All Templates](https://demo.primekitaddons.com/addons-template/)
-
 == Theme Builder ==
 **Design Your Website's Theme Easily with PrimeKit**  
 Our theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!
