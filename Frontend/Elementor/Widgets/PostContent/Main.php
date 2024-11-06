@@ -19,7 +19,7 @@ class Main extends Widget_Base
 		return 'primekit-post-content';
 	}
 
-	public function get_content()
+	public function get_title()
 	{
 		return esc_html__('Post Contents', 'primekit-addons');
 	}
