@@ -88,6 +88,7 @@ class Assets{
         wp_register_script('primekit-popup', PRIMEKIT_ELEMENTOR_ASSETS . "/js/popup.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-search-icon', PRIMEKIT_ELEMENTOR_ASSETS . "/js/search-icon.js", array('jquery'), PRIMEKIT_VERSION, true);
         wp_register_script('primekit-skill-bar', PRIMEKIT_ELEMENTOR_ASSETS . "/js/skill-bar.js", array('jquery'), PRIMEKIT_VERSION, true);
+        wp_register_script('primekit-sticker-text', PRIMEKIT_ELEMENTOR_ASSETS . "/js/sticker-text.js", array('jquery'), PRIMEKIT_VERSION, true);
 
         wp_localize_script('primekit-mailchimp-newsletter', 'PrimekitMailchimpAjax', [
             'ajax_url' => admin_url('admin-ajax.php'),
