@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Single Image Scroll
+ * Render View for Single Image Scroll
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly

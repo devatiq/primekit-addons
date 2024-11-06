@@ -267,7 +267,7 @@ class Configuration{
             'primekit_img_hover_widget_field' => 'ImgHover\Main',
             'primekit_img_text_scroll_widget_field' => 'ImgScroll\Main',
             'primekit_popular_posts_field' => 'PopularPosts\Main',
-            'primekit_abc_popup_widget_field' => 'Popup\Main',
+            'primekit_popup_widget_field' => 'Popup\Main',
             'primekit_portfolio_widget_field' => 'Portfolio\Main',
             'primekit_post_meta_widget_field' => 'PostInfo\Main',
             'primekit_pricing_table_widget_field' => 'PricingTable\Main',
@@ -277,6 +277,7 @@ class Configuration{
             'primekit_search_icon_widget_field' => 'SearchIcon\Main',
             'primekit_sec_title_widget_field' => 'SectionTitle\Main',
             'primekit_single_img_scroll_field' => 'SingleImgScroll\Main',
+            'primekit_skill_bar_widget_field' => 'SkillBar\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {

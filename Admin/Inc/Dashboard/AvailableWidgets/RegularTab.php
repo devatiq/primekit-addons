@@ -245,7 +245,7 @@ class RegularTab
 
         // Popup.
         PrimeKitWidgets::primekit_available_widget(
-            'primekit_abc_popup_widget_field',
+            'primekit_popup_widget_field',
             esc_html__('Popup', 'primekit-addons'),
             PRIMEKIT_ADMIN_ASSETS . '/img/icons/popup.svg',
             true,
