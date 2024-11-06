@@ -280,6 +280,7 @@ class Configuration{
             'primekit_skill_bar_widget_field' => 'SkillBar\Main',
             'primekit_social_share_widget_field' => 'SocialShare\Main',
             'primekit_sticker_text_field' => 'StickerText\Main',
+            'primekit_tag_info_widget_field' => 'TagInfo\Main',
         ];
         
         foreach ($widgets as $option_name => $widget_class) {
