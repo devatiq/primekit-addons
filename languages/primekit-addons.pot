@@ -5979,7 +5979,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:82
 #: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:105
-msgid "Abcbiz Addons"
+msgid "PrimeKit Addons"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:90

@@ -79,7 +79,7 @@ class Main extends Widget_Base {
 			[
 				'label' => esc_html__( 'Image Alt Text', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Abcbiz Addons', 'primekit-addons' ),
+				'default' => esc_html__( 'PrimeKit Addons', 'primekit-addons' ),
 			]
 		);
 
@@ -102,7 +102,7 @@ class Main extends Widget_Base {
 			[
 				'label' => esc_html__( 'Badge Text', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Abcbiz Addons', 'primekit-addons' ),
+				'default' => esc_html__( 'PrimeKit Addons', 'primekit-addons' ),
 				'condition' => [
 					'primekit_elementor_single_img_scroll_badge_switch' => 'yes'
 				],

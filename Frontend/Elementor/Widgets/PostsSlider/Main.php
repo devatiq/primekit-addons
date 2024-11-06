@@ -321,7 +321,7 @@ class Main extends Widget_Base
 
         // Navigation Section
         $this->start_controls_section(
-            'abcbiz_posts_slider_navigation',
+            'primekit_posts_slider_navigation',
             [
                 'label' => esc_html__('Navigation', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -483,7 +483,7 @@ class Main extends Widget_Base
 
         // Pagination Section
         $this->start_controls_section(
-            'abcbiz_posts_slider_pagination',
+            'primekit_posts_slider_pagination',
             [
                 'label' => esc_html__('Pagination', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,

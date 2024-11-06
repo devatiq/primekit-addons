@@ -58,7 +58,7 @@ class Main extends Widget_Base
 
         // Start content section
         $this->start_controls_section(
-            'abcbiz_slider_contents',
+            'primekit_slider_contents',
             [
                 'label' => esc_html__('Slides', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
@@ -124,7 +124,7 @@ class Main extends Widget_Base
 
         // start slider settings section
         $this->start_controls_section(
-            'abcbiz_slider_settings',
+            'primekit_slider_settings',
             [
                 'label' => esc_html__('Slider Settings', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
@@ -195,7 +195,7 @@ class Main extends Widget_Base
 
         // start style section
         $this->start_controls_section(
-            'abcbiz_slider_style',
+            'primekit_slider_style',
             [
                 'label' => esc_html__('Style', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -241,7 +241,7 @@ class Main extends Widget_Base
 
         // start navigation section
         $this->start_controls_section(
-            'abcbiz_slider_navigation',
+            'primekit_slider_navigation',
             [
                 'label' => esc_html__('Navigation', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,

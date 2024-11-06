@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
     'use strict';
-    $('body').on('click', '.abcbiz_add_to_cart', function(e) {
+    $('body').on('click', '.primekit_add_to_cart', function(e) {
         e.preventDefault();
 
         let button = $(this);
@@ -9,23 +9,23 @@ jQuery(document).ready(function($) {
         }
 
         let product_id = button.data('product_id');
-        button.addClass('abcbiz_cart_loading');
+        button.addClass('primekit_cart_loading');
         let quantity = button.closest('form').find('.quantity input').val() || 1; // Default to 1 if not set
 
         $.ajax({
             type: 'POST',
             url: acbbiz_add_to_cart.ajax_url,
             data: {
-                'action': 'abcbiz_ajax_add_to_cart_handler',
+                'action': 'primekit_ajax_add_to_cart_handler',
                 'product_id': product_id,
                 'quantity': quantity,
-                'abcbiz_cart_nonce': acbbiz_add_to_cart.abcbiz_add_to_cart_nonce 
+                'primekit_cart_nonce': acbbiz_add_to_cart.primekit_add_to_cart_nonce 
             },
             success: function(response) {
                 var messageDiv = $('#acbbiz-add-to-cart-message');
                 if (response.success) {
                     messageDiv.html('<p class="success-message">' + response.data.message + '</p>').fadeIn();
-                    abcbiz_updateCartCount(); // Update cart count on successful addition
+                    primekit_updateCartCount(); // Update cart count on successful addition
                 } else {
                     messageDiv.html('<p>' + response.data.message + '</p>').fadeIn();
                 }
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
                 });
             },
             complete: function() {
-                button.removeClass('abcbiz_cart_loading');
+                button.removeClass('primekit_cart_loading');
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 var messageDiv = $('#acbbiz-add-to-cart-message');
@@ -49,19 +49,19 @@ jQuery(document).ready(function($) {
         });
     });
 
-    function abcbiz_updateCartCount() {
-        // Only proceed if abcbizCartAjax and abcbizCartAjax.url are defined
-        if (typeof abcbizCartAjax !== 'undefined' && typeof abcbizCartAjax.url !== 'undefined') {
+    function primekit_updateCartCount() {
+        // Only proceed if PrimeKitCartAjax and PrimeKitCartAjax.url are defined
+        if (typeof PrimeKitCartAjax !== 'undefined' && typeof PrimeKitCartAjax.url !== 'undefined') {
             $.ajax({
                 type: 'POST',
-                url: abcbizCartAjax.url,
+                url: PrimeKitCartAjax.url,
                 data: {
-                    'action': 'abcbiz_get_cart_count'
+                    'action': 'primekit_get_cart_count'
                 },
                 success: function(cartCount) {
                     // Update the cart count if the element exists
-                    if ($('.abcbiz-cart-contents-count').length) {
-                        $('.abcbiz-cart-contents-count').text(cartCount);
+                    if ($('.primekit-cart-contents-count').length) {
+                        $('.primekit-cart-contents-count').text(cartCount);
                     }
                 }
             });

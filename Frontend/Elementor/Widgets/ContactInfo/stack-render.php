@@ -19,7 +19,7 @@
     </div>
 <?php endif;?>
 
-</div><!-- /end abcbiz contact social area -->
+</div><!-- /end PrimeKit contact social area -->
 
 
 	
