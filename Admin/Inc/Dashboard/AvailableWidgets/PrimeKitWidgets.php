@@ -6,6 +6,7 @@ if (!defined('ABSPATH'))
 
 use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\RegularTab;
 use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\WooCommerceTab;
+use PrimeKit\Frontend\Elementor\Inc\Functions;
 
 class PrimeKitWidgets
 {
@@ -61,7 +62,7 @@ class PrimeKitWidgets
         ];
     
         // Conditionally add the WooCommerce tab if WooCommerce is active
-        if (class_exists('WooCommerce')) {
+        if (Functions::is_woocommerce_active()) {
             $tabs['woocommerce'] = [
                 'label' => 'WooCommerce',
                 'callback' => 'render_woocommerce_widgets_list'

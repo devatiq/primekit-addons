@@ -28,7 +28,8 @@ use PrimeKit\Frontend\Elementor\Inc\PostViewTracker;
  * @package PrimeKit\Frontend\Elementor
  * @since 1.0.0
  */
-class Configuration{
+class Configuration
+{
 
 
     protected $functions;
@@ -79,11 +80,11 @@ class Configuration{
 
         if ($this->is_compatible()) {
             add_action('elementor/init', [$this, 'init']);
-        } 
+        }
 
         //classes Initialization.
         $this->classes_init();
-        
+
     }
 
 
@@ -114,16 +115,16 @@ class Configuration{
         return true;
     }
 
-	/**
-	 * setConstants.
-	 */
+    /**
+     * setConstants.
+     */
 
-     public function setConstants()
-     {
-         define('PRIMEKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'Assets');         
-         define('PRIMEKIT_ELEMENTOR_PATH', plugin_dir_path(__FILE__));
- 
-     }
+    public function setConstants()
+    {
+        define('PRIMEKIT_ELEMENTOR_ASSETS', plugin_dir_url(__FILE__) . 'Assets');
+        define('PRIMEKIT_ELEMENTOR_PATH', plugin_dir_path(__FILE__));
+
+    }
 
     /**
      * Warning when the site doesn't have Elementor installed or activated.
@@ -194,12 +195,14 @@ class Configuration{
      *
      * @since 1.0.0
      */
-    public function classes_init(){
-        
+    public function classes_init()
+    {
+
         $this->functions = new Functions();
         $this->assets = new Assets();
         $this->Post_View_Tracker = new PostViewTracker();
     }
+
 
     /**
      * Load the addons functionality only after Elementor is initialized.
@@ -210,7 +213,7 @@ class Configuration{
     }
 
 
-  
+
     /**
      * Register all the widgets.
      *
@@ -218,12 +221,27 @@ class Configuration{
      *
      * @return void
      */
-    
+
     public function register_widgets($widgets_manager)
     {
-        
-        $namespace_base = '\PrimeKit\Frontend\Elementor\Widgets\\';
 
+        $namespace_base = '\PrimeKit\Frontend\Elementor\Widgets\\';        
+
+        // Register all widgets
+        $this->register_general_widgets($widgets_manager, $namespace_base);
+
+        // Register WooCommerce widgets if WooCommerce is active
+        if (Functions::is_woocommerce_active()) {
+            $this->register_woocommerce_widgets($widgets_manager, $namespace_base);
+        }
+
+    }
+
+    /**
+     * Registers the general widgets.
+     */
+    private function register_general_widgets($widgets_manager, $namespace_base)
+    {
         $widgets = [
             'primekit_shape_anim_widget_field' => 'AnimatedShape\Main',
             'primekit_anim_text_widget_field' => 'AnimatedText\Main',
@@ -281,22 +299,34 @@ class Configuration{
             'primekit_social_share_widget_field' => 'SocialShare\Main',
             'primekit_sticker_text_field' => 'StickerText\Main',
             'primekit_tag_info_widget_field' => 'TagInfo\Main',
-            'primekit_team_member_widget_field' => 'TeamMember\Main',
+            'primekit_team_member_widget_field' => 'TeamMember\Main',           
         ];
-        
         foreach ($widgets as $option_name => $widget_class) {
             $is_enabled = get_option($option_name, 1); // Get the option value (default to enabled)
-            
+
             if ($is_enabled) {
                 $full_class_name = $namespace_base . $widget_class; // Combine base namespace with class path
                 $widgets_manager->register(new $full_class_name());
             }
         }
-        
-        
-
     }
+    /**
+     * Registers WooCommerce-specific widgets.
+     */
+    private function register_woocommerce_widgets($widgets_manager, $namespace_base)
+    {
+        $woocommerce_widgets = [
+            'primekit_wc_add_to_cart_icon_field' => 'WooCommerce\ProductAddToCart\Main',
+        ];
 
+        foreach ($woocommerce_widgets as $option_name => $widget_class) {
+            $is_enabled = get_option($option_name, 1); // Get the option value (default to enabled)
 
+            if ($is_enabled) {
+                $full_class_name = $namespace_base . $widget_class; // Combine base namespace with class path
+                $widgets_manager->register(new $full_class_name());
+            }
+        }
+    }
 
 }

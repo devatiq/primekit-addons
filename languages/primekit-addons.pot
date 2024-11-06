@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-05T04:37:13+00:00\n"
+"POT-Creation-Date: 2024-11-06T12:03:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
 
 #. Plugin Name of the plugin
 #: primekit-addons.php
-#: primekit-addons.php:35
+#: primekit-addons.php:68
 msgid "PrimeKit Addons and Templates"
 msgstr ""
 
@@ -66,35 +66,35 @@ msgstr ""
 msgid "Widgets"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:111
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:113
 msgid "Content not available or not found callback function."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:148
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:150
 msgid "No widgets to display."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:169
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:171
 msgid "List of regular widgets available in PrimeKit."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:186
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:188
 msgid "List of WooCommerce widgets available in PrimeKit."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:223
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:225
 msgid "Free"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:223
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:225
 msgid "Pro"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:232
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:234
 msgid "off"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:233
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:235
 msgid "on"
 msgstr ""
 
@@ -271,6 +271,7 @@ msgid "Animated Shape"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:348
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:21
 msgid "Single Image Scroll"
 msgstr ""
 
@@ -284,14 +285,19 @@ msgid "Site Title & Tagline"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:375
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:18
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:140
 msgid "Skill Bar"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:384
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:21
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:47
 msgid "Social Share"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:393
+#: Frontend/Elementor/Widgets/StickerText/Main.php:21
 msgid "Sticker Text"
 msgstr ""
 
@@ -300,6 +306,7 @@ msgid "Post Tag Info"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:411
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:19
 msgid "Team Member"
 msgstr ""
 
@@ -471,6 +478,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ImgScroll/Main.php:48
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:103
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:68
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:118
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:52
 msgid "Settings"
 msgstr ""
@@ -950,11 +958,13 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ImgHover/Main.php:56
 #: Frontend/Elementor/Widgets/ImgScroll/Main.php:116
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:54
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:57
 msgid "Choose Image"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:90
 #: Frontend/Elementor/Widgets/Popup/Main.php:113
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:80
 msgid "Image Alt Text"
 msgstr ""
 
@@ -998,8 +1008,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:96
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:109
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:122
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:112
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:92
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:54
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:119
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:84
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:96
+#: Frontend/Elementor/Widgets/StickerText/Main.php:75
+#: Frontend/Elementor/Widgets/StickerText/Main.php:211
 msgid "Show"
 msgstr ""
 
@@ -1039,8 +1055,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:97
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:110
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:123
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:113
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:93
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:55
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:120
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:85
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:97
+#: Frontend/Elementor/Widgets/StickerText/Main.php:76
+#: Frontend/Elementor/Widgets/StickerText/Main.php:212
 msgid "Hide"
 msgstr ""
 
@@ -1157,7 +1179,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:501
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1156
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:277
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:344
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:203
+#: Frontend/Elementor/Widgets/StickerText/Main.php:267
+#: Frontend/Elementor/Widgets/StickerText/Main.php:464
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:121
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:584
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:747
 msgid "Border Radius"
@@ -1201,6 +1227,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:887
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1251
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:156
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:317
+#: Frontend/Elementor/Widgets/StickerText/Main.php:374
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:367
 msgid "Normal"
 msgstr ""
@@ -1269,6 +1297,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:920
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1294
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:190
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:350
+#: Frontend/Elementor/Widgets/StickerText/Main.php:418
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:400
 msgid "Hover"
 msgstr ""
@@ -1288,6 +1318,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:620
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1326
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:131
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:347
 msgid "Border Color"
 msgstr ""
 
@@ -1346,8 +1377,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ImageGallery/Main.php:61
 #: Frontend/Elementor/Widgets/ImgScroll/Main.php:95
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:371
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:48
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:42
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:42
+#: Frontend/Elementor/Widgets/StickerText/Main.php:53
 msgid "Contents"
 msgstr ""
 
@@ -1362,6 +1395,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedText/Main.php:80
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:61
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:62
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:61
 msgid "Heading Tag"
 msgstr ""
 
@@ -1369,6 +1403,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:56
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:65
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:66
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:65
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:69
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:134
 msgid "H1"
@@ -1378,6 +1413,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:57
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:66
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:67
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:66
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:70
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:135
 msgid "H2"
@@ -1387,6 +1423,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:58
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:67
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:68
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:67
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:71
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:136
 msgid "H3"
@@ -1396,6 +1433,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:59
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:68
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:69
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:68
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:72
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:137
 msgid "H4"
@@ -1405,6 +1443,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:60
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:69
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:70
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:69
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:73
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:138
 msgid "H5"
@@ -1414,6 +1453,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:61
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:70
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:71
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:70
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:74
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:139
 msgid "H6"
@@ -1445,7 +1485,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:52
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:81
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:72
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:209
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:94
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:56
+#: Frontend/Elementor/Widgets/StickerText/Main.php:298
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:56
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:630
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:929
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:86
@@ -1492,9 +1536,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:86
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:121
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:77
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:214
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:99
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:92
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:157
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:61
+#: Frontend/Elementor/Widgets/StickerText/Main.php:123
+#: Frontend/Elementor/Widgets/StickerText/Main.php:303
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:61
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:634
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:792
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:933
@@ -1541,9 +1590,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:107
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:90
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:81
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:218
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:103
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:96
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:161
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:65
+#: Frontend/Elementor/Widgets/StickerText/Main.php:161
+#: Frontend/Elementor/Widgets/StickerText/Main.php:307
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:65
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:638
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:796
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:937
@@ -1591,9 +1645,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:111
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:94
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:85
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:222
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:107
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:100
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:165
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:69
+#: Frontend/Elementor/Widgets/StickerText/Main.php:127
+#: Frontend/Elementor/Widgets/StickerText/Main.php:311
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:69
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:642
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:800
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:941
@@ -1619,6 +1678,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:152
 #: Frontend/Elementor/Widgets/Popup/Main.php:65
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:232
+#: Frontend/Elementor/Widgets/StickerText/Main.php:62
 msgid "Text"
 msgstr ""
 
@@ -1812,6 +1872,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/RelatedPost/Main.php:58
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:163
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:197
+#: Frontend/Elementor/Widgets/StickerText/Main.php:325
+#: Frontend/Elementor/Widgets/StickerText/Main.php:382
+#: Frontend/Elementor/Widgets/StickerText/Main.php:426
+#: Frontend/Elementor/Widgets/StickerText/Main.php:544
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:374
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:407
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:473
@@ -1850,6 +1914,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1001
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1135
 #: Frontend/Elementor/Widgets/RelatedPost/Main.php:85
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:328
+#: Frontend/Elementor/Widgets/StickerText/Main.php:339
+#: Frontend/Elementor/Widgets/StickerText/Main.php:362
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:134
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:576
 msgid "Typography"
 msgstr ""
@@ -1859,6 +1927,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:44
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:48
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:53
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:47
 msgid "Setting"
 msgstr ""
 
@@ -1906,6 +1975,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1314
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:176
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:209
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:288
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:302
+#: Frontend/Elementor/Widgets/StickerText/Main.php:233
+#: Frontend/Elementor/Widgets/StickerText/Main.php:395
+#: Frontend/Elementor/Widgets/StickerText/Main.php:439
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:552
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:695
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:388
@@ -1999,6 +2073,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:594
 #: Frontend/Elementor/Widgets/Popup/Main.php:228
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:184
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:301
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:315
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:143
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:172
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:401
 msgid "Text Color"
@@ -2052,6 +2129,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:123
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:292
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:65
+#: Frontend/Elementor/Widgets/StickerText/Main.php:86
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:244
 msgid "Button Text"
 msgstr ""
 
@@ -2062,6 +2141,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:206
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:154
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:122
+#: Frontend/Elementor/Widgets/StickerText/Main.php:131
 msgid "Top"
 msgstr ""
 
@@ -2093,6 +2173,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:157
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:107
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:53
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:62
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:75
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:179
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:151
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:163
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:175
@@ -2124,6 +2207,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:158
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:108
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:54
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:63
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:76
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:180
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:152
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:164
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:176
@@ -2156,12 +2242,14 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogList/Main.php:349
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:924
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:144
+#: Frontend/Elementor/Widgets/StickerText/Main.php:350
 msgid "Button Style"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:218
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:457
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:863
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:182
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:415
 msgid "Hover Background Color"
 msgstr ""
@@ -2188,6 +2276,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:250
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1021
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:134
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:324
 msgid "Icon Color"
 msgstr ""
 
@@ -2196,6 +2285,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:563
 #: Frontend/Elementor/Widgets/Popup/Main.php:346
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:147
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:357
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:479
 msgid "Icon Hover Color"
 msgstr ""
@@ -2224,12 +2314,15 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1055
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1202
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:110
+#: Frontend/Elementor/Widgets/StickerText/Main.php:520
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:720
 msgid "Icon Size"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:335
 #: Frontend/Elementor/Widgets/CountDown/Main.php:776
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:829
+#: Frontend/Elementor/Widgets/StickerText/Main.php:485
 msgid "Button Spacing"
 msgstr ""
 
@@ -2326,6 +2419,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:116
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:123
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:77
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:338
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:200
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:292
 msgid "Style"
@@ -2463,6 +2557,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:224
 #: Frontend/Elementor/Widgets/BlogList/Main.php:209
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:149
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:240
 msgid "Title Style"
 msgstr ""
 
@@ -2480,6 +2575,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:193
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:300
 #: Frontend/Elementor/Widgets/RelatedPost/Main.php:71
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:169
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:683
 msgid "Hover Color"
 msgstr ""
@@ -2594,9 +2690,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogList/Main.php:513
 #: Frontend/Elementor/Widgets/IconBox/Main.php:760
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:720
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:323
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:172
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:230
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:287
+#: Frontend/Elementor/Widgets/StickerText/Main.php:246
 msgid "Spacing"
 msgstr ""
 
@@ -2647,6 +2745,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogList/Main.php:423
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:322
 #: Frontend/Elementor/Widgets/Popup/Main.php:466
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:177
 msgid "Image Style"
 msgstr ""
 
@@ -2688,6 +2787,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:198
 #: Frontend/Elementor/Widgets/FetchPosts/renderview.php:97
 #: Frontend/Elementor/Widgets/IconBox/Main.php:125
+#: Frontend/Elementor/Widgets/StickerText/Main.php:88
 msgid "Read More"
 msgstr ""
 
@@ -2786,11 +2886,13 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:383
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:413
 #: Frontend/Elementor/Widgets/ImageGallery/Main.php:248
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:127
 msgid "Image Height"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:406
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:478
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:195
 msgid "Image Border Radius"
 msgstr ""
 
@@ -2888,6 +2990,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:151
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:261
 #: Frontend/Elementor/Widgets/ImgScroll/Main.php:169
+#: Frontend/Elementor/Widgets/StickerText/Main.php:224
 msgid "Box Style"
 msgstr ""
 
@@ -2942,6 +3045,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:448
 #: Frontend/Elementor/Widgets/CTA/Main.php:205
+#: Frontend/Elementor/Widgets/StickerText/Main.php:165
 msgid "Space Between"
 msgstr ""
 
@@ -2994,6 +3098,7 @@ msgid "Card Content"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:165
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:103
 msgid "Badge Text"
 msgstr ""
 
@@ -3026,6 +3131,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:172
 #: Frontend/Elementor/Widgets/IconBox/Main.php:140
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:302
+#: Frontend/Elementor/Widgets/StickerText/Main.php:99
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:257
 msgid "Button Link"
 msgstr ""
 
@@ -3043,6 +3150,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:266
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:681
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:782
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:217
 msgid "Box Shadow"
 msgstr ""
 
@@ -3073,6 +3181,7 @@ msgid "icon Space"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:599
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:228
 msgid "Badge Style"
 msgstr ""
 
@@ -3108,6 +3217,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:584
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:504
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:641
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:216
 msgid "Heading Typography"
 msgstr ""
 
@@ -3171,6 +3281,7 @@ msgid "List View"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:108
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:85
 msgid "Category Style"
 msgstr ""
 
@@ -3202,6 +3313,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:58
 #: Frontend/Elementor/Widgets/CTA/Main.php:68
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:88
 msgid "Heading"
 msgstr ""
 
@@ -3210,6 +3322,7 @@ msgid "Web Design"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:68
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:98
 msgid "Value"
 msgstr ""
 
@@ -3227,6 +3340,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CTA/Main.php:593
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:513
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:650
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:224
 msgid "Heading Color"
 msgstr ""
 
@@ -3235,10 +3349,12 @@ msgid "Value Position Adjustment"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:176
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:237
 msgid "Value Typography"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:184
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:249
 msgid "Value Color"
 msgstr ""
 
@@ -3401,6 +3517,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:568
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:674
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:170
 msgid "Item Spacing"
 msgstr ""
 
@@ -3453,6 +3570,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:89
 #: Frontend/Elementor/Widgets/CountDown/Main.php:352
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:99
+#: Frontend/Elementor/Widgets/StickerText/Main.php:157
 msgid "Inline"
 msgstr ""
 
@@ -3474,6 +3592,7 @@ msgid "Mobile:"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:155
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:220
 msgid "+123 456 7890"
 msgstr ""
 
@@ -3495,6 +3614,13 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:219
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:274
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:306
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:165
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:259
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:272
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:285
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:298
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:311
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:324
 msgid "#"
 msgstr ""
 
@@ -3835,6 +3961,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:404
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:284
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1126
+#: Frontend/Elementor/Widgets/StickerText/Main.php:73
 msgid "Button"
 msgstr ""
 
@@ -3957,6 +4084,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ImgHover/Main.php:164
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:210
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:162
+#: Frontend/Elementor/Widgets/StickerText/Main.php:135
 msgid "Bottom"
 msgstr ""
 
@@ -4071,6 +4199,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Counter/Main.php:232
 #: Frontend/Elementor/Widgets/Counter/Main.php:340
 #: Frontend/Elementor/Widgets/Popup/Main.php:328
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:336
 msgid "Icon Background Color"
 msgstr ""
 
@@ -4291,6 +4420,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/DualButton/Main.php:59
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:639
+#: Frontend/Elementor/Widgets/StickerText/Main.php:118
 msgid "Button Position"
 msgstr ""
 
@@ -4312,6 +4442,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/DualButton/Main.php:296
 #: Frontend/Elementor/Widgets/IconBox/Main.php:423
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1100
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:190
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:545
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:266
 msgid "Icon Position"
 msgstr ""
@@ -4739,14 +4871,17 @@ msgid "Choose Style"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/IconBox/Main.php:65
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:55
 msgid "Style One"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/IconBox/Main.php:66
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:56
 msgid "Style Two"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/IconBox/Main.php:67
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:57
 msgid "Style Three"
 msgstr ""
 
@@ -4876,11 +5011,13 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/ImgHover/Main.php:65
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:63
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:75
 msgid "Image Dimension"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ImgHover/Main.php:67
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:65
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:77
 msgid "Crop the original image size to any custom size. Set custom width or height to keep the original size ratio."
 msgstr ""
 
@@ -5376,10 +5513,12 @@ msgid "Popup Style"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/Popup/Main.php:217
+#: Frontend/Elementor/Widgets/StickerText/Main.php:289
 msgid "Text Style"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/Popup/Main.php:364
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:369
 msgid "Icon Hover Background Color"
 msgstr ""
 
@@ -5619,10 +5758,12 @@ msgid "Features List"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:267
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:145
 msgid "Title #1"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:270
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:149
 msgid "Title #2"
 msgstr ""
 
@@ -5764,6 +5905,99 @@ msgstr ""
 msgid "Field Height"
 msgstr ""
 
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:23
+msgid "ABC Section Title"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:51
+msgid "Title Content"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:80
+msgid "Title Part 1"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:82
+msgid "Responsive"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:83
+msgid "Type your section Title Firt Part"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:95
+msgid "Title Part 2"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:97
+msgid "Design"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:98
+msgid "Type your section Title Second Part"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:110
+msgid "Bottom Divider"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:124
+msgid "Divider Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:152
+msgid "Divider Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:180
+msgid "Divider Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:248
+msgid "Title Part 1 Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:261
+msgid "Title Part 1 Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:269
+msgid "Title Part 2 Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:282
+msgid "Title Part 2 Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:294
+msgid "Divider Background"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:306
+msgid "Divider Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:82
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:105
+msgid "Abcbiz Addons"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:90
+msgid "Badge"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:151
+msgid "Scroll Time (seconds)"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:240
+msgid "Horizontal Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:264
+msgid "Vertical Position"
+msgstr ""
+
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:51
 msgid "Custom Logo"
 msgstr ""
@@ -5773,6 +6007,7 @@ msgid "Choose Logo"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:79
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:163
 msgid "Link"
 msgstr ""
 
@@ -5826,6 +6061,334 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:265
 msgid "Tagline Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:51
+msgid "Skill Settings"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:60
+msgid "Enable Tooltip"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:72
+msgid "Show Value on Right?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:73
+msgid "Show percentage value on right side."
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:91
+msgid "Skill Heading"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:109
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:277
+msgid "Progress Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:119
+msgid "Tooltip BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:130
+msgid "Tooltip Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:146
+msgid "80"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:150
+msgid "75"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:162
+msgid "Skill Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:196
+msgid "Bar Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:265
+msgid "Empty Prograss Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:291
+msgid "Tooltip"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:336
+msgid "Offset Top"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SkillBar/Main.php:349
+msgid "Offset Right"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:82
+msgid "Share icon at the beginning"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:94
+msgid "Hide Share icon on mobile?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:115
+msgid "Social Icon Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:123
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:748
+msgid "Share Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:139
+msgid "Share Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:166
+msgid "Share Icon Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:193
+msgid "Share Icon Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:220
+msgid "Social Icons Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:243
+msgid "Social Icons Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:266
+msgid "Social Icons Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/Main.php:289
+msgid "Icons background Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/RenderView.php:21
+msgid "Tweet This Post"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/RenderView.php:23
+msgid "Share on Facebook"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/RenderView.php:30
+msgid "Share on Pinterest"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/RenderView.php:32
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/SocialShare/RenderView.php:34
+msgid "Share on Reddit"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/StickerText/Main.php:65
+msgid "primekit Multi Addons for Elementor"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/StickerText/Main.php:152
+msgid "Button & Text Combination"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/StickerText/Main.php:182
+msgid "Button & Text Gap"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/StickerText/Main.php:209
+msgid "Close Icon"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/StickerText/Main.php:508
+msgid "Close Icon Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/StickerText/Main.php:557
+msgid "Icon Top Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/StickerText/Main.php:581
+msgid "Icon Right Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:19
+msgid "Post Tags"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:95
+msgid "Tags Padding"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:108
+msgid "Tags Margin"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TagInfo/Main.php:156
+msgid "Text Background Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:42
+msgid "Team Setting"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:51
+msgid "Member Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:66
+msgid "Member Image"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:89
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:91
+msgid "Member Name"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:99
+msgid "Name Text Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:126
+msgid "Member Designation"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:128
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:113
+msgid "CEO of Company"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:136
+msgid "Designation Text Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:177
+msgid "Display Social Profile"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:218
+msgid "Phone Number"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:231
+msgid "Email Address"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:233
+msgid "name@siteaddress.com"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:246
+msgid "Learn More"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:270
+msgid "Facebook Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:283
+msgid "Twitter/X Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:296
+msgid "Linkedin Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:309
+msgid "Instagram Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:322
+msgid "Youtube Link"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:365
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:378
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:391
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:311
+msgid "Name Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:404
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:319
+msgid "Name Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:419
+msgid "Name Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:436
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:449
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:462
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:332
+msgid "Designation Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:474
+#: Frontend/Elementor/Widgets/Testimonials/Main.php:340
+msgid "Designation Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:489
+msgid "Arrow Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:506
+msgid "Contact Info Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:518
+msgid "Contact Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:572
+msgid "Contact Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:588
+msgid "Contact Icon Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:605
+msgid "Learn More Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:617
+msgid "Learn More Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:634
+msgid "Learn More Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:651
+msgid "Learn More Icon Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:678
+msgid "Learn More Icon Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:708
+msgid "Social Profile"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:764
+msgid "Social Icons Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/TeamMember/Main.php:777
+msgid "Social Icon Hover Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:63
@@ -5912,10 +6475,6 @@ msgstr ""
 msgid "Designation"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/Testimonials/Main.php:113
-msgid "CEO of Company"
-msgstr ""
-
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:120
 msgid "Rating"
 msgstr ""
@@ -5978,22 +6537,6 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:246
 msgid "Arrow"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/Testimonials/Main.php:311
-msgid "Name Typography"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/Testimonials/Main.php:319
-msgid "Name Color"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/Testimonials/Main.php:332
-msgid "Designation Typography"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/Testimonials/Main.php:340
-msgid "Designation Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:361

@@ -21,8 +21,7 @@ if (!defined('ABSPATH')) {
  * @package PrimeKit\Frontend\Elementor\Inc
  * @since 1.0.0
  */
-class Functions
-{
+class Functions {
 
 
     /**
@@ -55,7 +54,7 @@ class Functions
      *
      * @return void
      */
-    function primekit_addons_widget_categories($elements_manager)
+    public function primekit_addons_widget_categories($elements_manager)
     {
         $elements_manager->add_category(
             'primekit-category',
@@ -64,6 +63,18 @@ class Functions
                 'icon' => 'eicon-kit-plugins',
             ]
         );
+
+        if($this->is_woocommerce_active()){ 
+            $elements_manager->add_category(
+                'primekit-wc-category',
+                [
+                    'title' => esc_html__('PrimeKit WooCommerce', 'primekit-addons'),
+                    'icon' => 'eicon-woocommerce',
+                ]
+            );
+        }
+
+
     }
 
     /**
@@ -74,7 +85,7 @@ class Functions
      *
      * @return void
      */
-    function primekit_elementor_custom_thumbnail_size()
+    public function primekit_elementor_custom_thumbnail_size()
     {
         // Register a custom thumbnail size
         add_image_size('primekit-elementor-post', 635, 542, true);
@@ -141,6 +152,22 @@ class Functions
         } else {
             wp_send_json_error(['message' => __('Failed to subscribe.', 'primekit-addons')]);
         }
+    }
+
+    /**
+     * Checks if WooCommerce is active.
+     *
+     * @return bool True if WooCommerce is active, false otherwise.
+     */
+    public static function is_woocommerce_active()
+    {
+        // Ensure the function `is_plugin_active` is available
+        if (!function_exists('is_plugin_active')) {
+            include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        }
+        
+        // Check if WooCommerce class exists and WooCommerce plugin is active
+        return class_exists('WooCommerce') && is_plugin_active('woocommerce/woocommerce.php');
     }
 
 }
