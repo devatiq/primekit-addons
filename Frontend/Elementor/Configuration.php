@@ -322,6 +322,7 @@ class Configuration
             'primekit_wc_cart_page_field' => 'WooCommerce\ProductCartPage\Main',
             'primekit_wc_checkout_page_field' => 'WooCommerce\ProductCheckout\Main',
             'primekit_wc_product_img_field' => 'WooCommerce\ProductImg\Main',
+            'primekit_wc_product_meta_field' => 'WooCommerce\ProductMeta\Main',
         ];
 
         foreach ($woocommerce_widgets as $option_name => $widget_class) {

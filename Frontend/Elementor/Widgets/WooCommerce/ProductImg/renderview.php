@@ -14,7 +14,7 @@ if (!$product) {
     echo esc_html__('This product does not exist', 'primekit-addons');
     return;
 }
-primekit_wc_load_assets_dependencies(); ?>
+$this->primekit_wc_load_assets_dependencies(); ?>
 
 <div class="primekit-elementor-wc-product-img-area<?php if ('yes' !== $primekit_magnify_icon) { echo ' no-magnify-icon'; } ?>">
     <?php
@@ -36,25 +36,3 @@ if (\Elementor\Plugin::$instance->editor->is_edit_mode()) {
     </script>
     <?php
 }
-
-/**
- * Load necessary scripts and styles for WooCommerce product gallery
- */
-function primekit_wc_load_assets_dependencies() {
-    if (current_theme_supports('wc-product-gallery-zoom')) {
-        wp_enqueue_script('zoom');
-    }
-    if (current_theme_supports('wc-product-gallery-slider')) {
-        wp_enqueue_script('flexslider');
-    }
-    if (current_theme_supports('wc-product-gallery-lightbox')) {
-        wp_enqueue_script('photoswipe-ui-default');
-        wp_enqueue_style('photoswipe-default-skin');
-        add_action('wp_footer', 'woocommerce_photoswipe');
-    }
-    wp_enqueue_script('wc-single-product');
-    wp_enqueue_style('photoswipe');
-    wp_enqueue_style('photoswipe-default-skin');
-    wp_enqueue_style('woocommerce_prettyPhoto_css');
-}
-?>
