@@ -14,12 +14,12 @@ jQuery(document).ready(function($) {
 
         $.ajax({
             type: 'POST',
-            url: acbbiz_add_to_cart.ajax_url,
+            url: primekit_add_to_cart.ajax_url,
             data: {
                 'action': 'primekit_ajax_add_to_cart_handler',
                 'product_id': product_id,
                 'quantity': quantity,
-                'primekit_cart_nonce': acbbiz_add_to_cart.primekit_add_to_cart_nonce 
+                'primekit_cart_nonce': primekit_add_to_cart.primekit_add_to_cart_nonce 
             },
             success: function(response) {
                 var messageDiv = $('#acbbiz-add-to-cart-message');

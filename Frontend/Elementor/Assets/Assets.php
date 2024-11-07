@@ -98,12 +98,20 @@ class Assets{
 
         if(Functions::is_woocommerce_active()) {
             wp_register_script('primekit-add-to-cart', PRIMEKIT_ELEMENTOR_ASSETS . "/js/add-to-cart.js", array('jquery'), PRIMEKIT_VERSION, true);
+            wp_localize_script('primekit-add-to-cart', 'primekit_add_to_cart', array(
+                'ajax_url' => admin_url('admin-ajax.php'),
+                'primekit_add_to_cart_nonce' => wp_create_nonce('primekit_add_to_cart_nonce')
+            ));
+
+
             wp_register_script('primekit-cart-count-update', PRIMEKIT_ELEMENTOR_ASSETS . "/js/cart-update.js", array('jquery'), PRIMEKIT_VERSION, true);
            // Localize the script with the AJAX URL and nonce
             wp_localize_script('primekit-cart-count-update', 'primekitCartAjax', array(
                 'url'   => admin_url('admin-ajax.php'),
                 'nonce' => wp_create_nonce('primekit_cart_nonce') // Generate nonce
             ));
+
+
         }
 
     }
