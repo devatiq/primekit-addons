@@ -65,6 +65,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Portfolio
 - Post Author Bio
 - Post Category List
+- Post Content
 - Post Meta Info
 - Post Tag Info
 - Post Title
