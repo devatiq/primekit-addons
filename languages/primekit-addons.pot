@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-07T04:37:13+00:00\n"
+"POT-Creation-Date: 2024-11-07T13:03:42+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
@@ -266,6 +266,7 @@ msgid "Search Icon"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:339
+#: Frontend/Elementor/Widgets/SectionTitle/Main.php:23
 msgid "Section Title"
 msgstr ""
 
@@ -395,18 +396,22 @@ msgid "Cart Icon"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:58
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:23
 msgid "Cart Page"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:66
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:23
 msgid "Checkout Page"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:74
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:19
 msgid "Product Image"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:82
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:23
 msgid "Product Meta"
 msgstr ""
 
@@ -908,32 +913,52 @@ msgstr ""
 msgid "PHP"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:66
+#: Frontend/Elementor/Inc/Functions.php:71
 msgid "PrimeKit Elements"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:75
+#: Frontend/Elementor/Inc/Functions.php:80
 msgid "PrimeKit WooCommerce"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:115
+#: Frontend/Elementor/Inc/Functions.php:120
 msgid "Invalid email address"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:123
+#: Frontend/Elementor/Inc/Functions.php:128
 msgid "API key not configured"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:149
+#: Frontend/Elementor/Inc/Functions.php:154
 msgid "Subscription failed. Please try again."
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:155
+#: Frontend/Elementor/Inc/Functions.php:160
 msgid "Subscription successful!"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:157
+#: Frontend/Elementor/Inc/Functions.php:162
 msgid "Failed to subscribe."
+msgstr ""
+
+#: Frontend/Elementor/Inc/Functions.php:213
+msgid "Nonce verification failed."
+msgstr ""
+
+#: Frontend/Elementor/Inc/Functions.php:218
+msgid "Product ID is missing."
+msgstr ""
+
+#: Frontend/Elementor/Inc/Functions.php:228
+msgid "Invalid product."
+msgstr ""
+
+#: Frontend/Elementor/Inc/Functions.php:235
+msgid "Product successfully added to cart."
+msgstr ""
+
+#: Frontend/Elementor/Inc/Functions.php:237
+msgid "Failed to add the product to the cart."
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:51
@@ -1027,6 +1052,12 @@ msgstr ""
 #: Frontend/Elementor/Widgets/StickerText/Main.php:75
 #: Frontend/Elementor/Widgets/StickerText/Main.php:211
 #: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:119
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:60
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:144
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:66
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:79
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:92
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:105
 msgid "Show"
 msgstr ""
 
@@ -1075,6 +1106,12 @@ msgstr ""
 #: Frontend/Elementor/Widgets/StickerText/Main.php:76
 #: Frontend/Elementor/Widgets/StickerText/Main.php:212
 #: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:120
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:61
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:145
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:67
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:80
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:93
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:106
 msgid "Hide"
 msgstr ""
 
@@ -1200,6 +1237,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:747
 #: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:153
 #: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:261
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:209
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:172
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:210
 msgid "Border Radius"
 msgstr ""
 
@@ -1333,6 +1373,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1326
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:131
 #: Frontend/Elementor/Widgets/TeamMember/Main.php:347
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:63
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:60
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:257
 msgid "Border Color"
 msgstr ""
 
@@ -1948,6 +1991,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:71
 #: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:294
 #: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:328
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:104
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:114
 msgid "Typography"
 msgstr ""
 
@@ -2012,6 +2057,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:552
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:695
 #: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:93
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:77
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:74
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:388
 msgid "Background Color"
 msgstr ""
@@ -2038,6 +2085,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:171
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:179
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:208
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:134
 msgid "Title Color"
 msgstr ""
 
@@ -2057,6 +2105,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:204
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:222
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:159
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:125
 msgid "Title Typography"
 msgstr ""
 
@@ -2106,6 +2155,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:301
 #: Frontend/Elementor/Widgets/SkillBar/Main.php:315
 #: Frontend/Elementor/Widgets/TagInfo/Main.php:143
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:90
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:87
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:291
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:304
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:172
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:401
 msgid "Text Color"
@@ -2120,6 +2173,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:160
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:114
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:100
 msgid "Link Color"
 msgstr ""
 
@@ -2327,6 +2381,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:279
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:156
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:356
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:317
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:186
 msgid "Text Hover Color"
 msgstr ""
@@ -2459,6 +2514,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:200
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:292
 #: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:58
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:49
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:55
 msgid "Style"
 msgstr ""
 
@@ -2668,12 +2725,15 @@ msgstr ""
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:777
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:995
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:87
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:200
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:282
 msgid "Button Typography"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:389
 #: Frontend/Elementor/Widgets/BlogList/Main.php:374
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:604
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:147
 msgid "Button Color"
 msgstr ""
 
@@ -3258,6 +3318,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:504
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:641
 #: Frontend/Elementor/Widgets/SkillBar/Main.php:216
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:135
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:222
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:397
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:420
 msgid "Heading Typography"
 msgstr ""
 
@@ -3381,6 +3445,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:513
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:650
 #: Frontend/Elementor/Widgets/SkillBar/Main.php:224
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:144
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:231
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:406
 msgid "Heading Color"
 msgstr ""
 
@@ -3483,6 +3550,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:602
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:708
 #: Frontend/Elementor/Widgets/CountDown/Main.php:405
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:158
 msgid "Label Typography"
 msgstr ""
 
@@ -3491,6 +3559,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:552
 #: Frontend/Elementor/Widgets/CountDown/Main.php:602
 #: Frontend/Elementor/Widgets/CountDown/Main.php:652
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:167
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:429
 msgid "Label Color"
 msgstr ""
 
@@ -4598,6 +4668,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/FetchPosts/Main.php:348
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:380
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:146
 msgid "Category Color"
 msgstr ""
 
@@ -4608,6 +4679,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/FetchPosts/Main.php:377
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:397
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:164
 msgid "Category Typography"
 msgstr ""
 
@@ -5353,6 +5425,7 @@ msgid "Display Specific Posts"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:165
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/renderview.php:42
 msgid "Categories"
 msgstr ""
 
@@ -5950,10 +6023,6 @@ msgstr ""
 msgid "Field Height"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/SectionTitle/Main.php:23
-msgid "ABC Section Title"
-msgstr ""
-
 #: Frontend/Elementor/Widgets/SectionTitle/Main.php:51
 msgid "Title Content"
 msgstr ""
@@ -6019,6 +6088,7 @@ msgid "Divider Background"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/SectionTitle/Main.php:306
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:206
 msgid "Divider Color"
 msgstr ""
 
@@ -6630,6 +6700,7 @@ msgid "Arrows"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:707
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:330
 msgid "Hover BG Color"
 msgstr ""
 
@@ -6723,6 +6794,149 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/renderview.php:13
 msgid "View your shopping cart"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:54
+msgid "Notice Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:115
+msgid "Cart Total Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:160
+msgid "Button BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:173
+msgid "Button Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:186
+msgid "Button BG Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:232
+msgid "Table Form Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:241
+msgid "Header BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:255
+msgid "Header Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:268
+msgid "Table Border Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:51
+msgid "Info Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:125
+msgid "Billing Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:180
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:343
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:364
+msgid "Input Fields Spacing"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:212
+msgid "Order Review Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:244
+msgid "Data Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:272
+msgid "Order Button Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:387
+msgid "Additional Info Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:58
+msgid "Display Sales Flash?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:71
+msgid "Sales Flash Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:110
+msgid "Flash Text Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:126
+msgid "Flash BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:142
+msgid "Display Magnify icon?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:156
+msgid "Product Image Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/Main.php:194
+msgid "Gallery Image Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductImg/renderview.php:14
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/renderview.php:12
+msgid "This product does not exist"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:64
+msgid "Display SKU?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:77
+msgid "Display Category?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:90
+msgid "Display Tags?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:103
+msgid "Display Divider?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:116
+msgid "SKU Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:134
+msgid "SKU Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:176
+msgid "Tags Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:194
+msgid "Tags Typography"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/Main.php:222
+msgid "Divider Space"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/renderview.php:30
+msgid "SKU"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductMeta/renderview.php:54
+msgid "Tags"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:63
