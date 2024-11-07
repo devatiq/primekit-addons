@@ -186,17 +186,17 @@ class Functions
             wp_send_json_error('Invalid nonce');
             wp_die();
         }
-    
+
         if ($this->is_woocommerce_active()) {
             echo WC()->cart->get_cart_contents_count();
         } else {
             echo 0;
         }
-        
+
         wp_die();
     }
-    
-    
+
+
     /**
      * Handles AJAX request to add a product to the WooCommerce cart.
      *
@@ -207,7 +207,7 @@ class Functions
      *
      * @return void
      */
-   public function primekit_ajax_add_to_cart_handler()
+    public function primekit_ajax_add_to_cart_handler()
     {
         if (!isset($_POST['primekit_cart_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['primekit_cart_nonce'])), 'primekit_add_to_cart_nonce')) {
             wp_send_json_error(['message' => esc_html__('Nonce verification failed.', 'primekit-addons')]);
@@ -237,6 +237,34 @@ class Functions
             wp_send_json_error(['message' => esc_html__('Failed to add the product to the cart.', 'primekit-addons')]);
         }
     }
+
+    /**
+     * Display navigation to next/previous set of comments when applicable.
+     *
+     * @since 1.0.0
+     */
+    public static function primekit_multi_comment_nav()
+    {
+        if (get_comment_pages_count() > 1 && get_option('page_comments')):
+            ?>
+            <nav class="navigation comment-navigation" role="navigation">
+                <h2 class="screen-reader-text"><?php echo esc_html__('Comment navigation', 'primekit-addons'); ?></h2>
+                <div class="nav-links">
+                    <?php
+                    if ($prev_link = get_previous_comments_link(__('Older Comments', 'primekit-addons'))):
+                        printf('<div class="nav-previous">%s</div>', wp_kses_post($prev_link));
+                    endif;
+
+                    if ($next_link = get_next_comments_link(__('Newer Comments', 'primekit-addons'))):
+                        printf('<div class="nav-next">%s</div>', wp_kses_post($next_link));
+                    endif;
+                    ?>
+                </div><!-- .nav-links -->
+            </nav><!-- .comment-navigation -->
+            <?php
+        endif;
+    }
+
 
 }
 

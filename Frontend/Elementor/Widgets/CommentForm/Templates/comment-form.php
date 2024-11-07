@@ -2,6 +2,7 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 // How comments are displayed
 
+use PrimeKit\Frontend\Elementor\Inc\Functions;
 
 if ( post_password_required() ) {
     return;
@@ -30,7 +31,7 @@ if ( post_password_required() ) {
             ?>
         </h3>
 
-        <?php $this->primekit_multi_comment_nav(); ?>
+        <?php Functions::primekit_multi_comment_nav();; ?>
 
         <ol class="comment-list">
             <?php
@@ -42,7 +43,7 @@ if ( post_password_required() ) {
             ?>
         </ol><!-- .comment-list -->
 
-        <?php $this->primekit_multi_comment_nav(); ?>
+        <?php Functions::primekit_multi_comment_nav();; ?>
 
     <?php endif; // have_comments() ?>
 

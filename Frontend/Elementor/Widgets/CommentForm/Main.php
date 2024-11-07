@@ -326,27 +326,7 @@ class Main extends Widget_Base
 
     }
 
-   public function primekit_multi_comment_nav()
-    {
-        if (get_comment_pages_count() > 1 && get_option('page_comments')) :
-    ?>
-            <nav class="navigation comment-navigation" role="navigation">
-                <h2 class="screen-reader-text"><?php echo esc_html__('Comment navigation', 'primekit-addons'); ?></h2>
-                <div class="nav-links">
-                    <?php
-                    if ($prev_link = get_previous_comments_link(__('Older Comments', 'primekit-addons'))) :
-                        printf('<div class="nav-previous">%s</div>', wp_kses_post($prev_link));
-                    endif;
 
-                    if ($next_link = get_next_comments_link(__('Newer Comments', 'primekit-addons'))) :
-                        printf('<div class="nav-next">%s</div>', wp_kses_post($next_link));
-                    endif;
-                    ?>
-                </div><!-- .nav-links -->
-            </nav><!-- .comment-navigation -->
-    <?php
-        endif;
-    }
 
  
 
