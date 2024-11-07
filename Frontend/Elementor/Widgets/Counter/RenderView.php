@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Counter.
+ * Render View file for Counter.
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 

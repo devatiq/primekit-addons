@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Featured Image Widget
+ * Render View for Featured Image Widget
  */
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
  ?>
@@ -18,6 +18,3 @@ if ($primekit_image_url) {
 } else {
     echo esc_html__('No featured image found', 'primekit-addons');
 }
-?>
-
-

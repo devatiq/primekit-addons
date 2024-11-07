@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC MailChimp
+ * Render View for MailChimp
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly

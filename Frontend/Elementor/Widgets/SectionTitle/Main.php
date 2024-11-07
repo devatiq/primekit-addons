@@ -20,7 +20,7 @@ class Main extends Widget_Base {
 	
 	public function get_title()
 	{
-		return esc_html__('ABC Section Title', 'primekit-addons');
+		return esc_html__('Section Title', 'primekit-addons');
 	}
 	
 	public function get_icon()
@@ -232,7 +232,7 @@ class Main extends Widget_Base {
 
 		$this->end_controls_section();
 
-        //abc section title style
+        //section title style
 		
         $this->start_controls_section(
             'primekit_elementor_sec_title_style',
