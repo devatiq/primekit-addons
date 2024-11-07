@@ -1,22 +1,22 @@
-# Copyright (C) 2024 supreoxltd
+# Copyright (C) 2024 ABCPlugin
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
-"Project-Id-Version: PrimeKit Addons and Templates 1.0.0\n"
+"Project-Id-Version: PrimeKit Addons and Templates 1.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/primekit-addons\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-06T12:03:32+00:00\n"
+"POT-Creation-Date: 2024-11-07T03:31:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
 
 #. Plugin Name of the plugin
 #: primekit-addons.php
-#: primekit-addons.php:68
+#: primekit-addons.php:67
 msgid "PrimeKit Addons and Templates"
 msgstr ""
 
@@ -27,17 +27,17 @@ msgstr ""
 
 #. Description of the plugin
 #: primekit-addons.php
-msgid "The Elementor Custom Widgets plugin is built to enhance your website’s look and performance."
+msgid "The Elementor Custom Widgets plugin is built to enhance your website’s look and performance. With PrimeKit Addons and Templates, you’ll get access to a Theme Builder, Pop-Ups, Cost estimation, Pricing table, Forms, and WooCommerce building features, along with stunning custom elements that blend seamlessly with your site’s design."
 msgstr ""
 
 #. Author of the plugin
 #: primekit-addons.php
-msgid "supreoxltd"
+msgid "ABCPlugin"
 msgstr ""
 
 #. Author URI of the plugin
 #: primekit-addons.php
-msgid "https://supreox.com/"
+msgid "https://abcplugin.com/"
 msgstr ""
 
 #: Admin/AdminManager.php:113
@@ -56,45 +56,45 @@ msgstr ""
 msgid "Failed to save setting."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:36
 #: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:37
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:93
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:38
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:94
 msgid "Available Widgets"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:105
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:106
 msgid "Widgets"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:113
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:114
 msgid "Content not available or not found callback function."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:150
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:151
 msgid "No widgets to display."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:171
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:172
 msgid "List of regular widgets available in PrimeKit."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:188
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:189
 msgid "List of WooCommerce widgets available in PrimeKit."
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:225
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:226
 msgid "Free"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:225
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:226
 msgid "Pro"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:234
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:235
 msgid "off"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:235
+#: Admin/Inc/Dashboard/AvailableWidgets/PrimeKitWidgets.php:236
 msgid "on"
 msgstr ""
 
@@ -229,162 +229,168 @@ msgid "Portfolio"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:267
-msgid "Post Meta"
+msgid "Post Content"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:276
+msgid "Post Meta"
+msgstr ""
+
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:285
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:24
 msgid "Post Title"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:285
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:294
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:23
 msgid "Pricing Table"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:294
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:303
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:19
 msgid "Recent Posts"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:303
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:312
 msgid "Related Posts"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:312
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:321
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:19
 msgid "Search Form"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:321
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:330
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:19
 msgid "Search Icon"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:330
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:339
 msgid "Section Title"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:339
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:348
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:21
 msgid "Animated Shape"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:348
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:357
 #: Frontend/Elementor/Widgets/SingleImgScroll/Main.php:21
 msgid "Single Image Scroll"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:357
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:366
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:20
 msgid "Site Logo"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:366
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:375
 msgid "Site Title & Tagline"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:375
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:384
 #: Frontend/Elementor/Widgets/SkillBar/Main.php:18
 #: Frontend/Elementor/Widgets/SkillBar/Main.php:140
 msgid "Skill Bar"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:384
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:393
 #: Frontend/Elementor/Widgets/SocialShare/Main.php:21
 #: Frontend/Elementor/Widgets/SocialShare/Main.php:47
 msgid "Social Share"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:393
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:402
 #: Frontend/Elementor/Widgets/StickerText/Main.php:21
 msgid "Sticker Text"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:402
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:411
 msgid "Post Tag Info"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:411
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:420
 #: Frontend/Elementor/Widgets/TeamMember/Main.php:19
 msgid "Team Member"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:420
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:429
 msgid "Testimonial Carousel"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:429
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:438
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:21
 msgid "WordPress Menu"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:438
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:447
 #: Frontend/Elementor/Widgets/DualButton/Main.php:23
 msgid "Dual Button"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:447
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:456
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:23
 msgid "Business Hours"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:456
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:465
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:23
 msgid "Archive Title"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:465
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:474
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:50
 msgid "Gravity Form"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:474
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:483
 #: Frontend/Elementor/Widgets/ImageGallery/Main.php:23
 msgid "Image Gallery"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:483
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:492
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:23
 msgid "MailChimp"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:492
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:501
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:24
 msgid "Template Slider"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:501
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:510
 #: Admin/Inc/Dashboard/Settings/Settings.php:51
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:23
 msgid "Cost Estimation"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:510
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:519
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:26
 msgid "Modern Post Grid"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:519
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:528
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:22
 msgid "Popular Posts"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:528
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:537
 #: Frontend/Elementor/Widgets/FetchPosts/Main.php:23
 msgid "Fetch Posts"
 msgstr ""
 
-#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:537
+#: Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php:546
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:23
 msgid "Posts Slider"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:42
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:379
 msgid "Add to cart"
 msgstr ""
 
 #: Admin/Inc/Dashboard/AvailableWidgets/WooCommerceTab.php:50
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:22
 msgid "Cart Icon"
 msgstr ""
 
@@ -887,42 +893,46 @@ msgstr ""
 
 #. translators: 1 Plugin name, 2 Elementor plugin name, 3 Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
-#: Frontend/Elementor/Configuration.php:140
-#: Frontend/Elementor/Configuration.php:160
-#: Frontend/Elementor/Configuration.php:181
+#: Frontend/Elementor/Configuration.php:141
+#: Frontend/Elementor/Configuration.php:161
+#: Frontend/Elementor/Configuration.php:182
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: Frontend/Elementor/Configuration.php:142
-#: Frontend/Elementor/Configuration.php:162
+#: Frontend/Elementor/Configuration.php:143
+#: Frontend/Elementor/Configuration.php:163
 msgid "Elementor"
 msgstr ""
 
-#: Frontend/Elementor/Configuration.php:183
+#: Frontend/Elementor/Configuration.php:184
 msgid "PHP"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:63
+#: Frontend/Elementor/Inc/Functions.php:66
 msgid "PrimeKit Elements"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:100
+#: Frontend/Elementor/Inc/Functions.php:75
+msgid "PrimeKit WooCommerce"
+msgstr ""
+
+#: Frontend/Elementor/Inc/Functions.php:115
 msgid "Invalid email address"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:108
+#: Frontend/Elementor/Inc/Functions.php:123
 msgid "API key not configured"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:134
+#: Frontend/Elementor/Inc/Functions.php:149
 msgid "Subscription failed. Please try again."
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:140
+#: Frontend/Elementor/Inc/Functions.php:155
 msgid "Subscription successful!"
 msgstr ""
 
-#: Frontend/Elementor/Inc/Functions.php:142
+#: Frontend/Elementor/Inc/Functions.php:157
 msgid "Failed to subscribe."
 msgstr ""
 
@@ -1016,6 +1026,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/SocialShare/Main.php:96
 #: Frontend/Elementor/Widgets/StickerText/Main.php:75
 #: Frontend/Elementor/Widgets/StickerText/Main.php:211
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:119
 msgid "Show"
 msgstr ""
 
@@ -1063,6 +1074,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/SocialShare/Main.php:97
 #: Frontend/Elementor/Widgets/StickerText/Main.php:76
 #: Frontend/Elementor/Widgets/StickerText/Main.php:212
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:120
 msgid "Hide"
 msgstr ""
 
@@ -1186,6 +1198,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/TagInfo/Main.php:121
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:584
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:747
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:153
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:261
 msgid "Border Radius"
 msgstr ""
 
@@ -1481,6 +1495,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:80
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:139
 #: Frontend/Elementor/Widgets/Popup/Main.php:191
+#: Frontend/Elementor/Widgets/PostContent/Main.php:52
+#: Frontend/Elementor/Widgets/PostContent/Main.php:62
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:98
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:52
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:81
@@ -1532,6 +1548,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:261
 #: Frontend/Elementor/Widgets/Popup/Main.php:195
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:181
+#: Frontend/Elementor/Widgets/PostContent/Main.php:67
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:103
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:86
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:121
@@ -1587,6 +1604,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Popup/Main.php:199
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:158
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:185
+#: Frontend/Elementor/Widgets/PostContent/Main.php:71
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:107
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:90
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:81
@@ -1642,6 +1660,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:269
 #: Frontend/Elementor/Widgets/Popup/Main.php:203
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:189
+#: Frontend/Elementor/Widgets/PostContent/Main.php:75
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:111
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:94
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:85
@@ -1754,6 +1773,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:84
 #: Frontend/Elementor/Widgets/IconBox/Main.php:212
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:110
+#: Frontend/Elementor/Widgets/PostContent/Main.php:92
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:111
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:124
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:185
@@ -1778,6 +1798,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CircularSkills/Main.php:85
 #: Frontend/Elementor/Widgets/IconBox/Main.php:213
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:111
+#: Frontend/Elementor/Widgets/PostContent/Main.php:93
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:112
 #: Frontend/Elementor/Widgets/SiteLogo/Main.php:125
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:186
@@ -1859,6 +1880,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:870
 #: Frontend/Elementor/Widgets/ImageGallery/Main.php:338
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:130
+#: Frontend/Elementor/Widgets/PostContent/Main.php:112
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:424
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:458
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:523
@@ -1882,6 +1904,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:529
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:671
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:1025
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:80
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:303
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:337
 msgid "Color"
 msgstr ""
 
@@ -1908,6 +1933,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:488
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:143
 #: Frontend/Elementor/Widgets/Popup/Main.php:256
+#: Frontend/Elementor/Widgets/PostContent/Main.php:125
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:137
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:144
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:874
@@ -1919,6 +1945,9 @@ msgstr ""
 #: Frontend/Elementor/Widgets/StickerText/Main.php:362
 #: Frontend/Elementor/Widgets/TagInfo/Main.php:134
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:576
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:71
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:294
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:328
 msgid "Typography"
 msgstr ""
 
@@ -1982,6 +2011,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/StickerText/Main.php:439
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:552
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:695
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:93
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:388
 msgid "Background Color"
 msgstr ""
@@ -2243,6 +2273,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:924
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:144
 #: Frontend/Elementor/Widgets/StickerText/Main.php:350
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:61
 msgid "Button Style"
 msgstr ""
 
@@ -2250,6 +2281,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:457
 #: Frontend/Elementor/Widgets/FlipBox/Main.php:863
 #: Frontend/Elementor/Widgets/TagInfo/Main.php:182
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:119
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:415
 msgid "Hover Background Color"
 msgstr ""
@@ -2277,6 +2309,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1021
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:134
 #: Frontend/Elementor/Widgets/SocialShare/Main.php:324
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:91
 msgid "Icon Color"
 msgstr ""
 
@@ -2286,6 +2319,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Popup/Main.php:346
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:147
 #: Frontend/Elementor/Widgets/SocialShare/Main.php:357
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:104
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:479
 msgid "Icon Hover Color"
 msgstr ""
@@ -2316,6 +2350,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/SearchIcon/Main.php:110
 #: Frontend/Elementor/Widgets/StickerText/Main.php:520
 #: Frontend/Elementor/Widgets/TeamMember/Main.php:720
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:67
 msgid "Icon Size"
 msgstr ""
 
@@ -2417,11 +2452,13 @@ msgstr ""
 #: Frontend/Elementor/Widgets/PageTitle/Main.php:122
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:131
 #: Frontend/Elementor/Widgets/Portfolio/Main.php:116
+#: Frontend/Elementor/Widgets/PostContent/Main.php:104
 #: Frontend/Elementor/Widgets/PostTitle/Main.php:123
 #: Frontend/Elementor/Widgets/SearchForm/Main.php:77
 #: Frontend/Elementor/Widgets/TeamMember/Main.php:338
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:200
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:292
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:58
 msgid "Style"
 msgstr ""
 
@@ -2577,6 +2614,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/RelatedPost/Main.php:71
 #: Frontend/Elementor/Widgets/TagInfo/Main.php:169
 #: Frontend/Elementor/Widgets/Testimonials/Main.php:683
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:106
 msgid "Hover Color"
 msgstr ""
 
@@ -2695,6 +2733,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:230
 #: Frontend/Elementor/Widgets/SiteTitle/Main.php:287
 #: Frontend/Elementor/Widgets/StickerText/Main.php:246
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:132
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:240
 msgid "Spacing"
 msgstr ""
 
@@ -4120,6 +4160,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/CountDown/Main.php:639
 #: Frontend/Elementor/Widgets/Counter/Main.php:175
 #: Frontend/Elementor/Widgets/Counter/Main.php:316
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:162
 msgid "Number Color"
 msgstr ""
 
@@ -5567,6 +5608,10 @@ msgstr ""
 msgid "Portfolio Link"
 msgstr ""
 
+#: Frontend/Elementor/Widgets/PostContent/Main.php:24
+msgid "Post Contents"
+msgstr ""
+
 #: Frontend/Elementor/Widgets/PostInfo/Main.php:19
 msgid "Post Meta Info"
 msgstr ""
@@ -6422,6 +6467,7 @@ msgid "Slider Settings"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/TemplateSlider/Main.php:277
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:216
 msgid "Font Size"
 msgstr ""
 
@@ -6621,6 +6667,62 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/Testimonials/templates/grid.php:41
 msgid "Client Name"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:23
+msgid "Add to Cart"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:174
+msgid "Quantity Input Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:183
+msgid "Quantity Input Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:284
+msgid "Stock Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:318
+msgid "Variation Price Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductAddToCart/Main.php:373
+msgid "Please set a valid product"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:117
+msgid "Display Counter?"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:130
+msgid "Counter BG Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:146
+msgid "Counter BG Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:178
+msgid "Number Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:194
+msgid "Counter Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:221
+msgid "Number Font Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/Main.php:248
+msgid "Counter Position"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/WooCommerce/ProductCartIcon/renderview.php:13
+msgid "View your shopping cart"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/WpMenu/Main.php:63
