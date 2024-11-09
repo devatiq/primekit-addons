@@ -328,6 +328,7 @@ class Configuration
             'primekit_wc_product_short_desc_field' => 'WooCommerce\ProductShortDesc\Main',
             'primekit_wc_product_tabs_field' => 'WooCommerce\ProductTabs\Main',
             'primekit_wc_product_title_field' => 'WooCommerce\ProductTitle\Main',
+            'primekit_wc_product_bread_crumb_field' => 'WooCommerce\WooAccount\Main',
         ];
 
         foreach ($woocommerce_widgets as $option_name => $widget_class) {
