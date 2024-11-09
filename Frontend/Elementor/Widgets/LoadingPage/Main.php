@@ -389,6 +389,29 @@ class Main extends Widget_Base
 		);
 
 		$this->add_control(
+			'primekit_elementor_loading_screen_bar_radius',
+			[
+				'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+						'step' => 1,
+					]
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 10,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .primekit-loading-bar' => 'border-radius: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
 			'primekit_elementor_loading_screen_bar_bg',
 			[
 				'label' => esc_html__('Bar Background', 'primekit-addons'),

@@ -4097,12 +4097,10 @@ h3.primekit-style-three-team-name {
 .primekit-loading-text {
   font-size: 18px;
   color: #333;
-  margin-bottom: 20px;
 }
 
 /* Loading Bar Styles */
 .primekit-loading-bar {
-  border-radius: 10px;
   overflow: hidden;
   position: relative;
 }
