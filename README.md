@@ -54,6 +54,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Image Hover
 - Image and Text Scroll
 - Image Gallery (New)
+- Loading Screen (New)
 - Mailchimp (New)
 - Modern Post Grid (New, with 8 layouts)
 - Page Title
