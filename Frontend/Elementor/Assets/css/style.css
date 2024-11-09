@@ -4074,3 +4074,67 @@ h3.primekit-style-three-team-name {
   margin-left: 1px;
   position: relative;
 }
+
+/*---------------------------
+ * Loading Screen Styles
+-----------------------------*/
+#primekit-loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #E0EEF8 0%, #D1CFFA 100%);
+  z-index: 999999;
+}
+
+.primekit-loading-image {
+  height: auto;
+}
+
+.primekit-loading-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Loading Bar Styles */
+.primekit-loading-bar {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.primekit-buffering {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  animation: primekit-buffering-animation 1.5s infinite linear;
+}
+
+.primekit-buffer-circle {
+  border-radius: 50%;
+  opacity: 0;
+  animation: primekit-buffer-fade 0.8s infinite ease-in-out;
+}
+
+.primekit-buffer-circle:nth-child(1) { animation-delay: 0s; }
+.primekit-buffer-circle:nth-child(2) { animation-delay: 0.2s; }
+.primekit-buffer-circle:nth-child(3) { animation-delay: 0.4s; }
+.primekit-buffer-circle:nth-child(4) { animation-delay: 0.6s; }
+.primekit-buffer-circle:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes primekit-buffer-fade {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes primekit-buffering-animation {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
