@@ -234,6 +234,15 @@ class RegularTab
             self::demo_url('widgets/image-and-text-scroll-elementor-widget/')
         );
 
+          // Loading Screen
+          PrimeKitWidgets::primekit_available_widget(
+            'primekit_loading_screen_widget_field',
+            esc_html__('Loading Screen', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/image-and-text-scroll.svg',
+            true,
+            self::demo_url('widgets/loading-screen-elementor-widget/')
+        );
+
         // Page Title.
         PrimeKitWidgets::primekit_available_widget(
             'primekit_page_title_widget_field',
@@ -267,7 +276,7 @@ class RegularTab
             esc_html__('Post Content', 'primekit-addons'),
             PRIMEKIT_ADMIN_ASSETS . '/img/icons/page-title.svg',
             true,
-            self::demo_url('widgets/portfolio-elementor-widget/')
+            self::demo_url('widgets/post-content-elementor-widget/')
         );
 
         // Post Meta.

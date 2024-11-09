@@ -284,6 +284,7 @@ class Configuration
             'primekit_image_gallery_field' => 'ImageGallery\Main',
             'primekit_img_hover_widget_field' => 'ImgHover\Main',
             'primekit_img_text_scroll_widget_field' => 'ImgScroll\Main',
+            'primekit_loading_screen_widget_field' => 'LoadingPage\Main',
             'primekit_popular_posts_field' => 'PopularPosts\Main',
             'primekit_popup_widget_field' => 'Popup\Main',
             'primekit_portfolio_widget_field' => 'Portfolio\Main',
