@@ -65,6 +65,8 @@ final class PrimeKitAddons {
 
         //Define Plugin Name.
         define('PRIMEKIT_NAME', esc_html__('PrimeKit Addons and Templates', 'primekit-addons'));
+
+        define( 'PRIMEKIT_BASENAME', plugin_basename( __FILE__ ) );
     }
 
     /**

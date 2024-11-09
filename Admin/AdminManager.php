@@ -58,6 +58,8 @@ class AdminManager
         $this->init();
         add_action('wp_ajax_primekit_save_widget_setting', [$this, 'primekit_save_widget_setting']);
 
+        add_filter( 'plugin_action_links_' . PRIMEKIT_BASENAME, [ $this, 'add_plugin_settings_link' ] );
+		add_filter( 'plugin_row_meta', [ $this, 'plugin_row_meta' ], 10, 2 );
     }
 
     /**
@@ -91,6 +93,7 @@ class AdminManager
         $this->ThemeBuilder = new ThemeBuilder();
         $this->MetaBox = new MetaBox();
     }
+
 
 
 
@@ -135,6 +138,23 @@ class AdminManager
 
         wp_die();
     }
+
+    public function add_plugin_settings_link( $links ) {
+		$settings_link = '<a href="' . admin_url( 'admin.php?page=primekit_home' ) . '">' . esc_html__( 'Settings', 'primekit-addons' ) . '</a>';
+		array_push( $links, $settings_link );
+		return $links;
+	}
+
+	public function plugin_row_meta( $links, $file ) {
+		if ( PRIMEKIT_BASENAME === $file ) {
+			$row_meta = array(
+				'support' => '<a href="https://wordpress.org/support/plugin/primekit-addons" target="_blank">' . esc_html__( 'Support', 'primekit-addons' ) . '</a>',
+				'rate'    => '<a href="https://wordpress.org/support/plugin/primekit-addons/reviews/#new-post" target="_blank">' . esc_html__( 'Rate Us', 'quick-orders' ) . '</a>',
+			);
+			return array_merge( $links, $row_meta );
+		}
+		return (array) $links;
+	}
 
 
 }
