@@ -45,9 +45,9 @@ class Main extends Widget_Base {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abcbiz-elementor-product-bread-crumb',
+			'primekit-elementor-product-bread-crumb',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Alignment', 'primekit-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -55,27 +55,27 @@ class Main extends Widget_Base {
 
 		//Alignment
 		$this->add_responsive_control(
-			'abcbiz_wc_elementor_product_bread_crumb_align',
+			'primekit_wc_elementor_product_bread_crumb_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
+				'label' => esc_html__( 'Alignment', 'primekit-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
+						'title' => esc_html__( 'Left', 'primekit-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
+						'title' => esc_html__( 'Center', 'primekit-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
+						'title' => esc_html__( 'Right', 'primekit-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .primekit-elementor-product-bread-crumb-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -83,48 +83,48 @@ class Main extends Widget_Base {
 
 		$this->end_controls_section();
 
-        //abc section title style
+        //section title style
 		
         $this->start_controls_section(
-            'abcbiz_wc_elementor_product_bread_crumb_style',
+            'primekit_wc_elementor_product_bread_crumb_style',
             [
-                'label' => esc_html__('Crumb Style', 'abcbiz-addons'),
+                'label' => esc_html__('Crumb Style', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
 		$this->add_control(
-			'abcbiz_wc_elementor_product_bread_crumb_text_color',
+			'primekit_wc_elementor_product_bread_crumb_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Text Color', 'primekit-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#bbbcbd',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .primekit-elementor-product-bread-crumb-area' => 'color: {{VALUE}}',
 				],
 			]
 		);
 		
 		$this->add_control(
-			'abcbiz_wc_elementor_product_bread_crumb_link_color',
+			'primekit_wc_elementor_product_bread_crumb_link_color',
 			[
-				'label' => esc_html__( 'Link Color', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Link Color', 'primekit-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#bbbcbd',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area a' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .primekit-elementor-product-bread-crumb-area a' => 'color: {{VALUE}}',
 				],
 			]
 		);
 		
 		$this->add_control(
-			'abcbiz_wc_elementor_product_bread_crumb_link_hover_color',
+			'primekit_wc_elementor_product_bread_crumb_link_hover_color',
 			[
-				'label' => esc_html__( 'Link Hover Color', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Link Hover Color', 'primekit-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#5D5AED',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area a:hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .primekit-elementor-product-bread-crumb-area a:hover' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -132,9 +132,9 @@ class Main extends Widget_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abcbiz_wc_elementor_product_bread_crumb_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area',
+				'name' => 'primekit_wc_elementor_product_bread_crumb_typography',
+				'label' => esc_html__( 'Typography', 'primekit-addons' ),
+				'selector' => '{{WRAPPER}} .primekit-elementor-product-bread-crumb-area',
 			]
 		);
 

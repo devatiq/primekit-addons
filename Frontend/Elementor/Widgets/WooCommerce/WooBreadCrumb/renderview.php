@@ -1,12 +1,12 @@
 <?php
 /**
- * Render View for ABC Product Breadcrumb Widget
+ * Render View for Product Breadcrumb Widget
  */
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
-    function abcbiz_wc_multi_breadcrumb() {
+if (!function_exists('primekit_wc_multi_breadcrumb')) {
+    function primekit_wc_multi_breadcrumb() {
         // Initialize an output variable
         $output = '';
         
@@ -27,7 +27,7 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
         // Shop link for single product page
         if (is_product()) {
             $shop_page_url = wc_get_page_permalink('shop');
-            $output .= '<a href="' . esc_url($shop_page_url) . '">' . esc_html__('Shop', 'abcbiz-addons') . '</a>';
+            $output .= '<a href="' . esc_url($shop_page_url) . '">' . esc_html__('Shop', 'primekit-addons') . '</a>';
             $output .= '<span class="separator">' . esc_html($separator) . '</span>';
         }
 
@@ -47,9 +47,9 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
         } elseif (is_page()) {
             $output .= '<span class="current">' . esc_html(get_the_title()) . '</span>';
         } elseif (is_search()) {
-            $output .= '<span class="current">' . esc_html__('Search Results', 'abcbiz-addons') . '</span>';
+            $output .= '<span class="current">' . esc_html__('Search Results', 'primekit-addons') . '</span>';
         } elseif (is_404()) {
-            $output .= '<span class="current">' . esc_html__('404 Not Found', 'abcbiz-addons') . '</span>';
+            $output .= '<span class="current">' . esc_html__('404 Not Found', 'primekit-addons') . '</span>';
         }
     
         $output .= '</div>';
@@ -59,8 +59,8 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
 
 ?>
 
-<div class="abcbiz-elementor-product-bread-crumb-area">
+<div class="primekit-elementor-product-bread-crumb-area">
     <?php 
-    echo wp_kses(abcbiz_wc_multi_breadcrumb(), wp_kses_allowed_html('post')); ?>
+    echo wp_kses(primekit_wc_multi_breadcrumb(), wp_kses_allowed_html('post')); ?>
 </div><!-- end breadcrumb area -->
 
