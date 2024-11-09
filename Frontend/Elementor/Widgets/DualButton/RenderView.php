@@ -30,7 +30,7 @@ if ( ! empty( $primekit_settings['primekit_elementor_dual_button_url_right']['ur
 
     <!--Single Button-->
     <div class="primekit-dual-button primekit-dual-button-one">
-        <a <?php echo $this->get_render_attribute_string('primekit_elementor_dual_button_url_left'); ?>>
+        <a <?php echo wp_kses_post($this->get_render_attribute_string('primekit_elementor_dual_button_url_left')); ?>>
         
             <?php 
                 if('right' == $primekit_left_icon_position) {
@@ -54,7 +54,7 @@ if ( ! empty( $primekit_settings['primekit_elementor_dual_button_url_right']['ur
 
     <!--Single Button-->
     <div class="primekit-dual-button primekit-dual-button-two">
-        <a <?php echo $this->get_render_attribute_string('primekit_elementor_dual_button_url_right'); ?>>
+        <a <?php echo wp_kses_post($this->get_render_attribute_string('primekit_elementor_dual_button_url_right')); ?>>
             
         <?php
             if('right' == $primekit_right_icon_position) {

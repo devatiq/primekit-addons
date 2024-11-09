@@ -14,7 +14,7 @@ $primekit_animationName = ($primekit_animationDirection == 'primekitltrscroll') 
 if ( ! empty( $primekit_settings['primekit_elementor_img_text_scroll_list'] ) ) : ?>
     <div class="primekit-elementor-img-scroll-area">
         <div class="primekit-elementor-img-scroll-container">
-        <div class="primekit-scroll-contents" style="animation: <?php echo $primekit_animationName . ' ' . $primekit_animationDuration; ?> linear 0s infinite;">
+        <div class="primekit-scroll-contents" style="animation: <?php echo esc_attr( $primekit_animationName ) . ' ' . esc_attr( $primekit_animationDuration ); ?> linear 0s infinite;">
                 <?php foreach ( $primekit_settings['primekit_elementor_img_text_scroll_list'] as $item ) : ?>
                     <div class="primekit-img-scroll-item">
                         <?php if ( ! empty( $item['primekit_elementor_img_text_scroll_image']['url'] ) ) : ?><figure class="primekit-img-scroll-img">

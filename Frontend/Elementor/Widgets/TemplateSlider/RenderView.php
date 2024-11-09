@@ -36,24 +36,25 @@ $unique_id = $this->get_id();
                         <!-- Render the selected Elementor template -->
                         <?php if (!empty($slide['template_select'])): ?>
                             <div class="slide-template-content">
-                                <?php echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($slide['template_select']); ?>
+                                <?php echo wp_kses_post(\Elementor\Plugin::instance()->frontend->get_builder_content_for_display($slide['template_select'])); ?>
                             </div>
                         <?php endif; ?>
+
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
     </div>
-    <?php 
-        if('yes' === $settings['show_pagination']) :
-    ?>
-    <!-- Add Pagination -->
+    <?php
+    if ('yes' === $settings['show_pagination']):
+        ?>
+        <!-- Add Pagination -->
         <div class="primekit-template-slider-pagination">
             <div class="swiper-pagination"></div>
         </div>
     <?php endif; ?>
 
-    <?php if('yes' === $settings['show_arrows']) : ?>
+    <?php if ('yes' === $settings['show_arrows']): ?>
         <!-- Add Navigation -->
         <div class="primekit-template-slider-nav">
             <div class="swiper-button-next"></div>

@@ -24,9 +24,10 @@ $api_url = trailingslashit($website_url) . 'wp-json/wp/v2/posts?per_page=' . $po
 $response = wp_remote_get($api_url);
 
 if (is_wp_error($response)) {
-    echo '<p>' . __('Failed to fetch posts from the external website.', 'primekit-addons') . '</p>';
+    echo '<p>' . esc_html__('Failed to fetch posts from the external website.', 'primekit-addons') . '</p>';
     return;
 }
+
 $total_pages = wp_remote_retrieve_header($response, 'x-wp-totalpages');
 $posts = json_decode(wp_remote_retrieve_body($response));
 
