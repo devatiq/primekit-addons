@@ -56,14 +56,14 @@ $id = $this->get_id();
 		<?php } ?>
 	<?php } else { ?>
 		<!-- Placeholder images if no gallery images are set -->
-		<span primekit-data-url="<?php echo PRIMEKIT_ELEMENTOR_ASSETS; ?>/img/member-placeholder.jpg">
-			<img src="<?php echo PRIMEKIT_ELEMENTOR_ASSETS; ?>/img/member-placeholder.jpg">
+		<span primekit-data-url="<?php echo esc_url(PRIMEKIT_ELEMENTOR_ASSETS); ?>/img/member-placeholder.jpg">
+			<img src="<?php echo esc_url(PRIMEKIT_ELEMENTOR_ASSETS); ?>/img/member-placeholder.jpg">
 		</span>
-		<span primekit-data-url="<?php echo PRIMEKIT_ELEMENTOR_ASSETS; ?>/img/member-placeholder.jpg">
-			<img src="<?php echo PRIMEKIT_ELEMENTOR_ASSETS; ?>/img/member-placeholder.jpg">
+		<span primekit-data-url="<?php echo esc_url(PRIMEKIT_ELEMENTOR_ASSETS); ?>/img/member-placeholder.jpg">
+			<img src="<?php echo esc_url(PRIMEKIT_ELEMENTOR_ASSETS); ?>/img/member-placeholder.jpg">
 		</span>
-		<span primekit-data-url="<?php echo PRIMEKIT_ELEMENTOR_ASSETS; ?>/img/member-placeholder.jpg">
-			<img src="<?php echo PRIMEKIT_ELEMENTOR_ASSETS; ?>/img/member-placeholder.jpg">
+		<span primekit-data-url="<?php echo esc_url(PRIMEKIT_ELEMENTOR_ASSETS); ?>/img/member-placeholder.jpg">
+			<img src="<?php echo esc_url(PRIMEKIT_ELEMENTOR_ASSETS); ?>/img/member-placeholder.jpg">
 		</span>
 	<?php } ?>
 </div>
