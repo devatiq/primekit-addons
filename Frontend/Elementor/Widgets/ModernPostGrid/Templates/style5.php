@@ -35,7 +35,7 @@ if (!defined('ABSPATH'))
                         <?php if($categories_switch === 'true' && !empty($categories_switch)): ?>
                             <!--Post Category-->
                             <div class="primekit-modern-sps4-category">
-                                <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>" <?php if('true' === $random_color_switch): ?>style="background-color: <?php echo $random_color; ?>"<?php endif; ?>>
+                                <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>" <?php if('true' === $random_color_switch): ?>style="background-color: <?php echo esc_attr($random_color); ?>"<?php endif; ?>>
                                     <?php echo esc_html(get_the_category()[0]->name); ?>
                                 </a>
                             </div><!--/ Post Category-->
@@ -70,7 +70,7 @@ if (!defined('ABSPATH'))
             endwhile;
             wp_reset_postdata(); // Reset after the custom query loop
         else:
-            echo esc_html__('<p>No posts found.</p>', 'primekit-addons');
+            echo '<p>' . esc_html__('No posts found.', 'primekit-addons') . '</p>';
         endif;
         ?>
     </div><!--/ Modern Posts Wrapper -->

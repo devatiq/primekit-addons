@@ -104,7 +104,7 @@ $posts = new WP_Query($args);
                                         if (!empty($categories)) {
                                             echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
                                             if ('true' === $random_color_switch) {
-                                                echo ' style="background-color: ' . $random_color . '"';
+                                                echo ' style="background-color: ' . esc_attr($random_color) . '"';
                                             }
                                             echo '>' . esc_html($categories[0]->name) . '</a>';
                                         }
@@ -122,11 +122,13 @@ $posts = new WP_Query($args);
                             <div class="primekit-modren-style2-post-info">
                                 <ul>
                                     <li><span class="fa fa-user"></span><a
-                                            href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
+                                            href="<?php echo esc_url(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a>
                                     </li>
-                                    <li><span class="fa fa-calendar"></span><a
-                                            href="#"><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'; ?></a>
+                                    <li>
+                                        <span class="fa fa-calendar"></span>
+                                        <a href="#"><?php echo esc_html(human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago'); ?></a>
                                     </li>
+
                                     <li><span class="fa fa-comments"></span><a
                                             href="<?php comments_link(); ?>"><?php comments_number('No Comments', '1 Comment', '% Comments'); ?></a>
                                     </li>
@@ -142,7 +144,7 @@ $posts = new WP_Query($args);
             endwhile;
             wp_reset_postdata(); // Reset after the custom query loop
         else:
-            echo esc_html__('<p>No posts found.</p>', 'primekit-addons');
+            echo '<p>' . esc_html__('No posts found.', 'primekit-addons') . '</p>';
         endif;
         ?>
 

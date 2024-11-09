@@ -45,7 +45,7 @@ if ($repeater_pages) {
 
 <!-- Pricing Calculator Area-->
 <div class="primekit-pricing-calculator" data-unique-id="<?php echo esc_attr($unique_id); ?>"
-    data-pricing="<?php echo $jsonData; ?>">
+    data-pricing="<?php echo esc_attr($jsonData); ?>">
     <?php if (!empty($settings['primekit_cost_calculator_heading'])): ?>
         <div class="primekit-pricing-cal-heading">
             <h2><?php echo esc_html($settings['primekit_cost_calculator_heading']); ?></h2>

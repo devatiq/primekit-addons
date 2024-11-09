@@ -14,7 +14,7 @@
 ?>
 
 <div class="primekit-ele-contact-form-7-area">
-     <div t<?php echo $this->get_render_attribute_string('primekit_ele_contact_form_attr'); ?>>
+     <div <?php echo esc_attr($this->get_render_attribute_string('primekit_ele_contact_form_attr')); ?>>
          <?php
              if( !empty( $primekit_settings['primekit_ele_contact_form_shortcode'] ) ){
                  echo do_shortcode( $shortcode ); 

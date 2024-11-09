@@ -40,7 +40,7 @@ if (!defined('ABSPATH'))
                                     if (!empty($categories)) {
                                         echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
                                         if ('true' === $random_color_switch) {
-                                            echo ' style="background-color: ' . $random_color . '"';
+                                            echo ' style="background-color: ' . esc_attr($random_color) . '"';
                                         }
                                         echo '>' . esc_html($categories[0]->name) . '</a>';
                                     }
@@ -84,7 +84,7 @@ if (!defined('ABSPATH'))
             endwhile;
             wp_reset_postdata(); // Reset after the custom query loop
         else:
-            echo esc_html__('<p>No posts found.</p>', 'primekit-addons');
+            echo '<p>' . esc_html__('No posts found.', 'primekit-addons') . '</p>';
         endif;
         ?>
     </div>

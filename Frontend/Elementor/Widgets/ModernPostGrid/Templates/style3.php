@@ -84,7 +84,7 @@ if (!defined('ABSPATH'))
             endwhile;
             wp_reset_postdata(); // Reset after the custom query loop
         else:
-            echo esc_html__('<p>No posts found.</p>', 'primekit-addons');
+            echo '<p>' . esc_html__('No posts found.', 'primekit-addons') . '</p>';
         endif;
         ?>
     </div>

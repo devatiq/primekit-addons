@@ -188,9 +188,9 @@ class Functions
         }
 
         if ($this->is_woocommerce_active()) {
-            echo WC()->cart->get_cart_contents_count();
+            echo esc_html(WC()->cart->get_cart_contents_count());
         } else {
-            echo 0;
+            echo esc_html(0);
         }
 
         wp_die();

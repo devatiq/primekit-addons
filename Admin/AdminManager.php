@@ -149,7 +149,7 @@ class AdminManager
 		if ( PRIMEKIT_BASENAME === $file ) {
 			$row_meta = array(
 				'support' => '<a href="https://wordpress.org/support/plugin/primekit-addons" target="_blank">' . esc_html__( 'Support', 'primekit-addons' ) . '</a>',
-				'rate'    => '<a href="https://wordpress.org/support/plugin/primekit-addons/reviews/#new-post" target="_blank">' . esc_html__( 'Rate Us', 'quick-orders' ) . '</a>',
+				'rate'    => '<a href="https://wordpress.org/support/plugin/primekit-addons/reviews/#new-post" target="_blank">' . esc_html__( 'Rate Us', 'primekit-addons' ) . '</a>',
 			);
 			return array_merge( $links, $row_meta );
 		}
