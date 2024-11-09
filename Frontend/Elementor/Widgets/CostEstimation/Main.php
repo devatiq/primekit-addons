@@ -69,19 +69,22 @@ class Main extends Widget_Base
                 ]
             );
 
+            
             $this->add_control(
                 'primekit_cost_calculator_alert',
                 [
                     'type' => \Elementor\Controls_Manager::ALERT,
                     'alert_type' => 'warning',
-                    'heading' => esc_html__('Package Names Missing', 'primekit-addons'),
+                    'heading' => esc_html__('Package Names Missing', 'primekit-addons'),      
                     'content' => sprintf(
-                        esc_html__('Package names are not configured yet. Please go to the %ssettings page%s to configure them.', 'primekit-addons'),
+                        // Translators: %1$s and %2$s are HTML links to the settings page.
+                        esc_html__('Package names are not configured yet. Please go to the %1$ssettings page%2$s to configure them.', 'primekit-addons'),
                         '<a href="' . esc_url($settings_url) . '" target="_blank">',
                         '</a>'
                     ),
                 ]
             );
+            
 
             $this->end_controls_section();
         } else {
@@ -98,14 +101,16 @@ class Main extends Widget_Base
                 [
                     'type' => \Elementor\Controls_Manager::ALERT,
                     'alert_type' => 'info',
-                    'heading' => esc_html__('info', 'primekit-addons'),
+                    'heading' => esc_html__('info', 'primekit-addons'),  
                     'content' => sprintf(
-                        esc_html__('Package names can be modified here. Please go to the %ssettings page%s in the dashboard to configure them.', 'primekit-addons'),
+                         // Translators: %1$s and %2$s are HTML links to the settings page.
+                        esc_html__('Package names can be modified here. Please go to the %1$ssettings page%2$s in the dashboard to configure them.', 'primekit-addons'),
                         '<a href="' . esc_url($settings_url) . '" target="_blank">',
                         '</a>'
                     ),
                 ]
             );
+            
 
             // Create the repeater
             $repeater = new \Elementor\Repeater();
