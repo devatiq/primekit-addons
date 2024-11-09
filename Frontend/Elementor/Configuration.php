@@ -324,6 +324,7 @@ class Configuration
             'primekit_wc_product_img_field' => 'WooCommerce\ProductImg\Main',
             'primekit_wc_product_meta_field' => 'WooCommerce\ProductMeta\Main',
             'primekit_wc_product_price_field' => 'WooCommerce\ProductPrice\Main',
+            'primekit_wc_product_related_field' => 'WooCommerce\ProductRelated\Main',
         ];
 
         foreach ($woocommerce_widgets as $option_name => $widget_class) {
