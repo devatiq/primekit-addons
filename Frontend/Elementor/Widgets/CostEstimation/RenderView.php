@@ -99,10 +99,11 @@ if ($repeater_pages) {
             <?php
         } else {
             echo sprintf(
-                '<p style="color: red;">' . esc_html__('Package names are not configured yet. Please go to the %ssettings page%s to configure them.', 'primekit-addons') . '</p>',
+                // Translators: %1$s and %2$s are HTML links to the settings page.
+                '<p style="color: red;">' . esc_html__('Package names are not configured yet. Please go to the %1$ssettings page%2$s to configure them.', 'primekit-addons') . '</p>',
                 '<a href="' . esc_url($settings_url) . '" target="_blank">',
                 '</a>'
-            );
+            );            
         }
         ?>
     </div><!--/ Pricing Package Name -->

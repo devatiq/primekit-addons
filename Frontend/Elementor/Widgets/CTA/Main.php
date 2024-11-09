@@ -450,7 +450,7 @@ class Main extends Widget_Base
                 'selector' => '{{WRAPPER}} .primekit-cta-area:before',
                 'fields_options' => [
 					'background' => [
-						'label' => esc_html_x( 'Box Background', 'primekit-addons' ),
+						'label' => esc_html__( 'Box Background', 'primekit-addons' ),
 					]
 				]
             ]

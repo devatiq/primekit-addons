@@ -79,8 +79,10 @@ $args = array(
                                 <?php if (in_array('comments', $settings['display_fields'])): ?>
                                     <span class="primekit-popular-post-comment">
                                         <i class="fa fa-comments"></i>
-                                        <?php $comments_number = get_comments_number();
+                                        <?php
+                                        $comments_number = get_comments_number();
                                         printf(
+                                            // Translators: %s is the number of comments.
                                             esc_html(_n('%s Comment', '%s Comments', $comments_number, 'primekit-addons')),
                                             esc_html($comments_number)
                                         );

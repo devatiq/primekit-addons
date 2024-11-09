@@ -63,7 +63,7 @@ if (!empty($posts) && is_array($posts)) {
                             if (!empty($category_names)) {
                                 echo esc_html(implode(', ', $category_names));
                             } else {
-                                echo esc_html__('No categories', 'custom-elementor-widgets');
+                                echo esc_html__('No categories', 'primekit-addons');
                             }
                             ?>
                         </p>

@@ -66,6 +66,14 @@ class Mailchimp {
             '<input type="text" class="primekit-full-width-input" id="mailchimp_api_key" name="primekit_mailchimp_options[mailchimp_api_key]" value="%s" />',
             isset($this->options['mailchimp_api_key']) ? esc_attr($this->options['mailchimp_api_key']) : ''
         );
-        echo '<p class="description">' . sprintf(__('Enter your Mailchimp API Key. You can get it %shere%s.', 'primekit-addons'), '<a href="https://us6.admin.mailchimp.com/account/api/" target="_blank">', '</a>') . '</p>';
+    
+        
+        echo '<p class="description">' . sprintf(
+            // Translators: %1$s and %2$s are HTML link tags that link to the Mailchimp API key page.
+            __('Enter your Mailchimp API Key. You can get it %1$shere%2$s.', 'primekit-addons'),
+            '<a href="https://us6.admin.mailchimp.com/account/api/" target="_blank">',
+            '</a>'
+        ) . '</p>';
     }
+    
 }

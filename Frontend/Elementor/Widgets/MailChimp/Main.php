@@ -58,7 +58,7 @@ class Main extends Widget_Base
             $this->start_controls_section(
                 'section_notice',
                 [
-                    'label' => __('Notice', 'primekit-addons'),
+                    'label' => esc_html__('Notice', 'primekit-addons'),
                     'tab' => Controls_Manager::TAB_CONTENT,
                 ]
             );
@@ -69,6 +69,7 @@ class Main extends Widget_Base
                 [
                     'type' => Controls_Manager::RAW_HTML,
                     'raw' => '<div style="color: red;">' . sprintf(
+                        // translators: %s is the link to the plugin settings
                         __('Mailchimp API key is not set. Please configure it in the <a href="%s" target="_blank">plugin settings</a>.', 'primekit-addons'),
                         esc_url(admin_url('admin.php?page=primekit_settings&tab=mailchimp'))
                     ) . '</div>',
@@ -92,11 +93,11 @@ class Main extends Widget_Base
         $this->add_control(
             'mailchimp_form_style',
             [
-                'label' => __('Form Style', 'primekit-addons'),
+                'label' => esc_html__('Form Style', 'primekit-addons'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'default' => __('Default', 'primekit-addons'),
-                    'inline' => __('Inline', 'primekit-addons'),
+                    'default' => esc_html__('Default', 'primekit-addons'),
+                    'inline' => esc_html__('Inline', 'primekit-addons'),
                 ],
                 'default' => 'default',
             ]
@@ -106,22 +107,27 @@ class Main extends Widget_Base
         $this->add_control(
             'mailchimp_list_id',
             [
-                'label' => __('Audience List', 'primekit-addons'),
+                'label' => esc_html__('Audience List', 'primekit-addons'),
                 'type' => Controls_Manager::SELECT2,
                 'options' => $this->get_mailchimp_lists(),
-                'description' => sprintf(__('Select your Mailchimp Audience List. You can find more information %shere%s.', 'primekit-addons'), '<a href="https://mailchimp.com/help/find-audience-id/" target="_blank">', '</a>'),
+                'description' => sprintf(
+                    // Translators: %1$s and %2$s are placeholders for the link to the Mailchimp documentation.
+                    __('Select your Mailchimp Audience List. You can find more information %1$shere%2$s.', 'primekit-addons'),
+                    '<a href="https://mailchimp.com/help/find-audience-id/" target="_blank">',
+                    '</a>'
+                ),
                 'dynamic' => ['active' => true],
             ]
-        );
+        );        
 
         // Toggle control to enable or disable name fields
         $this->add_control(
             'enable_name_fields',
             [
-                'label' => __('Enable Name Fields', 'primekit-addons'),
+                'label' => esc_html__('Enable Name Fields', 'primekit-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Yes', 'primekit-addons'),
-                'label_off' => __('No', 'primekit-addons'),
+                'label_on' => esc_html__('Yes', 'primekit-addons'),
+                'label_off' => esc_html__('No', 'primekit-addons'),
                 'return_value' => 'yes',
                 'default' => 'no',
             ]
@@ -131,10 +137,10 @@ class Main extends Widget_Base
         $this->add_control(
             'email_placeholder_text',
             [
-                'label' => __('Email Placeholder', 'primekit-addons'),
+                'label' => esc_html__('Email Placeholder', 'primekit-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('Enter your email', 'primekit-addons'),
-                'placeholder' => __('Enter your placeholder text', 'primekit-addons'),
+                'placeholder' => esc_html__('Enter your placeholder text', 'primekit-addons'),
                 'label_block' => true,
             ]
         );
@@ -143,14 +149,14 @@ class Main extends Widget_Base
         $this->add_control(
             'button_type',
             [
-                'label' => __('Button Type', 'primekit-addons'),
+                'label' => esc_html__('Button Type', 'primekit-addons'),
                 'condition' => [
                     'mailchimp_form_style' => 'inline',
                 ],
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'text' => __('Text', 'primekit-addons'),
-                    'icon' => __('Icon', 'primekit-addons'),
+                    'text' => esc_html__('Text', 'primekit-addons'),
+                    'icon' => esc_html__('Icon', 'primekit-addons'),
                 ],
                 'default' => 'text',
             ]
@@ -160,10 +166,10 @@ class Main extends Widget_Base
         $this->add_control(
             'submit_button_text',
             [
-                'label' => __('Submit Button Text', 'primekit-addons'),
+                'label' => esc_html__('Submit Button Text', 'primekit-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('Subscribe', 'primekit-addons'),
-                'placeholder' => __('Enter your submit button text', 'primekit-addons'),
+                'placeholder' => esc_html__('Enter your submit button text', 'primekit-addons'),
                 'label_block' => true,
                 'condition' => [
                     'mailchimp_form_style' => 'default',
@@ -176,10 +182,10 @@ class Main extends Widget_Base
         $this->add_control(
             'submit_button_inline_text',
             [
-                'label' => __('Submit Button Text', 'primekit-addons'),
+                'label' => esc_html__('Submit Button Text', 'primekit-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('Subscribe', 'primekit-addons'),
-                'placeholder' => __('Enter your submit button text', 'primekit-addons'),
+                'placeholder' => esc_html__('Enter your submit button text', 'primekit-addons'),
                 'label_block' => true,
                 'condition' => [
                     'mailchimp_form_style' => 'inline',
@@ -193,24 +199,24 @@ class Main extends Widget_Base
         $this->add_control(
             'form_alignment',
             [
-                'label' => __( 'Form Alignment', 'primekit-addons' ),
+                'label' => esc_html__( 'Form Alignment', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::CHOOSE,
                 'default' => 'row',
                 'options' => [
                     'row' => [
-                        'title' => __( 'Row', 'primekit-addons' ),
+                        'title' => esc_html__( 'Row', 'primekit-addons' ),
                         'icon' => 'eicon-arrow-right',
                     ],
                     'row-reverse' => [
-                        'title' => __( 'Row Reverse', 'primekit-addons' ),
+                        'title' => esc_html__( 'Row Reverse', 'primekit-addons' ),
                         'icon' => 'eicon-arrow-left',
                     ],
                     'column' => [
-                        'title' => __( 'Column', 'primekit-addons' ),
+                        'title' => esc_html__( 'Column', 'primekit-addons' ),
                         'icon' => 'eicon-arrow-down',
                     ],
                     'column-reverse' => [
-                        'title' => __( 'Column Reverse', 'primekit-addons' ),
+                        'title' => esc_html__( 'Column Reverse', 'primekit-addons' ),
                         'icon' => 'eicon-arrow-up',
                     ],
                 ],
@@ -228,7 +234,7 @@ class Main extends Widget_Base
         $this->start_controls_section(
             'primekit_mailchimp_section_style',
             [
-                'label' => __('Style', 'primekit-addons'),
+                'label' => esc_html__('Style', 'primekit-addons'),
                 'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
@@ -237,7 +243,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_first_name_width',
             [
-                'label' => __( 'First Name Width', 'primekit-addons' ),
+                'label' => esc_html__( 'First Name Width', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -266,7 +272,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_last_name_width',
             [
-                'label' => __( 'Last Name Width', 'primekit-addons' ),
+                'label' => esc_html__( 'Last Name Width', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -294,7 +300,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_email_width',
             [
-                'label' => __( 'Email Width', 'primekit-addons' ),
+                'label' => esc_html__( 'Email Width', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'range' => [
@@ -321,7 +327,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_gap',
             [
-                'label' => __( 'Gap', 'primekit-addons' ),
+                'label' => esc_html__( 'Gap', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', 'em', '%' ],
                 'condition' => [
@@ -354,7 +360,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_input_padding',
             [
-                'label' => __( 'Input Padding', 'primekit-addons' ),
+                'label' => esc_html__( 'Input Padding', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'default' => [
@@ -374,7 +380,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_input_border_radius',
             [
-                'label' => __( 'Input Border Radius', 'primekit-addons' ),
+                'label' => esc_html__( 'Input Border Radius', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -388,7 +394,7 @@ class Main extends Widget_Base
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'primekit_mailchimp_input_border',
-                'label' => __( 'Input Border', 'primekit-addons' ),
+                'label' => esc_html__( 'Input Border', 'primekit-addons' ),
                 'selector' => '{{WRAPPER}} #primekit-mailchimp-form input:not(.primekit-mailchimp-submit)',
             ]
         );
@@ -401,7 +407,7 @@ class Main extends Widget_Base
         $this->start_controls_section(
             'primekit_mailchimp_button_style',
             [
-                'label' => __( 'Button', 'primekit-addons' ),
+                'label' => esc_html__( 'Button', 'primekit-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -410,7 +416,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_button_padding',
             [
-                'label' => __( 'Padding', 'primekit-addons' ),
+                'label' => esc_html__( 'Padding', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],        
                 'condition' => [
@@ -427,7 +433,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_button_border_radius',
             [
-                'label' => __( 'Border Radius', 'primekit-addons' ),
+                'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -443,7 +449,7 @@ class Main extends Widget_Base
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'primekit_mailchimp_button_border',
-                'label' => __( 'Border', 'primekit-addons' ),
+                'label' => esc_html__( 'Border', 'primekit-addons' ),
                 'selector' => '{{WRAPPER}} #primekit-mailchimp-form #primekit-mailchimp-submit, {{WRAPPER}} button#primekit-mailchimp-inline-submit.primekit-mailchimp-inline-submit-text, {{WRAPPER}} #primekit-mailchimp-inline-submit svg',
             ]
         );
@@ -453,7 +459,7 @@ class Main extends Widget_Base
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_mailchimp_button_typography',
-                'label' => __( 'Typography', 'primekit-addons' ),
+                'label' => esc_html__( 'Typography', 'primekit-addons' ),
                 'condition' => [
                     'button_type' => 'text',
                 ],
@@ -465,7 +471,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_submit_width',
             [
-                'label' => __( 'Width', 'primekit-addons' ),
+                'label' => esc_html__( 'Width', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ], 
                 'condition' => [
@@ -494,7 +500,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_submit_btn_size',
             [
-                'label' => __( 'Button Size', 'primekit-addons' ),
+                'label' => esc_html__( 'Button Size', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ], 
                 'condition' => [
@@ -522,7 +528,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_submit_btn_right_indent',
             [
-                'label' => __( 'Button Right Indent', 'primekit-addons' ),
+                'label' => esc_html__( 'Button Right Indent', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
                 'condition' => [
@@ -550,7 +556,7 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_mailchimp_submit_btn_top_indent',
             [
-                'label' => __( 'Button Top Indent', 'primekit-addons' ),
+                'label' => esc_html__( 'Button Top Indent', 'primekit-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'condition' => [
                     'button_type' => 'icon',
@@ -583,7 +589,7 @@ class Main extends Widget_Base
         $this->start_controls_tab(
             'primekit_mailchimp_button_normal',
             [
-                'label' => __( 'Normal', 'primekit-addons' ),
+                'label' => esc_html__( 'Normal', 'primekit-addons' ),
             ]
         );
 
@@ -591,7 +597,7 @@ class Main extends Widget_Base
         $this->add_control(
             'primekit_mailchimp_button_text_color',
             [
-                'label' => __( 'Text Color', 'primekit-addons' ),
+                'label' => esc_html__( 'Text Color', 'primekit-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'condition' => [
                     'button_type' => 'text',
@@ -608,7 +614,7 @@ class Main extends Widget_Base
         $this->add_control(
             'primekit_mailchimp_button_icon_color',
             [
-                'label' => __( 'Icon Color', 'primekit-addons' ),
+                'label' => esc_html__( 'Icon Color', 'primekit-addons' ),
                 'condition' => [
                     'button_type' => 'icon',
                 ],
@@ -625,7 +631,7 @@ class Main extends Widget_Base
             \Elementor\Group_Control_Background::get_type(),
             [
                 'name' => 'primekit_mailchimp_button_background',
-                'label' => __( 'Background', 'primekit-addons' ),    
+                'label' => esc_html__( 'Background', 'primekit-addons' ),    
                 'types' => [ 'classic', 'gradient' ],
                 'exclude' => [
                     'image'
@@ -649,7 +655,7 @@ class Main extends Widget_Base
         $this->start_controls_tab(
             'primekit_mailchimp_button_hover',
             [
-                'label' => __( 'Hover', 'primekit-addons' ),
+                'label' => esc_html__( 'Hover', 'primekit-addons' ),
             ]
         );
 
@@ -657,7 +663,7 @@ class Main extends Widget_Base
         $this->add_control(
             'primekit_mailchimp_button_hover_text_color',
             [
-                'label' => __( 'Text Color', 'primekit-addons' ),
+                'label' => esc_html__( 'Text Color', 'primekit-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'condition' => [
                     'button_type' => 'text',
@@ -674,7 +680,7 @@ class Main extends Widget_Base
         $this->add_control(
             'primekit_mailchimp_button_hover_icon_color',
             [
-                'label' => __( 'Icon Color', 'primekit-addons' ),
+                'label' => esc_html__( 'Icon Color', 'primekit-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'condition' => [
                     'button_type' => 'icon',
@@ -691,7 +697,7 @@ class Main extends Widget_Base
             \Elementor\Group_Control_Background::get_type(),
             [
                 'name' => 'primekit_mailchimp_button_background_hover',
-                'label' => __( 'Background', 'primekit-addons' ),    
+                'label' => esc_html__( 'Background', 'primekit-addons' ),    
                 'types' => [ 'classic', 'gradient' ],
                 'exclude' => [
                     'image'
@@ -710,7 +716,7 @@ class Main extends Widget_Base
         $this->start_controls_section(
             'primekit_elementor_mailchimp_message_style',
             [
-                'label' => __( 'Message Style', 'primekit-addons' ),
+                'label' => esc_html__( 'Message Style', 'primekit-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -719,7 +725,7 @@ class Main extends Widget_Base
         $this->add_control(
             'primekit_elementor_mailchimp_message_text_color',
             [
-                'label' => __( 'Text Color', 'primekit-addons' ),
+                'label' => esc_html__( 'Text Color', 'primekit-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000',
                 'selectors' => [
@@ -733,7 +739,7 @@ class Main extends Widget_Base
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_elementor_mailchimp_message_typography',
-                'label' => __( 'Typography', 'primekit-addons' ),
+                'label' => esc_html__( 'Typography', 'primekit-addons' ),
                 'selector' => '{{WRAPPER}} .primekit-mailchimp-response',
             ]
         );
