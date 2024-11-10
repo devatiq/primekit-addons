@@ -110,11 +110,13 @@ class Functions
     {
         // Check nonce for security
         check_ajax_referer('primekit_mailchimp_nonce', 'nonce');
-
+        
         // Sanitize and validate form inputs
-        $email = sanitize_email($_POST['email']);
-        $fname = sanitize_text_field($_POST['fname'] ?? '');
-        $lname = sanitize_text_field($_POST['lname'] ?? '');
+        $email = isset($_POST['email']) ? sanitize_email(wp_unslash($_POST['email'])) : '';
+        $fname = isset($_POST['fname']) ? sanitize_text_field(wp_unslash($_POST['fname'])) : '';
+        $lname = isset($_POST['lname']) ? sanitize_text_field(wp_unslash($_POST['lname'])) : '';
+
+
 
         if (!is_email($email)) {
             wp_send_json_error(['message' => __('Invalid email address', 'primekit-addons')]);
@@ -130,7 +132,7 @@ class Functions
 
         // Mailchimp API integration for subscription
         $data_center = substr($api_key, strpos($api_key, '-') + 1);
-        $list_id = sanitize_text_field($_POST['mailchimp_list_id']);
+        $list_id = isset($_POST['mailchimp_list_id']) ? sanitize_text_field(wp_unslash($_POST['mailchimp_list_id'])) : '';
         $url = 'https://' . $data_center . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
 
         $body = wp_json_encode([
@@ -220,9 +222,9 @@ class Functions
         }
 
         // Safely escape the product_id
-        $product_id = isset($_POST['product_id']) ? (int) sanitize_text_field($_POST['product_id']) : 0;
+        $product_id = isset($_POST['product_id']) ? (int) sanitize_text_field(wp_unslash($_POST['product_id'])) : 0;
         // Safely escape the quantity, use sent quantity or default to 1
-        $quantity = isset($_POST['quantity']) ? (int) sanitize_text_field($_POST['quantity']) : 1;
+        $quantity = isset($_POST['quantity']) ? (int) sanitize_text_field(wp_unslash($_POST['quantity'])) : 1;        
 
         if (!wc_get_product($product_id)) {
             wp_send_json_error(['message' => esc_html__('Invalid product.', 'primekit-addons')]);

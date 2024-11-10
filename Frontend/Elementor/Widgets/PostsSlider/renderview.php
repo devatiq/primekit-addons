@@ -19,7 +19,7 @@ $slides_per_view_mobile = isset($settings['slides_per_view_mobile']) ? $settings
  $pagination = $settings['show_pagination'] === 'yes' ? true : false;
 
 // Combine all the settings into a single JSON string
-$slider_settings = json_encode([
+$slider_settings = wp_json_encode([
     'slidesPerView' => $slides_per_view,
      'slidesPerViewTablet' => $slides_per_view_tablet,
      'slidesPerViewMobile' => $slides_per_view_mobile,
