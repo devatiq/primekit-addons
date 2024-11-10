@@ -319,7 +319,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_related_post_widget_field',
             esc_html__('Related Posts', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/related-posts.svg',
             true,
             self::demo_url('widgets/related-posts-elementor-widget/')
         );
@@ -328,7 +328,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_search_form_widget_field',
             esc_html__('Search Form', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/search-form.svg',
             true,
             self::demo_url('widgets/search-form-elementor-widget/')
         );
@@ -337,7 +337,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_search_icon_widget_field',
             esc_html__('Search Icon', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/search-icon.svg',
             true,
             self::demo_url('widgets/search-icon-elementor-widget/')
         );
@@ -346,7 +346,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_sec_title_widget_field',
             esc_html__('Section Title', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/section-title.svg',
             true,
             self::demo_url('widgets/section-title-elementor-widget/')
         );
@@ -364,7 +364,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_single_img_scroll_field',
             esc_html__('Single Image Scroll', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/single-image-scroll.svg',
             true,
             self::demo_url('widgets/single-image-scroll-elementor-widget/')
         );
@@ -373,7 +373,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_site_logo_widget_field',
             esc_html__('Site Logo', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/site-logo.svg',
             true,
             self::demo_url('widgets/site-logo-elementor-widget/')
         );
@@ -382,7 +382,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_site_title_tagline_field',
             esc_html__('Site Title & Tagline', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/site-title-and-tagline.svg',
             true,
             self::demo_url('widgets/site-title-and-tagline-elementor-widget')
         );
@@ -391,7 +391,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_skill_bar_widget_field',
             esc_html__('Skill Bar', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/skill-bar.svg',
             true,
             self::demo_url('widgets/skill-bar-elementor-widget/')
         );
@@ -400,7 +400,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_social_share_widget_field',
             esc_html__('Social Share', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/social-share.svg',
             true,
             self::demo_url('widgets/social-share-elementor-widget/')
         );
@@ -409,7 +409,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_sticker_text_field',
             esc_html__('Sticker Text', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/sticker-text.svg',
             true,
             self::demo_url('widgets/sticker-text-elementor-widget/')
         );
@@ -427,7 +427,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_team_member_widget_field',
             esc_html__('Team Member', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/team-member.svg',
             true,
             self::demo_url('widgets/team-member-elementor-widget/')
         );
@@ -436,7 +436,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_testi_caro_widget_field',
             esc_html__('Testimonial Carousel', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/testimonial-carousel.svg',
             true,
             self::demo_url('widgets/testimonial-carousel-elementor-widget/')
         );
@@ -445,7 +445,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wp_menu_widget_field',
             esc_html__('WordPress Menu', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/wordpress-menu.svg',
             true,
             self::demo_url('widgets/wordpress-menu-elementor-widget/')
         );
@@ -508,7 +508,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_template_slider_field',
             esc_html__('Template Slider', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/template-slider.svg',
             true,
             self::demo_url('widgets/template-slider-widget/')
         );

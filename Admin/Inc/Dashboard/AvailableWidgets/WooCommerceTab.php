@@ -40,7 +40,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_add_to_cart_icon_field',
             esc_html__('Add to cart', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/add-to-cart.svg',
             true,
             self::demo_url('widgets/woocommerce-add-to-cart-elementor-widget/')
         );
@@ -48,7 +48,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_cart_icon_field',
             esc_html__('Cart Icon', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/cart-icon.svg',
             true,
             self::demo_url('widgets/product-cart-icon-elementor-widget/')
         );
@@ -56,7 +56,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_cart_page_field',
             esc_html__('Cart Page', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/cart-page.svg',
             true,
             self::demo_url('widgets/woocommerce-custom-cart-page-elementor-widget/')
         );
@@ -64,7 +64,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_checkout_page_field',
             esc_html__('Checkout Page', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/checkout-page.svg',
             true,
             self::demo_url('widgets/woocommerce-custom-checkout-page-elementor-widget/')
         );
@@ -72,7 +72,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_img_field',
             esc_html__('Product Image', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/product-image.svg',
             true,
             self::demo_url('widgets/woocommerce-product-image-elementor-widget/')
         );
@@ -80,7 +80,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_meta_field',
             esc_html__('Product Meta', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/product-meta.svg',
             true,
             self::demo_url('widgets/woocommerce-product-meta-elementor-widget/')
         );
@@ -88,7 +88,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_price_field',
             esc_html__('Product Price', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/product-pricing.svg',
             true,
             self::demo_url('widgets/woocommerce-product-pricing-elementor-widget/')
         );
@@ -96,7 +96,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_related_field',
             esc_html__('Related Products', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/related-product.svg',
             true,
             self::demo_url('widgets/woocommerce-related-product-elementor-widget/')
         );
@@ -104,7 +104,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_short_desc_field',
             esc_html__('Short Description', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/product-short-description.svg',
             true,
             self::demo_url('widgets/woocommerce-product-short-description-elementor-widget/')
         );
@@ -112,7 +112,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_tabs_field',
             esc_html__('Product Tabs', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/product-tabs-data.svg',
             true,
             self::demo_url('widgets/woocommerce-product-tabs-elementor-widget/')
         );
@@ -120,7 +120,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_title_field',
             esc_html__('Product Title', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/product-title.svg',
             true,
             self::demo_url('widgets/woocommerce-product-title-elementor-widget/')
         );
@@ -128,7 +128,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_product_bread_crumb_field',
             esc_html__('Product Bread Crumb', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/WooCommerce-breadcrumb.svg',
             true,
             self::demo_url('widgets/woocommerce-breadcrumb-elementor-widget/')
         );
@@ -136,7 +136,7 @@ class WooCommerceTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_wc_my_account_field',
             esc_html__('My Account', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-animated-text.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/my-account.svg',
             true,
             self::demo_url('widgets/woocommerce-my-account-elementor-widget/')
         );
