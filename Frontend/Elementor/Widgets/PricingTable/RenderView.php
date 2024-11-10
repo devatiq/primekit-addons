@@ -96,7 +96,7 @@ $primekit_table_type = $primekit_settings['primekit_elementor_pricingTable_type'
         </div><!--/ Pricing Table Body -->
         <!-- Pricing Table Footer -->
         <div class="primekit-ele-pricing-table-footer">
-            <a <?php echo $this->get_render_attribute_string('primekit_elementor_pricingTable_button_link'); ?>
+            <a <?php echo wp_kses_post($this->get_render_attribute_string('primekit_elementor_pricingTable_button_link')); ?>
                 class="primekit-ele-btn primekit-ele-btn-default"><?php echo esc_html($primekit_button_text); ?>
                 <?php \Elementor\Icons_Manager::render_icon($primekit_settings['primekit_elementor_pricingTable_button_icon'], ['aria-hidden' => 'true']); ?></a>
         </div><!--/ Pricing Table Footer -->

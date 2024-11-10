@@ -651,9 +651,9 @@ class Main extends Widget_Base
 
 	}
 	private function generate_random_color() {
-		return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+		return sprintf('#%06X', wp_rand(0, 0xFFFFFF));
 	}
-
+	
 	/**
 	 * Render the widget output on the frontend.
 	 */

@@ -70,7 +70,7 @@ class Mailchimp {
         
         echo '<p class="description">' . sprintf(
             // Translators: %1$s and %2$s are HTML link tags that link to the Mailchimp API key page.
-            __('Enter your Mailchimp API Key. You can get it %1$shere%2$s.', 'primekit-addons'),
+            esc_html__('Enter your Mailchimp API Key. You can get it %1$shere%2$s.', 'primekit-addons'),
             '<a href="https://us6.admin.mailchimp.com/account/api/" target="_blank">',
             '</a>'
         ) . '</p>';

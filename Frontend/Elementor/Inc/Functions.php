@@ -133,7 +133,7 @@ class Functions
         $list_id = sanitize_text_field($_POST['mailchimp_list_id']);
         $url = 'https://' . $data_center . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
 
-        $body = json_encode([
+        $body = wp_json_encode([
             'email_address' => $email,
             'status' => 'subscribed',
             'merge_fields' => [

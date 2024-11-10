@@ -60,7 +60,7 @@ $args = array(
                                 if (!empty($categories)) {
                                     echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
                                     if ('true' === $random_color_switch) {
-                                        echo ' style="background-color: ' . $random_color . '"';
+                                        echo ' style="background-color: ' . esc_attr($random_color) . '"';
                                     }
                                     echo '>' . esc_html($categories[0]->name) . '</a>';
                                 }

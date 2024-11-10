@@ -40,7 +40,7 @@ if (!empty($posts) && is_array($posts)) {
         <?php
         foreach ($posts as $post) {
             // Get the post date and format it
-            $post_date = date('M j, Y', strtotime($post->date));
+           $post_date = gmdate('M j, Y', strtotime($post->date));
             $category_names = $this->get_category_names($post->categories, $post->_embedded);
             // Get the featured image URL if available
             $thumbnail_url = isset($post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->medium->source_url)
