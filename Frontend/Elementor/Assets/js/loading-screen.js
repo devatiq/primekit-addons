@@ -17,9 +17,20 @@ jQuery(document).ready(function($) {
             hideLoadingScreen();
         }
     } else {
-        // On the front end, hide the loading screen after the page fully loads
+        // On the front end, hide the loading screen after the page fully loads or after 3 seconds (whichever comes first)
+        let pageLoaded = false;
+
+        // Try to hide the loading screen when the page fully loads
         $(window).on('load', function() {
+            pageLoaded = true;
             hideLoadingScreen();
         });
+
+        // Fallback: Hide the loading screen after 3 seconds if the page hasn't loaded yet
+        setTimeout(function() {
+            if (!pageLoaded) {
+                hideLoadingScreen();
+            }
+        }, 3000); // 3000ms = 3 seconds
     }
 });
