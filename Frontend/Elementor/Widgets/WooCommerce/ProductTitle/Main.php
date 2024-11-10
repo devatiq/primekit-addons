@@ -103,7 +103,7 @@ class Main extends Widget_Base {
 
 		$this->end_controls_section();
 
-        //Abc post title style
+        //post title style
 		
         $this->start_controls_section(
             'primekit_elementor_product_wc_title_style',

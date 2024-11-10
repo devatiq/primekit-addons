@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Product Ttitle Widget
+ * Render View for Product Ttitle Widget
  */
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
