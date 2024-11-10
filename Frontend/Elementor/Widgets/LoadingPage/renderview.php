@@ -25,10 +25,12 @@ $primekit_text_switch = !empty($primekit_settings['primekit_loading_screen_text_
     && $primekit_settings['primekit_loading_screen_text_switch'] === 'yes';
 $primekit_bar_switch = !empty($primekit_settings['primekit_loading_screen_bar_switch']) 
     && $primekit_settings['primekit_loading_screen_bar_switch'] === 'yes';
+
 ?>
 
 <!-- Loading Screen -->
-<div id="primekit-loading-screen" data-test-mode="<?php echo esc_attr($primekit_test_mode ? 'yes' : 'no'); ?>">
+<div id="primekit-loading-screen" data-test-mode="<?php echo esc_attr($primekit_test_mode ? 'yes' : 'no'); ?>" class="<?php if('yes' != $primekit_test_mode) { echo esc_attr('primekit-test-mode'); } ?>">
+
     
     <!-- Display Image based on switch -->
     <?php if ($primekit_img_switch) : ?>
@@ -54,32 +56,3 @@ $primekit_bar_switch = !empty($primekit_settings['primekit_loading_screen_bar_sw
     <?php endif; ?>
 </div>
 <!-- /end PrimeKit Loading Screen -->
-
-<script>
-    jQuery(document).ready(function($) {
-    function hideLoadingScreen() {
-        const $primeLoadingScreen = $('#primekit-loading-screen');
-        if ($primeLoadingScreen.length) {
-            $primeLoadingScreen.hide();
-        }
-    }
-
-    // Get the value of the test mode from the data attribute
-    const $loadingScreen = $('#primekit-loading-screen');
-    const testMode = $loadingScreen.data('test-mode') === 'yes';
-    const isElementorEditor = $('body').hasClass('elementor-editor-active');
-
-    if (isElementorEditor) {
-        // If test mode is off, hide the loading screen in the editor
-        if (!testMode) {
-            hideLoadingScreen();
-        }
-    } else {
-        // On the front end, hide the loading screen after the page fully loads
-        $(window).on('load', function() {
-            hideLoadingScreen();
-        });
-    }
-});
-
-</script>
