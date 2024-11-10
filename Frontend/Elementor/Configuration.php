@@ -40,7 +40,7 @@ class Configuration
      * plugin Version
      */
 
-    public $version = '1.0.1';
+    public $version = PRIMEKIT_VERSION;
 
     /**
      * Minimum Elementor Version

@@ -1,4 +1,14 @@
 <?php
+/**
+ * Post Content
+ *
+ * Elementor widget for displaying the post content.
+ *
+ * @since 1.0.2
+ *
+ * @package PrimeKit
+ * @subpackage PrimeKit/Frontend/Elementor/Widgets
+ */
 namespace PrimeKit\Frontend\Elementor\Widgets\PostContent;
 
 if (!defined('ABSPATH'))

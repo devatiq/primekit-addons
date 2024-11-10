@@ -1,4 +1,12 @@
 <?php
+/**
+ * Elementor Loading Page Widget.
+ *
+ * Elementor widget that displays a loading page.
+ * Since: 1.0.2
+ * @package PrimeKit
+ * @subpackage Elementor
+ */
 namespace PrimeKit\Frontend\Elementor\Widgets\LoadingPage;
 
 if (!defined('ABSPATH'))
