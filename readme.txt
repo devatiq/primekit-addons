@@ -126,6 +126,9 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 3. Advanced Pricing Table
 
 == Changelog ==
+= 1.0.2 - 10 November 2024 =
+- New Widgets
+
 
 = 1.0.1 - 07 November 2024 =
 - New Widgets and Theme Builder added

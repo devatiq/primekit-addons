@@ -114,6 +114,8 @@ As of now, our collection boasts 53 widgets, and we're constantly expanding our 
 Yes, for the most part. With our suite of 53 customizable widgets, you're well-equipped to craft various web pages, making it feasible to construct an entire website using just our plugin.
 
 ## Changelog
+## 1.0.2 - 10 November 2024
+- New Widgets
 
 ## 1.0.1 - 07 November 2024
 - New Widgets and Theme Builder added
