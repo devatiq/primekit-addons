@@ -46,11 +46,11 @@ class MetaBox {
             return $post_id;
         }
 
-        if ('post' == $_POST['post_type'] && !current_user_can('edit_post', $post_id)) {
+        if (isset($_POST['post_type']) && 'post' === $_POST['post_type'] && !current_user_can('edit_post', $post_id)) {
             return $post_id;
         }
-
-        $excerpt_content = isset($_POST['primekit_addons_excerpt_content']) ? sanitize_textarea_field($_POST['primekit_addons_excerpt_content']) : '';
+        
+        $excerpt_content = isset($_POST['primekit_addons_excerpt_content']) ? sanitize_textarea_field(wp_unslash($_POST['primekit_addons_excerpt_content'])) : '';
         update_post_meta($post_id, 'primekit_addons_excerpt_content', $excerpt_content);
     }
 
@@ -91,8 +91,9 @@ class MetaBox {
             update_post_meta(
                 $post_id,
                 '_primekit_wc_product_description',
-                wp_kses_post($_POST['primekit_wc_product_description'])
+                wp_kses_post(wp_unslash($_POST['primekit_wc_product_description']))
             );
         }
+        
     }
 }

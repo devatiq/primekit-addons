@@ -38,7 +38,7 @@ class Main extends Widget_Base
 	
 	public function get_keywords()
 	{
-		return ['prime', 'post', 'grid', 'modern', 'post grid', 'modern post grid'];
+		return ['prime', 'post', 'grid', 'modern', 'post grid', 'modern post grid', 'blog'];
 	}
 	
 	/**

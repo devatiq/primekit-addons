@@ -36,6 +36,13 @@ class Settings
 
     public function render_settings_page()
     {
+        if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Sanitize and verify the nonce
+            $nonce = isset($_POST['primekit_nonce']) ? sanitize_text_field(wp_unslash($_POST['primekit_nonce'])) : '';
+            if (!$nonce || !wp_verify_nonce($nonce, 'primekit_save_settings')) {
+                wp_die(__('Nonce verification failed. Please try again.', 'primekit-addons'));
+            }
+        }       
 
         // Display tab navigation
         ?>
@@ -77,7 +84,7 @@ class Settings
 
     private function get_active_tab()
     {
-        return isset($_GET['tab']) ? sanitize_text_field($_GET['tab']) : 'general';
+        return isset($_GET['tab']) ? sanitize_text_field(wp_unslash($_GET['tab'])) : 'general';
     }
 
     public function classes_initalize()

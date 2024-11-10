@@ -77,7 +77,7 @@ class CostEstimation
     public function sanitize($input)
     {
         // Check for the nonce before processing the form
-        if (!isset($_POST['primekit_nonce']) || !wp_verify_nonce($_POST['primekit_nonce'], 'primekit_save_settings')) {
+        if (!isset($_POST['primekit_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['primekit_nonce'])), 'primekit_save_settings')) {
             add_settings_error('primekit_cost_estimation_settings', 'primekit_nonce_error', esc_html__('Nonce verification failed', 'primekit-addons'), 'error');
             return $input; // Do not save the input if the nonce is invalid
         }

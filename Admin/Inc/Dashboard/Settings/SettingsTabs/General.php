@@ -45,7 +45,7 @@ class General {
      */
     public function sanitize($input) {
         // Verify nonce before saving settings
-        if (!isset($_POST['primekit_nonce']) || !wp_verify_nonce($_POST['primekit_nonce'], 'primekit_save_settings')) {
+        if (!isset($_POST['primekit_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['primekit_nonce'])), 'primekit_save_settings')) {
             add_settings_error('primekit_general_settings', 'primekit_nonce_error', esc_html__('Nonce verification failed', 'primekit-addons'), 'error');
             return $input; // return input without saving to avoid data loss
         }

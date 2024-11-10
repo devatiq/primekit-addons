@@ -124,7 +124,7 @@ class AdminManager
         }
 
         // Sanitize the widget name
-        $widget_name = sanitize_text_field($_POST['widgetName']);
+        $widget_name = sanitize_text_field(wp_unslash($_POST['widgetName']));
 
         // Strictly validate the value, allowing only '1' or '0'
         $value = ($_POST['value'] === '1') ? '1' : '0';
