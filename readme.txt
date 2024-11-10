@@ -1,6 +1,6 @@
 === PrimeKit Addons and Templates ===
 Plugin Name: PrimeKit PrimeKit Addons and Templates
-Version: 1.0.1
+Version: 1.0.2
 Author: supreoxltd
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  

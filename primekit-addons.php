@@ -55,7 +55,7 @@ final class PrimeKitAddons {
      */
     private function define_constants() {
         // Define Plugin Version.
-        define('PRIMEKIT_VERSION', '1.0.1');
+        define('PRIMEKIT_VERSION', '1.0.2');
 
         // Define Plugin Path.
         define('PRIMEKIT_PATH', plugin_dir_path(__FILE__));
