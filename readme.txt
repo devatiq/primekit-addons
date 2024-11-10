@@ -85,8 +85,9 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Sticker Text
 - Team Member
 - Template Slider (New)
-- Testimonial Carousel
 - WordPress Menu
+- Testimonial Carousel
+
 
 ==WooCommerce Widgets==
 - Add to Cart
