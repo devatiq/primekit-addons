@@ -238,7 +238,7 @@ class RegularTab
           PrimeKitWidgets::primekit_available_widget(
             'primekit_loading_screen_widget_field',
             esc_html__('Loading Screen', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/image-and-text-scroll.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/loading-screen.svg',
             true,
             self::demo_url('widgets/loading-screen-elementor-widget/')
         );
@@ -274,7 +274,7 @@ class RegularTab
          PrimeKitWidgets::primekit_available_widget(
             'primekit_post_content_widget_field',
             esc_html__('Post Content', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/page-title.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/post-content.svg',
             true,
             self::demo_url('widgets/post-content-elementor-widget/')
         );
@@ -535,7 +535,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_popular_posts_field',
             esc_html__('Popular Posts', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/popular-post.svg',
             true,
             self::demo_url('widgets/popular-posts/')
         );
@@ -544,7 +544,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_fetch_posts_field',
             esc_html__('Fetch Posts', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/fetch-posts.svg',
             true,
             self::demo_url('widgets/fetch-posts/')
         );
@@ -553,7 +553,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_posts_slider_field',
             esc_html__('Posts Slider', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/blockquote.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/post-slider.svg',
             true,
             self::demo_url('widgets/posts-slider-widget/')
         );
