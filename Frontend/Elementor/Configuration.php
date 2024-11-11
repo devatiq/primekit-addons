@@ -292,6 +292,7 @@ class Configuration
             'primekit_popup_widget_field' => 'Popup\Main',
             'primekit_portfolio_widget_field' => 'Portfolio\Main',
             'primekit_post_content_widget_field' => 'PostContent\Main',
+            'primekit_page_content_widget_field' => 'PageContent\Main',
             'primekit_post_meta_widget_field' => 'PostInfo\Main',
             'primekit_pricing_table_widget_field' => 'PricingTable\Main',
             'primekit_recent_post_widget_field' => 'RecentPost\Main',
