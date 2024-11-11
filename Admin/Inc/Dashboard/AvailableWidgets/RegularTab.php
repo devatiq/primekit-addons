@@ -252,6 +252,15 @@ class RegularTab
             self::demo_url('widgets/page-title-elementor-widget/')
         );
 
+        // Page Content.
+        PrimeKitWidgets::primekit_available_widget(
+            'primekit_page_content_widget_field',
+            esc_html__('Page Content', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/page-content.svg',
+            true,
+            self::demo_url('widgets/page-content-elementor-widget/')
+        );
+
         // Popup.
         PrimeKitWidgets::primekit_available_widget(
             'primekit_popup_widget_field',
