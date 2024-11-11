@@ -41,6 +41,11 @@ class Main extends Widget_Base
 		return ['prime', 'post', 'grid', 'modern', 'post grid', 'modern post grid', 'blog'];
 	}
 	
+	public function get_script_depends()
+	{
+		return ['primekit-modern-posts'];
+	}
+
 	/**
 	 * Get all available post types.
 	 */

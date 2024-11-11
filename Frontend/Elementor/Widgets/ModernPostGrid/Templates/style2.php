@@ -22,10 +22,14 @@ $posts = new WP_Query($args);
                 $posts->the_post();
                 $random_color = $this->generate_random_color(); // get random color
                 $counter++;
-
+                $post_data = wp_json_encode([
+                    'id' => get_the_ID(),
+                    'permalink' => get_permalink(),
+                    'title' => get_the_title()
+                ]);
                 if ($counter === 1):
                     ?>
-                    <div class="primekit-modren-style2-single-post <?php echo esc_attr($fullWidth_class); ?>">
+                    <div class="primekit-modren-style2-single-post primekit-modern-single-post-link <?php echo esc_attr($fullWidth_class); ?>" data-post="<?php echo esc_attr($post_data); ?>">
                         <!-- Post Thumbnail -->
                         <div class="primekit-modren-style2-post-thumbnail">
                             <?php if (has_post_thumbnail()): ?>
@@ -83,7 +87,7 @@ $posts = new WP_Query($args);
                     if ($counter === 2) {
                         echo '<div class="primekit-modren-last-three-posts-wrapper">';
                     } ?>
-                    <div class="primekit-modren-style2-single-post">
+                    <div class="primekit-modren-style2-single-post" data-post="<?php echo esc_attr($post_data); ?>">
                         <!-- Post Thumbnail -->
                         <div class="primekit-modren-style2-post-thumbnail">
                             <?php if (has_post_thumbnail()): ?>
