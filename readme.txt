@@ -128,8 +128,16 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 == Screenshots ==
 
 1. Backend View, Display required widgets
-2. Stylish Icon Box or Service Box. 
-3. Advanced Pricing Table
+2. Regular Widgets
+3. WooCommerce Widgets
+4. Advanced Pricing Table
+5. Filter Portfolio
+6. Advanced Pricing Table 2 
+7. Icon Box
+8. Icon Box
+9. Business Hours
+10. Icon Box
+11. Pricing Table
 
 == Changelog ==
 = 1.0.3 - 11 November 2024 =
