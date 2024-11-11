@@ -87,7 +87,7 @@ $posts = new WP_Query($args);
                     if ($counter === 2) {
                         echo '<div class="primekit-modren-last-three-posts-wrapper">';
                     } ?>
-                    <div class="primekit-modren-style2-single-post" data-post="<?php echo esc_attr($post_data); ?>">
+                    <div class="primekit-modren-style2-single-post primekit-modern-single-post-link" data-post="<?php echo esc_attr($post_data); ?>">
                         <!-- Post Thumbnail -->
                         <div class="primekit-modren-style2-post-thumbnail">
                             <?php if (has_post_thumbnail()): ?>

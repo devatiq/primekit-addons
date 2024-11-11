@@ -17,10 +17,15 @@ if (!defined('ABSPATH'))
             while ($query->have_posts()):
                 $query->the_post();
                 $random_color = $this->generate_random_color(); // get random color
+                $post_data = wp_json_encode([
+                    'id' => get_the_ID(),
+                    'permalink' => get_permalink(),
+                    'title' => get_the_title()
+                ]);
                 ?>
 
                 <!-- Single Post -->
-                <div class="primekit-modren-single-post">
+                <div class="primekit-modren-single-post primekit-modern-single-post-link" data-post="<?php echo esc_attr($post_data); ?>">
                     <!-- Post Thumbnail -->
                     <div class="primekit-modren-single-post-thumbnail">
                         <?php if (has_post_thumbnail(get_the_ID())): ?>
