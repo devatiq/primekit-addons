@@ -18,6 +18,7 @@ use PrimeKit\Frontend\Elementor\Inc\Functions;
 use PrimeKit\Frontend\Elementor\Assets\Assets;
 use PrimeKit\Frontend\Elementor\Inc\PostViewTracker;
 use PrimeKit\Frontend\Elementor\Globals\WrapperURL;
+use PrimeKit\Frontend\Elementor\Globals\CustomCSS;
 
 /**
  * Class Configuration
@@ -37,6 +38,7 @@ class Configuration
     protected $assets;
     protected $Post_View_Tracker;
     protected $WrapperURL;
+    protected $CustomCSS;
 
     /**
      * plugin Version
@@ -204,6 +206,7 @@ class Configuration
         $this->assets = new Assets();
         $this->Post_View_Tracker = new PostViewTracker();
         $this->WrapperURL = new WrapperURL();
+        $this->CustomCSS = new CustomCSS();
     }
 
 
