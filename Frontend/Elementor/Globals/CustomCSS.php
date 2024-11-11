@@ -17,6 +17,7 @@ class CustomCSS {
     public static function init() {
         add_action('elementor/element/common/_section_style/after_section_end', [__CLASS__, 'register'], 10);
         add_action('elementor/frontend/after_enqueue_styles', [__CLASS__, 'print_custom_css']);
+        add_action('elementor/editor/after_enqueue_styles', [__CLASS__, 'print_custom_css']); // Added for editor mode
         add_action('elementor/editor/after_enqueue_scripts', [__CLASS__, 'enqueue_editor_assets']);
     }
 
@@ -54,13 +55,6 @@ class CustomCSS {
     }
 
     public static function enqueue_editor_assets() {
-        if (!defined('PRIMEKIT_ELEMENTOR_ASSETS')) {
-            error_log('PRIMEKIT_ELEMENTOR_ASSETS is not defined');
-            return;
-        }
-
-        error_log('enqueue_editor_assets function triggered');
-        
         wp_enqueue_script(
             'primekit-custom-css-editor',
             PRIMEKIT_ELEMENTOR_ASSETS . "/js/custom-css.js", 
