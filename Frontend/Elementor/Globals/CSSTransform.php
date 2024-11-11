@@ -1,4 +1,12 @@
-<?php 
+<?php
+/**
+ * PrimeKit
+ *
+ * @package PrimeKit
+ * @subpackage PrimeKit/Frontend/Elementor/Globals
+ *
+ * @since 1.0.3
+ */
 namespace PrimeKit\Frontend\Elementor\Globals;
 
 // If this file is called directly, abort!!!
@@ -7,21 +15,59 @@ defined('ABSPATH') or die('This is not the place you deserve!');
 use Elementor\Element_Base;
 use Elementor\Controls_Manager;
 
-class CSSTransform {
+/**
+ * Class CSSTransform
+ *
+ * This class is responsible for handling CSS transformations within the Elementor environment.
+ * It initializes the required actions to enable CSS transformations for common elements.
+ *
+ * @package PrimeKit\Frontend\Elementor\Globals
+ * @since 1.0.3
+ */
+class CSSTransform
+{
 
-    public function __construct() {
+    /**
+     * CSSTransform constructor.
+     *
+     * Initializes the class by calling the init method to set up actions
+     * necessary for enabling CSS transformations within the Elementor environment.
+     *
+     * @since 1.0.3
+     */
+    public function __construct()
+    {
         self::init();
     }
 
-    public static function init() {
+    /**
+     * Initializes the class by setting up the necessary actions to enable
+     * CSS transformations within the Elementor environment.
+     *
+     * The init method hooks into the `elementor/element/common/_section_style/after_section_end` action
+     * to register the PrimeKit CSS Transform options within the Elementor environment.
+     *
+     * @since 1.0.3
+     * @access public
+     */
+    public static function init()
+    {
         add_action('elementor/element/common/_section_style/after_section_end', [__CLASS__, 'register'], 1);
     }
 
-    public static function register(Element_Base $element) {
+    /**
+     * Registers the PrimeKit CSS Transform controls.
+     *
+     * @since 1.0.3
+     * @param Element_Base $element The Elementor element.
+     * @access public
+     */
+    public static function register(Element_Base $element)
+    {
         $element->start_controls_section(
             'primekit_section_css_transform',
             [
-                'label' => __( 'PrimeKit CSS Transform', 'primekit-addons' ),
+                'label' => __('PrimeKit CSS Transform', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_ADVANCED,
             ]
         );
@@ -29,7 +75,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx',
             [
-                'label' => __( 'Enable', 'primekit-addons' ),
+                'label' => __('Enable', 'primekit-addons'),
                 'type' => Controls_Manager::SWITCHER,
                 'return_value' => 'yes',
                 'prefix_class' => 'primekit-css-transform-',
@@ -49,7 +95,7 @@ class CSSTransform {
         $element->start_controls_tab(
             '_tab_primekit_transform_normal',
             [
-                'label' => __( 'Normal', 'primekit-addons' ),
+                'label' => __('Normal', 'primekit-addons'),
                 'condition' => [
                     'primekit_transform_fx' => 'yes',
                 ],
@@ -60,7 +106,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_translate_toggle',
             [
-                'label' => __( 'Translate', 'primekit-addons' ),
+                'label' => __('Translate', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -74,7 +120,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_translate_x',
             [
-                'label' => __( 'Translate X', 'primekit-addons' ),
+                'label' => __('Translate X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -96,7 +142,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_translate_y',
             [
-                'label' => __( 'Translate Y', 'primekit-addons' ),
+                'label' => __('Translate Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -121,7 +167,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_rotate_toggle',
             [
-                'label' => __( 'Rotate', 'primekit-addons' ),
+                'label' => __('Rotate', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'condition' => [
                     'primekit_transform_fx' => 'yes',
@@ -134,15 +180,15 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_rotate_mode',
             [
-                'label' => __( 'Mode', 'primekit-addons' ),
+                'label' => __('Mode', 'primekit-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'compact' => [
-                        'title' => __( 'Compact', 'primekit-addons' ),
+                        'title' => __('Compact', 'primekit-addons'),
                         'icon' => 'eicon-plus-circle',
                     ],
                     'loose' => [
-                        'title' => __( 'Loose', 'primekit-addons' ),
+                        'title' => __('Loose', 'primekit-addons'),
                         'icon' => 'eicon-minus-circle',
                     ],
                 ],
@@ -165,7 +211,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_rotate_x',
             [
-                'label' => __( 'Rotate X', 'primekit-addons' ),
+                'label' => __('Rotate X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -188,7 +234,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_rotate_y',
             [
-                'label' => __( 'Rotate Y', 'primekit-addons' ),
+                'label' => __('Rotate Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -211,7 +257,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_rotate_z',
             [
-                'label' => __( 'Rotate Z', 'primekit-addons' ),
+                'label' => __('Rotate Z', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -236,7 +282,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_scale_toggle',
             [
-                'label' => __( 'Scale', 'primekit-addons' ),
+                'label' => __('Scale', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -250,15 +296,15 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_scale_mode',
             [
-                'label' => __( 'Mode', 'primekit-addons' ),
+                'label' => __('Mode', 'primekit-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'compact' => [
-                        'title' => __( 'Compact', 'primekit-addons' ),
+                        'title' => __('Compact', 'primekit-addons'),
                         'icon' => 'eicon-plus-circle',
                     ],
                     'loose' => [
-                        'title' => __( 'Loose', 'primekit-addons' ),
+                        'title' => __('Loose', 'primekit-addons'),
                         'icon' => 'eicon-minus-circle',
                     ],
                 ],
@@ -277,7 +323,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_scale_x',
             [
-                'label' => __( 'Scale X', 'primekit-addons' ),
+                'label' => __('Scale X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -303,7 +349,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_scale_y',
             [
-                'label' => __( 'Scale Y', 'primekit-addons' ),
+                'label' => __('Scale Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -333,7 +379,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_skew_toggle',
             [
-                'label' => __( 'Skew', 'primekit-addons' ),
+                'label' => __('Skew', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -347,7 +393,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_skew_x',
             [
-                'label' => __( 'Skew X', 'primekit-addons' ),
+                'label' => __('Skew X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -369,7 +415,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_skew_y',
             [
-                'label' => __( 'Skew Y', 'primekit-addons' ),
+                'label' => __('Skew Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -396,18 +442,18 @@ class CSSTransform {
         $element->start_controls_tab(
             'primekit_tab_primekit_transform_hover',
             [
-                'label' => __( 'Hover', 'primekit-addons' ),
+                'label' => __('Hover', 'primekit-addons'),
                 'condition' => [
                     'primekit_transform_fx' => 'yes',
                 ],
             ]
         );
-      
+
         // Translate Hover
         $element->add_control(
             'primekit_transform_fx_translate_toggle_hover',
             [
-                'label' => __( 'Translate', 'primekit-addons' ),
+                'label' => __('Translate', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -421,7 +467,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_translate_x_hover',
             [
-                'label' => __( 'Translate X', 'primekit-addons' ),
+                'label' => __('Translate X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -443,7 +489,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_translate_y_hover',
             [
-                'label' => __( 'Translate Y', 'primekit-addons' ),
+                'label' => __('Translate Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -468,7 +514,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_rotate_toggle_hover',
             [
-                'label' => __( 'Rotate', 'primekit-addons' ),
+                'label' => __('Rotate', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'condition' => [
                     'primekit_transform_fx' => 'yes',
@@ -481,7 +527,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_rotate_x_hover',
             [
-                'label' => __( 'Rotate X', 'primekit-addons' ),
+                'label' => __('Rotate X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -503,7 +549,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_rotate_y_hover',
             [
-                'label' => __( 'Rotate Y', 'primekit-addons' ),
+                'label' => __('Rotate Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -525,7 +571,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_rotate_z_hover',
             [
-                'label' => __( 'Rotate Z', 'primekit-addons' ),
+                'label' => __('Rotate Z', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -550,7 +596,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_scale_toggle_hover',
             [
-                'label' => __( 'Scale', 'primekit-addons' ),
+                'label' => __('Scale', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -564,7 +610,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_scale_x_hover',
             [
-                'label' => __( 'Scale X', 'primekit-addons' ),
+                'label' => __('Scale X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -590,7 +636,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_scale_y_hover',
             [
-                'label' => __( 'Scale Y', 'primekit-addons' ),
+                'label' => __('Scale Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -619,7 +665,7 @@ class CSSTransform {
         $element->add_control(
             'primekit_transform_fx_skew_toggle_hover',
             [
-                'label' => __( 'Skew', 'primekit-addons' ),
+                'label' => __('Skew', 'primekit-addons'),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -633,7 +679,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_skew_x_hover',
             [
-                'label' => __( 'Skew X', 'primekit-addons' ),
+                'label' => __('Skew X', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -655,7 +701,7 @@ class CSSTransform {
         $element->add_responsive_control(
             'primekit_transform_fx_skew_y_hover',
             [
-                'label' => __( 'Skew Y', 'primekit-addons' ),
+                'label' => __('Skew Y', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [

@@ -64,6 +64,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Post Category List
 - Post Content
 - Post Meta Info
+- Page Content
 - Post Tag Info
 - Post Title
 - Post Slider (New)
@@ -99,6 +100,11 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - My Account
 - Product BreadCrumb
 
+### Global Widgets
+- Custom CSS (New)
+- Wrapper URL  (New)
+- CSS Transform  (New)
+
 ### Why Choose PrimeKit Addons?
 With **[PrimeKit Addons](https://primekitaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **PrimeKit Addons**.
 
@@ -114,6 +120,10 @@ As of now, our collection boasts 53 widgets, and we're constantly expanding our 
 Yes, for the most part. With our suite of 53 customizable widgets, you're well-equipped to craft various web pages, making it feasible to construct an entire website using just our plugin.
 
 ## Changelog
+## 1.0.3 - 11 November 2024
+- New Regular Widgets
+- Global Widgets
+
 ## 1.0.2 - 10 November 2024
 - New Widgets
 
