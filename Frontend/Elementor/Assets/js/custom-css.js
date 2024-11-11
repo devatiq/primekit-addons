@@ -1,5 +1,4 @@
 (function($) {
-    console.log('PrimeKit Custom CSS');
     $(window).on('elementor:init', function() {
         elementor.channels.editor.on('change:setting:primekit_custom_css', function(view) {
             var elementId = view.model.id;
