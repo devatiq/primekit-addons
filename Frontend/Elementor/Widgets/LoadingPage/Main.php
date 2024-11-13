@@ -29,7 +29,7 @@ class Main extends Widget_Base
 
 	public function get_title()
 	{
-		return esc_html__('Loading Screen Page', 'primekit-addons');
+		return esc_html__('Pre-Loading Screen', 'primekit-addons');
 	}
 
 	public function get_icon()
@@ -44,7 +44,7 @@ class Main extends Widget_Base
 
 	public function get_keywords()
 	{
-		return ['prime', 'load', 'screen'];
+		return ['prime', 'load', 'screen', 'pre'];
 	}
 
 	public function get_script_depends()
@@ -203,7 +203,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_img_width',
 			[
 				'label' => esc_html__( 'Image Width', 'primekit-addons' ),
@@ -226,7 +226,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_img_space',
 			[
 				'label' => esc_html__( 'Bottom Space', 'primekit-addons' ),
@@ -257,7 +257,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_img_border_radius',
 			[
 				'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
@@ -313,7 +313,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_text_space',
 			[
 				'label' => esc_html__( 'Bottom Space', 'primekit-addons' ),
@@ -350,7 +350,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_bar_width',
 			[
 				'label' => esc_html__( 'Bar Width', 'primekit-addons' ),
@@ -373,7 +373,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_bar_height',
 			[
 				'label' => esc_html__( 'Bar Height', 'primekit-addons' ),
@@ -396,7 +396,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_bar_radius',
 			[
 				'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
@@ -431,7 +431,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_circle_size',
 			[
 				'label' => esc_html__( 'Bar Circle Size', 'primekit-addons' ),
@@ -454,7 +454,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_loading_screen_circle_space',
 			[
 				'label' => esc_html__( 'Bar Circle Space', 'primekit-addons' ),
