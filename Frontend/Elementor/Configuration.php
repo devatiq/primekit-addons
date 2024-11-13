@@ -263,6 +263,7 @@ class Configuration
             'primekit_blog_list_widget_field' => 'BlogList\Main',
             'primekit_blog_fancy_widget_field' => 'BlogPostFancy\Main',
             'primekit_breadcrumb_widget_field' => 'BreadCrumb\Main',
+            'primekit_call_button_widget_field' => 'CallButton\Main',
             'primekit_business_hours_field' => 'BusinessHours\Main',
             'primekit_card_info_widget_field' => 'CardInfo\Main',
             'primekit_cat_list_widget_field' => 'CatInfo\Main',

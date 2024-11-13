@@ -89,6 +89,15 @@ class RegularTab
             self::demo_url('widgets/breadcrumb-elementor-widget/')
         );
 
+        // Sticky Call Button
+        PrimeKitWidgets::primekit_available_widget(
+            'primekit_call_button_widget_field',
+            esc_html__('Sticky Call Button', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/call-icon.svg',
+            true,
+            self::demo_url('widgets/sticky-call-button-elementor-widget/')
+        );
+
         // Back To Top.
         PrimeKitWidgets::primekit_available_widget(
             'primekit_back_top_widget_field',

@@ -7,6 +7,7 @@ if (!defined('ABSPATH'))
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
+use \Elementor\Icons_Manager;
 
 /**
  * Elementor List Widget.
@@ -16,7 +17,7 @@ class Main extends Widget_Base
 
 	public function get_name()
 	{
-		return 'primekit-post-title';
+		return 'primekit-call-button';
 	}
 
 	public function get_title()
@@ -39,114 +40,107 @@ class Main extends Widget_Base
 		return ['prime', 'call', 'button', 'mobile'];
 	}
 
+	public function get_style_depends()
+    {
+    return ['elementor-icons'];
+    }
 
-	/**
-	 * Register list widget controls.
-	 */
+
 	protected function register_controls()
 	{
 		//Template
 		$this->start_controls_section(
-			'primekit-elementor-post_title',
+			'primekit_sticky_call_button_content',
 			[
-				'label' => esc_html__('Alignment', 'primekit-addons'),
+				'label' => esc_html__('Button Content', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
-
-		//Heading tag
+		//icon switch
 		$this->add_control(
-			'primekit_elementor_post_title_tag',
+			'primekit_sticky_call_button_show_icon',
 			[
-				'label' => esc_html__('Heading Tag', 'primekit-addons'),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'h1',
-				'options' => [
-					'h1' => esc_html__('H1', 'primekit-addons'),
-					'h2' => esc_html__('H2', 'primekit-addons'),
-					'h3' => esc_html__('H3', 'primekit-addons'),
-					'h4' => esc_html__('H4', 'primekit-addons'),
-					'h5' => esc_html__('H5', 'primekit-addons'),
-					'H6' => esc_html__('H6', 'primekit-addons'),
-				],
-
+				'label' => esc_html__( 'Show Icon', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Show', 'primekit-addons' ),
+				'label_off' => esc_html__( 'Hide', 'primekit-addons' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
 			]
 		);
 
-		//Alignment
-		$this->add_responsive_control(
-			'primekit_elementor_post_title_align',
+			//text switch
+			$this->add_control(
+				'primekit_sticky_call_button_show_text',
+				[
+					'label' => esc_html__( 'Show Text', 'primekit-addons' ),
+					'type' => \Elementor\Controls_Manager::SWITCHER,
+					'label_on' => esc_html__( 'Show', 'primekit-addons' ),
+					'label_off' => esc_html__( 'Hide', 'primekit-addons' ),
+					'return_value' => 'yes',
+					'default' => 'label_off',
+				]
+			);
+
+		//icon
+		$this->add_control(
+			'primekit_sticky_call_button_icon',
 			[
-				'label' => esc_html__('Alignment', 'primekit-addons'),
-				'type' => Controls_Manager::CHOOSE,
-				'default' => 'center',
-				'options' => [
-					'left' => [
-						'title' => esc_html__('Left', 'primekit-addons'),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => esc_html__('Center', 'primekit-addons'),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => esc_html__('Right', 'primekit-addons'),
-						'icon' => 'eicon-text-align-right',
-					],
+				'label' => esc_html__( 'Icon', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::ICONS,
+				'default' => [
+					'value' => 'fas fa-phone-alt',
+					'library' => 'fa-solid',
 				],
-				'selectors' => [
-					'{{WRAPPER}} .primekit-elementor-post-title-area' => 'text-align: {{VALUE}}',
+				'condition' =>[
+					'primekit_sticky_call_button_show_icon' => 'yes',
 				],
 			]
 		);
 
-		//PrimeKit Notice
+		//Text
 		$this->add_control(
-			'primekit_elementor_addons_notice',
+			'primekit_sticky_call_button_text',
 			[
-				'type' => \Elementor\Controls_Manager::NOTICE,
-				'notice_type' => 'warning',
-				'dismissible' => false,
-				'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
-				'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
+				'label' => esc_html__( 'Button Text', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Call Now', 'primekit-addons' ),
+				'condition' =>[
+					'primekit_sticky_call_button_show_text' => 'yes',
+				],
+			]
+		);
+
+		//Link
+
+		$this->add_control(
+			'primekit_sticky_call_button_link',
+			[
+				'label' => esc_html__( 'Button Link', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::URL,
+				'options' => [ 'url', 'is_external', 'nofollow' ],
+				'default' => [
+					'url' => '#',
+					'is_external' => false,
+					'nofollow' => false,
+				],
+				'label_block' => true,
 			]
 		);
 
 		$this->end_controls_section();
 
-		//post title style
-
+		//button style
 		$this->start_controls_section(
-			'primekit_elementor_post_title_style',
+			'primekit_sticky_call_button_style',
 			[
 				'label' => esc_html__('Style', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
-		$this->add_control(
-			'primekit_elementor_post_title_color',
-			[
-				'label' => esc_html__('Color', 'primekit-addons'),
-				'type' => Controls_Manager::COLOR,
-				'default' => '#cccccc',
-				'selectors' => [
-					'{{WRAPPER}} .primekit-post-title-tag' => 'color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'primekit_elementor_post_title_typography',
-				'label' => esc_html__('Typography', 'primekit-addons'),
-				'selector' => '{{WRAPPER}} .primekit-post-title-tag',
-			]
-		);
-
-		//end of divider bg style
+		//end of sticky button style
 		$this->end_controls_section();
 
 	}

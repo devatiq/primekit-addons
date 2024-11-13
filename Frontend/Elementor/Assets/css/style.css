@@ -4091,6 +4091,7 @@ h3.primekit-style-three-team-name {
 }
 
 .primekit-loading-image {
+  width: 180px;
   height: auto;
 }
 
@@ -4159,4 +4160,56 @@ h3.primekit-style-three-team-name {
     scaleY(var(--primekit-tfx-scale-y-hover, 1))
     skewX(var(--primekit-tfx-skew-x-hover, 0))
     skewY(var(--primekit-tfx-skew-y-hover, 0));
+}
+
+/*----------------
+Sticky Call Button
+--------------------*/
+.primekit-sticky-call-button-area {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.primekit-sticky-call-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #28a745; /* Button background color */
+  color: #ffffff; /* Button text color */
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.primekit-sticky-call-button:hover {
+  background-color: #218838; /* Hover background color */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.primekit-call-button-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.primekit-call-button-icon svg {
+  width: 18px; /* Icon size */
+  height: 18px; /* Icon size */
+  fill: currentColor; /* Use current text color */
+  transition: transform 0.2s ease;
+}
+
+.primekit-sticky-call-button:hover .primekit-call-button-icon svg {
+  transform: scale(1.1);
+}
+
+.primekit-call-button-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
 }
