@@ -111,7 +111,7 @@ class Main extends Widget_Base
 		$this->start_controls_section(
 			'primekit_addons_page_content_style',
 			[
-				'label' => esc_html__('Style', 'primekit-addons'),
+				'label' => esc_html__('Paragraph Style', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -119,11 +119,35 @@ class Main extends Widget_Base
 		$this->add_control(
 			'primekit_addons_page_content_color',
 			[
-				'label' => esc_html__('Color', 'primekit-addons'),
+				'label' => esc_html__('Text Color', 'primekit-addons'),
 				'type' => Controls_Manager::COLOR,
 				'default' => '#555555',
 				'selectors' => [
 					'{{WRAPPER}} .primekit-elementor-page-content-area' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_content_link_color',
+			[
+				'label' => esc_html__('Link Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#10b0e0',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area a' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_content_link_hov_color',
+			[
+				'label' => esc_html__('Link Hover Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#6309b3',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area a:hover' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -137,7 +161,205 @@ class Main extends Widget_Base
 			]
 		);
 
-		//end of divider bg style
+		//end of paragragh style
+		$this->end_controls_section();
+
+		//H1 style
+		$this->start_controls_section(
+			'primekit_addons_page_content_h1_style',
+			[
+				'label' => esc_html__('H1 Style', 'primekit-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_h1_color',
+			[
+				'label' => esc_html__('Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area h1' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'primekit_addons_page_h1_typography',
+				'label' => esc_html__('Typography', 'primekit-addons'),
+				'selector' => '{{WRAPPER}} .primekit-elementor-page-content-area h1',
+			]
+		);
+
+		//end H1 style
+		$this->end_controls_section();
+
+		//H2 style
+		$this->start_controls_section(
+			'primekit_addons_page_content_h2_style',
+			[
+				'label' => esc_html__('H2 Style', 'primekit-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_h2_color',
+			[
+				'label' => esc_html__('Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area h2' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'primekit_addons_page_h2_typography',
+				'label' => esc_html__('Typography', 'primekit-addons'),
+				'selector' => '{{WRAPPER}} .primekit-elementor-page-content-area h2',
+			]
+		);
+
+		//end H2 style
+		$this->end_controls_section();
+
+		//H3 style
+		$this->start_controls_section(
+			'primekit_addons_page_content_h3_style',
+			[
+				'label' => esc_html__('H3 Style', 'primekit-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_h3_color',
+			[
+				'label' => esc_html__('Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area h3' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'primekit_addons_page_h3_typography',
+				'label' => esc_html__('Typography', 'primekit-addons'),
+				'selector' => '{{WRAPPER}} .primekit-elementor-page-content-area h3',
+			]
+		);
+
+		//end H3 style
+		$this->end_controls_section();
+
+		//H4 style
+		$this->start_controls_section(
+			'primekit_addons_page_content_h4_style',
+			[
+				'label' => esc_html__('H4 Style', 'primekit-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_h4_color',
+			[
+				'label' => esc_html__('Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area h4' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'primekit_addons_page_h4_typography',
+				'label' => esc_html__('Typography', 'primekit-addons'),
+				'selector' => '{{WRAPPER}} .primekit-elementor-page-content-area h4',
+			]
+		);
+
+		//end H4 style
+		$this->end_controls_section();
+
+		//H5 style
+		$this->start_controls_section(
+			'primekit_addons_page_content_h5_style',
+			[
+				'label' => esc_html__('H5 Style', 'primekit-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_h5_color',
+			[
+				'label' => esc_html__('Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area h5' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'primekit_addons_page_h5_typography',
+				'label' => esc_html__('Typography', 'primekit-addons'),
+				'selector' => '{{WRAPPER}} .primekit-elementor-page-content-area h5',
+			]
+		);
+
+		//end H5 style
+		$this->end_controls_section();
+
+		//H6 style
+		$this->start_controls_section(
+			'primekit_addons_page_content_h6_style',
+			[
+				'label' => esc_html__('H6 Style', 'primekit-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_control(
+			'primekit_addons_page_h6_color',
+			[
+				'label' => esc_html__('Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-elementor-page-content-area h6' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'primekit_addons_page_h6_typography',
+				'label' => esc_html__('Typography', 'primekit-addons'),
+				'selector' => '{{WRAPPER}} .primekit-elementor-page-content-area h6',
+			]
+		);
+
+		//end H6 style
 		$this->end_controls_section();
 
 	}
