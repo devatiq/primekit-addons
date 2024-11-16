@@ -1,6 +1,6 @@
 === PrimeKit Addons and Templates ===
 Plugin Name: PrimeKit PrimeKit Addons and Templates
-Version: 1.0.2
+Version: 1.0.4
 Author: supreoxltd
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
@@ -141,6 +141,9 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 11. Pricing Table
 
 == Changelog ==
+= 1.0.4 - 16 November 2024 =
+- New Regular Widgets
+
 = 1.0.3 - 11 November 2024 =
 - New Regular Widgets
 - Global Widgets
