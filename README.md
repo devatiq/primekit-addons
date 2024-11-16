@@ -3,7 +3,7 @@ Contributors: atiqbd4ever
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 5.4   
 Tested up to: 6.6.2   
-Stable tag: 1.0.3  
+Stable tag: 1.0.4 
 Requires PHP: 8.0  
 License: GPLv2 or later   
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -80,6 +80,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Skill Bar
 - Social Share
 - Sticker Text
+- Sticky Call Button
 - Team Member
 - Template Slider (New)
 - Testimonial Carousel

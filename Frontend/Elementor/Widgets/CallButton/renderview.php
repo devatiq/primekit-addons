@@ -15,10 +15,13 @@ $primekit_text = !empty($primekit_settings['primekit_sticky_call_button_text']) 
 $primekit_link = !empty($primekit_settings['primekit_sticky_call_button_link']['url']) ? $primekit_settings['primekit_sticky_call_button_link']['url'] : '#';
 $primekit_link_external = !empty($primekit_settings['primekit_sticky_call_button_link']['is_external']) ? 'target="_blank"' : '';
 $primekit_link_nofollow = !empty($primekit_settings['primekit_sticky_call_button_link']['nofollow']) ? 'rel="nofollow"' : '';
-?>
+?> 
 
 <div class="primekit-sticky-call-button-area">
-    <a href="<?php echo esc_url($primekit_link); ?>" class="primekit-sticky-call-button" <?php echo $primekit_link_external; ?> <?php echo $primekit_link_nofollow; ?>>
+    <a href="<?php echo esc_url($primekit_link); ?>" class="primekit-sticky-call-button" 
+       <?php echo esc_attr($primekit_link_external); ?> 
+       <?php echo esc_attr($primekit_link_nofollow); ?>>
+       
         <?php if ($primekit_show_icon && !empty($primekit_icon['value'])): ?>
             <span class="primekit-call-button-icon">
                 <?php \Elementor\Icons_Manager::render_icon($primekit_icon, ['aria-hidden' => 'true']); ?>
