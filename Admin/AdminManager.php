@@ -145,22 +145,28 @@ class AdminManager
      * @param array $links Existing plugin action links.
      * @return array Modified plugin action links.
      */
-    public function add_plugin_settings_link($links)
-    {
+    public function add_plugin_settings_link( $links ) {
         $settings_link = sprintf(
             '<a href="%s">%s</a>',
-            esc_url(admin_url('admin.php?page=primekit_home')),
-            esc_html__('Settings', 'primekit-addons')
+            esc_url( admin_url( 'admin.php?page=primekit_home' ) ),
+            esc_html__( 'Settings', 'primekit-addons' )
         );
-
+    
         $pro_link = sprintf(
             '<a href="%s" target="_blank" style="font-weight: bold; color: #ff4500;">%s</a>',
-            esc_url('https://primekitaddons.com/'),
-            esc_html__('Get Pro', 'primekit-addons')
+            esc_url( 'https://primekitaddons.com/' ),
+            esc_html__( 'Get Pro', 'primekit-addons' )
         );
-
-        return array_merge([$settings_link], $links, [$pro_link]);
+    
+        // Prepend the settings link
+        array_unshift( $links, $settings_link );
+    
+        // Append the Pro link
+        array_push( $links, $pro_link );
+    
+        return $links;
     }
+    
 
 
     public function plugin_row_meta($links, $file)
