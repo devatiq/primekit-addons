@@ -58,8 +58,8 @@ class AdminManager
         $this->init();
         add_action('wp_ajax_primekit_save_widget_setting', [$this, 'primekit_save_widget_setting']);
 
-        add_filter( 'plugin_action_links_' . PRIMEKIT_BASENAME, [ $this, 'add_plugin_settings_link' ] );
-		add_filter( 'plugin_row_meta', [ $this, 'plugin_row_meta' ], 10, 2 );
+        add_filter('plugin_action_links_' . PRIMEKIT_BASENAME, [$this, 'add_plugin_settings_link']);
+        add_filter('plugin_row_meta', [$this, 'plugin_row_meta'], 10, 2);
     }
 
     /**
@@ -139,22 +139,47 @@ class AdminManager
         wp_die();
     }
 
+    /**
+     * Add custom links to the plugin actions in the Plugins list.
+     *
+     * @param array $links Existing plugin action links.
+     * @return array Modified plugin action links.
+     */
     public function add_plugin_settings_link( $links ) {
-		$settings_link = '<a href="' . admin_url( 'admin.php?page=primekit_home' ) . '">' . esc_html__( 'Settings', 'primekit-addons' ) . '</a>';
-		array_push( $links, $settings_link );
-		return $links;
-	}
+        $settings_link = sprintf(
+            '<a href="%s">%s</a>',
+            esc_url( admin_url( 'admin.php?page=primekit_home' ) ),
+            esc_html__( 'Settings', 'primekit-addons' )
+        );
+    
+        $pro_link = sprintf(
+            '<a href="%s" target="_blank" style="font-weight: bold; color: #ff4500;">%s</a>',
+            esc_url( 'https://primekitaddons.com/' ),
+            esc_html__( 'Get Pro', 'primekit-addons' )
+        );
+    
+        // Prepend the settings link
+        array_unshift( $links, $settings_link );
+    
+        // Append the Pro link
+        array_push( $links, $pro_link );
+    
+        return $links;
+    }
+    
 
-	public function plugin_row_meta( $links, $file ) {
-		if ( PRIMEKIT_BASENAME === $file ) {
-			$row_meta = array(
-				'support' => '<a href="https://wordpress.org/support/plugin/primekit-addons" target="_blank">' . esc_html__( 'Support', 'primekit-addons' ) . '</a>',
-				'rate'    => '<a href="https://wordpress.org/support/plugin/primekit-addons/reviews/#new-post" target="_blank">' . esc_html__( 'Rate Us', 'primekit-addons' ) . '</a>',
-			);
-			return array_merge( $links, $row_meta );
-		}
-		return (array) $links;
-	}
+
+    public function plugin_row_meta($links, $file)
+    {
+        if (PRIMEKIT_BASENAME === $file) {
+            $row_meta = array(
+                'support' => '<a href="https://wordpress.org/support/plugin/primekit-addons" target="_blank">' . esc_html__('Support', 'primekit-addons') . '</a>',
+                'rate' => '<a href="https://wordpress.org/support/plugin/primekit-addons/reviews/#new-post" target="_blank">' . esc_html__('Rate Us', 'primekit-addons') . '</a>',
+            );
+            return array_merge($links, $row_meta);
+        }
+        return (array) $links;
+    }
 
 
 }
