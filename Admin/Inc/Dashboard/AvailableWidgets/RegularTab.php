@@ -513,6 +513,15 @@ class RegularTab
             self::demo_url('widgets/gallery-widget/')
         );
 
+        // Lottie
+        PrimeKitWidgets::primekit_available_widget(
+            'primekit_lottie_icon_widget_field',
+            esc_html__('Lottie', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/lottie.svg',
+            true,
+            self::demo_url('widgets/lottie-widget/')
+        );
+
         // MailChimp.
         PrimeKitWidgets::primekit_available_widget(
             'primekit_mailchimp_switch_field',

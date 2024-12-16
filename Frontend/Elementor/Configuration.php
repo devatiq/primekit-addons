@@ -281,6 +281,7 @@ class Configuration
             'primekit_contact_form7_widget_field' => 'ContactForm7\Main',
             'primekit_comment_form_widget_field' => 'CommentForm\Main',
             'primekit_contact_info_widget_field' => 'ContactInfo\Main',
+            'primekit_lottie_icon_widget_field' => 'Lottie\Main',
             'primekit_mailchimp_switch_field' => 'MailChimp\Main',
             'primekit_cost_estimation_field' => 'CostEstimation\Main',
             'primekit_count_down_widget_field' => 'CountDown\Main',
