@@ -144,7 +144,7 @@ class Main extends Widget_Base
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_width',
 			[
-				'label' => esc_html__( 'Button Width', 'textdomain' ),
+				'label' => esc_html__( 'Button Width', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%',],
 				'range' => [
@@ -172,7 +172,7 @@ class Main extends Widget_Base
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_height',
 			[
-				'label' => esc_html__( 'Button Height', 'textdomain' ),
+				'label' => esc_html__( 'Button Height', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%',],
 				'range' => [
@@ -200,7 +200,7 @@ class Main extends Widget_Base
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%'],
 				'default' => [
@@ -221,7 +221,7 @@ class Main extends Widget_Base
 		$this->add_control(
 			'primekit_sticky_call_button_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'textdomain' ),
+				'label' => esc_html__( 'Background Color', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#1e49e7',
 				'selectors' => [
@@ -234,7 +234,7 @@ class Main extends Widget_Base
 		$this->add_control(
 			'primekit_sticky_call_button_bg_hover_color',
 			[
-				'label' => esc_html__( 'Background Hover Color', 'textdomain' ),
+				'label' => esc_html__( 'Background Hover Color', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#973af5',
 				'selectors' => [
@@ -247,7 +247,7 @@ class Main extends Widget_Base
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_bot_pos',
 			[
-				'label' => esc_html__( 'Bottom Position', 'textdomain' ),
+				'label' => esc_html__( 'Bottom Position', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%',],
 				'range' => [
@@ -275,7 +275,7 @@ class Main extends Widget_Base
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_left_pos',
 			[
-				'label' => esc_html__( 'Left Position', 'textdomain' ),
+				'label' => esc_html__( 'Left Position', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%',],
 				'range' => [
@@ -318,7 +318,7 @@ class Main extends Widget_Base
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'textdomain' ),
+				'label' => esc_html__( 'Icon Size', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -342,7 +342,7 @@ class Main extends Widget_Base
 		$this->add_control(
 			'primekit_sticky_call_button_icon_color',
 			[
-				'label' => esc_html__( 'Icon Color', 'textdomain' ),
+				'label' => esc_html__( 'Icon Color', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -355,7 +355,7 @@ class Main extends Widget_Base
 			$this->add_control(
 				'primekit_sticky_call_button_icon_hov_color',
 				[
-					'label' => esc_html__( 'Icon Hover Color', 'textdomain' ),
+					'label' => esc_html__( 'Icon Hover Color', 'primekit-addons' ),
 					'type' => \Elementor\Controls_Manager::COLOR,
 					'default' => '#FBD9FF',
 					'selectors' => [
@@ -383,7 +383,7 @@ class Main extends Widget_Base
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_text_space',
 			[
-				'label' => esc_html__( 'Text and Icon Space', 'textdomain' ),
+				'label' => esc_html__( 'Text and Icon Space', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -407,7 +407,7 @@ class Main extends Widget_Base
 		$this->add_control(
 			'primekit_sticky_call_button_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'textdomain' ),
+				'label' => esc_html__( 'Text Color', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -420,7 +420,7 @@ class Main extends Widget_Base
 		$this->add_control(
 			'primekit_sticky_call_button_text_hov_color',
 			[
-				'label' => esc_html__( 'Text Hover Color', 'textdomain' ),
+				'label' => esc_html__( 'Text Hover Color', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#FBD9FF',
 				'selectors' => [
