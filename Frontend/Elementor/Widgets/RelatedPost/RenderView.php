@@ -60,7 +60,7 @@ global $post;
                     } else {
                         echo '<li>' . esc_html__('No related posts found', 'primekit-addons') . '</li>';
                     }
-                    wp_reset_query();
+                    wp_reset_postdata();
                 }
             } else {
                 echo '<li>' . esc_html__('No post available.', 'primekit-addons') . '</li>';

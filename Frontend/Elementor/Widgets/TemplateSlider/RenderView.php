@@ -36,7 +36,9 @@ $unique_id = $this->get_id();
                         <!-- Render the selected Elementor template -->
                         <?php if (!empty($slide['template_select'])): ?>
                             <div class="slide-template-content">
-                                <?php echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($slide['template_select']); ?>
+                                <?php echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($slide['template_select']); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
+								
+								?> 
                             </div>
                         <?php endif; ?>
                     </div>

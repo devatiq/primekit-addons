@@ -44,7 +44,7 @@ class TemplateContentHooks {
     {
         $template_id = ThemeBuilder::get_template_id('single_post'); 
         if (!empty($template_id)) {
-            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
             the_content();
         }
@@ -63,7 +63,7 @@ class TemplateContentHooks {
     {
         $template_id = ThemeBuilder::get_template_id('single_page'); 
         if (!empty($template_id)) {
-            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
             the_content();
         }
@@ -80,7 +80,7 @@ class TemplateContentHooks {
     {
         $template_id = ThemeBuilder::get_template_id('404_page'); 
         if (!empty($template_id)) {
-            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
             '<h1 class="error-code">404</h1>';
             '<h1 class="error-title>' . esc_html__('Page Not Found', 'primekit-addons') . '</h1>';
@@ -99,7 +99,7 @@ class TemplateContentHooks {
     {
         $template_id = ThemeBuilder::get_template_id('search_page'); 
         if (!empty($template_id)) {
-            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
             '<h2 class="search-title">' . esc_html__('Search Results', 'primekit-addons') . '</h2>';
             get_search_form();
@@ -126,7 +126,7 @@ class TemplateContentHooks {
 
         // Check if a template exists in Elementor for 'archive_page'
         if (!empty($template_id)) {
-            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
             // Fallback if no Elementor template is found
             echo '<h2 class="archive-title">' . esc_html(get_the_archive_title()) . '</h2>';

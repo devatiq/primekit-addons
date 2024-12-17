@@ -40,7 +40,7 @@ class Settings
             // Sanitize and verify the nonce
             $nonce = isset($_POST['primekit_nonce']) ? sanitize_text_field(wp_unslash($_POST['primekit_nonce'])) : '';
             if (!$nonce || !wp_verify_nonce($nonce, 'primekit_save_settings')) {
-                wp_die(__('Nonce verification failed. Please try again.', 'primekit-addons'));
+                wp_die(esc_html__('Nonce verification failed. Please try again.', 'primekit-addons'));
             }
         }       
 

@@ -152,7 +152,7 @@ class CustomCSS
         }
 
         if (!empty($css)) {
-            echo '<style id="primekit-custom-css">' . $css . '</style>';
+            echo '<style id="primekit-custom-css">' . wp_kses_post($css) . '</style>';
         }
     }
 

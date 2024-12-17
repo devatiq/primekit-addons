@@ -56,7 +56,7 @@ endif; ?>">
 
         <?php if (!empty($primekit_description)): ?>
             <div class="primekit-cta-description">
-                <?php echo wpautop(wp_kses_post($primekit_description)); ?>
+                <?php echo wp_kses_post(wpautop($primekit_description)); ?>
             </div>
         <?php endif; ?>
 
