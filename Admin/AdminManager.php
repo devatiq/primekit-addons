@@ -60,6 +60,8 @@ class AdminManager
 
         add_filter('plugin_action_links_' . PRIMEKIT_BASENAME, [$this, 'add_plugin_settings_link']);
         add_filter('plugin_row_meta', [$this, 'plugin_row_meta'], 10, 2);
+
+        $this->tracker_primekit_addons();
     }
 
     /**
@@ -145,28 +147,29 @@ class AdminManager
      * @param array $links Existing plugin action links.
      * @return array Modified plugin action links.
      */
-    public function add_plugin_settings_link( $links ) {
+    public function add_plugin_settings_link($links)
+    {
         $settings_link = sprintf(
             '<a href="%s">%s</a>',
-            esc_url( admin_url( 'admin.php?page=primekit_home' ) ),
-            esc_html__( 'Settings', 'primekit-addons' )
+            esc_url(admin_url('admin.php?page=primekit_home')),
+            esc_html__('Settings', 'primekit-addons')
         );
-    
+
         $pro_link = sprintf(
             '<a href="%s" target="_blank" style="font-weight: bold; color: #ff4500;">%s</a>',
-            esc_url( 'https://primekitaddons.com/' ),
-            esc_html__( 'Get Pro', 'primekit-addons' )
+            esc_url('https://primekitaddons.com/'),
+            esc_html__('Get Pro', 'primekit-addons')
         );
-    
+
         // Prepend the settings link
-        array_unshift( $links, $settings_link );
-    
+        array_unshift($links, $settings_link);
+
         // Append the Pro link
-        array_push( $links, $pro_link );
-    
+        array_push($links, $pro_link);
+
         return $links;
     }
-    
+
 
 
     public function plugin_row_meta($links, $file)
@@ -180,6 +183,22 @@ class AdminManager
         }
         return (array) $links;
     }
+
+    /**
+     * Initialize the plugin tracker
+     *
+     * @return void
+     */
+    function tracker_primekit_addons()
+    {
+
+        $client = new \Appsero\Client('1be56cc3-aaf0-4840-b551-088e690dbaee', 'PrimeKit Addons and Templates', PRIMEKIT_FILE);
+
+        // Active insights
+        $client->insights()->init();
+
+    }
+
 
 
 }

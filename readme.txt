@@ -1,14 +1,14 @@
 === PrimeKit Addons and Templates ===
 Plugin Name: PrimeKit PrimeKit Addons and Templates
-Version: 1.0.4
+Version: 1.0.5
 Author: supreoxltd
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
 Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Theme Builder, Elementor Builder
 Requires at least: 5.4  
-Tested up to: 6.7  
-Stable tag: 1.0.4
+Tested up to: 6.7.1  
+Stable tag: 1.0.5
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -73,6 +73,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Post Slider (New)
 - Page Content (New)
 - Popular Posts (New)
+- Lottie (New)
 - Recent Posts List
 - Related Posts
 - Search Form
@@ -111,6 +112,15 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Wrapper URL  (New)
 - CSS Transform  (New)
 
+==Privacy Policy==
+PrimeKit Addons and Templates uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+
+Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users. 
+
+Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
+
+Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
+
 ==Why Choose PrimeKit Addons?==
 With **[PrimeKit Addons](https://primekitaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **PrimeKit Addons**.
 
@@ -141,6 +151,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 11. Pricing Table
 
 == Changelog ==
+= 1.0.5 - 17 Dec 2024 =
+- New Regular Widgets
+
+
 = 1.0.4 - 16 November 2024 =
 - New Regular Widgets
 
