@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-17T07:22:04+00:00\n"
+"POT-Creation-Date: 2024-12-17T10:06:14+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
@@ -1434,6 +1434,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:527
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:212
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:397
+#: Frontend/Elementor/Widgets/CallButton/Main.php:203
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:289
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:450
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:1075
@@ -2308,6 +2309,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:205
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:568
 #: Frontend/Elementor/Widgets/BlogList/Main.php:611
+#: Frontend/Elementor/Widgets/CallButton/Main.php:224
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:632
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:958
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:194
@@ -2410,6 +2412,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:555
 #: Frontend/Elementor/Widgets/BlogList/Main.php:598
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:102
+#: Frontend/Elementor/Widgets/CallButton/Main.php:410
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:608
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:944
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:143
@@ -2663,6 +2666,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:231
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:125
+#: Frontend/Elementor/Widgets/CallButton/Main.php:345
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:534
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:212
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:320
@@ -2689,6 +2693,7 @@ msgid "Icon Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:247
+#: Frontend/Elementor/Widgets/CallButton/Main.php:358
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:460
 #: Frontend/Elementor/Widgets/IconBox/Main.php:563
 #: Frontend/Elementor/Widgets/Popup/Main.php:346
@@ -2700,6 +2705,7 @@ msgid "Icon Hover Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:279
+#: Frontend/Elementor/Widgets/CallButton/Main.php:423
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:156
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:356
 #: Frontend/Elementor/Widgets/WooCommerce/ProductCheckout/Main.php:317
@@ -2708,6 +2714,7 @@ msgid "Text Hover Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:308
+#: Frontend/Elementor/Widgets/CallButton/Main.php:321
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:509
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:1106
 #: Frontend/Elementor/Widgets/CatInfo/Main.php:229
@@ -2861,6 +2868,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:308
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:594
+#: Frontend/Elementor/Widgets/CallButton/Main.php:278
 msgid "Left Position"
 msgstr ""
 
@@ -3529,6 +3537,24 @@ msgstr ""
 msgid "Button Link"
 msgstr ""
 
+#: Frontend/Elementor/Widgets/CallButton/Main.php:147
+#: Frontend/Elementor/Widgets/GravityForms/Main.php:957
+#: Frontend/Elementor/Widgets/PricingTable/Main.php:1175
+msgid "Button Width"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CallButton/Main.php:175
+msgid "Button Height"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CallButton/Main.php:237
+msgid "Background Hover Color"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CallButton/Main.php:250
+msgid "Bottom Position"
+msgstr ""
+
 #: Frontend/Elementor/Widgets/CallButton/Main.php:309
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:497
 #: Frontend/Elementor/Widgets/Popup/Main.php:297
@@ -3541,6 +3567,10 @@ msgstr ""
 #: Frontend/Elementor/Widgets/Popup/Main.php:217
 #: Frontend/Elementor/Widgets/StickerText/Main.php:289
 msgid "Text Style"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/CallButton/Main.php:386
+msgid "Text and Icon Space"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:19
@@ -5324,11 +5354,6 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:925
 msgid "Step Typography"
-msgstr ""
-
-#: Frontend/Elementor/Widgets/GravityForms/Main.php:957
-#: Frontend/Elementor/Widgets/PricingTable/Main.php:1175
-msgid "Button Width"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:1089
