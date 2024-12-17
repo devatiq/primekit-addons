@@ -96,7 +96,8 @@ class Assets{
             'ajax_url' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('primekit_mailchimp_nonce'),
         ]);
-
+        wp_register_script('primekit-lottie', PRIMEKIT_ELEMENTOR_ASSETS . "/js/lottie.min.js", array('jquery'), PRIMEKIT_VERSION, true);
+        wp_register_script('primekit-lottie-init', PRIMEKIT_ELEMENTOR_ASSETS . "/js/lottie-init.js", array('jquery'), PRIMEKIT_VERSION, true);
 
         if(Functions::is_woocommerce_active()) {
             wp_register_script('primekit-add-to-cart', PRIMEKIT_ELEMENTOR_ASSETS . "/js/add-to-cart.js", array('jquery'), PRIMEKIT_VERSION, true);
