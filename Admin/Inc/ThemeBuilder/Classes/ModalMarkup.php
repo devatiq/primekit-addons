@@ -10,7 +10,7 @@ class ModalMarkup
     public function __construct()
     {
         add_action('admin_footer', array($this, 'print_modal_markup'));
-        add_action('elementor/editor/footer', array($this, 'template_editor_modal_markup'));
+       // add_action('elementor/editor/footer', array($this, 'template_editor_modal_markup'));
         add_action('admin_post_primekit_save_template', array($this, 'save_template_meta'));
     }
 
