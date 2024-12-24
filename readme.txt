@@ -28,67 +28,67 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 == Widget List: 70+ Available Widgets ==
 
-- Advanced Animated Text
-- Advanced Circular Skill
-- Advanced Icon Box
-- Advanced Pricing Table
-- Animated Shape
-- Archive Title
-- Back To Top
-- Before After Image
-- Blockquote
-- Blog Posts Grid
-- Blog Posts List
-- Breadcrumb
-- Business Hours
-- Call To Action - CTA
-- Card Info Box
-- Comment Form
-- Contact & Social Info
-- Contact Form 7 Style
-- Cost Estimation (New)
-- Counter Up
-- Count Down Timer
-- Dual Button
-- Fancy Blog Posts
-- Featured Image
-- Fetch Posts (New)
-- Flip Box
-- Gravity Form (New)
-- Image Hover
-- Image and Text Scroll
-- Image Gallery (New)
-- Loading Screen (New)
-- Mailchimp (New)
-- Modern Post Grid (New, with 8 layouts)
-- Page Title
+- [Advanced Animated Text](https://demo.primekitaddons.com/widgets/advanced-animated-text-elementor-widget/)
+- [Advanced Circular Skill](https://demo.primekitaddons.com/widgets/advanced-circular-skill-elementor-widget/)
+- [Advanced Icon Box](https://demo.primekitaddons.com/widgets/advanced-icon-box-elementor-widget/)
+- [Advanced Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table-elementor-widget/)
+- [Animated Shape](https://demo.primekitaddons.com/widgets/animated-shape-elementor-widget/)
+- [Archive Title](https://demo.primekitaddons.com/widgets/archive-title-elementor-widget/)
+- [Back To Top](https://demo.primekitaddons.com/widgets/back-to-top-button-elementor-widget/)
+- [Before After Image](https://demo.primekitaddons.com/widgets/before-after-image-compare-elementor-widget/)
+- [Blockquote](https://demo.primekitaddons.com/widgets/blockquote-elementor-widget/)
+- [Blog Posts Grid](https://demo.primekitaddons.com/widgets/blog-posts-grid-view-elementor-widget/)
+- [Blog Posts List](https://demo.primekitaddons.com/widgets/blog-posts-list-elementor-widget/)
+- [Breadcrumb](https://demo.primekitaddons.com/widgets/breadcrumb-elementor-widget/)
+- [Business Hours](https://demo.primekitaddons.com/widgets/business-hours-elementor-widget/)
+- [Call To Action – CTA](https://demo.primekitaddons.com/widgets/advanced-call-to-action-elementor-widget/)
+- [Card Info Box](https://demo.primekitaddons.com/widgets/card-info-elementor-widget/)
+- [Comment Form](https://demo.primekitaddons.com/widgets/comment-form-elementor-widget/)
+- [Contact & Social Info](https://demo.primekitaddons.com/widgets/contact-and-social-info-elementor-widget/)
+- [Contact Form 7 Style](https://demo.primekitaddons.com/widgets/contact-form-7-style-elementor-widget/)
+- [Cost Estimation (New)](https://demo.primekitaddons.com/widgets/cost-estimation-widget/)
+- [Counter Up](https://demo.primekitaddons.com/widgets/counter-up-elementor-widget/)
+- [Count Down Timer](https://demo.primekitaddons.com/widgets/count-down-timer-elementor-widget/)
+- [Dual Button](https://demo.primekitaddons.com/widgets/dual-button-elementor-widget/)
+- [Fancy Blog Posts](https://demo.primekitaddons.com/widgets/fancy-blog-posts-elementor-widget/)
+- [Featured Image](https://demo.primekitaddons.com/widgets/featured-image-elementor-widget/)
+- [Fetch Posts (New)](https://demo.primekitaddons.com/widgets/fetch-posts/)
+- [Flip Box](https://demo.primekitaddons.com/widgets/flip-box-elementor-widget/)
+- [Gravity Form (New)](https://demo.primekitaddons.com/widgets/gravity-form-widget/)
+- [Image Hover]https://demo.primekitaddons.com/widgets/image-hover-elementor-widget/()
+- [Image and Text Scroll](https://demo.primekitaddons.com/widgets/image-and-text-scroll-elementor-widget/)
+- [Image Gallery (New)](https://demo.primekitaddons.com/widgets/gallery-widget/)
+- [Loading Screen (New)](https://demo.primekitaddons.com/widgets/loading-screen-elementor-widget/)
+- [Mailchimp (New)](https://demo.primekitaddons.com/widgets/mailchimp-widget/)
+- [Modern Post Grid (New, with 8 layouts)](https://demo.primekitaddons.com/widgets/modern-post-grid/)
+- [Page Title](https://demo.primekitaddons.com/widgets/page-title-elementor-widget/)
 - Popup
-- Portfolio
-- Post Author Bio
-- Post Category List
-- Post Content
-- Post Meta Info
-- Post Tag Info
-- Post Title
-- Post Slider (New)
+- [Portfolio](https://demo.primekitaddons.com/widgets/portfolio-elementor-widget/)
+- [Post Author Bio](https://demo.primekitaddons.com/widgets/post-author-bio-elementor-widget/)
+- [Post Category List](https://demo.primekitaddons.com/widgets/post-category-list-elementor-widget/)
+- [Post Content](https://demo.primekitaddons.com/widgets/post-content-elementor-widget/)
+- [Post Meta Info](https://demo.primekitaddons.com/widgets/post-meta-elementor-widget/)
+- [Post Tag Info](https://demo.primekitaddons.com/widgets/post-tag-info-elementor-widget/)
+- [Post Title](https://demo.primekitaddons.com/widgets/post-title-elementor-widget/)
+- [Post Slider (New)](https://demo.primekitaddons.com/widgets/posts-slider-widget/)
 - Page Content (New)
-- Popular Posts (New)
+- [Popular Posts (New)](https://demo.primekitaddons.com/widgets/popular-posts/)
 - Lottie (New)
-- Recent Posts List
-- Related Posts
-- Search Form
-- Search Icon
-- Section Title
-- Single Image Scroll
-- Site Logo
-- Site Title & Tagline
-- Skill Bar
-- Social Share
-- Sticker Text
+- [Recent Posts List](https://demo.primekitaddons.com/widgets/recent-posts-list-elementor-widget/)
+- [Related Posts](https://demo.primekitaddons.com/widgets/related-posts-elementor-widget/)
+- [Search Form](https://demo.primekitaddons.com/widgets/search-form-elementor-widget/)
+- [Search Icon](https://demo.primekitaddons.com/widgets/search-icon-elementor-widget/)
+- [Section Title](https://demo.primekitaddons.com/widgets/section-title-elementor-widget/)
+- [Single Image Scroll](https://demo.primekitaddons.com/widgets/single-image-scroll-elementor-widget/)
+- [Site Logo](https://demo.primekitaddons.com/widgets/site-logo-elementor-widget/)
+- [Site Title & Tagline](https://demo.primekitaddons.com/widgets/site-title-and-tagline-elementor-widget/)
+- [Skill Bar](https://demo.primekitaddons.com/widgets/skill-bar-elementor-widget/)
+- [Social Share](https://demo.primekitaddons.com/widgets/social-share-elementor-widget/)
+- [Sticker Text](https://demo.primekitaddons.com/widgets/sticker-text-elementor-widget/)
 - Sticky Call Button
-- Team Member
-- Template Slider (New)
-- WordPress Menu
+- [Team Member](https://demo.primekitaddons.com/widgets/team-member-elementor-widget/)
+- [Template Slider](https://demo.primekitaddons.com/widgets/template-slider-widget/)
+- [WordPress Menu](https://demo.primekitaddons.com/widgets/wordpress-menu-elementor-widget/)
 - Testimonial Carousel
 
 
@@ -102,9 +102,9 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Product Title
 - Related Product
 - Cart Icon
-- Checkout Page
+- [Checkout Page](https://demo.primekitaddons.com/widgets/woocommerce-custom-checkout-page-elementor-widget/)
 - Cart Page
-- My Account
+- [My Account](https://demo.primekitaddons.com/widgets/woocommerce-my-account-elementor-widget/)
 - Product BreadCrumb
 
 ==Global Widgets==

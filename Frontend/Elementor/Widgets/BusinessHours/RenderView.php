@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for PrimeKit Business Hours widget
+ * Render View file for Primekit Pro Hours widget
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
