@@ -519,7 +519,7 @@ class RegularTab
             esc_html__('Lottie', 'primekit-addons'),
             PRIMEKIT_ADMIN_ASSETS . '/img/icons/lottie.svg',
             true,
-            self::demo_url('widgets/lottie-widget/')
+            self::demo_url('widgets/lottie-animation/')
         );
 
         // MailChimp.
