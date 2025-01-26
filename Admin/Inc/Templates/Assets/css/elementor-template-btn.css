@@ -1,0 +1,21 @@
+.my-custom-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.my-custom-button:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.my-custom-button i {
+    font-size: 18px;
+}

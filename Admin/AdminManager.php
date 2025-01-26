@@ -24,6 +24,7 @@ use PrimeKit\Admin\Inc\Hooks\FilterHooks;
 use PrimeKit\Admin\Inc\Hooks\ActionHooks;
 use PrimeKit\Admin\Inc\ThemeBuilder\ThemeBuilder;
 use PrimeKit\Admin\Inc\Metabox\MetaBox;
+use PrimeKit\Admin\Inc\Templates\Templates;
 
 /**
  * Class AdminManager
@@ -44,6 +45,8 @@ class AdminManager
     protected $ActionHooks;
     protected $ThemeBuilder;
     protected $MetaBox;
+    protected $Templates;
+
     /**
      * AdminManager constructor.
      *
@@ -94,6 +97,7 @@ class AdminManager
         $this->ActionHooks = new ActionHooks();
         $this->ThemeBuilder = new ThemeBuilder();
         $this->MetaBox = new MetaBox();
+        $this->Templates = new Templates();
     }
 
 
