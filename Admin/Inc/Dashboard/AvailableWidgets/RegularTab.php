@@ -220,7 +220,7 @@ class RegularTab
         PrimeKitWidgets::primekit_available_widget(
             'primekit_icon_box_widget_field',
             esc_html__('Icon Box', 'primekit-addons'),
-            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advanced-icon-box.svg',
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/icon-box.svg',
             true,
             self::demo_url('widgets/advanced-icon-box-elementor-widget/')
         );
