@@ -22,9 +22,10 @@ if (!defined('ABSPATH')) {
  * @package PrimeKit\Admin\Inc\Templates\Assets
  * @since 1.0.5
  */
-class Assets {
+class Assets
+{
 
- 
+
     /**
      * Constructor for the Assets class.
      *
@@ -34,7 +35,8 @@ class Assets {
      * @since 1.0.5
      */
 
-    public function __construct() {
+    public function __construct()
+    {
         add_action('elementor/editor/after_enqueue_scripts', array($this, 'template_editor_scripts'));
         add_action('elementor/editor/after_enqueue_scripts', array($this, 'template_editor_styles'));
     }
@@ -49,10 +51,15 @@ class Assets {
      * @since 1.0.5
      */
 
-    public function template_editor_scripts() {       
+    public function template_editor_scripts()
+    {
+
+        // Enqueue external micromodal JS
+        wp_enqueue_script('micromodal-js', PRIMEKIT_TB_ASSETS . 'js/micromodal.min.js', ['jquery'], PRIMEKIT_VERSION, true );
 
         wp_enqueue_script('primekit-elementor-template', PRIMEKIT_TEMPLATE_ASSETS . '/js/elementor-template-btn.js', ['jquery', 'elementor-editor'], PRIMEKIT_VERSION, true);
- 
+
+
     }
 
     /**
@@ -63,7 +70,11 @@ class Assets {
      *
      * @since 1.0.5
      */
-    public function template_editor_styles() {
+    public function template_editor_styles()
+    {
+        // Enqueue CSS for modal
+        wp_enqueue_style( 'primekit-theme-builder-modal', PRIMEKIT_TB_ASSETS . 'css/modal.css', [], PRIMEKIT_VERSION);
+        
         wp_enqueue_style('primekit-elementor-template', PRIMEKIT_TEMPLATE_ASSETS . '/css/elementor-template-btn.css', [], PRIMEKIT_VERSION);
     }
 }

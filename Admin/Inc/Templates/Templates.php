@@ -15,6 +15,7 @@ if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
 use PrimeKit\Admin\Inc\Templates\Assets\Assets;
+use PrimeKit\Admin\Inc\Templates\Markup\Modal;
 /**
  * Class Template
  *
@@ -29,6 +30,7 @@ class Templates
 {
 
     protected $assets;
+    protected $modal;
 
     /**
      * Initializes the PrimeKit Template class.
@@ -54,6 +56,7 @@ class Templates
     public function init_classes()
     {
         $this->assets = new Assets();
+        $this->markup = new Modal();
     }
 
     /**
