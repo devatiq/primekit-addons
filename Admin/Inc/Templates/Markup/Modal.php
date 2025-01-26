@@ -1,7 +1,19 @@
 <?php
-
+/**
+ * PrimeKit Admin Template Markup
+ *
+ * Markup for the modal that displays the template builder.
+ *
+ * @package PrimeKit_Addons
+ * @subpackage Admin/Inc/Templates/Markup
+ */
 namespace PrimeKit\Admin\Inc\Templates\Markup;
 
+/**
+ * Class Modal
+ *
+ * This class is responsible for rendering the template modal markup to the page.
+ */
 class Modal {
     public function __construct() {        
         add_action('elementor/editor/after_enqueue_scripts', [$this, 'enqueue_modal']);
