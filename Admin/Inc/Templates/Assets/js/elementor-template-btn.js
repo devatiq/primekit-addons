@@ -7,7 +7,7 @@
 
             // Define the button HTML with the SVG icon
             const customButtonHTML = `
-                <div class="elementor-add-section-area-button primekit-custom-button">
+                <div class="elementor-add-section-area-button primekit-add-button">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <style type="text/css">
@@ -35,13 +35,13 @@
             `;
 
             // Check if the button is already added
-            if (!$previewContents.find('.primekit-custom-button').length) {
+            if (!$previewContents.find('.primekit-add-button').length) {
                 // Add the button before the drag title
                 $previewContents.find(FIND_SELECTOR).before(customButtonHTML);
             }
 
             // Add a click event listener to the button
-            $previewContents.on('click', '.primekit-custom-button', function () {
+            $previewContents.on('click', '.primekit-add-button', function () {
                 alert('PrimeKit Custom Button Clicked!');
                 // Add your custom functionality here
             });
