@@ -103,13 +103,13 @@
             // Add click handler for inserting templates
             $(document).on('click', '.primekit-insert-template', function () {
                 const templateId = $(this).data('template-id');
-
-                // Simulate inserting the template into Elementor
+            
+                // Log the ID for debugging
                 console.log(`Inserting template with ID: ${templateId}`);
-
-                // Example: Insert content into Elementor
+            
+                // Fetch the template content
                 $.ajax({
-                    url: ajaxurl,
+                    url: primekitAjax.ajax_url,
                     method: 'POST',
                     data: {
                         action: 'primekit_get_template_content',
@@ -118,14 +118,26 @@
                     success: function (response) {
                         if (response.success) {
                             const content = response.data.content;
-                            $e.run('document/elements/import', { data: content });
+            
+                            // Ensure content is structured correctly
+                            if (content && typeof content === 'object') {
+                                $e.run('document/elements/import', { elements: [content] });
+                            } else {
+                                console.error('Invalid content format:', content);
+                            }
+                        } else {
+                            console.error('Failed to load template content:', response.data.message);
                         }
                     },
+                    error: function (error) {
+                        console.error('Error fetching template content:', error);
+                    },
                 });
-
+            
                 // Close the modal
                 MicroModal.close('primekit-template-modal');
             });
+            
 
             // Initialize Micromodal
             MicroModal.init();
