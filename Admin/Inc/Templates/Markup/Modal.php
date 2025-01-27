@@ -44,9 +44,8 @@ class Modal {
                         </header><!--/ Header-->
 
                         <!--Body-->
-                        <main class="modal__content" id="primekit-tb-modal-content">
-                            <div class="primekit-tb-modal-content-area">
-                                <h2>test</h2>                          
+                        <main class="modal__content" id="primekit-template-modal-content-area">
+                            <div class="primekit-template-modal-content-area">                                                    
                        
                             </div>
                         </main><!--/ Body-->

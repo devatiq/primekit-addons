@@ -58,7 +58,11 @@ class Assets
         wp_enqueue_script('micromodal-js', PRIMEKIT_TB_ASSETS . 'js/micromodal.min.js', ['jquery'], PRIMEKIT_VERSION, true );
 
         wp_enqueue_script('primekit-elementor-template', PRIMEKIT_TEMPLATE_ASSETS . '/js/elementor-template-btn.js', ['jquery', 'elementor-editor'], PRIMEKIT_VERSION, true);
-
+        
+        wp_localize_script('primekit-elementor-template', 'primekitAjax', [
+            'ajax_url' => admin_url('admin-ajax.php'),
+        ]);
+        
 
     }
 
@@ -74,6 +78,7 @@ class Assets
     {
         // Enqueue CSS for modal
         wp_enqueue_style( 'primekit-theme-builder-modal', PRIMEKIT_TB_ASSETS . 'css/modal.css', [], PRIMEKIT_VERSION);
+
         
         wp_enqueue_style('primekit-elementor-template', PRIMEKIT_TEMPLATE_ASSETS . '/css/elementor-template-btn.css', [], PRIMEKIT_VERSION);
     }

@@ -43,6 +43,9 @@ class Templates
     {
         $this->setConstants(); // Set the constants.
         $this->init_classes(); // Initialize the classes.
+        add_action('wp_ajax_primekit_get_templates', [$this, 'primekit_get_templates']);
+        add_action('wp_ajax_primekit_get_template_content', [$this, 'primekit_get_template_content_handler']);
+        add_action('wp_ajax_nopriv_primekit_get_template_content', [$this, 'primekit_get_template_content_handler']);
     }
 
 
@@ -71,4 +74,51 @@ class Templates
         define('PRIMEKIT_TEMPLATE_ASSETS', plugin_dir_url(__FILE__) . 'Assets');
         define('PRIMEKIT_TEMPLATE_PATH', plugin_dir_path(__FILE__));
     }
+
+
+    public function primekit_get_templates()
+    {
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error('Unauthorized');
+        }
+
+        $templates = [
+            [
+                'id' => 1,
+                'title' => 'Template 1',
+                'thumbnail' => PRIMEKIT_TEMPLATE_ASSETS . '/img/template1.jpg',
+            ],
+            [
+                'id' => 2,
+                'title' => 'Template 2',
+                'thumbnail' => PRIMEKIT_TEMPLATE_ASSETS . '/img/template2.jpg',
+            ],
+        ];
+
+        wp_send_json_success($templates);
+    }
+
+
+
+    public function primekit_get_template_content_handler()
+    {
+        // Validate the request
+        if (!isset($_POST['template_id'])) {
+            wp_send_json_error(['message' => 'Template ID is missing.']);
+            wp_die();
+        }
+
+        $template_id = sanitize_text_field($_POST['template_id']);
+
+        // Mock template content - Replace this with your actual logic to retrieve content
+        $content = [
+            'id' => $template_id,
+            'content' => '<div class="primekit-template-section">This is a mock section for Template ID: ' . esc_html($template_id) . '</div>',
+        ];
+
+        wp_send_json_success(['content' => $content['content']]);
+        wp_die();
+    }
+
+
 }

@@ -2,6 +2,10 @@
 
 (function ($, elementor) {
     const primekitNamespace = {
+        /**
+         * Adds the custom button to the Elementor editor interface.
+         * @param {object} $previewContents - The Elementor editor preview contents.
+         */
         addCustomButton: function ($previewContents) {
             const FIND_SELECTOR = '.elementor-add-new-section .elementor-add-section-drag-title';
 
@@ -36,17 +40,52 @@
 
             // Check if the button is already added
             if (!$previewContents.find('.primekit-custom-button').length) {
-                // Add the button before the drag title
                 $previewContents.find(FIND_SELECTOR).before(customButtonHTML);
             }
 
             // Add a click event listener to the button
             $previewContents.on('click', '.primekit-custom-button', function () {
-                // Show the modal
                 MicroModal.show('primekit-template-modal');
+                primekitNamespace.loadTemplates();
             });
         },
 
+        /**
+         * Fetches and loads templates into the modal dynamically.
+         */
+        loadTemplates: function () {
+            $.ajax({
+                url: primekitAjax.ajax_url,
+                method: 'POST',
+                data: {
+                    action: 'primekit_get_templates',
+                },
+                success: function (response) {
+                    if (response.success) {
+                        const templates = response.data;
+                        let templateHTML = '';
+
+                        templates.forEach(template => {
+                            templateHTML += `
+                                <div class="single-primekit-template">
+                                    <img src="${template.thumbnail}" alt="${template.title}">
+                                    <h3>${template.title}</h3>
+                                    <button data-template-id="${template.id}" class="primekit-insert-template">
+                                        Insert
+                                    </button>
+                                </div>
+                            `;
+                        });
+
+                        $('.primekit-template-modal-content-area').html(templateHTML);
+                    }
+                },
+            });
+        },
+
+        /**
+         * Initializes the plugin.
+         */
         init: function () {
             // Hook into Elementor's preview:loaded event
             elementor.on('preview:loaded', function () {
@@ -60,14 +99,39 @@
                     }
                 }, 100);
             });
+
+            // Add click handler for inserting templates
+            $(document).on('click', '.primekit-insert-template', function () {
+                const templateId = $(this).data('template-id');
+
+                // Simulate inserting the template into Elementor
+                console.log(`Inserting template with ID: ${templateId}`);
+
+                // Example: Insert content into Elementor
+                $.ajax({
+                    url: ajaxurl,
+                    method: 'POST',
+                    data: {
+                        action: 'primekit_get_template_content',
+                        template_id: templateId,
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            const content = response.data.content;
+                            $e.run('document/elements/import', { data: content });
+                        }
+                    },
+                });
+
+                // Close the modal
+                MicroModal.close('primekit-template-modal');
+            });
+
+            // Initialize Micromodal
+            MicroModal.init();
         }
     };
 
-    // Initialize the plugin
+    // Initialize the namespace
     primekitNamespace.init();
-
-    // Initialize Micromodal
-    $(document).ready(function () {
-        MicroModal.init();
-    });
 })(jQuery, window.elementor);
