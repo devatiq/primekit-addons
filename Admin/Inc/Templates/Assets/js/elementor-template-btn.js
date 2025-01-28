@@ -1,16 +1,17 @@
 "use strict";
 
 (function ($, elementor) {
-    const primekitNamespace = {
-        /**
-         * Adds the custom button to the Elementor editor interface.
-         * @param {object} $previewContents - The Elementor editor preview contents.
-         */
-        addCustomButton: function ($previewContents) {
-            const FIND_SELECTOR = '.elementor-add-new-section .elementor-add-section-drag-title';
+  const primekitNamespace = {
+    /**
+     * Adds the custom button to the Elementor editor interface.
+     * @param {object} $previewContents - The Elementor editor preview contents.
+     */
+    addCustomButton: function ($previewContents) {
+      const FIND_SELECTOR =
+        ".elementor-add-new-section .elementor-add-section-drag-title";
 
-            // Define the button HTML with the SVG icon
-            const customButtonHTML = `
+      // Define the button HTML with the SVG icon
+      const customButtonHTML = `
                 <div class="elementor-add-section-area-button primekit-custom-button">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -38,35 +39,35 @@
                 </div>
             `;
 
-            // Check if the button is already added
-            if (!$previewContents.find('.primekit-custom-button').length) {
-                $previewContents.find(FIND_SELECTOR).before(customButtonHTML);
-            }
+      // Check if the button is already added
+      if (!$previewContents.find(".primekit-custom-button").length) {
+        $previewContents.find(FIND_SELECTOR).before(customButtonHTML);
+      }
 
-            // Add a click event listener to the button
-            $previewContents.on('click', '.primekit-custom-button', function () {
-                MicroModal.show('primekit-template-modal');
-                primekitNamespace.loadTemplates();
-            });
+      // Add a click event listener to the button
+      $previewContents.on("click", ".primekit-custom-button", function () {
+        MicroModal.show("primekit-template-modal");
+        primekitNamespace.loadTemplates();
+      });
+    },
+
+    /**
+     * Fetches and loads templates into the modal dynamically.
+     */
+    loadTemplates: function () {
+      $.ajax({
+        url: primekitAjax.ajax_url,
+        method: "POST",
+        data: {
+          action: "primekit_get_templates",
         },
+        success: function (response) {
+          if (response.success) {
+            const templates = response.data;
+            let templateHTML = "";
 
-        /**
-         * Fetches and loads templates into the modal dynamically.
-         */
-        loadTemplates: function () {
-            $.ajax({
-                url: primekitAjax.ajax_url,
-                method: 'POST',
-                data: {
-                    action: 'primekit_get_templates',
-                },
-                success: function (response) {
-                    if (response.success) {
-                        const templates = response.data;
-                        let templateHTML = '';
-
-                        templates.forEach(template => {
-                            templateHTML += `
+            templates.forEach((template) => {
+              templateHTML += `
                                 <div class="single-primekit-template">
                                     <img src="${template.thumbnail}" alt="${template.title}">
                                     <h3>${template.title}</h3>
@@ -75,75 +76,86 @@
                                     </button>
                                 </div>
                             `;
-                        });
-
-                        $('.primekit-template-modal-content-area').html(templateHTML);
-                    }
-                },
             });
+
+            $(".primekit-template-modal-content-area").html(templateHTML);
+          }
         },
+        error: function () {
+          console.error("Failed to load templates");
+        },
+      });
+    },
 
-        /**
-         * Initializes the plugin.
-         */
-        init: function () {
-            // Hook into Elementor's preview:loaded event
-            elementor.on('preview:loaded', function () {
-                const $previewContents = window.elementor.$previewContents;
+    /**
+     * Handles template insertion logic.
+     */
+    handleTemplateInsert: function () {
+      $(document).on("click", ".primekit-insert-template", function () {
+        const templateId = $(this).data("template-id");
 
-                // Wait for the editor to fully load
-                const interval = setInterval(() => {
-                    if ($previewContents.find('.elementor-add-new-section').length) {
-                        clearInterval(interval);
-                        primekitNamespace.addCustomButton($previewContents);
-                    }
-                }, 100);
-            });
+        console.log(`Inserting template with ID: ${templateId}`);
 
-            // Add click handler for inserting templates
-            $(document).on('click', '.primekit-insert-template', function () {
-                const templateId = $(this).data('template-id');
-            
-                // Log the ID for debugging
-                console.log(`Inserting template with ID: ${templateId}`);
-            
-                // Fetch the template content
-                $.ajax({
-                    url: primekitAjax.ajax_url,
-                    method: 'POST',
-                    data: {
-                        action: 'primekit_get_template_content',
-                        template_id: templateId,
-                    },
-                    success: function (response) {
-                        if (response.success) {
-                            const content = response.data.content;
-            
-                            // Ensure content is structured correctly
-                            if (content && typeof content === 'object') {
-                                $e.run('document/elements/import', { elements: [content] });
-                            } else {
-                                console.error('Invalid content format:', content);
-                            }
-                        } else {
-                            console.error('Failed to load template content:', response.data.message);
-                        }
-                    },
-                    error: function (error) {
-                        console.error('Error fetching template content:', error);
-                    },
-                });
-            
-                // Close the modal
-                MicroModal.close('primekit-template-modal');
-            });
-            
+        // Fetch the template content
+        $.ajax({
+          url: primekitAjax.ajax_url,
+          method: "POST",
+          data: {
+            action: "primekit_get_template_content",
+            template_id: templateId,
+          },
+          success: function (response) {
+            if (response.success) {
+              const content = response.data.content;
+              console.log("Fetched template content:", content);
 
-            // Initialize Micromodal
-            MicroModal.init();
-        }
-    };
+              // Ensure content is structured correctly
+              if (content && typeof content === "object") {
+                $e.run("document/elements/import", { elements: [content] });
+              } else {
+                console.error("Invalid content format:", content);
+              }
+            } else {
+              console.error(
+                "Failed to load template content:",
+                response.data.message
+              );
+            }
+          },
+          error: function (error) {
+            console.error("Error fetching template content:", error);
+          },
+        });
 
-    // Initialize the namespace
-    primekitNamespace.init();
+        MicroModal.close("primekit-template-modal");
+      });
+    },
+
+    /**
+     * Initializes the plugin.
+     */
+    init: function () {
+      // Hook into Elementor's preview:loaded event
+      elementor.on("preview:loaded", function () {
+        const $previewContents = window.elementor.$previewContents;
+
+        // Wait for the editor to fully load
+        const interval = setInterval(() => {
+          if ($previewContents.find(".elementor-add-new-section").length) {
+            clearInterval(interval);
+            primekitNamespace.addCustomButton($previewContents);
+          }
+        }, 100);
+      });
+
+      // Handle template insertion
+      primekitNamespace.handleTemplateInsert();
+
+      // Initialize Micromodal
+      MicroModal.init();
+    },
+  };
+
+  // Initialize the namespace
+  primekitNamespace.init();
 })(jQuery, window.elementor);

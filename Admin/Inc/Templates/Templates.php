@@ -113,11 +113,13 @@ class Templates
         // Mock template content - Replace this with your actual logic to retrieve content
         $content = [
             'id' => $template_id,
-            'content' => '<div class="primekit-template-section">This is a mock section for Template ID: ' . esc_html($template_id) . '</div>',
+            'content' => file_get_contents(PRIMEKIT_TEMPLATE_PATH . 'temp.json'),
         ];
 
         wp_send_json_success(['content' => $content['content']]);
         wp_die();
+
+        
     }
 
 
