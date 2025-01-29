@@ -100,39 +100,31 @@ class Templates
 
 
 
-    public function primekit_get_template_content_handler()
-    {
-        // Validate the request
+    public function primekit_get_template_content_handler() {
+        // Validate Request
         if (!isset($_POST['template_id'])) {
             wp_send_json_error(['message' => 'Template ID is missing.']);
             wp_die();
         }
     
         $template_id = sanitize_text_field($_POST['template_id']);
+        $file_path = PRIMEKIT_TEMPLATE_PATH . "/template-{$template_id}.json";
     
-        // Define the path to the JSON template
-        $json_file = PRIMEKIT_TEMPLATE_PATH . 'temp.json';
-    
-        // Check if the file exists
-        if (!file_exists($json_file)) {
-            wp_send_json_error(['message' => 'Template file not found.']);
+        if (!file_exists($file_path)) {
+            wp_send_json_error(['message' => 'Template not found.']);
             wp_die();
         }
     
-        // Read and decode the JSON file
-        $content = file_get_contents($json_file);
-        $decoded_content = json_decode($content, true);
-    
-        // Ensure the JSON structure is correct
-        if (json_last_error() !== JSON_ERROR_NONE || !is_array($decoded_content)) {
-            wp_send_json_error(['message' => 'Invalid JSON structure.']);
+        $content = json_decode(file_get_contents($file_path), true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            wp_send_json_error(['message' => 'Invalid JSON format.']);
             wp_die();
         }
     
-        // Send the decoded JSON array as a response
-        wp_send_json_success(['content' => $decoded_content]);
+        wp_send_json_success(['content' => $content]);
         wp_die();
     }
+    
     
     
 
