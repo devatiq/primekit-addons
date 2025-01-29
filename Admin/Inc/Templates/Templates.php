@@ -108,7 +108,7 @@ class Templates
         }
     
         $template_id = sanitize_text_field($_POST['template_id']);
-        $file_path = PRIMEKIT_TEMPLATE_PATH . "/template-{$template_id}.json";
+        $file_path = PRIMEKIT_TEMPLATE_PATH . "temp.json";
     
         if (!file_exists($file_path)) {
             wp_send_json_error(['message' => 'Template not found.']);
