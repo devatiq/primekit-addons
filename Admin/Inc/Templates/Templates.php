@@ -107,20 +107,34 @@ class Templates
             wp_send_json_error(['message' => 'Template ID is missing.']);
             wp_die();
         }
-
+    
         $template_id = sanitize_text_field($_POST['template_id']);
-
-        // Mock template content - Replace this with your actual logic to retrieve content
-        $content = [
-            'id' => $template_id,
-            'content' => file_get_contents(PRIMEKIT_TEMPLATE_PATH . 'temp.json'),
-        ];
-
-        wp_send_json_success(['content' => $content['content']]);
+    
+        // Define the path to the JSON template
+        $json_file = PRIMEKIT_TEMPLATE_PATH . 'temp.json';
+    
+        // Check if the file exists
+        if (!file_exists($json_file)) {
+            wp_send_json_error(['message' => 'Template file not found.']);
+            wp_die();
+        }
+    
+        // Read and decode the JSON file
+        $content = file_get_contents($json_file);
+        $decoded_content = json_decode($content, true);
+    
+        // Ensure the JSON structure is correct
+        if (json_last_error() !== JSON_ERROR_NONE || !is_array($decoded_content)) {
+            wp_send_json_error(['message' => 'Invalid JSON structure.']);
+            wp_die();
+        }
+    
+        // Send the decoded JSON array as a response
+        wp_send_json_success(['content' => $decoded_content]);
         wp_die();
-
-        
     }
+    
+    
 
 
 }
