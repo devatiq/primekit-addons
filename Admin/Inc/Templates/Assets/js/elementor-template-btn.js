@@ -91,43 +91,47 @@
      * Handles template insertion logic.
      */
     handleTemplateInsert: function () {
-        $(document).on('click', '.primekit-insert-template', function () {
-            const templateId = $(this).data('template-id');
-        
-            console.log(`Inserting template with ID: ${templateId}`);
-        
-            // Fetch the template content
-            $.ajax({
-                url: primekitAjax.ajax_url,
-                method: 'POST',
-                data: {
-                    action: 'primekit_get_template_content',
-                    template_id: templateId,
-                },
-                success: function (response) {
-                    if (response.success) {
-                        const content = response.data.content;
-        
-                        console.log('Fetched template content:', content);
-        
-                        // Ensure content is structured correctly for Elementor
-                        if (content && typeof content === 'object') {
-                            $e.run('document/elements/import', { elements: content.content });
-                        } else {
-                            console.error('Invalid content format:', content);
-                        }
-                    } else {
-                        console.error('Failed to load template content:', response.data.message);
-                    }
-                },
-                error: function (error) {
-                    console.error('Error fetching template content:', error);
-                },
-            });
-        
-            MicroModal.close('primekit-template-modal');
+      $(document).on("click", ".primekit-insert-template", function () {
+        const templateId = $(this).data("template-id");
+
+        console.log(`Inserting template with ID: ${templateId}`);
+
+        // Fetch the template content
+        $.ajax({
+          url: primekitAjax.ajax_url,
+          method: "POST",
+          data: {
+            action: "primekit_get_template_content",
+            template_id: templateId,
+          },
+          success: function (response) {
+            if (response.success) {
+              const content = response.data.content;
+
+              console.log("Fetched template content:", content);
+
+              // Ensure content is structured correctly for Elementor
+              if (content && typeof content === "object") {
+                $e.run("document/elements/import", {
+                  elements: content.content,
+                });
+              } else {
+                console.error("Invalid content format:", content);
+              }
+            } else {
+              console.error(
+                "Failed to load template content:",
+                response.data.message
+              );
+            }
+          },
+          error: function (error) {
+            console.error("Error fetching template content:", error);
+          },
         });
-        
+
+        MicroModal.close("primekit-template-modal");
+      });
     },
 
     /**

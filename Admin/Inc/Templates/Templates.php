@@ -115,7 +115,7 @@ class Templates
             wp_die();
         }
     
-        $content = json_decode(file_get_contents($file_path), true);
+        $content = file_get_contents($file_path);
         if (json_last_error() !== JSON_ERROR_NONE) {
             wp_send_json_error(['message' => 'Invalid JSON format.']);
             wp_die();
