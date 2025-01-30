@@ -19,8 +19,32 @@ class Modal {
         add_action('elementor/editor/after_enqueue_scripts', [$this, 'enqueue_modal']);
     }
 
+
     public function enqueue_modal() {       
-        add_action('wp_footer', [$this, 'render']);
+        //add_action('wp_footer', [$this, 'render']);
+        add_action('wp_footer', [$this, 'testmarkup']);
+    }
+    public function testmarkup() {
+        ?>
+        <div id="primekit-template-modal" class="modal micromodal-slide" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+                <h2 id="modal-1-title">PrimeKit Templates</h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <p>Loading templates...</p>
+            </main>
+            <footer class="modal__footer">
+                <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+
+<?php
     }
 
     public function render() {

@@ -16,6 +16,9 @@ if (!defined('ABSPATH'))
 
 use PrimeKit\Admin\Inc\Templates\Assets\Assets;
 use PrimeKit\Admin\Inc\Templates\Markup\Modal;
+use PrimeKit\Admin\Inc\Templates\Library_Source;
+use PrimeKit\Admin\Inc\Templates\Library_Manager;
+
 /**
  * Class Template
  *
@@ -31,6 +34,8 @@ class Templates
 
     protected $assets;
     protected $modal;
+    protected $Library_Source;
+    protected $Library_Manager;
 
     /**
      * Initializes the PrimeKit Template class.
@@ -60,7 +65,11 @@ class Templates
     {
         $this->assets = new Assets();
         $this->markup = new Modal();
+        $this->Library_Source = new Library_Source();
+        $this->Library_Manager = new Library_Manager();
+        
     }
+    
 
     /**
      * Sets the constants for the PrimeKit Template.

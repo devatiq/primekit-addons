@@ -57,9 +57,11 @@ class Assets
         // Enqueue external micromodal JS
         wp_enqueue_script('micromodal-js', PRIMEKIT_TB_ASSETS . 'js/micromodal.min.js', ['jquery'], PRIMEKIT_VERSION, true );
 
-        wp_enqueue_script('primekit-elementor-template', PRIMEKIT_TEMPLATE_ASSETS . '/js/elementor-template-btn.js', ['jquery', 'elementor-editor'], PRIMEKIT_VERSION, true);
+      //  wp_enqueue_script('primekit-elementor-template', PRIMEKIT_TEMPLATE_ASSETS . '/js/elementor-template-btn.js', ['jquery', 'elementor-editor'], PRIMEKIT_VERSION, true);
+        wp_enqueue_script('primekit-namespace', PRIMEKIT_TEMPLATE_ASSETS . '/js/namespace.js', ['jquery'], PRIMEKIT_VERSION, true);
+        wp_enqueue_script('primekit-templates', PRIMEKIT_TEMPLATE_ASSETS . '/js/templates.js', ['jquery', 'elementor-editor'], PRIMEKIT_VERSION, true);
         
-        wp_localize_script('primekit-elementor-template', 'primekitAjax', [
+        wp_localize_script('primekit-templates', 'primekitAjax', [
             'ajax_url' => admin_url('admin-ajax.php'),
         ]);
         
