@@ -31,9 +31,9 @@
             console.log("Adding library button");
             const targetSelector = ".elementor-add-new-section .elementor-add-section-drag-title";
             const buttonHTML = `
-                <div class="primekit-library-open-button">
+                <div class="primekit-library-open-button" id="insertStaticTemplateButton">
                     <i class="eicon-folder"></i>
-                    <span>PrimeKit Library</span>
+                    <span>PrimeKit Library</span>                   
                 </div>
             `;
 

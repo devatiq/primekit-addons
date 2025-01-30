@@ -134,4 +134,6 @@
       return transformedElement;
     },
   };
+
+
 })(window.jQuery, window.elementor);
