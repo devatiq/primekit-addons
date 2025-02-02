@@ -387,6 +387,18 @@ class Main extends Widget_Base
 				],
 			]
 		);
+		// Color control for title
+		$this->add_control(
+			'title_hover_color',
+			[
+				'label' => esc_html__('Title Hover Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .primekit-modren-single-post-title h3:hover a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .primekit-modren-style2-post-title a:hover' => 'color: {{VALUE}};',
+				],
+			]
+		);
 		// Control for icon size
 		$this->add_control(
 			'meta_icon_size',
