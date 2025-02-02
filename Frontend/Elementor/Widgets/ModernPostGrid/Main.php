@@ -20,27 +20,27 @@ class Main extends Widget_Base
 	{
 		return 'primekit-modern-post-grid';
 	}
-	
+
 	public function get_title()
 	{
 		return esc_html__('Modern Post Grid', 'primekit-addons');
 	}
-	
+
 	public function get_icon()
 	{
 		return 'eicon-posts-grid primekit-addons-icon';
 	}
-	
+
 	public function get_categories()
 	{
 		return ['primekit-category'];
 	}
-	
+
 	public function get_keywords()
 	{
 		return ['prime', 'post', 'grid', 'modern', 'post grid', 'modern post grid', 'blog'];
 	}
-	
+
 	public function get_script_depends()
 	{
 		return ['primekit-modern-posts'];
@@ -244,7 +244,7 @@ class Main extends Widget_Base
 				'label' => esc_html__('Display Post Meta', 'primekit-addons'),
 				'type' => Controls_Manager::SWITCHER,
 				'label_on' => esc_html__('Yes', 'primekit-addons'),
-				'label_off' => esc_html__('No', 'primekit-addons'),				
+				'label_off' => esc_html__('No', 'primekit-addons'),
 				'return_value' => 'true',
 				'default' => 'true',
 				'description' => esc_html__('Enable this option to display post meta such as date, author, category and comments.', 'primekit-addons'),
@@ -365,7 +365,7 @@ class Main extends Widget_Base
 				],
 			]
 		);
-		
+
 		// Typography control for title
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
@@ -624,7 +624,7 @@ class Main extends Widget_Base
 
 		$this->end_controls_section();//end style section
 
-		
+
 		// Start thumbnail style
 		$this->start_controls_section(
 			'thumbnail_style_section',
@@ -632,7 +632,8 @@ class Main extends Widget_Base
 				'label' => esc_html__('Thumbnail', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
-		);	
+		);
+
 		// Thumbnail border radius
 		$this->add_responsive_control(
 			'thumbnail_border_radius',
@@ -655,10 +656,11 @@ class Main extends Widget_Base
 		$this->end_controls_section(); //end thumbnail style section
 
 	}
-	private function generate_random_color() {
+	private function generate_random_color()
+	{
 		return sprintf('#%06X', wp_rand(0, 0xFFFFFF));
 	}
-	
+
 	/**
 	 * Render the widget output on the frontend.
 	 */
