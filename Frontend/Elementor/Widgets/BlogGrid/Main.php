@@ -108,6 +108,23 @@ class Main extends Widget_Base
             ]
         );
 
+        //thumbnail size
+        $this->add_control(
+            'primekit_elementor_blog_grid_img_size',
+            [
+                'label' => esc_html__('Thumbnail Size', 'primekit-addons'),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'full',
+                'options' => [
+                    'blog' => esc_html__('Blog', 'primekit-addons'),
+                    'full' => esc_html__('Full', 'primekit-addons'),
+                ],
+                'condition' => [
+                    'primekit_elementor_blog_grid_img_switch' => 'yes',
+                ],
+            ]
+        );
+
         //blog date on/off switch
         $this->add_control(
             'primekit_elementor_blog_grid_date_switch',
