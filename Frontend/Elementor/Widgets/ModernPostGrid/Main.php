@@ -372,7 +372,7 @@ class Main extends Widget_Base
 			[
 				'name' => 'title_typography',
 				'label' => esc_html__('Title Typography', 'primekit-addons'),
-				'selector' => '{{WRAPPER}} .primekit-modren-single-post-title h3, {{WRAPPER}} .primekit-modren-style2-post-title h3',
+				'selector' => '{{WRAPPER}} .primekit-modren-single-post-title h3, {{WRAPPER}} .primekit-modren-style2-post-title h3, {{WRAPPER}} .primekit-modren-single-post-title h3 a',
 			]
 		);
 		// Color control for title
