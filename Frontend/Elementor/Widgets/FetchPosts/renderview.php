@@ -43,8 +43,8 @@ if (!empty($posts) && is_array($posts)) {
            $post_date = gmdate('M j, Y', strtotime($post->date));
             $category_names = $this->get_category_names($post->categories, $post->_embedded);
             // Get the featured image URL if available
-            $thumbnail_url = isset($post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->medium->source_url)
-                ? $post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->medium->source_url
+            $thumbnail_url = isset($post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->full->source_url)
+                ? $post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->full->source_url
                 : '';
             ?>
             <!--Single Post-->
