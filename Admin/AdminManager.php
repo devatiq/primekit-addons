@@ -61,7 +61,9 @@ class AdminManager
         $this->init();
         add_action('wp_ajax_primekit_save_widget_setting', [$this, 'primekit_save_widget_setting']);
 
-        add_filter('plugin_action_links_' . PRIMEKIT_BASENAME, [$this, 'add_plugin_settings_link']);
+        if (!class_exists('PrimeKitPro')) {
+            add_filter('plugin_action_links_' . PRIMEKIT_BASENAME, [$this, 'add_plugin_settings_link']);
+        }
         add_filter('plugin_row_meta', [$this, 'plugin_row_meta'], 10, 2);
 
         $this->tracker_primekit_addons();
@@ -161,7 +163,7 @@ class AdminManager
 
         $pro_link = sprintf(
             '<a href="%s" target="_blank" style="font-weight: bold; color: #ff4500;">%s</a>',
-            esc_url('https://primekitaddons.com/'),
+            esc_url('https://primekitaddons.com/pro/'),
             esc_html__('Get Pro', 'primekit-addons')
         );
 
@@ -173,7 +175,6 @@ class AdminManager
 
         return $links;
     }
-
 
 
     public function plugin_row_meta($links, $file)
