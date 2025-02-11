@@ -1,0 +1,26 @@
+{
+    "templates": [
+        {
+            "id": "template-1",
+            "title": "Business Homepage",
+            "type": "page",
+            "thumbnail": "https://via.placeholder.com/600x400.png?text=Business+Homepage",
+            "created_at": "2023-12-01",
+            "tags": ["business", "homepage"],
+            "is_pro": false,
+            "url": "https://demo.primekit.com/template-1"
+        },
+        {
+            "id": "template-2",
+            "title": "Portfolio Layout",
+            "type": "page",
+            "thumbnail": "https://via.placeholder.com/600x400.png?text=Portfolio+Layout",
+            "created_at": "2023-12-02",
+            "tags": ["portfolio", "creative"],
+            "is_pro": false,
+            "url": "https://demo.primekit.com/template-2"
+        }
+    ],
+    "tags": ["business", "portfolio", "homepage", "creative"],
+    "type_tags": ["page", "section"]
+}

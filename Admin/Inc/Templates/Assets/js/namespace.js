@@ -10,11 +10,11 @@
 
       modalContent.innerHTML = "<p>Loading templates...</p>"; // Display loading message
 
-      // Fetch templates from Happy Addons API
-      fetch("https://templates.happyaddons.com/wp-json/ha/v2/templates-info")
+      // Fetch templates from local JSON file
+      fetch("/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json")
         .then((response) => {
           if (!response.ok) {
-            throw new Error("Failed to fetch templates from the API.");
+            throw new Error("Failed to fetch templates.");
           }
           return response.json();
         })
@@ -63,10 +63,8 @@
     insertTemplate(templateId) {
       console.log(`Inserting template with ID: ${templateId}`);
 
-      // Fetch template content by ID
-      fetch(
-        `https://templates.happyaddons.com/wp-json/ha/v1/templates/${templateId}`
-      )
+      // Fetch template content from local JSON file
+      fetch(`/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/template-${templateId}.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch template data.");
