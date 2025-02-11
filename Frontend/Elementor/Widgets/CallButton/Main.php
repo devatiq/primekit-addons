@@ -97,7 +97,35 @@ class Main extends Widget_Base
 					'primekit_sticky_call_button_show_icon' => 'yes',
 				],
 			]
+		);
 
+		//Text
+		$this->add_control(
+			'primekit_sticky_call_button_text',
+			[
+				'label' => esc_html__( 'Button Text', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Call Now', 'primekit-addons' ),
+				'condition' =>[
+					'primekit_sticky_call_button_show_text' => 'yes',
+				],
+			]
+		);
+
+		//Link
+
+		$this->add_control(
+			'primekit_sticky_call_button_link',
+			[
+				'label' => esc_html__( 'Button Link', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::URL,
+				'options' => [ 'url', 'is_external', 'nofollow' ],
+				'default' => [
+					'url' => '#',
+					'is_external' => false,
+					'nofollow' => false,
+				],
+				'label_block' => true,
 			]
 		);
 
@@ -140,6 +168,22 @@ class Main extends Widget_Base
 			]
 		);
 
+		//height
+		$this->add_responsive_control(
+			'primekit_sticky_call_button_height',
+			[
+				'label' => esc_html__( 'Button Height', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%',],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 500,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 100,
 					],
 				],
 				'default' => [
@@ -173,6 +217,32 @@ class Main extends Widget_Base
 			]
 		);
 
+		//bg color
+		$this->add_control(
+			'primekit_sticky_call_button_bg_color',
+			[
+				'label' => esc_html__( 'Background Color', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#1e49e7',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-sticky-call-button' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		//bg hover color
+		$this->add_control(
+			'primekit_sticky_call_button_bg_hover_color',
+			[
+				'label' => esc_html__( 'Background Hover Color', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#973af5',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-sticky-call-button:hover' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
 		//Bottom position
 		$this->add_responsive_control(
 			'primekit_sticky_call_button_bot_pos',
@@ -202,7 +272,27 @@ class Main extends Widget_Base
 		);
 
 		//Left position
-
+		$this->add_responsive_control(
+			'primekit_sticky_call_button_left_pos',
+			[
+				'label' => esc_html__( 'Left Position', 'primekit-addons' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%',],
+				'range' => [
+					'px' => [
+						'min' => -1000,
+						'max' => 1000,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => -100,
+						'max' => 100,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 20,
+				],
 				'selectors' => [
 					'{{WRAPPER}} .primekit-sticky-call-button-area' => 'left: {{SIZE}}{{UNIT}};',
 				],
