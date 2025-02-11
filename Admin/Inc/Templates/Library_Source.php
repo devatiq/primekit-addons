@@ -155,6 +155,10 @@ class Library_Source extends Source_Base
 
     public function get_data(array $args, $context = 'display')
     {
+        if (empty($args['template_id'])) {
+            throw new \Exception(__('Template ID is required', 'primekit'));
+        }
+
         $data = self::request_template_data($args['template_id']);
 
         if (!$data) {
@@ -163,24 +167,32 @@ class Library_Source extends Source_Base
 
         $data = json_decode($data, true);
 
-        if (empty($data) || empty($data['content'])) {
-            throw new \Exception(__('Template does not have any content', 'primekit'));
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            throw new \Exception(__('Invalid template data format', 'primekit'));
         }
 
-        $data['content'] = $this->replace_elements_ids($data['content']);
-        $data['content'] = $this->process_export_import_content($data['content'], 'on_import');
-
-        $post_id = $args['editor_post_id'];
-        $document = elementor()->documents->get($post_id);
-
-        if ($document) {
-            $data['content'] = $document->get_elements_raw_data($data['content'], true);
+        if (empty($data) || empty($data['content']) || !is_array($data['content'])) {
+            throw new \Exception(__('Template does not have valid content structure', 'primekit'));
         }
 
-        if ('display' === $context) {
+        try {
             $data['content'] = $this->replace_elements_ids($data['content']);
-        }
+            $data['content'] = $this->process_export_import_content($data['content'], 'on_import');
 
-        return $data;
+            $post_id = $args['editor_post_id'];
+            $document = elementor()->documents->get($post_id);
+
+            if ($document) {
+                $data['content'] = $document->get_elements_raw_data($data['content'], true);
+            }
+
+            if ('display' === $context) {
+                $data['content'] = $this->replace_elements_ids($data['content']);
+            }
+
+            return $data;
+        } catch (\Exception $e) {
+            throw new \Exception(__('Error processing template content: ', 'primekit') . $e->getMessage());
+        }
     }
 }

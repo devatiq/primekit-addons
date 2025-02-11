@@ -10,8 +10,9 @@
 
       modalContent.innerHTML = "<p>Loading templates...</p>"; // Display loading message
 
-      // Fetch templates from local JSON file
-      fetch("/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json")
+      // Fetch templates using WordPress site URL
+      const siteUrl = window.location.origin;
+      fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch templates.");
@@ -63,8 +64,9 @@
     insertTemplate(templateId) {
       console.log(`Inserting template with ID: ${templateId}`);
 
-      // Fetch template content from local JSON file
-      fetch(`/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/template-${templateId}.json`)
+      // Fetch template content using WordPress site URL
+      const siteUrl = window.location.origin;
+      fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch template data.");
@@ -74,29 +76,34 @@
         .then((data) => {
           console.log("Template content loaded:", data);
 
-          // Transform JSON to Elementor compatible structure
-          const transformedContent = this.transformElementorContent(
-            data.content
-          );
+          if (!data || !data.content || !Array.isArray(data.content)) {
+            throw new Error("Invalid template data structure");
+          }
 
-          if (transformedContent) {
-            try {
-              $e.run("document/elements/import", {
-                elements: transformedContent,
-              });
-              console.log("Template inserted successfully.");
-            } catch (error) {
-              console.error("Error inserting template:", error);
-              alert("Failed to insert the template. Please try again.");
-            }
-          } else {
-            console.error("Transformed content is invalid.");
-            alert("Invalid template content.");
+          // Transform JSON to Elementor compatible structure
+          const transformedContent = this.transformElementorContent(data.content);
+
+          if (!transformedContent || !Array.isArray(transformedContent)) {
+            throw new Error("Failed to transform template content");
+          }
+
+          try {
+            $e.run("document/elements/import", {
+              model: elementor.elementsModel,
+              data: {
+                content: transformedContent
+              }
+            });
+            console.log("Template inserted successfully.");
+            MicroModal.close("primekit-template-modal");
+          } catch (error) {
+            console.error("Error inserting template:", error);
+            alert("Failed to insert the template: " + error.message);
           }
         })
         .catch((error) => {
-          console.error("Error inserting template:", error);
-          alert("Failed to insert the template.");
+          console.error("Error processing template:", error);
+          alert(error.message || "Failed to process the template.");
         });
     },
 
@@ -106,27 +113,32 @@
         return null;
       }
 
-      return content.map((element) => {
-        return this.transformElement(element);
-      });
+      try {
+        return content.map(element => this.transformElement(element));
+      } catch (error) {
+        console.error("Error transforming content:", error);
+        return null;
+      }
     },
 
     transformElement(element) {
-      // Ensure each element has the required properties for Elementor
+      if (!element || typeof element !== 'object') {
+        throw new Error('Invalid element structure');
+      }
+
       const transformedElement = {
-        id: element.id || Math.random().toString(36).substring(2),
-        elType: element.elType || "section",
+        id: element.id || elementor.helpers.getUniqueID(),
+        elType: element.elType || 'section',
         settings: element.settings || {},
-        elements: Array.isArray(element.elements)
-          ? element.elements.map((childElement) =>
-              this.transformElement(childElement)
-            )
-          : [],
+        elements: []
       };
 
-      // Include widgetType if the element is a widget
       if (element.widgetType) {
         transformedElement.widgetType = element.widgetType;
+      }
+
+      if (Array.isArray(element.elements)) {
+        transformedElement.elements = element.elements.map(child => this.transformElement(child));
       }
 
       return transformedElement;
