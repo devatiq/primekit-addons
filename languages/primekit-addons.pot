@@ -1,4 +1,4 @@
-# Copyright (C) 2024 ABCPlugin
+# Copyright (C) 2025 ABCPlugin
 # This file is distributed under the GPL2.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-17T10:06:14+00:00\n"
+"POT-Creation-Date: 2025-02-16T19:39:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: primekit-addons\n"
@@ -40,23 +40,23 @@ msgstr ""
 msgid "https://abcplugin.com/"
 msgstr ""
 
-#: Admin/AdminManager.php:118
+#: Admin/AdminManager.php:124
 msgid "Unauthorized"
 msgstr ""
 
-#: Admin/AdminManager.php:124
+#: Admin/AdminManager.php:130
 msgid "Missing data"
 msgstr ""
 
-#: Admin/AdminManager.php:136
+#: Admin/AdminManager.php:142
 msgid "Setting saved."
 msgstr ""
 
-#: Admin/AdminManager.php:138
+#: Admin/AdminManager.php:144
 msgid "Failed to save setting."
 msgstr ""
 
-#: Admin/AdminManager.php:155
+#: Admin/AdminManager.php:161
 #: Admin/Inc/Dashboard/Settings/Settings.php:30
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:51
 #: Frontend/Elementor/Widgets/ContactInfo/Main.php:49
@@ -73,16 +73,16 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: Admin/AdminManager.php:161
+#: Admin/AdminManager.php:167
 msgid "Get Pro"
 msgstr ""
 
-#: Admin/AdminManager.php:179
+#: Admin/AdminManager.php:184
 #: Admin/Inc/Dashboard/Settings/PrimeKit.php:42
 msgid "Support"
 msgstr ""
 
-#: Admin/AdminManager.php:180
+#: Admin/AdminManager.php:185
 msgid "Rate Us"
 msgstr ""
 
@@ -625,6 +625,10 @@ msgstr ""
 msgid "This area is specifically for PrimeKit Addons and Templates for Elementor by ABCPlugin Products description tab contents."
 msgstr ""
 
+#: Admin/Inc/Templates/Markup/Modal.php:61
+msgid "PrimeKit Templates"
+msgstr ""
+
 #: Admin/Inc/ThemeBuilder/Admin/Column.php:30
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:122
 #: Frontend/Elementor/Widgets/Counter/Main.php:64
@@ -965,7 +969,7 @@ msgstr ""
 
 #: Frontend/Elementor/Globals/CSSTransform.php:98
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:198
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:547
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:564
 #: Frontend/Elementor/Widgets/BlogList/Main.php:590
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:936
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:177
@@ -983,7 +987,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:685
 #: Frontend/Elementor/Widgets/IconBox/Main.php:834
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:592
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:553
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:565
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:327
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:417
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:342
@@ -1083,7 +1087,7 @@ msgstr ""
 
 #: Frontend/Elementor/Globals/CSSTransform.php:445
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:228
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:582
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:599
 #: Frontend/Elementor/Widgets/BlogList/Main.php:624
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:981
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:207
@@ -1102,7 +1106,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:714
 #: Frontend/Elementor/Widgets/IconBox/Main.php:863
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:658
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:591
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:603
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:349
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:451
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:384
@@ -1263,11 +1267,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:67
 #: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:165
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:104
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:117
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:130
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:143
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:172
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:199
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:134
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:147
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:160
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:189
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:216
 #: Frontend/Elementor/Widgets/BlogList/Main.php:89
 #: Frontend/Elementor/Widgets/BlogList/Main.php:102
 #: Frontend/Elementor/Widgets/BlogList/Main.php:115
@@ -1319,11 +1323,11 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:68
 #: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:166
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:105
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:118
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:131
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:144
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:173
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:200
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:135
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:148
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:161
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:190
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:217
 #: Frontend/Elementor/Widgets/BlogList/Main.php:90
 #: Frontend/Elementor/Widgets/BlogList/Main.php:103
 #: Frontend/Elementor/Widgets/BlogList/Main.php:116
@@ -1427,7 +1431,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:155
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:312
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:365
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:530
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:547
 #: Frontend/Elementor/Widgets/BlogList/Main.php:468
 #: Frontend/Elementor/Widgets/BlogList/Main.php:565
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:343
@@ -1472,8 +1476,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/LoadingPage/Main.php:263
 #: Frontend/Elementor/Widgets/LoadingPage/Main.php:402
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:436
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:522
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:640
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:534
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:653
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:310
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:494
 #: Frontend/Elementor/Widgets/Popup/Main.php:282
@@ -1540,8 +1544,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:883
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:634
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:700
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:574
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:612
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:586
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:624
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:336
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:358
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:438
@@ -1593,7 +1597,7 @@ msgid "Width"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AnimatedShape/Main.php:303
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:521
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:538
 #: Frontend/Elementor/Widgets/BlogList/Main.php:556
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:204
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:160
@@ -1614,7 +1618,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ImageGallery/Main.php:209
 #: Frontend/Elementor/Widgets/ImageGallery/Main.php:281
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:452
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:514
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:526
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:301
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:515
 #: Frontend/Elementor/Widgets/Popup/Main.php:383
@@ -1728,7 +1732,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:69
 #: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:122
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:63
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:449
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:466
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:43
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:52
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:763
@@ -1774,7 +1778,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedText/Main.php:104
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:74
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:68
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:453
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:470
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:57
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:120
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:339
@@ -1837,7 +1841,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedText/Main.php:108
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:78
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:72
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:457
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:474
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:61
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:246
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:440
@@ -1899,7 +1903,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AnimatedText/Main.php:112
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:82
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:76
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:461
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:478
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:65
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:124
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:347
@@ -2039,7 +2043,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:185
 #: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:215
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:105
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:213
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:230
 #: Frontend/Elementor/Widgets/BlogList/Main.php:198
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:129
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:82
@@ -2066,7 +2070,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:186
 #: Frontend/Elementor/Widgets/BeforeAfterImg/Main.php:216
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:106
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:214
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:231
 #: Frontend/Elementor/Widgets/BlogList/Main.php:199
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:130
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:83
@@ -2144,7 +2148,7 @@ msgid "Archive Title Tag"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/ArchiveTitle/Main.php:95
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:397
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:414
 #: Frontend/Elementor/Widgets/BlogList/Main.php:382
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:266
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:330
@@ -2233,7 +2237,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/LoadingPage/Main.php:311
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:462
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:742
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:493
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:505
 #: Frontend/Elementor/Widgets/PageContent/Main.php:159
 #: Frontend/Elementor/Widgets/PageContent/Main.php:192
 #: Frontend/Elementor/Widgets/PageContent/Main.php:225
@@ -2307,7 +2311,7 @@ msgstr ""
 
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:101
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:205
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:568
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:585
 #: Frontend/Elementor/Widgets/BlogList/Main.php:611
 #: Frontend/Elementor/Widgets/CallButton/Main.php:224
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:632
@@ -2359,8 +2363,8 @@ msgid "Background Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:114
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:246
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:254
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:263
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:271
 #: Frontend/Elementor/Widgets/BlogList/Main.php:231
 #: Frontend/Elementor/Widgets/BlogList/Main.php:239
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:251
@@ -2386,7 +2390,7 @@ msgid "Title Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:128
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:234
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:251
 #: Frontend/Elementor/Widgets/BlogList/Main.php:219
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:243
 #: Frontend/Elementor/Widgets/CommentForm/Main.php:74
@@ -2409,7 +2413,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/AuthorBio/Main.php:137
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:263
 #: Frontend/Elementor/Widgets/Blockquote/Main.php:137
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:555
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:572
 #: Frontend/Elementor/Widgets/BlogList/Main.php:598
 #: Frontend/Elementor/Widgets/BreadCrumb/Main.php:102
 #: Frontend/Elementor/Widgets/CallButton/Main.php:410
@@ -2446,8 +2450,8 @@ msgstr ""
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:600
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:666
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:728
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:561
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:599
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:573
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:611
 #: Frontend/Elementor/Widgets/PageContent/Main.php:122
 #: Frontend/Elementor/Widgets/Popup/Main.php:228
 #: Frontend/Elementor/Widgets/PostContent/Main.php:122
@@ -2567,7 +2571,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:204
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:246
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:284
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:481
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:493
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:99
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:118
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:131
@@ -2604,7 +2608,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:205
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:247
 #: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:285
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:482
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:494
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:100
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:119
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:132
@@ -2643,7 +2647,7 @@ msgid "Position from right"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BackToTop/Main.php:196
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:364
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:381
 #: Frontend/Elementor/Widgets/BlogList/Main.php:349
 #: Frontend/Elementor/Widgets/CallButton/Main.php:138
 #: Frontend/Elementor/Widgets/CardInfo/Main.php:924
@@ -2940,39 +2944,51 @@ msgid "Number of Post"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogGrid/Main.php:115
+msgid "Thumbnail Size"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:119
+msgid "Blog"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:120
+msgid "Full"
+msgstr ""
+
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:132
 #: Frontend/Elementor/Widgets/BlogList/Main.php:100
 msgid "Blog Date"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:128
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:145
 #: Frontend/Elementor/Widgets/BlogList/Main.php:113
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:107
 msgid "Blog Comments"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:141
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:158
 #: Frontend/Elementor/Widgets/BlogList/Main.php:126
 msgid "Blog Excerpt"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:154
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:171
 #: Frontend/Elementor/Widgets/BlogList/Main.php:139
 msgid "Excerpt Length"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:170
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:187
 #: Frontend/Elementor/Widgets/BlogList/Main.php:155
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:120
 msgid "More Button"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:183
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:200
 #: Frontend/Elementor/Widgets/BlogList/Main.php:168
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:133
 msgid "More Button Text"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:197
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:214
 #: Frontend/Elementor/Widgets/BlogList/Main.php:182
 #: Frontend/Elementor/Widgets/FetchPosts/Main.php:592
 #: Frontend/Elementor/Widgets/PostsSlider/Main.php:488
@@ -2983,18 +2999,18 @@ msgstr ""
 msgid "Pagination"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:224
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:241
 #: Frontend/Elementor/Widgets/BlogList/Main.php:209
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:149
 #: Frontend/Elementor/Widgets/SectionTitle/Main.php:240
 msgid "Title Style"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:268
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:412
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:420
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:590
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:603
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:285
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:429
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:437
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:607
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:620
 #: Frontend/Elementor/Widgets/BlogList/Main.php:253
 #: Frontend/Elementor/Widgets/BlogList/Main.php:397
 #: Frontend/Elementor/Widgets/BlogList/Main.php:405
@@ -3012,50 +3028,51 @@ msgstr ""
 msgid "Hover Color"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:276
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:293
 #: Frontend/Elementor/Widgets/BlogList/Main.php:261
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:394
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:201
 msgid "Title Hover Color"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:293
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:310
 #: Frontend/Elementor/Widgets/BlogList/Main.php:278
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:218
 msgid "Meta Style"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:303
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:320
 #: Frontend/Elementor/Widgets/BlogList/Main.php:288
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:201
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:451
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:463
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:474
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:228
 msgid "Meta Typography"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:312
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:329
 #: Frontend/Elementor/Widgets/BlogList/Main.php:297
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:459
 #: Frontend/Elementor/Widgets/RecentPost/Main.php:237
 msgid "Meta Color"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:327
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:344
 #: Frontend/Elementor/Widgets/BlogList/Main.php:312
 msgid "Excerpt Style"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:340
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:357
 #: Frontend/Elementor/Widgets/BlogList/Main.php:325
 msgid "Excerpt Typography"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:349
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:366
 #: Frontend/Elementor/Widgets/BlogList/Main.php:334
 msgid "Excerpt Color"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:377
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:394
 #: Frontend/Elementor/Widgets/BlogList/Main.php:362
 #: Frontend/Elementor/Widgets/CountDown/Main.php:764
 #: Frontend/Elementor/Widgets/CTA/Main.php:782
@@ -3067,24 +3084,24 @@ msgstr ""
 msgid "Button Typography"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:389
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:406
 #: Frontend/Elementor/Widgets/BlogList/Main.php:374
 #: Frontend/Elementor/Widgets/CostEstimation/Main.php:609
 #: Frontend/Elementor/Widgets/WooCommerce/ProductCartPage/Main.php:147
 msgid "Button Color"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:438
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:455
 #: Frontend/Elementor/Widgets/BlogList/Main.php:491
 msgid "Pagination Style"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:477
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:494
 #: Frontend/Elementor/Widgets/BlogList/Main.php:504
 msgid "Pagination Typography"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:486
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:503
 #: Frontend/Elementor/Widgets/BlogList/Main.php:533
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:477
 #: Frontend/Elementor/Widgets/BusinessHours/Main.php:168
@@ -3111,7 +3128,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/IconBox/Main.php:230
 #: Frontend/Elementor/Widgets/IconBox/Main.php:799
 #: Frontend/Elementor/Widgets/MailChimp/Main.php:419
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:501
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:513
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:287
 #: Frontend/Elementor/Widgets/Popup/Main.php:267
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:1143
@@ -3124,7 +3141,7 @@ msgstr ""
 msgid "Padding"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:508
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:525
 #: Frontend/Elementor/Widgets/BlogList/Main.php:513
 #: Frontend/Elementor/Widgets/IconBox/Main.php:760
 #: Frontend/Elementor/Widgets/PricingTable/Main.php:720
@@ -3139,41 +3156,41 @@ msgstr ""
 msgid "Spacing"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/Main.php:616
+#: Frontend/Elementor/Widgets/BlogGrid/Main.php:633
 #: Frontend/Elementor/Widgets/ContactForm7/Main.php:470
 msgid "Hover Border Color"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:57
-#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:58
-#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:59
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:70
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:70
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:71
 #: Frontend/Elementor/Widgets/BlogList/RenderView.php:74
 #: Frontend/Elementor/Widgets/PostInfo/RenderView.php:20
 #: Frontend/Elementor/Widgets/RecentPost/RenderView.php:51
 msgid "Leave a comment"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:57
-#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:58
-#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:59
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:70
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:70
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:71
 #: Frontend/Elementor/Widgets/BlogList/RenderView.php:74
 #: Frontend/Elementor/Widgets/PostInfo/RenderView.php:20
 #: Frontend/Elementor/Widgets/RecentPost/RenderView.php:51
 msgid "1 Comment"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:57
-#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:58
-#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:59
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:70
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:70
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:71
 #: Frontend/Elementor/Widgets/BlogList/RenderView.php:74
 #: Frontend/Elementor/Widgets/PostInfo/RenderView.php:20
 #: Frontend/Elementor/Widgets/RecentPost/RenderView.php:51
 msgid "% Comments"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:103
-#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:104
-#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:107
+#: Frontend/Elementor/Widgets/BlogGrid/template/four-column.php:118
+#: Frontend/Elementor/Widgets/BlogGrid/template/three-column.php:118
+#: Frontend/Elementor/Widgets/BlogGrid/template/two-column.php:121
 #: Frontend/Elementor/Widgets/BlogList/RenderView.php:119
 #: Frontend/Elementor/Widgets/RecentPost/RenderView.php:67
 msgid "No Post Found"
@@ -3283,17 +3300,17 @@ msgid "Row Reverse"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:209
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:435
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:447
 msgid "Meta Text Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:220
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:420
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:432
 msgid "Meta Icon Color"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/BlogPostFancy/Main.php:231
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:394
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:406
 msgid "Meta Icon Size"
 msgstr ""
 
@@ -3452,7 +3469,7 @@ msgstr ""
 #: Frontend/Elementor/Widgets/FetchPosts/Main.php:301
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:667
 #: Frontend/Elementor/Widgets/GravityForms/Main.php:806
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:536
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:548
 #: Frontend/Elementor/Widgets/WooCommerce/WooAccount/Main.php:392
 #: Frontend/Elementor/Widgets/WooCommerce/WooAccount/Main.php:611
 msgid "Margin"
@@ -5037,7 +5054,7 @@ msgid "Show Pagination"
 msgstr ""
 
 #: Frontend/Elementor/Widgets/FetchPosts/Main.php:214
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:632
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:644
 #: Frontend/Elementor/Widgets/PopularPosts/Main.php:485
 msgid "Thumbnail"
 msgstr ""
@@ -6052,15 +6069,15 @@ msgstr ""
 msgid "Item Padding"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:466
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:478
 msgid "Category"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:478
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:490
 msgid "Use Random Color?"
 msgstr ""
 
-#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:479
+#: Frontend/Elementor/Widgets/ModernPostGrid/Main.php:491
 msgid "Use Random Color for Category Background color"
 msgstr ""
 
