@@ -15,7 +15,7 @@ class Library_Source extends Source_Base
 {
     const LIBRARY_CACHE_KEY = 'primekit_library_cache';
     const API_TEMPLATES_INFO_URL = 'https://demo.primekitaddons.com/wp-json/primekit/v1/templates';
-    const API_TEMPLATE_DATA_URL = 'https://api.primekit.com/wp-json/primekit/v1/templates/';
+    const API_TEMPLATE_DATA_URL = 'https://demo.primekitaddons.com/wp-json/primekit/v1/json';
     const LOCAL_TEMPLATES_INFO_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/templates-info.json';
     const LOCAL_TEMPLATE_DATA_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/template-';
 
@@ -97,10 +97,24 @@ class Library_Source extends Source_Base
 
     private static function request_library_data($force_update = false)
     {
-        $data = get_option(self::LIBRARY_CACHE_KEY);
+        // Temporarily bypass cache
+        $data = false;
 
-        if ($force_update || false === $data || empty($data)) {
-            // Read from local JSON file instead of API
+        if (true) { // Always fetch fresh data
+            // Make remote API request
+            $response = wp_remote_get(self::API_TEMPLATES_INFO_URL);
+
+            if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
+                $data = json_decode(wp_remote_retrieve_body($response), true);
+
+                if (!empty($data) && is_array($data)) {
+                    update_option(self::LIBRARY_CACHE_KEY, $data, 'no');
+                    return $data;
+                }
+            }
+
+            // Commented out local file loading
+            /*
             if (file_exists(self::LOCAL_TEMPLATES_INFO_PATH)) {
                 $json_content = file_get_contents(self::LOCAL_TEMPLATES_INFO_PATH);
                 $data = json_decode($json_content, true);
@@ -110,6 +124,7 @@ class Library_Source extends Source_Base
                     return $data;
                 }
             }
+            */
 
             update_option(self::LIBRARY_CACHE_KEY, []);
             return false;
