@@ -103,7 +103,7 @@ class Library_Source extends Source_Base
         if (true) { // Always fetch fresh data
             // Make remote API request
             $response = wp_remote_get(self::API_TEMPLATES_INFO_URL);
-
+var_dump($response);
             if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
                 $data = json_decode(wp_remote_retrieve_body($response), true);
 
@@ -159,11 +159,19 @@ class Library_Source extends Source_Base
             return;
         }
 
-        $template_file = self::LOCAL_TEMPLATE_DATA_PATH . $template_id . '.json';
-        
-        if (file_exists($template_file)) {
-            return file_get_contents($template_file);
+        $api_url = self::API_TEMPLATE_DATA_URL . '/' . $template_id . '.json';
+        $response = wp_remote_get($api_url);
+
+        if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
+            return wp_remote_retrieve_body($response);
         }
+
+        // Commented out local file loading
+        // $template_file = self::LOCAL_TEMPLATE_DATA_PATH . $template_id . '.json';
+        
+        // if (file_exists($template_file)) {
+        //     return file_get_contents($template_file);
+        // }
 
         return false;
     }
