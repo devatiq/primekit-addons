@@ -14,7 +14,7 @@ defined('ABSPATH') || die();
 class Library_Source extends Source_Base
 {
     const LIBRARY_CACHE_KEY = 'primekit_library_cache';
-    const API_TEMPLATES_INFO_URL = 'https://api.primekit.com/wp-json/primekit/v1/templates-info';
+    const API_TEMPLATES_INFO_URL = 'https://demo.primekitaddons.com/wp-json/primekit/v1/templates';
     const API_TEMPLATE_DATA_URL = 'https://api.primekit.com/wp-json/primekit/v1/templates/';
     const LOCAL_TEMPLATES_INFO_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/templates-info.json';
     const LOCAL_TEMPLATE_DATA_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/template-';
