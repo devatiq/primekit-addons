@@ -97,22 +97,50 @@ class Library_Source extends Source_Base
 
     private static function request_library_data($force_update = false)
     {
-        // Direct API request without caching
+        $data = get_option(self::LIBRARY_CACHE_KEY);
+
+        if (!empty($data) && !$force_update) {
+            return $data;
+        }
+
+        // Make remote API request
         $response = wp_remote_get(self::API_TEMPLATES_INFO_URL);
 
         if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
             $data = json_decode(wp_remote_retrieve_body($response), true);
+
             if (!empty($data) && is_array($data)) {
+                update_option(self::LIBRARY_CACHE_KEY, $data, 'no');
                 return $data;
             }
         }
 
-        return [];
+        // // Try loading from local file if remote request fails
+        // if (file_exists(self::LOCAL_TEMPLATES_INFO_PATH)) {
+        //     $json_content = file_get_contents(self::LOCAL_TEMPLATES_INFO_PATH);
+        //     $data = json_decode($json_content, true);
+
+        //     if (!empty($data) && is_array($data)) {
+        //         update_option(self::LIBRARY_CACHE_KEY, $data, 'no');
+        //         return $data;
+        //     }
+        // }
+
+        update_option(self::LIBRARY_CACHE_KEY, []);
+        return false;
     }
 
-    public static function get_library_data($force_update = false)
+    public static function get_library_data($force_update = true)
     {
-        return self::request_library_data($force_update);
+        self::request_library_data($force_update);
+
+        $data = get_option(self::LIBRARY_CACHE_KEY);
+
+        if (empty($data)) {
+            return [];
+        }
+
+        return $data;
     }
 
     public function get_item($template_id)
