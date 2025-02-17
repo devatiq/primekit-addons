@@ -97,53 +97,22 @@ class Library_Source extends Source_Base
 
     private static function request_library_data($force_update = false)
     {
-        // Temporarily bypass cache
-        $data = false;
+        // Direct API request without caching
+        $response = wp_remote_get(self::API_TEMPLATES_INFO_URL);
 
-        if (true) { // Always fetch fresh data
-            // Make remote API request
-            $response = wp_remote_get(self::API_TEMPLATES_INFO_URL);
-var_dump($response);
-            if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
-                $data = json_decode(wp_remote_retrieve_body($response), true);
-
-                if (!empty($data) && is_array($data)) {
-                    update_option(self::LIBRARY_CACHE_KEY, $data, 'no');
-                    return $data;
-                }
+        if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
+            $data = json_decode(wp_remote_retrieve_body($response), true);
+            if (!empty($data) && is_array($data)) {
+                return $data;
             }
-
-            // Commented out local file loading
-            /*
-            if (file_exists(self::LOCAL_TEMPLATES_INFO_PATH)) {
-                $json_content = file_get_contents(self::LOCAL_TEMPLATES_INFO_PATH);
-                $data = json_decode($json_content, true);
-
-                if (!empty($data) && is_array($data)) {
-                    update_option(self::LIBRARY_CACHE_KEY, $data, 'no');
-                    return $data;
-                }
-            }
-            */
-
-            update_option(self::LIBRARY_CACHE_KEY, []);
-            return false;
         }
 
-        return $data;
+        return [];
     }
 
     public static function get_library_data($force_update = false)
     {
-        self::request_library_data($force_update);
-
-        $data = get_option(self::LIBRARY_CACHE_KEY);
-
-        if (empty($data)) {
-            return [];
-        }
-
-        return $data;
+        return self::request_library_data($force_update);
     }
 
     public function get_item($template_id)
