@@ -2,7 +2,7 @@
     "templates": [
         {
             "id": "template-1",
-            "title": "Business Homepage",
+            "title": "Business Homepage Updated",
             "type": "page",
             "thumbnail": "https://placehold.co/600x400",
             "created_at": "2023-12-01",
@@ -23,6 +23,16 @@
         {
             "id": "about-us",
             "title": "About Us Page",
+            "type": "page",
+            "thumbnail": "https://placehold.co/600x400",
+            "created_at": "2023-12-03",
+            "tags": ["about", "company"],
+            "is_pro": false,
+            "url": "https://demo.primekit.com/about-us"
+        },
+        {
+            "id": "about-us-2",
+            "title": "About Us Page 2",
             "type": "page",
             "thumbnail": "https://placehold.co/600x400",
             "created_at": "2023-12-03",
