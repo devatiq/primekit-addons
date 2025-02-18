@@ -66,49 +66,57 @@
 
     insertTemplate(templateId) {
       console.log(`Inserting template with ID: ${templateId}`);
-
-      // Fetch template content using WordPress site URL
-      const siteUrl = window.location.origin;
-      fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to fetch template data.");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log("Template content loaded:", data);
-
-          if (!data || !data.content || !Array.isArray(data.content)) {
-            throw new Error("Invalid template data structure");
-          }
-
-          // Transform JSON to Elementor compatible structure
-          const transformedContent = this.transformElementorContent(data.content);
-
-          if (!transformedContent || !Array.isArray(transformedContent)) {
-            throw new Error("Failed to transform template content");
-          }
-
-          try {
-            $e.run("document/elements/import", {
-              model: elementor.elementsModel,
-              data: {
-                content: transformedContent
+  
+      // Use API_TEMPLATE_DATA_URL instead of a local file path
+      const templateUrl = `https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`;
+  
+      fetch(templateUrl)
+          .then((response) => {
+              if (!response.ok) {
+                  throw new Error(`Failed to fetch template data. HTTP Status: ${response.status}`);
               }
-            });
-            console.log("Template inserted successfully.");
-            MicroModal.close("primekit-template-modal");
-          } catch (error) {
-            console.error("Error inserting template:", error);
-            alert("Failed to insert the template: " + error.message);
-          }
-        })
-        .catch((error) => {
-          console.error("Error processing template:", error);
-          alert(error.message || "Failed to process the template.");
-        });
-    },
+              return response.text(); // Read response as text first
+          })
+          .then((text) => {
+              try {
+                  const data = JSON.parse(text); // Try parsing JSON
+                  console.log("Template content loaded:", data);
+  
+                  if (!data || !data.content || !Array.isArray(data.content)) {
+                      throw new Error("Invalid template data structure");
+                  }
+  
+                  // Transform JSON to Elementor-compatible structure
+                  const transformedContent = this.transformElementorContent(data.content);
+  
+                  if (!transformedContent || !Array.isArray(transformedContent)) {
+                      throw new Error("Failed to transform template content");
+                  }
+  
+                  try {
+                      $e.run("document/elements/import", {
+                          model: elementor.elementsModel,
+                          data: {
+                              content: transformedContent
+                          }
+                      });
+                      console.log("Template inserted successfully.");
+                      MicroModal.close("primekit-template-modal");
+                  } catch (error) {
+                      console.error("Error inserting template:", error);
+                      alert("Failed to insert the template: " + error.message);
+                  }
+              } catch (jsonError) {
+                  console.error("Invalid JSON response:", text);
+                  alert("Server returned invalid JSON. Check console for details.");
+              }
+          })
+          .catch((error) => {
+              console.error("Error processing template:", error);
+              alert(error.message || "Failed to process the template.");
+          });
+  },
+  
 
     transformElementorContent(content) {
       if (!content || !Array.isArray(content)) {
