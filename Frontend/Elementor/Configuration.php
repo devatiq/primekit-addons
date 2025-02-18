@@ -20,6 +20,8 @@ use PrimeKit\Frontend\Elementor\Inc\PostViewTracker;
 use PrimeKit\Frontend\Elementor\Globals\WrapperURL;
 use PrimeKit\Frontend\Elementor\Globals\CustomCSS;
 use PrimeKit\Frontend\Elementor\Globals\CSSTransform;
+use PrimeKit\Frontend\Elementor\Globals\NestedTabsExtend;
+
 
 /**
  * Class Configuration
@@ -41,6 +43,7 @@ class Configuration
     protected $WrapperURL;
     protected $CustomCSS;
     protected $CSSTransform;
+    protected $NestedTabsExtend;
 
     /**
      * plugin Version
@@ -210,6 +213,7 @@ class Configuration
         $this->WrapperURL = new WrapperURL();
         $this->CustomCSS = new CustomCSS();
         $this->CSSTransform = new CSSTransform();
+        $this->NestedTabsExtend = new NestedTabsExtend();
     }
 
 
