@@ -19,7 +19,12 @@ class Library_Manager
     {
         add_action('elementor/editor/footer', [__CLASS__, 'print_template_views']);
         add_action('elementor/ajax/register_actions', [__CLASS__, 'register_ajax_actions']);
+    
+        // Register AJAX action properly
+        add_action('wp_ajax_get_primekit_library_data', [__CLASS__, 'get_primekit_library_data']);
+        add_action('wp_ajax_nopriv_get_primekit_library_data', [__CLASS__, 'get_primekit_library_data']); // Allow non-logged-in users
     }
+    
 
     public static function print_template_views()
     {
@@ -52,35 +57,58 @@ class Library_Manager
 
         return self::$source;
     }
-
+    
+    public static function get_primekit_library_data()
+    {
+        if (!current_user_can('edit_posts')) {
+            wp_send_json_error(['message' => 'Access Denied']);
+            wp_die();
+        }
+    
+        // Fetch library data
+        $library_data = self::get_library_data([]);
+    
+        // 🔍 Debug: Check if templates are received
+        error_log(print_r($library_data, true)); // Log the response
+    
+        // Send JSON response
+        wp_send_json_success($library_data);
+        wp_die();
+    }
+    
+    
     public static function register_ajax_actions(Ajax $ajax)
     {
         $ajax->register_ajax_action('get_primekit_library_data', function ($data) {
             if (!current_user_can('edit_posts')) {
                 throw new \Exception('Access Denied');
             }
-
+    
             return self::get_library_data($data);
         });
-
-        $ajax->register_ajax_action('get_primekit_template_data', function ($data) {
-            if (!current_user_can('edit_posts')) {
-                throw new \Exception('Access Denied');
-            }
-
-            return self::get_template_data($data);
-        });
     }
+    
 
     public static function get_library_data(array $args)
     {
         $source = self::get_source();
+    
+        $templates = $source->get_items();
+        $tags = $source->get_tags();
+        $type_tags = $source->get_type_tags();
+    
+        // Debugging: Log the retrieved data
+        error_log("Retrieved Templates: " . print_r($templates, true));
+        error_log("Retrieved Tags: " . print_r($tags, true));
+        error_log("Retrieved Type Tags: " . print_r($type_tags, true));
+    
         return [
-            'templates' => $source->get_items(),
-            'tags'      => $source->get_tags(),
-            'type_tags' => $source->get_type_tags(),
+            'templates' => (!empty($templates) ? $templates : []),
+            'tags'      => (!empty($tags) ? $tags : []),
+            'type_tags' => (!empty($type_tags) ? $type_tags : []),
         ];
     }
+    
 
     public static function get_template_data(array $args)
     {

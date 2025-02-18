@@ -12,7 +12,7 @@
         },
         {
             "id": "template-2",
-            "title": "Portfolio Layout",
+            "title": "Portfolio Layout 2",
             "type": "page",
             "thumbnail": "https://placehold.co/600x400",
             "created_at": "2023-12-02",
@@ -22,7 +22,7 @@
         },
         {
             "id": "about-us",
-            "title": "About Us Page",
+            "title": "About Us Page 2",
             "type": "page",
             "thumbnail": "https://placehold.co/600x400",
             "created_at": "2023-12-03",
