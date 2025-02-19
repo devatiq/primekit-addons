@@ -48,12 +48,43 @@ class Templates
     {
         $this->setConstants(); // Set the constants.
         $this->init_classes(); // Initialize the classes.
-      //  add_action('wp_ajax_primekit_get_templates', [$this, 'primekit_get_templates']);
         add_action('wp_ajax_primekit_get_template_content', [$this, 'primekit_get_template_content_handler']);
         add_action('wp_ajax_nopriv_primekit_get_template_content', [$this, 'primekit_get_template_content_handler']);
     }
 
+    public function primekit_get_template_content_handler() {
+        // Verify nonce
+        if (!isset($_POST['security']) || !wp_verify_nonce($_POST['security'], 'primekit_ajax_nonce')) {
+            wp_send_json_error(['message' => 'Invalid security token.']);
+            wp_die();
+        }
 
+        // Validate Request
+        if (!isset($_POST['template_id'])) {
+            wp_send_json_error(['message' => 'Template ID is missing.']);
+            wp_die();
+        }
+    
+        $template_id = sanitize_text_field($_POST['template_id']);
+        $file_path = PRIMEKIT_TEMPLATE_PATH . "templates/{$template_id}.json";
+    
+        if (!file_exists($file_path)) {
+            wp_send_json_error(['message' => "Template file not found: {$template_id}"]);
+            wp_die();
+        }
+    
+        $content = file_get_contents($file_path);
+        $template_data = json_decode($content, true);
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            wp_send_json_error(['message' => 'Invalid template JSON format.']);
+            wp_die();
+        }
+
+        wp_send_json_success(['content' => $template_data]);
+        wp_die();
+    }
+    
     /**
      * Initializes the classes used by the PrimeKit Template.
      *
@@ -139,3 +170,4 @@ class Templates
 
 
 }
+
