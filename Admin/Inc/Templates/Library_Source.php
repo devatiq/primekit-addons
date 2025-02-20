@@ -166,66 +166,15 @@ class Library_Source extends Source_Base
     public static function request_template_data($template_id)
     {
         if (empty($template_id)) {
-            error_log('PrimeKit Template API Error: Empty template ID');
-            return false;
+            return;
         }
 
         $api_url = self::API_TEMPLATE_DATA_URL . '/' . $template_id . '.json';
-        
-        $args = array(
-            'timeout' => 30,
-            'headers' => array(
-                'Origin' => get_site_url(),
-                'Accept' => 'application/json',
-                'Content-Type' => 'application/json',
-                'Access-Control-Allow-Origin' => '*',
-                'Access-Control-Allow-Methods' => 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept'
-            ),
-            'sslverify' => false
-        );
-        
-        error_log('PrimeKit Template API Request URL: ' . $api_url);
-        
-        // Remove the previous filter and add a new one for CORS headers
-        remove_all_filters('http_request_args');
-        add_filter('http_request_args', function($request_args, $url) use ($args) {
-            $request_args['headers'] = array_merge($request_args['headers'], $args['headers']);
-            return $request_args;
-        }, 10, 2);
-        
-        $response = wp_remote_get($api_url, $args);
+        $response = wp_remote_get($api_url);
 
-        if (is_wp_error($response)) {
-            error_log('PrimeKit Template API Error: ' . $response->get_error_message());
-            return false;
+        if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
+            return wp_remote_retrieve_body($response);
         }
-
-        $response_code = wp_remote_retrieve_response_code($response);
-        $response_headers = wp_remote_retrieve_headers($response);
-        error_log('PrimeKit Template API Response Code: ' . $response_code);
-        error_log('PrimeKit Template API Response Headers: ' . print_r($response_headers, true));
-
-        if (200 !== $response_code) {
-            error_log('PrimeKit Template API Error: Unexpected response code ' . $response_code);
-            return false;
-        }
-
-        $body = wp_remote_retrieve_body($response);
-        if (empty($body)) {
-            error_log('PrimeKit Template API Error: Empty response body');
-            return false;
-        }
-
-        // Validate JSON response
-        $decoded_body = json_decode($body, true);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            error_log('PrimeKit Template API Error: Invalid JSON response - ' . json_last_error_msg());
-            return false;
-        }
-
-        return $body;
-    }
 
         // Commented out local file loading
         // $template_file = self::LOCAL_TEMPLATE_DATA_PATH . $template_id . '.json';
@@ -233,7 +182,9 @@ class Library_Source extends Source_Base
         // if (file_exists($template_file)) {
         //     return file_get_contents($template_file);
         // }
-   
+
+        return false;
+    }
 
     public function get_data(array $args, $context = 'display')
     {
@@ -278,4 +229,3 @@ class Library_Source extends Source_Base
         }
     }
 }
-
