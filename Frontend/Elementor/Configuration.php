@@ -318,6 +318,7 @@ class Configuration
             'primekit_sticker_text_field' => 'StickerText\Main',
             'primekit_tag_info_widget_field' => 'TagInfo\Main',
             'primekit_team_member_widget_field' => 'TeamMember\Main',           
+            'primekit_copyright_field' => 'Copyright\Main',           
         ];
         foreach ($widgets as $option_name => $widget_class) {
             $is_enabled = get_option($option_name, 1); // Get the option value (default to enabled)

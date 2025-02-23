@@ -585,6 +585,15 @@ class RegularTab
             self::demo_url('widgets/posts-slider-widget/')
         );
 
+        // Copyright.
+        PrimeKitWidgets::primekit_available_widget(
+            'primekit_copyright_field',
+            esc_html__('Copyright', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/copyright.svg',
+            true,
+            self::demo_url('widgets/copyright-widget/')
+        );
+
 
     }
 
