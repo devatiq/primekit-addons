@@ -62,14 +62,42 @@ class Main extends Widget_Base
             ]
         );
 
-        // Heading Control
+        // Copyright Year
         $this->add_control(
-            'primekit_cta_heading',
+            'primekit_copyright_year',
             [
-                'label' => esc_html__('Heading', 'primekit-addons'),
+                'label' => esc_html__('Copyright Year', 'primekit-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'primekit-addons'),
+                'label_off' => esc_html__('No', 'primekit-addons'),
+                'return_value' => 'yes',
+                'default'   => 'yes',
+                'label_block' => true,
+            ]
+        );
+        $this->add_control(
+            'primekit_copyright_year_format',
+            [
+                'label' => esc_html__('Year Format', 'primekit-addons'),
+                'type' => Controls_Manager::SELECT,
+                'options' => [
+                    'Y' => esc_html__('Default Year', 'primekit-addons'),
+                    'y' => esc_html__('Short Year', 'primekit-addons'),
+                ],
+                'condition' => [
+                    'primekit_copyright_year' => 'yes',
+                ],
+                'default' => 'Y',
+                'label_block' => true,
+            ]
+        );
+        // After Text
+        $this->add_control(
+            'primekit_after_text',
+            [
+                'label' => esc_html__('After Text', 'primekit-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Lets deliver the right solution for your', 'primekit-addons'),
-                'placeholder' => esc_html__('Type your heading here', 'primekit-addons'),
+                'placeholder' => esc_html__('Type your after text here', 'primekit-addons'),
                 'label_block' => true,
             ]
         );
