@@ -2,7 +2,8 @@
 
 namespace PrimeKit\Frontend\Elementor\Widgets\Copyright;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -16,27 +17,27 @@ class Main extends Widget_Base
     {
         return 'primekit-copyright';
     }
-    
+
     public function get_title()
     {
         return esc_html__('Copyright', 'primekit-addons');
     }
-    
+
     public function get_icon()
     {
         return 'eicon-email-field primekit-addons-icon';
     }
-    
+
     public function get_categories()
     {
         return ['primekit-category'];
     }
-    
+
     public function get_keywords()
     {
         return ['prime', 'copyright', 'copy'];
-    }    
-    
+    }
+
     /**
      * Register the widget controls.
      */
@@ -71,7 +72,7 @@ class Main extends Widget_Base
                 'label_on' => esc_html__('Yes', 'primekit-addons'),
                 'label_off' => esc_html__('No', 'primekit-addons'),
                 'return_value' => 'yes',
-                'default'   => 'yes',
+                'default' => 'yes',
                 'label_block' => true,
             ]
         );
@@ -124,10 +125,76 @@ class Main extends Widget_Base
             'primekit_copyright_style',
             [
                 'label' => esc_html__('Style', 'primekit-addons'),
-                'tab' => Controls_Manager::TAB_CONTENT,                
+                'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
-      
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'primekit_copyright_typography',
+                'selector' => '{{WRAPPER}} .primekit-copyright-text',
+                'label' => esc_html__('Typography', 'primekit-addons'),
+            ]
+        );
+        $this->add_control(
+            'primekit_copyright_text_color',
+            [
+                'label' => esc_html__('Text Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#222',
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-copyright-text' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+        $this->add_control(
+            'primekit_copyright_text_padding',
+            [
+                'label' => esc_html__('Padding', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-copyright-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_control(
+            'primekit_copyright_text_margin',
+            [
+                'label' => esc_html__('Margin', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-copyright-text' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'primekit_copyright_text_align',
+            [
+                'label' => esc_html__('Text Alignment', 'primekit-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'primekit-addons'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'primekit-addons'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'primekit-addons'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-copyright-text' => 'text-align: {{VALUE}};',
+                ],
+            ]
+        );
+
 
         $this->end_controls_section();
 
