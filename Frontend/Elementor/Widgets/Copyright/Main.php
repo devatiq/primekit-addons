@@ -98,49 +98,21 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::TEXT,
                 'placeholder' => esc_html__('Type your after text here', 'primekit-addons'),
                 'label_block' => true,
+                'default' => esc_html__('All rights reserved.', 'primekit-addons'),
             ]
         );
 
         $this->end_controls_section(); // End Section
 
-        // Start Section for Alignment
+        // Start Section for Style
         $this->start_controls_section(
-            'primekit_elementor_cta_alignment',
+            'primekit_copyright_style',
             [
-                'label' => esc_html__('Alignment', 'primekit-addons'),
+                'label' => esc_html__('Style', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,                
             ]
         );
-        // Content Direction
-        $this->add_responsive_control(
-            'primekit_copyright_content_direction',
-            [
-                'label' => esc_html__('Content Direction', 'primekit-addons'),
-                'type' => Controls_Manager::CHOOSE,
-                'options' => [
-                    'row' => [
-                        'title' => esc_html__('Row', 'primekit-addons'),
-                        'icon' => 'eicon-h-align-left',
-                    ],
-                    'row-reverse' => [
-                        'title' => esc_html__('Row Reverse', 'primekit-addons'),
-                        'icon' => 'eicon-h-align-right',
-                    ],
-                    'column' => [
-                        'title' => esc_html__('Column', 'primekit-addons'),
-                        'icon' => 'eicon-v-align-top',
-                    ],
-                    'column-reverse' => [
-                        'title' => esc_html__('Column Reverse', 'primekit-addons'),
-                        'icon' => 'eicon-v-align-bottom',
-                    ],
-                ],
-                'toggle' => true,
-                'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-area' => 'flex-direction: {{VALUE}};',
-                ],
-            ]
-        );
+      
 
         $this->end_controls_section();
 
