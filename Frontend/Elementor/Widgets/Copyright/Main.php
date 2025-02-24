@@ -148,7 +148,7 @@ class Main extends Widget_Base
                 ],
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'primekit_copyright_text_padding',
             [
                 'label' => esc_html__('Padding', 'primekit-addons'),
@@ -159,7 +159,7 @@ class Main extends Widget_Base
                 ],
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'primekit_copyright_text_margin',
             [
                 'label' => esc_html__('Margin', 'primekit-addons'),
