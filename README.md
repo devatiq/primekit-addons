@@ -107,9 +107,10 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Product BreadCrumb
 
 ### Global Widgets
-- Custom CSS (New)
-- Wrapper URL  (New)
-- CSS Transform  (New)
+- Custom CSS 
+- Wrapper URL  
+- CSS Transform
+- Tabs Feature Extended (New)
 
 
 
@@ -138,6 +139,10 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 
 ## Changelog
+## 1.0.6
+- Copyright Widget
+
+
 ## 1.0.5 - 17 Dec 2024
 - New Regular Widgets
 - Global Widgets
