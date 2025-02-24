@@ -102,6 +102,21 @@ class Main extends Widget_Base
             ]
         );
 
+        // Tag
+        $this->add_control(
+            'primekit_copyright_tag',
+            [
+                'label' => esc_html__('Tag', 'primekit-addons'),
+                'type' => Controls_Manager::SELECT,
+                'options' => [
+                    'p' => esc_html__('P', 'primekit-addons'),
+                    'span' => esc_html__('Span', 'primekit-addons'),
+                    'div' => esc_html__('Div', 'primekit-addons'),
+                ],
+                'default' => 'p',
+            ]
+        );
+
         $this->end_controls_section(); // End Section
 
         // Start Section for Style
