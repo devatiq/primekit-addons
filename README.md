@@ -46,8 +46,8 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 ### Form Widgets
 - [Comment Form](https://demo.primekitaddons.com/widgets/comment-form-elementor-widget/)
 - [Contact Form 7 Style](https://demo.primekitaddons.com/widgets/contact-form-7-style-elementor-widget/)
-- [Gravity Form (New)](https://demo.primekitaddons.com/widgets/gravity-form-widget/)
-- [Mailchimp (New)](https://demo.primekitaddons.com/widgets/mailchimp-widget/)
+- [Gravity Form](https://demo.primekitaddons.com/widgets/gravity-form-widget/)
+- [Mailchimp](https://demo.primekitaddons.com/widgets/mailchimp-widget/)
 
 ### Creative Design Widgets
 - [Advanced Icon Box](https://demo.primekitaddons.com/widgets/advanced-icon-box-elementor-widget/)
@@ -58,7 +58,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 ### Business Widgets
 - [Business Hours](https://demo.primekitaddons.com/widgets/business-hours-elementor-widget/)
-- [Cost Estimation (New)](https://demo.primekitaddons.com/widgets/cost-estimation-widget/)
+- [Cost Estimation](https://demo.primekitaddons.com/widgets/cost-estimation-widget/)
 - [Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table-elementor-widget/)
 
 ### Navigation and Branding Widgets
@@ -81,7 +81,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Post Category List](https://demo.primekitaddons.com/widgets/post-category-list-elementor-widget/)
 - [Post Meta Info](https://demo.primekitaddons.com/widgets/post-meta-elementor-widget/)
 - [Post Title](https://demo.primekitaddons.com/widgets/post-title-elementor-widget/)
-- [Post Slider (New)](https://demo.primekitaddons.com/widgets/posts-slider-widget/)
+- [Post Slider](https://demo.primekitaddons.com/widgets/posts-slider-widget/)
 
 ### Social and Sharing
 - [Social Share](https://demo.primekitaddons.com/widgets/social-share-elementor-widget/)
@@ -89,7 +89,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 ### Team and Testimonials
 - [Team Member](https://demo.primekitaddons.com/widgets/team-member-elementor-widget/)
-- Testimonial Carousel (New)
+- Testimonial Carousel
 
 ### WooCommerce Widgets
 - Add to Cart
@@ -110,7 +110,9 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Custom CSS 
 - Wrapper URL  
 - CSS Transform
-- Tabs Feature Extended (New)
+
+### Extended Existing Widgets 
+- Added Text Editor in Tabs Widget
 
 
 

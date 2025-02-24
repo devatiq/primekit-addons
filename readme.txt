@@ -90,6 +90,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Template Slider](https://demo.primekitaddons.com/widgets/template-slider-widget/)
 - [WordPress Menu](https://demo.primekitaddons.com/widgets/wordpress-menu-elementor-widget/)
 - Testimonial Carousel
+- Copyright Widget
 
 
 ==WooCommerce Widgets==
@@ -108,11 +109,12 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - Product BreadCrumb
 
 ==Global Widgets==
-- Custom CSS (New)
-- Wrapper URL  (New)
-- CSS Transform  (New)
+- Custom CSS 
+- Wrapper URL  
+- CSS Transform
 
-
+== Extended Existing Widgets ==
+- Added Text Editor in Tabs Widget
 
 ==Why Choose PrimeKit Addons?==
 With **[PrimeKit Addons](https://primekitaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **PrimeKit Addons**.
@@ -153,6 +155,10 @@ Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without
 Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
 
 == Changelog ==
+
+= 1.0.6 =
+- Copyright Widget
+
 = 1.0.5 - 17 Dec 2024 =
 - New Regular Widgets
 
