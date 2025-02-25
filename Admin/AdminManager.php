@@ -99,7 +99,7 @@ class AdminManager
         $this->ActionHooks = new ActionHooks();
         $this->ThemeBuilder = new ThemeBuilder();
         $this->MetaBox = new MetaBox();
-        $this->Templates = new Templates();
+        //$this->Templates = new Templates();
     }
 
 
@@ -194,7 +194,7 @@ class AdminManager
      *
      * @return void
      */
-    function tracker_primekit_addons()
+   public function tracker_primekit_addons()
     {
 
         $client = new \Appsero\Client('1be56cc3-aaf0-4840-b551-088e690dbaee', 'PrimeKit Addons and Templates', PRIMEKIT_FILE);
