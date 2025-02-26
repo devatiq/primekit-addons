@@ -1,8 +1,12 @@
 <?php
 /**
- * Library API class for PrimeKit Addons
+ * Library_Source.php
  *
- * @package PrimeKit
+ * This file contains the Library_Source class, which extends the Elementor TemplateLibrary Source_Base class.
+ * It is responsible for handling the PrimeKit Template Library data and making it available to the Elementor Template Library.
+ *
+ * @package PrimeKit\Admin\Inc\Templates
+ * @since 1.0.0
  */
 
 namespace PrimeKit\Admin\Inc\Templates;
@@ -11,6 +15,15 @@ use Elementor\TemplateLibrary\Source_Base;
 
 defined('ABSPATH') || die();
 
+/**
+ * Class Library_Source
+ *
+ * This class extends the Elementor TemplateLibrary Source_Base class.
+ * It is responsible for handling the PrimeKit Template Library data and making it available to the Elementor Template Library.
+ *
+ * @package PrimeKit\Admin\Inc\Templates
+ * @since 1.0.0
+ */
 class Library_Source extends Source_Base
 {
     const LIBRARY_CACHE_KEY = 'primekit_library_cache';

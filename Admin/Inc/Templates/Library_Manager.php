@@ -1,8 +1,13 @@
 <?php
 /**
- * Library Manager for PrimeKit Addons
+ * Library Manager
  *
- * @package PrimeKit
+ * This file contains the class that is responsible for managing the PrimeKit library
+ * (Template Library). It handles the initialization of the library, printing the
+ * template views, and registering the required AJAX actions.
+ *
+ * @package PrimeKit\Admin/Inc/Templates
+ * @since 1.0.0
  */
 
 namespace PrimeKit\Admin\Inc\Templates;
@@ -11,6 +16,20 @@ use Elementor\Core\Common\Modules\Ajax\Module as Ajax;
 
 defined('ABSPATH') || exit;
 
+/**
+ * Class Library_Manager
+ *
+ * This class is responsible for managing the PrimeKit library (Template Library).
+ * It handles the initialization of the library, printing the template views, and registering
+ * the required AJAX actions.
+ *
+ * @package PrimeKit\Admin/Inc/Templates
+ * @since 1.0.0
+ *
+ * @method static init() Initialize the library.
+ * @method static print_template_views() Print the template views.
+ * @method static register_ajax_actions() Register the required AJAX actions.
+ */
 class Library_Manager
 {
     protected static $source = null;
