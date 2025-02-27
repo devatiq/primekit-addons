@@ -38,7 +38,7 @@ class Assets
     public function __construct()
     {
         add_action('elementor/editor/after_enqueue_scripts', array($this, 'template_editor_scripts'));
-        add_action('elementor/editor/after_enqueue_scripts', array($this, 'template_editor_styles'));
+        add_action('elementor/editor/after_enqueue_styles', array($this, 'template_editor_styles'));
     }
 
 
@@ -68,7 +68,6 @@ class Assets
             'ajaxurl' => admin_url('admin-ajax.php'),
             'security' => wp_create_nonce('primekit_ajax_nonce'),
         ]);
-        
 
     }
 
