@@ -32,13 +32,27 @@ $slider_settings = wp_json_encode([
 // Create a unique ID for the slider instance
 $unique_id = $this->get_id();
 
-$arge = array(
+$selected_categories = !empty($settings['post_categories']) ? $settings['post_categories'] : [];
+
+$args = array(
     'post_type' => 'post',
     'posts_per_page' => 10,
     'ignore_sticky_posts' => true
 );
 
-$posts = new WP_Query($arge);
+// If categories are selected, filter posts by those categories
+if (!empty($selected_categories)) {
+    $args['tax_query'] = [
+        [
+            'taxonomy' => 'category',
+            'field'    => 'term_id',
+            'terms'    => $selected_categories,
+        ],
+    ];
+}
+
+
+$posts = new WP_Query($args);
 ?>
 
 <!-- Posts Slider Area-->
