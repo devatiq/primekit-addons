@@ -335,13 +335,17 @@ class Main extends Widget_Base
             ]
         );
 
-        // nav top indent
+        // nav prev top indent
         $this->add_responsive_control(
-            'nav_top_indent',
+            'nav_prev_top_indent',
             [
-                'label' => esc_html__('Top Indent', 'primekit-addons'),
+                'label' => esc_html__('Prev Top Indent', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 0,
+                ],
                 'range' => [
                     'px' => [
                         'min' => -1000,
@@ -353,7 +357,34 @@ class Main extends Widget_Base
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .swiper-button-next, {{WRAPPER}} .swiper-button-prev' => 'top: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .swiper-button-prev' => 'top: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );    
+
+        // nav next top indent
+        $this->add_responsive_control(
+            'nav_next_top_indent',
+            [
+                'label' => esc_html__('Next Top Indent', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 0,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -1000,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => -50,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .swiper-button-next' => 'top: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );        
