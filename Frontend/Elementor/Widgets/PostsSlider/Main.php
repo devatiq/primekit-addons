@@ -50,7 +50,26 @@ class Main extends Widget_Base
         return ['primekit-swiper'];
     }
 
-
+    /**
+     * Retrieve a list of categories.
+     *
+     * @since 1.0.0
+     * @return array
+     */
+    private function get_post_categories()
+    {
+        $categories = get_categories(['hide_empty' => false]);
+        $options = [];
+    
+        if (!empty($categories)) {
+            foreach ($categories as $category) {
+                $options[$category->term_id] = $category->name;
+            }
+        }
+    
+        return $options;
+    }
+    
     /**
      * Register the widget controls.
      *
@@ -69,7 +88,18 @@ class Main extends Widget_Base
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
-
+        $this->add_control(
+            'post_categories',
+            [
+                'label' => __('Select Post Categories', 'primekit-addons'),
+                'type' => Controls_Manager::SELECT2,
+                'options' => $this->get_post_categories(),
+                'multiple' => true,
+                'label_block' => true,
+                'description' => __('Choose categories to display posts from.', 'primekit-addons'),
+            ]
+        );
+        
         $this->add_control(
             'slides_per_view',
             [
