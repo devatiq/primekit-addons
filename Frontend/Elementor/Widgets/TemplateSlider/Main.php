@@ -9,6 +9,7 @@ use Elementor\Controls_Manager;
 use Elementor\Plugin;
 use Elementor\Repeater;
 use Elementor\Group_Control_Background;
+use Elementor\Group_Control_Border;
 
 
 class Main extends Widget_Base
@@ -18,37 +19,37 @@ class Main extends Widget_Base
     {
         return 'primekit-TemplateSlider';
     }
-    
+
     public function get_title()
     {
         return esc_html__('Template Slider', 'primekit-addons');
     }
-    
+
     public function get_icon()
     {
         return 'eicon-testimonial-carousel primekit-addons-icon';
     }
-    
+
     public function get_categories()
     {
         return ['primekit-category'];
     }
-    
+
     public function get_keywords()
     {
         return ['prime', 'carousel', 'slider'];
     }
-    
+
     public function get_script_depends()
     {
         return ['primekit-swiper', 'primekit-template-slider'];
     }
-    
+
     public function get_style_depends()
     {
         return ['primekit-swiper'];
     }
-    
+
 
     /**
      * Register the widget controls.
@@ -360,7 +361,7 @@ class Main extends Widget_Base
                     '{{WRAPPER}} .swiper-button-prev' => 'top: {{SIZE}}{{UNIT}};',
                 ],
             ]
-        );    
+        );
 
         // nav next top indent
         $this->add_responsive_control(
@@ -387,8 +388,28 @@ class Main extends Widget_Base
                     '{{WRAPPER}} .swiper-button-next' => 'top: {{SIZE}}{{UNIT}};',
                 ],
             ]
-        );        
+        );
 
+        $this->add_responsive_control(
+            'nav_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-template-slider-nav > div' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'nav_border',
+                'label' => esc_html__('Border', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-template-slider-nav > div',
+            ]
+        );
 
         $this->start_controls_tabs('nav_tabs');
 
@@ -452,6 +473,16 @@ class Main extends Widget_Base
                 'types' => ['classic', 'gradient'],
                 'exclude' => ['image'],
                 'selector' => '{{WRAPPER}} .primekit-template-slider-nav .swiper-button-next:hover, {{WRAPPER}} .primekit-template-slider-nav .swiper-button-prev:hover',
+            ]
+        );
+        $this->add_control(
+            'nav_hover_border_color',
+            [
+                'label' => esc_html__('Border Hover Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-template-slider-nav > div:hover' => 'border-color: {{VALUE}};',
+                ],
             ]
         );
 
