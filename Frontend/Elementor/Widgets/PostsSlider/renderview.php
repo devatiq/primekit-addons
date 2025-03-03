@@ -73,7 +73,7 @@ $posts = new WP_Query($args);
                         <!-- Slider Thumbnail -->
                         <div class="primekit-posts-slider-thumbnail">
                             <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail('full'); ?>
+                                <?php the_post_thumbnail('medium'); ?>
                             <?php else: ?>
                                 <img src="<?php echo esc_url($fallback_image); ?>" alt="<?php the_title(); ?>">
                             <?php endif; ?>

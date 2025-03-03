@@ -1,8 +1,5 @@
 /**
- * Initialize a Swiper instance for the posts slider.
- *
- * Retrieves the settings from the data-settings attribute of the container element,
- * parses the JSON string, and passes the settings to Swiper.
+ * Initialize a Swiper instance for the posts slider with a smooth loading effect.
  *
  * @param {String} uniqueId - The unique ID of the posts slider element.
  */
@@ -10,12 +7,16 @@ function PrimekitPostsSliderInitialize(uniqueId) {
     'use strict';
 
     var slider = document.getElementById(uniqueId);
+    if (!slider) return;
 
-    // Retrieve the settings from the data-settings attribute
+    // Hide the slider initially to prevent flickering
+    slider.style.opacity = "0";
+
+    // Retrieve settings from the data-settings attribute
     var settings = slider.getAttribute('data-settings');
     var parsedSettings;
 
-    // Parse the settings JSON string
+    // Parse JSON settings
     try {
         parsedSettings = JSON.parse(settings);
     } catch (e) {
@@ -23,36 +24,56 @@ function PrimekitPostsSliderInitialize(uniqueId) {
         return;
     }
 
-    // Initialize Swiper using the parsed settings and custom class names
-    new Swiper(slider.querySelector('.primekit-posts-slider-container'), {
-        loop: parsedSettings.loop || false,
-        autoplay: parsedSettings.autoplay || false,
-        pagination: {
-            el: slider.querySelector('.swiper-pagination'),
-            clickable: true,
-        },
-        navigation: {
-            nextEl: slider.querySelector('.swiper-button-next'),
-            prevEl: slider.querySelector('.swiper-button-prev'),
-        },
+    // Wait for images to load before initializing Swiper
+    let imagesLoaded = 0;
+    const totalImages = slider.querySelectorAll('img').length;
 
-        // Custom class names for container, wrapper, and slides
-        containerModifierClass: 'primekit-posts-slider-container-', // Prefix class for container
-        wrapperClass: 'primekit-posts-slider-wrapper',              // Custom wrapper class
-        slideClass: 'primekit-posts-slider-single-item',             // Custom slide class
+    function checkAllImagesLoaded() {
+        imagesLoaded++;
+        if (imagesLoaded >= totalImages) {
+            // Initialize Swiper once all images are loaded
+            new Swiper(slider.querySelector('.primekit-posts-slider-container'), {
+                loop: parsedSettings.loop || false,
+                autoplay: parsedSettings.autoplay || false,
+                pagination: {
+                    el: slider.querySelector('.swiper-pagination'),
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: slider.querySelector('.swiper-button-next'),
+                    prevEl: slider.querySelector('.swiper-button-prev'),
+                },
+                containerModifierClass: 'primekit-posts-slider-container-',
+                wrapperClass: 'primekit-posts-slider-wrapper',
+                slideClass: 'primekit-posts-slider-single-item',
+                breakpoints: {
+                    1024: { slidesPerView: parseInt(parsedSettings.slidesPerView) || 3 },
+                    768: { slidesPerView: parseInt(parsedSettings.slidesPerViewTablet) || 2 },
+                    480: { slidesPerView: parseInt(parsedSettings.slidesPerViewMobile) || 1 }
+                }
+            });
 
-        breakpoints: {
-            1024: {
-                slidesPerView: parseInt(parsedSettings.slidesPerView) || 3,
-            },
-            768: {
-                slidesPerView: parseInt(parsedSettings.slidesPerViewTablet) || 2,
-            },
-            480: {
-                slidesPerView: parseInt(parsedSettings.slidesPerViewMobile) || 1,
-            }
+            // Fade in slider after initialization
+            setTimeout(() => {
+                slider.style.opacity = "1";
+                slider.style.transition = "opacity 0.3s ease-in-out";
+            }, 100);
         }
-    });
+    }
+
+    // If no images exist, initialize immediately
+    if (totalImages === 0) {
+        checkAllImagesLoaded();
+    } else {
+        slider.querySelectorAll('img').forEach(img => {
+            if (img.complete) {
+                checkAllImagesLoaded();
+            } else {
+                img.addEventListener('load', checkAllImagesLoaded);
+                img.addEventListener('error', checkAllImagesLoaded); // Handle missing images
+            }
+        });
+    }
 }
 
 // Activate the posts slider on Elementor frontend
@@ -60,8 +81,8 @@ jQuery(window).on('elementor/frontend/init', () => {
     elementorFrontend.hooks.addAction('frontend/element_ready/global', ($scope) => {
         var sliderElement = $scope.find('.primekit-posts-slider-area');
         if (sliderElement.length > 0 && sliderElement.attr('id')) {
-            var uniqueId = sliderElement.attr('id');  // Get the unique ID           
-            PrimekitPostsSliderInitialize(uniqueId);  // Initialize the Swiper with the unique ID
+            var uniqueId = sliderElement.attr('id');
+            PrimekitPostsSliderInitialize(uniqueId);
         }
     });
 });
