@@ -1,18 +1,21 @@
 /**
- * Initialize Swiper for Primekit Template Slider.
+ * Initialize a Swiper instance for the given template slider.
  *
- * @param {String} uniqueId - The unique ID of the slider.
+ * Retrieves the settings from the data-settings attribute of the container element,
+ * parses the JSON string, and passes the settings to Swiper.
+ *
+ * @param {String} uniqueId - The unique ID of the template slider element.
  */
 function PrimekitSliderInitialize(uniqueId) {
     'use strict';
 
     var slider = document.getElementById(uniqueId);
-    if (!slider) return;
 
     // Retrieve the settings from the data-settings attribute
     var settings = slider.getAttribute('data-settings');
     var parsedSettings;
 
+    // Parse the settings JSON string
     try {
         parsedSettings = JSON.parse(settings);
     } catch (e) {
@@ -20,73 +23,45 @@ function PrimekitSliderInitialize(uniqueId) {
         return;
     }
 
-    function initializeSwiper() {
-        var swiperContainer = slider.querySelector('.primekit-template-swiper-container');
+    // Initialize Swiper using the parsed settings and custom class names
+    new Swiper(slider.querySelector('.primekit-template-swiper-container'), {
+        loop: parsedSettings.loop || false,
+        autoplay: parsedSettings.autoplay || false,
+        pagination: parsedSettings.pagination ? {
+            el: slider.querySelector('.swiper-pagination'),
+            clickable: true,
+        } : false,
+        navigation: parsedSettings.arrows ? {
+            nextEl: slider.querySelector('.swiper-button-next'),
+            prevEl: slider.querySelector('.swiper-button-prev'),
+        } : false,
 
-        // Ensure Swiper container exists before initializing
-        if (!swiperContainer) {
-            console.error("Swiper container not found for:", uniqueId);
-            return;
-        }
+        // Custom class names for container, wrapper, and slides
+        containerModifierClass: 'primekit-template-swiper-container-', // Prefix class for container
+        wrapperClass: 'primekit-template-swiper-wrapper',              // Custom wrapper class
+        slideClass: 'primekit-template-swiper-slide',                  // Custom slide class
 
-        // Initialize Swiper
-        new Swiper(swiperContainer, {
-            loop: parsedSettings.loop || false,
-            autoplay: parsedSettings.autoplay || false,
-            pagination: parsedSettings.pagination ? {
-                el: slider.querySelector('.swiper-pagination'),
-                clickable: true,
-            } : false,
-            navigation: parsedSettings.arrows ? {
-                nextEl: slider.querySelector('.swiper-button-next'),
-                prevEl: slider.querySelector('.swiper-button-prev'),
-            } : false,
-            breakpoints: {
-                1024: { slidesPerView: parseInt(parsedSettings.slidesPerView) || 3 },
-                768: { slidesPerView: parseInt(parsedSettings.slidesPerViewTablet) || 2 },
-                320: { slidesPerView: parseInt(parsedSettings.slidesPerViewMobile) || 1 }
+        breakpoints: {
+            1024: {
+                slidesPerView: parseInt(parsedSettings.slidesPerView) || 3,
+            },
+            768: {
+                slidesPerView: parseInt(parsedSettings.slidesPerViewTablet) || 2,
+            },
+            320: {
+                slidesPerView: parseInt(parsedSettings.slidesPerViewMobile) || 1,
             }
-        });
-
-        // Reveal the slider after Swiper is initialized
-        setTimeout(() => {
-            slider.style.opacity = "1";
-            slider.style.transition = "opacity 0.3s ease-in-out";
-        }, 100);
-    }
-
-    // Check if template content exists, then initialize Swiper
-    function waitForTemplateContent(attempts = 0) {
-        var swiperWrapper = slider.querySelector('.primekit-template-swiper-wrapper');
-
-        if (swiperWrapper && swiperWrapper.children.length > 0) {
-            initializeSwiper();
-        } else if (attempts < 20) {
-            // Retry checking every 200ms (max 20 attempts = 4 seconds)
-            setTimeout(() => {
-                waitForTemplateContent(attempts + 1);
-            }, 200);
-        } else {
-            console.warn("Swiper initialization timed out for:", uniqueId);
-            initializeSwiper(); // Force initialize if content is still missing
         }
-    }
-
-    // Start checking for template readiness
-    waitForTemplateContent();
+    });
 }
 
-// Elementor Hook for Primekit Template Slider
+
 jQuery(window).on('elementor/frontend/init', () => {
     elementorFrontend.hooks.addAction('frontend/element_ready/global', ($scope) => {
         var sliderElement = $scope.find('.primekit-addons-template-slider-wrapper');
         if (sliderElement.length > 0 && sliderElement.attr('id')) {
-            var uniqueId = sliderElement.attr('id');
-
-            // Ensure Swiper only initializes if content is ready
-            setTimeout(() => {
-                PrimekitSliderInitialize(uniqueId);
-            }, 500);
+            var uniqueId = sliderElement.attr('id');  // Get the unique ID           
+            PrimekitSliderInitialize(uniqueId);  // Initialize the Swiper with the unique ID
         }
     });
 });
