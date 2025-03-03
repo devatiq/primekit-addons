@@ -35,6 +35,7 @@ function PrimekitPostsSliderInitialize(uniqueId) {
             new Swiper(slider.querySelector('.primekit-posts-slider-container'), {
                 loop: parsedSettings.loop || false,
                 autoplay: parsedSettings.autoplay || false,
+                autoHeight: true,
                 pagination: {
                     el: slider.querySelector('.swiper-pagination'),
                     clickable: true,
