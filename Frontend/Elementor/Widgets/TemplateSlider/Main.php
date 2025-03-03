@@ -343,10 +343,6 @@ class Main extends Widget_Base
                 'label' => esc_html__('Prev Top Indent', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 0,
-                ],
                 'range' => [
                     'px' => [
                         'min' => -1000,
@@ -370,10 +366,6 @@ class Main extends Widget_Base
                 'label' => esc_html__('Next Top Indent', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
-                'default' => [
-                    'unit' => 'px',
-                    'size' => 0,
-                ],
                 'range' => [
                     'px' => [
                         'min' => -1000,
