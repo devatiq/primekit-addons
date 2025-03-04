@@ -2,7 +2,8 @@
 
 namespace PrimeKit\Frontend\Elementor\Widgets\CTA;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -16,27 +17,27 @@ class Main extends Widget_Base
     {
         return 'primekit-cta';
     }
-    
+
     public function get_title()
     {
         return esc_html__('Call To Action', 'primekit-addons');
     }
-    
+
     public function get_icon()
     {
         return 'eicon-call-to-action primekit-addons-icon';
     }
-    
+
     public function get_categories()
     {
         return ['primekit-category'];
     }
-    
+
     public function get_keywords()
     {
         return ['prime', 'cta', 'call to action', 'call'];
-    }    
-    
+    }
+
     /**
      * Register the widget controls.
      */
@@ -142,12 +143,177 @@ class Main extends Widget_Base
         );
         $this->end_controls_section(); // End Section
 
+
+        // Ribbon Section
+        $this->start_controls_section(
+            'primekit_cta_ribbon_section',
+            [
+                'label' => esc_html__('Ribbon', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        // Rabbon Switch
+        $this->add_control(
+            'primekit_cta_ribbon_enable',
+            [
+                'label' => esc_html__('Enable Ribbon', 'primekit-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'primekit-addons'),
+                'label_off' => esc_html__('No', 'primekit-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+            ]
+        );
+
+        // Rabbon Text
+        $this->add_control(
+            'primekit_cta_ribbon_text',
+            [
+                'label' => esc_html__('Ribbon Text', 'primekit-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('Most popular', 'primekit-addons'),
+                'placeholder' => esc_html__('Type your ribbon text', 'primekit-addons'),
+                'label_block' => true,
+                'condition' => [
+                    'primekit_cta_ribbon_enable' => 'yes',
+                ],
+            ]
+        );
+
+        // Rabbon Position 
+        $this->add_control(
+            'primekit_cta_ribbon_position',
+            [
+                'label' => esc_html__('Ribbon Position', 'primekit-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'primekit-addons'),
+                        'icon' => 'eicon-h-align-left',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'primekit-addons'),
+                        'icon' => 'eicon-h-align-right',
+                    ],
+                ],
+                'default' => 'right',
+                'toggle' => true,
+                'condition' => [
+                    'primekit_cta_ribbon_enable' => 'yes',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Start Style Tab
+        $this->start_controls_section(
+            'primekit_cta_style_section',
+            [
+                'label' => esc_html__('CTA Box', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+        // Box Padding
+        $this->add_responsive_control(
+            'primekit_cta_box_padding',
+            [
+                'label' => esc_html__('Padding', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-cta-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        // Box Background Normal
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'primekit_cta_box_background_normal',
+                'label' => esc_html__('Box Background', 'primekit-addons'),
+                'types' => ['classic', 'gradient'],
+                'selector' => '{{WRAPPER}} .primekit-cta-area:before',
+                'fields_options' => [
+                    'background' => [
+                        'label' => esc_html__('Box Background', 'primekit-addons'),
+                    ]
+                ]
+            ]
+        );
+
+        // Zoom Effect Disable Field
+        $this->add_control(
+            'primekit_cta_zoom_effect_disable',
+            [
+                'label' => esc_html__('Disable Zoom Effect', 'primekit-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'primekit-addons'),
+                'label_off' => esc_html__('No', 'primekit-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+            ]
+        );
+
+        //box border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'primekit_cta_box_border',
+                'label' => esc_html__('Box Border', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-cta-area',
+            ]
+        );
+        $this->add_control(
+            'primekit_cta_box_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-cta-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+
+        // Content Alignment Control
+        $this->add_control(
+            'primekit_cta_content_alignment',
+            [
+                'label' => esc_html__('Content Alignment', 'primekit-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'primekit-addons'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'primekit-addons'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'primekit-addons'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description' => 'text-align: {{VALUE}};',
+                ],
+                'toggle' => true,
+            ]
+        );
+
+        //end box style tab
+        $this->end_controls_section();
         // Start Section for Alignment
         $this->start_controls_section(
             'primekit_elementor_cta_alignment',
             [
                 'label' => esc_html__('Alignment', 'primekit-addons'),
-                'tab' => Controls_Manager::TAB_CONTENT,                
+                'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
         // Content Direction
@@ -213,7 +379,7 @@ class Main extends Widget_Base
                         'title' => esc_html__('Space Evenly', 'primekit-addons'),
                         'icon' => 'eicon-flex eicon-justify-space-evenly-h',
                     ],
-                ],                
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-cta-area' => 'justify-content: {{VALUE}};',
                 ],
@@ -242,7 +408,7 @@ class Main extends Widget_Base
                         'title' => esc_html__('End', 'primekit-addons'),
                         'icon' => 'eicon-v-align-bottom',
                     ],
-                ],                
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-cta-area' => 'align-items: {{VALUE}};',
                 ],
@@ -271,7 +437,7 @@ class Main extends Widget_Base
                         'title' => esc_html__('End', 'primekit-addons'),
                         'icon' => 'eicon-h-align-right',
                     ],
-                ],                
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-cta-area' => 'align-items: {{VALUE}};',
                 ],
@@ -347,197 +513,31 @@ class Main extends Widget_Base
                     '%' => [
                         'min' => 0,
                         'max' => 100,
-                    ],                    
+                    ],
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-cta-area .primekit-cta-button-area' => 'gap: {{SIZE}}{{UNIT}};',
                 ]
             ]
         );
-       
-		$this->end_controls_section();
-
-        // Ribbon Section
-        $this->start_controls_section(
-            'primekit_cta_ribbon_section',
-            [
-                'label' => esc_html__('Ribbon', 'primekit-addons'),
-                'tab' => Controls_Manager::TAB_CONTENT,
-            ]
-        );
-
-        // Rabbon Switch
-        $this->add_control(
-            'primekit_cta_ribbon_enable',
-            [
-                'label' => esc_html__('Enable Ribbon', 'primekit-addons'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'primekit-addons'),
-                'label_off' => esc_html__('No', 'primekit-addons'),
-                'return_value' => 'yes',
-                'default' => 'no',
-            ]
-        );
-
-        // Rabbon Text
-        $this->add_control(
-            'primekit_cta_ribbon_text',
-            [
-                'label' => esc_html__('Ribbon Text', 'primekit-addons'),
-                'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Most popular', 'primekit-addons'),
-                'placeholder' => esc_html__('Type your ribbon text', 'primekit-addons'),
-                'label_block' => true,
-                'condition' => [
-                    'primekit_cta_ribbon_enable' => 'yes',
-                ],
-            ]
-        );
-
-        // Rabbon Position 
-        $this->add_control(
-            'primekit_cta_ribbon_position',
-            [
-                'label' => esc_html__('Ribbon Position', 'primekit-addons'),
-                'type' => Controls_Manager::CHOOSE,
-                'options' => [
-                    'left' => [
-                        'title' => esc_html__('Left', 'primekit-addons'),
-                        'icon' => 'eicon-h-align-left',
-                    ],
-                    'right' => [
-                        'title' => esc_html__('Right', 'primekit-addons'),
-                        'icon' => 'eicon-h-align-right',
-                    ],
-                ],
-                'default' => 'right',
-                'toggle' => true,
-                'condition' => [
-                    'primekit_cta_ribbon_enable' => 'yes',
-                ],
-            ]
-        );
 
         $this->end_controls_section();
-
-        // Start Style Tab
+        // Heading style tab
         $this->start_controls_section(
-            'primekit_cta_style_section',
-            [
-                'label' => esc_html__('CTA Box Style', 'primekit-addons'),
-                'tab' => Controls_Manager::TAB_STYLE,
-            ]
-        );
-        // Box Padding
-        $this->add_responsive_control(
-            'primekit_cta_box_padding',
-            [
-                'label' => esc_html__('Padding', 'primekit-addons'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
-                'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-        // Box Background Normal
-        $this->add_group_control(
-            Group_Control_Background::get_type(),
-            [
-                'name' => 'primekit_cta_box_background_normal',
-                'label' => esc_html__('Box Background', 'primekit-addons'),
-                'types' => ['classic', 'gradient'],                
-                'selector' => '{{WRAPPER}} .primekit-cta-area:before',
-                'fields_options' => [
-					'background' => [
-						'label' => esc_html__( 'Box Background', 'primekit-addons' ),
-					]
-				]
-            ]
-        );
-
-        // Zoom Effect Disable Field
-        $this->add_control(
-            'primekit_cta_zoom_effect_disable',
-            [
-                'label' => esc_html__('Disable Zoom Effect', 'primekit-addons'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'primekit-addons'),
-                'label_off' => esc_html__('No', 'primekit-addons'),
-                'return_value' => 'yes',
-                'default' => 'no',               
-            ]
-        );
-
-        //box border
-        $this->add_group_control(
-            Group_Control_Border::get_type(),
-            [
-                'name' => 'primekit_cta_box_border',
-                'label' => esc_html__('Box Border', 'primekit-addons'),
-                'selector' => '{{WRAPPER}} .primekit-cta-area',               
-            ]
-        );
-        $this->add_control(
-            'primekit_cta_box_border_radius',
-            [
-                'label' => esc_html__('Border Radius', 'primekit-addons'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%'],
-                'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
-       
-        // Content Alignment Control
-        $this->add_control(
-            'primekit_cta_content_alignment',
-            [
-                'label' => esc_html__('Content Alignment', 'primekit-addons'),
-                'type' => Controls_Manager::CHOOSE,
-                'options' => [
-                    'left' => [
-                        'title' => esc_html__('Left', 'primekit-addons'),
-                        'icon' => 'eicon-text-align-left',
-                    ],
-                    'center' => [
-                        'title' => esc_html__('Center', 'primekit-addons'),
-                        'icon' => 'eicon-text-align-center',
-                    ],
-                    'right' => [
-                        'title' => esc_html__('Right', 'primekit-addons'),
-                        'icon' => 'eicon-text-align-right',
-                    ],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading' => 'text-align: {{VALUE}};',
-                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description' => 'text-align: {{VALUE}};',
-                ],
-                'toggle' => true,
-            ]
-        );
-
-        //end box style tab
-        $this->end_controls_section();
-
-         // Heading style tab
-         $this->start_controls_section(
             'primekit_cta_heading_style_section',
             [
-                'label' => esc_html__('Heading Style', 'primekit-addons'),
+                'label' => esc_html__('Heading', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
-         // Sub Heading typography
-         $this->add_group_control(
+        // Sub Heading typography
+        $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_cta_sub_heading_typography',
                 'label' => esc_html__('Sub Heading Typography', 'primekit-addons'),
-                'selector' => '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading h4',                 
+                'selector' => '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading h4',
             ]
         );
         // Sub Heading Color
@@ -582,7 +582,7 @@ class Main extends Widget_Base
             [
                 'name' => 'primekit_cta_heading_typography',
                 'label' => esc_html__('Heading Typography', 'primekit-addons'),
-                'selector' => '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading h2', 
+                'selector' => '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading h2',
             ]
         );
 
@@ -594,7 +594,7 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading h2' => 'color: {{VALUE}};', 
+                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-heading h2' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -631,18 +631,18 @@ class Main extends Widget_Base
         $this->start_controls_section(
             'primekit_cta_desc_style_section',
             [
-                'label' => esc_html__('Description Style', 'primekit-addons'),
+                'label' => esc_html__('Description', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
-         // Description typography
-         $this->add_group_control(
+        // Description typography
+        $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_cta_description_typography',
                 'label' => esc_html__('Description Typography', 'primekit-addons'),
-                'selector' => '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description p, {{WRAPPER}} .primekit-cta-content-area .primekit-cta-description', 
+                'selector' => '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description p, {{WRAPPER}} .primekit-cta-content-area .primekit-cta-description',
             ]
         );
 
@@ -654,8 +654,8 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description p' => 'color: {{VALUE}};', 
-                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description' => 'color: {{VALUE}};', 
+                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description p' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-cta-content-area .primekit-cta-description' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -696,28 +696,7 @@ class Main extends Widget_Base
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
-        // Button Direction
-        $this->add_responsive_control(
-            'primekit_cta_btn_direction',
-            [
-                'label' => esc_html__('Direction', 'primekit-addons'),
-                'type' => Controls_Manager::CHOOSE,
-                'label_block' => false,
-                'options' => [
-                    'row' => [
-                        'title' => esc_html__('Horizontal', 'primekit-addons'),
-                        'icon' => 'eicon-justify-start-h',
-                    ],
-                    'column' => [
-                        'title' => esc_html__('Vertical', 'primekit-addons'),
-                        'icon' => 'eicon-justify-start-v',
-                    ],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-button-area' => 'flex-direction: {{VALUE}};',
-                ],
-            ]
-        );
+
         // Button Alignment
         $this->add_responsive_control(
             'primekit_cta_button_alignment',
@@ -755,6 +734,10 @@ class Main extends Widget_Base
                 'selectors' => [
                     '{{WRAPPER}} .primekit-cta-button-area' => 'justify-content: {{VALUE}};',
                 ],
+                'condition' => [
+                    'primekit_cta_content_direction' => ['column', 'reverse-column'],
+                ],
+
             ]
         );
         // Button Width
@@ -841,7 +824,7 @@ class Main extends Widget_Base
             [
                 'name' => 'primekit_cta_button_typography',
                 'label' => esc_html__('Button Typography', 'primekit-addons'),
-                'selector' => '{{WRAPPER}} .primekit-cta-button-area .primekit-cta-button', 
+                'selector' => '{{WRAPPER}} .primekit-cta-button-area .primekit-cta-button',
             ]
         );
 
@@ -869,15 +852,15 @@ class Main extends Widget_Base
         );
         // Button Background
         $this->add_group_control(
-			Group_Control_Background::get_type(),
-			[
-				'name' => 'primekit_cta_button_background_color',
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'primekit_cta_button_background_color',
                 'label' => esc_html__('Button Background', 'primekit-addons'),
-				'types' => [ 'classic', 'gradient'],
-                'exclude' => [ 'image' ],
-				'selector' => '{{WRAPPER}} .primekit-cta-button-area a.primekit-cta-button',
-			]
-		);
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .primekit-cta-button-area a.primekit-cta-button',
+            ]
+        );
 
         $this->end_controls_tab(); // end normal tab
 
@@ -906,8 +889,8 @@ class Main extends Widget_Base
             [
                 'name' => 'primekit_cta_button_hover_background',
                 'label' => esc_html__('Hover Background', 'primekit-addons'),
-                'types' => [ 'classic', 'gradient'],
-                'exclude' => [ 'image' ],
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
                 'selector' => '{{WRAPPER}} .primekit-cta-button-area a.primekit-cta-button:hover',
             ]
         );
@@ -971,8 +954,8 @@ class Main extends Widget_Base
             [
                 'name' => 'primekit_cta_ribbon_background',
                 'label' => esc_html__('Background', 'primekit-addons'),
-                'types' => ['classic', 'gradient'],    
-                'exclude' => [ 'image' ],                           
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
                 'selector' => '{{WRAPPER}} .primekit-cta-ribbon-area .primekit-cta-ribbon-text',
             ]
         );
