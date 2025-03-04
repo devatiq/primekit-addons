@@ -696,6 +696,28 @@ class Main extends Widget_Base
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
+        // Button Direction
+        $this->add_responsive_control(
+            'primekit_cta_btn_direction',
+            [
+                'label' => esc_html__('Direction', 'primekit-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'label_block' => false,
+                'options' => [
+                    'row' => [
+                        'title' => esc_html__('Horizontal', 'primekit-addons'),
+                        'icon' => 'eicon-justify-start-h',
+                    ],
+                    'column' => [
+                        'title' => esc_html__('Vertical', 'primekit-addons'),
+                        'icon' => 'eicon-justify-start-v',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-cta-button-area' => 'flex-direction: {{VALUE}};',
+                ],
+            ]
+        );
         // Button Alignment
         $this->add_responsive_control(
             'primekit_cta_button_alignment',
