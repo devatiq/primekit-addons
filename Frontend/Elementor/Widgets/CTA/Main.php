@@ -520,6 +520,50 @@ class Main extends Widget_Base
                 ]
             ]
         );
+        
+        // Button Alignment
+        $this->add_responsive_control(
+            'primekit_cta_button_alignment',
+            [
+                'label' => esc_html__('Button Alignment', 'primekit-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'label_block' => true,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'primekit-addons'),
+                        'icon' => 'eicon-justify-start-h',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'primekit-addons'),
+                        'icon' => 'eicon-justify-center-h',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'primekit-addons'),
+                        'icon' => 'eicon-justify-end-h',
+                    ],
+                    'space-between' => [
+                        'title' => esc_html__('Space Between', 'primekit-addons'),
+                        'icon' => 'eicon-justify-space-between-h',
+                    ],
+                    'space-around' => [
+                        'title' => esc_html__('Space Around', 'primekit-addons'),
+                        'icon' => 'eicon-justify-space-around-h',
+                    ],
+                    'space-evenly' => [
+                        'title' => esc_html__('Space Evenly', 'primekit-addons'),
+                        'icon' => 'eicon-justify-space-evenly-h',
+                    ],
+
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-cta-button-area' => 'justify-content: {{VALUE}};',
+                ],
+                'condition' => [
+                    'primekit_cta_content_direction' => ['column', 'reverse-column'],
+                ],
+
+            ]
+        );
 
         $this->end_controls_section();
         // Heading style tab
@@ -697,49 +741,6 @@ class Main extends Widget_Base
             ]
         );
 
-        // Button Alignment
-        $this->add_responsive_control(
-            'primekit_cta_button_alignment',
-            [
-                'label' => esc_html__('Alignment', 'primekit-addons'),
-                'type' => Controls_Manager::CHOOSE,
-                'label_block' => true,
-                'options' => [
-                    'left' => [
-                        'title' => esc_html__('Left', 'primekit-addons'),
-                        'icon' => 'eicon-justify-start-h',
-                    ],
-                    'center' => [
-                        'title' => esc_html__('Center', 'primekit-addons'),
-                        'icon' => 'eicon-justify-center-h',
-                    ],
-                    'right' => [
-                        'title' => esc_html__('Right', 'primekit-addons'),
-                        'icon' => 'eicon-justify-end-h',
-                    ],
-                    'space-between' => [
-                        'title' => esc_html__('Space Between', 'primekit-addons'),
-                        'icon' => 'eicon-justify-space-between-h',
-                    ],
-                    'space-around' => [
-                        'title' => esc_html__('Space Around', 'primekit-addons'),
-                        'icon' => 'eicon-justify-space-around-h',
-                    ],
-                    'space-evenly' => [
-                        'title' => esc_html__('Space Evenly', 'primekit-addons'),
-                        'icon' => 'eicon-justify-space-evenly-h',
-                    ],
-
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .primekit-cta-button-area' => 'justify-content: {{VALUE}};',
-                ],
-                'condition' => [
-                    'primekit_cta_content_direction' => ['column', 'reverse-column'],
-                ],
-
-            ]
-        );
         // Button Width
         $this->add_responsive_control(
             'primekit_cta_button_width',
