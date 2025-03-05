@@ -409,6 +409,77 @@ class Main extends Widget_Base
 
         $this->end_controls_section(); // End Style Section for input fields labels
 
+        
+        //start name field style section
+        $this->start_controls_section(
+            'name_field_style_section',
+            [
+                'label' => esc_html__('Name Field', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //name field width
+        $this->add_responsive_control(
+            'name_field_width',
+            [
+                'label' => esc_html__('Width', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 100,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .ginput_container_name input' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //name field padding
+        $this->add_responsive_control(
+            'name_field_padding',
+            [
+                'label' => esc_html__('Padding', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .ginput_container_name input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //name field border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'name_field_border',
+                'label' => esc_html__('Border', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-gravity-form-wrapper .ginput_container_name input',
+            ]
+        );
+
+        //name field border radius
+        $this->add_control(
+            'name_field_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .ginput_container_name input' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section(); // End Style Section for name field
+
         //start form fields style section
         $this->start_controls_section(
             'form_fields_style_section',
