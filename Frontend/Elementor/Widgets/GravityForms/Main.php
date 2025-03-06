@@ -825,6 +825,41 @@ class Main extends Widget_Base
 
         $this->end_controls_section(); // End Style Section for submit button
 
+        
+        //Style Section for Radio
+        $this->start_controls_section(
+            'radio_style_section',
+            [
+                'label' => esc_html__('Radio Button', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //Radio label color
+        $this->add_control(
+            'radio_label_color',
+            [
+                'label' => esc_html__('Label Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '',
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_radio .gform-field-label' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //Radio label typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'radio_label_typography',
+                'label' => esc_html__('Typography', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_radio .gform-field-label',
+            ]
+        );
+
+        $this->end_controls_section(); // End Style Section for radio
+
         //Style Section for Section Break
         $this->start_controls_section(
             'section_break_style_section',
