@@ -892,6 +892,24 @@ class Main extends Widget_Base
                 'selector' => '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_checkbox .gform-field-label',
             ]
         );
+        //checkbox input field size
+        $this->add_control(
+            'checkbox_input_field_size',
+            [
+                'label' => esc_html__('Input Size', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 10,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper input[type="checkbox"]' => 'transform: scale({{SIZE}});',
+                ],
+            ]
+        );
 
         $this->end_controls_section(); // End Style Section for checkbox field
 
