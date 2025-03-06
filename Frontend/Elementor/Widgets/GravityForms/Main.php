@@ -201,14 +201,14 @@ class Main extends Widget_Base
         );
         // gravity forms preview not visible in editor     
         $this->add_control(
-			'gravity_forms_preview_not_visible_in_editor_2',
-			[
-				'type' => \Elementor\Controls_Manager::ALERT,
-				'alert_type' => 'warning',
-				'heading' => esc_html__( 'Styling Alert', 'primekit-addons' ),
-				'content' => esc_html__( 'Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates.', 'primekit-addons' ),
-			]
-		);
+            'gravity_forms_preview_not_visible_in_editor_2',
+            [
+                'type' => \Elementor\Controls_Manager::ALERT,
+                'alert_type' => 'warning',
+                'heading' => esc_html__('Styling Alert', 'primekit-addons'),
+                'content' => esc_html__('Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates.', 'primekit-addons'),
+            ]
+        );
 
         //wrapper background
         $this->add_group_control(
@@ -409,7 +409,7 @@ class Main extends Widget_Base
 
         $this->end_controls_section(); // End Style Section for input fields labels
 
-        
+
         //start name field style section
         $this->start_controls_section(
             'name_field_style_section',
@@ -825,7 +825,7 @@ class Main extends Widget_Base
 
         $this->end_controls_section(); // End Style Section for submit button
 
-        
+
         //Style Section for Radio
         $this->start_controls_section(
             'radio_style_section',
@@ -857,10 +857,64 @@ class Main extends Widget_Base
                 'selector' => '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_radio .gform-field-label',
             ]
         );
+        //radio input field size
+        $this->add_control(
+            'radio_input_field_size',
+            [
+                'label' => esc_html__('Input Size', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 10,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_radio input[type="radio"]' => 'transform: scale({{SIZE}});',
+                ],
+            ]
+        );
+        //Gap and alignment
+        $this->add_responsive_control(
+            'radio_gap',
+            [
+                'label' => esc_html__('Gap', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_radio .gchoice' => 'gap: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'radio_alignment',
+            [
+                'label' => esc_html__('Alignment', 'primekit-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'start' => [
+                        'title' => esc_html__('Top', 'primekit-addons'),
+                        'icon' => 'eicon-justify-start-v',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Middle', 'primekit-addons'),
+                        'icon' => 'eicon-justify-center-v',
+                    ],
+                    'end' => [
+                        'title' => esc_html__('Bottom', 'primekit-addons'),
+                        'icon' => 'eicon-justify-end-v',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_radio .gchoice' => 'align-items: {{VALUE}};',
+                ],
+            ]
+        );
 
         $this->end_controls_section(); // End Style Section for radio
 
-        
+
         //Style Section for Checkbox Field
         $this->start_controls_section(
             'checkbox_style_section',
@@ -906,7 +960,7 @@ class Main extends Widget_Base
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper input[type="checkbox"]' => 'transform: scale({{SIZE}});',
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_checkbox input[type="checkbox"]' => 'transform: scale({{SIZE}});',
                 ],
             ]
         );
