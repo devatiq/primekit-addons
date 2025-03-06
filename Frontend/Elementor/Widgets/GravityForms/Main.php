@@ -1320,6 +1320,40 @@ class Main extends Widget_Base
 
         $this->end_controls_section(); //End Style Section for Page Break
 
+        //Style Section for Messages
+        $this->start_controls_section(
+            'primekit_style_section_gravity_form_messages',
+            [
+                'label' => esc_html__('Messages', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //Messages Color
+        $this->add_control(
+            'primekit_gravity_form_messages_color',
+            [
+                'label' => esc_html__('Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#000000',
+                'selectors' => [
+                    '{{WRAPPER}} .gform_wrapper .validation_message' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //Messages Typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'primekit_gravity_form_messages_typography',
+                'label' => esc_html__('Typography', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .validation_message',
+            ]
+        );
+
+        $this->end_controls_section(); //End Style Section for Messages
+
     }
 
 
