@@ -830,7 +830,7 @@ class Main extends Widget_Base
         $this->start_controls_section(
             'radio_style_section',
             [
-                'label' => esc_html__('Radio Button', 'primekit-addons'),
+                'label' => esc_html__('Radio Field', 'primekit-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -859,6 +859,41 @@ class Main extends Widget_Base
         );
 
         $this->end_controls_section(); // End Style Section for radio
+
+        
+        //Style Section for Checkbox Field
+        $this->start_controls_section(
+            'checkbox_style_section',
+            [
+                'label' => esc_html__('Checkbox Field', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //Checkbox label color
+        $this->add_control(
+            'checkbox_label_color',
+            [
+                'label' => esc_html__('Label Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '',
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_checkbox .gform-field-label' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //Checkbox label typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'checkbox_label_typography',
+                'label' => esc_html__('Typography', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_checkbox .gform-field-label',
+            ]
+        );
+
+        $this->end_controls_section(); // End Style Section for checkbox field
 
         //Style Section for Section Break
         $this->start_controls_section(
