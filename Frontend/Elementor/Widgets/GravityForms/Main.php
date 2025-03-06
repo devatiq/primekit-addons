@@ -910,6 +910,42 @@ class Main extends Widget_Base
                 ],
             ]
         );
+        //Gap and alignment
+        $this->add_responsive_control(
+            'checkbox_gap',
+            [
+                'label' => esc_html__('Gap', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_checkbox .gchoice' => 'gap: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        $this->add_responsive_control(
+            'checkbox_alignment',
+            [
+                'label' => esc_html__('Alignment', 'primekit-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'start' => [
+                        'title' => esc_html__('Top', 'primekit-addons'),
+                        'icon' => 'eicon-justify-start-v',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Middle', 'primekit-addons'),
+                        'icon' => 'eicon-justify-center-v',
+                    ],
+                    'end' => [
+                        'title' => esc_html__('Bottom', 'primekit-addons'),
+                        'icon' => 'eicon-justify-end-v',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gfield_checkbox .gchoice' => 'align-items: {{VALUE}};',
+                ],
+            ]
+        );
 
         $this->end_controls_section(); // End Style Section for checkbox field
 
