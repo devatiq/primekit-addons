@@ -61,7 +61,7 @@
 
             const buttonHTML = `
                 <button class="primekit-library-open-button primekit-add-button" id="insertStaticTemplateButton">
-                     <img class="" src="${primekitData.pluginUrl}/Assets/img/primekit-icon.svg">                                
+                    //  <img class="" src=" {primekitData.pluginUrl}/Assets/img/primekit-icon.svg">                                
                 </button>
             `;
 
