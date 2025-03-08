@@ -54,8 +54,6 @@ class ThemeBuilder
         add_action('primekit_header', [$this, 'primekit_render_header']);
         add_action('wp_enqueue_scripts', array($this, 'enqueue_elementor_styles_scripts'));
 
-        
-
     }
 
     public function setConstants()
@@ -75,38 +73,14 @@ class ThemeBuilder
     public function primekit_override_header()
     {
         if (self::should_display_template('header')) {
-            // Remove the theme's default header actions (if applicable)
-            remove_action('get_header', 'wp_render_theme_header');
-            remove_action('wp_body_open', 'wp_render_theme_header');
-    
-            // Hide the theme's default header using CSS (fallback for themes that don't use hooks)
-            echo '<style>header{display:none !important;}</style>';
-    
-            // Now load our custom header
             require_once PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-header.php';
+            $templates = [];
+            $templates[] = 'header.php';
+            remove_all_actions('wp_head');
+            ob_start();
+            locate_template($templates, true);
+            ob_get_clean();
         }
-
-
-        // if (self::should_display_template('header')) {
-        //     require_once PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-header.php';
-        //     $templates = ['header.php'];
-        //     ob_start();
-        //     locate_template($templates, true);
-        //     ob_end_flush(); // Directly output instead of capturing it
-        // }
-
-
-        // if (self::should_display_template('header')) {
-        //     require_once PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-header.php';
-        //     $templates = [];
-        //     $templates[] = 'header.php';
-        //     remove_all_actions('wp_head');
-        //     ob_start();
-        //     locate_template($templates, true);
-        //     ob_get_clean();
-        // }
-
-
     }
 
 
@@ -187,8 +161,7 @@ class ThemeBuilder
     {
         $primekit_get_header_id = self::primekit_get_header_id();
         $frontend = new \Elementor\Frontend;
-        // echo $frontend->get_builder_content_for_display($primekit_get_header_id);
-        echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($primekit_get_header_id);
+        echo $frontend->get_builder_content_for_display($primekit_get_header_id);
     }
 
     /**
@@ -202,22 +175,14 @@ class ThemeBuilder
     public function primekit_override_footer()
     {
         if (self::should_display_template('footer')) {
-            remove_action('wp_footer', 'wp_render_theme_footer'); // Remove default footer
-    
-            // Load our custom footer
             require_once PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-footer.php';
+            $templates = [];
+            $templates[] = 'footer.php';
+            remove_all_actions('wp_footer');
+            ob_start();
+            locate_template($templates, true);
+            ob_get_clean();
         }
-
-        // if (self::should_display_template('footer')) {
-        //     require_once PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-footer.php';
-        //     $templates = [];
-        //     $templates[] = 'footer.php';
-        //     remove_all_actions('wp_footer');
-        //     ob_start();
-        //     locate_template($templates, true);
-        //     ob_get_clean();
-        // }
-
     }
 
     /**
