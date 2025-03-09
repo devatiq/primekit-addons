@@ -216,7 +216,7 @@ class Configuration
         $this->CustomCSS = new CustomCSS();
         $this->CSSTransform = new CSSTransform();
         $this->NestedTabsExtend = new NestedTabsExtend();
-        $this->PreLoader = new PreLoader();
+        //$this->PreLoader = new PreLoader(); // not ready yet
     }
 
 
