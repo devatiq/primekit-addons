@@ -21,6 +21,7 @@ use PrimeKit\Frontend\Elementor\Globals\WrapperURL;
 use PrimeKit\Frontend\Elementor\Globals\CustomCSS;
 use PrimeKit\Frontend\Elementor\Globals\CSSTransform;
 use PrimeKit\Frontend\Elementor\Globals\NestedTabsExtend;
+use PrimeKit\Frontend\Elementor\Globals\PreLoader;
 
 
 /**
@@ -44,6 +45,7 @@ class Configuration
     protected $CustomCSS;
     protected $CSSTransform;
     protected $NestedTabsExtend;
+    protected $PreLoader;
 
     /**
      * plugin Version
@@ -214,6 +216,7 @@ class Configuration
         $this->CustomCSS = new CustomCSS();
         $this->CSSTransform = new CSSTransform();
         $this->NestedTabsExtend = new NestedTabsExtend();
+        $this->PreLoader = new PreLoader();
     }
 
 
