@@ -23,7 +23,7 @@ $primekit_excerpt_length_grid = $primekit_settings['primekit_elementor_blog_grid
    <div class="primekit-ele-blog-grid">
 <?php
 // Get the selected blog layout
-$primekit_blog_layout = $this->get_settings('primekit_elementor_blog_grid_layout');
+//$primekit_blog_layout = $this->get_settings('primekit_elementor_blog_grid_layout');
 
 include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-column.php' );
 
