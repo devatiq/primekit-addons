@@ -353,8 +353,10 @@
   .primekit-modren-single-post {
     margin-bottom: 20px;
   }
-  .primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(2),
-  .primekit-modren-posts-grid-wrapper > .primekit-modren-single-post:nth-child(3) {
+  .primekit-modren-posts-grid-wrapper
+    > .primekit-modren-single-post:nth-child(2),
+  .primekit-modren-posts-grid-wrapper
+    > .primekit-modren-single-post:nth-child(3) {
     grid-column: auto;
   }
   .primekit-modren-single-post-title h3 a {
@@ -390,6 +392,12 @@
   }
   .primekit-ele-pricing-pack-preiod h3 {
     font-size: 25px;
+  }
+  /*-------------------------
+    * Blog Grid
+    ---------------------------*/
+  .primekit-ele-four-column-blog {
+    grid-template-columns: repeat(1, 1fr);    
   }
 
   /*------------------------
@@ -466,7 +474,8 @@
   /*------------------------
   * Morden Blog style
   -------------------------*/
-  .primekit-modren-last-three-posts-wrapper .primekit-modren-style2-single-post {
+  .primekit-modren-last-three-posts-wrapper
+    .primekit-modren-style2-single-post {
     gap: 30px;
     flex-direction: column;
   }

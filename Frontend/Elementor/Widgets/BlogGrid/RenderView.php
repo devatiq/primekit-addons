@@ -25,20 +25,22 @@ $primekit_excerpt_length_grid = $primekit_settings['primekit_elementor_blog_grid
 // Get the selected blog layout
 $primekit_blog_layout = $this->get_settings('primekit_elementor_blog_grid_layout');
 
-switch ($primekit_blog_layout) {
-    case 'two-column':
-        include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/two-column.php' );
-        break;
-    case 'three-column':
-        include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/three-column.php' );
-        break;
-    case 'four-column':
-        include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-column.php' );
-        break;
-    default:
-    include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/three-column.php' );
-        break;
-}
+include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-column.php' );
+
+// switch ($primekit_blog_layout) {
+//     case 'two-column':
+//         include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/two-column.php' );
+//         break;
+//     case 'three-column':
+//         include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/three-column.php' );
+//         break;
+//     case 'four-column':
+//         include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-column.php' );
+//         break;
+//     default:
+//     include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/three-column.php' );
+//         break;
+// }
 ?>
     </div>
 </div><!--/ PrimeKit Blog grid Area-->
