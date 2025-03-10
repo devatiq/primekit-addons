@@ -8,6 +8,8 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
 use Elementor\Utils;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Box_Shadow;
 
 
 class Main extends Widget_Base
@@ -507,6 +509,37 @@ class Main extends Widget_Base
                 ],
             ]
         );
+        // testimonial border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'primekit_ele_testimonial_border',
+                'label' => esc_html__('Border', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-testimonial-single-item',
+            ]
+        );
+        // testimonial border radius
+        $this->add_responsive_control(
+            'primekit_ele_testimonial_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-testimonial-single-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        // testimonial box shadow
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name' => 'primekit_ele_testimonial_box_shadow',
+                'label' => esc_html__('Box Shadow', 'primekit-addons'),
+                'selector' => '{{WRAPPER}} .primekit-testimonial-single-item',
+            ]
+        );
+
         // end of testimonial section
         $this->end_controls_section();
 
