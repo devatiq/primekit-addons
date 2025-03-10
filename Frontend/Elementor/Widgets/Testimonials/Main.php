@@ -919,6 +919,7 @@ class Main extends Widget_Base
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'primekit_ele_testimonial_slider_pagination' => 'true',
+                    'primekit_ele_testimonial_types' => 'slider',
                 ],
             ]
         );
