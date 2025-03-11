@@ -48,7 +48,7 @@ class Templates
     {
         $this->setConstants(); // Set the constants.
         $this->init_classes(); // Initialize the classes.
-      //  add_action('wp_ajax_primekit_get_templates', [$this, 'primekit_get_templates']);
+        add_action('wp_ajax_primekit_get_templates', [$this, 'primekit_get_templates']);
         add_action('wp_ajax_primekit_get_template_content', [$this, 'primekit_get_template_content_handler']);
         add_action('wp_ajax_nopriv_primekit_get_template_content', [$this, 'primekit_get_template_content_handler']);
     }
