@@ -11,13 +11,13 @@ use Elementor\TemplateLibrary\Source_Base;
 
 defined('ABSPATH') || die();
 
-class Library_Source extends Source_Base
+class duplicate extends Source_Base
 {
     const LIBRARY_CACHE_KEY = 'primekit_library_cache';
     const API_TEMPLATES_INFO_URL = 'https://demo.primekitaddons.com/wp-json/primekit/v1/templates';
     const API_TEMPLATE_DATA_URL = 'https://demo.primekitaddons.com/wp-json/primekit/v1/json';
-    const LOCAL_TEMPLATES_INFO_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/templates-info.json';
-    const LOCAL_TEMPLATE_DATA_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/template-';
+   // const LOCAL_TEMPLATES_INFO_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/templates-info.json';
+    //const LOCAL_TEMPLATE_DATA_PATH = PRIMEKIT_TEMPLATE_PATH . 'data/template-';
 
     public function get_id()
     {
@@ -57,7 +57,7 @@ class Library_Source extends Source_Base
     {
         $library_data = self::get_library_data();
         $templates = [];
-
+        error_log('tesdadsf');
         if (!empty($library_data['templates'])) {
             foreach ($library_data['templates'] as $template_data) {
                 $templates[] = $this->prepare_template($template_data);
@@ -95,16 +95,26 @@ class Library_Source extends Source_Base
         ];
     }
 
-    private static function request_library_data($force_update = false)
+    private static function request_library_data($force_update = true)
     {
         $data = get_option(self::LIBRARY_CACHE_KEY);
 
-        if (!empty($data) && !$force_update) {
-            return $data;
-        }
+        // if (!empty($data) && !$force_update) {
+        //     return $data;
+        // }
 
         // Make remote API request
         $response = wp_remote_get(self::API_TEMPLATES_INFO_URL);
+
+
+        if (is_wp_error($response)) {
+            error_log('PrimeKit API Error: ' . $response->get_error_message());
+        } else {
+            $status_code = wp_remote_retrieve_response_code($response);
+            error_log('PrimeKit API Response Code: ' . $status_code);
+        }
+
+
 
         if (!is_wp_error($response) && 200 === wp_remote_retrieve_response_code($response)) {
             $data = json_decode(wp_remote_retrieve_body($response), true);
@@ -114,6 +124,9 @@ class Library_Source extends Source_Base
                 return $data;
             }
         }
+
+
+
 
         // // Try loading from local file if remote request fails
         // if (file_exists(self::LOCAL_TEMPLATES_INFO_PATH)) {
@@ -130,8 +143,19 @@ class Library_Source extends Source_Base
         return false;
     }
 
-    public static function get_library_data($force_update = true)
+    public static function get_library_data($force_update = false)
     {
+        $response = wp_remote_get(self::API_TEMPLATES_INFO_URL);
+
+if (is_wp_error($response)) {
+    error_log('PrimeKit API Error: ' . $response->get_error_message());
+} else {
+    $status_code = wp_remote_retrieve_response_code($response);
+    error_log('PrimeKit API Response Code: ' . $status_code);
+    error_log('PrimeKit API Response Body: ' . print_r(wp_remote_retrieve_body($response), true));
+}
+
+
         self::request_library_data($force_update);
 
         $data = get_option(self::LIBRARY_CACHE_KEY);
