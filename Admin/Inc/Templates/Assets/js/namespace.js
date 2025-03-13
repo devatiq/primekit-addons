@@ -30,10 +30,13 @@
               templateHTML += `
                                 <div class="primekit-template">
                                     <img src="${template.thumbnail}" alt="${template.title}">
+                                    <div class="primekit-template-content">
+                                  
                                     <h3>${template.title}</h3>
                                     <button class="primekit-template-insert" data-template-id="${template.id}">
                                         Insert
                                     </button>
+                                    </div>
                                 </div>
                             `;
             });
@@ -68,7 +71,7 @@
       // Fetch template content using WordPress site URL
       const siteUrl = window.location.origin;
       //fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
-      fetch(`https://cors-anywhere.herokuapp.com/https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/9954.json`)
+      fetch(`https://cors-anywhere.herokuapp.com/https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch template data.");

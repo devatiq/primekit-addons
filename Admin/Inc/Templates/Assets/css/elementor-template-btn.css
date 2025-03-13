@@ -64,3 +64,94 @@
   max-width: 100%;
   border-radius: 10px;
 }
+
+
+/*----------------------------------------------
+ *Template Modal
+ * ---------------------------------------------*/
+ .primekit-template-grid-area {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 30px;
+}
+
+.primekit-template img {
+  max-width: 100%;
+}
+
+.primekit-template {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+.primekit-template-content {
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.primekit-template:before {
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform:scale(0);
+  visibility:hidden;
+  opacity:0;
+  transition: all 0.3s ease;
+}
+.primekit-template:hover:before {
+  transform:scale(1);
+  visibility:visible;
+  opacity: 0.7;
+  transition: all 0.3s ease;  
+} 
+
+.primekit-template-content h3 {
+  font-size: 20px;
+}
+
+.primekit-template-insert {
+  background-color: #0D7A31;
+  font-family: "Inter", Sans-serif;
+  border: 1px solid #0D7A31;
+  padding: 10px;
+  min-width: 130px;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.primekit-template:hover .primekit-template-content {
+  transition: all 0.3s ease;
+  top: 50%;
+  opacity: 1;
+  visibility: visible;
+}
+.primekit-template-insert:hover {
+  background-color: #0448E7;
+  transition: all 0.3s ease;
+  border-color: #0448E7;
+}
