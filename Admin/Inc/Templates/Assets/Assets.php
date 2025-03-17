@@ -39,10 +39,6 @@ class Assets
     {
         add_action('elementor/editor/after_enqueue_scripts', array($this, 'template_editor_scripts'));
         add_action('elementor/editor/after_enqueue_scripts', array($this, 'template_editor_styles'));
-
-
-        add_action('wp_ajax_primekit_fetch_template', [$this, 'primekit_fetch_template_data']);
-        add_action('wp_ajax_nopriv_primekit_fetch_template', [$this, 'primekit_fetch_template_data']);
     }
 
 
@@ -67,8 +63,8 @@ class Assets
         
         wp_localize_script('primekit-templates', 'primekitAjax', [
             'ajax_url' => admin_url('admin-ajax.php'),
-            'nonce'   => wp_create_nonce('primekit_nonce')
         ]);
+        
 
     }
 
@@ -87,36 +83,5 @@ class Assets
 
         
         wp_enqueue_style('primekit-elementor-template', PRIMEKIT_TEMPLATE_ASSETS . '/css/elementor-template-btn.css', [], PRIMEKIT_VERSION);
-    }
-
-    public function primekit_fetch_template_data() {
-        header("Content-Type: application/json"); // Ensure JSON response
-    
-        // ✅ Support both GET and POST requests
-        $template_id = isset($_REQUEST['template_id']) ? sanitize_text_field($_REQUEST['template_id']) : '';
-    
-        if (empty($template_id)) {
-            wp_send_json_error("❌ Missing template ID.");
-            return;
-        }
-    
-        $api_url = "https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/{$template_id}.json";
-    
-        $response = wp_remote_get($api_url);
-    
-        if (is_wp_error($response)) {
-            wp_send_json_error("❌ Error fetching template.");
-            return;
-        }
-    
-        $body = wp_remote_retrieve_body($response);
-        $decoded_body = json_decode($body, true);
-    
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            wp_send_json_error("❌ Invalid JSON response from API.");
-            return;
-        }
-    
-        wp_send_json_success($decoded_body);
     }
 }

@@ -8,13 +8,6 @@
 
         bindEvents() {
             elementor.on("preview:loaded", this.onElementorPreviewLoaded.bind(this));
-            // document.addEventListener("click", function (event) {
-            //     if (event.target.classList.contains("primekit-template-insert")) {
-            //         let templateId = event.target.dataset.templateId;
-            //         fetchTemplate(templateId);
-            //     }
-            // });
-            
             $(document).on("click", ".primekit-template-insert", this.onTemplateInsertClick.bind(this));
         },
 
@@ -95,35 +88,4 @@
     $(document).ready(() => {
         primekitLibrary.init();
     });
-
-    function fetchTemplate(templateId) {
-        fetch(primekitAjax.ajax_url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: new URLSearchParams({
-                action: "primekit_fetch_template",
-                template_id: templateId,
-                security: primekitAjax.nonce
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                console.log("Template Data:", data.data);
-            } else {
-                console.error("Error:", data.data);
-            }
-        })
-        .catch(error => console.error("AJAX Error:", error));
-    }
-    
-    document.addEventListener("click", function (event) {
-      if (event.target.classList.contains("primekit-template-insert")) {
-          let templateId = event.target.dataset.templateId;
-          fetchTemplate(templateId);
-      }
-    });
-    
 })(jQuery, window.elementor);

@@ -19,7 +19,6 @@ class Library_Manager
     {
         add_action('elementor/editor/footer', [__CLASS__, 'print_template_views']);
         add_action('elementor/ajax/register_actions', [__CLASS__, 'register_ajax_actions']);
-
     }
 
     public static function print_template_views()
@@ -88,10 +87,6 @@ class Library_Manager
         $source = self::get_source();
         return $source->get_data($args);
     }
-
- 
-   
-    
 }
 
 Library_Manager::init();
