@@ -71,7 +71,7 @@
       // Fetch template content using WordPress site URL
       const siteUrl = window.location.origin;
       //fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
-      fetch(`https://cors-anywhere.herokuapp.com/https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`)
+      fetch(`https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch template data.");
