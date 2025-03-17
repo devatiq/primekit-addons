@@ -20,8 +20,6 @@ class Library_Manager
         add_action('elementor/editor/footer', [__CLASS__, 'print_template_views']);
         add_action('elementor/ajax/register_actions', [__CLASS__, 'register_ajax_actions']);
 
-        add_action('wp_ajax_primekit_fetch_template', [__CLASS__, 'primekit_fetch_template_data']);
-        add_action('wp_ajax_nopriv_primekit_fetch_template', [__CLASS__, 'primekit_fetch_template_data']);
     }
 
     public static function print_template_views()
@@ -91,26 +89,7 @@ class Library_Manager
         return $source->get_data($args);
     }
 
-    public function primekit_fetch_template_data() {
-        $template_id = isset($_GET['template_id']) ? sanitize_text_field($_GET['template_id']) : '';
-    
-        if (!$template_id) {
-            wp_send_json_error('Template ID is required');
-            return;
-        }
-    
-        $api_url = "https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/{$template_id}.json";
-    
-        $response = wp_remote_get($api_url);
-    
-        if (is_wp_error($response)) {
-            wp_send_json_error('Error fetching template');
-            return;
-        }
-    
-        $data = wp_remote_retrieve_body($response);
-        wp_send_json_success(json_decode($data, true));
-    }
+ 
    
     
 }

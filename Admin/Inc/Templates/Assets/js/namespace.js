@@ -66,89 +66,106 @@
     },
 
     insertTemplate(templateId) {
-      console.log(`Inserting template with ID: ${templateId}`);
-
-      // Fetch template content using WordPress site URL
-      const siteUrl = window.location.origin;
-      //fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
-      fetch(`https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to fetch template data.");
+      console.log(`📨 Fetching template with ID: ${templateId}`);
+  
+      fetch(primekitAjax.ajaxUrl, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams({
+              action: "primekit_fetch_template",
+              template_id: templateId,
+              security: primekitAjax.nonce
+          })
+      })
+      .then(response => response.json())
+      .then(async data => {
+          if (!data.success) {
+              throw new Error(data.data || "❌ Failed to fetch template.");
           }
-          return response.json();
-        })
-        .then((data) => {
-          console.log("Template content loaded:", data);
-
-          if (!data || !data.content || !Array.isArray(data.content)) {
-            throw new Error("Invalid template data structure");
+  
+          console.log("✅ Template content loaded:", data.data);
+  
+          if (!data.data || !data.data.content || !Array.isArray(data.data.content)) {
+              throw new Error("❌ Invalid template data structure");
           }
-
-          // Transform JSON to Elementor compatible structure
-          const transformedContent = this.transformElementorContent(data.content);
-
+  
+          const transformedContent = primekitNamespace.transformElementorContent(data.data.content);
+  
           if (!transformedContent || !Array.isArray(transformedContent)) {
-            throw new Error("Failed to transform template content");
+              throw new Error("❌ Failed to transform template content");
           }
-
+  
           try {
-            $e.run("document/elements/import", {
-              model: elementor.elementsModel,
-              data: {
-                content: transformedContent
-              }
-            });
-            console.log("Template inserted successfully.");
-            MicroModal.close("primekit-template-modal");
+              console.log("⏳ Waiting for Elementor to be ready...");
+              await new Promise(resolve => setTimeout(resolve, 1500)); // Wait 1.5s
+  
+              console.log("🚀 Importing template into Elementor...");
+              $e.run("document/elements/import", {
+                  model: elementor.elementsModel,
+                  data: {
+                      content: transformedContent
+                  }
+              });
+  
+              console.log("✅ Template inserted successfully.");
+              MicroModal.close("primekit-template-modal");
           } catch (error) {
-            console.error("Error inserting template:", error);
-            alert("Failed to insert the template: " + error.message);
+              console.error("❌ Error inserting template:", error);
+              alert("❌ Failed to insert the template: " + error.message);
           }
-        })
-        .catch((error) => {
-          console.error("Error processing template:", error);
-          alert(error.message || "Failed to process the template.");
-        });
-    },
+      })
+      .catch(error => {
+          console.error("❌ Error processing template:", error);
+          alert(error.message || "❌ Failed to process the template.");
+      });
+  },
+  
 
-    transformElementorContent(content) {
-      if (!content || !Array.isArray(content)) {
-        console.error("Invalid content structure for Elementor.");
-        return null;
-      }
 
-      try {
-        return content.map(element => this.transformElement(element));
-      } catch (error) {
-        console.error("Error transforming content:", error);
-        return null;
-      }
-    },
+  transformElementorContent(content) {
+    if (!content || !Array.isArray(content)) {
+      console.error("Invalid content structure for Elementor.");
+      return null;
+    }
 
-    transformElement(element) {
-      if (!element || typeof element !== 'object') {
-        throw new Error('Invalid element structure');
-      }
+    try {
+      return content.map(element => this.transformElement(element));
+    } catch (error) {
+      console.error("Error transforming content:", error);
+      return null;
+    }
+  },
 
-      const transformedElement = {
-        id: element.id || elementor.helpers.getUniqueID(),
-        elType: element.elType || 'section',
-        settings: element.settings || {},
-        elements: []
-      };
+  transformElement(element) {
+    if (!element || typeof element !== 'object') {
+      throw new Error('Invalid element structure');
+    }
 
-      if (element.widgetType) {
-        transformedElement.widgetType = element.widgetType;
-      }
+    const transformedElement = {
+      id: element.id || elementor.helpers.getUniqueID(),
+      elType: element.elType || 'section',
+      settings: element.settings || {},
+      elements: []
+    };
 
-      if (Array.isArray(element.elements)) {
-        transformedElement.elements = element.elements.map(child => this.transformElement(child));
-      }
+    if (element.widgetType) {
+      transformedElement.widgetType = element.widgetType;
+    }
 
-      return transformedElement;
-    },
-  };
+    if (Array.isArray(element.elements)) {
+      transformedElement.elements = element.elements.map(child => this.transformElement(child));
+    }
+
+    return transformedElement;
+  },
+};
+
+
+
+
+
 
 
 })(window.jQuery, window.elementor);
