@@ -2,8 +2,8 @@
 Contributors: atiqbd4ever   
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 5.4   
-Tested up to: 6.7.1   
-Stable tag: 1.0.5   
+Tested up to: 6.8   
+Stable tag: 1.0.6   
 Requires PHP: 8.0  
 License: GPLv2 or later   
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -143,6 +143,7 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 ## Changelog
 ## 1.0.6
 - Copyright Widget
+- Improve performance
 
 
 ## 1.0.5 - 17 Dec 2024
