@@ -80,8 +80,10 @@ class ModalMarkup
                                                     <option value="search_page"><?php esc_html_e('Search Page', 'primekit-addons'); ?></option>
                                                     <option value="404_page"><?php esc_html_e('404 Page', 'primekit-addons'); ?></option>
                                                     <option value="archive_page"><?php esc_html_e('Archive Page', 'primekit-addons'); ?></option>
+                                                    <?php if (class_exists('WooCommerce')) { ?>
                                                     <option value="shop_single"><?php esc_html_e('Single Product', 'primekit-addons'); ?></option>
                                                     <option value="shop_archive"><?php esc_html_e('Shop Archive', 'primekit-addons'); ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="primekit-tb-modal-single-field">

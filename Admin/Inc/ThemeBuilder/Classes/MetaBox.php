@@ -51,6 +51,10 @@ class MetaBox
         echo '<option value="search_page"' . selected($template_value, 'search_page', false) . '>' . esc_html__('Search Page', 'primekit-addons') . '</option>';
         echo '<option value="404_page"' . selected($template_value, '404_page', false) . '>' . esc_html__('404 Page', 'primekit-addons') . '</option>';
         echo '<option value="archive_page"' . selected($template_value, 'archive_page', false) . '>' . esc_html__('Archive Page', 'primekit-addons') . '</option>';
+        if (class_exists('WooCommerce')) {
+            echo '<option value="shop_single"' . selected($template_value, 'shop_single', false) . '>' . esc_html__('Single Product', 'primekit-addons') . '</option>';
+            echo '<option value="shop_archive"' . selected($template_value, 'shop_archive', false) . '>' . esc_html__('Shop Archive', 'primekit-addons') . '</option>';
+        }
         echo '</select>';
         echo '</td>';
         echo '</tr>';
