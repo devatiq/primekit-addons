@@ -1,4 +1,14 @@
 <?php
+/**
+ * TemplateContentHooks.php
+ *
+ * This file contains the TemplateContentHooks class, which is responsible for handling
+ * the display of Elementor templates in the page templates.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Inc\Hooks
+ * @since 1.0.0
+ */
+
 namespace PrimeKit\Admin\Inc\ThemeBuilder\Inc\Hooks;
 
 if (!defined('ABSPATH')) {
@@ -6,6 +16,15 @@ if (!defined('ABSPATH')) {
 }
 
 use PrimeKit\Admin\Inc\ThemeBuilder\ThemeBuilder;
+
+/**
+ * Class TemplateContentHooks
+ * 
+ * Handles the display of Elementor templates in the page templates.
+ * 
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Inc\Hooks
+ * @since 1.0.0
+ */
 class TemplateContentHooks
 {
 

@@ -1,7 +1,12 @@
 <?php
-/*
-* Single Page Template
-*/
+/**
+ * Single Page Template
+ *
+ * This template is used to display single pages.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Inc\Templates
+ * @since 1.0.0
+ */
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }

@@ -1,6 +1,11 @@
 <?php
-/*
+/**
  * WooCommerce Single Product Template
+ *
+ * This template is used to display the single product page.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Inc\Templates
+ * @since 1.0.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.

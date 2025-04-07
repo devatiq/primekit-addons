@@ -1,4 +1,14 @@
 <?php
+/**
+ * ThemeBuilder.php
+ *
+ * This file contains the ThemeBuilder class, which is responsible for handling
+ * the display of Elementor templates in the page templates.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder
+ * @since 1.0.0
+ */
+
 namespace PrimeKit\Admin\Inc\ThemeBuilder;
 
 if (!defined('ABSPATH'))
@@ -12,6 +22,15 @@ use PrimeKit\Admin\Inc\ThemeBuilder\Inc\Hooks\TemplateContentHooks;
 use PrimeKit\Admin\Inc\ThemeBuilder\Classes\TemplateOverride;
 use PrimeKit\Admin\Inc\ThemeBuilder\Admin\Menus;
 use PrimeKit\Admin\Inc\ThemeBuilder\Admin\Column;
+
+/**
+ * ThemeBuilder
+ *
+ * Handles the display of Elementor templates in the page templates.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder
+ * @since 1.0.0
+ */
 class ThemeBuilder
 {
     protected $post_types;
@@ -56,43 +75,16 @@ class ThemeBuilder
 
         add_action('template_redirect', array($this, 'primekit_override_shop_archive'), 1);
         add_action('template_redirect', array($this, 'primekit_override_shop_single'), 1);
-        
+
 
     }
-public function primekit_override_shop_archive()
-{
-    if (is_shop() || is_product_taxonomy()) {
-        if (self::should_display_template('shop_archive')) {
-            add_filter('template_include', function () {
-                return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-archive.php';
-            }, 99);
-        }
-    }
-}
 
-public function primekit_override_shop_single()
-{
-    if (is_singular('product')) {
-        if (self::should_display_template('shop_single')) {
-            add_filter('template_include', function () {
-                return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-single.php';
-            }, 99);
-        }
-    }
-}
 
-    
-    public static function get_shop_archive_content() {
-        $template_id = self::get_template_id('shop_archive');
-        $frontend = new \Elementor\Frontend;
-        echo $frontend->get_builder_content_for_display($template_id);
-    }
-    
-    public static function get_shop_single_content() {
-        $template_id = self::get_template_id('shop_single');
-        $frontend = new \Elementor\Frontend;
-        echo $frontend->get_builder_content_for_display($template_id);
-    }
+    /**
+     * Sets constants for the plugin.
+     *
+     * @since 1.0.0
+     */
     public function setConstants()
     {
         define('PRIMEKIT_TB_PATH', plugin_dir_path(__FILE__));
@@ -284,10 +276,10 @@ public function primekit_override_shop_single()
      */
     public function enqueue_elementor_styles_scripts()
     {
-    //     if (did_action('elementor/loaded')) {
-    //        \Elementor\Plugin::instance()->frontend->enqueue_styles();
-    //        \Elementor\Plugin::instance()->frontend->enqueue_scripts();
-    //    }
+        //     if (did_action('elementor/loaded')) {
+        //        \Elementor\Plugin::instance()->frontend->enqueue_styles();
+        //        \Elementor\Plugin::instance()->frontend->enqueue_scripts();
+        //    }
 
         wp_enqueue_style('primekit-theme-builder-style', PRIMEKIT_TB_ASSETS . 'css/style.css');
     }
@@ -473,6 +465,74 @@ public function primekit_override_shop_single()
         }
 
         return false;
+    }
+
+    /**
+     * Overrides the shop archive template.
+     *
+     * If a shop archive template is assigned in the theme builder, this function will
+     * load that template instead of the default shop archive template.
+     *
+     * @since 1.0.0
+     */
+    public function primekit_override_shop_archive()
+    {
+        if (is_shop() || is_product_taxonomy()) {
+            if (self::should_display_template('shop_archive')) {
+                add_filter('template_include', function () {
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-archive.php';
+                }, 99);
+            }
+        }
+    }
+
+    /**
+     * Overrides the shop single template.
+     *
+     * If a shop single template is assigned in the theme builder, this function will
+     * load that template instead of the default shop single template.
+     *
+     * @since 1.0.0
+     */
+    public function primekit_override_shop_single()
+    {
+        if (is_singular('product')) {
+            if (self::should_display_template('shop_single')) {
+                add_filter('template_include', function () {
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-single.php';
+                }, 99);
+            }
+        }
+    }
+
+    /**
+     * Retrieves the shop archive content.
+     *
+     * If a shop archive template is assigned in the theme builder, this function will
+     * load that template and echo its content.
+     *
+     * @since 1.0.0
+     */
+    public static function get_shop_archive_content()
+    {
+        $template_id = self::get_template_id('shop_archive');
+        $frontend = new \Elementor\Frontend;
+        echo $frontend->get_builder_content_for_display($template_id);
+    }
+
+    /**
+     * Retrieves the shop single content.
+     *
+     * If a shop single template is assigned in the theme builder, this function will
+     * load that template and echo its content.
+     *
+     * @since 1.0.6
+     */
+    public static function get_shop_single_content()
+    {
+        $template_id = self::get_template_id('shop_single');
+        $frontend = new \Elementor\Frontend;
+        echo $frontend->get_builder_content_for_display($template_id);
     }
 
 }

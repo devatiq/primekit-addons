@@ -1,9 +1,27 @@
 <?php
+/**
+ * MetaBox.php
+ *
+ * This file contains the MetaBox class, which is responsible for adding
+ * the custom meta box to the Theme Builder page and saving the meta box data.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Classes
+ * @since 1.0.0
+ */
+
 namespace PrimeKit\Admin\Inc\ThemeBuilder\Classes;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
+/**
+ * Class MetaBox
+ * 
+ * Handles the addition of the custom meta box to the Theme Builder page and saving the meta box data.
+ * 
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Classes
+ * @since 1.0.0
+ */
 class MetaBox
 {
     public function __construct()
@@ -12,6 +30,10 @@ class MetaBox
         add_action('save_post', array($this, 'save_meta_box_data'));
     }
 
+    /**
+     * Summary of add_custom_meta_box
+     * @return void
+     */
     public function add_custom_meta_box()
     {
         add_meta_box(
@@ -24,7 +46,18 @@ class MetaBox
         );
     }
 
-
+    /**
+     * Callback function for the custom meta box.
+     * 
+     * This function is called when the custom meta box is displayed on the Theme Builder page.
+     * It displays the template selection and display condition fields.
+     * 
+     * @param mixed $post The post object.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function meta_box_callback($post)
     {
         // Nonce field for security
@@ -77,7 +110,18 @@ class MetaBox
 
     }
     
-
+    /**
+     * Saves the meta box data.
+     * 
+     * This function checks if the nonce is valid and if the post ID is valid
+     * before saving the meta box data.
+     * 
+     * @param int $post_id The ID of the post.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function save_meta_box_data($post_id)
     {
         // Check nonce validity

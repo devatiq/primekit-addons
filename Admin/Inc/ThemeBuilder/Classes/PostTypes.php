@@ -4,6 +4,15 @@ namespace PrimeKit\Admin\Inc\ThemeBuilder\Classes;
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
+/**
+ * Class PostTypes
+ * 
+ * Handles the creation of the Theme Builder custom post type.
+ * 
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Classes
+ * @since 1.0.0
+ */
+
 class PostTypes {
     public function __construct()
     {

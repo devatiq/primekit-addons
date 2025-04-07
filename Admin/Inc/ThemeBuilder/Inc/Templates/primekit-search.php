@@ -1,6 +1,11 @@
 <?php
-/*
+/**
  * search template
+ *
+ * This template is used to display search results.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Inc\Templates
+ * @since 1.0.0
  */
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.

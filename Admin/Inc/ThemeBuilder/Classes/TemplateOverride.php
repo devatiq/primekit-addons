@@ -1,10 +1,30 @@
 <?php
+/**
+ * TemplateOverride.php
+ *
+ * Template override class to handle overriding page templates on the frontend.
+ *
+ * @package PrimeKit/Admin/Inc/ThemeBuilder/Classes
+ * @since 1.0.0
+ */
+
 namespace PrimeKit\Admin\Inc\ThemeBuilder\Classes;
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 use PrimeKit\Admin\Inc\ThemeBuilder\ThemeBuilder;
+
+/**
+ * Class TemplateOverride
+ *
+ * This class is responsible for overriding page templates on the frontend.
+ * It uses the hooks registered in the constructor to determine which template
+ * should be used for the current page.
+ *
+ * @package PrimeKit/Admin/Inc/ThemeBuilder/Classes
+ * @since 1.0.0
+ */
 
 class TemplateOverride
 {

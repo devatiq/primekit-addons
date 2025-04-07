@@ -1,8 +1,13 @@
 
 <?php
-/*
-* Single Blog Full Width
-*/
+/**
+ * Single Blog Full Width
+ *
+ * This template is used to display single blog posts.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Inc\Templates
+ * @since 1.0.0
+ */
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }

@@ -1,10 +1,27 @@
 <?php
+/**
+ * ModalMarkup.php
+ *
+ * This file contains the ModalMarkup class, which is responsible for printing the
+ * modal markup used for adding new templates to the Theme Builder.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Classes
+ * @since 1.0.0
+ */
+
 namespace PrimeKit\Admin\Inc\ThemeBuilder\Classes;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
-
+/**
+ * Class ModalMarkup
+ * 
+ * Handles the printing of the modal markup used for adding new templates to the Theme Builder.
+ * 
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Classes
+ * @since 1.0.0
+ */
 class ModalMarkup
 {
     public function __construct()
@@ -14,8 +31,16 @@ class ModalMarkup
         add_action('admin_post_primekit_save_template', array($this, 'save_template_meta'));
     }
 
-
-
+    /**
+     * Prints the modal markup for adding new templates.
+     * 
+     * This function checks if the current screen is the Theme Builder page and
+     * prints the modal markup if it is.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function print_modal_markup()
     {
         $screen = get_current_screen();
@@ -109,6 +134,16 @@ class ModalMarkup
         }
     }
 
+    /**
+     * Prints the template editor modal markup.
+     * 
+     * This function checks if the current screen is the Theme Builder page and
+     * prints the modal markup if it is.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function template_editor_modal_markup()
     {
         if (isset($_GET['action']) && $_GET['action'] === 'elementor') {
@@ -166,7 +201,16 @@ class ModalMarkup
         }
     }
 
-
+    /**
+     * Saves the template metadata.
+     * 
+     * This function checks if the nonce is valid and if the post ID is valid
+     * before saving the template metadata.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function save_template_meta()
     {
         error_log('Form submitted');

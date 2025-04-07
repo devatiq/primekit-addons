@@ -1,10 +1,27 @@
 <?php
+/**
+ * Column.php
+ *
+ * This file contains the Column class, which is responsible for adding
+ * custom columns to the Theme Builder page and populating them with data.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Admin
+ * @since 1.0.0
+ */
+
 namespace PrimeKit\Admin\Inc\ThemeBuilder\Admin;
 
 //don't load directly
 if (!defined('ABSPATH')) exit;
 
-
+/**
+ * Class Column
+ * 
+ * Handles the addition of custom columns to the Theme Builder page and populating them with data.
+ * 
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Admin
+ * @since 1.0.0
+ */
 class Column {
     public function __construct()
     {
@@ -21,7 +38,17 @@ class Column {
         add_action('pre_get_posts', array($this, 'sort_by_type_column'));
     }
 
-    // Add custom columns to the 'primekit_library' post type
+    /**
+     * Adds custom columns to the 'primekit_library' post type.
+     * 
+     * This function adds a new column for the 'Type' column and removes the default 'Title' column.
+     * 
+     * @param array $columns The existing columns.
+     * 
+     * @return array The modified columns.
+     * 
+     * @since 1.0.0
+     */
     public function add_custom_columns($columns)
     {
       
@@ -37,7 +64,19 @@ class Column {
     }
     
 
-    // Populate the custom columns with data from 'primekit_themebuilder_select'
+    /**
+     * Populates the custom columns with data from 'primekit_themebuilder_select'.
+     * 
+     * This function checks if the current column is the 'Type' column and displays
+     * the corresponding template type label.
+     * 
+     * @param string $column The column name.
+     * @param int $post_id The ID of the post.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function populate_custom_columns($column, $post_id)
     {
         if ($column === 'primekit_type') {
@@ -68,14 +107,36 @@ class Column {
     }
     
 
-    // Make the 'Type' column sortable
+    /**
+     * Makes the 'Type' column sortable.
+     * 
+     * This function adds the 'Type' column to the sortable columns array.
+     * 
+     * @param array $columns The existing sortable columns.
+     * 
+     * @return array The modified sortable columns.
+     * 
+     * @since 1.0.0
+     */
     public function make_columns_sortable($columns)
     {
         $columns['primekit_type'] = 'primekit_type';
         return $columns;
     }
 
-    // Handle sorting by the 'Type' column
+    /**
+     * Handles sorting by the 'Type' column.
+     * 
+     * This function checks if the current query is the main query and if the
+     * 'orderby' parameter is set to 'primekit_type'. If so, it sets the meta key
+     * and order to sort by the 'primekit_themebuilder_select' meta field.
+     * 
+     * @param \WP_Query $query The current query.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function sort_by_type_column($query)
     {
         if (!is_admin() || !$query->is_main_query()) {

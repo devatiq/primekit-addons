@@ -1,8 +1,26 @@
 <?php
+/**
+ * ConditionManager.php
+ *
+ * This file contains the ConditionManager class, which is responsible for handling
+ * the display conditions and conditions management in the Theme Builder.
+ *
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Admin
+ * @since 1.0.0
+ */
+
 namespace PrimeKit\Admin\Inc\ThemeBuilder\Admin;
 
 defined('ABSPATH') || exit;
 
+/**
+ * Class ConditionManager
+ * 
+ * Handles the display conditions and conditions management in the Theme Builder.
+ * 
+ * @package PrimeKit\Admin\Inc\ThemeBuilder\Admin
+ * @since 1.0.0
+ */
 class ConditionManager
 {
 
@@ -16,6 +34,16 @@ class ConditionManager
 
     }
 
+    /**
+     * Enqueues the necessary assets for the Elementor editor.
+     * 
+     * This function checks if the current screen is the Elementor editor and
+     * enqueues the required scripts and styles for the editor.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function enqueue_elementor_editor_assets()
     {
 
@@ -50,6 +78,16 @@ class ConditionManager
     }
 
 
+    /**
+     * Handles the AJAX request for searching posts.
+     * 
+     * This function checks if the nonce is valid and processes the search request
+     * for posts based on the type specified in the request.
+     * 
+     * @return void
+     * 
+     * @since 1.0.0
+     */
     public function primekit_select2_search_posts()
     {
         check_ajax_referer('template_conditions_nonce', 'nonce');
