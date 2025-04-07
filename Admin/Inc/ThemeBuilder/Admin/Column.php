@@ -51,6 +51,8 @@ class Column {
                 '404_page' => __('404 Page', 'primekit-addons'),
                 'single_post' => __('Single Post', 'primekit-addons'),
                 'single_page' => __('Single Page', 'primekit-addons'),
+                'shop_single' => __('Single Product', 'primekit-addons'),
+                'shop_archive' => __('Shop Archive', 'primekit-addons'),
                 'footer' => __('Footer', 'primekit-addons'),
                 'header' => __('Header', 'primekit-addons'),
                 

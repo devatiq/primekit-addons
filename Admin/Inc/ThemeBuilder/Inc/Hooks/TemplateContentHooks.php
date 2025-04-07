@@ -6,32 +6,35 @@ if (!defined('ABSPATH')) {
 }
 
 use PrimeKit\Admin\Inc\ThemeBuilder\ThemeBuilder;
-class TemplateContentHooks {
+class TemplateContentHooks
+{
 
     /**
      * Initializes the class and registers the hooks.
      *
      * @since 1.0.0
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->register_hooks();
     }
 
- 
+
     /**
      * Registers the hooks for displaying the content of Elementor templates
      * in the page templates.
      *
      * @since 1.0.0
      */
-    public function register_hooks() {
+    public function register_hooks()
+    {
         add_action('primekit_single_post_content', array($this, 'single_post_content_elementor'), 999);
         add_action('primekit_single_page_content', array($this, 'single_page_content_elementor'), 999);
         add_action('primekit_404_page_content', array($this, 'single_404_page_content_elementor'), 999);
         add_action('primekit_search_page_content', array($this, 'search_page_content_elementor'), 999);
         add_action('primekit_archive_page_content', array($this, 'archive_page_content_elementor'), 999);
         add_action('primekit_shop_single_content', array($this, 'shop_single_content_elementor'), 999);
-add_action('primekit_shop_archive_content', array($this, 'shop_archive_content_elementor'), 999);
+        add_action('primekit_shop_archive_content', array($this, 'shop_archive_content_elementor'), 999);
     }
 
     /**
@@ -44,33 +47,13 @@ add_action('primekit_shop_archive_content', array($this, 'shop_archive_content_e
      */
     public function single_post_content_elementor($post)
     {
-        $template_id = ThemeBuilder::get_template_id('single_post'); 
+        $template_id = ThemeBuilder::get_template_id('single_post');
         if (!empty($template_id)) {
             echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
             the_content();
         }
     }
-
-// Add these methods
-public function shop_single_content_elementor($product) {
-    $template_id = ThemeBuilder::get_template_id('shop_single');
-    if (!empty($template_id)) {
-        echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
-    } else {
-        wc_get_template_part('content', 'single-product');
-    }
-}
-
-public function shop_archive_content_elementor($query) {
-    $template_id = ThemeBuilder::get_template_id('shop_archive');
-    if (!empty($template_id)) {
-        echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
-    } else {
-        woocommerce_content();
-    }
-}
-
 
     /**
      * Single page content hook for Elementor template.
@@ -84,7 +67,7 @@ public function shop_archive_content_elementor($query) {
      */
     public function single_page_content_elementor($page)
     {
-        $template_id = ThemeBuilder::get_template_id('single_page'); 
+        $template_id = ThemeBuilder::get_template_id('single_page');
         if (!empty($template_id)) {
             echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
@@ -101,7 +84,7 @@ public function shop_archive_content_elementor($query) {
      */
     public function single_404_page_content_elementor($error)
     {
-        $template_id = ThemeBuilder::get_template_id('404_page'); 
+        $template_id = ThemeBuilder::get_template_id('404_page');
         if (!empty($template_id)) {
             echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
@@ -120,7 +103,7 @@ public function shop_archive_content_elementor($query) {
      */
     public function search_page_content_elementor($search)
     {
-        $template_id = ThemeBuilder::get_template_id('search_page'); 
+        $template_id = ThemeBuilder::get_template_id('search_page');
         if (!empty($template_id)) {
             echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- \Elementor\Plugin::instance()->frontend->get_builder_content_for_display() Already escaped by elementor
         } else {
@@ -145,7 +128,7 @@ public function shop_archive_content_elementor($query) {
      */
     public function archive_page_content_elementor($archive)
     {
-        $template_id = ThemeBuilder::get_template_id('archive_page'); 
+        $template_id = ThemeBuilder::get_template_id('archive_page');
 
         // Check if a template exists in Elementor for 'archive_page'
         if (!empty($template_id)) {
@@ -179,4 +162,45 @@ public function shop_archive_content_elementor($query) {
             }
         }
     }
+
+    /**
+     * Shop single content hook for Elementor template.
+     * 
+     * If an Elementor template exists for the 'shop_single' type, it will be rendered.
+     * Otherwise, the WooCommerce single product template will be rendered.
+     * 
+     * @param WC_Product $product The product object.
+     * 
+     * @since 1.0.6
+     */
+    public function shop_single_content_elementor($product)
+    {
+        $template_id = ThemeBuilder::get_template_id('shop_single');
+        if (!empty($template_id)) {
+            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+        } else {
+            wc_get_template_part('content', 'single-product');
+        }
+    }
+
+    /**
+     * Shop archive content hook for Elementor template.
+     * 
+     * If an Elementor template exists for the 'shop_archive' type, it will be rendered.
+     * Otherwise, the WooCommerce shop archive template will be rendered.
+     * 
+     * @param WP_Query $query The query object.
+     * 
+     * @since 1.0.6
+     */
+    public function shop_archive_content_elementor($query)
+    {
+        $template_id = ThemeBuilder::get_template_id('shop_archive');
+        if (!empty($template_id)) {
+            echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+        } else {
+            woocommerce_content();
+        }
+    }
+
 }

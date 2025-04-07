@@ -29,32 +29,18 @@ class TemplateOverride
         add_filter('woocommerce_template_loader_files', array($this, 'override_shop_archive_template'));
     }
 
-    public function override_shop_single_template($template)
-    {
-        if (is_singular('product')) {
-            $template_id = ThemeBuilder::get_template_id('shop_single');
-
-            if ($template_id && \Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-single.php';
-            }
-        }
-
-        return $template;
-    }
-
-    public function override_shop_archive_template($templates)
-    {
-        if (is_post_type_archive('product') || is_product_category() || is_product_tag()) {
-            $template_id = ThemeBuilder::get_template_id('shop_archive');
-
-            if ($template_id && \Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                $templates = [PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-archive.php'];
-            }
-        }
-
-        return $templates;
-    }
-    // Override the single.php template for single posts
+    /**
+     * Override the single.php template for single posts.
+     * 
+     * If an Elementor template exists for the 'single_post' type, it will be used.
+     * Otherwise, the default WordPress template will be used.
+     * 
+     * @param string $template The original template path.
+     * 
+     * @return string The path to the custom template or the original template.
+     * 
+     * @since 1.0.0
+     */
     public function override_single_template($template)
     {
         global $post;
@@ -78,8 +64,18 @@ class TemplateOverride
         return $template;
     }
 
-
-    // Override the page.php template for single pages
+    /**
+     * Override the page.php template for single pages.
+     * 
+     * If an Elementor template exists for the 'single_page' type, it will be used.
+     * Otherwise, the default WordPress template will be used.
+     * 
+     * @param string $page_template The original template path.
+     * 
+     * @return string The path to the custom template or the original template.
+     * 
+     * @since 1.0.0
+     */
     public function override_page_template($page_template)
     {
         global $post;
@@ -101,7 +97,18 @@ class TemplateOverride
         return $page_template;
     }
 
-    // Override the 404.php template
+    /**
+     * Override the 404.php template.
+     * 
+     * If an Elementor template exists for the '404_page' type, it will be used.
+     * Otherwise, the default WordPress template will be used.
+     * 
+     * @param string $template The original template path.
+     * 
+     * @return string The path to the custom template or the original template.
+     * 
+     * @since 1.0.0
+     */
     public function override_404_template($template)
     {
         // Ensure this only affects the 404 page
@@ -126,7 +133,18 @@ class TemplateOverride
     }
 
 
-    // Override the search results template (search.php)
+    /**
+     * Override the search results template (search.php).
+     * 
+     * If an Elementor template exists for the 'search_page' type, it will be used.
+     * Otherwise, the default WordPress template will be used.
+     * 
+     * @param string $template The original template path.
+     * 
+     * @return string The path to the custom template or the original template.
+     * 
+     * @since 1.0.0
+     */
     public function override_search_template($template)
     {
         // Ensure this only affects the search results page
@@ -152,7 +170,18 @@ class TemplateOverride
     }
 
 
-    // Override the archive template (archive.php)
+    /**
+     * Override the archive template (archive.php).
+     * 
+     * If an Elementor template exists for the 'archive_page' type, it will be used.
+     * Otherwise, the default WordPress template will be used.
+     * 
+     * @param string $template The original template path.
+     * 
+     * @return string The path to the custom template or the original template.
+     * 
+     * @since 1.0.0
+     */
     public function override_archive_template($template)
     {
         global $post;
@@ -175,6 +204,57 @@ class TemplateOverride
         }
 
         return $template;
+    }
+
+
+    /**
+     * Override the WooCommerce single product template.
+     * 
+     * If an Elementor template exists for the 'shop_single' type, it will be used.
+     * Otherwise, the default WooCommerce template will be used.
+     * 
+     * @param string $template The original template path.
+     * 
+     * @return string The path to the custom template or the original template.
+     * 
+     * @since 1.0.6
+     */
+    public function override_shop_single_template($template)
+    {
+        if (is_singular('product')) {
+            $template_id = ThemeBuilder::get_template_id('shop_single');
+
+            if ($template_id && \Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
+                return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-single.php';
+            }
+        }
+
+        return $template;
+    }
+
+    /**
+     * Override the WooCommerce shop archive template.
+     * 
+     * If an Elementor template exists for the 'shop_archive' type, it will be used.
+     * Otherwise, the default WooCommerce template will be used.
+     * 
+     * @param array $templates The original template paths.
+     * 
+     * @return array The path to the custom template or the original template.
+     * 
+     * @since 1.0.6
+     */
+    public function override_shop_archive_template($templates)
+    {
+        if (is_post_type_archive('product') || is_product_category() || is_product_tag()) {
+            $template_id = ThemeBuilder::get_template_id('shop_archive');
+
+            if ($template_id && \Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
+                $templates = [PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-archive.php'];
+            }
+        }
+
+        return $templates;
     }
 
 
