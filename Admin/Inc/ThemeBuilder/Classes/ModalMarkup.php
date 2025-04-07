@@ -10,7 +10,7 @@ class ModalMarkup
     public function __construct()
     {
         add_action('admin_footer', array($this, 'print_modal_markup'));
-       // add_action('elementor/editor/footer', array($this, 'template_editor_modal_markup'));
+        // add_action('elementor/editor/footer', array($this, 'template_editor_modal_markup'));
         add_action('admin_post_primekit_save_template', array($this, 'save_template_meta'));
     }
 
@@ -40,8 +40,10 @@ class ModalMarkup
                             <div class="primekit-tb-modal-content-area">
                                 <!--Template Left Area-->
                                 <div class="primekit-tb-modal-content-left">
-                                    <h2><?php esc_html_e("Design Your Website's Theme Easily with PrimeKit", 'primekit-addons'); ?></h2>
-                                    <p><?php esc_html_e("PrimeKit's Theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!", 'primekit-addons'); ?></p>
+                                    <h2><?php esc_html_e("Design Your Website's Theme Easily with PrimeKit", 'primekit-addons'); ?>
+                                    </h2>
+                                    <p><?php esc_html_e("PrimeKit's Theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!", 'primekit-addons'); ?>
+                                    </p>
                                 </div><!--/ Template Left Area-->
 
                                 <!--Template Form Area-->
@@ -63,14 +65,14 @@ class ModalMarkup
                                     <div class="primekit-tb-modal-content-form-fields">
                                         <form id="primekit-tb-modal-template-form" method="post"
                                             action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
-                                            <input type="hidden" id="primekit-tb-post-type" name="post_type" value="primekit_library">
+                                            <input type="hidden" id="primekit-tb-post-type" name="post_type"
+                                                value="primekit_library">
                                             <input type="hidden" name="action" value="primekit_save_template">
                                             <input type="hidden" name="post_id" value="<?php echo esc_attr(get_the_ID()); ?>">
                                             <?php wp_nonce_field('primekit_tb_modal_action', 'primekit_tb_modal_nonce'); ?>
                                             <div class="primekit-tb-modal-single-field">
                                                 <select name="primekit-tb-modal-select" id="primekit-tb-modal-select-template-type">
-                                                    <option value=""><?php esc_html_e('Select...', 'primekit-addons'); ?>
-                                                    </option>
+                                                    <option value=""><?php esc_html_e('Select...', 'primekit-addons'); ?></option>
                                                     <option value="header"><?php esc_html_e('Header (Global)', 'primekit-addons'); ?></option>
                                                     <option value="footer"><?php esc_html_e('Footer (Global)', 'primekit-addons'); ?></option>
                                                     <option value="single_post"><?php esc_html_e('Single Post', 'primekit-addons'); ?></option>
@@ -78,6 +80,8 @@ class ModalMarkup
                                                     <option value="search_page"><?php esc_html_e('Search Page', 'primekit-addons'); ?></option>
                                                     <option value="404_page"><?php esc_html_e('404 Page', 'primekit-addons'); ?></option>
                                                     <option value="archive_page"><?php esc_html_e('Archive Page', 'primekit-addons'); ?></option>
+                                                    <option value="shop_single"><?php esc_html_e('Single Product', 'primekit-addons'); ?></option>
+                                                    <option value="shop_archive"><?php esc_html_e('Shop Archive', 'primekit-addons'); ?></option>
                                                 </select>
                                             </div>
                                             <div class="primekit-tb-modal-single-field">

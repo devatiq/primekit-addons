@@ -30,6 +30,8 @@ class TemplateContentHooks {
         add_action('primekit_404_page_content', array($this, 'single_404_page_content_elementor'), 999);
         add_action('primekit_search_page_content', array($this, 'search_page_content_elementor'), 999);
         add_action('primekit_archive_page_content', array($this, 'archive_page_content_elementor'), 999);
+        add_action('primekit_shop_single_content', array($this, 'shop_single_content_elementor'), 999);
+add_action('primekit_shop_archive_content', array($this, 'shop_archive_content_elementor'), 999);
     }
 
     /**
@@ -49,6 +51,27 @@ class TemplateContentHooks {
             the_content();
         }
     }
+
+// Add these methods
+public function shop_single_content_elementor($product) {
+    $template_id = ThemeBuilder::get_template_id('shop_single');
+    if (!empty($template_id)) {
+        echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+    } else {
+        wc_get_template_part('content', 'single-product');
+    }
+}
+
+public function shop_archive_content_elementor($query) {
+    $template_id = ThemeBuilder::get_template_id('shop_archive');
+    if (!empty($template_id)) {
+        echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($template_id);
+    } else {
+        woocommerce_content();
+    }
+}
+
+
     /**
      * Single page content hook for Elementor template.
      * 

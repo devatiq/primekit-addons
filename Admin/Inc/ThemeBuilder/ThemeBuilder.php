@@ -54,8 +54,45 @@ class ThemeBuilder
         add_action('primekit_header', [$this, 'primekit_render_header']);
         add_action('wp_enqueue_scripts', array($this, 'enqueue_elementor_styles_scripts'));
 
-    }
+        add_action('template_redirect', array($this, 'primekit_override_shop_archive'), 1);
+        add_action('template_redirect', array($this, 'primekit_override_shop_single'), 1);
+        
 
+    }
+public function primekit_override_shop_archive()
+{
+    if (is_shop() || is_product_taxonomy()) {
+        if (self::should_display_template('shop_archive')) {
+            add_filter('template_include', function () {
+                return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-archive.php';
+            }, 99);
+        }
+    }
+}
+
+public function primekit_override_shop_single()
+{
+    if (is_singular('product')) {
+        if (self::should_display_template('shop_single')) {
+            add_filter('template_include', function () {
+                return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-single.php';
+            }, 99);
+        }
+    }
+}
+
+    
+    public static function get_shop_archive_content() {
+        $template_id = self::get_template_id('shop_archive');
+        $frontend = new \Elementor\Frontend;
+        echo $frontend->get_builder_content_for_display($template_id);
+    }
+    
+    public static function get_shop_single_content() {
+        $template_id = self::get_template_id('shop_single');
+        $frontend = new \Elementor\Frontend;
+        echo $frontend->get_builder_content_for_display($template_id);
+    }
     public function setConstants()
     {
         define('PRIMEKIT_TB_PATH', plugin_dir_path(__FILE__));

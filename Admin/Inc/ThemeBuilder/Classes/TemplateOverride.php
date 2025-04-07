@@ -25,21 +25,47 @@ class TemplateOverride
         add_filter('404_template', array($this, 'override_404_template'));
         add_filter('search_template', array($this, 'override_search_template'));
         add_filter('archive_template', array($this, 'override_archive_template'));
+        add_filter('woocommerce_single_product_template', array($this, 'override_shop_single_template'));
+        add_filter('woocommerce_template_loader_files', array($this, 'override_shop_archive_template'));
     }
 
+    public function override_shop_single_template($template)
+    {
+        if (is_singular('product')) {
+            $template_id = ThemeBuilder::get_template_id('shop_single');
 
+            if ($template_id && \Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
+                return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-single.php';
+            }
+        }
+
+        return $template;
+    }
+
+    public function override_shop_archive_template($templates)
+    {
+        if (is_post_type_archive('product') || is_product_category() || is_product_tag()) {
+            $template_id = ThemeBuilder::get_template_id('shop_archive');
+
+            if ($template_id && \Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
+                $templates = [PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-archive.php'];
+            }
+        }
+
+        return $templates;
+    }
     // Override the single.php template for single posts
     public function override_single_template($template)
     {
         global $post;
         // Ensure this only affects single posts (not pages)
         if (is_single() && 'post' === $post->post_type) {
-            $template_id = ThemeBuilder::get_template_id('single_post'); 
+            $template_id = ThemeBuilder::get_template_id('single_post');
 
             if ($template_id) {
                 // Check if the custom template is built with Elementor
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-single.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-single.php';
                 } else {
                     $custom_single_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_single_template)) {
@@ -58,11 +84,11 @@ class TemplateOverride
     {
         global $post;
         if (is_page() && 'page' === $post->post_type) {
-            $template_id = ThemeBuilder::get_template_id('single_page'); 
+            $template_id = ThemeBuilder::get_template_id('single_page');
 
             if ($template_id) {
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-page.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-page.php';
                 } else {
                     $custom_single_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_single_template)) {
@@ -81,12 +107,12 @@ class TemplateOverride
         // Ensure this only affects the 404 page
         if (is_404()) {
             // Check if there's a custom template in `primekit_library` for '404_page'
-            $template_id = ThemeBuilder::get_template_id('404_page'); 
+            $template_id = ThemeBuilder::get_template_id('404_page');
 
             if ($template_id) {
                 // Check if the custom template is built with Elementor
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-404.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-404.php';
                 } else {
                     $custom_404_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_404_template)) {
@@ -106,7 +132,7 @@ class TemplateOverride
         // Ensure this only affects the search results page
         if (is_search()) {
             // Check if there's a custom template in `primekit_library` for 'search_page'
-            $template_id = ThemeBuilder::get_template_id('search_page'); 
+            $template_id = ThemeBuilder::get_template_id('search_page');
 
             if ($template_id) {
                 // Check if the custom template is built with Elementor
@@ -133,12 +159,12 @@ class TemplateOverride
 
         // Ensure this only affects archive pages and skip the product archive
         if (is_archive() && !is_post_type_archive('product')) {
-            $template_id = ThemeBuilder::get_template_id('archive_page'); 
+            $template_id = ThemeBuilder::get_template_id('archive_page');
 
             if ($template_id) {
                 // Check if the custom template is built with Elementor
                 if (\Elementor\Plugin::$instance->documents->get($template_id)->is_built_with_elementor()) {
-                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-archive.php'; 
+                    return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-archive.php';
                 } else {
                     $custom_archive_template = PRIMEKIT_TB_PATH . 'Inc/Templates/default-template.php';
                     if (file_exists($custom_archive_template)) {
