@@ -477,7 +477,7 @@ class ThemeBuilder
      */
     public function primekit_override_shop_archive()
     {
-        if (is_shop() || is_product_taxonomy()) {
+        if (function_exists('is_shop') && function_exists('is_product_taxonomy') && (is_shop() || is_product_taxonomy())) {
             if (self::should_display_template('shop_archive')) {
                 add_filter('template_include', function () {
                     return PRIMEKIT_TB_PATH . 'Inc/Templates/primekit-shop-archive.php';
