@@ -25,29 +25,59 @@ class TemplatesMenu {
     }
 
     public function render_templates_page() {
+        $response = wp_remote_get('https://demo.primekitaddons.com/wp-json/primekit/v1/templates');
+    
+        if (is_wp_error($response)) {
+            echo '<div class="notice notice-error"><p>Unable to fetch templates. Please try again later.</p></div>';
+            return;
+        }
+    
+        $templates = json_decode(wp_remote_retrieve_body($response), true);
+    
+        if (empty($templates)) {
+            echo '<div class="notice notice-warning"><p>No templates found.</p></div>';
+            return;
+        }
+    
         ?>
         <div class="wrap">
             <h1><?php esc_html_e('Templates', 'primekit-addons'); ?></h1>
-            <p><?php esc_html_e('Welcome to the Templates page.', 'primekit-addons'); ?></p>
-
-            <!-- Template Content -->
-            <div id="primekit-templates-content-wrapper">
-                <!-- Template Item -->
-                <div class="primekit-single-template-item">
-                    <div class="primekit-template-thumbnail">
-                        <img src="<?php echo esc_url(PRIMEKIT_ASSETS_URL . '/img/placeholder.png'); ?>" alt="Template Thumbnail">
+            <p><?php esc_html_e('Browse available templates below.', 'primekit-addons'); ?></p>
+    
+            <div id="primekit-templates-content-wrapper" style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <?php foreach ($templates as $template) :
+                    $template_id = $template['id'];
+                    $details_response = wp_remote_get("https://demo.primekitaddons.com/wp-json/primekit/v1/templates/{$template_id}");
+    
+                    if (is_wp_error($details_response)) {
+                        continue;
+                    }
+    
+                    $template_details = json_decode(wp_remote_retrieve_body($details_response), true);
+    
+                    $title = esc_html($template['title']);
+                    $thumbnail = esc_url($template['thumbnail']);
+                    $download_url = esc_url($template_details['download_url'] ?? '#');
+                    $demo_url = esc_url($template_details['demo_url'] ?? '#');
+                ?>
+                    <div class="primekit-single-template-item" style="border: 1px solid #ddd; padding: 10px; width: 220px; background: #fff;">
+                        <div class="primekit-template-thumbnail" style="text-align: center;">
+                            <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>" style="width: 100%; height: auto;">
+                        </div>
+                        <div class="primekit-template-footer" style="text-align: center; margin-top: 10px;">
+                            <strong><?php echo $title; ?></strong><br><br>
+                            <a href="<?php echo $download_url; ?>" class="button button-primary" target="_blank">
+                                <?php esc_html_e('Download', 'primekit-addons'); ?>
+                            </a>
+                            <a href="<?php echo $demo_url; ?>" class="button" target="_blank">
+                                <?php esc_html_e('Preview', 'primekit-addons'); ?>
+                            </a>
+                        </div>
                     </div>
-                    <div class="primekit-template-footer">
-                       <a href="<?php echo esc_url(PRIMEKIT_ASSETS_URL . '/img/placeholder.png'); ?>" class="button button-primary">
-                            <?php esc_html_e('Download', 'primekit-addons'); ?>
-                       </a>
-                       <a href="<?php echo esc_url(PRIMEKIT_ASSETS_URL . '/img/placeholder.png'); ?>" class="button button-primary">
-                            <?php esc_html_e('Preview', 'primekit-addons'); ?>
-                       </a>
-                    </div>
-                </div><!-- /Template Item -->
-            </div><!-- /Template Content -->
+                <?php endforeach; ?>
+            </div>
         </div>
         <?php
     }
+    
 }
