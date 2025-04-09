@@ -18,6 +18,7 @@ if (!defined('ABSPATH'))
 
 use PrimeKit\Admin\Inc\Dashboard\Settings\PrimeKit;
 use PrimeKit\Admin\Inc\Dashboard\Settings\Settings;
+use PrimeKit\Admin\Inc\Dashboard\Templates\TemplatesMenu;
 use PrimeKit\Admin\Assets\Assets;
 use PrimeKit\Admin\Inc\Dashboard\AvailableWidgets\PrimeKitWidgets;
 use PrimeKit\Admin\Inc\Hooks\FilterHooks;
@@ -39,6 +40,7 @@ class AdminManager
 {
     protected $primeKit;
     protected $settings;
+    protected $templatesMenu;
     protected $Assets;
     protected $PrimeKitWidgets;
     protected $FilterHooks;
@@ -93,6 +95,7 @@ class AdminManager
     {
         $this->primeKit = new PrimeKit();
         $this->settings = new Settings();
+        $this->templatesMenu = new TemplatesMenu();
         $this->Assets = new Assets();
         $this->PrimeKitWidgets = new PrimeKitWidgets();
         $this->FilterHooks = new FilterHooks();
