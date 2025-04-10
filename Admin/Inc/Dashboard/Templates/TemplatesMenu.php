@@ -22,6 +22,8 @@ class TemplatesMenu
             return;
         }
 
+        wp_enqueue_style('primekit-template-menu', PRIMEKIT_ADMIN_ASSETS . '/css/template-menu.css', [], null);
+
         wp_enqueue_script('primekit-templates-admin', PRIMEKIT_ADMIN_ASSETS . '/js/templates-admin.js', ['jquery'], null, true);
 
         wp_localize_script('primekit-templates-admin', 'PrimeKitTemplates', [
@@ -48,13 +50,13 @@ class TemplatesMenu
         ?>
         <div class="wrap">
             <h1><?php esc_html_e('Templates', 'primekit-addons'); ?></h1>
-            <p><?php esc_html_e('Browse available templates below.', 'primekit-addons'); ?></p>
+            <p><?php esc_html_e('Browse the available templates below. Loading may take a moment as they\'re fetched from a remote server.', 'primekit-addons'); ?>
+            </p>
 
-            <div id="primekit-templates-content-wrapper" style="display:flex;flex-wrap:wrap;gap:20px;">
-                <div class="loading" style="margin-top: 20px;"><?php esc_html_e('Loading templates...', 'primekit-addons'); ?>
-                </div>
+            <div id="primekit-templates-content-wrapper">
+                <div class="primekit-loading"></div>
             </div>
-            <div id="primekit-templates-pagination-wrapper" style="margin-top: 20px;"></div>
+            <div id="primekit-templates-pagination-wrapper"></div>
 
         </div>
         <?php
@@ -65,7 +67,7 @@ class TemplatesMenu
         check_ajax_referer('primekit_fetch_templates', 'nonce');
 
         $page = isset($_POST['page']) ? absint($_POST['page']) : 1;
-        $per_page = 10;
+        $per_page = 16;
 
         $response = wp_remote_get('https://demo.primekitaddons.com/wp-json/primekit/v1/templates');
 
@@ -82,34 +84,50 @@ class TemplatesMenu
         $paged_templates = array_slice($templates, $offset, $per_page);
 
         $output = '';
+        ob_start();
 
         foreach ($paged_templates as $template) {
             $details_response = wp_remote_get("https://demo.primekitaddons.com/wp-json/primekit/v1/templates/{$template['id']}");
-            if (is_wp_error($details_response))
+            if (is_wp_error($details_response)) {
                 continue;
+            }
 
             $details = json_decode(wp_remote_retrieve_body($details_response), true);
 
-            $output .= '<div class="primekit-single-template-item" style="border:1px solid #ddd;padding:10px;width:220px;background:#fff;">';
-            $output .= '<div class="primekit-template-thumbnail" style="text-align:center;">';
-            $output .= '<img src="' . esc_url($template['thumbnail']) . '" alt="' . esc_attr($template['title']) . '" style="width:100%;height:auto;">';
-            $output .= '</div>';
-            $output .= '<div class="primekit-template-footer" style="text-align:center;margin-top:10px;">';
-            $output .= '<strong>' . esc_html($template['title']) . '</strong><br><br>';
-            $output .= '<a href="' . esc_url($details['download_url'] ?? '#') . '" class="button button-primary" target="_blank">Download</a> ';
-            $output .= '<a href="' . esc_url($details['demo_url'] ?? '#') . '" class="button" target="_blank">Preview</a>';
-            $output .= '</div>';
-            $output .= '</div>';
+            $title = esc_html($template['title']);
+            $thumbnail = esc_url($template['thumbnail']);
+            $download_url = esc_url($details['download_url'] ?? '#');
+            $demo_url = esc_url($details['demo_url'] ?? '#');
+            ?>
+            <div class="primekit-single-template-item">
+                <div class="primekit-template-thumbnail">
+                    <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>">
+                </div>
+                <div class="primekit-template-footer">
+                    <h2><?php echo $title; ?></h2>
+                    <div class="primekit-template-buttons">
+                        <a href="<?php echo $download_url; ?>" target="_blank"><?php esc_html_e('Download', 'primekit-addons'); ?> </a>
+                        <a href="<?php echo $demo_url; ?>"  target="_blank"><?php esc_html_e('Preview', 'primekit-addons'); ?></a>
+                    </div>
+                </div>
+            </div>
+            <?php
         }
+
+        $output = ob_get_clean();
+
 
         // Pagination UI
-        $pagination_html = '<div class="primekit-pagination" style="margin-top: 20px; display: flex; gap: 10px;">';
-        for ($i = 1; $i <= $total_pages; $i++) {
-            $is_active = ($i === $page) ? 'button-primary current-page' : '';
-            $pagination_html .= '<button class="button primekit-page-btn ' . esc_attr($is_active) . '" data-page="' . esc_attr($i) . '">' . esc_html($i) . '</button>';
-        }
-        $pagination_html .= '</div>';
+        $pagination_html = '';
 
+        if ($total_pages > 1) {
+            $pagination_html .= '<div class="primekit-pagination" style="margin-top: 20px; display: flex; gap: 10px;">';
+            for ($i = 1; $i <= $total_pages; $i++) {
+                $is_active = ($i === $page) ? 'button-primary current-page' : '';
+                $pagination_html .= '<button class="button primekit-page-btn ' . esc_attr($is_active) . '" data-page="' . esc_attr($i) . '">' . esc_html($i) . '</button>';
+            }
+            $pagination_html .= '</div>';
+        }
 
         wp_send_json_success([
             'html' => $output,

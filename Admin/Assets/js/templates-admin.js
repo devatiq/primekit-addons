@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
                 page: page
             },
             beforeSend: function () {
-                $container.html('<div class="loading">Loading templates...</div>');
+                $container.html('<div class="primekit-loading"></div>');
                 $pagination.html('');
             },
             success: function (response) {
