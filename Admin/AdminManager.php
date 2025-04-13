@@ -102,7 +102,7 @@ class AdminManager
         $this->ActionHooks = new ActionHooks();
         $this->ThemeBuilder = new ThemeBuilder();
         $this->MetaBox = new MetaBox();
-        $this->Templates = new Templates();
+        //$this->Templates = new Templates();
     }
 
 
