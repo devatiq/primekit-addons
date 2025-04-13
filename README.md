@@ -143,6 +143,8 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 ## Changelog
 ## 1.0.7
 - Add shop archive and single product in the theme builder
+- Add Templates
+
 
 ## 1.0.6
 - Copyright Widget
