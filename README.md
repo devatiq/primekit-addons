@@ -1,5 +1,5 @@
 # PrimeKit Addons and Templates
-Contributors: atiqbd4ever   
+Contributors: supreoxltd   
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 5.4   
 Tested up to: 6.8   
