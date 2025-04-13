@@ -55,7 +55,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Fetch Posts (New)](https://demo.primekitaddons.com/widgets/fetch-posts/)
 - [Flip Box](https://demo.primekitaddons.com/widgets/flip-box-elementor-widget/)
 - [Gravity Form (New)](https://demo.primekitaddons.com/widgets/gravity-form-widget/)
-- [Image Hover]https://demo.primekitaddons.com/widgets/image-hover-elementor-widget/()
+- [Image Hover](https://demo.primekitaddons.com/widgets/image-hover-elementor-widget/)
 - [Image and Text Scroll](https://demo.primekitaddons.com/widgets/image-and-text-scroll-elementor-widget/)
 - [Image Gallery (New)](https://demo.primekitaddons.com/widgets/gallery-widget/)
 - [Loading Screen (New)](https://demo.primekitaddons.com/widgets/loading-screen-elementor-widget/)
