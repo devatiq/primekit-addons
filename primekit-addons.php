@@ -76,13 +76,12 @@ final class PrimeKitAddons
         define('PRIMEKIT_BASENAME', plugin_basename(__FILE__));
 
         define('PRIMEKIT_FILE', __FILE__);
+        
+        // Define Plugin Name directly from plugin header
+        define('PRIMEKIT_NAME', 'PrimeKit Addons and Templates');
 
-        // Set plugin name after textdomain is loaded
-        add_action('init', function() {
-            if (self::$plugin_name === null) {
-                self::$plugin_name = esc_html__('PrimeKit Addons and Templates', 'primekit-addons');
-            }
-        }, 1);
+        
+
     }
 
     /**
