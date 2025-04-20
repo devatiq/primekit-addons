@@ -42,7 +42,7 @@ class Manager
   public function __construct()
   {
     $this->init();
-    $this->register_textdomain();
+  //  add_action('init', [$this, 'register_textdomain']);
   }
 
   /**
@@ -66,9 +66,10 @@ class Manager
    *
    * @since 1.0.0
    */
-  protected function register_textdomain()
+  public function register_textdomain()
   {
-    load_plugin_textdomain('primekit-addons', false, dirname(plugin_basename(__DIR__, 2)) . '/languages');
+      load_plugin_textdomain('primekit-addons', false, dirname(plugin_basename(__DIR__, 2)) . '/languages');
   }
+  
 
 }

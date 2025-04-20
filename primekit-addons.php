@@ -18,29 +18,40 @@
 
 // Exit if accessed directly.
 if (!defined('ABSPATH')) {
-	exit;
+    exit;
 }
 
-final class PrimeKitAddons {
+final class PrimeKitAddons
+{
 
     // Singleton instance.
     private static $instance = null;
- 
+
     /**
      * Initializes the PrimeKit class by defining constants, including necessary files, and initializing hooks.
      */
-    private function __construct() {
+    private function __construct()
+    {
+        $this->register_textdomain();
         $this->define_constants();
         $this->include_files();
         $this->init_hooks();
     }
+
+    // Load plugin textdomain.
+    public function register_textdomain()
+    {
+        load_plugin_textdomain('primekit-addons', false, dirname(plugin_basename(__FILE__)) . '/languages');
+    }
+
 
     /**
      * Retrieves the singleton instance of the plugin.
      *
      * @return PrimeKit The singleton instance of the plugin.
      */
-    public static function get_instance() {
+    public static function get_instance()
+    {
         if (null === self::$instance) {
             self::$instance = new self();
         }
@@ -50,7 +61,8 @@ final class PrimeKitAddons {
     /**
      * Defines plugin constants.
      */
-    private function define_constants() {
+    private function define_constants()
+    {
         // Define Plugin Version.
         define('PRIMEKIT_VERSION', '1.0.7');
 
@@ -63,15 +75,16 @@ final class PrimeKitAddons {
         //Define Plugin Name.
         define('PRIMEKIT_NAME', esc_html__('PrimeKit Addons and Templates', 'primekit-addons'));
 
-        define( 'PRIMEKIT_BASENAME', plugin_basename( __FILE__ ) );
+        define('PRIMEKIT_BASENAME', plugin_basename(__FILE__));
 
-        define( 'PRIMEKIT_FILE', __FILE__ );
+        define('PRIMEKIT_FILE', __FILE__);
     }
 
     /**
      * Includes necessary files.
      */
-    private function include_files() {
+    private function include_files()
+    {
         if (file_exists(PRIMEKIT_PATH . 'vendor/autoload.php')) {
             require_once PRIMEKIT_PATH . 'vendor/autoload.php';
         }
@@ -80,7 +93,8 @@ final class PrimeKitAddons {
     /**
      * Initializes hooks.
      */
-    private function init_hooks() {
+    private function init_hooks()
+    {
         add_action('plugins_loaded', array($this, 'plugin_loaded'));
         register_activation_hook(PRIMEKIT_PATH, array($this, 'activate'));
         register_deactivation_hook(PRIMEKIT_PATH, array($this, 'deactivate'));
@@ -89,23 +103,26 @@ final class PrimeKitAddons {
     /**
      * Called when the plugin is loaded.
      */
-    public function plugin_loaded() {
+    public function plugin_loaded()
+    {
         if (class_exists('PrimeKit\Manager')) {
-			new \PrimeKit\Manager();
-		}
+            new \PrimeKit\Manager();
+        }
     }
 
     /**
      * Activates the plugin.
      */
-    public function activate() {
+    public function activate()
+    {
         PrimeKit\Activate::activate();
     }
 
     /**
      * Deactivates the plugin.
      */
-    public function deactivate() {
+    public function deactivate()
+    {
         PrimeKit\Deactivate::deactivate();
     }
 }
@@ -114,7 +131,8 @@ final class PrimeKitAddons {
  * Initializes the PrimeKit plugin.
  */
 if (!function_exists('primekit_addons_initialize')) {
-    function primekit_addons_initialize() {
+    function primekit_addons_initialize()
+    {
         return PrimeKitAddons::get_instance();
     }
 
