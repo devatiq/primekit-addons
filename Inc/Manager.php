@@ -41,8 +41,7 @@ class Manager
    */
   public function __construct()
   {
-    $this->init();
-  //  add_action('init', [$this, 'register_textdomain']);
+    $this->init();   
   }
 
   /**
@@ -56,20 +55,6 @@ class Manager
   {
     $this->Admin_Manager = new AdminManager();
     $this->Frontend = new Frontend();
-  }
-
-
-  /**
-   * Register the text domain for translation.
-   *
-   * This method loads the plugin's translated strings from the specified directory.
-   *
-   * @since 1.0.0
-   */
-  public function register_textdomain()
-  {
-      load_plugin_textdomain('primekit-addons', false, dirname(plugin_basename(__DIR__, 2)) . '/languages');
-  }
-  
+  } 
 
 }

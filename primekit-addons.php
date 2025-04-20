@@ -32,7 +32,6 @@ final class PrimeKitAddons
      */
     private function __construct()
     {
-        $this->register_textdomain();
         $this->define_constants();
         $this->include_files();
         $this->init_hooks();
@@ -61,6 +60,8 @@ final class PrimeKitAddons
     /**
      * Defines plugin constants.
      */
+    private static $plugin_name = null;
+
     private function define_constants()
     {
         // Define Plugin Version.
@@ -72,12 +73,16 @@ final class PrimeKitAddons
         // Define Plugin URL.
         define('PRIMEKIT_URL', plugin_dir_url(__FILE__));
 
-        //Define Plugin Name.
-        define('PRIMEKIT_NAME', esc_html__('PrimeKit Addons and Templates', 'primekit-addons'));
-
         define('PRIMEKIT_BASENAME', plugin_basename(__FILE__));
 
         define('PRIMEKIT_FILE', __FILE__);
+
+        // Set plugin name after textdomain is loaded
+        add_action('init', function() {
+            if (self::$plugin_name === null) {
+                self::$plugin_name = esc_html__('PrimeKit Addons and Templates', 'primekit-addons');
+            }
+        }, 1);
     }
 
     /**
@@ -96,6 +101,7 @@ final class PrimeKitAddons
     private function init_hooks()
     {
         add_action('plugins_loaded', array($this, 'plugin_loaded'));
+        add_action('init', array($this, 'register_textdomain'));
         register_activation_hook(PRIMEKIT_PATH, array($this, 'activate'));
         register_deactivation_hook(PRIMEKIT_PATH, array($this, 'deactivate'));
     }
