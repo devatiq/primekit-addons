@@ -12,8 +12,7 @@
 
       // Fetch templates using WordPress site URL
       const siteUrl = window.location.origin;
-      //fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json`)
-      fetch(`https://demo.primekitaddons.com/wp-json/primekit/v1/templates`)
+      fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch templates.");
@@ -24,19 +23,16 @@
           console.log("Templates loaded:", data);
 
           // Render the templates in the modal
-          if (data && data.length > 0) {
+          if (data.templates && data.templates.length > 0) {
             let templateHTML = "";
-            data.forEach((template) => {
+            data.templates.forEach((template) => {
               templateHTML += `
                                 <div class="primekit-template">
                                     <img src="${template.thumbnail}" alt="${template.title}">
-                                    <div class="primekit-template-content">
-                                  
                                     <h3>${template.title}</h3>
                                     <button class="primekit-template-insert" data-template-id="${template.id}">
                                         Insert
                                     </button>
-                                    </div>
                                 </div>
                             `;
             });
@@ -70,8 +66,7 @@
 
       // Fetch template content using WordPress site URL
       const siteUrl = window.location.origin;
-      //fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
-      fetch(`https://cors-anywhere.herokuapp.com/https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`)
+      fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch template data.");

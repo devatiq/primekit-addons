@@ -11,16 +11,6 @@
             "url": "https://demo.primekit.com/template-1"
         },
         {
-            "id": "9954",
-            "title": "P9954",
-            "type": "page",
-            "thumbnail": "https://placehold.co/600x400",
-            "created_at": "2023-12-02",
-            "tags": ["portfolio", "creative"],
-            "is_pro": false,
-            "url": "https://demo.primekit.com/template-2"
-        },
-        {
             "id": "template-2",
             "title": "Portfolio Layout 2",
             "type": "page",
