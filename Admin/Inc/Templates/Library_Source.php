@@ -1,8 +1,12 @@
 <?php
 /**
- * Library API class for PrimeKit Addons
+ * Library_Source.php
  *
- * @package PrimeKit
+ * This file contains the Library_Source class, which extends the Elementor TemplateLibrary Source_Base class.
+ * It is responsible for handling the PrimeKit Template Library data and making it available to the Elementor Template Library.
+ *
+ * @package PrimeKit\Admin\Inc\Templates
+ * @since 1.0.0
  */
 
 namespace PrimeKit\Admin\Inc\Templates;
@@ -11,6 +15,15 @@ use Elementor\TemplateLibrary\Source_Base;
 
 defined('ABSPATH') || die();
 
+/**
+ * Class Library_Source
+ *
+ * This class extends the Elementor TemplateLibrary Source_Base class.
+ * It is responsible for handling the PrimeKit Template Library data and making it available to the Elementor Template Library.
+ *
+ * @package PrimeKit\Admin\Inc\Templates
+ * @since 1.0.0
+ */
 class Library_Source extends Source_Base
 {
     const LIBRARY_CACHE_KEY = 'primekit_library_cache';
@@ -55,31 +68,56 @@ class Library_Source extends Source_Base
 
     public function get_items($args = [])
     {
-        $library_data = self::get_library_data();
-        $templates = [];
-
-        if (!empty($library_data['templates'])) {
-            foreach ($library_data['templates'] as $template_data) {
-                $templates[] = $this->prepare_template($template_data);
-            }
+        $library_data = self::request_library_data();
+    
+        // Debug: Log retrieved data
+        error_log("Library Data (before processing): " . print_r($library_data, true));
+    
+        if (empty($library_data) || !isset($library_data[0])) {
+            error_log("No templates found in API data!");
+            return [];
         }
-
+    
+        $templates = [];
+        foreach ($library_data as $template_data) {
+            if (!isset($template_data['id'])) {
+                continue;
+            }
+            
+            $templates[] = [
+                'id'        => $template_data['id'],
+                'title'     => $template_data['title'],
+                'type'      => $template_data['type'],
+                'thumbnail' => $template_data['thumbnail'],
+                'date'      => $template_data['created_at'],
+                'tags'      => $template_data['tags'] ?? [],
+                'is_pro'    => $template_data['is_pro'] ?? 0,
+                'url'       => $template_data['url'] ?? '',
+            ];
+        }
+    
+        // Debug: Log processed templates
+        error_log("Processed Templates: " . print_r($templates, true));
+    
         return $templates;
     }
+    
+    
 
     public function get_tags()
     {
-        $library_data = self::get_library_data();
-
+        $library_data = self::request_library_data(); // Corrected function name
+    
         return (!empty($library_data['tags']) ? $library_data['tags'] : []);
     }
-
+    
     public function get_type_tags()
     {
-        $library_data = self::get_library_data();
-
+        $library_data = self::request_library_data(); //  Corrected function name
+    
         return (!empty($library_data['type_tags']) ? $library_data['type_tags'] : []);
     }
+    
 
     private function prepare_template(array $template_data)
     {
@@ -130,18 +168,6 @@ class Library_Source extends Source_Base
         return false;
     }
 
-    public static function get_library_data($force_update = true)
-    {
-        self::request_library_data($force_update);
-
-        $data = get_option(self::LIBRARY_CACHE_KEY);
-
-        if (empty($data)) {
-            return [];
-        }
-
-        return $data;
-    }
 
     public function get_item($template_id)
     {

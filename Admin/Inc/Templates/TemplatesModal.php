@@ -1,10 +1,13 @@
 <?php
 /**
  * Template Library Modal and Views
+ * Library Templates Modal
+ *
+ * This file contains the JavaScript code for the template library modal.
  *
  * @package PrimeKit
+ * @version 1.0.0
  */
-
 defined('ABSPATH') || exit;
 ?>
 
