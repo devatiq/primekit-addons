@@ -4,52 +4,53 @@
     loadTemplates() {
       const modalContent = document.getElementById("modal-1-content");
       if (!modalContent) {
-          console.error("Modal content element not found.");
-          return;
+        console.error("Modal content element not found.");
+        return;
       }
-  
+
       modalContent.innerHTML = "<p>Loading templates...</p>"; // Display loading message
-  
-      // Fetch templates using AJAX request to WordPress
-      $.ajax({
-        url: primekit_ajax.ajaxurl, // Ensure the correct URL
-        type: "POST",
-        data: {
-            action: "get_primekit_library_data", // Must match the PHP function
-            security: primekit_ajax.security,
-        },
-        success: function (response) {
-            console.log("API Response:", response); // 🔍 Debug: Log the API response
-    
-            if (!response || !response.success || !response.data.templates) {
-                console.error("No templates found in response:", response);
-                modalContent.innerHTML = "<p>No templates found.</p>";
-                return;
-            }
-    
+
+      // Fetch templates using WordPress site URL
+      const siteUrl = window.location.origin;
+      //fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json`)
+      fetch(`https://demo.primekitaddons.com/wp-json/primekit/v1/templates`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to fetch templates.");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Templates loaded:", data);
+
+          // Render the templates in the modal
+          if (data && data.length > 0) {
             let templateHTML = "";
-            response.data.templates.forEach((template) => {
-                templateHTML += `
-                    <div class="primekit-template">
-                        <img src="${template.thumbnail}" alt="${template.title}">
-                        <h3>${template.title}</h3>
-                        <button class="primekit-template-insert" data-template-id="${template.id}">
-                            Insert
-                        </button>
-                    </div>
-                `;
+            data.forEach((template) => {
+              templateHTML += `
+                                <div class="primekit-template">
+                                    <img src="${template.thumbnail}" alt="${template.title}">
+                                    <div class="primekit-template-content">
+                                  
+                                    <h3>${template.title}</h3>
+                                    <button class="primekit-template-insert" data-template-id="${template.id}">
+                                        Insert
+                                    </button>
+                                    </div>
+                                </div>
+                            `;
             });
-    
-            modalContent.innerHTML = templateHTML;
-        },
-        error: function (xhr, status, error) {
-            console.error("Error loading templates:", error);
-            modalContent.innerHTML = `<p>Failed to load templates. Please try again later.</p>`;
-        }
-    });
-    
-  },
-  
+
+            modalContent.innerHTML = templateHTML; // Update the modal with templates
+          } else {
+            modalContent.innerHTML = "<p>No templates found.</p>";
+          }
+        })
+        .catch((error) => {
+          console.error("Error loading templates:", error);
+          modalContent.innerHTML = `<p>Failed to load templates. Please try again later.</p>`;
+        });
+    },
 
     showModal() {
       const modalElement = document.getElementById("primekit-template-modal");
@@ -66,57 +67,50 @@
 
     insertTemplate(templateId) {
       console.log(`Inserting template with ID: ${templateId}`);
-  
-      // Use API_TEMPLATE_DATA_URL instead of a local file path
-      const templateUrl = `https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`;
-  
-      fetch(templateUrl)
-          .then((response) => {
-              if (!response.ok) {
-                  throw new Error(`Failed to fetch template data. HTTP Status: ${response.status}`);
+
+      // Fetch template content using WordPress site URL
+      const siteUrl = window.location.origin;
+      //fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
+      fetch(`https://cors-anywhere.herokuapp.com/https://demo.primekitaddons.com/PrimeKitTemplates/Templates/v1/${templateId}.json`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to fetch template data.");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          console.log("Template content loaded:", data);
+
+          if (!data || !data.content || !Array.isArray(data.content)) {
+            throw new Error("Invalid template data structure");
+          }
+
+          // Transform JSON to Elementor compatible structure
+          const transformedContent = this.transformElementorContent(data.content);
+
+          if (!transformedContent || !Array.isArray(transformedContent)) {
+            throw new Error("Failed to transform template content");
+          }
+
+          try {
+            $e.run("document/elements/import", {
+              model: elementor.elementsModel,
+              data: {
+                content: transformedContent
               }
-              return response.text(); // Read response as text first
-          })
-          .then((text) => {
-              try {
-                  const data = JSON.parse(text); // Try parsing JSON
-                  console.log("Template content loaded:", data);
-  
-                  if (!data || !data.content || !Array.isArray(data.content)) {
-                      throw new Error("Invalid template data structure");
-                  }
-  
-                  // Transform JSON to Elementor-compatible structure
-                  const transformedContent = this.transformElementorContent(data.content);
-  
-                  if (!transformedContent || !Array.isArray(transformedContent)) {
-                      throw new Error("Failed to transform template content");
-                  }
-  
-                  try {
-                      $e.run("document/elements/import", {
-                          model: elementor.elementsModel,
-                          data: {
-                              content: transformedContent
-                          }
-                      });
-                      console.log("Template inserted successfully.");
-                      MicroModal.close("primekit-template-modal");
-                  } catch (error) {
-                      console.error("Error inserting template:", error);
-                      alert("Failed to insert the template: " + error.message);
-                  }
-              } catch (jsonError) {
-                  console.error("Invalid JSON response:", text);
-                  alert("Server returned invalid JSON. Check console for details.");
-              }
-          })
-          .catch((error) => {
-              console.error("Error processing template:", error);
-              alert(error.message || "Failed to process the template.");
-          });
-  },
-  
+            });
+            console.log("Template inserted successfully.");
+            MicroModal.close("primekit-template-modal");
+          } catch (error) {
+            console.error("Error inserting template:", error);
+            alert("Failed to insert the template: " + error.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error processing template:", error);
+          alert(error.message || "Failed to process the template.");
+        });
+    },
 
     transformElementorContent(content) {
       if (!content || !Array.isArray(content)) {

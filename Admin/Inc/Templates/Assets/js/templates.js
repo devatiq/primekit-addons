@@ -30,7 +30,6 @@
         addLibraryButton($previewContents) {
             console.log("Adding library button");
             const targetSelector = ".elementor-add-new-section .elementor-add-section-drag-title";
-
             const customButtonHTML = `
             <div class="elementor-add-section-area-button primekit-library-open-button primekit-add-button" id="insertStaticTemplateButton">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -58,12 +57,6 @@
                 </svg>
             </div>
         `;
-
-            const buttonHTML = `
-                <button class="primekit-library-open-button primekit-add-button" id="insertStaticTemplateButton">
-                    //  <img class="" src=" {primekitData.pluginUrl}/Assets/img/primekit-icon.svg">                                
-                </button>
-            `;
 
             if (!$previewContents.find(".primekit-library-open-button").length) {
                 const target = $previewContents.find(targetSelector);
