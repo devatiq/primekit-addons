@@ -153,3 +153,6 @@
   transition: all 0.3s ease;
   border-color: #0448E7;
 }
+.primekit-templates-render-area .primekit-modal-heading {
+  color: #fff;
+}
