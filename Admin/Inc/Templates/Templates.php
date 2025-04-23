@@ -34,6 +34,7 @@ class Templates
 
     protected $assets;
     protected $modal;
+    protected $markup;
     protected $Library_Source;
     protected $Library_Manager;
 

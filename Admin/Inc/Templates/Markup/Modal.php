@@ -33,7 +33,7 @@ class Modal {
                 <h2 id="modal-1-title">PrimeKit Templates</h2>
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </header>
-            <main class="modal__content" id="modal-1-content">
+            <main class="modal__content primekit-template-grid-area" id="modal-1-content">
                 <p>Loading templates...</p>
             </main>
             <footer class="modal__footer">

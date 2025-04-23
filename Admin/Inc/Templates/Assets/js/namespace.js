@@ -12,7 +12,9 @@
 
       // Fetch templates using WordPress site URL
       const siteUrl = window.location.origin;
-      fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json`)
+      fetch(
+        `${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json`
+      )
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch templates.");
@@ -29,10 +31,12 @@
               templateHTML += `
                                 <div class="primekit-template">
                                     <img src="${template.thumbnail}" alt="${template.title}">
-                                    <h3>${template.title}</h3>
-                                    <button class="primekit-template-insert" data-template-id="${template.id}">
-                                        Insert
-                                    </button>
+                                    <div class="primekit-template-content">
+                                      <h3>${template.title}</h3>
+                                      <button class="primekit-template-insert" data-template-id="${template.id}">
+                                          Insert
+                                      </button>
+                                    </div>
                                 </div>
                             `;
             });
@@ -66,7 +70,9 @@
 
       // Fetch template content using WordPress site URL
       const siteUrl = window.location.origin;
-      fetch(`${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`)
+      fetch(
+        `${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`
+      )
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch template data.");
@@ -81,7 +87,9 @@
           }
 
           // Transform JSON to Elementor compatible structure
-          const transformedContent = this.transformElementorContent(data.content);
+          const transformedContent = this.transformElementorContent(
+            data.content
+          );
 
           if (!transformedContent || !Array.isArray(transformedContent)) {
             throw new Error("Failed to transform template content");
@@ -91,8 +99,8 @@
             $e.run("document/elements/import", {
               model: elementor.elementsModel,
               data: {
-                content: transformedContent
-              }
+                content: transformedContent,
+              },
             });
             console.log("Template inserted successfully.");
             MicroModal.close("primekit-template-modal");
@@ -114,7 +122,7 @@
       }
 
       try {
-        return content.map(element => this.transformElement(element));
+        return content.map((element) => this.transformElement(element));
       } catch (error) {
         console.error("Error transforming content:", error);
         return null;
@@ -122,15 +130,15 @@
     },
 
     transformElement(element) {
-      if (!element || typeof element !== 'object') {
-        throw new Error('Invalid element structure');
+      if (!element || typeof element !== "object") {
+        throw new Error("Invalid element structure");
       }
 
       const transformedElement = {
         id: element.id || elementor.helpers.getUniqueID(),
-        elType: element.elType || 'section',
+        elType: element.elType || "section",
         settings: element.settings || {},
-        elements: []
+        elements: [],
       };
 
       if (element.widgetType) {
@@ -138,12 +146,12 @@
       }
 
       if (Array.isArray(element.elements)) {
-        transformedElement.elements = element.elements.map(child => this.transformElement(child));
+        transformedElement.elements = element.elements.map((child) =>
+          this.transformElement(child)
+        );
       }
 
       return transformedElement;
     },
   };
-
-
 })(window.jQuery, window.elementor);
