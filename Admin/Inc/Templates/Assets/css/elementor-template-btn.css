@@ -156,3 +156,6 @@
 .primekit-templates-render-area .primekit-modal-heading {
   color: #fff;
 }
+.modal__close, .modal__close:active, .modal__close:focus, .modal__close:hover {
+outline: none;
+}

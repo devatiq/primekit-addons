@@ -25,26 +25,85 @@ class Modal
     public function enqueue_modal()
     {
         //add_action('wp_footer', [$this, 'render']);
-        add_action('wp_footer', [$this, 'testmarkup']);
+        add_action('wp_footer', [$this, 'render']);
     }
-    public function testmarkup()
+    public function render()
     {
         ?>
         <div id="primekit-template-modal" class="modal micromodal-slide primekit-templates-render-area" aria-hidden="true">
             <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="primekit-templates-modal-title">
                     <header class="modal__header primekit-modal-header">
-                        <h2 id="modal-1-title" class="primekit-modal-heading"> 
+                        <h2 id="primekit-templates-modal-title" class="primekit-modal-heading">
                             <img src="<?php echo PRIMEKIT_ADMIN_ASSETS . '/img/primekit-icon.svg'; ?>" alt="">
-                            <?php esc_html_e('PrimeKit Templates', 'primekit-addons'); ?></h2>
+                            <?php esc_html_e('PrimeKit Templates', 'primekit-addons'); ?>
+                        </h2>
                         <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                     </header>
-                    <main class="modal__content primekit-template-grid-area" id="modal-1-content">
-                        <p>Loading templates...</p>
+                    <main class="modal__content primekit-templates-contents-area">
+                        <!--Template Popup-->
+                        <div class="primekit-templates-popup-content-area">
+                            <!--Template Popup Sidebar-->
+                            <aside class="primekit-templates-sidebar">
+                                <div class="primekit-template-filters">
+                                    <h3><?php esc_html_e('Categories', 'primekit-addons'); ?></h3>
+                                    <div class="primekit-filter-checkboxes">
+                                        <label class="primekit-checkbox">
+                                            <input type="checkbox" value="all" checked>
+                                            <span><?php esc_html_e('All', 'primekit-addons'); ?></span>
+                                        </label>
+                                        <label class="primekit-checkbox">
+                                            <input type="checkbox" value="header">
+                                            <span><?php esc_html_e('Header', 'primekit-addons'); ?></span>
+                                        </label>
+                                        <label class="primekit-checkbox">
+                                            <input type="checkbox" value="footer">
+                                            <span><?php esc_html_e('Footer', 'primekit-addons'); ?></span>
+                                        </label>
+                                        <label class="primekit-checkbox">
+                                            <input type="checkbox" value="about">
+                                            <span><?php esc_html_e('About', 'primekit-addons'); ?></span>
+                                        </label>
+                                        <label class="primekit-checkbox">
+                                            <input type="checkbox" value="contact">
+                                            <span><?php esc_html_e('Contact', 'primekit-addons'); ?></span>
+                                        </label>
+                                        <label class="primekit-checkbox">
+                                            <input type="checkbox" value="services">
+                                            <span><?php esc_html_e('Services', 'primekit-addons'); ?></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </aside><!--/Template Popup Sidebar-->
+                            <!--Template Popup Content-->
+                            <div class="primekit-templates-popup-content">
+                                <!--Template Popup Tabs-->
+                                <div class="primekit-templates-popup-tabs">
+                                    <!--Template Popup Tab Item-->
+                                   <div class="primekit-templates-popup-tab">
+                                   <ul>
+                                        <li><a href="">Templates</a></li>
+                                        <li><a href="">Section</a></li>
+                                    </ul>
+                                   </div><!--/Template Popup Tab Item-->
+                                   <!--Template Popup Search-->
+                                   <div class="primekit-templates-search">
+                                    <form action="">
+                                        <input type="text" name="search" id="primekit-templates-search" placeholder="Search">
+                                    </form>                                          
+                                   </div><!--/Template Popup Search-->
+                                </div><!--/Template Popup Tabs-->
+                                <!--Template Grid-->
+                                <div class="primekit-template-grid-area" id="primekit-templates-modal-content">
+                                    <p><?php echo esc_html__('Loading templates...', 'primekit-addons'); ?></p>
+                                </div>
+                            </div><!--/Template Popup Content-->
+                        </div><!--/Template Popup-->
+
                     </main>
-                    <footer class="modal__footer">
+                    <!-- <footer class="modal__footer">
                         <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                    </footer>
+                    </footer> -->
                 </div>
             </div>
         </div>
@@ -53,7 +112,7 @@ class Modal
         <?php
     }
 
-    public function render()
+    public function render2()
     {
         ?>
         <div class="modal micromodal-slide primekit-template-modal-area" id="primekit-template-modal" aria-hidden="true">
@@ -81,6 +140,7 @@ class Modal
 
                     <!--Body-->
                     <main class="modal__content" id="primekit-template-modal-content-area">
+
                         <div class="primekit-template-modal-content-area">
 
                         </div>

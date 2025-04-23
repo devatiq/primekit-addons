@@ -2,7 +2,7 @@
   "use strict";
   window.primekitNamespace = {
     loadTemplates() {
-      const modalContent = document.getElementById("modal-1-content");
+      const modalContent = document.getElementById("primekit-templates-modal-content");
       if (!modalContent) {
         console.error("Modal content element not found.");
         return;
