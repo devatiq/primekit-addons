@@ -33,11 +33,8 @@ class Modal
 
         $response = wp_remote_get('https://demo.primekitaddons.com/wp-json/primekit/v1/templates');
 
-        error_log('API Response Status: ' . wp_remote_retrieve_response_code($response));
-        error_log('API Response Body: ' . wp_remote_retrieve_body($response));
 
         if (is_wp_error($response)) {
-            error_log('WP Error: ' . $response->get_error_message());
             wp_send_json_error('Failed to fetch templates');
             return;
         }
@@ -46,13 +43,11 @@ class Modal
         $templates = json_decode($body, true);
 
         if (json_last_error() !== JSON_ERROR_NONE) {
-            error_log('JSON Decode Error: ' . json_last_error_message());
             wp_send_json_error('Invalid JSON response');
             return;
         }
 
         if (!is_array($templates)) {
-            error_log('Templates is not an array. Received: ' . print_r($templates, true));
             wp_send_json_error('Invalid template data format');
             return;
         }
@@ -68,7 +63,6 @@ class Modal
         $categories = array_unique($categories);
         $categories = array_values($categories);
 
-        error_log('Categories found: ' . print_r($categories, true));
         wp_send_json_success([
             'categories' => $categories,
             'templates' => $templates,
@@ -78,8 +72,7 @@ class Modal
 
 
     public function enqueue_modal()
-    {
-        //add_action('wp_footer', [$this, 'render']);
+    {    
 
         // Enqueue Template Categories JS
         wp_enqueue_script(
