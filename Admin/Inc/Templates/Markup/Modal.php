@@ -20,7 +20,7 @@ class Modal
     {
         add_action('elementor/editor/after_enqueue_scripts', [$this, 'enqueue_modal']);
         add_action('wp_ajax_primekit_get_template_categories', [$this, 'get_template_categories']);
-        add_action('wp_ajax_nopriv_primekit_get_template_categories', [$this, 'get_template_categories']);
+      //  add_action('wp_ajax_nopriv_primekit_get_template_categories', [$this, 'get_template_categories']);
 
     }
 
