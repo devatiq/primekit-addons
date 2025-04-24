@@ -170,7 +170,8 @@ checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach((input) => 
       const a = document.createElement("a");
       a.href = "#";
       a.setAttribute("data-type", type);
-      a.textContent = `${typeLabels[type] || type} (${count})`;
+     // a.textContent = `${typeLabels[type] || type} (${count})`; // count is not needed here so we disabled it
+      a.textContent = `${typeLabels[type] || type}`;
       li.appendChild(a);
       tabList.appendChild(li);
     });
