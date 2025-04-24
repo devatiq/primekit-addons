@@ -19,12 +19,82 @@ class Modal
     public function __construct()
     {
         add_action('elementor/editor/after_enqueue_scripts', [$this, 'enqueue_modal']);
+        add_action('wp_ajax_primekit_get_template_categories', [$this, 'get_template_categories']);
+        add_action('wp_ajax_nopriv_primekit_get_template_categories', [$this, 'get_template_categories']);
+
     }
 
+    /**
+     * Get unique categories from templates API
+     */
+    public function get_template_categories() {
+        check_ajax_referer('primekit_template_nonce', 'nonce');
+    
+        $response = wp_remote_get('https://demo.primekitaddons.com/wp-json/primekit/v1/templates');
+    
+        error_log('API Response Status: ' . wp_remote_retrieve_response_code($response));
+        error_log('API Response Body: ' . wp_remote_retrieve_body($response));
+
+        if (is_wp_error($response)) {
+            error_log('WP Error: ' . $response->get_error_message());
+            wp_send_json_error('Failed to fetch templates');
+            return;
+        }
+    
+        $body = wp_remote_retrieve_body($response);
+        $templates = json_decode($body, true);
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log('JSON Decode Error: ' . json_last_error_message());
+            wp_send_json_error('Invalid JSON response');
+            return;
+        }
+        
+        if (!is_array($templates)) {
+            error_log('Templates is not an array. Received: ' . print_r($templates, true));
+            wp_send_json_error('Invalid template data format');
+            return;
+        }
+
+        $categories = ['All'];
+    
+        foreach ($templates as $template) {
+            if (isset($template['categories']) && is_array($template['categories'])) {
+                $categories = array_merge($categories, $template['categories']);
+            }
+        }
+    
+        $categories = array_unique($categories);
+        $categories = array_values($categories);
+        
+        error_log('Categories found: ' . print_r($categories, true));
+        wp_send_json_success([
+            'categories' => $categories,
+            'templates' => $templates,
+        ]);
+        
+    }
+    
 
     public function enqueue_modal()
     {
         //add_action('wp_footer', [$this, 'render']);
+        
+        // Enqueue Template Categories JS
+        wp_enqueue_script(
+            'primekit-template-categories',
+            PRIMEKIT_TEMPLATE_ASSETS . '/js/TemplateCategories.js',
+            ['jquery'],
+            PRIMEKIT_VERSION,
+            true
+        );
+
+        // Localize script for AJAX
+        wp_localize_script('primekit-template-categories', 'primekitTemplates', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('primekit_template_nonce')
+        ));
+
         add_action('wp_footer', [$this, 'render']);
     }
     public function render()
@@ -48,30 +118,10 @@ class Modal
                                 <div class="primekit-template-filters">
                                     <h3><?php esc_html_e('Categories', 'primekit-addons'); ?></h3>
                                     <div class="primekit-filter-checkboxes">
-                                        <label class="primekit-checkbox">
-                                            <input type="checkbox" value="all" checked>
-                                            <span><?php esc_html_e('All', 'primekit-addons'); ?> (125)</span>
-                                        </label>
-                                        <label class="primekit-checkbox">
-                                            <input type="checkbox" value="header">
-                                            <span><?php esc_html_e('Header', 'primekit-addons'); ?> (15)</span>
-                                        </label>
-                                        <label class="primekit-checkbox">
-                                            <input type="checkbox" value="footer">
-                                            <span><?php esc_html_e('Footer', 'primekit-addons'); ?> (12)</span>
-                                        </label>
-                                        <label class="primekit-checkbox">
-                                            <input type="checkbox" value="about">
-                                            <span><?php esc_html_e('About', 'primekit-addons'); ?> (8)</span>
-                                        </label>
-                                        <label class="primekit-checkbox">
-                                            <input type="checkbox" value="contact">
-                                            <span><?php esc_html_e('Contact', 'primekit-addons'); ?> (10)</span>
-                                        </label>
-                                        <label class="primekit-checkbox">
-                                            <input type="checkbox" value="services">
-                                            <span><?php esc_html_e('Services', 'primekit-addons'); ?> (30)</span>
-                                        </label>
+                                        <!-- Categories will be loaded dynamically via JavaScript -->
+                                        <div class="primekit-loading-categories">
+                                            <?php esc_html_e('Loading categories...', 'primekit-addons'); ?>
+                                        </div>
                                     </div>
                                 </div>
                             </aside><!--/Template Popup Sidebar-->
@@ -112,42 +162,4 @@ class Modal
         <?php
     }
 
-    public function render2()
-    {
-        ?>
-        <div class="modal micromodal-slide primekit-template-modal-area" id="primekit-template-modal" aria-hidden="true">
-            <div class="modal__overlay" tabindex="-1">
-                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="primekit-tb-modal-title">
-
-                    <!--Header-->
-                    <header class="modal__header primekit-modal-header">
-                        <h2 class="modal__title primekit-modal-heading" id="primekit-tb-modal-title">
-                            <img src="<?php echo PRIMEKIT_ADMIN_ASSETS . '/img/primekit-icon.svg'; ?>" alt="">
-                            <?php esc_html_e('PrimeKit Templates', 'primekit-addons'); ?>
-                        </h2>
-                        <button class="modal__close primekit-template-modal-close" aria-label="Close modal"
-                            data-micromodal-close>
-
-                            <svg id="fi_2961937" height="512" viewBox="0 0 64 64" width="512"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="m4.59 59.41a2 2 0 0 0 2.83 0l24.58-24.58 24.59 24.58a2 2 0 0 0 2.83-2.83l-24.59-24.58 24.58-24.59a2 2 0 0 0 -2.83-2.83l-24.58 24.59-24.59-24.58a2 2 0 0 0 -2.82 2.82l24.58 24.59-24.58 24.59a2 2 0 0 0 0 2.82z">
-                                </path>
-                            </svg>
-
-                        </button>
-                    </header><!--/ Header-->
-
-                    <!--Body-->
-                    <main class="modal__content" id="primekit-template-modal-content-area">
-
-                        <div class="primekit-template-modal-content-area">
-
-                        </div>
-                    </main><!--/ Body-->
-                </div>
-            </div>
-        </div>
-        <?php
-    }
 }

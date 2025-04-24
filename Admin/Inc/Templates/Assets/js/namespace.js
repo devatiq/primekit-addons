@@ -13,7 +13,7 @@
       // Fetch templates using WordPress site URL
       const siteUrl = window.location.origin;
       fetch(
-        `${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates-info.json`
+        `https://demo.primekitaddons.com/wp-json/primekit/v1/templates`
       )
         .then((response) => {
           if (!response.ok) {
@@ -25,9 +25,9 @@
           console.log("Templates loaded:", data);
 
           // Render the templates in the modal
-          if (data.templates && data.templates.length > 0) {
+          if (data && data.length > 0) {
             let templateHTML = "";
-            data.templates.forEach((template) => {
+            data.forEach((template) => {
               templateHTML += `
                                 <div class="primekit-template">
                                     <img src="${template.thumbnail}" alt="${template.title}">
@@ -61,7 +61,8 @@
 
       // Load templates when the modal is opened
       this.loadTemplates();
-
+      loadTemplateCategories(); // Call the function to load template categories
+      // Show the modal
       MicroModal.show("primekit-template-modal");
     },
 
