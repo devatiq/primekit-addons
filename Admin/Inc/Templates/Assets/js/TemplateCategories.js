@@ -80,40 +80,16 @@ function loadTemplateCategories() {
         response.data.categories.forEach((category) => {
           const count = categoryToTemplatesMap[category]?.size || 0;
           checkboxContainer.appendChild(createCategoryLabel(category, count));
-          // ✅ Now bind click events AFTER checkboxes exist
-          checkboxContainer
-            .querySelectorAll('input[type="checkbox"]')
-            .forEach((input) => {
-              input.addEventListener("change", function () {
-                // Uncheck all
-                checkboxContainer
-                  .querySelectorAll('input[type="checkbox"]')
-                  .forEach((cb) => {
-                    cb.checked = false;
-                  });
-
-                // Check only this one
-                this.checked = true;
-
-                const selectedCategory = this.value.toLowerCase();
-
-                if (selectedCategory === "all") {
-                  primekitNamespace.renderTemplates(
-                    primekitNamespace.templates
-                  );
-                } else {
-                  const filtered = primekitNamespace.templates.filter(
-                    (tpl) =>
-                      Array.isArray(tpl.categories) &&
-                      tpl.categories.some(
-                        (cat) => cat.toLowerCase() === selectedCategory
-                      )
-                  );
-
-                  primekitNamespace.renderTemplates(filtered);
-                }
-              });
-            });
+// Checkbox click handling (after checkboxes are created)
+checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach((input) => {
+    input.addEventListener('change', function () {
+      checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+      this.checked = true;
+  
+      primekitNamespace.selectedCategory = this.value.toLowerCase();
+      primekitNamespace.filterTemplates();
+    });
+  });
         });
       }
     },
@@ -172,7 +148,7 @@ function loadTemplateCategories() {
 
     // Clear previous content
     tabList.innerHTML = "";
-
+      
     // Count templates per type
     const typeCounts = {};
     templates.forEach((template) => {
@@ -198,5 +174,18 @@ function loadTemplateCategories() {
       li.appendChild(a);
       tabList.appendChild(li);
     });
+
+    //Bind click events **after** rendering tabs
+    tabList.querySelectorAll('a').forEach((tab) => {
+        tab.addEventListener('click', function (e) {
+          e.preventDefault();
+          //Visual highlight for active tab
+          tabList.querySelectorAll("a").forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+          const selectedType = this.getAttribute('data-type');
+          primekitNamespace.selectedType = selectedType;
+          primekitNamespace.filterTemplates();
+        });
+      });
   }
 }

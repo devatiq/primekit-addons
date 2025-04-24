@@ -292,3 +292,7 @@
   color: #777;
   font-size: 0.9em;
 }
+.primekit-templates-popup-tab a.active {
+  font-weight: bold;
+  color: #0073aa;
+}

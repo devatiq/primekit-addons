@@ -1,8 +1,12 @@
 (function ($, elementor) {
   "use strict";
   window.primekitNamespace = {
+    selectedCategory: "all",
+    selectedType: "all",
     loadTemplates() {
-      const modalContent = document.getElementById("primekit-templates-modal-content");
+      const modalContent = document.getElementById(
+        "primekit-templates-modal-content"
+      );
       if (!modalContent) {
         console.error("Modal content element not found.");
         return;
@@ -10,14 +14,12 @@
 
       //Clear previous templates from UI
       this.renderTemplates([]); // Initialize with empty array
-      
+
       modalContent.innerHTML = "<p>Loading templates...</p>"; // Display loading message
 
       // Fetch templates using WordPress site URL
-      const siteUrl = 'https://demo.primekitaddons.com/';
-      fetch(
-        `${siteUrl}/wp-json/primekit/v1/templates`
-      )
+      const siteUrl = "https://demo.primekitaddons.com/";
+      fetch(`${siteUrl}/wp-json/primekit/v1/templates`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch templates.");
@@ -42,27 +44,31 @@
         console.error("Modal element not found.");
         return;
       }
-
+      this.selectedCategory = 'all';
+      this.selectedType = 'all';
+      
       // Load templates when the modal is opened
       this.loadTemplates();
 
-        // Wait briefly to ensure modal is fully in DOM
-  setTimeout(() => {
-    loadTemplateCategories();
-  }, 100); // Call the function to load template categories
+      // Wait briefly to ensure modal is fully in DOM
+      setTimeout(() => {
+        loadTemplateCategories();
+      }, 100); // Call the function to load template categories
       // Show the modal
       MicroModal.show("primekit-template-modal");
     },
 
     renderTemplates(templates) {
-      const modalContent = document.getElementById("primekit-templates-modal-content");
+      const modalContent = document.getElementById(
+        "primekit-templates-modal-content"
+      );
       if (!modalContent) return;
-    
+
       if (templates.length === 0) {
         modalContent.innerHTML = "<p>No templates found.</p>";
         return;
       }
-    
+
       let templateHTML = "";
       templates.forEach((template) => {
         templateHTML += `
@@ -77,10 +83,28 @@
           </div>
         `;
       });
-    
+
       modalContent.innerHTML = templateHTML;
     },
+
+    filterTemplates() {
+      let filtered = this.templates;
     
+      if (this.selectedType !== 'all') {
+        filtered = filtered.filter(tpl => tpl.type === this.selectedType);
+      }
+    
+      if (this.selectedCategory !== 'all') {
+        filtered = filtered.filter(tpl =>
+          Array.isArray(tpl.categories) &&
+          tpl.categories.some(cat => cat.toLowerCase() === this.selectedCategory)
+        );
+      }
+    
+      this.renderTemplates(filtered);
+    },
+    
+
     insertTemplate(templateId) {
       console.log(`Inserting template with ID: ${templateId}`);
 
