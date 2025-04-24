@@ -1,3 +1,25 @@
+/**
+ * Loads and displays template categories with their counts
+ *
+ * This function handles:
+ * - Loading categories via AJAX from WordPress backend
+ * - Displaying loading states and error messages
+ * - Creating category checkboxes with template counts
+ * - Loading template type tabs with counts
+ * - Organizing templates by category and type
+ *
+ * @requires jQuery
+ * @requires primekitTemplates.ajaxurl - WordPress AJAX URL
+ * @requires primekitTemplates.nonce - WordPress security nonce
+ *
+ * The function expects a response containing:
+ * - templates: Array of template objects with id, categories, and type properties
+ * - categories: Array of category strings
+ *
+ * @throws {Error} If checkbox container element is not found
+ * @returns {void}
+ */
+
 function loadTemplateCategories() {
   const checkboxContainer = document.querySelector(
     ".primekit-filter-checkboxes"
@@ -7,10 +29,10 @@ function loadTemplateCategories() {
     return;
   }
 
-  // 🔄 Clear previous categories
+  //  Clear previous categories
   checkboxContainer.innerHTML = "";
 
-  // 👇 Optional: add "loading" message again
+  //add "loading" message again
   const loadingDiv = document.createElement("div");
   loadingDiv.className = "primekit-loading-categories";
   loadingDiv.textContent = "Loading categories...";
@@ -67,7 +89,14 @@ function loadTemplateCategories() {
     },
   });
 
-  // Create a reusable label function
+  /**
+   * Create a reusable label function
+   * Creates a checkbox label element for a template category
+   *
+   * @param {string} category - The category name to display
+   * @param {number} count - The number of templates in this category
+   * @returns {HTMLLabelElement} A label element containing a checkbox and count
+   */
   function createCategoryLabel(category, count) {
     const label = document.createElement("label");
     label.className = "primekit-checkbox";
@@ -85,6 +114,21 @@ function loadTemplateCategories() {
     return label;
   }
 
+
+/**
+ * Loads and displays template type tabs with counts
+ * 
+ * This function:
+ * - Takes an array of template objects as input
+ * - Counts templates per type (page, section, popup etc)
+ * - Creates tab elements showing template counts by type
+ * - Maps internal type names to display labels
+ * - Clears and updates the tab list in the UI
+ *
+ * @param {Array} templates - Array of template objects with type property
+ * @throws {Error} If tab list element is not found
+ * @returns {void}
+ */
   function loadTemplateTypes(templates) {
     const tabList = document.querySelector(".primekit-templates-popup-tab ul");
 
