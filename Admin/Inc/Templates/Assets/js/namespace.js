@@ -3,6 +3,7 @@
   window.primekitNamespace = {
     selectedCategory: "all",
     selectedType: "all",
+    searchQuery: "",
     loadTemplates() {
       const modalContent = document.getElementById(
         "primekit-templates-modal-content"
@@ -12,8 +13,8 @@
         return;
       }
 
-      //Clear previous templates from UI
-      this.renderTemplates([]); // Initialize with empty array
+        //  Cleaner loading display
+        this.clearAndShowLoading(); // Clear existing content
 
       modalContent.innerHTML = "<p>Loading templates...</p>"; // Display loading message
 
@@ -44,20 +45,63 @@
         console.error("Modal element not found.");
         return;
       }
-      this.selectedCategory = 'all';
-      this.selectedType = 'all';
-      
+      this.selectedCategory = "all";
+      this.selectedType = "all";
+      this.searchQuery = "";
       // Load templates when the modal is opened
       this.loadTemplates();
 
       // Wait briefly to ensure modal is fully in DOM
       setTimeout(() => {
         loadTemplateCategories();
+        // Bind click event to insert button
+        this.bindSearchInput(); // Bind search input event
       }, 100); // Call the function to load template categories
+
       // Show the modal
       MicroModal.show("primekit-template-modal");
     },
 
+    /**
+     * Clears existing content in the modal and displays a loading message
+     * @param {string} message - Optional message to display. Defaults to "Loading templates..."
+     */
+    clearAndShowLoading(message = "Loading templates...") {
+      const modalContent = document.getElementById("primekit-templates-modal-content");
+      if (modalContent) {
+        modalContent.innerHTML = `<p>${message}</p>`;
+      }
+    },
+    
+    /** Binds input event to search field with debouncing
+     * Updates searchQuery and filters templates when user types
+     * Uses 200ms delay to avoid excessive filtering while typing
+     **/
+    bindSearchInput() {
+      const input = document.getElementById("primekit-templates-search");
+      if (!input) return;
+
+      let timeout;
+      input.addEventListener("input", function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          primekitNamespace.searchQuery = this.value;
+          primekitNamespace.filterTemplates();
+        }, 200);
+      });
+    },
+
+    /**
+     * Renders template items in the modal content area
+     * @param {Array} templates - Array of template objects to render
+     * Each template object should contain:
+     * - thumbnail: URL of template preview image
+     * - title: Template name/title
+     * - id: Unique template identifier
+     *
+     * If templates array is empty, displays "No templates found" message
+     * Otherwise generates HTML for each template with image, title and insert button
+     */
     renderTemplates(templates) {
       const modalContent = document.getElementById(
         "primekit-templates-modal-content"
@@ -87,23 +131,42 @@
       modalContent.innerHTML = templateHTML;
     },
 
+    /**
+     * Filters templates based on selected type, category and search query
+     * Applies three levels of filtering:
+     * 1. By template type if selectedType is not "all"
+     * 2. By category if selectedCategory is not "all"
+     * 3. By search query if searchQuery is not empty
+     *
+     * Uses the stored this.templates array as source
+     * Calls renderTemplates() with filtered results
+     */
     filterTemplates() {
       let filtered = this.templates;
-    
-      if (this.selectedType !== 'all') {
-        filtered = filtered.filter(tpl => tpl.type === this.selectedType);
+
+      if (this.selectedType !== "all") {
+        filtered = filtered.filter((tpl) => tpl.type === this.selectedType);
       }
-    
-      if (this.selectedCategory !== 'all') {
-        filtered = filtered.filter(tpl =>
-          Array.isArray(tpl.categories) &&
-          tpl.categories.some(cat => cat.toLowerCase() === this.selectedCategory)
+
+      if (this.selectedCategory !== "all") {
+        filtered = filtered.filter(
+          (tpl) =>
+            Array.isArray(tpl.categories) &&
+            tpl.categories.some(
+              (cat) => cat.toLowerCase() === this.selectedCategory
+            )
         );
       }
-    
+
+      if (this.searchQuery.trim() !== "") {
+        const q = this.searchQuery.toLowerCase();
+        filtered = filtered.filter((tpl) =>
+          tpl.title.toLowerCase().includes(q)
+        );
+      }
+
       this.renderTemplates(filtered);
     },
-    
 
     insertTemplate(templateId) {
       console.log(`Inserting template with ID: ${templateId}`);
