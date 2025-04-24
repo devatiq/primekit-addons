@@ -8,12 +8,15 @@
         return;
       }
 
+      //Clear previous templates from UI
+      this.renderTemplates([]); // Initialize with empty array
+      
       modalContent.innerHTML = "<p>Loading templates...</p>"; // Display loading message
 
       // Fetch templates using WordPress site URL
-      const siteUrl = window.location.origin;
+      const siteUrl = 'https://demo.primekitaddons.com/';
       fetch(
-        `https://demo.primekitaddons.com/wp-json/primekit/v1/templates`
+        `${siteUrl}/wp-json/primekit/v1/templates`
       )
         .then((response) => {
           if (!response.ok) {
@@ -24,27 +27,8 @@
         .then((data) => {
           console.log("Templates loaded:", data);
 
-          // Render the templates in the modal
-          if (data && data.length > 0) {
-            let templateHTML = "";
-            data.forEach((template) => {
-              templateHTML += `
-                                <div class="primekit-template">
-                                    <img src="${template.thumbnail}" alt="${template.title}">
-                                    <div class="primekit-template-content">
-                                      <h3>${template.title}</h3>
-                                      <button class="primekit-template-insert" data-template-id="${template.id}">
-                                          Insert
-                                      </button>
-                                    </div>
-                                </div>
-                            `;
-            });
-
-            modalContent.innerHTML = templateHTML; // Update the modal with templates
-          } else {
-            modalContent.innerHTML = "<p>No templates found.</p>";
-          }
+          this.templates = data; //  Store globally for filtering
+          this.renderTemplates(data); // move rendering into a dedicated method
         })
         .catch((error) => {
           console.error("Error loading templates:", error);
@@ -61,11 +45,42 @@
 
       // Load templates when the modal is opened
       this.loadTemplates();
-      loadTemplateCategories(); // Call the function to load template categories
+
+        // Wait briefly to ensure modal is fully in DOM
+  setTimeout(() => {
+    loadTemplateCategories();
+  }, 100); // Call the function to load template categories
       // Show the modal
       MicroModal.show("primekit-template-modal");
     },
 
+    renderTemplates(templates) {
+      const modalContent = document.getElementById("primekit-templates-modal-content");
+      if (!modalContent) return;
+    
+      if (templates.length === 0) {
+        modalContent.innerHTML = "<p>No templates found.</p>";
+        return;
+      }
+    
+      let templateHTML = "";
+      templates.forEach((template) => {
+        templateHTML += `
+          <div class="primekit-template">
+            <img src="${template.thumbnail}" alt="${template.title}">
+            <div class="primekit-template-content">
+              <h3>${template.title}</h3>
+              <button class="primekit-template-insert" data-template-id="${template.id}">
+                Insert
+              </button>
+            </div>
+          </div>
+        `;
+      });
+    
+      modalContent.innerHTML = templateHTML;
+    },
+    
     insertTemplate(templateId) {
       console.log(`Inserting template with ID: ${templateId}`);
 

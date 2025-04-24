@@ -80,6 +80,40 @@ function loadTemplateCategories() {
         response.data.categories.forEach((category) => {
           const count = categoryToTemplatesMap[category]?.size || 0;
           checkboxContainer.appendChild(createCategoryLabel(category, count));
+          // ✅ Now bind click events AFTER checkboxes exist
+          checkboxContainer
+            .querySelectorAll('input[type="checkbox"]')
+            .forEach((input) => {
+              input.addEventListener("change", function () {
+                // Uncheck all
+                checkboxContainer
+                  .querySelectorAll('input[type="checkbox"]')
+                  .forEach((cb) => {
+                    cb.checked = false;
+                  });
+
+                // Check only this one
+                this.checked = true;
+
+                const selectedCategory = this.value.toLowerCase();
+
+                if (selectedCategory === "all") {
+                  primekitNamespace.renderTemplates(
+                    primekitNamespace.templates
+                  );
+                } else {
+                  const filtered = primekitNamespace.templates.filter(
+                    (tpl) =>
+                      Array.isArray(tpl.categories) &&
+                      tpl.categories.some(
+                        (cat) => cat.toLowerCase() === selectedCategory
+                      )
+                  );
+
+                  primekitNamespace.renderTemplates(filtered);
+                }
+              });
+            });
         });
       }
     },
@@ -114,21 +148,20 @@ function loadTemplateCategories() {
     return label;
   }
 
-
-/**
- * Loads and displays template type tabs with counts
- * 
- * This function:
- * - Takes an array of template objects as input
- * - Counts templates per type (page, section, popup etc)
- * - Creates tab elements showing template counts by type
- * - Maps internal type names to display labels
- * - Clears and updates the tab list in the UI
- *
- * @param {Array} templates - Array of template objects with type property
- * @throws {Error} If tab list element is not found
- * @returns {void}
- */
+  /**
+   * Loads and displays template type tabs with counts
+   *
+   * This function:
+   * - Takes an array of template objects as input
+   * - Counts templates per type (page, section, popup etc)
+   * - Creates tab elements showing template counts by type
+   * - Maps internal type names to display labels
+   * - Clears and updates the tab list in the UI
+   *
+   * @param {Array} templates - Array of template objects with type property
+   * @throws {Error} If tab list element is not found
+   * @returns {void}
+   */
   function loadTemplateTypes(templates) {
     const tabList = document.querySelector(".primekit-templates-popup-tab ul");
 
