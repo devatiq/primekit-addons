@@ -50,27 +50,27 @@ class Modal
                                     <div class="primekit-filter-checkboxes">
                                         <label class="primekit-checkbox">
                                             <input type="checkbox" value="all" checked>
-                                            <span><?php esc_html_e('All', 'primekit-addons'); ?></span>
+                                            <span><?php esc_html_e('All', 'primekit-addons'); ?> (125)</span>
                                         </label>
                                         <label class="primekit-checkbox">
                                             <input type="checkbox" value="header">
-                                            <span><?php esc_html_e('Header', 'primekit-addons'); ?></span>
+                                            <span><?php esc_html_e('Header', 'primekit-addons'); ?> (15)</span>
                                         </label>
                                         <label class="primekit-checkbox">
                                             <input type="checkbox" value="footer">
-                                            <span><?php esc_html_e('Footer', 'primekit-addons'); ?></span>
+                                            <span><?php esc_html_e('Footer', 'primekit-addons'); ?> (12)</span>
                                         </label>
                                         <label class="primekit-checkbox">
                                             <input type="checkbox" value="about">
-                                            <span><?php esc_html_e('About', 'primekit-addons'); ?></span>
+                                            <span><?php esc_html_e('About', 'primekit-addons'); ?> (8)</span>
                                         </label>
                                         <label class="primekit-checkbox">
                                             <input type="checkbox" value="contact">
-                                            <span><?php esc_html_e('Contact', 'primekit-addons'); ?></span>
+                                            <span><?php esc_html_e('Contact', 'primekit-addons'); ?> (10)</span>
                                         </label>
                                         <label class="primekit-checkbox">
                                             <input type="checkbox" value="services">
-                                            <span><?php esc_html_e('Services', 'primekit-addons'); ?></span>
+                                            <span><?php esc_html_e('Services', 'primekit-addons'); ?> (30)</span>
                                         </label>
                                     </div>
                                 </div>

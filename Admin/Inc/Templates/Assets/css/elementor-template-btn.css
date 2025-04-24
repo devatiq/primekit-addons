@@ -45,7 +45,7 @@
   margin-left: 15px;
   margin-right: 15px;
 }
-.single-primekit-template  {
+.single-primekit-template {
   padding: 20px;
   border: 1px solid #ddd;
   text-align: center;
@@ -67,11 +67,12 @@
 /*----------------------------------------------
  *Template Modal
  * ---------------------------------------------*/
- .primekit-template-grid-area {
+.primekit-template-grid-area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  padding: 30px;
+  padding: 10px;
+  margin-top: 30px;
 }
 
 .primekit-template img {
@@ -109,31 +110,31 @@
 .primekit-template:before {
   width: 100%;
   height: 100%;
-  content: '';
+  content: "";
   background-color: #000;
   position: absolute;
   top: 0;
   left: 0;
-  transform:scale(0);
-  visibility:hidden;
-  opacity:0;
+  transform: scale(0);
+  visibility: hidden;
+  opacity: 0;
   transition: all 0.3s ease;
 }
 .primekit-template:hover:before {
-  transform:scale(1);
-  visibility:visible;
+  transform: scale(1);
+  visibility: visible;
   opacity: 0.7;
-  transition: all 0.3s ease;  
-} 
+  transition: all 0.3s ease;
+}
 
 .primekit-template-content h3 {
   font-size: 20px;
 }
 
 .primekit-template-insert {
-  background-color: #0D7A31;
+  background-color: #0d7a31;
   font-family: "Inter", Sans-serif;
-  border: 1px solid #0D7A31;
+  border: 1px solid #0d7a31;
   padding: 10px;
   min-width: 130px;
   border-radius: 5px;
@@ -149,13 +150,145 @@
   visibility: visible;
 }
 .primekit-template-insert:hover {
-  background-color: #0448E7;
+  background-color: #0448e7;
   transition: all 0.3s ease;
-  border-color: #0448E7;
+  border-color: #0448e7;
 }
 .primekit-templates-render-area .primekit-modal-heading {
   color: #fff;
 }
-.modal__close, .modal__close:active, .modal__close:focus, .modal__close:hover {
-outline: none;
+.modal__close,
+.modal__close:active,
+.modal__close:focus,
+.modal__close:hover {
+  outline: none;
+}
+
+.primekit-templates-popup-content-area {
+  display: flex;
+  gap: 30px;
+}
+
+.primekit-templates-sidebar {
+  flex-basis: 250px;
+  width: 250px;
+}
+
+.primekit-templates-popup-content {
+  width: 100%;
+  flex-basis: 100%;
+}
+
+.primekit-template-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.primekit-templates-popup-tabs {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  margin: 20px;
+  align-content: center;
+  align-items: center;
+}
+
+.primekit-templates-popup-tab ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.primekit-templates-popup-tab ul a {
+  color: #fff;
+  background-color: #0d7a31;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.primekit-templates-search input {
+  width: 200px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+/* Sidebar Styles */
+.primekit-templates-sidebar {
+  width: 250px;
+  height: calc(100vh - 200px); /* Adjust the 200px based on your header/footer height */
+  overflow-y: auto;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+/* Scrollbar Styling */
+.primekit-templates-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.primekit-templates-sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.primekit-templates-sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.primekit-templates-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Categories Title */
+.primekit-template-filters h3 {
+  margin: 0 0 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #23282d;
+}
+
+/* Checkbox Container */
+.primekit-filter-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Checkbox Items */
+.primekit-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.primekit-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.primekit-checkbox span {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Hover Effect */
+.primekit-checkbox:hover span {
+  color: #2271b1;
+}
+.primekit-checkbox span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Style for the count numbers */
+.primekit-checkbox span::after {
+  content: attr(data-count);
+  color: #777;
+  font-size: 0.9em;
 }
