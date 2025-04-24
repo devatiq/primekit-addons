@@ -25,30 +25,35 @@ function loadTemplateCategories() {
             ) {
                 loadingElement.style.display = 'none';
         
-                const counts = {};
                 const templates = response.data.templates;
+                const categoryToTemplatesMap = {};
         
-                // Count categories
+                // Initialize map
+                response.data.categories.forEach(category => {
+                    categoryToTemplatesMap[category] = new Set();
+                });
+        
+                // Map template IDs to categories
                 templates.forEach(template => {
                     if (Array.isArray(template.categories)) {
                         template.categories.forEach(category => {
-                            counts[category] = (counts[category] || 0) + 1;
+                            if (categoryToTemplatesMap[category]) {
+                                categoryToTemplatesMap[category].add(template.id);
+                            }
                         });
                     }
+                    // Also add to 'All'
+                    categoryToTemplatesMap['All'].add(template.id);
                 });
         
-                // Display "All"
-                const total = Object.values(counts).reduce((a, b) => a + b, 0);
-                checkboxContainer.appendChild(createCategoryLabel('All', total));
-        
-                // Display other categories in order
+                // Render categories
                 response.data.categories.forEach(category => {
-                    if (category !== 'All') {
-                        checkboxContainer.appendChild(createCategoryLabel(category, counts[category] || 0));
-                    }
+                    const count = categoryToTemplatesMap[category]?.size || 0;
+                    checkboxContainer.appendChild(createCategoryLabel(category, count));
                 });
             }
         },
+        
         error: function() {
             loadingElement.textContent = 'Failed to load categories';
         }
