@@ -27,11 +27,12 @@ class Modal
     /**
      * Get unique categories from templates API
      */
-    public function get_template_categories() {
+    public function get_template_categories()
+    {
         check_ajax_referer('primekit_template_nonce', 'nonce');
-    
+
         $response = wp_remote_get('https://demo.primekitaddons.com/wp-json/primekit/v1/templates');
-    
+
         error_log('API Response Status: ' . wp_remote_retrieve_response_code($response));
         error_log('API Response Body: ' . wp_remote_retrieve_body($response));
 
@@ -40,16 +41,16 @@ class Modal
             wp_send_json_error('Failed to fetch templates');
             return;
         }
-    
+
         $body = wp_remote_retrieve_body($response);
         $templates = json_decode($body, true);
-        
+
         if (json_last_error() !== JSON_ERROR_NONE) {
             error_log('JSON Decode Error: ' . json_last_error_message());
             wp_send_json_error('Invalid JSON response');
             return;
         }
-        
+
         if (!is_array($templates)) {
             error_log('Templates is not an array. Received: ' . print_r($templates, true));
             wp_send_json_error('Invalid template data format');
@@ -57,29 +58,29 @@ class Modal
         }
 
         $categories = ['All'];
-    
+
         foreach ($templates as $template) {
             if (isset($template['categories']) && is_array($template['categories'])) {
                 $categories = array_merge($categories, $template['categories']);
             }
         }
-    
+
         $categories = array_unique($categories);
         $categories = array_values($categories);
-        
+
         error_log('Categories found: ' . print_r($categories, true));
         wp_send_json_success([
             'categories' => $categories,
             'templates' => $templates,
         ]);
-        
+
     }
-    
+
 
     public function enqueue_modal()
     {
         //add_action('wp_footer', [$this, 'render']);
-        
+
         // Enqueue Template Categories JS
         wp_enqueue_script(
             'primekit-template-categories',
@@ -130,18 +131,18 @@ class Modal
                                 <!--Template Popup Tabs-->
                                 <div class="primekit-templates-popup-tabs">
                                     <!--Template Popup Tab Item-->
-                                   <div class="primekit-templates-popup-tab">
-                                   <ul>
-                                        <li><a href="">Templates</a></li>
-                                        <li><a href="">Section</a></li>
-                                    </ul>
-                                   </div><!--/Template Popup Tab Item-->
-                                   <!--Template Popup Search-->
-                                   <div class="primekit-templates-search">
-                                    <form action="">
-                                        <input type="text" name="search" id="primekit-templates-search" placeholder="Search">
-                                    </form>                                          
-                                   </div><!--/Template Popup Search-->
+                                    <div class="primekit-templates-popup-tab">
+                                        <ul>
+                                            <!-- Dynamically loaded from AJAX by loadTemplateTypes(); -->
+                                        </ul>
+                                    </div><!--/Template Popup Tab Item-->
+                                    <!--Template Popup Search-->
+                                    <div class="primekit-templates-search">
+                                        <form action="">
+                                            <input type="text" name="search" id="primekit-templates-search"
+                                                placeholder="Search">
+                                        </form>
+                                    </div><!--/Template Popup Search-->
                                 </div><!--/Template Popup Tabs-->
                                 <!--Template Grid-->
                                 <div class="primekit-template-grid-area" id="primekit-templates-modal-content">

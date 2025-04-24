@@ -23,6 +23,7 @@ function loadTemplateCategories() {
                 Array.isArray(response.data.templates) &&
                 Array.isArray(response.data.categories)
             ) {
+                loadTemplateTypes(response.data.templates);
                 loadingElement.style.display = 'none';
         
                 const templates = response.data.templates;
@@ -77,4 +78,44 @@ function loadTemplateCategories() {
         return label;
     }
     
+
+    function loadTemplateTypes(templates) {
+        const tabList = document.querySelector('.primekit-templates-popup-tab ul');
+    
+        if (!tabList) {
+            console.error('Tab list not found');
+            return;
+        }
+    
+        // Clear previous content
+        tabList.innerHTML = '';
+    
+        // Count templates per type
+        const typeCounts = {};
+        templates.forEach(template => {
+            const type = template.type || 'unknown';
+            typeCounts[type] = (typeCounts[type] || 0) + 1;
+        });
+    
+        // Map internal types to display names (optional)
+        const typeLabels = {
+            page: 'Templates',
+            section: 'Sections',
+            popup: 'Popups',
+            unknown: 'Others'
+        };
+    
+        // Create and insert tab items
+        Object.entries(typeCounts).forEach(([type, count]) => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#';
+            a.setAttribute('data-type', type);
+            a.textContent = `${typeLabels[type] || type} (${count})`;
+            li.appendChild(a);
+            tabList.appendChild(li);
+        });
+    }
+    
+
 }
