@@ -130,8 +130,15 @@
 .primekit-template-content h3 {
   font-size: 20px;
 }
-
-.primekit-template-insert {
+.primekit-templates-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.primekit-template-insert,
+.primekit-template-preview {
   background-color: #0d7a31;
   font-family: "Inter", Sans-serif;
   border: 1px solid #0d7a31;
@@ -142,6 +149,15 @@
   cursor: pointer;
   color: #fff;
   transition: all 0.3s ease;
+  font-weight: 300;
+}
+.primekit-template-preview a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .primekit-template:hover .primekit-template-content {
   transition: all 0.3s ease;
@@ -149,10 +165,13 @@
   opacity: 1;
   visibility: visible;
 }
-.primekit-template-insert:hover {
+.primekit-template-insert:hover, .primekit-template-preview:hover  {
   background-color: #0448e7;
   transition: all 0.3s ease;
   border-color: #0448e7;
+}
+.primekit-template-preview:hover a{
+  color: #fff;
 }
 .primekit-templates-render-area .primekit-modal-heading {
   color: #fff;
@@ -219,7 +238,7 @@
 /* Sidebar Styles */
 .primekit-templates-sidebar {
   width: 250px;
-  height: calc(100vh - 200px); /* Adjust the 200px based on your header/footer height */
+  height: calc(100vh - 200px);
   overflow-y: auto;
   border-right: 1px solid #e0e0e0;
   padding: 20px;
@@ -296,3 +315,64 @@
   font-weight: bold;
   color: #0073aa;
 }
+.primekit-load-more {
+  margin: 20px auto;
+  display: block;
+  background: #0073aa;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.primekit-templates-loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  background: #fff;
+  box-shadow: -24px 0 #fff, 24px 0 #fff;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -24px 0 #ff3d00, 24px 0 #fff;
+  }
+  66% {
+    background: #ff3d00;
+    box-shadow: -24px 0 #fff, 24px 0 #fff;
+  }
+  100% {
+    background: #fff;
+    box-shadow: -24px 0 #fff, 24px 0 #ff3d00;
+  }
+}
+.primekit-template-info {
+  position: absolute;
+  width: 90%;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  top: 15px;
+  z-index:99
+}
+
+.primekit-template-available, .primekit-template-pro {
+  display: inline-block;
+  margin: 0;
+  background-color: #0d7a31;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 200;
+}
+
+.primekit-template-pro {font-weight:400;}

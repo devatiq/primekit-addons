@@ -35,7 +35,7 @@ function loadTemplateCategories() {
   //add "loading" message again
   const loadingDiv = document.createElement("div");
   loadingDiv.className = "primekit-loading-categories";
-  loadingDiv.textContent = "Loading categories...";
+  loadingDiv.innerHTML = '<span class="primekit-templates-loader"></span>';
   checkboxContainer.appendChild(loadingDiv);
 
   jQuery.ajax({
@@ -80,22 +80,26 @@ function loadTemplateCategories() {
         response.data.categories.forEach((category) => {
           const count = categoryToTemplatesMap[category]?.size || 0;
           checkboxContainer.appendChild(createCategoryLabel(category, count));
-// Checkbox click handling (after checkboxes are created)
-checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach((input) => {
-    input.addEventListener('change', function () {
-      checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
-      this.checked = true;
-  
-      primekitNamespace.selectedCategory = this.value.toLowerCase();
-      primekitNamespace.filterTemplates();
-    });
-  });
+          // Checkbox click handling (after checkboxes are created)
+          checkboxContainer
+            .querySelectorAll('input[type="checkbox"]')
+            .forEach((input) => {
+              input.addEventListener("change", function () {
+                checkboxContainer
+                  .querySelectorAll('input[type="checkbox"]')
+                  .forEach((cb) => (cb.checked = false));
+                this.checked = true;
+
+                primekitNamespace.selectedCategory = this.value.toLowerCase();
+                primekitNamespace.filterTemplates();
+              });
+            });
         });
       }
     },
     error: function () {
       checkboxContainer.innerHTML =
-        '<div class="primekit-loading-categories">Failed to load categories</div>';
+        '<div class="primekit-loading-categories">⚠️ Failed to load categories</div>';
     },
   });
 
@@ -148,7 +152,7 @@ checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach((input) => 
 
     // Clear previous content
     tabList.innerHTML = "";
-      
+
     // Count templates per type
     const typeCounts = {};
     templates.forEach((template) => {
@@ -170,23 +174,25 @@ checkboxContainer.querySelectorAll('input[type="checkbox"]').forEach((input) => 
       const a = document.createElement("a");
       a.href = "#";
       a.setAttribute("data-type", type);
-     // a.textContent = `${typeLabels[type] || type} (${count})`; // count is not needed here so we disabled it
+      // a.textContent = `${typeLabels[type] || type} (${count})`; // count is not needed here so we disabled it
       a.textContent = `${typeLabels[type] || type}`;
       li.appendChild(a);
       tabList.appendChild(li);
     });
 
     //Bind click events **after** rendering tabs
-    tabList.querySelectorAll('a').forEach((tab) => {
-        tab.addEventListener('click', function (e) {
-          e.preventDefault();
-          //Visual highlight for active tab
-          tabList.querySelectorAll("a").forEach((t) => t.classList.remove("active"));
-          this.classList.add("active");
-          const selectedType = this.getAttribute('data-type');
-          primekitNamespace.selectedType = selectedType;
-          primekitNamespace.filterTemplates();
-        });
+    tabList.querySelectorAll("a").forEach((tab) => {
+      tab.addEventListener("click", function (e) {
+        e.preventDefault();
+        //Visual highlight for active tab
+        tabList
+          .querySelectorAll("a")
+          .forEach((t) => t.classList.remove("active"));
+        this.classList.add("active");
+        const selectedType = this.getAttribute("data-type");
+        primekitNamespace.selectedType = selectedType;
+        primekitNamespace.filterTemplates();
       });
+    });
   }
 }

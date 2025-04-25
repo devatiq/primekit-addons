@@ -4,6 +4,9 @@
     selectedCategory: "all",
     selectedType: "all",
     searchQuery: "",
+    templatesPerPage: 21,
+    currentPage: 1,
+
     loadTemplates() {
       const modalContent = document.getElementById(
         "primekit-templates-modal-content"
@@ -13,10 +16,8 @@
         return;
       }
 
-        //  Cleaner loading display
-        this.clearAndShowLoading(); // Clear existing content
-
-      modalContent.innerHTML = "<p>Loading templates...</p>"; // Display loading message
+      //  Cleaner loading display
+      this.clearAndShowLoading(); // Clear existing content
 
       // Fetch templates using WordPress site URL
       const siteUrl = "https://demo.primekitaddons.com/";
@@ -66,13 +67,15 @@
      * Clears existing content in the modal and displays a loading message
      * @param {string} message - Optional message to display. Defaults to "Loading templates..."
      */
-    clearAndShowLoading(message = "Loading templates...") {
-      const modalContent = document.getElementById("primekit-templates-modal-content");
+    clearAndShowLoading() {
+      const modalContent = document.getElementById(
+        "primekit-templates-modal-content"
+      );
       if (modalContent) {
-        modalContent.innerHTML = `<p>${message}</p>`;
+        modalContent.innerHTML = `<span class="primekit-templates-loader"></span>`;
       }
     },
-    
+
     /** Binds input event to search field with debouncing
      * Updates searchQuery and filters templates when user types
      * Uses 200ms delay to avoid excessive filtering while typing
@@ -103,33 +106,71 @@
      * Otherwise generates HTML for each template with image, title and insert button
      */
     renderTemplates(templates) {
-      const modalContent = document.getElementById(
-        "primekit-templates-modal-content"
-      );
+      const modalContent = document.getElementById("primekit-templates-modal-content");
       if (!modalContent) return;
-
-      if (templates.length === 0) {
+    
+      if (!Array.isArray(templates) || templates.length === 0) {
         modalContent.innerHTML = "<p>No templates found.</p>";
         return;
       }
-
+    
+      const start = (this.currentPage - 1) * this.templatesPerPage;
+      const end = start + this.templatesPerPage;
+      const paginated = templates.slice(start, end);
+    
       let templateHTML = "";
-      templates.forEach((template) => {
+      paginated.forEach((template) => {
         templateHTML += `
           <div class="primekit-template">
+          <div class="primekit-template-info">
+            <p title="Available from PrimeKit v1.2" class="primekit-template-available">v1.2</p>
+            <p title="This template is only available in the Pro version" class="primekit-template-pro">Pro</p>
+          </div>
             <img src="${template.thumbnail}" alt="${template.title}">
             <div class="primekit-template-content">
               <h3>${template.title}</h3>
-              <button class="primekit-template-insert" data-template-id="${template.id}">
-                Insert
-              </button>
+              <div class="primekit-templates-buttons">
+                <button class="primekit-template-insert" data-template-id="${template.id}">
+                  Insert
+                </button>
+                <button class="primekit-template-preview" data-template-id="${template.id}">
+                  <a href="${template.demo_url}" target="_blank">
+                    Preview
+                  </a>
+                </button>
+              </div>
             </div>
           </div>
         `;
       });
-
-      modalContent.innerHTML = templateHTML;
-    },
+    
+      if (this.currentPage === 1) {
+        modalContent.innerHTML = ""; // Clear only on first render
+      }
+    
+      modalContent.insertAdjacentHTML("beforeend", templateHTML);
+    
+      if (end < templates.length) {
+        const loadMoreBtn = document.createElement("button");
+        loadMoreBtn.textContent = "Load More";
+        loadMoreBtn.className = "primekit-load-more";
+    
+        modalContent.appendChild(loadMoreBtn); // Append first
+    
+        const observer = new IntersectionObserver((entries) => {
+          console.log("Observer triggered", entries[0].isIntersecting);
+          if (entries[0].isIntersecting) {
+            this.currentPage++;
+            observer.disconnect(); // Avoid multiple triggers
+            loadMoreBtn.remove(); // Optional: remove old button
+            this.renderTemplates(templates); // Load next set
+          }
+        });
+    
+        observer.observe(loadMoreBtn);
+      }
+    }
+    ,
 
     /**
      * Filters templates based on selected type, category and search query
@@ -164,7 +205,7 @@
           tpl.title.toLowerCase().includes(q)
         );
       }
-
+      this.currentPage = 1;
       this.renderTemplates(filtered);
     },
 
