@@ -364,7 +364,7 @@
   z-index:99
 }
 
-.primekit-template-available, .primekit-template-pro {
+.primekit-template-available, .primekit-template-pro, .primekit-template-free {
   display: inline-block;
   margin: 0;
   background-color: #0d7a31;

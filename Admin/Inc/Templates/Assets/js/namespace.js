@@ -106,34 +106,60 @@
      * Otherwise generates HTML for each template with image, title and insert button
      */
     renderTemplates(templates) {
-      const modalContent = document.getElementById("primekit-templates-modal-content");
+      const modalContent = document.getElementById(
+        "primekit-templates-modal-content"
+      );
       if (!modalContent) return;
-    
+
       if (!Array.isArray(templates) || templates.length === 0) {
         modalContent.innerHTML = "<p>No templates found.</p>";
         return;
       }
-    
+
       const start = (this.currentPage - 1) * this.templatesPerPage;
       const end = start + this.templatesPerPage;
       const paginated = templates.slice(start, end);
-    
+
       let templateHTML = "";
       paginated.forEach((template) => {
+        // Check if template is less than a month old
+        const isNew = template.modified_at ? (() => {
+          const createdDate = new Date(template.modified_at.replace(' ', 'T'));
+          const currentDate = new Date();
+          const diffTime = currentDate - createdDate;
+          return diffTime < (30 * 24 * 60 * 60 * 1000);
+        })() : false;
+        // Determine version display
+        let versionDisplay = "";
+        if (template.av) {
+          versionDisplay = `<p title="Available from PrimeKit ${template.av}" class="primekit-template-available">${template.av}</p>`;
+        } else if (isNew) {
+          versionDisplay = `<p title="New template" class="primekit-template-available">New</p>`;
+        }
+      
+
         templateHTML += `
           <div class="primekit-template">
           <div class="primekit-template-info">
-            <p title="Available from PrimeKit v1.2" class="primekit-template-available">v1.2</p>
-            <p title="This template is only available in the Pro version" class="primekit-template-pro">Pro</p>
+          ${versionDisplay}
+            ${
+              template.is_pro
+                ? `<p title="This template is only available in the Pro version" class="primekit-template-pro">Pro</p>`
+                : `<p title="This is a free template" class="primekit-template-free">Free</p>`
+            }
           </div>
             <img src="${template.thumbnail}" alt="${template.title}">
             <div class="primekit-template-content">
               <h3>${template.title}</h3>
               <div class="primekit-templates-buttons">
-                <button class="primekit-template-insert" data-template-id="${template.id}">
+                <button class="primekit-template-insert" data-template-id="${
+                  template.id
+                }">
                   Insert
                 </button>
-                <button class="primekit-template-preview" data-template-id="${template.id}">
+                <button class="primekit-template-preview" data-template-id="${
+                  template.id
+                }">
                   <a href="${template.demo_url}" target="_blank">
                     Preview
                   </a>
@@ -143,20 +169,20 @@
           </div>
         `;
       });
-    
+
       if (this.currentPage === 1) {
         modalContent.innerHTML = ""; // Clear only on first render
       }
-    
+
       modalContent.insertAdjacentHTML("beforeend", templateHTML);
-    
+
       if (end < templates.length) {
         const loadMoreBtn = document.createElement("button");
         loadMoreBtn.textContent = "Load More";
         loadMoreBtn.className = "primekit-load-more";
-    
+
         modalContent.appendChild(loadMoreBtn); // Append first
-    
+
         const observer = new IntersectionObserver((entries) => {
           console.log("Observer triggered", entries[0].isIntersecting);
           if (entries[0].isIntersecting) {
@@ -166,12 +192,10 @@
             this.renderTemplates(templates); // Load next set
           }
         });
-    
+
         observer.observe(loadMoreBtn);
       }
-    }
-    ,
-
+    },
     /**
      * Filters templates based on selected type, category and search query
      * Applies three levels of filtering:
