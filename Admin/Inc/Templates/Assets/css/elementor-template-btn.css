@@ -227,8 +227,15 @@
   background-color: #0d7a31;
   padding: 10px;
   border-radius: 3px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 400;
 }
-
+.primekit-templates-popup-tab ul a:hover, .primekit-templates-popup-tab ul a.active {
+  color:#fff;
+  background-color: #0448e7;
+  transition: all 0.3s ease;
+}
 .primekit-templates-search input {
   width: 200px;
   background-color: #fff;
@@ -313,10 +320,6 @@
   content: attr(data-count);
   color: #777;
   font-size: 0.9em;
-}
-.primekit-templates-popup-tab a.active {
-  font-weight: bold;
-  color: #0073aa;
 }
 .primekit-load-more {
   margin: 20px auto;
