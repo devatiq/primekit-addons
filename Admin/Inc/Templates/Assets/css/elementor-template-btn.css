@@ -400,3 +400,30 @@
   width: 19px;
   height: auto;
 }
+.primekit-templates-render-area.micromodal-slide[aria-hidden="false"] .modal__container {
+  min-width: 85%;
+}
+
+
+
+
+
+
+
+
+
+/* Responsive Grid Layout */
+@media screen and (max-width: 1200px) {
+  .primekit-template-grid-area {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .primekit-template-grid-area {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 5px;
+  }
+}
