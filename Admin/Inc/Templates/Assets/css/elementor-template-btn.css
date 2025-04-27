@@ -388,7 +388,7 @@
   margin-top: 0;
   margin-bottom: 0;
 }
-.primekit-template-pro {
+.primekit-template-pro, .primekit-template-free {
   background-color: transparent;
   padding: 0 !important;
   margin: 0;
@@ -396,7 +396,7 @@
   font-size: 0;
 }
 
-.primekit-template-pro svg {
+.primekit-template-pro svg, .primekit-template-free svg {
   width: 19px;
   height: auto;
 }
