@@ -386,3 +386,9 @@
 .primekit-template-pro {
   font-weight: 400;
 }
+.modal__content.primekit-templates-contents-area {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
