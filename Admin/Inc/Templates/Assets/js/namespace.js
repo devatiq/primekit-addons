@@ -147,7 +147,7 @@
           ${versionDisplay}
             ${
               template.is_pro
-                ? `<p title="This is a premium template available exclusively in PrimeKit Pro"  class="primekit-template-pro">Pro</p>`
+                ? `<p title="This is a premium template available exclusively in PrimeKit Pro"  class="primekit-template-pro"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="15" fill="url(#paint0_linear_10_17)"></rect><path d="M8.81031 17.2931C8.54203 15.5492 8.27374 13.8054 8.00546 12.0615C7.94596 11.6749 8.38581 11.4113 8.69868 11.6459C9.53454 12.2728 10.3704 12.8997 11.2062 13.5266C11.4814 13.733 11.8735 13.6658 12.0643 13.3796L14.1519 10.2482C14.3725 9.91727 14.8587 9.91727 15.0793 10.2482L17.1669 13.3796C17.3577 13.6658 17.7498 13.7329 18.025 13.5266C18.8608 12.8997 19.6966 12.2728 20.5325 11.6459C20.8454 11.4113 21.2852 11.6749 21.2258 12.0615C20.9575 13.8054 20.6892 15.5492 20.4209 17.2931H8.81031Z" fill="white"></path><path d="M19.8158 20.1957H9.41587C9.08157 20.1957 8.81055 19.9247 8.81055 19.5904V18.2606H20.4212V19.5904C20.4211 19.9247 20.1501 20.1957 19.8158 20.1957Z" fill="white"></path><defs><linearGradient id="paint0_linear_10_17" x1="6.96174e-06" y1="14.9999" x2="30.0001" y2="14.9999" gradientUnits="userSpaceOnUse"><stop stop-color="#0049E7"></stop><stop offset="1" stop-color="#C835F8"></stop></linearGradient></defs></svg></p>`
                 : `<p title="This template is available for all PrimeKit users"  class="primekit-template-free">Free</p>`
             }
           </div>
