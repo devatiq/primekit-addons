@@ -84,6 +84,9 @@ class Main extends Widget_Base
 					'is_external' => false,
 				],
 				'label_block' => true,
+				'dynamic' => [
+			'active' => true,
+		],
 			]
 		);
 
@@ -138,18 +141,13 @@ class Main extends Widget_Base
         );
 
         //width
-        $this->add_control(
+        $this->add_responsive_control(
 			'primekit-elementor-site-logo-width',
 			[
 				'label' => esc_html__( 'Logo Width', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%'],
+				'size_units' => [ 'px', '%', 'em', 'rem', 'vw', 'custom' ],
 				'range' => [
-					'px' => [
-						'min' => 10,
-						'max' => 1000,
-						'step' => 1,
-					],
 					'%' => [
 						'min' => 0,
 						'max' => 100,
@@ -165,13 +163,13 @@ class Main extends Widget_Base
 			]
 		);
 
-        //Spacing
-        $this->add_control(
+        //Padding
+        $this->add_responsive_control(
 			'primekit-elementor-site-logo-spacing',
 			[
-				'label' => esc_html__( 'Spacing', 'primekit-addons' ),
+				'label' => esc_html__( 'Padding', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => ['px'],
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'default' => [
 					'top' => 0,
 					'right' => 0,
@@ -197,12 +195,12 @@ class Main extends Widget_Base
 		);
 
          //Border Radius
-         $this->add_control(
+         $this->add_responsive_control(
 			'primekit-elementor-site-logo-border-radius',
 			[
 				'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => ['px'],
+				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'default' => [
 					'top' => 0,
 					'right' => 0,
@@ -214,6 +212,15 @@ class Main extends Widget_Base
 				'selectors' => [
 					'{{WRAPPER}} .primekit-elementor-site-logo-area img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
+			]
+		);
+
+		//Box Shadow
+		$this->add_group_control(
+			\Elementor\Group_Control_Box_Shadow::get_type(),
+			[
+				'name' => 'box_shadow',
+				'selector' => '{{WRAPPER}} .primekit-elementor-site-logo-area img',
 			]
 		);
 
