@@ -123,20 +123,23 @@
       let templateHTML = "";
       paginated.forEach((template) => {
         // Check if template is less than a month old
-        const isNew = template.modified_at ? (() => {
-          const createdDate = new Date(template.modified_at.replace(' ', 'T'));
-          const currentDate = new Date();
-          const diffTime = currentDate - createdDate;
-          return diffTime < (30 * 24 * 60 * 60 * 1000);
-        })() : false;
+        const isNew = template.modified_at
+          ? (() => {
+              const createdDate = new Date(
+                template.modified_at.replace(" ", "T")
+              );
+              const currentDate = new Date();
+              const diffTime = currentDate - createdDate;
+              return diffTime < 30 * 24 * 60 * 60 * 1000;
+            })()
+          : false;
         // Determine version display
         let versionDisplay = "";
         if (template.av) {
-          versionDisplay = `<p title="Available from PrimeKit ${template.av}" class="primekit-template-available">${template.av}</p>`;
+          versionDisplay = `<p title="This Template Available from PrimeKit v${template.av} or higher" class="primekit-template-available">v${template.av}</p>`;
         } else if (isNew) {
-          versionDisplay = `<p title="New template" class="primekit-template-available">New</p>`;
+          versionDisplay = `<p title="This template has been added to our library within the last 30 days" class="primekit-template-available">New</p>`;
         }
-      
 
         templateHTML += `
           <div class="primekit-template">
@@ -144,8 +147,8 @@
           ${versionDisplay}
             ${
               template.is_pro
-                ? `<p title="This template is only available in the Pro version" class="primekit-template-pro">Pro</p>`
-                : `<p title="This is a free template" class="primekit-template-free">Free</p>`
+                ? `<p title="This is a premium template available exclusively in PrimeKit Pro"  class="primekit-template-pro">Pro</p>`
+                : `<p title="This template is available for all PrimeKit users"  class="primekit-template-free">Free</p>`
             }
           </div>
             <img src="${template.thumbnail}" alt="${template.title}">
@@ -234,35 +237,44 @@
     },
 
     insertTemplate(templateId) {
-      console.log(`Inserting template with ID: ${templateId}`);
-
-      // Fetch template content using WordPress site URL
+      console.log(`Checking template with ID: ${templateId}`);
+    
       const siteUrl = window.location.origin;
-      fetch(
-        `${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`
-      )
-        .then((response) => {
+      const templateUrl = `${siteUrl}/wp-content/plugins/primekit-addons/Admin/Inc/Templates/data/templates/${templateId}.json`;
+    
+      fetch(templateUrl)
+        .then(async (response) => {
           if (!response.ok) {
-            throw new Error("Failed to fetch template data.");
+            throw new Error("Template file does not exist (HTTP Error).");
           }
-          return response.json();
+    
+          const contentType = response.headers.get("content-type");
+    
+          if (!contentType || !contentType.includes("application/json")) {
+            // Try reading a few characters of the body
+            const text = await response.text();
+            if (text.includes("404") || text.toLowerCase().includes("not found")) {
+              throw new Error("Template file not found.");
+            }
+            throw new Error("Invalid template file type.");
+          }
+    
+          // If everything looks good, parse JSON
+          return JSON.parse(await response.text());
         })
         .then((data) => {
           console.log("Template content loaded:", data);
-
+    
           if (!data || !data.content || !Array.isArray(data.content)) {
-            throw new Error("Invalid template data structure");
+            throw new Error("Invalid template data structure.");
           }
-
-          // Transform JSON to Elementor compatible structure
-          const transformedContent = this.transformElementorContent(
-            data.content
-          );
-
+    
+          const transformedContent = this.transformElementorContent(data.content);
+    
           if (!transformedContent || !Array.isArray(transformedContent)) {
-            throw new Error("Failed to transform template content");
+            throw new Error("Failed to transform template content.");
           }
-
+    
           try {
             $e.run("document/elements/import", {
               model: elementor.elementsModel,
@@ -278,7 +290,7 @@
           }
         })
         .catch((error) => {
-          console.error("Error processing template:", error);
+          console.error("Error:", error);
           alert(error.message || "Failed to process the template.");
         });
     },
