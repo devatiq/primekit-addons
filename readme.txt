@@ -62,7 +62,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Mailchimp (New)](https://demo.primekitaddons.com/widgets/mailchimp-widget/)
 - [Modern Post Grid (New, with 8 layouts)](https://demo.primekitaddons.com/widgets/modern-post-grid/)
 - [Page Title](https://demo.primekitaddons.com/widgets/page-title-elementor-widget/)
-- Popup
+- [Popup](https://demo.primekitaddons.com/widgets/popup-elementor-widget/)
 - [Portfolio](https://demo.primekitaddons.com/widgets/portfolio-elementor-widget/)
 - [Post Author Bio](https://demo.primekitaddons.com/widgets/post-author-bio-elementor-widget/)
 - [Post Category List](https://demo.primekitaddons.com/widgets/post-category-list-elementor-widget/)
@@ -71,9 +71,9 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Post Tag Info](https://demo.primekitaddons.com/widgets/post-tag-info-elementor-widget/)
 - [Post Title](https://demo.primekitaddons.com/widgets/post-title-elementor-widget/)
 - [Post Slider (New)](https://demo.primekitaddons.com/widgets/posts-slider-widget/)
-- Page Content (New)
+- [Page Content (New)](https://demo.primekitaddons.com/widgets/page-content-elementor-widget/)
 - [Popular Posts (New)](https://demo.primekitaddons.com/widgets/popular-posts/)
-- Lottie (New)
+- [Lottie (New)](https://demo.primekitaddons.com/widgets/lottie-animation/)
 - [Recent Posts List](https://demo.primekitaddons.com/widgets/recent-posts-list-elementor-widget/)
 - [Related Posts](https://demo.primekitaddons.com/widgets/related-posts-elementor-widget/)
 - [Search Form](https://demo.primekitaddons.com/widgets/search-form-elementor-widget/)
@@ -85,28 +85,28 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Skill Bar](https://demo.primekitaddons.com/widgets/skill-bar-elementor-widget/)
 - [Social Share](https://demo.primekitaddons.com/widgets/social-share-elementor-widget/)
 - [Sticker Text](https://demo.primekitaddons.com/widgets/sticker-text-elementor-widget/)
-- Sticky Call Button
+- [Sticky Call Button](https://demo.primekitaddons.com/widgets/sticky-call-button-elementor-widget/)
 - [Team Member](https://demo.primekitaddons.com/widgets/team-member-elementor-widget/)
 - [Template Slider](https://demo.primekitaddons.com/widgets/template-slider-widget/)
 - [WordPress Menu](https://demo.primekitaddons.com/widgets/wordpress-menu-elementor-widget/)
-- Testimonial Carousel
-- Copyright Widget
+- [Testimonial Carousel](https://demo.primekitaddons.com/widgets/testimonial-carousel-elementor-widget/)
+- [Copyright Widget](https://demo.primekitaddons.com/widgets/copyright-widget/)
 
 
 ==WooCommerce Widgets==
-- Add to Cart
-- Product Image
-- Product Meta
-- Product Pricing
-- Product Short Description
-- Product Tabs Data
-- Product Title
-- Related Product
-- Cart Icon
+- [Add to Cart](https://demo.primekitaddons.com/widgets/woocommerce-add-to-cart-elementor-widget/)
+- [Product Image](https://demo.primekitaddons.com/widgets/woocommerce-product-image-elementor-widget/)
+- [Product Meta](https://demo.primekitaddons.com/widgets/woocommerce-product-meta-elementor-widget/)
+- [Product Pricing](https://demo.primekitaddons.com/widgets/woocommerce-product-pricing-elementor-widget/)
+- [Product Short Description](https://demo.primekitaddons.com/widgets/woocommerce-product-short-description-elementor-widget/)
+- [Product Tabs Data](https://demo.primekitaddons.com/widgets/woocommerce-product-tabs-elementor-widget/)
+- [Product Title](https://demo.primekitaddons.com/widgets/woocommerce-product-title-elementor-widget/)
+- [Related Product](https://demo.primekitaddons.com/widgets/woocommerce-related-product-elementor-widget/)
+- [Cart Icon](https://demo.primekitaddons.com/widgets/product-cart-icon-elementor-widget/)
 - [Checkout Page](https://demo.primekitaddons.com/widgets/woocommerce-custom-checkout-page-elementor-widget/)
-- Cart Page
+- [Cart Page](https://demo.primekitaddons.com/widgets/woocommerce-custom-cart-page-elementor-widget/)
 - [My Account](https://demo.primekitaddons.com/widgets/woocommerce-my-account-elementor-widget/)
-- Product BreadCrumb
+- [Product BreadCrumb](https://demo.primekitaddons.com/widgets/woocommerce-breadcrumb-elementor-widget/)
 
 ==Global Widgets==
 - Custom CSS 
