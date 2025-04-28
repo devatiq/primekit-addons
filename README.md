@@ -89,22 +89,22 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 ### Team and Testimonials
 - [Team Member](https://demo.primekitaddons.com/widgets/team-member-elementor-widget/)
-- Testimonial Carousel
+- [Testimonial Carousel](https://demo.primekitaddons.com/widgets/testimonial-carousel-elementor-widget/)
 
 ### WooCommerce Widgets
-- Add to Cart
-- Product Image
-- Product Meta
-- Product Pricing
-- Product Short Description
-- Product Tabs Data
-- Product Title
-- Related Product
-- Cart Icon
+- [Add to Cart](https://demo.primekitaddons.com/widgets/woocommerce-add-to-cart-elementor-widget/)
+- [Product Image](https://demo.primekitaddons.com/widgets/woocommerce-product-image-elementor-widget/)
+- [Product Meta](https://demo.primekitaddons.com/widgets/woocommerce-product-meta-elementor-widget/)
+- [Product Pricing](https://demo.primekitaddons.com/widgets/woocommerce-product-pricing-elementor-widget/)
+- [Product Short Description](https://demo.primekitaddons.com/widgets/woocommerce-product-short-description-elementor-widget/)
+- [Product Tabs Data](https://demo.primekitaddons.com/widgets/woocommerce-product-tabs-elementor-widget/)
+- [Product Title](https://demo.primekitaddons.com/widgets/woocommerce-product-title-elementor-widget/)
+- [Related Product](https://demo.primekitaddons.com/widgets/woocommerce-related-product-elementor-widget/)
+- [Cart Icon](https://demo.primekitaddons.com/widgets/product-cart-icon-elementor-widget/)
 - [Checkout Page](https://demo.primekitaddons.com/widgets/woocommerce-custom-checkout-page-elementor-widget/)
-- Cart Page
+- [Cart Page](https://demo.primekitaddons.com/widgets/woocommerce-custom-cart-page-elementor-widget/)
 - [My Account](https://demo.primekitaddons.com/widgets/woocommerce-my-account-elementor-widget/)
-- Product BreadCrumb
+- [Product BreadCrumb](https://demo.primekitaddons.com/widgets/woocommerce-breadcrumb-elementor-widget/)
 
 ### Global Widgets
 - Custom CSS 
