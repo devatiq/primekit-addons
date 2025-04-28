@@ -141,6 +141,10 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 
 ## Changelog
+## 1.1.0
+- Added template library feature in the Elementor editor
+- Enhanced overall performance and optimization
+
 ## 1.0.8
 - Textdomain errors solved.
 
