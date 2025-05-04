@@ -66,12 +66,12 @@ endif; ?>">
         <!-- CTA Button -->
         <div class="primekit-cta-button-area">
             <?php if (!empty($primekit_btn1_text)): ?>
-                <a <?php echo esc_attr($this->get_render_attribute_string('primekit_cta_button_link_one')); ?>
+                <a <?php echo wp_kses_post($this->get_render_attribute_string('primekit_cta_button_link_one')); ?>
                     class="primekit-cta-button"><?php echo esc_html($primekit_btn1_text); ?></a>
             <?php endif; ?>
 
             <?php if (!empty($primekit_btn2_text)): ?>
-                <a <?php echo esc_attr($this->get_render_attribute_string('primekit_cta_button_link_two')); ?>
+                <a <?php echo wp_kses_post($this->get_render_attribute_string('primekit_cta_button_link_two')); ?>
                     class="primekit-cta-button"><?php echo esc_html($primekit_btn2_text); ?></a>
             <?php endif; ?>
 
