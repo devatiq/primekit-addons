@@ -59,6 +59,9 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::TEXT,
                 'placeholder' => esc_html__('Type your sub heading here', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ]
             ]
         );
 
@@ -71,6 +74,9 @@ class Main extends Widget_Base
                 'default' => esc_html__('Lets deliver the right solution for your', 'primekit-addons'),
                 'placeholder' => esc_html__('Type your heading here', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ]
             ]
         );
 
@@ -84,6 +90,9 @@ class Main extends Widget_Base
                 velit sed ullamcorper morbi. At erat  pellentesque.', 'primekit-addons'),
                 'placeholder' => esc_html__('Type your description here', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ]
             ]
         );
 
@@ -96,6 +105,9 @@ class Main extends Widget_Base
                 'default' => esc_html__('Get Started', 'primekit-addons'),
                 'placeholder' => esc_html__('Type your button text here', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ]
             ]
         );
         // First Button Link
@@ -111,6 +123,9 @@ class Main extends Widget_Base
                     'is_external' => false,
                     'nofollow' => false,
                 ],
+                'dynamic' => [
+                    'active' => true,
+                ]
             ]
         );
 
@@ -123,6 +138,9 @@ class Main extends Widget_Base
                 'default' => esc_html__('Contact Us', 'primekit-addons'),
                 'placeholder' => esc_html__('Type your button text here', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ]
             ]
         );
 
@@ -139,6 +157,9 @@ class Main extends Widget_Base
                     'is_external' => false,
                     'nofollow' => false,
                 ],
+                'dynamic' => [
+                    'active' => true,
+                ]
             ]
         );
         $this->end_controls_section(); // End Section
@@ -265,7 +286,7 @@ class Main extends Widget_Base
                 'selector' => '{{WRAPPER}} .primekit-cta-area',
             ]
         );
-        $this->add_control(
+        $this->add_responsive_control(
             'primekit_cta_box_border_radius',
             [
                 'label' => esc_html__('Border Radius', 'primekit-addons'),
@@ -279,7 +300,7 @@ class Main extends Widget_Base
 
 
         // Content Alignment Control
-        $this->add_control(
+        $this->add_responsive_control(
             'primekit_cta_content_alignment',
             [
                 'label' => esc_html__('Content Alignment', 'primekit-addons'),
@@ -520,7 +541,7 @@ class Main extends Widget_Base
                 ]
             ]
         );
-        
+
         // Button Alignment
         $this->add_responsive_control(
             'primekit_cta_button_alignment',
@@ -962,7 +983,6 @@ class Main extends Widget_Base
         );
 
         $this->end_controls_section();
-
     }
 
     /**
@@ -972,6 +992,4 @@ class Main extends Widget_Base
     {
         include 'RenderView.php';
     }
-
-
 }
