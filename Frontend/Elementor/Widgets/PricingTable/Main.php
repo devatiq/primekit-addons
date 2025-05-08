@@ -1,4 +1,5 @@
 <?php
+
 namespace PrimeKit\Frontend\Elementor\Widgets\PricingTable;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -17,22 +18,22 @@ class Main extends Widget_Base
     {
         return 'primekit-pricingtable';
     }
-    
+
     public function get_title()
     {
         return esc_html__('Pricing Table', 'primekit-addons');
     }
-    
+
     public function get_icon()
     {
         return 'eicon-price-table primekit-addons-icon';
     }
-    
+
     public function get_categories()
     {
         return ['primekit-category'];
     }
-    
+
 
     /**
      * Register the widget controls.
@@ -293,6 +294,9 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('Purchase Now', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ],
             ]
         );
         // Pricing footer button link
@@ -308,6 +312,9 @@ class Main extends Widget_Base
                     'is_external' => true,
                     'nofollow' => true,
                 ],
+                'dynamic' => [
+                    'active' => true,
+                ],
             ]
         );
         // pricing button icon
@@ -315,7 +322,7 @@ class Main extends Widget_Base
             'primekit_elementor_pricingTable_button_icon',
             [
                 'label' => esc_html__('Button Icon', 'primekit-addons'),
-                'type' => Controls_Manager::ICONS,                
+                'type' => Controls_Manager::ICONS,
             ]
         );
 
@@ -370,7 +377,7 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-ele-pricing-table-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',                    
+                    '{{WRAPPER}} .primekit-ele-pricing-table-area' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -495,7 +502,7 @@ class Main extends Widget_Base
             ]
         );
         // Border radius control for the pricing table header area
-        $this->add_control(
+        $this->add_responsive_control(
             'primekit_elementor_pricingTable_header_border_radius',
             [
                 'label' => esc_html__('Border Radius', 'primekit-addons'),
@@ -753,11 +760,11 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Top Specing', 'primekit-addons'),
                 'type' => Controls_Manager::SLIDER,
-                'size_units' => ['px', '%'],   
+                'size_units' => ['px', '%'],
                 'default' => [
                     'size' => 50,
                     'unit' => 'px',
-                ],          
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-ele-pricing-table-type-standard .primekit-ele-pricing-pack-preiod' => 'padding-top: {{SIZE}}{{UNIT}};',
                 ],
@@ -765,18 +772,18 @@ class Main extends Widget_Base
                     'primekit_elementor_pricingTable_type' => 'standard',
                 ]
             ]
-        );        
+        );
         // Package header padding bottom
         $this->add_responsive_control(
             'primekit_elementor_pricingTable_header_padding_bottom',
             [
                 'label' => esc_html__('Bottom Specing', 'primekit-addons'),
-                'type' => Controls_Manager::SLIDER,                
+                'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 50,
-                    'unit' => 'px',                   
+                    'unit' => 'px',
                 ],
-                'size_units' => ['px', '%'],              
+                'size_units' => ['px', '%'],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-ele-pricing-table-type-standard .primekit-ele-pricing-pack-preiod' => 'padding-bottom: {{SIZE}}{{UNIT}};',
                 ],
@@ -983,7 +990,7 @@ class Main extends Widget_Base
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 40,              
+                    'size' => 40,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-ele-pricing-table-type-standard .primekit-ele-pricing-table-body' => 'margin-top: {{SIZE}}{{UNIT}};',
@@ -1344,7 +1351,7 @@ class Main extends Widget_Base
     protected function render()
 
     {
-    
+
         include 'RenderView.php';
     }
 }

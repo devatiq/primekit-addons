@@ -1,4 +1,5 @@
 <?php
+
 namespace PrimeKit\Frontend\Elementor\Widgets\AnimatedText;
 
 if (!defined('ABSPATH'))
@@ -127,6 +128,9 @@ class Main extends Widget_Base
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 3,
 				'default' => esc_html__('PrimeKit Addons is', 'primekit-addons'),
+				'dynamic' => [
+					'active' => true,
+				],
 			]
 		);
 
@@ -137,6 +141,9 @@ class Main extends Widget_Base
 				'label' => esc_html__('After Text', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 3,
+				'dynamic' => [
+					'active' => true,
+				],
 			]
 		);
 
@@ -212,7 +219,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->end_controls_section();//end Anim Text contents
+		$this->end_controls_section(); //end Anim Text contents
 
 		//Before Text Style 
 		$this->start_controls_section(
@@ -246,7 +253,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->end_controls_section();//end before text style
+		$this->end_controls_section(); //end before text style
 
 		//Anim Text Style 
 		$this->start_controls_section(
@@ -337,7 +344,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->end_controls_section();//end anim text style
+		$this->end_controls_section(); //end anim text style
 
 		//After Text Style 
 		$this->start_controls_section(
@@ -371,7 +378,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		$this->end_controls_section();//end after text style
+		$this->end_controls_section(); //end after text style
 
 	}
 
