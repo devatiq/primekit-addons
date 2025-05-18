@@ -1,7 +1,8 @@
 <?php
 namespace PrimeKit\Frontend\Elementor\Widgets\BlogList;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -9,29 +10,29 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 
 class Main extends Widget_Base
-{ 
+{
     public function get_name()
-	{
-		return 'primekit-blog-list';
-	}
+    {
+        return 'primekit-blog-list';
+    }
 
-	public function get_title()
-	{
-		return esc_html__('Blog Posts List', 'primekit-addons');
-	}
+    public function get_title()
+    {
+        return esc_html__('Blog Posts List', 'primekit-addons');
+    }
 
-	public function get_icon()
-	{
-		return 'eicon-post-list primekit-addons-icon';
-	}
-	public function get_categories()
-	{
-		return ['primekit-category'];
-	}
-	public function get_keywords()
-	{
-		return ['prime', 'blog', 'list', 'post'];
-	}
+    public function get_icon()
+    {
+        return 'eicon-post-list primekit-addons-icon';
+    }
+    public function get_categories()
+    {
+        return ['primekit-category'];
+    }
+    public function get_keywords()
+    {
+        return ['prime', 'blog', 'list', 'post'];
+    }
 
     /**
      * Register the widget controls.
@@ -47,38 +48,38 @@ class Main extends Widget_Base
             ]
         );
 
-         //category selection
-    $this->add_control(
-        'primekit_elementor_blog_list_category',
-        [
-            'label' => esc_html__( 'Select Category', 'primekit-addons' ),
-            'type' => \Elementor\Controls_Manager::SELECT2,
-            'options' => $this->primekit_blog_list_categories(),
-            'default' => 'all',
-            'label_block' => true,
-            'multiple' => false,
-        ]
-    );
+        //category selection
+        $this->add_control(
+            'primekit_elementor_blog_list_category',
+            [
+                'label' => esc_html__('Select Category', 'primekit-addons'),
+                'type' => \Elementor\Controls_Manager::SELECT2,
+                'options' => $this->primekit_blog_list_categories(),
+                'default' => 'all',
+                'label_block' => true,
+                'multiple' => false,
+            ]
+        );
 
         //number of post
         $this->add_control(
-			'primekit_elementor_blog_list_post_number',
-			[
-				'label' => esc_html__( 'Number of Post', 'primekit-addons' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => ['custom'],
-				'range' => [
-					'custom' => [
-						'min' => 3,
-						'max' => 30,
-						'step' => 5,
-					]
-				],
-				'default' => [
-					'size' => 6,
-				],
-			]
-		);
+            'primekit_elementor_blog_list_post_number',
+            [
+                'label' => esc_html__('Number of Post', 'primekit-addons'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['custom'],
+                'range' => [
+                    'custom' => [
+                        'min' => 3,
+                        'max' => 30,
+                        'step' => 5,
+                    ]
+                ],
+                'default' => [
+                    'size' => 6,
+                ],
+            ]
+        );
 
         //Featured Image
         $this->add_control(
@@ -134,22 +135,22 @@ class Main extends Widget_Base
 
         //Excerpt leangth
         $this->add_control(
-			'primekit_elementor_blog_list_excerpt_length',
-			[
-				'label' => esc_html__( 'Excerpt Length', 'primekit-addons' ),
-				'type' => \Elementor\Controls_Manager::NUMBER,
-				'min' => 5,
-				'max' => 500,
-				'step' => 5,
-				'default' => 25,
+            'primekit_elementor_blog_list_excerpt_length',
+            [
+                'label' => esc_html__('Excerpt Length', 'primekit-addons'),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'min' => 5,
+                'max' => 500,
+                'step' => 5,
+                'default' => 25,
                 'condition' => [
                     'primekit_elementor_blog_list_excerpt_switch' => 'yes'
                 ],
-			]
-		);
+            ]
+        );
 
-         //More Button
-         $this->add_control(
+        //More Button
+        $this->add_control(
             'primekit_elementor_blog_list_read_more_switch',
             [
                 'label' => esc_html__('More Button', 'primekit-addons'),
@@ -188,17 +189,17 @@ class Main extends Widget_Base
             ]
         );
 
-        	//PrimeKit Notice
-		$this->add_control(
-			'primekit_elementor_addons_notice',
-			[
-				'type' => \Elementor\Controls_Manager::NOTICE,
-				'notice_type' => 'warning',
-				'dismissible' => false,
-				'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
-				'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
-			]
-		);
+        //PrimeKit Notice
+        $this->add_control(
+            'primekit_elementor_addons_notice',
+            [
+                'type' => \Elementor\Controls_Manager::NOTICE,
+                'notice_type' => 'warning',
+                'dismissible' => false,
+                'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
+                'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
+            ]
+        );
 
         $this->end_controls_section(); //end blog list setting control
 
@@ -211,8 +212,8 @@ class Main extends Widget_Base
             ]
         );
 
-          //blog title typography
-          $this->add_group_control(
+        //blog title typography
+        $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_elementor_blog_list_title_typography',
@@ -222,17 +223,17 @@ class Main extends Widget_Base
         );
 
         $this->start_controls_tabs(
-			'primekit_elementor_blog_list_title_style_tabs'
-		);
+            'primekit_elementor_blog_list_title_style_tabs'
+        );
 
-		$this->start_controls_tab(
-			'primekit_elementor_blog_list_title_style_normal_tab',
-			[
-				'label' => esc_html__( 'Title Color', 'primekit-addons' ),
-			]
-		);
+        $this->start_controls_tab(
+            'primekit_elementor_blog_list_title_style_normal_tab',
+            [
+                'label' => esc_html__('Title Color', 'primekit-addons'),
+            ]
+        );
 
-		// blog title color
+        // blog title color
         $this->add_control(
             'primekit_elementor_blog_list_title_color',
             [
@@ -245,14 +246,14 @@ class Main extends Widget_Base
             ]
         );
 
-		$this->end_controls_tab();
+        $this->end_controls_tab();
 
-		$this->start_controls_tab(
-			'primekit_elementor_blog_list_title_style_hover_tab',
-			[
-				'label' => esc_html__( 'Hover Color', 'primekit-addons' ),
-			]
-		);
+        $this->start_controls_tab(
+            'primekit_elementor_blog_list_title_style_hover_tab',
+            [
+                'label' => esc_html__('Hover Color', 'primekit-addons'),
+            ]
+        );
 
         // blog title hover color
         $this->add_control(
@@ -268,8 +269,8 @@ class Main extends Widget_Base
         );
 
         $this->end_controls_tab();
-		$this->end_controls_tabs();
-		$this->end_controls_section(); // end title style
+        $this->end_controls_tabs();
+        $this->end_controls_section(); // end title style
 
         // blog grid meta style section
         $this->start_controls_section(
@@ -280,8 +281,8 @@ class Main extends Widget_Base
             ]
         );
 
-          //blog meta typography
-          $this->add_group_control(
+        //blog meta typography
+        $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_elementor_blog_list_meta_typography',
@@ -317,8 +318,8 @@ class Main extends Widget_Base
             ]
         );
 
-          //blog excerpt typography
-          $this->add_group_control(
+        //blog excerpt typography
+        $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_elementor_blog_list_excerpt_typography',
@@ -354,8 +355,8 @@ class Main extends Widget_Base
             ]
         );
 
-          //button typography
-          $this->add_group_control(
+        //button typography
+        $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_elementor_blog_list_button_typography',
@@ -365,17 +366,17 @@ class Main extends Widget_Base
         );
 
         $this->start_controls_tabs(
-			'primekit_elementor_blog_list_button_style_tabs'
-		);
+            'primekit_elementor_blog_list_button_style_tabs'
+        );
 
-		$this->start_controls_tab(
-			'primekit_elementor_blog_list_button_style_normal_tab',
-			[
-				'label' => esc_html__( 'Button Color', 'primekit-addons' ),
-			]
-		);
+        $this->start_controls_tab(
+            'primekit_elementor_blog_list_button_style_normal_tab',
+            [
+                'label' => esc_html__('Button Color', 'primekit-addons'),
+            ]
+        );
 
-		// Button color
+        // Button color
         $this->add_control(
             'primekit_elementor_blog_list_button_color',
             [
@@ -389,14 +390,14 @@ class Main extends Widget_Base
             ]
         );
 
-		$this->end_controls_tab();
+        $this->end_controls_tab();
 
-		$this->start_controls_tab(
-			'primekit_elementor_blog_list_button_style_hover_tab',
-			[
-				'label' => esc_html__( 'Hover Color', 'primekit-addons' ),
-			]
-		);
+        $this->start_controls_tab(
+            'primekit_elementor_blog_list_button_style_hover_tab',
+            [
+                'label' => esc_html__('Hover Color', 'primekit-addons'),
+            ]
+        );
 
         // Button Hover color
         $this->add_control(
@@ -413,11 +414,11 @@ class Main extends Widget_Base
         );
 
         $this->end_controls_tab();
-		$this->end_controls_tabs();
+        $this->end_controls_tabs();
         $this->end_controls_section(); // end button style
 
-         // Image style section
-         $this->start_controls_section(
+        // Image style section
+        $this->start_controls_section(
             'primekit_elementor_blog_list_image_style_section',
             [
                 'label' => esc_html__('Image Style', 'primekit-addons'),
@@ -428,13 +429,13 @@ class Main extends Widget_Base
             ]
         );
 
-        	//Image Width
-		$this->add_responsive_control(
+        //Image Width
+        $this->add_responsive_control(
             'primekit_elementor_blog_list_image_width',
             [
-                'label' => esc_html__( 'Image Width', 'primekit-addons' ),
+                'label' => esc_html__('Image Width', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => [ 'px'],
+                'size_units' => ['px'],
                 'range' => [
                     'px' => [
                         'min' => 50,
@@ -454,38 +455,38 @@ class Main extends Widget_Base
 
         //Image Border
         $this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name' => 'primekit_elementor_blog_list_image_width_border',
-				'selector' => '{{WRAPPER}} .primekit-ele-blog-list-thumb figure img',
-			]
-		);
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'primekit_elementor_blog_list_image_width_border',
+                'selector' => '{{WRAPPER}} .primekit-ele-blog-list-thumb figure img',
+            ]
+        );
 
         //Image Border Radius
-        $this->add_control(
-			'primekit_elementor_blog_list_image_width_border_radius',
-			[
-				'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
-				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => ['px'],
-				'default' => [
-					'top' => 3,
-					'right' => 3,
-					'bottom' => 3,
-					'left' => 3,
-					'unit' => 'px',
-					'isLinked' => true,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .primekit-ele-blog-list-thumb figure img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-			]
-		);
+        $this->add_responsive_control(
+            'primekit_elementor_blog_list_image_width_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'primekit-addons'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px'],
+                'default' => [
+                    'top' => 3,
+                    'right' => 3,
+                    'bottom' => 3,
+                    'left' => 3,
+                    'unit' => 'px',
+                    'isLinked' => true,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-ele-blog-list-thumb figure img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
 
         $this->end_controls_section(); // end image style
 
-         // Pagination style section
-         $this->start_controls_section(
+        // Pagination style section
+        $this->start_controls_section(
             'primekit_elementor_blog_list_pagination_style_section',
             [
                 'label' => esc_html__('Pagination Style', 'primekit-addons'),
@@ -496,8 +497,8 @@ class Main extends Widget_Base
             ]
         );
 
-          //Pagination typography
-          $this->add_group_control(
+        //Pagination typography
+        $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'primekit_elementor_blog_list_pagination_typography',
@@ -581,17 +582,17 @@ class Main extends Widget_Base
         );
 
         $this->start_controls_tabs(
-			'primekit_elementor_blog_list_pagination_style_tabs'
-		);
+            'primekit_elementor_blog_list_pagination_style_tabs'
+        );
 
-		$this->start_controls_tab(
-			'primekit_elementor_blog_list_pagination_style_normal_tab',
-			[
-				'label' => esc_html__( 'Normal', 'primekit-addons' ),
-			]
-		);
+        $this->start_controls_tab(
+            'primekit_elementor_blog_list_pagination_style_normal_tab',
+            [
+                'label' => esc_html__('Normal', 'primekit-addons'),
+            ]
+        );
 
-		// Text color
+        // Text color
         $this->add_control(
             'primekit_elementor_blog_list_pagi_text_color',
             [
@@ -616,14 +617,14 @@ class Main extends Widget_Base
                 ],
             ]
         );
-		$this->end_controls_tab();
+        $this->end_controls_tab();
 
-		$this->start_controls_tab(
-			'primekit_elementor_blog_list_pagination_style_hover_tab',
-			[
-				'label' => esc_html__( 'Hover', 'primekit-addons' ),
-			]
-		);
+        $this->start_controls_tab(
+            'primekit_elementor_blog_list_pagination_style_hover_tab',
+            [
+                'label' => esc_html__('Hover', 'primekit-addons'),
+            ]
+        );
 
         // Hover color
         $this->add_control(
@@ -638,8 +639,8 @@ class Main extends Widget_Base
             ]
         );
 
-         // Hover bg color
-         $this->add_control(
+        // Hover bg color
+        $this->add_control(
             'primekit_elementor_blog_list_pagi_text_hover_bg_color',
             [
                 'label' => esc_html__('Hover Color', 'primekit-addons'),
@@ -663,20 +664,21 @@ class Main extends Widget_Base
             ]
         );
         $this->end_controls_tab();
-		$this->end_controls_tabs();
+        $this->end_controls_tabs();
         $this->end_controls_section(); // end pagination style
 
     }
 
-     //get blog category
-     private function primekit_blog_list_categories() {
+    //get blog category
+    private function primekit_blog_list_categories()
+    {
         $categories = get_categories();
-        $options = [ 'all' => 'All Categories' ];
-    
-        foreach ( $categories as $category ) {
-            $options[ $category->term_id ] = $category->name;
+        $options = ['all' => 'All Categories'];
+
+        foreach ($categories as $category) {
+            $options[$category->term_id] = $category->name;
         }
-    
+
         return $options;
     }
 
