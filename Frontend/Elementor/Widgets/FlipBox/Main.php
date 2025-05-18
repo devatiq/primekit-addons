@@ -354,6 +354,37 @@ class Main extends Widget_Base
 			]
 		);
 
+		//Border
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'primekit_elementor_flip_box_front_border',
+				'selector' => '{{WRAPPER}} .primekit-flip-box-front',
+			]
+		);
+
+		//Border radius
+		$this->add_responsive_control(
+			'primekit_elementor_flip_box_front_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'primekit-addons'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => ['px'],
+				'separator' => 'after',
+				'default' => [
+					'top' => 0,
+					'right' => 0,
+					'bottom' => 0,
+					'left' => 0,
+					'unit' => 'px',
+					'isLinked' => true,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .primekit-flip-box-front' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
 		//front icon size
 		$this->add_responsive_control(
 			'primekit_elementor_flip_box_front_icon_size',
@@ -406,6 +437,7 @@ class Main extends Widget_Base
 				'label' => esc_html__('Icon Bottom Space', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
+				'separator' => 'after',
 				'range' => [
 					'px' => [
 						'min' => -20,
@@ -577,35 +609,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		//Border
-		$this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name' => 'primekit_elementor_flip_box_front_border',
-				'selector' => '{{WRAPPER}} .primekit-flip-box-front',
-			]
-		);
 
-		//Border radius
-		$this->add_responsive_control(
-			'primekit_elementor_flip_box_front_border_radius',
-			[
-				'label' => esc_html__('Border Radius', 'primekit-addons'),
-				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => ['px'],
-				'default' => [
-					'top' => 0,
-					'right' => 0,
-					'bottom' => 0,
-					'left' => 0,
-					'unit' => 'px',
-					'isLinked' => true,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .primekit-flip-box-front' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-			]
-		);
 
 		//end of flip front style
 		$this->end_controls_section();
@@ -643,6 +647,36 @@ class Main extends Widget_Base
 				],
 			]
 		);
+		//Border
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'primekit_elementor_flip_box_back_border',
+				'selector' => '{{WRAPPER}} .primekit-flip-box-back',
+			]
+		);
+
+		//Border radius
+		$this->add_responsive_control(
+			'primekit_elementor_flip_box_back_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'primekit-addons'),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => ['px'],
+				'separator' => 'after',
+				'default' => [
+					'top' => 0,
+					'right' => 0,
+					'bottom' => 0,
+					'left' => 0,
+					'unit' => 'px',
+					'isLinked' => true,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .primekit-flip-box-back' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
 
 		//Heading typography
 		$this->add_group_control(
@@ -650,6 +684,7 @@ class Main extends Widget_Base
 			[
 				'name' => 'primekit_elementor_flip_box_back_heading_typography',
 				'label' => esc_html__('Heading Typography', 'primekit-addons'),
+
 				'selector' => '{{WRAPPER}} .primekit-flip-box-back h3',
 			]
 		);
@@ -674,6 +709,8 @@ class Main extends Widget_Base
 				'label' => esc_html__('Heading Bottom Space', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
+
+				'separator' => 'after',
 				'range' => [
 					'px' => [
 						'min' => -20,
@@ -738,35 +775,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		//Border
-		$this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name' => 'primekit_elementor_flip_box_back_border',
-				'selector' => '{{WRAPPER}} .primekit-flip-box-back',
-			]
-		);
 
-		//Border radius
-		$this->add_responsive_control(
-			'primekit_elementor_flip_box_back_border_radius',
-			[
-				'label' => esc_html__('Border Radius', 'primekit-addons'),
-				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => ['px'],
-				'default' => [
-					'top' => 0,
-					'right' => 0,
-					'bottom' => 0,
-					'left' => 0,
-					'unit' => 'px',
-					'isLinked' => true,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .primekit-flip-box-back' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-			]
-		);
 
 		//end of flip back style
 		$this->end_controls_section();
@@ -790,6 +799,18 @@ class Main extends Widget_Base
 			]
 		);
 
+
+		$this->start_controls_tabs(
+			'button_style_tabs'
+		);
+		//Normal
+		$this->start_controls_tab(
+			'button_style_normal_tab',
+			[
+				'label' => esc_html__('Normal', 'primekit-addons'),
+			]
+		);
+
 		//Text Color
 		$this->add_control(
 			'primekit_elementor_flip_box_back_btn_text_color',
@@ -803,6 +824,18 @@ class Main extends Widget_Base
 			]
 		);
 
+		//BG Color
+		$this->add_control(
+			'primekit_elementor_flip_box_back_btn_bg_color',
+			[
+				'label' => esc_html__('Background Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#633396',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-flip-back-btn a' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
 		//Border
 		$this->add_group_control(
 			\Elementor\Group_Control_Border::get_type(),
@@ -811,6 +844,63 @@ class Main extends Widget_Base
 				'selector' => '{{WRAPPER}} .primekit-flip-back-btn a',
 			]
 		);
+
+
+		$this->end_controls_tab();
+
+
+		//Hover
+		$this->start_controls_tab(
+			'button_style_hover_tab',
+			[
+				'label' => esc_html__('Hover', 'primekit-addons'),
+			]
+		);
+
+		//Text Hover Color
+		$this->add_control(
+			'primekit_elementor_flip_box_back_btn_text_hov_color',
+			[
+				'label' => esc_html__('Hover Text Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-flip-back-btn a:hover' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		// Hover BG Color
+		$this->add_control(
+			'primekit_elementor_flip_box_back_btn_bg_hov_color',
+			[
+				'label' => esc_html__('Hover Background Color', 'primekit-addons'),
+				'type' => Controls_Manager::COLOR,
+				'default' => '#633396',
+				'selectors' => [
+					'{{WRAPPER}} .primekit-flip-back-btn a:hover' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Border
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'primekit_elementor_flip_box_back_btn_hov_border',
+				'selector' => '{{WRAPPER}} .primekit-flip-back-btn a:hover',
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->end_controls_tabs();
+
+
+
+
+
+
 
 		//Border radius
 		$this->add_responsive_control(
@@ -854,40 +944,7 @@ class Main extends Widget_Base
 			]
 		);
 
-		//Text Hover Color
-		$this->add_control(
-			'primekit_elementor_flip_box_back_btn_text_hov_color',
-			[
-				'label' => esc_html__('Hover Text Color', 'primekit-addons'),
-				'type' => Controls_Manager::COLOR,
-				'default' => '#ffffff',
-				'selectors' => [
-					'{{WRAPPER}} .primekit-flip-back-btn a:hover' => 'color: {{VALUE}}',
-				],
-			]
-		);
 
-		// Hover BG Color
-		$this->add_control(
-			'primekit_elementor_flip_box_back_btn_bg_hov_color',
-			[
-				'label' => esc_html__('Hover Background Color', 'primekit-addons'),
-				'type' => Controls_Manager::COLOR,
-				'default' => '#633396',
-				'selectors' => [
-					'{{WRAPPER}} .primekit-flip-back-btn a:hover' => 'background-color: {{VALUE}}',
-				],
-			]
-		);
-
-		//Border
-		$this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name' => 'primekit_elementor_flip_box_back_btn_hov_border',
-				'selector' => '{{WRAPPER}} .primekit-flip-back-btn a:hover',
-			]
-		);
 
 		//end of flip back button style
 		$this->end_controls_section();
