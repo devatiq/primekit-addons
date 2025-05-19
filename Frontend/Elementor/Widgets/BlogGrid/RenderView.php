@@ -2,7 +2,8 @@
 /**
  * Render View file for PrimeKit Blog Grid.
  */
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 $primekit_settings = $this->get_settings_for_display();
 $primekit_number_of_posts = $this->get_settings('primekit_elementor_blog_grid_post_number')['size'];
@@ -20,14 +21,14 @@ $primekit_excerpt_length_grid = $primekit_settings['primekit_elementor_blog_grid
 ?>
 <!-- Blog grid Area-->
 <div class="primekit-ele-blog-grid-area">
-   <div class="primekit-ele-blog-grid">
-<?php
-// Get the selected blog layout
+    <div class="primekit-ele-blog-grid">
+        <?php
+        // Get the selected blog layout
 //$primekit_blog_layout = $this->get_settings('primekit_elementor_blog_grid_layout');
+        
+        include(PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-column.php');
 
-include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-column.php' );
-
-// switch ($primekit_blog_layout) {
+        // switch ($primekit_blog_layout) {
 //     case 'two-column':
 //         include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/two-column.php' );
 //         break;
@@ -41,6 +42,6 @@ include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/four-colu
 //     include( PRIMEKIT_PATH . 'Frontend/Elementor/Widgets/BlogGrid/template/three-column.php' );
 //         break;
 // }
-?>
+        ?>
     </div>
 </div><!--/ PrimeKit Blog grid Area-->
