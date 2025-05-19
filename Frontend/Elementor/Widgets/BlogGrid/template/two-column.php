@@ -15,7 +15,7 @@
         $args = array(
             'post_type' => 'post',
             'paged' => $paged,
-            'posts_per_page' => $primekit_number_of_posts - 1,
+            'posts_per_page' => $primekit_number_of_posts,
         );
 
         // specific category query
