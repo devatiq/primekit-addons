@@ -1,7 +1,8 @@
-<?php 
+<?php
 namespace PrimeKit\Frontend\Elementor\Widgets\ImgScroll;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+	exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -9,43 +10,45 @@ use Elementor\Controls_Manager;
 /**
  * Elementor List Widget.
  */
-class Main extends Widget_Base {
+class Main extends Widget_Base
+{
 
 	public function get_name()
 	{
 		return 'primekit-image-scroll';
 	}
-	
+
 	public function get_title()
 	{
 		return esc_html__('Image & Text Scroll', 'primekit-addons');
 	}
-	
+
 	public function get_icon()
 	{
 		return 'eicon-slider-album primekit-addons-icon';
 	}
-	
+
 	public function get_categories()
 	{
 		return ['primekit-category'];
 	}
-	
+
 	public function get_keywords()
 	{
 		return ['prime', 'image', 'scroll', 'text'];
 	}
-	
+
 
 	/**
 	 * Register list widget controls.
 	 */
-	protected function register_controls() {
+	protected function register_controls()
+	{
 
 		$this->start_controls_section(
 			'primekit_elementor_img_text_scroll_settings',
 			[
-				'label' => esc_html__( 'Settings', 'primekit-addons' ),
+				'label' => esc_html__('Settings', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -54,7 +57,7 @@ class Main extends Widget_Base {
 		$this->add_control(
 			'primekit_elementor_img_text_scroll_duration',
 			[
-				'label' => esc_html__( 'Animation Duration (seconds)', 'primekit-addons' ),
+				'label' => esc_html__('Animation Duration (seconds)', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'min' => 1,
 				'max' => 100,
@@ -65,26 +68,26 @@ class Main extends Widget_Base {
 
 		//Animation direction
 		$this->add_responsive_control(
-            'primekit_elementor_img_text_scroll_direction',
-            [
-                'label' => esc_html__( 'Direction', 'primekit-addons'),
-                'type' => Controls_Manager::CHOOSE,
-                'default' => 'primekitrtlscroll',
-                'options' => [
-                    'primekitltrscroll'    => [
-                        'title' => esc_html__( 'Left to Right', 'primekit-addons' ),
-                        'icon' => 'eicon-h-align-right',
-                    ],
-                    'primekitrtlscroll' => [
-                        'title' => esc_html__( 'Right to Left', 'primekit-addons' ),
-                        'icon' => 'eicon-h-align-left',
-                    ],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .primekit-archive-title-tag' => 'text-align: {{VALUE}}',
-                ],
-            ]
-        );
+			'primekit_elementor_img_text_scroll_direction',
+			[
+				'label' => esc_html__('Direction', 'primekit-addons'),
+				'type' => Controls_Manager::CHOOSE,
+				'default' => 'primekitrtlscroll',
+				'options' => [
+					'primekitltrscroll' => [
+						'title' => esc_html__('Left to Right', 'primekit-addons'),
+						'icon' => 'eicon-h-align-right',
+					],
+					'primekitrtlscroll' => [
+						'title' => esc_html__('Right to Left', 'primekit-addons'),
+						'icon' => 'eicon-h-align-left',
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .primekit-archive-title-tag' => 'text-align: {{VALUE}}',
+				],
+			]
+		);
 
 		$this->end_controls_section();//end settings
 
@@ -92,7 +95,7 @@ class Main extends Widget_Base {
 		$this->start_controls_section(
 			'primekit_elementor_img_text_scroll_contents',
 			[
-				'label' => esc_html__( 'Contents', 'primekit-addons' ),
+				'label' => esc_html__('Contents', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -103,9 +106,9 @@ class Main extends Widget_Base {
 		$repeater->add_control(
 			'primekit_elementor_img_text_scroll_title',
 			[
-				'label' => esc_html__( 'Title', 'primekit-addons' ),
+				'label' => esc_html__('Title', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Scroll Title' , 'primekit-addons' ),
+				'default' => esc_html__('Scroll Title', 'primekit-addons'),
 				'label_block' => true,
 			]
 		);
@@ -113,7 +116,7 @@ class Main extends Widget_Base {
 		$repeater->add_control(
 			'primekit_elementor_img_text_scroll_image',
 			[
-				'label' => esc_html__( 'Choose Image', 'primekit-addons' ),
+				'label' => esc_html__('Choose Image', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -124,60 +127,60 @@ class Main extends Widget_Base {
 		$this->add_control(
 			'primekit_elementor_img_text_scroll_list',
 			[
-				'label' => esc_html__( 'Scroll Items', 'primekit-addons' ),
+				'label' => esc_html__('Scroll Items', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 1', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 1', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 2', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 2', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 3', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 3', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 4', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 4', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 5', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 5', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 6', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 6', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 7', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 7', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 8', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 8', 'primekit-addons'),
 					],
 					[
-						'primekit_elementor_img_text_scroll_title' => esc_html__( 'Title 9', 'primekit-addons' ),
+						'primekit_elementor_img_text_scroll_title' => esc_html__('Title 9', 'primekit-addons'),
 					],
 				],
 				'title_field' => '{{{ primekit_elementor_img_text_scroll_title }}}',
 			]
 		);
 
-	   $this->end_controls_section(); //end contents
+		$this->end_controls_section(); //end contents
 
-	   //Box Style
+		//Box Style
 		$this->start_controls_section(
 			'primekit_elementor_img_text_scroll_box_style',
 			[
-				'label' => esc_html__( 'Box Style', 'primekit-addons' ),
+				'label' => esc_html__('Box Style', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
 		//Box Padding
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_img_text_scroll_box_space',
 			[
-				'label' => esc_html__( 'Box Space', 'primekit-addons' ),
+				'label' => esc_html__('Box Space', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px'],
+				'size_units' => ['px'],
 				'default' => [
 					'top' => 20,
 					'right' => 20,
@@ -202,12 +205,12 @@ class Main extends Widget_Base {
 		);
 
 		//Box Radius
-		$this->add_control(
+		$this->add_responsive_control(
 			'primekit_elementor_img_text_scroll_box_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'primekit-addons' ),
+				'label' => esc_html__('Border Radius', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px'],
+				'size_units' => ['px'],
 				'default' => [
 					'top' => 6,
 					'right' => 6,
@@ -224,11 +227,11 @@ class Main extends Widget_Base {
 
 		$this->end_controls_section(); //end box style
 
-	   //Item Style
+		//Item Style
 		$this->start_controls_section(
 			'primekit_elementor_img_text_scroll_style',
 			[
-				'label' => esc_html__( 'Item Style', 'primekit-addons' ),
+				'label' => esc_html__('Item Style', 'primekit-addons'),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -237,9 +240,9 @@ class Main extends Widget_Base {
 		$this->add_responsive_control(
 			'primekit_elementor_img_text_scroll_width',
 			[
-				'label' => esc_html__( 'Item Width', 'primekit-addons' ),
+				'label' => esc_html__('Item Width', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px'],
+				'size_units' => ['px'],
 				'range' => [
 					'px' => [
 						'min' => 50,
@@ -261,9 +264,9 @@ class Main extends Widget_Base {
 		$this->add_responsive_control(
 			'primekit_elementor_img_text_scroll_height',
 			[
-				'label' => esc_html__( 'Item Height', 'primekit-addons' ),
+				'label' => esc_html__('Item Height', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px'],
+				'size_units' => ['px'],
 				'range' => [
 					'px' => [
 						'min' => 50,
@@ -285,9 +288,9 @@ class Main extends Widget_Base {
 		$this->add_responsive_control(
 			'primekit_elementor_img_text_scroll_gap',
 			[
-				'label' => esc_html__( 'Item Gap', 'primekit-addons' ),
+				'label' => esc_html__('Item Gap', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px'],
+				'size_units' => ['px'],
 				'range' => [
 					'px' => [
 						'min' => 5,
@@ -309,7 +312,7 @@ class Main extends Widget_Base {
 		$this->add_control(
 			'primekit_elementor_img_text_scroll_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'primekit-addons' ),
+				'label' => esc_html__('Background Color', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#f1f1f1',
 				'selectors' => [
@@ -322,7 +325,7 @@ class Main extends Widget_Base {
 		$this->add_control(
 			'primekit_elementor_img_text_scroll_text_color',
 			[
-				'label' => esc_html__( 'Title Color', 'primekit-addons' ),
+				'label' => esc_html__('Title Color', 'primekit-addons'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -336,7 +339,7 @@ class Main extends Widget_Base {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'primekit_elementor_img_text_scroll_text_typography',
-				'label' => esc_html__( 'Title Typography', 'primekit-addons' ),
+				'label' => esc_html__('Title Typography', 'primekit-addons'),
 				'selector' => '{{WRAPPER}} .primekit-img-scroll-title',
 			]
 		);
@@ -344,13 +347,13 @@ class Main extends Widget_Base {
 
 		$this->end_controls_section(); //end item style
 
-    }
+	}
 
-    /**
-     * Render the widget output on the frontend.
-     */
-    protected function render()
-    {
-        include 'renderview.php';
-    }
+	/**
+	 * Render the widget output on the frontend.
+	 */
+	protected function render()
+	{
+		include 'renderview.php';
+	}
 }

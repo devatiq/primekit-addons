@@ -2,7 +2,8 @@
 
 namespace PrimeKit\Frontend\Elementor\Widgets\DualButton;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -17,27 +18,27 @@ class Main extends Widget_Base
     {
         return 'primekit-dual-button';
     }
-    
+
     public function get_title()
     {
         return esc_html__('Dual Button', 'primekit-addons');
     }
-    
+
     public function get_icon()
     {
         return 'eicon-dual-button primekit-addons-icon';
     }
-    
+
     public function get_categories()
     {
         return ['primekit-category'];
     }
-    
+
     public function get_keywords()
     {
         return ['prime', 'button', 'dual', 'dual button'];
     }
-    
+
 
 
     /**
@@ -56,20 +57,20 @@ class Main extends Widget_Base
         $this->add_responsive_control(
             'primekit_elementor_dual_button_align',
             [
-                'label' => esc_html__( 'Button Position', 'primekit-addons'),
+                'label' => esc_html__('Button Position', 'primekit-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'default' => 'center',
                 'options' => [
-                    'flex-start'    => [
-                        'title' => esc_html__( 'Left', 'primekit-addons' ),
+                    'flex-start' => [
+                        'title' => esc_html__('Left', 'primekit-addons'),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => esc_html__( 'Center', 'primekit-addons' ),
+                        'title' => esc_html__('Center', 'primekit-addons'),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'flex-end' => [
-                        'title' => esc_html__( 'Right', 'primekit-addons' ),
+                        'title' => esc_html__('Right', 'primekit-addons'),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
@@ -91,8 +92,8 @@ class Main extends Widget_Base
 
         // Tabs
         $this->start_controls_tabs(
-			'primekit_elementor_dual_button_tabs'
-		);
+            'primekit_elementor_dual_button_tabs'
+        );
 
         // Left Tab
         $this->start_controls_tab(
@@ -111,6 +112,9 @@ class Main extends Widget_Base
                 'default' => esc_html__('Free Download', 'primekit-addons'),
                 'placeholder' => esc_html__('Enter button text', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ],
             ]
         );
 
@@ -122,6 +126,9 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::URL,
                 'placeholder' => esc_html__('https://your-link.com', 'primekit-addons'),
                 'show_external' => true,
+                'dynamic' => [
+                    'active' => true,
+                ],
                 'default' => [
                     'url' => '#',
                     'is_external' => false,
@@ -151,10 +158,10 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Icon', 'primekit-addons'),
                 'type' => Controls_Manager::ICONS,
-                'label_block' => true,     
+                'label_block' => true,
                 'condition' => [
                     'primekit_elementor_dual_button_icon_left_switch' => 'yes',
-                ]         
+                ]
             ]
         );
 
@@ -242,6 +249,9 @@ class Main extends Widget_Base
                 'default' => esc_html__('Purchase Now', 'primekit-addons'),
                 'placeholder' => esc_html__('Enter button text', 'primekit-addons'),
                 'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ],
             ]
         );
 
@@ -253,6 +263,9 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::URL,
                 'placeholder' => esc_html__('https://your-link.com', 'primekit-addons'),
                 'show_external' => true,
+                'dynamic' => [
+                    'active' => true,
+                ],
                 'default' => [
                     'url' => '#',
                     'is_external' => false,
@@ -282,15 +295,15 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Icon', 'primekit-addons'),
                 'type' => Controls_Manager::ICONS,
-                'label_block' => true,   
+                'label_block' => true,
                 'condition' => [
                     'primekit_elementor_dual_button_icon_right_switch' => 'yes',
-                ]             
+                ]
             ]
         );
 
-            // Choose field for icon position
-            $this->add_control(
+        // Choose field for icon position
+        $this->add_control(
             'primekit_elementor_dual_button_right_icon_position',
             [
                 'label' => esc_html__('Icon Position', 'primekit-addons'),
@@ -316,59 +329,60 @@ class Main extends Widget_Base
         );
 
         $this->end_controls_tab(); // End Right Tab
-        
+
         $this->end_controls_tabs(); // End Tabs        
 
         $this->end_controls_section(); // End Section
 
 
-       // Style section for Left Button
-       $this->start_controls_section(
-           'primekit_elementor_dual_button_style_left',
-           [
-               'label' => esc_html__('Left Button', 'primekit-addons'),
-               'tab' => Controls_Manager::TAB_STYLE,
-           ]
-       );
-       // Icon Size for Left Button
-       $this->add_control(
-           'primekit_elementor_dual_button_icon_size_left',
-           [
-               'label' => esc_html__('Icon Size', 'primekit-addons'),
-               'type' => Controls_Manager::SLIDER,
-               'range' => [
-                   'px' => [
-                       'min' => 6,
-                       'max' => 50,
-                       'step' => 1,
-                   ],
-               ],
-               'selectors' => [
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one i' => 'font-size: {{SIZE}}{{UNIT}};',
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
-               ],
-               'condition' => [
-                   'primekit_elementor_dual_button_icon_left_switch' => 'yes',
-               ]
-           ]
-       );
+        // Style section for Left Button
+        $this->start_controls_section(
+            'primekit_elementor_dual_button_style_left',
+            [
+                'label' => esc_html__('Left Button', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+        // Icon Size for Left Button
+        $this->add_responsive_control(
+            'primekit_elementor_dual_button_icon_size_left',
+            [
+                'label' => esc_html__('Icon Size', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'range' => [
+                    'px' => [
+                        'min' => 6,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
 
-       // Icon Color for Left Button
-       $this->add_control(
-           'primekit_elementor_dual_button_icon_color_left',
-           [
-               'label' => esc_html__('Icon Color', 'primekit-addons'),
-               'type' => Controls_Manager::COLOR,
-               'default' => '#fff',
-               'selectors' => [
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one i' => 'color: {{VALUE}};',
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one svg' => 'fill: {{VALUE}};',
-               ],
-               'condition' => [
-                   'primekit_elementor_dual_button_icon_left_switch' => 'yes',
-               ]
-           ]
-       );
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one i' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'primekit_elementor_dual_button_icon_left_switch' => 'yes',
+                ]
+            ]
+        );
+
+        // Icon Color for Left Button
+        $this->add_control(
+            'primekit_elementor_dual_button_icon_color_left',
+            [
+                'label' => esc_html__('Icon Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#fff',
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one svg' => 'fill: {{VALUE}};',
+                ],
+                'condition' => [
+                    'primekit_elementor_dual_button_icon_left_switch' => 'yes',
+                ]
+            ]
+        );
         // Typography for Left Button
         $this->add_group_control(
             Group_Control_Typography::get_type(),
@@ -408,7 +422,7 @@ class Main extends Widget_Base
                         'max' => 100,
                         'step' => 1,
                     ],
-                ],       
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-one a' => 'gap: {{SIZE}}{{UNIT}};',
                 ],
@@ -523,7 +537,7 @@ class Main extends Widget_Base
                     'primekit_elementor_dual_button_icon_left_switch' => 'yes'
                 ],
             ]
-        );   
+        );
 
         //border color hover
         $this->add_control(
@@ -540,111 +554,111 @@ class Main extends Widget_Base
         $this->end_controls_tab(); // End Hover tab for Left Button
 
         $this->end_controls_tabs(); // End Tabs for Left Button
-            
 
-       $this->end_controls_section();
 
-       // Style section for Middle Text
-       $this->start_controls_section(
-           'primekit_elementor_dual_button_style_middle',
-           [
-               'label' => esc_html__('Middle Text', 'primekit-addons'),
-               'tab' => Controls_Manager::TAB_STYLE,
-           ]
-       );
+        $this->end_controls_section();
 
-       // Text Color for Middle Text
-       $this->add_control(
-           'primekit_elementor_dual_button_text_color_middle',
-           [
-               'label' => esc_html__('Text Color', 'primekit-addons'),
-               'type' => Controls_Manager::COLOR,
-               'default' => '#284162',
-               'selectors' => [
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text' => 'color: {{VALUE}};',
-               ],
-           ]
-       );
+        // Style section for Middle Text
+        $this->start_controls_section(
+            'primekit_elementor_dual_button_style_middle',
+            [
+                'label' => esc_html__('Middle Text', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
 
-       // Typography for Middle Text
-       $this->add_group_control(
-           Group_Control_Typography::get_type(),
-           [
-               'name' => 'primekit_elementor_dual_button_typography_middle',
-               'selector' => '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text',
-           ]
-       );
+        // Text Color for Middle Text
+        $this->add_control(
+            'primekit_elementor_dual_button_text_color_middle',
+            [
+                'label' => esc_html__('Text Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#284162',
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
 
-       // Background Color for Middle Text
-       $this->add_group_control(
-           Group_Control_Background::get_type(),
-           [
-               'name' => 'primekit_elementor_dual_button_background_middle',
-               'label' => esc_html__('Background Color', 'primekit-addons'),               
-               'types' => ['classic', 'gradient'],
-               'exclude' => ['image'],
-               'selector' => '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text',
-           ]
-       );
+        // Typography for Middle Text
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'primekit_elementor_dual_button_typography_middle',
+                'selector' => '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text',
+            ]
+        );
 
-       // Box Shadow for Middle Text
-       $this->add_group_control(
-           Group_Control_Box_Shadow::get_type(),
-           [
-               'name' => 'primekit_elementor_dual_button_box_shadow_middle',
-               'selector' => '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text',
-           ]
-       );
+        // Background Color for Middle Text
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'primekit_elementor_dual_button_background_middle',
+                'label' => esc_html__('Background Color', 'primekit-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text',
+            ]
+        );
 
-       $this->end_controls_section();
+        // Box Shadow for Middle Text
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name' => 'primekit_elementor_dual_button_box_shadow_middle',
+                'selector' => '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button-middle-text',
+            ]
+        );
 
-       // Style section for Right Button
-       $this->start_controls_section(
-           'primekit_elementor_dual_button_style_right',
-           [
-               'label' => esc_html__('Right Button', 'primekit-addons'),
-               'tab' => Controls_Manager::TAB_STYLE,
-           ]
-       );
+        $this->end_controls_section();
 
-       // Icon Size for Right Button
-       $this->add_control(
-           'primekit_elementor_dual_button_icon_size_right',
-           [
-               'label' => esc_html__('Icon Size', 'primekit-addons'),
-               'type' => Controls_Manager::SLIDER,
-               'range' => [
-                   'px' => [
-                       'min' => 5,
-                       'max' => 50,
-                       'step' => 1,
-                   ],
-               ],
-               'selectors' => [
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two i' => 'font-size: {{SIZE}}{{UNIT}};',
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
-               ],
-               'condition' => [
-                   'primekit_elementor_dual_button_icon_right_switch' => 'yes'
-               ]
-           ]
-       );
+        // Style section for Right Button
+        $this->start_controls_section(
+            'primekit_elementor_dual_button_style_right',
+            [
+                'label' => esc_html__('Right Button', 'primekit-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
 
-       // Icon Color for Right Button
-       $this->add_control(
-           'primekit_elementor_dual_button_icon_color_right',
-           [
-               'label' => esc_html__('Icon Color', 'primekit-addons'),
-               'type' => Controls_Manager::COLOR,
-               'selectors' => [
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two i' => 'color: {{VALUE}};',
-                   '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two svg' => 'fill: {{VALUE}};',
-               ],
-               'condition' => [
-                   'primekit_elementor_dual_button_icon_right_switch' => 'yes'
-               ]
-           ]
-       );
+        // Icon Size for Right Button
+        $this->add_responsive_control(
+            'primekit_elementor_dual_button_icon_size_right',
+            [
+                'label' => esc_html__('Icon Size', 'primekit-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'range' => [
+                    'px' => [
+                        'min' => 5,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two i' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                ],
+                'condition' => [
+                    'primekit_elementor_dual_button_icon_right_switch' => 'yes'
+                ]
+            ]
+        );
+
+        // Icon Color for Right Button
+        $this->add_control(
+            'primekit_elementor_dual_button_icon_color_right',
+            [
+                'label' => esc_html__('Icon Color', 'primekit-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two svg' => 'fill: {{VALUE}};',
+                ],
+                'condition' => [
+                    'primekit_elementor_dual_button_icon_right_switch' => 'yes'
+                ]
+            ]
+        );
 
         // Typography for Right Button
         $this->add_group_control(
@@ -684,7 +698,7 @@ class Main extends Widget_Base
                         'max' => 100,
                         'step' => 1,
                     ],
-                ],       
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-dual-button-area .primekit-dual-button.primekit-dual-button-two a' => 'gap: {{SIZE}}{{UNIT}};',
                 ],
@@ -816,7 +830,7 @@ class Main extends Widget_Base
 
         $this->end_controls_tabs();
 
-       $this->end_controls_section();
+        $this->end_controls_section();
 
     }
 

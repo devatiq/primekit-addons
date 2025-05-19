@@ -246,7 +246,7 @@ class Main extends Widget_Base
         );
 
         //wrapper border radius
-        $this->add_control(
+        $this->add_responsive_control(
             'general_container_border_radius',
             [
                 'label' => esc_html__('Border Radius', 'primekit-addons'),
@@ -466,7 +466,7 @@ class Main extends Widget_Base
         );
 
         //name field border radius
-        $this->add_control(
+        $this->add_responsive_control(
             'name_field_border_radius',
             [
                 'label' => esc_html__('Border Radius', 'primekit-addons'),
@@ -816,6 +816,17 @@ class Main extends Widget_Base
                 'types' => ['classic', 'gradient'],
                 'exclude' => ['image'],
                 'selector' => '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button:hover',
+            ]
+        );
+        $this->add_control(
+            'hover_button_border_color',
+            [
+                'label' => esc_html__('Border Color', 'primekit-addons'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button:hover' => 'border-color: {{VALUE}}',
+
+                ]
             ]
         );
 

@@ -74,16 +74,16 @@ class Main extends Widget_Base
                 'max' => 4,
                 'step' => 1,
                 'desktop_default' => 3,
-                'tablet_default' => 2,   
-                'mobile_default' => 1,   
+                'tablet_default' => 2,
+                'mobile_default' => 1,
                 'description' => esc_html__('Set the number of columns for Tablet and Mobile views', 'primekit-addons'),
                 'selectors' => [
                     '{{WRAPPER}} .primekit-ele-four-column-blog' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
                 ],
             ]
         );
-        
-        
+
+
 
         //category selection
         $this->add_control(

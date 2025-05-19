@@ -17,32 +17,32 @@ class Main extends Widget_Base
     {
         return 'primekit-cost-estimation';
     }
-    
+
     public function get_title()
     {
         return esc_html__('Cost Estimation', 'primekit-addons');
     }
-    
+
     public function get_icon()
     {
         return 'eicon-call-to-action primekit-addons-icon';
     }
-    
+
     public function get_categories()
     {
         return ['primekit-category'];
     }
-    
+
     public function get_keywords()
     {
         return ['cost', 'estimation', 'cost calculator', 'calculator'];
     }
-    
+
     public function get_script_depends()
     {
         return ['primekit-cost-estimation'];
     }
-    
+
 
     /**
      * Register the widget controls.
@@ -69,13 +69,13 @@ class Main extends Widget_Base
                 ]
             );
 
-            
+
             $this->add_control(
                 'primekit_cost_calculator_alert',
                 [
                     'type' => \Elementor\Controls_Manager::ALERT,
                     'alert_type' => 'warning',
-                    'heading' => esc_html__('Package Names Missing', 'primekit-addons'),      
+                    'heading' => esc_html__('Package Names Missing', 'primekit-addons'),
                     'content' => sprintf(
                         // Translators: %1$s and %2$s are HTML links to the settings page.
                         esc_html__('Package names are not configured yet. Please go to the %1$ssettings page%2$s to configure them.', 'primekit-addons'),
@@ -84,7 +84,7 @@ class Main extends Widget_Base
                     ),
                 ]
             );
-            
+
 
             $this->end_controls_section();
         } else {
@@ -101,16 +101,16 @@ class Main extends Widget_Base
                 [
                     'type' => \Elementor\Controls_Manager::ALERT,
                     'alert_type' => 'info',
-                    'heading' => esc_html__('info', 'primekit-addons'),  
+                    'heading' => esc_html__('info', 'primekit-addons'),
                     'content' => sprintf(
-                         // Translators: %1$s and %2$s are HTML links to the settings page.
+                        // Translators: %1$s and %2$s are HTML links to the settings page.
                         esc_html__('Package names can be modified here. Please go to the %1$ssettings page%2$s in the dashboard to configure them.', 'primekit-addons'),
                         '<a href="' . esc_url($settings_url) . '" target="_blank">',
                         '</a>'
                     ),
                 ]
             );
-            
+
 
             // Create the repeater
             $repeater = new \Elementor\Repeater();
@@ -249,7 +249,7 @@ class Main extends Widget_Base
 
             $this->end_controls_section(); // end: Section
 
-            
+
             // Section: Labels
             $this->start_controls_section(
                 'labels_section',
@@ -312,7 +312,7 @@ class Main extends Widget_Base
                     'description' => esc_html__('Enter the URL for the button.', 'primekit-addons'),
                 ]
             );
-                        
+
             // Currency field
             $this->add_control(
                 'primekit_cost_calculator_currency',
@@ -324,7 +324,7 @@ class Main extends Widget_Base
                 ]
             );
 
-            
+
             // Default value field
             $this->add_control(
                 'primekit_cost_calculator_default_value',
@@ -393,12 +393,12 @@ class Main extends Widget_Base
             );
 
             // Border radius for the widget
-            $this->add_control(
+            $this->add_responsive_control(
                 'primekit_cost_calculator_border_radius',
                 [
                     'label' => esc_html__('Border Radius', 'primekit-addons'),
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                    'size_units' => ['px', '%', 'em'],                    
+                    'size_units' => ['px', '%', 'em'],
                     'selectors' => [
                         '{{WRAPPER}} .primekit-pricing-calculator' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
@@ -698,7 +698,7 @@ class Main extends Widget_Base
                 [
                     'label' => esc_html__('Slider Active Color', 'primekit-addons'),
                     'type' => Controls_Manager::COLOR,
-                    'default' => '#c634f7',  
+                    'default' => '#c634f7',
                     'selectors' => [
                         '{{WRAPPER}} .primekit-range-slider' => '--active-color: {{VALUE}};',
                     ],
@@ -711,7 +711,7 @@ class Main extends Widget_Base
                 [
                     'label' => esc_html__('Slider Inactive Color', 'primekit-addons'),
                     'type' => Controls_Manager::COLOR,
-                    'default' => '#ddd',  
+                    'default' => '#ddd',
                     'selectors' => [
                         '{{WRAPPER}} .primekit-range-slider' => '--inactive-color: {{VALUE}};',
                     ],
@@ -724,7 +724,7 @@ class Main extends Widget_Base
                 [
                     'label' => esc_html__('Slider Pointer Color', 'primekit-addons'),
                     'type' => Controls_Manager::COLOR,
-                    'default' => '#c634f7',  
+                    'default' => '#c634f7',
                     'selectors' => [
                         '{{WRAPPER}} .primekit-range-slider' => '--thumb-color: {{VALUE}};',
                     ],
@@ -734,7 +734,7 @@ class Main extends Widget_Base
 
             $this->end_controls_section(); // end range slider style section
 
-            
+
             // Style section for the button
             $this->start_controls_section(
                 'style_button',
@@ -769,7 +769,7 @@ class Main extends Widget_Base
                 ]
             );
 
-            
+
             $this->add_responsive_control(
                 'button_width',
                 [
@@ -878,7 +878,7 @@ class Main extends Widget_Base
             $this->start_controls_tab('button_style_hover_tab', [
                 'label' => esc_html__('Hover', 'primekit-addons'),
             ]);
-            
+
             $this->add_control(
                 'button_text_color_hover',
                 [
@@ -899,8 +899,8 @@ class Main extends Widget_Base
                     'exclude' => ['image'],
                     'selector' => '{{WRAPPER}} .primekit-pricing-cal-submit-button a:hover',
                 ]
-            );   
-            
+            );
+
             $this->add_control(
                 'button_border_color_hover',
                 [
@@ -911,7 +911,7 @@ class Main extends Widget_Base
                     ],
                 ]
             );
-            
+
 
             $this->end_controls_tab();
 

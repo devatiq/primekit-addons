@@ -40,12 +40,12 @@
                             <div class="primekit-ele-blog-thumb">
                                 <figure>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                        <?php 
-                                            if('blog' == $primekit_settings['primekit_elementor_blog_grid_img_size']) {
-                                                the_post_thumbnail('primekit_blog_grid_thumb');
-                                            }else{
-                                                the_post_thumbnail('full');
-                                            }
+                                        <?php
+                                        if ('blog' == $primekit_settings['primekit_elementor_blog_grid_img_size']) {
+                                            the_post_thumbnail('primekit_blog_grid_thumb');
+                                        } else {
+                                            the_post_thumbnail('full');
+                                        }
                                         ?>
                                     </a>
                                 </figure>
@@ -63,8 +63,7 @@
 
                         <h3 class="primekit-ele-blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <div class="primekit-ele-blog-meta">
-                            <?php if ($primekit_date_switch === 'yes'): ?><span class="posted-on"><i
-                                        class="eicon-calendar"></i>
+                            <?php if ($primekit_date_switch === 'yes'): ?><span class="posted-on"><i class="eicon-calendar"></i>
                                     <?php the_time(get_option('date_format')); ?></span><?php endif; ?>
                             <?php if ($primekit_comment_switch === 'yes'): ?><span class="comment-link"><a
                                         href="<?php comments_link(); ?>"><i class="eicon-instagram-comments"></i>
