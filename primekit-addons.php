@@ -3,7 +3,7 @@
  * Plugin Name: PrimeKit Addons and Templates
  * Plugin URI: https://primekitaddons.com/
  * Description: The Elementor Custom Widgets plugin is built to enhance your website’s look and performance. With PrimeKit Addons and Templates, you’ll get access to a Theme Builder, Pop-Ups, Cost estimation, Pricing table, Forms, and WooCommerce building features, along with stunning custom elements that blend seamlessly with your site’s design.
- * Version: 1.1.0
+ * Version: 1.2.0
  * Author: SupreoX Limited
  * Author URI: https://supreox.com/
  * License: GPL2
@@ -13,7 +13,7 @@
  * namespace: PrimeKit
  * Elementor tested up to: 3.28.4
  * Elementor Pro tested up to: 3.28.5
- * Requires Plugins: elementor
+
  */
 
 // Exit if accessed directly.
@@ -65,7 +65,7 @@ final class PrimeKitAddons
     private function define_constants()
     {
         // Define Plugin Version.
-        define('PRIMEKIT_VERSION', '1.1.0');
+        define('PRIMEKIT_VERSION', '1.2.0');
 
         // Define Plugin Path.
         define('PRIMEKIT_PATH', plugin_dir_path(__FILE__));
@@ -76,11 +76,11 @@ final class PrimeKitAddons
         define('PRIMEKIT_BASENAME', plugin_basename(__FILE__));
 
         define('PRIMEKIT_FILE', __FILE__);
-        
+
         // Define Plugin Name directly from plugin header
         define('PRIMEKIT_NAME', 'PrimeKit Addons and Templates');
 
-        
+
 
     }
 
@@ -110,10 +110,23 @@ final class PrimeKitAddons
      */
     public function plugin_loaded()
     {
-        if (class_exists('PrimeKit\Manager')) {
-            new \PrimeKit\Manager();
+        // Check if Elementor is active and loaded
+        if (did_action('elementor/loaded') && class_exists('\Elementor\Plugin')) {
+            if (class_exists('PrimeKit\Manager')) {
+                new \PrimeKit\Manager();
+            }
+        } else {
+            // Show admin notice if Elementor is not installed or activated
+            add_action('admin_notices', function () {
+                $elementor_url = admin_url('plugin-install.php?s=elementor&tab=search&type=term');
+                echo '<div class="notice notice-error is-dismissible">';
+                echo '<p><strong>PrimeKit Addons and Templates</strong> requires <a href="' . esc_url($elementor_url) . '" target="_blank">Elementor</a> to be installed and activated.</p>';
+                echo '</div>';
+            });
         }
     }
+
+
 
     /**
      * Activates the plugin.
