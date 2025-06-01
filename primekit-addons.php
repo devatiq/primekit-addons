@@ -13,6 +13,7 @@
  * namespace: PrimeKit
  * Elementor tested up to: 3.28.4
  * Elementor Pro tested up to: 3.28.5
+ * Requires Plugins: elementor
 
  */
 
@@ -120,7 +121,7 @@ final class PrimeKitAddons
             add_action('admin_notices', function () {
                 $elementor_url = admin_url('plugin-install.php?s=elementor&tab=search&type=term');
                 echo '<div class="notice notice-error is-dismissible">';
-                echo '<p><strong>PrimeKit Addons and Templates</strong> requires <a href="' . esc_url($elementor_url) . '" target="_blank">Elementor</a> to be installed and activated.</p>';
+                echo '<p><strong>'. PRIMEKIT_NAME .'</strong> requires <a href="' . esc_url($elementor_url) . '" target="_blank">Elementor</a> to be installed and activated.</p>';
                 echo '</div>';
             });
         }
