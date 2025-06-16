@@ -5,7 +5,7 @@ if (!defined('ABSPATH'))
 use Elementor\Icons_Manager;
 
 $settings = $this->get_settings_for_display();
-$counter = 1;
+$count = 1;
 
 if ($settings['primekit_advanced_list_items']) {
     echo '<ul class="primekit-feature-list-wrapper">';
@@ -28,27 +28,26 @@ if ($settings['primekit_advanced_list_items']) {
             }
         }
         //End image rendering
-        // Check if the counter is set and render it
-        if ($item['list_assets_type'] == 'counter') {
-            if (!empty($item['list_assets_img'])) {
-                echo '<div class="primekit-list-item-counter">';
-                echo '<span>' . $counter . '</span>';
-            }
+        // Check if the number is set and render it
+        if ($item['list_assets_type'] == 'count') {
+            echo '<div class="primekit-list-item-count">';
+            echo '<span>' . $count . '</span>';
+
         }
         //End counter rendering
 
         echo '</div>
                 <div class="primekit-list-item-content">';
         if (!empty($item['list_title'])) {
-            echo '<h4 class="primekit-list-title">' . $item['list_title'] . '</h4>';
+            echo '<h4 class="primekit-list-title">' . esc_html($item['list_title']) . '</h4>';
         }
 
         if (!empty($item['list_sub_title'])) {
-            echo '<p class="primekit-list-text">' . $item['list_sub_title'] . '</p>';
+            echo '<p class="primekit-list-text">' . esc_html($item['list_sub_title']) . '</p>';
         }
         echo '</div>
         </li>';
-        $counter++;
+        $count++;
     }
 
     echo '</ul>';

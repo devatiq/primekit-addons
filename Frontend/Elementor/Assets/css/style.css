@@ -4328,32 +4328,14 @@ Sticky Call Button
 /* Advanced list with icon  */
 
 .primekit-feature-list-wrapper .primekit-list-item {
-  list-style: none;
-  padding: 10px;
+  list-style-type: none;
   width: 100%;
-  border-radius: 5px;
-  background: linear-gradient(45deg, #a14af0, #0249e7);
-
   display: flex;
     flex-direction: row;
-    gap: 10px;
     align-items: center;
     justify-content: flex-start;
-
 }
 
-.primekit-list-item-icon svg {
-  width: 25px;
-  height: 25px;
-}
-
-/* .primekit-content {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  justify-content: flex-start;
-} */
 
 
 ul.primekit-feature-list-wrapper {
@@ -4361,37 +4343,25 @@ ul.primekit-feature-list-wrapper {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 15px;
   padding: 0px;
 }
 
-.primekit-list-item .primekit-list-item-content {
-  font-size: 16px;
-  font-family: system-ui;
-  font-weight: 400;
-  color: #ffffff;
-}
 
 .primekit-list-item .primekit-list-item-icon {
-
   display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Advanced list with image  */
-
-.primekit-feature-list-wrapper .primekit-list-item-img img {
-  width: 40px;
-  /* border-radius: 50px; */
+.primekit-feature-list-wrapper .primekit-list-item-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
 /* Advanced list with counter  */
-.primekit-feature-list-wrapper .primekit-list-item-counter span {
-  font-size: 20px;
-  font-family: system-ui;
-  font-weight: 700;
-  color: #ffffff;
+.primekit-feature-list-wrapper .primekit-list-item-count span {
   width: 1em;
   height: 1em;
   line-height: 1;
@@ -4399,11 +4369,6 @@ ul.primekit-feature-list-wrapper {
   display: block;
 }
 
-.primekit-feature-list-wrapper .primekit-list-item-counter {
-  padding: 6px;
-  background-color: #ffffff00;
-  border: 1.5px solid #ffffff;
+.primekit-feature-list-wrapper .primekit-list-item-count {
   text-align: center;
-  border-radius: 50px;
-
 }
