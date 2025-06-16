@@ -10,6 +10,7 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Border;
+use Elementor\Icons_Manager;
 
 class Main extends Widget_Base
 {
@@ -51,11 +52,13 @@ class Main extends Widget_Base
             ]
         );
 
-        // List Repeater 
+
+
+        // List Repeater
         $this->add_control(
             'primekit_advanced_list_items',
             [
-                'label' => esc_html__('', 'primekit-addons'),
+                'label' => esc_html__('Repeat', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => [
                     //Title
@@ -81,7 +84,7 @@ class Main extends Widget_Base
                         ]
                     ],
                     [
-                        'name' => 'list_assets_option',
+                        'name' => 'list_assets_type',
                         'label' => esc_html__('Assets Type', 'primekit-addons'),
                         'type' => \Elementor\Controls_Manager::CHOOSE,
                         'default' => 'solid',
@@ -94,8 +97,8 @@ class Main extends Widget_Base
                                 'title' => esc_html__('Image', 'primekit-addons'),
                                 'icon' => 'eicon-image-bold',
                             ],
-                            'number' => [
-                                'title' => esc_html__('Number Count', 'primekit-addons'),
+                            'counter' => [
+                                'title' => esc_html__('Counter', 'primekit-addons'),
                                 'icon' => 'eicon-number-field',
                             ],
                         ],
@@ -106,7 +109,7 @@ class Main extends Widget_Base
                         'label' => esc_html__('Icon', 'primekit-addons'),
                         'type' => \Elementor\Controls_Manager::ICONS,
                         'condition' => [
-                            'list_assets_option' => 'icon',
+                            'list_assets_type' => 'icon',
                         ],
                         'default' => [
                             'value' => 'fas fa-check',
@@ -120,7 +123,7 @@ class Main extends Widget_Base
                         'label' => esc_html__('Choose Image', 'primekit-addons'),
                         'type' => \Elementor\Controls_Manager::MEDIA,
                         'condition' => [
-                            'list_assets_option' => 'image',
+                            'list_assets_type' => 'image',
                         ],
                         'default' => [
                             'url' => \Elementor\Utils::get_placeholder_image_src(),
