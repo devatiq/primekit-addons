@@ -1,6 +1,6 @@
 === PrimeKit Addons and Templates ===
 Plugin Name: PrimeKit PrimeKit Addons and Templates
-Version: 1.1.0
+Version: 1.2.0
 Author: supreoxltd
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
@@ -8,7 +8,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Theme Builder, Elementor Builder
 Requires at least: 5.4  
 Tested up to: 6.8  
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -155,6 +155,9 @@ Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without
 Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
 
 == Changelog ==
+= 1.2.0 =
+- Bug Fix and improvements
+
 = 1.1.0 =
 - Added template library feature in the Elementor editor
 - Enhanced overall performance and optimization
