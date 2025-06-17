@@ -36,7 +36,7 @@ class Main extends Widget_Base
 
     public function get_keywords()
     {
-return ['prime', 'advance', 'list', 'icon list'];
+        return ['prime', 'advance', 'list', 'icon list'];
     }
 
     /**
@@ -57,7 +57,7 @@ return ['prime', 'advance', 'list', 'icon list'];
         $this->add_control(
             'primekit_advanced_list_items',
             [
-                'label' => esc_html__('Repeat', 'primekit-addons'),
+                'label' => esc_html__('Items', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::REPEATER,
                 'fields' => [
                     //Title
@@ -165,7 +165,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'size' => 0,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper' => 'gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper' => 'gap: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -188,7 +188,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'size' => 20,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item' => 'gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item' => 'gap: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -211,16 +211,26 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'name' => 'background',
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item',
+                'fields_options' => [
+                    'background' => [
+                        'default' => 'classic',
+                    ],
+                    'color' => [
+                        'default' => '#a14af0',
+                    ],
+                ],
             ]
         );
+
+
 
         //Box Shadow
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
                 'name' => 'box_shadow',
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item',
             ]
         );
 
@@ -240,7 +250,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'name' => 'background_hover',
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item:hover',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item:hover',
             ]
         );
 
@@ -249,7 +259,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
                 'name' => 'box_shadow_hover',
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item:hover',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item:hover',
             ]
         );
 
@@ -262,7 +272,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'list_border',
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item',
                 'separator' => 'before',
             ]
         );
@@ -282,7 +292,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'isLinked' => true,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -303,7 +313,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'isLinked' => true,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -339,8 +349,9 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-list-item .primekit-list-item-count span' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-count span' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -350,7 +361,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'name' => 'count_background',
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .primekit-list-item .primekit-list-item-count',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-count',
             ]
         );
 
@@ -371,7 +382,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-list-item:hover .primekit-list-item-count span' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-item:hover .primekit-advanced-list-item-count span' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -382,7 +393,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'name' => 'count_hover_background',
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .primekit-list-item:hover .primekit-list-item-count',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-item:hover .primekit-advanced-list-item-count',
             ]
         );
 
@@ -393,7 +404,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                 'label' => esc_html__('Border Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-list-item:hover .primekit-list-item-count' => 'border-color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-item:hover .primekit-advanced-list-item-count' => 'border-color: {{VALUE}}',
                 ],
             ]
         );
@@ -408,7 +419,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'count_border',
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-count',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-count',
                 'separator' => 'before',
             ]
         );
@@ -429,7 +440,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'isLinked' => true,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-count' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-count' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -451,7 +462,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'isLinked' => true,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-count' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-count' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -462,7 +473,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'content_typography',
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-count span',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-count span',
             ]
         );
 
@@ -490,7 +501,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'selector' => '{{WRAPPER}} .primekit-list-item .primekit-list-item-content .primekit-list-title',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-content .primekit-advanced-list-title',
             ]
         );
 
@@ -500,8 +511,9 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-list-item .primekit-list-item-content .primekit-list-title' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-content .primekit-advanced-list-title' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -513,7 +525,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                 'label' => esc_html__('Hover Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-list-item:hover .primekit-list-item-content .primekit-list-title' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-item:hover .primekit-advanced-list-item-content .primekit-advanced-list-title' => 'color: {{VALUE}}',
                 ],
                 'separator' => 'after',
             ]
@@ -536,7 +548,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Typography::get_type(),
             [
                 'name' => 'subtitle_typography',
-                'selector' => '{{WRAPPER}} .primekit-list-item .primekit-list-item-content .primekit-list-text',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-content .primekit-advanced-list-text',
             ]
         );
 
@@ -546,8 +558,9 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-list-item .primekit-list-item-content .primekit-list-text' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-content .primekit-advanced-list-text' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -559,7 +572,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                 'label' => esc_html__('Hover Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-list-item:hover .primekit-list-item-content .primekit-list-text' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-item:hover .primekit-advanced-list-item-content .primekit-advanced-list-text' => 'color: {{VALUE}}',
                 ],
                 'separator' => 'after',
             ]
@@ -596,7 +609,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'size' => 25,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -620,9 +633,10 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item .primekit-list-item-icon svg path' => 'fill: {{VALUE}}',
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item .primekit-list-item-icon i' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon svg path' => 'fill: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon i' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -632,7 +646,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'name' => 'icon_background',
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item .primekit-list-item-icon',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon',
             ]
         );
 
@@ -653,8 +667,8 @@ return ['prime', 'advance', 'list', 'icon list'];
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item:hover .primekit-list-item-icon svg path' => 'fill: {{VALUE}}',
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item:hover .primekit-list-item-icon i' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item:hover .primekit-advanced-list-item-icon svg path' => 'fill: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item:hover .primekit-advanced-list-item-icon i' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -665,7 +679,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             [
                 'name' => 'icon_hover_background',
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item:hover .primekit-list-item-icon',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item:hover .primekit-advanced-list-item-icon',
             ]
         );
 
@@ -676,7 +690,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                 'label' => esc_html__('Border Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item:hover .primekit-list-item-icon' => 'border-color: {{VALUE}}',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item:hover .primekit-advanced-list-item-icon' => 'border-color: {{VALUE}}',
                 ],
             ]
         );
@@ -691,7 +705,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'icon_border',
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item .primekit-list-item-icon',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon',
                 'separator' => 'before',
             ]
         );
@@ -712,7 +726,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'isLinked' => true,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item .primekit-list-item-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -734,7 +748,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'isLinked' => true,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item .primekit-list-item-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -771,7 +785,7 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'size' => 40,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-img img' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-img img' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -781,7 +795,7 @@ return ['prime', 'advance', 'list', 'icon list'];
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'image_border',
-                'selector' => '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-img img',
+                'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-img img',
             ]
         );
 
@@ -801,14 +815,12 @@ return ['prime', 'advance', 'list', 'icon list'];
                     'isLinked' => true,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .primekit-feature-list-wrapper .primekit-list-item-img img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-img img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
         $this->end_controls_section();
-
-
 
 
     }
