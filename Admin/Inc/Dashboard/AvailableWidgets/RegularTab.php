@@ -593,6 +593,14 @@ class RegularTab
             true,
             self::demo_url('widgets/copyright-widget/')
         );
+        // Advanced List.
+        PrimeKitWidgets::primekit_available_widget(
+            'primekit_advanced_list_field',
+            esc_html__('Advanced List', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/advance-list.svg',
+            true,
+            self::demo_url('widgets/advanced-list-widget/')
+        );
 
 
     }

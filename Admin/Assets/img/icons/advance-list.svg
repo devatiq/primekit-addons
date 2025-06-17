@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-1.43" y1="1.74" x2="27.91" y2="34.74" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0049e7"/>
+      <stop offset=".11" stop-color="#0648e7"/>
+      <stop offset=".26" stop-color="#1647e9"/>
+      <stop offset=".46" stop-color="#3144eb"/>
+      <stop offset=".66" stop-color="#5740ee"/>
+      <stop offset=".79" stop-color="#883bf3"/>
+      <stop offset=".98" stop-color="#c236f7"/>
+      <stop offset="1" stop-color="#c835f8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="4.16" y1="-3.24" x2="33.51" y2="29.76" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="9.76" y1="-8.22" x2="39.11" y2="24.78" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="-1.34" y1="1.65" x2="28.01" y2="34.65" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-5" x1="-6.87" y1="6.57" x2="22.48" y2="39.57" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-6" x1="-12.4" y1="11.48" x2="16.95" y2="44.48" xlink:href="#linear-gradient"/>
+  </defs>
+  <path class="cls-1" d="M34.2,30.07H10.13c-.99,0-1.8-.8-1.8-1.8s.8-1.8,1.8-1.8h24.07c.99,0,1.8.8,1.8,1.8s-.8,1.8-1.8,1.8Z"/>
+  <path class="cls-4" d="M34.2,18.8H10.13c-.99,0-1.8-.8-1.8-1.8s.8-1.8,1.8-1.8h24.07c.99,0,1.8.8,1.8,1.8,0,.99-.8,1.8-1.8,1.8Z"/>
+  <path class="cls-5" d="M34.2,7.52H10.13c-.99,0-1.8-.8-1.8-1.8s.8-1.8,1.8-1.8h24.07c.99,0,1.8.8,1.8,1.8s-.8,1.8-1.8,1.8Z"/>
+  <circle class="cls-6" cx="2.41" cy="5.86" r="2.41"/>
+  <circle class="cls-3" cx="2.41" cy="17" r="2.41"/>
+  <circle class="cls-2" cx="2.41" cy="28.14" r="2.41"/>
+</svg>
