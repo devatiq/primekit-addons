@@ -36,7 +36,7 @@ class Main extends Widget_Base
 
     public function get_keywords()
     {
-        return ['prime', 'advance', 'list'];
+return ['prime', 'advance', 'list', 'icon list'];
     }
 
     /**
