@@ -140,7 +140,7 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 
 ## Changelog
-## 1.3.0
+## 1.2.1
 - added new widgets.
 
 ## 1.2.0
