@@ -162,7 +162,7 @@ class Main extends Widget_Base
                 ],
                 'default' => [
                     'unit' => 'px',
-                    'size' => 0,
+                    'size' => 10,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-advanced-list-wrapper' => 'gap: {{SIZE}}{{UNIT}};',
@@ -214,14 +214,24 @@ class Main extends Widget_Base
                 'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item',
                 'fields_options' => [
                     'background' => [
-                        'default' => 'classic',
+                        'default' => 'gradient',
                     ],
                     'color' => [
-                        'default' => '#a14af0',
+                        'default' => '#a14af0', // Gradient start
+                    ],
+                    'color_b' => [
+                        'default' => '#0249e7', // Gradient end
+                    ],
+                    'gradient_type' => [
+                        'default' => 'linear',
+                    ],
+                    'angle' => [
+                        'default' => 45, // default angle here
                     ],
                 ],
             ]
         );
+
 
 
 
