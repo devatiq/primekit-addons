@@ -2270,17 +2270,13 @@ label.primekit-pricing-option {
 
 /* Style for the range input slider */
 .primekit-range-slider {
-  --active-color: #0f4fff;
-  /* Default active color */
-  --inactive-color: #300bff;
-  /* Default inactive color */
-  --thumb-color: #ffee00;
-  /* Default thumb color */
+  --active-color: #0f4fff;  /* Default active color */
+  --inactive-color: #300bff;  /* Default inactive color */
+  --thumb-color: #ffee00;  /* Default thumb color */
   -webkit-appearance: none;
   width: 100%;
   height: 8px;
-  background: linear-gradient(to right, var(--active-color) 50%, var(--inactive-color) 50%);
-  /* Initial fill */
+  background: linear-gradient(to right, var(--active-color) 50%, var(--inactive-color) 50%); /* Initial fill */
   border-radius: 5px;
   outline: none;
   transition: background 0.3s ease;
@@ -4265,11 +4261,25 @@ h3.primekit-style-three-team-name {
  * CSS Transform
  * ---------------------------------------------*/
 .primekit-css-transform-yes {
-  transform: translateX(var(--primekit-tfx-translate-x, 0)) translateY(var(--primekit-tfx-translate-y, 0)) rotateX(var(--primekit-tfx-rotate-x, 0)) rotateY(var(--primekit-tfx-rotate-y, 0)) rotateZ(var(--primekit-tfx-rotate-z, 0)) scaleX(var(--primekit-tfx-scale-x, 1)) scaleY(var(--primekit-tfx-scale-y, 1)) skewX(var(--primekit-tfx-skew-x, 0)) skewY(var(--primekit-tfx-skew-y, 0));
+  transform: translateX(var(--primekit-tfx-translate-x, 0))
+  translateY(var(--primekit-tfx-translate-y, 0))
+  rotateX(var(--primekit-tfx-rotate-x, 0))
+  rotateY(var(--primekit-tfx-rotate-y, 0))
+  rotateZ(var(--primekit-tfx-rotate-z, 0)) scaleX(var(--primekit-tfx-scale-x, 1))
+  scaleY(var(--primekit-tfx-scale-y, 1)) skewX(var(--primekit-tfx-skew-x, 0))
+  skewY(var(--primekit-tfx-skew-y, 0));
 }
 
 .primekit-css-transform-yes:hover {
-  transform: translateX(var(--primekit-tfx-translate-x-hover, 0)) translateY(var(--primekit-tfx-translate-y-hover, 0)) rotateX(var(--primekit-tfx-rotate-x-hover, 0)) rotateY(var(--primekit-tfx-rotate-y-hover, 0)) rotateZ(var(--primekit-tfx-rotate-z-hover, 0)) scaleX(var(--primekit-tfx-scale-x-hover, 1)) scaleY(var(--primekit-tfx-scale-y-hover, 1)) skewX(var(--primekit-tfx-skew-x-hover, 0)) skewY(var(--primekit-tfx-skew-y-hover, 0));
+  transform: translateX(var(--primekit-tfx-translate-x-hover, 0)) 
+  translateY(var(--primekit-tfx-translate-y-hover, 0)) 
+  rotateX(var(--primekit-tfx-rotate-x-hover, 0)) 
+  rotateY(var(--primekit-tfx-rotate-y-hover, 0)) 
+  rotateZ(var(--primekit-tfx-rotate-z-hover, 0)) 
+  scaleX(var(--primekit-tfx-scale-x-hover, 1)) 
+  scaleY(var(--primekit-tfx-scale-y-hover, 1)) 
+  skewX(var(--primekit-tfx-skew-x-hover, 0)) 
+  skewY(var(--primekit-tfx-skew-y-hover, 0));
 }
 
 /*----------------
@@ -4325,9 +4335,12 @@ Sticky Call Button
   line-height: 1;
 }
 
-/* Advanced list with icon  */
 
-.primekit-feature-list-wrapper .primekit-list-item {
+/*----------------
+Advanced list with icon
+--------------------*/
+
+.primekit-advanced-list-wrapper .primekit-advanced-list-item {
   width: 100%;
   display: flex;
     flex-direction: row;
@@ -4337,7 +4350,7 @@ Sticky Call Button
 
 
 
-ul.primekit-feature-list-wrapper {
+ul.primekit-advanced-list-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -4347,13 +4360,13 @@ ul.primekit-feature-list-wrapper {
 }
 
 
-.primekit-list-item .primekit-list-item-icon {
+.primekit-advanced-list-item .primekit-advanced-list-item-icon {
   display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.primekit-feature-list-wrapper .primekit-list-item-img{
+.primekit-advanced-list-wrapper .primekit-advanced-list-item-img{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4361,7 +4374,7 @@ ul.primekit-feature-list-wrapper {
 
 
 /* Advanced list with counter  */
-.primekit-feature-list-wrapper .primekit-list-item-count span {
+.primekit-advanced-list-wrapper .primekit-advanced-list-item-count span {
   width: 1em;
   height: 1em;
   line-height: 1;
@@ -4369,6 +4382,6 @@ ul.primekit-feature-list-wrapper {
   display: block;
 }
 
-.primekit-feature-list-wrapper .primekit-list-item-count {
+.primekit-advanced-list-wrapper .primekit-advanced-list-item-count {
   text-align: center;
 }
