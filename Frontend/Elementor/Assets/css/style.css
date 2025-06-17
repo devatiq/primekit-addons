@@ -2270,9 +2270,9 @@ label.primekit-pricing-option {
 
 /* Style for the range input slider */
 .primekit-range-slider {
-  --active-color: #0f4fff;  /* Default active color */
-  --inactive-color: #300bff;  /* Default inactive color */
-  --thumb-color: #ffee00;  /* Default thumb color */
+  --active-color: #0f4fff; /* Default active color */
+  --inactive-color: #300bff; /* Default inactive color */
+  --thumb-color: #ffee00; /* Default thumb color */
   -webkit-appearance: none;
   width: 100%;
   height: 8px;
@@ -2287,8 +2287,7 @@ label.primekit-pricing-option {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: var(--thumb-color);
-  /* Thumb color from variable */
+  background: var(--thumb-color); /* Thumb color from variable */
   border-radius: 50%;
   cursor: pointer;
 }
@@ -2296,8 +2295,7 @@ label.primekit-pricing-option {
 .primekit-range-slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: var(--thumb-color);
-  /* Thumb color from variable */
+  background: var(--thumb-color); /* Thumb color from variable */
   border-radius: 50%;
   cursor: pointer;
 }
@@ -4261,12 +4259,14 @@ h3.primekit-style-three-team-name {
  * CSS Transform
  * ---------------------------------------------*/
 .primekit-css-transform-yes {
-  transform: translateX(var(--primekit-tfx-translate-x, 0))
-  translateY(var(--primekit-tfx-translate-y, 0))
-  rotateX(var(--primekit-tfx-rotate-x, 0))
-  rotateY(var(--primekit-tfx-rotate-y, 0))
-  rotateZ(var(--primekit-tfx-rotate-z, 0)) scaleX(var(--primekit-tfx-scale-x, 1))
-  scaleY(var(--primekit-tfx-scale-y, 1)) skewX(var(--primekit-tfx-skew-x, 0))
+  transform: translateX(var(--primekit-tfx-translate-x, 0)) 
+  translateY(var(--primekit-tfx-translate-y, 0)) 
+  rotateX(var(--primekit-tfx-rotate-x, 0)) 
+  rotateY(var(--primekit-tfx-rotate-y, 0)) 
+  rotateZ(var(--primekit-tfx-rotate-z, 0)) 
+  scaleX(var(--primekit-tfx-scale-x, 1)) 
+  scaleY(var(--primekit-tfx-scale-y, 1)) 
+  skewX(var(--primekit-tfx-skew-x, 0)) 
   skewY(var(--primekit-tfx-skew-y, 0));
 }
 
@@ -4335,17 +4335,16 @@ Sticky Call Button
   line-height: 1;
 }
 
-
-/*----------------
-Advanced list with icon
---------------------*/
+/* --------------------------------
+Advanced list with icon 
+-------------------------------- */
 
 .primekit-advanced-list-wrapper .primekit-advanced-list-item {
   width: 100%;
   display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 
@@ -4362,11 +4361,11 @@ ul.primekit-advanced-list-wrapper {
 
 .primekit-advanced-list-item .primekit-advanced-list-item-icon {
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.primekit-advanced-list-wrapper .primekit-advanced-list-item-img{
+.primekit-advanced-list-wrapper .primekit-advanced-list-item-img {
   display: flex;
   align-items: center;
   justify-content: center;

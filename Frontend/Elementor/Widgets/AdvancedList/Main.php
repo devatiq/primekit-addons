@@ -212,8 +212,18 @@ class Main extends Widget_Base
                 'name' => 'background',
                 'types' => ['classic', 'gradient'],
                 'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item',
+                'fields_options' => [
+                    'background' => [
+                        'default' => 'classic',
+                    ],
+                    'color' => [
+                        'default' => '#a14af0',
+                    ],
+                ],
             ]
         );
+
+
 
         //Box Shadow
         $this->add_group_control(
@@ -339,6 +349,7 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-count span' => 'color: {{VALUE}}',
                 ],
@@ -500,6 +511,7 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-content .primekit-advanced-list-title' => 'color: {{VALUE}}',
                 ],
@@ -546,6 +558,7 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-content .primekit-advanced-list-text' => 'color: {{VALUE}}',
                 ],
@@ -620,6 +633,7 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon svg path' => 'fill: {{VALUE}}',
                     '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-icon i' => 'color: {{VALUE}}',
@@ -807,8 +821,6 @@ class Main extends Widget_Base
         );
 
         $this->end_controls_section();
-
-
 
 
     }
