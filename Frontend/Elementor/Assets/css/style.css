@@ -4264,12 +4264,26 @@ h3.primekit-style-three-team-name {
 /*----------------------------------------------
  * CSS Transform
  * ---------------------------------------------*/
-.primekit-css-transform-yes {
-  transform: translateX(var(--primekit-tfx-translate-x, 0)) translateY(var(--primekit-tfx-translate-y, 0)) rotateX(var(--primekit-tfx-rotate-x, 0)) rotateY(var(--primekit-tfx-rotate-y, 0)) rotateZ(var(--primekit-tfx-rotate-z, 0)) scaleX(var(--primekit-tfx-scale-x, 1)) scaleY(var(--primekit-tfx-scale-y, 1)) skewX(var(--primekit-tfx-skew-x, 0)) skewY(var(--primekit-tfx-skew-y, 0));
+ .primekit-css-transform-yes {
+  transform: translateX(var(--primekit-tfx-translate-x, 0))
+    translateY(var(--primekit-tfx-translate-y, 0))
+    rotateX(var(--primekit-tfx-rotate-x, 0))
+    rotateY(var(--primekit-tfx-rotate-y, 0))
+    rotateZ(var(--primekit-tfx-rotate-z, 0)) scaleX(var(--primekit-tfx-scale-x, 1))
+    scaleY(var(--primekit-tfx-scale-y, 1)) skewX(var(--primekit-tfx-skew-x, 0))
+    skewY(var(--primekit-tfx-skew-y, 0));
 }
 
 .primekit-css-transform-yes:hover {
-  transform: translateX(var(--primekit-tfx-translate-x-hover, 0)) translateY(var(--primekit-tfx-translate-y-hover, 0)) rotateX(var(--primekit-tfx-rotate-x-hover, 0)) rotateY(var(--primekit-tfx-rotate-y-hover, 0)) rotateZ(var(--primekit-tfx-rotate-z-hover, 0)) scaleX(var(--primekit-tfx-scale-x-hover, 1)) scaleY(var(--primekit-tfx-scale-y-hover, 1)) skewX(var(--primekit-tfx-skew-x-hover, 0)) skewY(var(--primekit-tfx-skew-y-hover, 0));
+  transform: translateX(var(--primekit-tfx-translate-x-hover, 0))
+    translateY(var(--primekit-tfx-translate-y-hover, 0))
+    rotateX(var(--primekit-tfx-rotate-x-hover, 0))
+    rotateY(var(--primekit-tfx-rotate-y-hover, 0))
+    rotateZ(var(--primekit-tfx-rotate-z-hover, 0))
+    scaleX(var(--primekit-tfx-scale-x-hover, 1))
+    scaleY(var(--primekit-tfx-scale-y-hover, 1))
+    skewX(var(--primekit-tfx-skew-x-hover, 0))
+    skewY(var(--primekit-tfx-skew-y-hover, 0));
 }
 
 /*----------------
