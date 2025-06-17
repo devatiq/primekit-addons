@@ -6,11 +6,6 @@ if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
-use Elementor\Controls_Manager;
-use Elementor\Group_Control_Typography;
-use Elementor\Group_Control_Background;
-use Elementor\Group_Control_Border;
-use Elementor\Icons_Manager;
 
 class Main extends Widget_Base
 {
@@ -82,6 +77,7 @@ class Main extends Widget_Base
                             'active' => true
                         ]
                     ],
+                    // Assets Type
                     [
                         'name' => 'list_assets_type',
                         'label' => esc_html__('Assets Type', 'primekit-addons'),
@@ -122,22 +118,25 @@ class Main extends Widget_Base
                 ],
                 'default' => [
                     [
+                        'list_title' => esc_html__('Title #1', 'primekit-addons'),
+                        'list_sub_title' => esc_html__('Subtitle', 'primekit-addons'),
+                    ],
+                    [
                         'list_title' => esc_html__('Title #2', 'primekit-addons'),
                         'list_sub_title' => esc_html__('Subtitle', 'primekit-addons'),
                     ],
+                    [
+                        'list_title' => esc_html__('Title #3', 'primekit-addons'),
+                        'list_sub_title' => esc_html__('Subtitle', 'primekit-addons'),
+                    ],
+
                 ],
                 'title_field' => '{{{ list_title }}}',
             ]
         );
 
-
-
-
-        $this->end_controls_section();
-        // End content tab
-
-
-
+        $this->end_controls_section(); // End content tab
+        
         // Start Style Tab
         $this->start_controls_section(
             'primekit_advanced_list_style',
@@ -193,7 +192,7 @@ class Main extends Widget_Base
             ]
         );
 
-
+        // List Style Tabs
         $this->start_controls_tabs(
             'list_style_tabs'
         );
@@ -225,15 +224,9 @@ class Main extends Widget_Base
                     'gradient_type' => [
                         'default' => 'linear',
                     ],
-                    'angle' => [
-                        'default' => 45, // default angle here
-                    ],
                 ],
             ]
         );
-
-
-
 
         //Box Shadow
         $this->add_group_control(
@@ -244,7 +237,7 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_tab();
+        $this->end_controls_tab(); // End Normal Tab
 
         // Hover Tab
         $this->start_controls_tab(
@@ -272,10 +265,8 @@ class Main extends Widget_Base
                 'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item:hover',
             ]
         );
-
-        $this->end_controls_tab();
-
-        $this->end_controls_tabs();
+        $this->end_controls_tab(); // End Hover Tab        
+        $this->end_controls_tabs(); // End List Style Tabs
 
         //Border
         $this->add_group_control(
@@ -328,7 +319,7 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_section();
+        $this->end_controls_section(); // End Style Tab
 
         //Number Counter Style
         $this->start_controls_section(
@@ -375,7 +366,7 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_tab();
+        $this->end_controls_tab(); // End Normal Tab
 
         // Hover Tab
         $this->start_controls_tab(
@@ -419,9 +410,9 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_tab();
+        $this->end_controls_tab(); // End Hover Tab
 
-        $this->end_controls_tabs();
+        $this->end_controls_tabs(); // End Number Counter Style Tabs
 
 
         //Border 
@@ -477,7 +468,6 @@ class Main extends Widget_Base
             ]
         );
 
-
         // Typography
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
@@ -486,10 +476,9 @@ class Main extends Widget_Base
                 'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-count span',
             ]
         );
+        $this->end_controls_section(); // End Count Typography
 
-        $this->end_controls_section();
-
-
+        // Title & Sub Title Style
         $this->start_controls_section(
             'title_subtitle_style',
             [
@@ -541,8 +530,6 @@ class Main extends Widget_Base
             ]
         );
 
-
-
         // Sub Title controls
 
         //Sub title Heading 
@@ -588,8 +575,7 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_section();
-
+        $this->end_controls_section(); // End Title & Sub Title Style
 
         // Icon Style
         $this->start_controls_section(
@@ -660,7 +646,7 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_tab();
+        $this->end_controls_tab(); // End Normal Tab
 
         // Hover Tab
         $this->start_controls_tab(
@@ -705,9 +691,9 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_tab();
+        $this->end_controls_tab(); // End Hover Tab
 
-        $this->end_controls_tabs();
+        $this->end_controls_tabs(); // End Icon Style Tabs
 
 
         //Border
@@ -742,7 +728,6 @@ class Main extends Widget_Base
         );
 
         // padding
-
         $this->add_responsive_control(
             'icon_padding',
             [
@@ -763,8 +748,7 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->end_controls_section();
-        // End Icon Style Section
+        $this->end_controls_section(); // End Icon Style Section
 
         // Start Image Style Section
         $this->start_controls_section(
@@ -829,18 +813,9 @@ class Main extends Widget_Base
                 ],
             ]
         );
-
-        $this->end_controls_section();
-
+        $this->end_controls_section(); // End Image Style Section
 
     }
-
-
-
-
-
-
-
 
     /**
      * Render the widget output on the frontend.
