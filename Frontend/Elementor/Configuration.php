@@ -241,7 +241,7 @@ class Configuration
     public function register_widgets($widgets_manager)
     {
 
-        $namespace_base = '\PrimeKit\Frontend\Elementor\Widgets\\';        
+        $namespace_base = '\PrimeKit\Frontend\Elementor\Widgets\\';
 
         // Register all widgets
         $this->register_general_widgets($widgets_manager, $namespace_base);
@@ -320,8 +320,9 @@ class Configuration
             'primekit_social_share_widget_field' => 'SocialShare\Main',
             'primekit_sticker_text_field' => 'StickerText\Main',
             'primekit_tag_info_widget_field' => 'TagInfo\Main',
-            'primekit_team_member_widget_field' => 'TeamMember\Main',           
-            'primekit_copyright_field' => 'Copyright\Main',                  
+            'primekit_team_member_widget_field' => 'TeamMember\Main',
+            'primekit_copyright_field' => 'Copyright\Main',
+            'primekit_advanced_list_field' => 'AdvancedList\Main',
         ];
         foreach ($widgets as $option_name => $widget_class) {
             $is_enabled = get_option($option_name, 1); // Get the option value (default to enabled)
