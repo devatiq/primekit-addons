@@ -4328,7 +4328,6 @@ Sticky Call Button
 /* Advanced list with icon  */
 
 .primekit-feature-list-wrapper .primekit-list-item {
-  list-style-type: none;
   width: 100%;
   display: flex;
     flex-direction: row;
@@ -4344,6 +4343,7 @@ ul.primekit-feature-list-wrapper {
   align-items: flex-start;
   justify-content: space-between;
   padding: 0px;
+  list-style-type: none;
 }
 
 

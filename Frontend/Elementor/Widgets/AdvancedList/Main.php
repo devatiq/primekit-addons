@@ -85,21 +85,12 @@ class Main extends Widget_Base
                     [
                         'name' => 'list_assets_type',
                         'label' => esc_html__('Assets Type', 'primekit-addons'),
-                        'type' => \Elementor\Controls_Manager::CHOOSE,
-                        'default' => 'solid',
+                        'type' => \Elementor\Controls_Manager::SELECT,
+                        'default' => 'icon',
                         'options' => [
-                            'icon' => [
-                                'title' => esc_html__('Icon', 'primekit-addons'),
-                                'icon' => 'eicon-star',
-                            ],
-                            'image' => [
-                                'title' => esc_html__('Image', 'primekit-addons'),
-                                'icon' => 'eicon-image-bold',
-                            ],
-                            'count' => [
-                                'title' => esc_html__('Number Count', 'primekit-addons'),
-                                'icon' => 'eicon-number-field',
-                            ],
+                            'icon' => esc_html__('Icon', 'primekit-addons'),
+                            'image' => esc_html__('Image', 'primekit-addons'),
+                            'count' => esc_html__('Number Count', 'primekit-addons'),
                         ],
                     ],
                     // Icon Control 
@@ -295,6 +286,7 @@ class Main extends Widget_Base
                 ],
             ]
         );
+
         // Border Radius
         $this->add_responsive_control(
             'list_border_radius',
@@ -317,8 +309,6 @@ class Main extends Widget_Base
         );
 
         $this->end_controls_section();
-
-
 
         //Number Counter Style
         $this->start_controls_section(
