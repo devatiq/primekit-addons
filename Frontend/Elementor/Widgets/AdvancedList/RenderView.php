@@ -5,6 +5,7 @@ if (!defined('ABSPATH'))
 use Elementor\Icons_Manager;
 
 $settings = $this->get_settings_for_display();
+// Count init 
 $count = 1;
 
 if ($settings['primekit_advanced_list_items']) {
@@ -38,15 +39,20 @@ if ($settings['primekit_advanced_list_items']) {
 
         echo '</div>
                 <div class="primekit-list-item-content">';
+
         if (!empty($item['list_title'])) {
             echo '<h4 class="primekit-list-title">' . esc_html($item['list_title']) . '</h4>';
         }
+        //End title rendering
 
+        // Check if the sub-title is set and render it
         if (!empty($item['list_sub_title'])) {
             echo '<p class="primekit-list-text">' . esc_html($item['list_sub_title']) . '</p>';
         }
+        //End sub-title rendering
         echo '</div>
         </li>';
+        // Increment the count for the next item
         $count++;
     }
 
