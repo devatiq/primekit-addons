@@ -8,12 +8,15 @@ if (!defined('ABSPATH'))
 use PrimeKit\Admin\Inc\Dashboard\Settings\SettingsTabs\General;
 use PrimeKit\Admin\Inc\Dashboard\Settings\SettingsTabs\Mailchimp;
 use PrimeKit\Admin\Inc\Dashboard\Settings\SettingsTabs\CostEstimation;
+use PrimeKit\Admin\Inc\Dashboard\Settings\SettingsTabs\Features;
+
 
 class Settings
 {
     protected $general;
     protected $mailchimp;
     protected $cost_estimation;
+    protected $features;
 
     public function __construct()
     {
@@ -42,7 +45,7 @@ class Settings
             if (!$nonce || !wp_verify_nonce($nonce, 'primekit_save_settings')) {
                 wp_die(esc_html__('Nonce verification failed. Please try again.', 'primekit-addons'));
             }
-        }       
+        }
 
         // Display tab navigation
         ?>
@@ -56,6 +59,10 @@ class Settings
                     class="nav-tab <?php echo $this->get_active_tab() === 'mailchimp' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Mailchimp', 'primekit-addons'); ?></a>
                 <a href="?page=primekit_settings&tab=cost_estimation"
                     class="nav-tab <?php echo $this->get_active_tab() === 'cost_estimation' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Cost Estimation', 'primekit-addons'); ?></a>
+                <a href="?page=primekit_settings&tab=features"
+                    class="nav-tab <?php echo $this->get_active_tab() === 'features' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Features', 'primekit-addons'); ?></a>
+
+
             </nav>
             <div class="tab-content">
                 <form method="post" action="options.php">
@@ -71,7 +78,12 @@ class Settings
                     } elseif ($active_tab == 'cost_estimation') {
                         settings_fields('primekit_cost_estimation_options');
                         do_settings_sections('primekit_cost_estimation_settings');
+                    } elseif ($active_tab == 'features') {
+                        settings_fields('primekit_features_options');
+                        do_settings_sections('primekit_features_settings');
                     }
+                    
+
 
                     wp_nonce_field('primekit_save_settings', 'primekit_nonce');
                     submit_button();
@@ -92,5 +104,6 @@ class Settings
         $this->general = new General();
         $this->mailchimp = new Mailchimp();
         $this->cost_estimation = new CostEstimation();
+        $this->features = new Features();
     }
 }
