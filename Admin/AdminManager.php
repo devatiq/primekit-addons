@@ -106,7 +106,7 @@ class AdminManager
         // Conditionally load Theme Builder
         if (!empty($options['enable_themebuilder_template_import'])) {
             $this->ThemeBuilder = new ThemeBuilder();
-        }       
+        }
 
         // Conditionally load Templates (Template Importer)
         if (!empty($options['enable_editor_template_import'])) {

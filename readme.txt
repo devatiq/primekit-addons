@@ -1,6 +1,6 @@
 === PrimeKit Addons and Templates ===
 Plugin Name: PrimeKit PrimeKit Addons and Templates
-Version: 1.2.1
+Version: 1.2.2
 Author: supreoxltd
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
@@ -8,7 +8,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Theme Builder, Elementor Builder
 Requires at least: 5.4  
 Tested up to: 6.8  
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -46,20 +46,20 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Comment Form](https://demo.primekitaddons.com/widgets/comment-form-elementor-widget/)
 - [Contact & Social Info](https://demo.primekitaddons.com/widgets/contact-and-social-info-elementor-widget/)
 - [Contact Form 7 Style](https://demo.primekitaddons.com/widgets/contact-form-7-style-elementor-widget/)
-- [Cost Estimation (New)](https://demo.primekitaddons.com/widgets/cost-estimation-widget/)
+- [Cost Estimation ](https://demo.primekitaddons.com/widgets/cost-estimation-widget/)
 - [Counter Up](https://demo.primekitaddons.com/widgets/counter-up-elementor-widget/)
 - [Count Down Timer](https://demo.primekitaddons.com/widgets/count-down-timer-elementor-widget/)
 - [Dual Button](https://demo.primekitaddons.com/widgets/dual-button-elementor-widget/)
 - [Fancy Blog Posts](https://demo.primekitaddons.com/widgets/fancy-blog-posts-elementor-widget/)
 - [Featured Image](https://demo.primekitaddons.com/widgets/featured-image-elementor-widget/)
-- [Fetch Posts (New)](https://demo.primekitaddons.com/widgets/fetch-posts/)
+- [Fetch Posts ](https://demo.primekitaddons.com/widgets/fetch-posts/)
 - [Flip Box](https://demo.primekitaddons.com/widgets/flip-box-elementor-widget/)
-- [Gravity Form (New)](https://demo.primekitaddons.com/widgets/gravity-form-widget/)
+- [Gravity Form ](https://demo.primekitaddons.com/widgets/gravity-form-widget/)
 - [Image Hover](https://demo.primekitaddons.com/widgets/image-hover-elementor-widget/)
 - [Image and Text Scroll](https://demo.primekitaddons.com/widgets/image-and-text-scroll-elementor-widget/)
-- [Image Gallery (New)](https://demo.primekitaddons.com/widgets/gallery-widget/)
-- [Loading Screen (New)](https://demo.primekitaddons.com/widgets/loading-screen-elementor-widget/)
-- [Mailchimp (New)](https://demo.primekitaddons.com/widgets/mailchimp-widget/)
+- [Image Gallery ](https://demo.primekitaddons.com/widgets/gallery-widget/)
+- [Loading Screen ](https://demo.primekitaddons.com/widgets/loading-screen-elementor-widget/)
+- [Mailchimp ](https://demo.primekitaddons.com/widgets/mailchimp-widget/)
 - [Modern Post Grid (New, with 8 layouts)](https://demo.primekitaddons.com/widgets/modern-post-grid/)
 - [Page Title](https://demo.primekitaddons.com/widgets/page-title-elementor-widget/)
 - [Popup](https://demo.primekitaddons.com/widgets/popup-elementor-widget/)
@@ -70,10 +70,10 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Post Meta Info](https://demo.primekitaddons.com/widgets/post-meta-elementor-widget/)
 - [Post Tag Info](https://demo.primekitaddons.com/widgets/post-tag-info-elementor-widget/)
 - [Post Title](https://demo.primekitaddons.com/widgets/post-title-elementor-widget/)
-- [Post Slider (New)](https://demo.primekitaddons.com/widgets/posts-slider-widget/)
-- [Page Content (New)](https://demo.primekitaddons.com/widgets/page-content-elementor-widget/)
-- [Popular Posts (New)](https://demo.primekitaddons.com/widgets/popular-posts/)
-- [Lottie (New)](https://demo.primekitaddons.com/widgets/lottie-animation/)
+- [Post Slider ](https://demo.primekitaddons.com/widgets/posts-slider-widget/)
+- [Page Content ](https://demo.primekitaddons.com/widgets/page-content-elementor-widget/)
+- [Popular Posts ](https://demo.primekitaddons.com/widgets/popular-posts/)
+- [Lottie](https://demo.primekitaddons.com/widgets/lottie-animation/)
 - [Recent Posts List](https://demo.primekitaddons.com/widgets/recent-posts-list-elementor-widget/)
 - [Related Posts](https://demo.primekitaddons.com/widgets/related-posts-elementor-widget/)
 - [Search Form](https://demo.primekitaddons.com/widgets/search-form-elementor-widget/)
@@ -155,6 +155,10 @@ Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without
 Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
 
 == Changelog ==
+= 1.2.2 =
+- Added new features
+
+
 = 1.2.1 =
 - Add new widgets
 
