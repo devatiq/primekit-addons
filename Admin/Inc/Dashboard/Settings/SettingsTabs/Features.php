@@ -23,16 +23,16 @@ class Features {
             'primekit_features_settings'
         );
 
-        // Editor Importer
+        // Template Importer inside Elementor
         add_settings_field(
             'enable_editor_template_import',
-            esc_html__('Editor Importer', 'primekit-addons'),
+            esc_html__('Template Importer (Beta)', 'primekit-addons'),
             [$this, 'render_editor_checkbox'],
             'primekit_features_settings',
             'features_settings_section'
         );
 
-        // Theme Builder
+        // Theme Builder interface
         add_settings_field(
             'enable_themebuilder_template_import',
             esc_html__('Theme Builder', 'primekit-addons'),
@@ -43,7 +43,7 @@ class Features {
     }
 
     public function section_info() {
-        echo esc_html__('Enable or disable optional features for better editing experience.', 'primekit-addons');
+        echo '<p>' . esc_html__('Enable or disable optional feature modules for your Elementor-based site.', 'primekit-addons') . '</p>';
     }
 
     public function render_editor_checkbox() {
@@ -55,27 +55,29 @@ class Features {
                    name="primekit_features_options[enable_editor_template_import]"
                    value="1"
                    <?php checked($enabled); ?>>
-            <?php esc_html_e('Enable Onclick Template Importer inside Elementor Editor.', 'primekit-addons'); ?>
+            <?php esc_html_e('Allow importing ready-made templates directly within Elementor editor (Beta).', 'primekit-addons'); ?>
         </label>
+        <p class="description"><?php esc_html_e('Lets users browse and import professionally designed templates from your server directly inside Elementor editor.', 'primekit-addons'); ?></p>
         <?php
     }
 
     public function render_themebuilder_checkbox() {
         $options = get_option('primekit_features_options', []);
-        $enabled = isset($options['enable_themebuilder_template_import']) ? (bool)$options['enable_themebuilder_template_import'] : false;
+        $enabled = isset($options['enable_themebuilder_template_import']) ? (bool)$options['enable_themebuilder_template_import'] : true;
         ?>
         <label>
             <input type="checkbox"
                    name="primekit_features_options[enable_themebuilder_template_import]"
                    value="1"
                    <?php checked($enabled); ?>>
-            <?php esc_html_e('Enable Template Importer in Theme Builder interface.', 'primekit-addons'); ?>
+            <?php esc_html_e('Enable advanced theme building.', 'primekit-addons'); ?>
         </label>
+        <p class="description"><?php esc_html_e('Allows custom header, footer, single page/post, archive, and WooCommerce layout design using Elementor.', 'primekit-addons'); ?></p>
         <?php
     }
 
     public function sanitize($input) {
-        // Check nonce manually (since we are not using a standard settings page submission)
+        // Security check
         if (!isset($_POST['primekit_nonce']) ||
             !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['primekit_nonce'])), 'primekit_save_settings')) {
             add_settings_error(
@@ -88,6 +90,7 @@ class Features {
         }
 
         $new_input = [];
+
         $new_input['enable_editor_template_import'] = isset($input['enable_editor_template_import']) ? 1 : 0;
         $new_input['enable_themebuilder_template_import'] = isset($input['enable_themebuilder_template_import']) ? 1 : 0;
 
