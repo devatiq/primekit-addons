@@ -93,6 +93,7 @@ class AdminManager
      */
     public function init()
     {
+        $options = get_option('primekit_features_options', []);
         $this->primeKit = new PrimeKit();
         $this->settings = new Settings();
         $this->templatesMenu = new TemplatesMenu();
@@ -100,9 +101,17 @@ class AdminManager
         $this->PrimeKitWidgets = new PrimeKitWidgets();
         $this->FilterHooks = new FilterHooks();
         $this->ActionHooks = new ActionHooks();
-        $this->ThemeBuilder = new ThemeBuilder();
         $this->MetaBox = new MetaBox();
-        $this->Templates = new Templates();
+
+        // Conditionally load Theme Builder
+        if (!empty($options['enable_themebuilder_template_import'])) {
+            $this->ThemeBuilder = new ThemeBuilder();
+        }       
+
+        // Conditionally load Templates (Template Importer)
+        if (!empty($options['enable_editor_template_import'])) {
+            $this->Templates = new Templates();
+        }
     }
 
 
@@ -197,7 +206,7 @@ class AdminManager
      *
      * @return void
      */
-   public function tracker_primekit_addons()
+    public function tracker_primekit_addons()
     {
 
         $client = new \Appsero\Client('1be56cc3-aaf0-4840-b551-088e690dbaee', 'PrimeKit Addons and Templates', PRIMEKIT_FILE);
