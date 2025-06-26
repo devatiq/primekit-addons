@@ -141,7 +141,7 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 ## Changelog
 ## 1.2.3 
-- Theme Features Switch issues fix
+- Theme Builder Features Switch issues fix
 
 ## 1.2.2
 - Added new features
