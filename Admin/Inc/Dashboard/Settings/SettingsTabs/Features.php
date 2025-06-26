@@ -3,12 +3,82 @@
 namespace PrimeKit\Admin\Inc\Dashboard\Settings\SettingsTabs;
 
 if (!defined('ABSPATH')) exit;
-
+/**
+ * Class Features
+ *
+ * Manages the "Features" tab settings within the PrimeKit admin panel.
+ * This includes feature toggles such as Theme Builder and Template Importer,
+ * along with option management utilities like get, set, and defaults.
+ *
+ * @package PrimeKit\Admin
+ */
 class Features {
+    /**
+     * Option key used to store feature settings.
+     *
+     * @var string
+     */
+    protected $option_key = 'primekit_features_options';
+
+    /**
+     * Constructor.
+     * Registers the settings during admin_init.
+     */
     public function __construct() {
         add_action('admin_init', [$this, 'register_settings']);
     }
+   /**
+     * Retrieves all feature options with defaults merged in.
+     *
+     * @return array Merged options with defaults.
+     */
+    public function get_all() {
+        return wp_parse_args(get_option($this->option_key, []), $this->defaults());
+    }
 
+    /**
+     * Retrieves a specific feature option with optional fallback.
+     *
+     * @param string $name     The option name.
+     * @param mixed  $fallback Optional fallback value.
+     * @return mixed
+     */
+    public function get($name, $fallback = null) {
+        $options = $this->get_all();
+        return $options[$name] ?? $fallback;
+    }
+
+    /**
+     * Sets or updates a single feature option.
+     *
+     * @param string $name  The option name.
+     * @param mixed  $value The value to set.
+     * @return bool True on success, false on failure.
+     */
+    public function set($name, $value) {
+        if (!is_admin() || !current_user_can('manage_options')) {
+            return false; // Prevent abuse from frontend or low-privilege users
+        }    
+        $options = $this->get_all();
+        $options[$name] = $value === '1' ? 1 : 0;
+        return update_option($this->option_key, $options);
+    }
+    
+
+    /**
+     * Defines default values for all available feature toggles.
+     *
+     * @return array Default feature settings.
+     */
+    public function defaults() {
+        return [
+            'enable_themebuilder' => 1,
+            'enable_editor_template_import' => 0,
+        ];
+    }
+    /**
+     * Registers settings, sections, and fields for the Features tab.
+     */
     public function register_settings() {
         register_setting(
             'primekit_features_options',
@@ -34,7 +104,7 @@ class Features {
 
         // Theme Builder interface
         add_settings_field(
-            'enable_themebuilder_template_import',
+            'enable_themebuilder',
             esc_html__('Theme Builder', 'primekit-addons'),
             [$this, 'render_themebuilder_checkbox'],
             'primekit_features_settings',
@@ -42,10 +112,16 @@ class Features {
         );
     }
 
+     /**
+     * Renders description text for the features settings section.
+     */
     public function section_info() {
         echo '<p>' . esc_html__('Enable or disable optional feature modules for your Elementor-based site.', 'primekit-addons') . '</p>';
     }
 
+    /**
+     * Renders the checkbox field for the Template Importer setting.
+     */
     public function render_editor_checkbox() {
         $options = get_option('primekit_features_options', []);
         $enabled = isset($options['enable_editor_template_import']) ? (bool)$options['enable_editor_template_import'] : false;
@@ -61,13 +137,16 @@ class Features {
         <?php
     }
 
+    /**
+     * Renders the checkbox field for the Theme Builder setting.
+     */
     public function render_themebuilder_checkbox() {
         $options = get_option('primekit_features_options', []);
-        $enabled = isset($options['enable_themebuilder_template_import']) ? (bool)$options['enable_themebuilder_template_import'] : true;
+        $enabled = isset($options['enable_themebuilder']) ? (bool)$options['enable_themebuilder'] : true;
         ?>
         <label>
             <input type="checkbox"
-                   name="primekit_features_options[enable_themebuilder_template_import]"
+                   name="primekit_features_options[enable_themebuilder]"
                    value="1"
                    <?php checked($enabled); ?>>
             <?php esc_html_e('Enable advanced theme building.', 'primekit-addons'); ?>
@@ -76,6 +155,13 @@ class Features {
         <?php
     }
 
+    /**
+     * Sanitizes and validates submitted feature options.
+     * Also includes nonce verification for extra security.
+     *
+     * @param array $input The raw submitted options.
+     * @return array Sanitized options.
+     */
     public function sanitize($input) {
         // Security check
         if (!isset($_POST['primekit_nonce']) ||
@@ -92,7 +178,7 @@ class Features {
         $new_input = [];
 
         $new_input['enable_editor_template_import'] = isset($input['enable_editor_template_import']) ? 1 : 0;
-        $new_input['enable_themebuilder_template_import'] = isset($input['enable_themebuilder_template_import']) ? 1 : 0;
+        $new_input['enable_themebuilder'] = isset($input['enable_themebuilder']) ? 1 : 0;
 
         add_settings_error(
             'primekit_features_settings',

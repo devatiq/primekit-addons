@@ -82,7 +82,7 @@ class Settings
                         settings_fields('primekit_features_options');
                         do_settings_sections('primekit_features_settings');
                     }
-                    
+
 
 
                     wp_nonce_field('primekit_save_settings', 'primekit_nonce');
@@ -106,4 +106,21 @@ class Settings
         $this->cost_estimation = new CostEstimation();
         $this->features = new Features();
     }
+
+    /**
+     * Retrieve a specific feature option with a fallback default.
+     *
+     * This provides a clean accessor for feature flags defined in the Features settings tab,
+     * allowing other classes to check feature availability without directly accessing the Features instance.
+     *
+     * @param string $key     The option key to retrieve.
+     * @param mixed  $default The default value to return if the option is not set.
+     * @return mixed
+     */
+    public function get_feature_option($key, $default = null)
+    {
+        return $this->features->get($key, $default);
+    }
+
+
 }

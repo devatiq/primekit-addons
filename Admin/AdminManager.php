@@ -93,7 +93,6 @@ class AdminManager
      */
     public function init()
     {
-        $options = get_option('primekit_features_options', []);
         $this->primeKit = new PrimeKit();
         $this->settings = new Settings();
         $this->templatesMenu = new TemplatesMenu();
@@ -103,15 +102,18 @@ class AdminManager
         $this->ActionHooks = new ActionHooks();
         $this->MetaBox = new MetaBox();
 
-        // Conditionally load Theme Builder
-        if (!empty($options['enable_themebuilder_template_import'])) {
+
+        // Initialize the Theme Builder module if the feature is enabled in settings
+        if ($this->settings->get_feature_option('enable_themebuilder')) {
             $this->ThemeBuilder = new ThemeBuilder();
         }
 
-        // Conditionally load Templates (Template Importer)
-        if (!empty($options['enable_editor_template_import'])) {
+        // Initialize the Template Importer module if enabled in feature settings
+        if ($this->settings->get_feature_option('enable_editor_template_import')) {
             $this->Templates = new Templates();
         }
+
+
     }
 
 
