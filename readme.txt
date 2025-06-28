@@ -156,6 +156,7 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 == Changelog ==
 = 1.2.4 =
 - Global Custom CSS issue fix
+- improvements icon box widgets
 
 = 1.2.3 =
 - Theme Builder Features Switch issues fix

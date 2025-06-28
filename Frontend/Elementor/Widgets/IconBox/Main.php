@@ -2,7 +2,8 @@
 
 namespace PrimeKit\Frontend\Elementor\Widgets\IconBox;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+	exit; // Exit if accessed directly
 
 
 use Elementor\Widget_Base;
@@ -64,9 +65,9 @@ class Main extends Widget_Base
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style-one',
 				'options' => [
-					'style-one'  => esc_html__('Style One', 'primekit-addons'),
-					'style-two'  => esc_html__('Style Two', 'primekit-addons'),
-					'style-three'  => esc_html__('Style Three', 'primekit-addons'),
+					'style-one' => esc_html__('Style One', 'primekit-addons'),
+					'style-two' => esc_html__('Style Two', 'primekit-addons'),
+					'style-three' => esc_html__('Style Three', 'primekit-addons'),
 				],
 			]
 		);
@@ -92,6 +93,30 @@ class Main extends Widget_Base
 
 			]
 		);
+
+		//icon position for style three
+		$this->add_responsive_control(
+			'primekit_elementor_icon_box_icon_position',
+			[
+				'label' => esc_html__('Icon Position', 'primekit-addons'),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'row',
+				'options' => [
+					'row' => esc_html__('Left', 'primekit-addons'),
+					'row-reverse' => esc_html__('Right', 'primekit-addons'),
+					'column' => esc_html__('Top', 'primekit-addons'),
+					'column-reverse' => esc_html__('Bottom', 'primekit-addons'),
+				],
+				'selectors' => [
+					'{{WRAPPER}} .primekit-single-icon-box-three-area' => 'flex-direction: {{VALUE}};',
+				],
+				'condition' => [
+					'primekit_elementor_icon_box_style' => 'style-three',
+				],
+			]
+		);
+
+
 		$this->add_control(
 			'primekit_elementor_icon_box_title',
 			[
@@ -159,7 +184,7 @@ class Main extends Widget_Base
 				'label' => esc_html__('Button Alignment', 'primekit-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
-					'left'    => [
+					'left' => [
 						'title' => esc_html__('Left', 'primekit-addons'),
 						'icon' => 'eicon-text-align-left',
 					],
@@ -245,7 +270,7 @@ class Main extends Widget_Base
 		$this->start_controls_tabs(
 			'primekit_elementor_icon_box_area_style_tabs',
 			[
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => ['style-one', 'style-three'],
 				],
 			]
@@ -310,7 +335,7 @@ class Main extends Widget_Base
 				'label' => esc_html__('Border Radius', 'primekit-addons'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', '%', 'em', 'rem', 'custom'],
-				'default'	=> [
+				'default' => [
 					'top' => '100',
 					'right' => '0',
 					'bottom' => '100',
@@ -396,7 +421,7 @@ class Main extends Widget_Base
 					'{{WRAPPER}} .primekit-elementor-icon-box-icon .primekit-ele-icon-box-normal svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .primekit-elementor-icon-box-icon .primekit-ele-icon-box-normal i' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-one',
 				],
 			],
@@ -438,7 +463,7 @@ class Main extends Widget_Base
 					'{{WRAPPER}} .primekit-ele-icon-box-hover' => 'top: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}} .primekit-single-icon-box-three-area .primekit-single-icon-box-icons' => 'top: {{SIZE}}{{UNIT}};',
 				],
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => ['style-one', 'style-three'],
 				],
 			]
@@ -453,7 +478,7 @@ class Main extends Widget_Base
 				'selectors' => [
 					'{{WRAPPER}} .primekit-single-icon-box-icons .primekit-ele-icon-box3-icon' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-three',
 				],
 			]
@@ -479,7 +504,7 @@ class Main extends Widget_Base
 					'{{WRAPPER}} .primekit-ele-icon-box-normal svg' => 'fill: {{VALUE}}',
 					'{{WRAPPER}} .primekit-ele-icon-box-normal i' => 'color: {{VALUE}}',
 				],
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-one',
 				],
 			]
@@ -506,7 +531,7 @@ class Main extends Widget_Base
 				'name' => 'primekit_elementor_icon_box_icon_bg',
 				'types' => ['classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .primekit-single-icon-box-icons .primekit-ele-icon-box3-icon',
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-three',
 				],
 			]
@@ -517,7 +542,7 @@ class Main extends Widget_Base
 			[
 				'name' => 'primekit_elementor_icon_box_icon_border',
 				'selector' => '{{WRAPPER}} .primekit-single-icon-box-icons .primekit-ele-icon-box3-icon',
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-three',
 				],
 			]
@@ -532,7 +557,7 @@ class Main extends Widget_Base
 				'selectors' => [
 					'{{WRAPPER}} .primekit-single-icon-box-icons .primekit-ele-icon-box3-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-three',
 				],
 			]
@@ -557,7 +582,7 @@ class Main extends Widget_Base
 					'{{WRAPPER}} .primekit-elementor-icon-box-area:hover .primekit-ele-icon-box-normal svg' => 'fill: {{VALUE}}',
 					'{{WRAPPER}} .primekit-elementor-icon-box-area:hover .primekit-ele-icon-box-normal i' => 'color: {{VALUE}}',
 				],
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-one',
 				],
 			]
@@ -584,7 +609,7 @@ class Main extends Widget_Base
 				'name' => 'primekit_elementor_icon_box_icon_bg_hover',
 				'types' => ['classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .primekit-single-icon-box-three-area:hover .primekit-single-icon-box-icons .primekit-ele-icon-box3-icon',
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-three',
 				],
 			]
@@ -595,7 +620,7 @@ class Main extends Widget_Base
 			[
 				'name' => 'primekit_elementor_icon_box_icon_border_hover',
 				'selector' => '{{WRAPPER}} .primekit-single-icon-box-three-area:hover .primekit-single-icon-box-icons .primekit-ele-icon-box3-icon',
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-three',
 				],
 			]
@@ -610,7 +635,7 @@ class Main extends Widget_Base
 				'selectors' => [
 					'{{WRAPPER}} .primekit-single-icon-box-three-area:hover .primekit-single-icon-box-icons .primekit-ele-icon-box3-icon' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
-				'condition'	=> [
+				'condition' => [
 					'primekit_elementor_icon_box_style' => 'style-three',
 				],
 			]

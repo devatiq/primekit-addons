@@ -977,6 +977,7 @@ span.primekit-btn-icon {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: all 0.3s ease;
 }
 
 .primekit-single-icon-box-three-area .primekit-single-icon-box-icons {
