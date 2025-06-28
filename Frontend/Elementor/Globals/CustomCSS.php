@@ -175,7 +175,7 @@ class CustomCSS
         if (!empty($element_data['settings']['primekit_custom_css'])) {
             $element_id = $element_data['id'];
             $custom_css = $element_data['settings']['primekit_custom_css'];
-            $css .= sprintf('.elementor-element.elementor-element-%s { %s } ', $element_id, $custom_css);
+            $css .= sprintf('.elementor-element.elementor-element-%s %s', $element_id, $custom_css);
         }
 
         if (!empty($element_data['elements'])) {
