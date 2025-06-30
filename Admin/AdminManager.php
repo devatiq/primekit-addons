@@ -69,6 +69,9 @@ class AdminManager
         add_filter('plugin_row_meta', [$this, 'plugin_row_meta'], 10, 2);
 
         $this->tracker_primekit_addons();
+
+        add_action('admin_footer', [$this, 'primekit_add_footer_rating_notice']);
+        add_action('admin_footer_text', [$this, 'primekit_custom_admin_footer']);
     }
 
     /**
@@ -218,6 +221,78 @@ class AdminManager
 
     }
 
+    /**
+     * Add a rating notice to the PrimeKit dashboard footer
+     *
+     * @return void
+     */
+    public function primekit_add_footer_rating_notice() {
+        // Check if we are on the specific PrimeKit dashboard page
+        $screen = get_current_screen();
+        if ($screen->id !== 'toplevel_page_primekit_home') {
+            return;
+        }
+    
+        ?>
+        <style>
+            .primekit-footer-rating {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 13px;
+                color: #666;
+            }
+    
+            .primekit-footer-rating a {
+                text-decoration: none;
+            }
+    
+            .primekit-footer-rating .stars {
+                color: #ffb900;
+                margin: 0 4px;
+            }
+        </style>
+        <div class="primekit-footer-rating">
+            <?php
+            $plugin_name = PRIMEKIT_NAME;
+            $plugin_slug = 'primekit-addons';
+            $rating_url  = "https://wordpress.org/support/plugin/{$plugin_slug}/reviews/#new-post";
+    
+            echo 'Please rate <strong>' . esc_html($plugin_name) . '</strong>';
+            echo '<span class="stars">★★★★★</span>';
+            echo ' on <a href="' . esc_url($rating_url) . '" target="_blank">WordPress.org</a> to help us spread the word.';
+            ?>
+        </div>
+        <?php
+    }
+    /**
+     * Customize the admin footer text
+     *
+     * @param string $footer_text Default footer text.
+     * @return string Modified footer text.
+     */
+    public function primekit_custom_admin_footer($footer_text) {
+       // Match your plugin pages and CPT screen
+    $show_on_pages = [
+        'primekit_home',
+        'primekit_templates',
+        'primekit_available_widgets',
+        'primekit_settings',
+    ];
+
+    $is_primekit_page = isset($_GET['page']) && in_array($_GET['page'], $show_on_pages);
+    $is_primekit_cpt   = isset($_GET['post_type']) && $_GET['post_type'] === 'primekit_library';
+
+    if ($is_primekit_page || $is_primekit_cpt) {
+        $plugin_name = PRIMEKIT_NAME;
+        $plugin_slug = 'primekit-addons';
+        $rating_url  = "https://wordpress.org/support/plugin/{$plugin_slug}/reviews/#new-post";
+
+        return 'Please rate <strong>' . esc_html($plugin_name) . '</strong> <span style="color:#ffb900;">★★★★★</span> on <a href="' . esc_url($rating_url) . '" target="_blank">WordPress.org</a> to help us spread the word.';
+    }
+
+    // Default for other admin pages
+    return $footer_text;
+    }
 
 
 }
