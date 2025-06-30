@@ -152,12 +152,7 @@ class CustomCSS
         }
 
         if (!empty($css)) {
-            // Avoid printing duplicate style tags in live editor preview
-            if (Plugin::$instance->editor->is_edit_mode()) {
-                echo '<style id="primekit-custom-css-editor">' . wp_kses_post($css) . '</style>';
-            } else {
-                echo '<style id="primekit-custom-css">' . wp_kses_post($css) . '</style>';
-            }
+            echo '<style id="primekit-custom-css">' . wp_kses_post($css) . '</style>';
         }
     }
 
