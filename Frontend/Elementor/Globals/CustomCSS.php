@@ -170,18 +170,38 @@ class CustomCSS
          *
          * @return void
          */
-    private static function add_custom_css_recursive($element_data, &$css)
-    {
-        if (!empty($element_data['settings']['primekit_custom_css'])) {
-            $element_id = $element_data['id'];
-            $custom_css = $element_data['settings']['primekit_custom_css'];
-            $css .= sprintf('.elementor-element.elementor-element-%s %s', $element_id, $custom_css);
-        }
-
-        if (!empty($element_data['elements'])) {
-            foreach ($element_data['elements'] as $child_element) {
-                self::add_custom_css_recursive($child_element, $css);
+        private static function add_custom_css_recursive($element_data, &$css)
+        {
+            if (!empty($element_data['settings']['primekit_custom_css'])) {
+                $element_id = $element_data['id'];
+                $custom_css = $element_data['settings']['primekit_custom_css'];
+        
+                // Match all selectors and CSS blocks
+                preg_match_all('/([^{]+)\{([^}]*)\}/', $custom_css, $matches, PREG_SET_ORDER);
+        
+                foreach ($matches as $match) {
+                    $selectors = explode(',', trim($match[1]));
+                    $rules = trim($match[2]);
+        
+                    foreach ($selectors as $selector) {
+                        $selector = trim($selector);
+                        if ($selector !== '') {
+                            $css .= sprintf(
+                                '.elementor-element.elementor-element-%s %s { %s }' . "\n",
+                                $element_id,
+                                $selector,
+                                $rules
+                            );
+                        }
+                    }
+                }
+            }
+        
+            if (!empty($element_data['elements'])) {
+                foreach ($element_data['elements'] as $child_element) {
+                    self::add_custom_css_recursive($child_element, $css);
+                }
             }
         }
-    }
+        
 }
