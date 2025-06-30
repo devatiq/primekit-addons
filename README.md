@@ -14,6 +14,11 @@ Welcome to **[PrimeKit Addons and Templates for Elementor](https://primekitaddon
 
 [Demo](https://demo.primekitaddons.com/addons-widgets/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
 
+### Rate This Plugin:
+[Please rate PrimeKit Addons](https://wordpress.org/support/plugin/primekit-addons/reviews)
+
+
+
 ### 20+ Free Templates
 
 [View All Templates](https://demo.primekitaddons.com/addons-template/)
