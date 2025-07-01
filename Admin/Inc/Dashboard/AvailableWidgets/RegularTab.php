@@ -601,6 +601,14 @@ class RegularTab
             true,
             self::demo_url('widgets/advanced-list-widget/')
         );
+        // Glass Card.
+        PrimeKitWidgets::primekit_available_widget(
+            'primekit_glass_card_field',
+            esc_html__('Glass Card', 'primekit-addons'),
+            PRIMEKIT_ADMIN_ASSETS . '/img/icons/glass-card.svg',
+            true,
+            self::demo_url('widgets/glass-card-widget/')
+        );
 
 
     }

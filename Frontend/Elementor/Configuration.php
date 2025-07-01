@@ -323,7 +323,7 @@ class Configuration
             'primekit_team_member_widget_field' => 'TeamMember\Main',
             'primekit_copyright_field' => 'Copyright\Main',
             'primekit_advanced_list_field' => 'AdvancedList\Main',
-            'primekit_advanced_glass_card_field' => 'GlassCard\Main',
+            'primekit_glass_card_field' => 'GlassCard\Main',
         ];
         foreach ($widgets as $option_name => $widget_class) {
             $is_enabled = get_option($option_name, 1); // Get the option value (default to enabled)
