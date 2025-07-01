@@ -1,7 +1,7 @@
 {
     "name": "supreoxltd/primekit-addons",
     "license": "GPL-2.0-or-later",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "autoload": {
         "psr-4": {
             "PrimeKit\\": "Inc/",
