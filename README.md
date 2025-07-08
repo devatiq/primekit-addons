@@ -145,6 +145,10 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 
 ## Changelog
+
+### 1.2.5
+- Blog Grid loop issues fix
+
 ## 1.2.4
 - Global Custom CSS issue fix
 - improvements icon box widgets
