@@ -16,22 +16,18 @@
             'post_type' => 'post',
             'paged' => $paged,
             'posts_per_page' => $primekit_number_of_posts,
+            'ignore_sticky_posts' => 1,
         );
 
         // specific category query
         if ($primekit_selected_category && $primekit_selected_category !== 'all') {
             $args['cat'] = $primekit_selected_category;
         }
-
         $query = new WP_Query($args);
-
-        $post_count = 1;
 
         if ($query->have_posts()):
             while ($query->have_posts()):
-                $query->the_post();
-
-                while ($post_count <= $primekit_number_of_posts) {
+                $query->the_post();                
                     ?>
                     <div class="primekit-ele-blog-item">
 
@@ -92,13 +88,7 @@
                         </article>
 
                     </div> <!-- end primekit-ele-blog-item -->
-                    <?php
-                    $post_count++;
-                }
-
-
-
-                ?>
+                 
 
             <?php endwhile; ?>
         </div> <!-- end primekit-ele-four-column-blog -->
