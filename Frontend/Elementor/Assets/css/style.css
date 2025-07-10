@@ -4385,6 +4385,13 @@ ul.primekit-advanced-list-wrapper {
 .primekit-advanced-list-wrapper .primekit-advanced-list-item-count {
   text-align: center;
 }
+.primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-link{
+  display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 /*---------------------------
 Glass Card

@@ -114,8 +114,23 @@ class Main extends Widget_Base
                         'default' => [
                             'url' => \Elementor\Utils::get_placeholder_image_src(),
                         ],
-                    ]
+                    ],
+                    // URL Control 
+                    [
+                        'name' => 'list_item_url',
+                        'label' => esc_html__('Link', 'primekit-addons'),
+                        'type' => \Elementor\Controls_Manager::URL,
+                        'options' => ['url', 'is_external', 'nofollow'],
+                        'default' => [
+                            'url' => '',
+                            'is_external' => true,
+                            'nofollow' => true,
+                            // 'custom_attributes' => '',
+                        ],
+                        'label_block' => true,
+                    ]                
                 ],
+                
                 'default' => [
                     [
                         'list_title' => esc_html__('Title #1', 'primekit-addons'),
@@ -134,6 +149,8 @@ class Main extends Widget_Base
                 'title_field' => '{{{ list_title }}}',
             ]
         );
+
+        
 
         $this->end_controls_section(); // End content tab
         
@@ -188,6 +205,7 @@ class Main extends Widget_Base
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item' => 'gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item .primekit-advanced-list-item-link' => 'gap: {{SIZE}}{{UNIT}};',                
                 ],
             ]
         );
