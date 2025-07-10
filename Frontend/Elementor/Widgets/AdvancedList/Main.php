@@ -369,7 +369,7 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Color', 'primekit-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
-                'default' => '#0249E7',
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-count span' => 'color: {{VALUE}}',
                 ],
@@ -382,14 +382,6 @@ class Main extends Widget_Base
                 'name' => 'count_background',
                 'types' => ['classic', 'gradient'],
                 'selector' => '{{WRAPPER}} .primekit-advanced-list-item .primekit-advanced-list-item-count',
-                'fields_options' => [
-                    'background' => [
-                        'default' => 'classic',
-                    ],
-                    'color' => [
-                        'default' => '#ffffff',
-                    ],
-                ],
             ]
         );
 
@@ -460,10 +452,10 @@ class Main extends Widget_Base
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', 'rem', 'custom'],
                 'default' => [
-                    'top' => 50,
-                    'right' => 50,
-                    'bottom' => 50,
-                    'left' => 50,
+                    'top' => 0,
+                    'right' => 0,
+                    'bottom' => 0,
+                    'left' => 0,
                     'unit' => 'px',
                     'isLinked' => true,
                 ],
@@ -482,10 +474,10 @@ class Main extends Widget_Base
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', 'rem', 'custom'],
                 'default' => [
-                    'top' => 10,
-                    'right' => 10,
-                    'bottom' => 10,
-                    'left' => 10,
+                    'top' => 06,
+                    'right' => 06,
+                    'bottom' => 06,
+                    'left' => 06,
                     'unit' => 'px',
                     'isLinked' => true,
                 ],
@@ -501,17 +493,6 @@ class Main extends Widget_Base
             [
                 'name' => 'content_typography',
                 'selector' => '{{WRAPPER}} .primekit-advanced-list-wrapper .primekit-advanced-list-item-count span',
-                'fields_options' => [
-                    'typography' => [
-                        'default' => 'custom',
-                    ],
-                    'font_size' => [
-                        'default' => [
-                            'unit' => 'px',
-                            'size' => 50,
-                        ],
-                    ],
-                ],
             ]
         );
         $this->end_controls_section(); // End Count style
