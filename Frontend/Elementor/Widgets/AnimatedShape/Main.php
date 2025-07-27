@@ -270,7 +270,7 @@ class Main extends Widget_Base
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'primekit_elementor_shape_image_width',
             [
                 'label' => esc_html__('Width', 'primekit-addons'),
@@ -306,7 +306,7 @@ class Main extends Widget_Base
         );
 
         // Border Radius settings
-        $this->add_control(
+        $this->add_responsive_control(
             'primekit_elementor_image_border_radius',
             [
                 'label' => __('Border Radius', 'primekit-addons'),
