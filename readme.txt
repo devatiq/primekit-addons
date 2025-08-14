@@ -7,7 +7,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Theme Builder, Elementor Builder
 Requires at least: 5.4  
 Tested up to: 6.8  
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -161,6 +161,7 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 = 1.2.6 =
 - Animated Shape Widget Improved
+- Advanced List Widget Improved
 
 = 1.2.5 =
 - Blog grid loop issues fix.

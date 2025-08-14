@@ -148,6 +148,7 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 ### 1.2.6
 - Animated Shape Widget Improved
+- Advanced List Widget Improved
 
 ### 1.2.5
 - Blog Grid loop issues fix
