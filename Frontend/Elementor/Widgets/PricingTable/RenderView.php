@@ -88,7 +88,7 @@ $primekit_table_type = $primekit_settings['primekit_elementor_pricingTable_type'
                         <li class="elementor-repeater-item-<?php echo esc_attr($feature['_id']); ?>">
                             <?php \Elementor\Icons_Manager::render_icon($feature['primekit_elementor_pricingTable_feature_icon'], ['aria-hidden' => 'true']); ?>
 
-                            <?php echo esc_html($feature['primekit_elementor_pricingTable_feature_text']); ?>
+                            <?php echo wp_kses_post($feature['primekit_elementor_pricingTable_feature_text']); ?>
                         </li>
                     <?php endforeach;
                 endif; ?>
