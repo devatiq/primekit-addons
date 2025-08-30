@@ -159,6 +159,9 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 
 == Changelog ==
 
+= 1.2.7 =
+- Pricing Table Improve
+
 = 1.2.6 =
 - Animated Shape Widget Improved
 - Advanced List Widget Improved

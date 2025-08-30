@@ -2,7 +2,8 @@
 
 namespace PrimeKit\Frontend\Elementor\Widgets\PricingTable;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -1123,6 +1124,19 @@ class Main extends Widget_Base
             ]
         );
 
+        // Add padding control for pricing table body
+        $this->add_responsive_control(
+            'primekit_elementor_pricingTable_body_padding',
+            [
+                'label' => esc_html__('Padding', 'primekit-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .primekit-ele-pricing-table-body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
         // end of Pricing table body style section
         $this->end_controls_section();
 
@@ -1349,7 +1363,6 @@ class Main extends Widget_Base
      * Render the widget output on the frontend.
      */
     protected function render()
-
     {
 
         include 'RenderView.php';
