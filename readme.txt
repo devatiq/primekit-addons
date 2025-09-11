@@ -1,8 +1,8 @@
 === PrimeKit Addons and Templates ===
 Plugin Name: PrimeKit PrimeKit Addons and Templates
-Author: supreoxltd
+Author: nexibyllc
 Author URI: https://abcplugin.com/
-Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
+Contributors: atiqbd4ever, nexibyllc, supreoxltd, abcplugins, axisconsulting  
 Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Theme Builder, Elementor Builder
 Requires at least: 5.4  
