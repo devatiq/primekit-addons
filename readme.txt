@@ -19,7 +19,7 @@ Welcome to **[PrimeKit Addons](https://primekitaddons.com/)**, your go-to treasu
 
 == Useful Links ==
 
-[Demo](demo.primekitaddons.com/addons-widgets/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
+[Demo](https://demo.primekitaddons.com/addons-widgets/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
 
 
 == Rate This Plugin: ==
