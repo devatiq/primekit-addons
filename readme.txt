@@ -7,7 +7,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Theme Builder, Elementor Builder
 Requires at least: 5.4  
 Tested up to: 6.8  
-Stable tag: 1.2.6
+Stable tag: 1.2.7
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -111,6 +111,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [My Account](https://demo.primekitaddons.com/widgets/woocommerce-my-account-elementor-widget/)
 - [Product BreadCrumb](https://demo.primekitaddons.com/widgets/woocommerce-breadcrumb-elementor-widget/)
 
+
 ==Global Widgets==
 - Custom CSS 
 - Wrapper URL  
@@ -118,6 +119,24 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 == Extended Existing Widgets ==
 - Added Text Editor in Tabs Widget
+
+== Pro Widgets ==
+[Animated Timeline](https://demo.primekitaddons.com/widgets/primekit-animated-timeline//)
+[Email Signature](https://demo.primekitaddons.com/widgets/primekit-email-signature/)
+[Advanced Jobs](https://demo.primekitaddons.com/widgets/primekit-jobs/)
+[Project Progress Tracker](https://demo.primekitaddons.com/widgets/primekit-project-progress-tracker/)
+[Resource Form](https://demo.primekitaddons.com/widgets/primekit-resource-form/)
+[Resource Widget](https://demo.primekitaddons.com/widgets/resource-widgets/)
+[Revenue Growth Graphs](https://demo.primekitaddons.com/widgets/primekit-revenue-growth-graphs/)
+[Team Member Carousel](https://demo.primekitaddons.com/widgets/primekit-team-member-carousel/)
+[Timeline Milestone](https://demo.primekitaddons.com/widgets/primekit-timeline-milestone/)
+[Video Testimonials](https://demo.primekitaddons.com/widgets/primekit-video-testimonials/)
+[Advanced Accordion](https://demo.primekitaddons.com/widgets/advanced-accordion/)
+[Advanced Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table/)
+[Advanced Tabs](https://demo.primekitaddons.com/widgets/advanced-tabs)
+[WhatsApp Chat](https://demo.primekitaddons.com/widgets/whatsapp-chat)
+[Protected Content](https://demo.primekitaddons.com/widgets/protected-content)
+
 
 ==Why Choose PrimeKit Addons?==
 With **[PrimeKit Addons](https://primekitaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **PrimeKit Addons**.
