@@ -19,7 +19,7 @@ Welcome to **[PrimeKit Addons](https://primekitaddons.com/)**, your go-to treasu
 
 == Useful Links ==
 
-[Demo](demo.primekitaddons.com/addons-widgets/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
+[Demo](https://demo.primekitaddons.com/addons-widgets/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
 
 
 == Rate This Plugin: ==
@@ -111,6 +111,23 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [My Account](https://demo.primekitaddons.com/widgets/woocommerce-my-account-elementor-widget/)
 - [Product BreadCrumb](https://demo.primekitaddons.com/widgets/woocommerce-breadcrumb-elementor-widget/)
 
+== Pro Widgets ==
+- [Animated Timeline](https://demo.primekitaddons.com/widgets/primekit-animated-timeline//)
+- [Email Signature](https://demo.primekitaddons.com/widgets/primekit-email-signature/)
+- [Advanced Jobs](https://demo.primekitaddons.com/widgets/primekit-jobs/)
+- [Project Progress Tracker](https://demo.primekitaddons.com/widgets/primekit-project-progress-tracker/)
+- [Resource Form](https://demo.primekitaddons.com/widgets/primekit-resource-form/)
+- [Resource Widget](https://demo.primekitaddons.com/widgets/resource-widgets/)
+- [Revenue Growth Graphs](https://demo.primekitaddons.com/widgets/primekit-revenue-growth-graphs/)
+- [Team Member Carousel](https://demo.primekitaddons.com/widgets/primekit-team-member-carousel/)
+- [Timeline Milestone](https://demo.primekitaddons.com/widgets/primekit-timeline-milestone/)
+- [Video Testimonials](https://demo.primekitaddons.com/widgets/primekit-video-testimonials/)
+- [Advanced Accordion](https://demo.primekitaddons.com/widgets/advanced-accordion/)
+- [Advanced Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table/)
+- [Advanced Tabs](https://demo.primekitaddons.com/widgets/advanced-tabs)
+- [WhatsApp Chat](https://demo.primekitaddons.com/widgets/whatsapp-chat)
+- [Protected Content](https://demo.primekitaddons.com/widgets/protected-content)
+
 
 ==Global Widgets==
 - Custom CSS 
@@ -119,23 +136,6 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 == Extended Existing Widgets ==
 - Added Text Editor in Tabs Widget
-
-== Pro Widgets ==
-[Animated Timeline](https://demo.primekitaddons.com/widgets/primekit-animated-timeline//)
-[Email Signature](https://demo.primekitaddons.com/widgets/primekit-email-signature/)
-[Advanced Jobs](https://demo.primekitaddons.com/widgets/primekit-jobs/)
-[Project Progress Tracker](https://demo.primekitaddons.com/widgets/primekit-project-progress-tracker/)
-[Resource Form](https://demo.primekitaddons.com/widgets/primekit-resource-form/)
-[Resource Widget](https://demo.primekitaddons.com/widgets/resource-widgets/)
-[Revenue Growth Graphs](https://demo.primekitaddons.com/widgets/primekit-revenue-growth-graphs/)
-[Team Member Carousel](https://demo.primekitaddons.com/widgets/primekit-team-member-carousel/)
-[Timeline Milestone](https://demo.primekitaddons.com/widgets/primekit-timeline-milestone/)
-[Video Testimonials](https://demo.primekitaddons.com/widgets/primekit-video-testimonials/)
-[Advanced Accordion](https://demo.primekitaddons.com/widgets/advanced-accordion/)
-[Advanced Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table/)
-[Advanced Tabs](https://demo.primekitaddons.com/widgets/advanced-tabs)
-[WhatsApp Chat](https://demo.primekitaddons.com/widgets/whatsapp-chat)
-[Protected Content](https://demo.primekitaddons.com/widgets/protected-content)
 
 
 ==Why Choose PrimeKit Addons?==
