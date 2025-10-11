@@ -117,9 +117,10 @@ $primekit_excerpt_length_list = $primekit_settings['primekit_elementor_blog_list
         <?php else : ?>
             <div class="clearfix"></div>
             <h3 class="post-title"><?php esc_html_e('No Post Found', 'primekit-addons'); ?></h3>
-            <?php
-            wp_reset_postdata();
-        endif; ?>
+            <?php            
+        endif; 
+        wp_reset_postdata();
+        ?>
 
     </div>
 </div><!--/ Blog List Area-->

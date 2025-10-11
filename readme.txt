@@ -31,36 +31,36 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 == Widget List: 70+ Available Widgets ==
 
-- [Advanced Animated Text](https://demo.primekitaddons.com/widgets/advanced-animated-text-elementor-widget/)
-- [Advanced Circular Skill](https://demo.primekitaddons.com/widgets/advanced-circular-skill-elementor-widget/)
-- [Advanced Icon Box](https://demo.primekitaddons.com/widgets/advanced-icon-box-elementor-widget/)
-- [Advanced Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table-elementor-widget/)
-- [Animated Shape](https://demo.primekitaddons.com/widgets/animated-shape-elementor-widget/)
-- [Archive Title](https://demo.primekitaddons.com/widgets/archive-title-elementor-widget/)
-- [Back To Top](https://demo.primekitaddons.com/widgets/back-to-top-button-elementor-widget/)
-- [Before After Image](https://demo.primekitaddons.com/widgets/before-after-image-compare-elementor-widget/)
-- [Blockquote](https://demo.primekitaddons.com/widgets/blockquote-elementor-widget/)
-- [Blog Posts Grid](https://demo.primekitaddons.com/widgets/blog-posts-grid-view-elementor-widget/)
-- [Blog Posts List](https://demo.primekitaddons.com/widgets/blog-posts-list-elementor-widget/)
-- [Breadcrumb](https://demo.primekitaddons.com/widgets/breadcrumb-elementor-widget/)
-- [Business Hours](https://demo.primekitaddons.com/widgets/business-hours-elementor-widget/)
-- [Call To Action – CTA](https://demo.primekitaddons.com/widgets/advanced-call-to-action-elementor-widget/)
-- [Card Info Box](https://demo.primekitaddons.com/widgets/card-info-elementor-widget/)
-- [Comment Form](https://demo.primekitaddons.com/widgets/comment-form-elementor-widget/)
-- [Contact & Social Info](https://demo.primekitaddons.com/widgets/contact-and-social-info-elementor-widget/)
-- [Contact Form 7 Style](https://demo.primekitaddons.com/widgets/contact-form-7-style-elementor-widget/)
-- [Cost Estimation ](https://demo.primekitaddons.com/widgets/cost-estimation-widget/)
-- [Counter Up](https://demo.primekitaddons.com/widgets/counter-up-elementor-widget/)
-- [Count Down Timer](https://demo.primekitaddons.com/widgets/count-down-timer-elementor-widget/)
-- [Dual Button](https://demo.primekitaddons.com/widgets/dual-button-elementor-widget/)
-- [Fancy Blog Posts](https://demo.primekitaddons.com/widgets/fancy-blog-posts-elementor-widget/)
-- [Featured Image](https://demo.primekitaddons.com/widgets/featured-image-elementor-widget/)
-- [Fetch Posts ](https://demo.primekitaddons.com/widgets/fetch-posts/)
-- [Flip Box](https://demo.primekitaddons.com/widgets/flip-box-elementor-widget/)
-- [Gravity Form ](https://demo.primekitaddons.com/widgets/gravity-form-widget/)
-- [Image Hover](https://demo.primekitaddons.com/widgets/image-hover-elementor-widget/)
-- [Image and Text Scroll](https://demo.primekitaddons.com/widgets/image-and-text-scroll-elementor-widget/)
-- [Image Gallery ](https://demo.primekitaddons.com/widgets/gallery-widget/)
+- [Advanced Animated Text](https://demo.primekitaddons.com/widgets/advanced-animated-text-elementor-widget/) — Bring your headlines to life with 10+ creative animation styles — including typing, rotating, sliding, and zooming effects — to make your message stand out beautifully.
+- [Advanced Circular Skill](https://demo.primekitaddons.com/widgets/advanced-circular-skill-elementor-widget/) — Showcase skill levels with animated circular progress, gradient colors, adjustable size, and custom labels to highlight expertise or KPIs.
+- [Advanced Icon Box](https://demo.primekitaddons.com/widgets/advanced-icon-box-elementor-widget/) — Present features with icons, titles, and text. Choose from 3 layouts with custom shapes, colors, spacing, and an optional button for calls-to-action.
+- [Advanced Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table-elementor-widget/) — Build conversion-focused pricing cards with Standard or Fancy layouts, “Recommended” badge, feature lists, and CTA button — fully customizable colors, typography, and spacing.
+- [Animated Shape](https://demo.primekitaddons.com/widgets/animated-shape-elementor-widget/) — Add decorative circles, squares, or images with smooth motion effects (spin, move, tilt). Fully control size, colors, borders, and hover for on-brand visuals.
+- [Archive Title](https://demo.primekitaddons.com/widgets/archive-title-elementor-widget/) — Display dynamic archive titles (category, tag, author, date) with customizable heading level, alignment, and typography — Theme Builder compatible.
+- [Back To Top](https://demo.primekitaddons.com/widgets/back-to-top-button-elementor-widget/) — Add a floating “Back to Top” button (icon or text) with custom position, colors, and sizing — appears on scroll for faster page navigation.
+- [Before After Image](https://demo.primekitaddons.com/widgets/before-after-image-compare-elementor-widget/) — Compare two images with an interactive slider. Choose horizontal/vertical, custom labels, overlay toggle, and handle controls on hover, click, or swipe.
+- [Blockquote](https://demo.primekitaddons.com/widgets/blockquote-elementor-widget/) — Showcase standout quotes with a decorative icon and left border. Control alignment, colors, border, and typography for clean pull-quotes.
+- [Blog Posts Grid](https://demo.primekitaddons.com/widgets/blog-posts-grid-view-elementor-widget/) — outputs a responsive post grid with optional thumbnail, date, comments, excerpt, “Read More,” and pagination. You can filter by a single category, choose image size, control excerpt length, and set different column counts per device. Title/meta/excerpt/button colors & typography are all stylable.
+- [Blog Posts List](https://demo.primekitaddons.com/widgets/blog-posts-list-elementor-widget/) — Displays your latest posts in a clean vertical list with optional featured image, date, comments, excerpt, and a Read More link.
+- [Breadcrumb](https://demo.primekitaddons.com/widgets/breadcrumb-elementor-widget/) — Outputs a clean breadcrumb trail (e.g., Home » Category » Post Title) based on the current page context (single post, category archive, page, search, 404).
+- [Business Hours](https://demo.primekitaddons.com/widgets/business-hours-elementor-widget/) — Display a clean weekly schedule with an optional header and per-row styling for day and time.
+- [Call To Action – CTA](https://demo.primekitaddons.com/widgets/advanced-call-to-action-elementor-widget/) – Create a flexible CTA block with subheading, heading, description, and two buttons, plus an optional ribbon badge—complete with responsive layout controls, spacing, background/border styling, and hover effects.
+- [Card Info Box](https://demo.primekitaddons.com/widgets/card-info-elementor-widget/) – Display an image or icon with badge, title, text, and a button in two clean layouts—fully customizable with alignment, spacing, colors, borders, and hover styles.
+- [Comment Form](https://demo.primekitaddons.com/widgets/comment-form-elementor-widget/) – Drop-in WordPress comments block for Elementor. Style titles, author names, meta, text, and both Reply/Submit buttons (normal & hover), while using the native comments template with threading and pagination support.
+- [Contact & Social Info](https://demo.primekitaddons.com/widgets/contact-and-social-info-elementor-widget/) – Flexible contact block for Elementor with address, phone (tel), email (mailto), plus a full social icon set. Toggle sections on/off, choose Stack or Inline with alignment, and style icon size/color/bg/hover, text typography/colors, and spacing—fully responsive.
+- [Contact Form 7 Style](https://demo.primekitaddons.com/widgets/contact-form-7-style-elementor-widget/) – Drop any CF7 form into Elementor and style it visually: pick the form via dropdown, then customize labels, inputs, textarea, submit button, radios, checkboxes, and response messages. Controls include heights, padding/margins, borders & radius, background/text/placeholder colors, typography, hover states, and item spacing—fully responsive and scoped to the widget.
+- [Cost Estimation ](https://demo.primekitaddons.com/widgets/cost-estimation-widget/) – Pricing calculator with 3 tiers, range slider, auto total, currency, and CTA. Style container, labels/total, radios, and slider (active/inactive/thumb).
+- [Counter Up](https://demo.primekitaddons.com/widgets/counter-up-elementor-widget/) — Animate key stats on scroll with number, optional suffix, icon/SVG, and title. Controls for alignment, box padding, title/number typography & colors, icon size/color/bg/border/radius/padding/margin, plus hover states—fully responsive.
+- [Count Down Timer](https://demo.primekitaddons.com/widgets/count-down-timer-elementor-widget/) — Drive urgency for launches, sales, or events with a flexible timer. Set end date/time, toggle units, customize labels/expired text with optional CTA button, and style layout (row/column), alignment, gaps, typography, colors, radius, and shadows—fully responsive.
+- [Dual Button](https://demo.primekitaddons.com/widgets/dual-button-elementor-widget/) — Place two CTAs side-by-side with optional “OR” text. Set individual labels, links, and icons (left/right), control alignment, spacing, typography, borders/radius, backgrounds, and hover—perfect for pairing primary/secondary actions, downloads vs. purchases, etc.
+- [Fancy Blog Posts](https://demo.primekitaddons.com/widgets/fancy-blog-posts-elementor-widget/) — Hero-style featured post plus a compact list of recent posts. Pick a category, toggle date/comments/Read More, and fine-tune layout (row/reverse), gaps, typography/colors, and image sizes—perfect for editorial homepages and magazine layouts.
+- [Featured Image](https://demo.primekitaddons.com/widgets/featured-image-elementor-widget/) — Output the current post’s featured image with responsive alignment, width, border, and radius controls—ideal for single post templates, hero banners, and clean blog headers.
+- [Fetch Posts ](https://demo.primekitaddons.com/widgets/fetch-posts/) — Pull posts from any WordPress site via REST API and show them as a List or Grid with responsive columns, pagination, thumbnails, category badges, date, title, excerpt, and “Read More” — fully stylable (spacing, borders, backgrounds, typography, and button states).
+- [Flip Box](https://demo.primekitaddons.com/widgets/flip-box-elementor-widget/) — Interactive card that flips on hover/tap to reveal more info. Add an icon or image, title & text on the front, then a back side with heading, description, and a button link. Choose flip direction (left/right/top/bottom), set box width/height, background, borders, and radius. Style typography and button (normal/hover). Perfect for feature highlights, services, and mini CTAs.
+- [Gravity Form ](https://demo.primekitaddons.com/widgets/gravity-form-widget/) — Embed any Gravity Forms form in Elementor and style it end-to-end. Pick a form, toggle title/description, enable AJAX, prefill fields, and set tab index. Hide labels or sub-labels as needed. Customize the wrapper (background, padding, border, radius, shadow), labels and required marks, name and input fields (widths, padding, borders, radius, typography, gaps), and textarea sizing. Design the submit button (position, width, padding, border, radius, shadow, normal/hover colors). Fine-tune radios & checkboxes (label typography, input size, gap, alignment). Style Section Breaks (border, radius, spacing, title/description) and Page Breaks (progress bar, step text, navigation buttons with normal/hover states). Validation messages can be fully styled too. Ideal for contact, signup, surveys, and multi-step funnels.
+- [Image Hover](https://demo.primekitaddons.com/widgets/image-hover-elementor-widget/) — Showcase an image with a smooth overlay that reveals title and subtitle on hover/tap. Pick the image, set custom dimensions, and optionally link it. Control vertical & horizontal alignment of texts, tweak typography and colors, and adjust overlay (background/opacity). Fine-tune image width, add borders, and round the corners with radius controls. Great for portfolios, galleries, team cards, and clickable promos.
+- [Image and Text Scroll](https://demo.primekitaddons.com/widgets/image-and-text-scroll-elementor-widget/) — Smooth marquee-style strip that auto-scrolls logos or captions. Add unlimited items (image + title) via a repeater, then set animation duration and direction (LTR/RTL). Control item width/height, gap, and box padding; style background, borders, and corner radius. Tweak title color and typography for a polished ticker. Ideal for client logos, partner lists, press mentions, features, or category scrollers.
+- [Image Gallery ](https://demo.primekitaddons.com/widgets/gallery-widget/) — Clean, responsive grid with lightbox pop-up. Add images via the Gallery control, pick column count per device, set gaps, size/crop with Image Size, and style borders/radius. In the pop-up, choose what to show as the caption (caption/title/alt/description/none), toggle the close icon, and customize pop-up image width/height, radius, border, close icon size/color, and nav arrows. Perfect for portfolios, product shots, event photos, and case studies.
 - [Loading Screen ](https://demo.primekitaddons.com/widgets/loading-screen-elementor-widget/)
 - [Mailchimp ](https://demo.primekitaddons.com/widgets/mailchimp-widget/)
 - [Modern Post Grid (New, with 8 layouts)](https://demo.primekitaddons.com/widgets/modern-post-grid/)
@@ -88,7 +88,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 - [Skill Bar](https://demo.primekitaddons.com/widgets/skill-bar-elementor-widget/)
 - [Social Share](https://demo.primekitaddons.com/widgets/social-share-elementor-widget/)
 - [Sticker Text](https://demo.primekitaddons.com/widgets/sticker-text-elementor-widget/)
-- [Sticky Call Button](https://demo.primekitaddons.com/widgets/sticky-call-button-elementor-widget/)
+- [Sticky Call Button](https://demo.primekitaddons.com/widgets/sticky-call-button-elementor-widget/) — Add a floating “Call Now” button with optional icon/text, custom size, colors, hover styles, and on-screen position—link it to a tel: number or any URL.
 - [Team Member](https://demo.primekitaddons.com/widgets/team-member-elementor-widget/)
 - [Template Slider](https://demo.primekitaddons.com/widgets/template-slider-widget/)
 - [WordPress Menu](https://demo.primekitaddons.com/widgets/wordpress-menu-elementor-widget/)
