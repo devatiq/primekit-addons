@@ -39,7 +39,8 @@ if ($repeater_pages) {
     }
 
     // Convert pricing data to a JSON string and store it in a data attribute
-    $jsonData = esc_attr(wp_json_encode($data));
+    $jsonData = !empty($data) ? wp_json_encode($data) : wp_json_encode(new \stdClass());
+    $jsonData = esc_attr($jsonData);
 }
 ?>
 
