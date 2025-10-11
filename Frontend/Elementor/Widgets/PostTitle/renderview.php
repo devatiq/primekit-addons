@@ -19,4 +19,3 @@ if ($primekit_post_title) {
         </div>
     <?php
 }
-?>

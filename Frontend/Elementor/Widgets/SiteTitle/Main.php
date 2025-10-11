@@ -71,7 +71,7 @@ class Main extends Widget_Base
                     'h3' => esc_html__('H3', 'primekit-addons'),
                     'h4' => esc_html__('H4', 'primekit-addons'),
                     'h5' => esc_html__('H5', 'primekit-addons'),
-                    'H6' => esc_html__('H6', 'primekit-addons'),
+                    'h6' => esc_html__('H6', 'primekit-addons'),
                 ],
 				'condition' => [
 					'primekit-elementor-site-title-switch' => 'yes'

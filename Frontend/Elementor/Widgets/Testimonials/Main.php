@@ -1,7 +1,8 @@
 <?php
 namespace PrimeKit\Frontend\Elementor\Widgets\Testimonials;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -15,29 +16,29 @@ use Elementor\Group_Control_Box_Shadow;
 class Main extends Widget_Base
 {
     public function get_name()
-	{
-		return 'primekit-elementor-testimonial';
-	}
+    {
+        return 'primekit-elementor-testimonial';
+    }
 
-	public function get_title()
-	{
-		return esc_html__('Testimonial Grid & Carousel', 'primekit-addons');
-	}
+    public function get_title()
+    {
+        return esc_html__('Testimonial Grid & Carousel', 'primekit-addons');
+    }
 
-	public function get_icon()
-	{
-		return 'eicon-testimonial-carousel primekit-addons-icon';
-	}
+    public function get_icon()
+    {
+        return 'eicon-testimonial-carousel primekit-addons-icon';
+    }
 
-	public function get_categories()
-	{
-		return ['primekit-category'];
-	}
+    public function get_categories()
+    {
+        return ['primekit-category'];
+    }
 
-	public function get_keywords()
-	{
-		return ['prime', 'testimonial', 'carousel', 'slider'];
-	}
+    public function get_keywords()
+    {
+        return ['prime', 'testimonial', 'carousel', 'slider'];
+    }
 
     public function get_script_depends()
     {
@@ -90,35 +91,35 @@ class Main extends Widget_Base
         // Initialize the repeater control
         $repeater = new \Elementor\Repeater();
         $repeater->add_control(
-			'testimonial_name',
-			[
-				'label' => esc_html__( 'Name', 'primekit-addons' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'List Name' , 'primekit-addons' ),
-				'label_block' => true,
-			]
-		);       
+            'testimonial_name',
+            [
+                'label' => esc_html__('Name', 'primekit-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('List Name', 'primekit-addons'),
+                'label_block' => true,
+            ]
+        );
         $repeater->add_control(
-			'testimonial_feedback',
-			[
-				'label' => esc_html__( 'Description', 'primekit-addons' ),
-				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Enter feedback message here' , 'primekit-addons' ),
-				'label_block' => true,
-			]
-		);       
+            'testimonial_feedback',
+            [
+                'label' => esc_html__('Description', 'primekit-addons'),
+                'type' => Controls_Manager::TEXTAREA,
+                'default' => esc_html__('Enter feedback message here', 'primekit-addons'),
+                'label_block' => true,
+            ]
+        );
         $repeater->add_control(
-			'testimonial_designation',
-			[                
+            'testimonial_designation',
+            [
                 'label' => esc_html__('Designation', 'primekit-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('CEO of Company', 'primekit-addons'),
                 'dynamic' => ['active' => true],
-			]
-		);        
+            ]
+        );
         $repeater->add_control(
-			'testimonial_rating',
-			[  
+            'testimonial_rating',
+            [
                 'label' => esc_html__('Rating', 'primekit-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => '5',
@@ -129,36 +130,36 @@ class Main extends Widget_Base
                     '4' => esc_html__('4 Stars', 'primekit-addons'),
                     '5' => esc_html__('5 Stars', 'primekit-addons'),
                 ],
-			]
-		);       
+            ]
+        );
         $repeater->add_control(
-			'testimonial_client_image',
-			[                  
+            'testimonial_client_image',
+            [
                 'label' => esc_html__('Client Image', 'primekit-addons'),
                 'type' => Controls_Manager::MEDIA,
-                'dynamic' => ['active' => true],   
-			]
-		);
-		$this->add_control(
-			'primekit_testimonial_repeater',
-			[
-				'label' => esc_html__( 'Testimonial Items', 'primekit-addons' ),
-				'type' => Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
-				'default' => [
-					[
-						'testimonial_name' => esc_html__( 'Name #1', 'primekit-addons' ),						
-					],
-					[
-						'testimonial_name' => esc_html__( 'Name #2', 'primekit-addons' ),						
-					],
+                'dynamic' => ['active' => true],
+            ]
+        );
+        $this->add_control(
+            'primekit_testimonial_repeater',
+            [
+                'label' => esc_html__('Testimonial Items', 'primekit-addons'),
+                'type' => Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
                     [
-						'testimonial_name' => esc_html__( 'Name #3', 'primekit-addons' ),						
-					],
-				],
-				'title_field' => '{{{ testimonial_name }}}',
-			]
-		);
+                        'testimonial_name' => esc_html__('Name #1', 'primekit-addons'),
+                    ],
+                    [
+                        'testimonial_name' => esc_html__('Name #2', 'primekit-addons'),
+                    ],
+                    [
+                        'testimonial_name' => esc_html__('Name #3', 'primekit-addons'),
+                    ],
+                ],
+                'title_field' => '{{{ testimonial_name }}}',
+            ]
+        );
         // testimonial column for desktop
         $this->add_control(
             'primekit_ele_testimonial_column_desktop',
@@ -180,9 +181,9 @@ class Main extends Widget_Base
             [
                 'label' => esc_html__('Tab Column', 'primekit-addons'),
                 'type' => Controls_Manager::NUMBER,
-                'default' => 1,                
+                'default' => 1,
                 'min' => 1,
-                'max' => 2,              
+                'max' => 2,
                 'condition' => [
                     'primekit_ele_testimonial_types' => 'slider',
                 ],
@@ -196,7 +197,7 @@ class Main extends Widget_Base
                 'type' => Controls_Manager::NUMBER,
                 'default' => 1,
                 'min' => 1,
-                'max' => 2,   
+                'max' => 2,
                 'condition' => [
                     'primekit_ele_testimonial_types' => 'slider',
                 ],
@@ -271,18 +272,34 @@ class Main extends Widget_Base
                 ],
             ]
         );
+        // Add this control (in the main settings section)
+        $this->add_control(
+            'primekit_ele_testimonial_pagination',
+            [
+                'label' => esc_html__('Pagination (Grid)', 'primekit-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('On', 'primekit-addons'),
+                'label_off' => esc_html__('Off', 'primekit-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+                'condition' => [
+                    'primekit_ele_testimonial_types' => 'grid',
+                ],
+            ]
+        );
 
-         //PrimeKit Notice
-		$this->add_control(
-			'primekit_elementor_addons_notice',
-			[
-				'type' => \Elementor\Controls_Manager::NOTICE,
-				'notice_type' => 'warning',
-				'dismissible' => false,
-				'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
-				'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
-			]
-		);
+
+        //PrimeKit Notice
+        $this->add_control(
+            'primekit_elementor_addons_notice',
+            [
+                'type' => \Elementor\Controls_Manager::NOTICE,
+                'notice_type' => 'warning',
+                'dismissible' => false,
+                'heading' => esc_html__('Created by PrimeKit', 'primekit-addons'),
+                'content' => esc_html__('This amazing widget is built with PrimeKit Addons, making it super easy to create beautiful and functional designs.', 'primekit-addons'),
+            ]
+        );
 
         // end of Testimonial section
         $this->end_controls_section();
@@ -454,7 +471,7 @@ class Main extends Widget_Base
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .primekit-testimonial-quote' => 'top: {{SIZE}}{{UNIT}};',
-                ],                
+                ],
             ]
         );
 
@@ -1043,8 +1060,8 @@ class Main extends Widget_Base
                 'range' => [
                     'px' => [
                         'min' => -200,
-                        'max' => 1000,                    
-                    ],                    
+                        'max' => 1000,
+                    ],
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .swiper-pagination.primekit-testimonial-slider-pagination' => 'bottom: {{SIZE}}{{UNIT}};',
@@ -1083,7 +1100,6 @@ class Main extends Widget_Base
      * Render the widget output on the frontend.
      */
     protected function render()
-
     {
         include 'RenderView.php';
     }

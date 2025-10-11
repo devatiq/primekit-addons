@@ -8,8 +8,6 @@ if (!defined('ABSPATH'))
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
-use Elementor\Group_Control_Background;
-use Elementor\Group_Control_Border;
 
 class Main extends Widget_Base
 {

@@ -1,5 +1,10 @@
 <?php
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+/*
+ ** Social Links
+ */
+
 ?>
 <ul class="primekit-team-member-social-links">
 <?php    
