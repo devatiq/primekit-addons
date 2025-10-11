@@ -31,7 +31,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 == Widget List: 70+ Available Widgets ==
 
-- [Advanced Animated Text](https://demo.primekitaddons.com/widgets/advanced-animated-text-elementor-widget/) — Bring your headlines to life with 10+ creative animation styles — including typing, rotating, sliding, and zooming effects — to make your message stand out beautifully.
+- [Advanced Animated Text](https://demo.primekitaddons.com/widgets/advanced-animated-text-elementor-widget/) — Bring your headlines to life with 10+ creative animation styles, including typing, rotating, sliding, and zooming effects to make your message stand out beautifully.
 - [Advanced Circular Skill](https://demo.primekitaddons.com/widgets/advanced-circular-skill-elementor-widget/) — Showcase skill levels with animated circular progress, gradient colors, adjustable size, and custom labels to highlight expertise or KPIs.
 - [Advanced Icon Box](https://demo.primekitaddons.com/widgets/advanced-icon-box-elementor-widget/) — Present features with icons, titles, and text. Choose from 3 layouts with custom shapes, colors, spacing, and an optional button for calls-to-action.
 - [Advanced Pricing Table](https://demo.primekitaddons.com/widgets/advanced-pricing-table-elementor-widget/) — Build conversion-focused pricing cards with Standard or Fancy layouts, “Recommended” badge, feature lists, and CTA button — fully customizable colors, typography, and spacing.
