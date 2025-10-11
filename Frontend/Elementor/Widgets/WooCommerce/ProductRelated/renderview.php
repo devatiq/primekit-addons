@@ -56,4 +56,3 @@ if ($related_products) : ?>
 endif;
 
 wp_reset_postdata();
-?>

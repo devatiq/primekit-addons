@@ -374,5 +374,3 @@ class Main extends Widget_Base {
         include 'renderview.php';
     }
 }
-
-?>
