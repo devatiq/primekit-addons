@@ -55,7 +55,7 @@ Our theme Builder makes it simple to design your website’s header, footer, sin
 
 - [Business Hours](https://demo.primekitaddons.com/widgets/business-hours-elementor-widget/) — Display a clean weekly schedule with an optional header and per-row styling for day and time.
 
- [Call To Action – CTA](https://demo.primekitaddons.com/widgets/advanced-call-to-action-elementor-widget/) – Create a flexible CTA block with subheading, heading, description, and two buttons, plus an optional ribbon badge—complete with responsive layout controls, spacing, background/border styling, and hover effects.
+- [Call To Action – CTA](https://demo.primekitaddons.com/widgets/advanced-call-to-action-elementor-widget/) – Create a flexible CTA block with subheading, heading, description, and two buttons, plus an optional ribbon badge—complete with responsive layout controls, spacing, background/border styling, and hover effects.
 
 - [Card Info Box](https://demo.primekitaddons.com/widgets/card-info-elementor-widget/) – Display an image or icon with badge, title, text, and a button in two clean layouts—fully customizable with alignment, spacing, colors, borders, and hover styles.
 
