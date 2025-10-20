@@ -69,21 +69,92 @@ The plugin's directory structure is organized as follows:
 
 ## 3. How to Add a New Widget
 
+Follow these steps to create a new Elementor widget and integrate it into the PrimeKit Addons plugin.
+
+### Step 1: Create the Widget Files
+
 1.  **Create a New Widget Folder:**
     *   Navigate to `Frontend/Elementor/Widgets/`.
-    *   Create a new folder for your widget (e.g., `MyAwesomeWidget`).
+    *   Create a new folder for your widget. The folder name should be in `PascalCase`, for example: `MyAwesomeWidget`.
 
-2.  **Create the Widget Class File:**
-    *   Inside your new widget folder, create a PHP file (e.g., `MyAwesomeWidget.php`).
-    *   This file will contain a class that extends `\Elementor\Widget_Base`.
-    *   Implement the required methods: `get_name()`, `get_title()`, `get_icon()`, `get_categories()`, `_register_controls()`, and `render()`.
+2.  **Create the Main Widget File:**
+    *   Inside your new widget folder (`MyAwesomeWidget/`), create a PHP file named `Main.php`.
+    *   In this file, define your widget's class. The class name must be `Main` and it must extend `\Elementor\Widget_Base`.
 
-3.  **Register the New Widget:**
-    *   The plugin likely auto-loads widgets from the `Widgets/` directory. Check `Frontend/Elementor/Configuration.php` or a similar file to see how widgets are registered. You may need to add your new widget class to an array of widgets to be loaded.
+    ```php
+    <?php
+    namespace PrimeKit\Modules\Elementor\Widgets\MyAwesomeWidget;
 
-4.  **Add Assets:**
-    *   If your widget requires custom CSS or JavaScript, add the files to the `Frontend/Elementor/Assets/css/` and `Frontend/Elementor/Assets/js/` directories respectively.
-    *   Enqueue your assets within your widget class file using the `get_style_depends()` or `get_script_depends()` methods.
+    use Elementor\Widget_Base;
+
+    if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+    class Main extends Widget_Base {
+
+        // Implement required methods:
+        public function get_name() {
+            return 'primekit-my-awesome-widget';
+        }
+
+        public function get_title() {
+            return esc_html__( 'My Awesome Widget', 'primekit-addons' );
+        }
+
+        public function get_icon() {
+            return 'primekit-icon-my-awesome-widget'; // You can add a custom icon
+        }
+
+        public function get_categories() {
+            return [ 'primekit-addons' ];
+        }
+
+        protected function _register_controls() {
+            // Your widget controls go here
+        }
+
+        protected function render() {
+            // Your widget's frontend output goes here
+        }
+    }
+    ```
+
+### Step 2: Register the Widget
+
+1.  **Add to Configuration:**
+    *   Open the file `Frontend/Elementor/Configuration.php`.
+    *   Locate the `register_general_widgets` method.
+    *   Add your new widget to the array. The key should be the widget's name (used for the dashboard toggle) and the value is the path to the widget's main class.
+
+    ```php
+    public static function register_general_widgets($widgets_manager) {
+        $general_widgets = [
+            // ... existing widgets
+            'my-awesome-widget' => __NAMESPACE__ . '\Widgets\MyAwesomeWidget\Main',
+        ];
+        // ... rest of the method
+    }
+    ```
+
+### Step 3: Add a Dashboard Toggle (Optional)
+
+If you want to allow users to enable or disable your widget from the WordPress dashboard:
+
+1.  **Edit the Dashboard File:**
+    *   Open the file `Admin/Inc/Dashboard/AvailableWidgets/RegularTab.php`.
+    *   Add your widget to the list, using the same key you defined in `Configuration.php` (`my-awesome-widget`). Follow the existing format to add the widget's title and icon.
+
+    ```php
+    // Inside the array in RegularTab.php
+    'my-awesome-widget' => [
+        'title' => esc_html__('My Awesome Widget', 'primekit-addons'),
+        'icon'  => 'your-widget-icon-class' // Optional: Add an icon class
+    ],
+    ```
+
+### Step 4: Add Assets
+
+*   If your widget requires custom CSS or JavaScript, add the files to the `Frontend/Elementor/Assets/css/` and `Frontend/Elementor/Assets/js/` directories respectively.
+*   Enqueue your assets within your widget's `Main.php` file using the `get_style_depends()` or `get_script_depends()` methods.
 
 ## 4. Dependencies
 
