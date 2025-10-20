@@ -123,17 +123,52 @@ Follow these steps to create a new Elementor widget and integrate it into the Pr
 1.  **Add to Configuration:**
     *   Open the file `Frontend/Elementor/Configuration.php`.
     *   Locate the `register_general_widgets` method.
-    *   Add your new widget to the array. The key should be the widget's name (used for the dashboard toggle) and the value is the path to the widget's main class.
+    *   Add your new widget to the `$widgets` array. The key should be a unique name for your widget (used for the dashboard toggle), and the value is the path to the widget's main class.
+
+    There are two ways to define the class path:
+
+    **Option A: Following the Existing Pattern (Recommended)**
+
+    This is the current convention in the plugin. You provide the widget's folder name (in PascalCase) followed by `\Main`.
 
     ```php
-    public static function register_general_widgets($widgets_manager) {
-        $general_widgets = [
+    // In Frontend/Elementor/Configuration.php
+
+    private function register_general_widgets($widgets_manager, $namespace_base)
+    {
+        $widgets = [
             // ... existing widgets
-            'my-awesome-widget' => __NAMESPACE__ . '\Widgets\MyAwesomeWidget\Main',
+            'my-awesome-widget' => 'MyAwesomeWidget\Main',
         ];
-        // ... rest of the method
+
+        // The loop automatically combines the base namespace with this path.
+        foreach ($widgets as $option_name => $widget_class) {
+            // ...
+        }
     }
     ```
+
+    **Option B: Using the Full Namespace**
+
+    Alternatively, you can provide the full namespace to the widget's `Main` class. This is a more explicit approach but is not the current convention.
+
+    ```php
+    // In Frontend/Elementor/Configuration.php
+
+    private function register_general_widgets($widgets_manager, $namespace_base)
+    {
+        $widgets = [
+            // ... existing widgets
+            'my-awesome-widget' => '\PrimeKit\Frontend\Elementor\Widgets\MyAwesomeWidget\Main',
+        ];
+
+        // IMPORTANT: If you use this method, you must adjust the registration loop
+        // to handle the full namespace correctly, as the existing loop
+        // is designed to prepend a base namespace.
+    }
+    ```
+
+    **For consistency, it is highly recommended to use Option A.**
 
 ### Step 3: Add a Dashboard Toggle (Optional)
 
