@@ -83,7 +83,7 @@ Follow these steps to create a new Elementor widget and integrate it into the Pr
 
     ```php
     <?php
-    namespace PrimeKit\Modules\Elementor\Widgets\MyAwesomeWidget;
+    namespace PrimeKit\Frontend\Elementor\Widgets\MyAwesomeWidget;
 
     use Elementor\Widget_Base;
 
